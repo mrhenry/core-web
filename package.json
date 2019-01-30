@@ -1,5 +1,5 @@
 {
-  "name": "@mrhenry/core-web",
+  "name": "@mrhenry/babel-plugin-core-web",
   "version": "0.0.1",
   "description": "Polyfill.io as a babel plugin",
   "main": "lib/index.js",
