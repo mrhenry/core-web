@@ -1,3 +1,4 @@
 /helpers
 /modules
 /node_modules
+*.log
