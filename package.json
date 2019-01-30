@@ -8,7 +8,8 @@
   "files": [
     "/build",
     "/lib",
-    "/detectors"
+    "/detectors",
+    "/LICENSE"
   ],
   "sideEffects": [
     "./modules/*.js"
