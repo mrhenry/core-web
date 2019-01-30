@@ -1,0 +1,30 @@
+{
+  "name": "core-web",
+  "version": "0.0.1",
+  "description": "Polyfill.io as a babel preset",
+  "main": "index.js",
+  "author": "Simon Menke <simon.menke@gmail.com>",
+  "license": "MIT",
+  "files": [
+    "/build"
+  ],
+  "sideEffects": [
+    "./modules/*.js"
+  ],
+  "scripts": {
+    "prepublishOnly": "rm -rf modules",
+    "install": "node ./build/gen.js"
+  },
+  "dependencies": {
+    "@babel/parser": "^7.3.1",
+    "@babel/traverse": "^7.2.3",
+    "@babel/types": "^7.3.0",
+    "denodeify": "^1.2.1",
+    "fast-deep-equal": "^2.0.1",
+    "from2-string": "^1.1.0",
+    "merge2": "^1.2.3",
+    "polyfill-library": "^3.27.4",
+    "rimraf": "^2.6.3",
+    "stream-to-string": "^1.2.0"
+  }
+}
