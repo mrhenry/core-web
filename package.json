@@ -11,9 +11,6 @@
     "/detectors",
     "/LICENSE"
   ],
-  "sideEffects": [
-    "./modules/*.js"
-  ],
   "scripts": {
     "prepublishOnly": "rm -rf modules helpers",
     "install": "node ./build/gen.js"
