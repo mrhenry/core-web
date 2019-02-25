@@ -1,5 +1,4 @@
 const path = require('path');
-const m = require('./ast-matcher');
 const {
 	addSideEffect
 } = require("@babel/helper-module-imports");
@@ -7,6 +6,7 @@ const {
 	get,
 	has
 } = require('@mrhenry/core-web');
+const m = require('./ast-matcher');
 const detectorsDir = path.join(path.dirname(__dirname), 'detectors');
 
 exports.buildInjector = function buildInjector(features) {

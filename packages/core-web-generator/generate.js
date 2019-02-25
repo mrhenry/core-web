@@ -15,6 +15,8 @@ const modulesDir = path.resolve(__dirname, '../core-web/modules');
 const helpersDir = path.resolve(__dirname, '../core-web/helpers');
 const detectorsDir = path.resolve(__dirname, '../babel-plugin-core-web/detectors');
 
+const generateWebComponents = require('./generate-webcomponents');
+
 genAll();
 
 async function genAll() {
@@ -45,7 +47,6 @@ async function genAll() {
 		);
 	}
 
-
 	const detectors = new Set((await readdir(detectorsDir))
 		.filter(n => n.endsWith('.js') && !n.startsWith('.'))
 		.map(n => n.replace(/\.js$/, '')));
@@ -54,6 +55,9 @@ async function genAll() {
 			spec.detector = true;
 		}
 	}
+
+	// webcomponents
+	await generateWebComponents(mapping);
 
 	await writeFile(
 		path.join(helpersDir, '__mapping.js'),
