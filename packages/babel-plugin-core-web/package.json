@@ -1,6 +1,6 @@
 {
   "name": "@mrhenry/babel-plugin-core-web",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Polyfill.io as a babel plugin",
   "main": "lib/index.js",
   "author": "Simon Menke <simon.menke@gmail.com>",
