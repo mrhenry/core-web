@@ -9,131 +9,107 @@ const {
 const m = require('./ast-matcher');
 const detectorsDir = path.join(path.dirname(__dirname), 'detectors');
 
-exports.buildInjector = function buildInjector(features) {
-	features = features.filter(n => has(n));
-	const featureSet = new Set(features);
+class Injector {
 
-	const addPolyfill = (path, state, name) => {
-		if (!needsImport(state, name)) return;
+	constructor(features) {
+		this.features = features.filter(n => has(n));
+		this.featureSet = new Set(this.features);
+		this.importSet = new Set();
+		this.removeSet = new Set();
 
-		for (let dep of get(name).deps) {
-			if (featureSet.has(dep)) {
-				addPolyfill(path, state, dep);
+		this.matchers = this.features.map((name) => {
+			const spec = get(name);
+
+			if (spec.detector) {
+				return this._cachingMatcher(
+					name,
+					require(path.join(detectorsDir, name + ".js")),
+					() => this._addPolyfill(name),
+				);
 			}
-		}
 
-		pushImport(path, state, `@mrhenry/core-web/modules/${name}`);
-	};
+			if (name.indexOf('~') >= 0) {
+				return this._cachingMatcher(
+					name,
+					[],
+					() => this._addPolyfill(name),
+				);
+			}
 
-	const matchers = features.map((name) => {
-		const spec = get(name);
+			if (name.indexOf('.prototype.') >= 0) {
+				return this._cachingMatcher(
+					name,
+					[m(name.replace(/^.+\.prototype\./, ''))],
+					() => this._addPolyfill(name),
+				);
+			}
 
-		if (spec.detector) {
-			return cachingMatcher(
+			return this._cachingMatcher(
 				name,
-				require(path.join(detectorsDir, name + ".js")),
-				addPolyfill,
+				[m(name)],
+				() => this._addPolyfill(name),
 			);
+		});
+	}
+
+	_addPolyfill(name) {
+		if (!has(name)) return;
+
+		for (const dep of get(name).deps) {
+			this._addPolyfill(dep);
 		}
 
-		if (name.indexOf('~') >= 0) {
-			return cachingMatcher(
-				name,
-				[],
-				addPolyfill,
-			);
+		if (this.featureSet.has(name)) {
+			this.importSet.add(name);
+		}
+	}
+
+
+	_cachingMatcher(name, matchers, action) {
+		return (path, state) => {
+			if (this.importSet.has(name)) {
+				return; // nop
+			}
+
+			for (const m of matchers) {
+				if (m(path.node)) {
+					return action();
+				}
+			}
+		};
+	}
+
+	inject(path, state) {
+
+		// insert in reverse order
+		const all = [...this.importSet];
+		while (all.length) {
+			const importName = all.pop()
+			addSideEffect(path, `@mrhenry/core-web/modules/${importName}`);
 		}
 
-		if (name.indexOf('.prototype.') >= 0) {
-			return cachingMatcher(
-				name,
-				[m(name.replace(/^.+\.prototype\./, ''))],
-				addPolyfill,
-			);
+		// remove unused imports
+		for (const path of this.removeSet) {
+			path.remove();
 		}
 
-		return cachingMatcher(
-			name,
-			[m(name)],
-			addPolyfill,
-		);
-	});
+	}
 
-	return (path, state) => {
-		for (const m of matchers) {
+	handleImport(path, state) {
+		const PREFIX = "@mrhenry/core-web/modules/";
+		if (path.node.source.value.startsWith(PREFIX)) {
+			const feature = path.node.source.value.substr(PREFIX.length);
+			this._addPolyfill(feature);
+			this.removeSet.add(path);
+		}
+	}
+
+	handleGeneric(path, state) {
+		for (const m of this.matchers) {
 			m(path, state);
 		}
-	};
-}
-
-exports.injectPost = function inject(state) {
-	const all = getImports(state);
-	for (let i = all.length - 1; i >= 0; i--) {
-		const x = all[i];
-		addSideEffect(x.path, x.importName);
 	}
+
 }
 
-function cachingMatcher(name, matchers, action) {
-	return (path, state) => {
-		if (!needsMatch(state, name)) {
-			return; // nop
-		}
-
-		for (const m of matchers) {
-			if (m(path.node)) {
-				markMatched(state, name);
-				return action(path, state, name);
-			}
-		}
-	};
-}
-
-const matchCache = Symbol();
-
-function needsMatch(state, name) {
-	return !onceForStateTable(state, matchCache).has(name);
-}
-
-function markMatched(state, name) {
-	onceForStateTable(state, matchCache).add(name);
-}
-
-const importCache = Symbol();
-
-function needsImport(state, name) {
-	return onceForState(state, importCache, name);
-}
-
-function onceForState(state, table, name) {
-	const t = onceForStateTable(state, table);
-	const done = t.has(name);
-	if (!done) {
-		t.add(name);
-	}
-	return !done;
-}
-
-function onceForStateTable(state, table) {
-	let c = state[table];
-	if (!c) {
-		c = new Set();
-		state[table] = c;
-	}
-	return c;
-}
-
-const importList = Symbol();
-
-function pushImport(path, state, importName) {
-	const l = state[importList] || (state[importList] = []);
-	l.push({
-		path,
-		importName
-	});
-}
-
-function getImports(state) {
-	const l = state[importList] || (state[importList] = []);
-	return l;
-}
+module.exports = Injector;
