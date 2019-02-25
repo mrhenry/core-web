@@ -1,0 +1,17 @@
+{
+  "name": "@mrhenry/core-web-generator",
+  "private": true,
+  "scripts": {
+    "build": "node ./generate.js"
+  },
+  "dependencies": {
+    "@financial-times/polyfill-useragent-normaliser": "^1.0.6",
+    "denodeify": "^1.2.1",
+    "fast-deep-equal": "^2.0.1",
+    "from2-string": "^1.1.0",
+    "merge2": "^1.2.3",
+    "polyfill-library": "^3.27.4",
+    "rimraf": "^2.6.3",
+    "stream-to-string": "^1.2.0"
+  }
+}
