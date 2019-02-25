@@ -20,6 +20,7 @@
     "@babel/parser": "^7.3.1",
     "@babel/traverse": "^7.2.3",
     "@babel/types": "^7.3.0",
+    "@financial-times/polyfill-useragent-normaliser": "^1.0.6",
     "denodeify": "^1.2.1",
     "fast-deep-equal": "^2.0.1",
     "from2-string": "^1.1.0",
