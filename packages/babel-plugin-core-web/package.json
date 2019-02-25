@@ -14,11 +14,11 @@
     "/LICENSE"
   ],
   "dependencies": {
-    "@mrhenry/core-web": "^0.1.0",
+    "@babel/helper-module-imports": "^7.0.0",
     "@babel/parser": "^7.3.1",
     "@babel/traverse": "^7.2.3",
     "@babel/types": "^7.3.0",
-    "@babel/helper-module-imports": "^7.0.0",
+    "@mrhenry/core-web": "^0.1.0",
     "fast-deep-equal": "^2.0.1"
   }
 }
