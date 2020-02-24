@@ -1,6 +1,6 @@
 const m = require('../lib/ast-matcher');
 
 module.exports = [
-  m('isIntersecting'),
-  m('IntersectionObserverEntry'),
+	m('isIntersecting'),
+	m('IntersectionObserverEntry'),
 ];
