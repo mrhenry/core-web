@@ -1,7 +1,6 @@
 # core-web
 
-[![Greenkeeper badge](https://badges.greenkeeper.io/mrhenry/core-web.svg)](https://greenkeeper.io/)
-
+[![Build Status](https://travis-ci.com/mrhenry/core-web.svg?branch=master)](https://travis-ci.com/mrhenry/core-web)
 
 ```sh
 yarn add -D @mrhenry/babel-plugin-core-web
