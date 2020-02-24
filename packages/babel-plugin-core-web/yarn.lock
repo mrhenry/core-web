@@ -97,6 +97,26 @@
     lodash "^4.17.11"
     to-fast-properties "^2.0.0"
 
+"@financial-times/polyfill-useragent-normaliser@^1.0.6":
+  version "1.6.3"
+  resolved "https://registry.yarnpkg.com/@financial-times/polyfill-useragent-normaliser/-/polyfill-useragent-normaliser-1.6.3.tgz#e6e1a16de5d5931682d7a6da0f3989115e9f5d16"
+  integrity sha512-QNjxxVkZoQhjoGbMxpZffIiYIwUlT2/P4qgyEdF0CgflKg5xL0PE5YBlPozOj1Qozcfe6TJv5Pr9dliIdrcFEw==
+  dependencies:
+    "@financial-times/useragent_parser" "^1.2.1"
+    semver "^7.1.1"
+
+"@financial-times/useragent_parser@^1.2.1":
+  version "1.4.1"
+  resolved "https://registry.yarnpkg.com/@financial-times/useragent_parser/-/useragent_parser-1.4.1.tgz#4e7c2f0b9a9174c176dd7f4ccd890442bf9eafc1"
+  integrity sha512-f8C7QnUZSSpVzv98HB12TbQQY5oteKUOywmrVBHpJXZotdYg5cZ2nAfNISH4phPzVEsgqQRJWBdVknJNYYEC9w==
+
+"@mrhenry/core-web@^0.1.1":
+  version "0.1.1"
+  resolved "https://registry.yarnpkg.com/@mrhenry/core-web/-/core-web-0.1.1.tgz#206f85328d6f44a4ca6322918548edcac82b1a21"
+  integrity sha512-1Eh1b4mtvaEl88SO+MAv6WKHykfu2NObdGlgznnhk3k/YNcGoiEAB0B6XXi6+h9PyyWUUbH2XBzt6tYtA+1wkw==
+  dependencies:
+    "@financial-times/polyfill-useragent-normaliser" "^1.0.6"
+
 ansi-styles@^3.2.1:
   version "3.2.1"
   resolved "https://registry.yarnpkg.com/ansi-styles/-/ansi-styles-3.2.1.tgz#41fbb20243e50b12be0f04b8dedbf07520ce841d"
@@ -142,10 +162,10 @@ esutils@^2.0.2:
   resolved "https://registry.yarnpkg.com/esutils/-/esutils-2.0.2.tgz#0abf4f1caa5bcb1f7a9d8acc6dea4faaa04bac9b"
   integrity sha1-Cr9PHKpbyx96nYrMbepPqqBLrJs=
 
-fast-deep-equal@^2.0.1:
-  version "2.0.1"
-  resolved "https://registry.yarnpkg.com/fast-deep-equal/-/fast-deep-equal-2.0.1.tgz#7b05218ddf9667bf7f370bf7fdb2cb15fdd0aa49"
-  integrity sha1-ewUhjd+WZ79/Nwv3/bLLFf3Qqkk=
+fast-deep-equal@^3.1.1:
+  version "3.1.1"
+  resolved "https://registry.yarnpkg.com/fast-deep-equal/-/fast-deep-equal-3.1.1.tgz#545145077c501491e33b15ec408c294376e94ae4"
+  integrity sha512-8UEa58QDLauDNfpbrX55Q9jrGHThw2ZMdOky5Gl1CDtVeJDPVrG4Jxx1N8jw2gkWaff5UUuX1KJd+9zGe2B+ZA==
 
 globals@^11.1.0:
   version "11.11.0"
@@ -176,6 +196,11 @@ ms@^2.1.1:
   version "2.1.1"
   resolved "https://registry.yarnpkg.com/ms/-/ms-2.1.1.tgz#30a5864eb3ebb0a66f2ebe6d727af06a09d86e0a"
   integrity sha512-tgp+dl5cGk28utYktBsrFqA7HKgrhgPsg6Z/EfhWI4gl1Hwq8B/GmY/0oXZ6nF8hDVesS/FpnYaD/kOWhYQvyg==
+
+semver@^7.1.1:
+  version "7.1.3"
+  resolved "https://registry.yarnpkg.com/semver/-/semver-7.1.3.tgz#e4345ce73071c53f336445cfc19efb1c311df2a6"
+  integrity sha512-ekM0zfiA9SCBlsKa2X1hxyxiI4L3B6EbVJkkdgQXnSEEaHlGdvyodMruTiulSRWMMB4NeIuYNMC9rTKTz97GxA==
 
 source-map@^0.5.0:
   version "0.5.7"
