@@ -1,5 +1,5 @@
 (function(undefined) {
-if (!("console"in this&&"warn"in this.console
+if (!("console"in self&&"warn"in self.console
 )) {
 // console.warn
 console.warn = console.log;

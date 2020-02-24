@@ -1,5 +1,5 @@
 (function(undefined) {
-if (!("HTMLPictureElement"in this||"picturefill"in this
+if (!("HTMLPictureElement"in self||"picturefill"in self
 )) {
 // HTMLPictureElement
 /*! picturefill - v3.0.2 - 2016-02-12

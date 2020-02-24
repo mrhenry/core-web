@@ -1,5 +1,5 @@
 (function(undefined) {
-if (!("Blob"in this&&function(){try{return new Blob,!0}catch(t){return!1}}()&&function(){try{return Blob(),!1}catch(t){return!0}}()
+if (!("Blob"in self&&function(){try{return new Blob,!0}catch(n){return!1}}()&&function(){try{return Blob(),!1}catch(n){return!0}}()
 )) {
 // Blob
 // Local modification of https://github.com/eligrey/Blob.js/blob
@@ -14,7 +14,6 @@ if (!("Blob"in this&&function(){try{return new Blob,!0}catch(t){return!1}}()&&fu
  *   See https://github.com/eligrey/Blob.js/blob/master/LICENSE.md
  */
 
-/*global self, unescape */
 /*jslint bitwise: true, regexp: true, confusion: true, es5: true, vars: true, white: true,
   plusplus: true */
 
@@ -60,7 +59,7 @@ if (!("Blob"in this&&function(){try{return new Blob,!0}catch(t){return!1}}()&&fu
 		var URL = real_URL;
 		var btoa = view.btoa;
 		var atob = view.atob;
-		var origin = /^[\w-]+:\/*\[?[\w\.:-]+\]?(?::[0-9]+)?/;
+		var origin = /^[\w-]+:\/*\[?[\w.:-]+\]?(?::[0-9]+)?/;
 		FakeBlob.fake = FB_proto.fake = true;
 		while (file_ex_code--) {
 			FileException.prototype[file_ex_codes[file_ex_code]] = file_ex_code + 1;
@@ -247,5 +246,5 @@ if (!("Blob"in this&&function(){try{return new Blob,!0}catch(t){return!1}}()&&fu
 		return object.__proto__;
 	};
 	view.Blob.prototype = getPrototypeOf(new view.Blob());
-}(typeof self !== "undefined" && self || typeof window !== "undefined" && window || this));
+}(self));
 }}).call('object' === typeof window && window || 'object' === typeof self && self || 'object' === typeof global && global || {});

@@ -1,6 +1,6 @@
 (function(undefined) {
-if (!("console"in this
+if (!("console"in self
 )) {
 // console
-this.console = this.console || {};
+self.console = self.console || {};
 }}).call('object' === typeof window && window || 'object' === typeof self && self || 'object' === typeof global && global || {});

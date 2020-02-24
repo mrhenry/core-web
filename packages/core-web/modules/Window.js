@@ -1,5 +1,5 @@
 (function(undefined) {
-if (!("Window"in this
+if (!("Window"in self
 )) {
 // Window
 if ((typeof WorkerGlobalScope === "undefined") && (typeof importScripts !== "function")) {
@@ -7,8 +7,8 @@ if ((typeof WorkerGlobalScope === "undefined") && (typeof importScripts !== "fun
 		if (global.constructor) {
 			global.Window = global.constructor;
 		} else {
-			(global.Window = global.constructor = new Function('return function Window() {}')()).prototype = this;
+			(global.Window = global.constructor = new Function('return function Window() {}')()).prototype = self;
 		}
-	}(this));
+	}(self));
 }
 }}).call('object' === typeof window && window || 'object' === typeof self && self || 'object' === typeof global && global || {});

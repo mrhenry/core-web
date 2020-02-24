@@ -1,7 +1,8 @@
 (function(undefined) {
-if (!("XMLHttpRequest"in this&&"prototype"in this.XMLHttpRequest&&"addEventListener"in this.XMLHttpRequest.prototype
+if (!("XMLHttpRequest"in self&&"prototype"in self.XMLHttpRequest&&"addEventListener"in self.XMLHttpRequest.prototype
 )) {
 // XMLHttpRequest
+/* global ActiveXObject */
 (function (global, NativeXMLHttpRequest) {
 	// <Global>.XMLHttpRequest
 	global.XMLHttpRequest = function XMLHttpRequest() {
@@ -70,5 +71,5 @@ if (!("XMLHttpRequest"in this&&"prototype"in this.XMLHttpRequest&&"addEventListe
 	XMLHttpRequestPrototype.setRequestHeader = function setRequestHeader(header, value) {
 		this._request.setRequestHeader(header, value);
 	};
-}(this, this.XMLHttpRequest));
+}(self, self.XMLHttpRequest));
 }}).call('object' === typeof window && window || 'object' === typeof self && self || 'object' === typeof global && global || {});

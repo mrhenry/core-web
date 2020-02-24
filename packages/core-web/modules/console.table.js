@@ -1,5 +1,5 @@
 (function(undefined) {
-if (!("console"in this&&"table"in this.console
+if (!("console"in self&&"table"in self.console
 )) {
 // console.table
 console.table = function table() {};

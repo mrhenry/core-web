@@ -1,8 +1,9 @@
 import _DOMTokenList from "../helpers/_DOMTokenList";
 (function(undefined) {
-if (!("DOMTokenList"in this&&function(s){return!("classList"in s)||!s.classList.toggle("x",!1)&&!s.className}(document.createElement("x"))
+if (!("DOMTokenList"in self&&function(e){return!("classList"in e)||!e.classList.toggle("x",!1)&&!e.className}(document.createElement("x"))
 )) {
 // DOMTokenList
+/* global _DOMTokenList */
 (function (global) {
 	var nativeImpl = "DOMTokenList" in global && global.DOMTokenList;
 
@@ -70,5 +71,5 @@ if (!("DOMTokenList"in this&&function(s){return!("classList"in s)||!s.classList.
 		};
 	}());
 
-}(this));
+}(self));
 }}).call('object' === typeof window && window || 'object' === typeof self && self || 'object' === typeof global && global || {});

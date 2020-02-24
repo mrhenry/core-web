@@ -1,7 +1,6 @@
 (function(undefined) {
 if (!((function(n){if(!("Event"in n))return!1
-if("function"==typeof n.Event)return!0
-try{return new Event("click"),!0}catch(t){return!1}})(this)
+try{return new Event("click"),!0}catch(t){return!1}})(self)
 )) {
 // Event
 (function () {
@@ -28,20 +27,6 @@ try{return new Event("click"),!0}catch(t){return!1}})(this)
 	// support for `Event` within the worker
 	if (typeof document === 'undefined' || typeof window === 'undefined') return;
 
-	function indexOf(array, element) {
-		var
-		index = -1,
-		length = array.length;
-
-		while (++index < length) {
-			if (index in array && array[index] === element) {
-				return index;
-			}
-		}
-
-		return -1;
-	}
-
 	var existingProto = (window.Event && window.Event.prototype) || null;
 	function Event(type, eventInitDict) {
 		if (!type) {
@@ -67,7 +52,7 @@ try{return new Event("click"),!0}catch(t){return!1}})(this)
 		event.cancelable = eventInitDict && eventInitDict.cancelable !== undefined ? eventInitDict.cancelable : false;
 
 		return event;
-	};
+	}
 	Event.NONE = 0;
 	Event.CAPTURING_PHASE = 1;
 	Event.AT_TARGET = 2;
@@ -135,7 +120,7 @@ try{return new Event("click"),!0}catch(t){return!1}})(this)
 						if (index in events) {
 							eventElement = events[index];
 
-							if (indexOf(list, eventElement) !== -1 && typeof eventElement === 'function') {
+							if (list.includes(eventElement) && typeof eventElement === 'function') {
 								eventElement.call(element, event);
 							}
 						}
@@ -160,7 +145,7 @@ try{return new Event("click"),!0}catch(t){return!1}})(this)
 			index;
 
 			if (element._events && element._events[type] && element._events[type].list) {
-				index = indexOf(element._events[type].list, listener);
+				index = element._events[type].list.indexOf(listener);
 
 				if (index !== -1) {
 					element._events[type].list.splice(index, 1);

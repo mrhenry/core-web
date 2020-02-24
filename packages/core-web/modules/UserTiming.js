@@ -1,5 +1,5 @@
 (function(undefined) {
-if (!("performance"in this&&"function"==typeof this.performance.getEntriesByType&&"function"==typeof this.performance.mark
+if (!("performance"in self&&"function"==typeof self.performance.getEntriesByType&&"function"==typeof self.performance.mark
 )) {
 // UserTiming
 /* eslint-env browser,amd,node */

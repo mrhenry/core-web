@@ -1,5 +1,5 @@
 (function(undefined) {
-if (!("console"in this&&"dir"in this.console
+if (!("console"in self&&"dir"in self.console
 )) {
 // console.dir
 console.dir = function dir() {};

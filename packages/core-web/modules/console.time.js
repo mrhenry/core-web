@@ -1,5 +1,5 @@
 (function(undefined) {
-if (!("console"in this&&"time"in this.console
+if (!("console"in self&&"time"in self.console
 )) {
 // console.time
 console.time = function time() {};
