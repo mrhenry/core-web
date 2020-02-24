@@ -1,5 +1,5 @@
 (function(undefined) {
-if (!("document"in this&&"matches"in document.documentElement
+if (!("document"in self&&"matches"in document.documentElement
 )) {
 // Element.prototype.matches
 Element.prototype.matches = Element.prototype.webkitMatchesSelector || Element.prototype.oMatchesSelector || Element.prototype.msMatchesSelector || Element.prototype.mozMatchesSelector || function matches(selector) {

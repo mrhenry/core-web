@@ -1,5 +1,5 @@
 (function(undefined) {
-if (!("console"in this&&"timelineEnd"in this.console
+if (!("console"in self&&"timelineEnd"in self.console
 )) {
 // console.timelineEnd
 console.timelineEnd = function timelineEnd() {};

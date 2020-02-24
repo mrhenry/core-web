@@ -1,5 +1,5 @@
 (function(undefined) {
-if (!("console"in this&&"count"in this.console
+if (!("console"in self&&"count"in self.console
 )) {
 // console.count
 console.count = function count() {};

@@ -1,5 +1,5 @@
 (function(undefined) {
-if (!("console"in this&&"error"in this.console
+if (!("console"in self&&"error"in self.console
 )) {
 // console.error
 console.error = console.log;

@@ -1,5 +1,5 @@
 (function(undefined) {
-if (!("requestAnimationFrame"in this
+if (!("requestAnimationFrame"in self
 )) {
 // requestAnimationFrame
 (function (global) {
@@ -28,9 +28,9 @@ if (!("requestAnimationFrame"in this
 
 	if (rafPrefix) {
 		global.requestAnimationFrame = function (callback) {
-		    return global[rafPrefix + 'RequestAnimationFrame'](function () {
-		        callback(pnow());
-		    });
+			return global[rafPrefix + 'RequestAnimationFrame'](function () {
+				callback(pnow());
+			});
 		};
 		global.cancelAnimationFrame = global[rafPrefix + 'CancelAnimationFrame'];
 	} else {
@@ -63,5 +63,5 @@ if (!("requestAnimationFrame"in this
 			clearTimeout(id);
 		};
 	}
-}(this));
+}(self));
 }}).call('object' === typeof window && window || 'object' === typeof self && self || 'object' === typeof global && global || {});

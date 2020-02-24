@@ -1,5 +1,5 @@
 (function(undefined) {
-if (!("console"in this&&"exception"in this.console
+if (!("console"in self&&"exception"in self.console
 )) {
 // console.exception
 console.exception = function exception() {};

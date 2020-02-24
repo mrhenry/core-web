@@ -1,5 +1,5 @@
 (function(undefined) {
-if (!("document"in this&&"placeholder"in document.createElement("input")
+if (!("document"in self&&"placeholder"in document.createElement("input")
 )) {
 // Element.prototype.placeholder
 Object.defineProperty(Element.prototype, 'placeholder', {
@@ -67,6 +67,7 @@ document.attachEvent('onreadystatechange', function () {
 	if (document.readyState === 'complete') {
 		for (var elements = document.querySelectorAll('input,textarea'), index = 0, length = elements.length; index < length; ++index) {
 			if (elements[index].placeholder) {
+				// eslint-disable-next-line no-self-assign
 				elements[index].placeholder = elements[index].placeholder;
 			}
 		}

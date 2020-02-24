@@ -1,5 +1,5 @@
 (function(undefined) {
-if (!("console"in this&&"group"in this.console
+if (!("console"in self&&"group"in self.console
 )) {
 // console.group
 console.group = function group() {};

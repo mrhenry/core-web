@@ -1,5 +1,5 @@
 (function(undefined) {
-if (!("location"in this&&"origin"in this.location
+if (!("location"in self&&"origin"in self.location
 )) {
 // location.origin
 try {

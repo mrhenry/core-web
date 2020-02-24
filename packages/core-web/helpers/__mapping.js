@@ -1,5 +1,26 @@
 module.exports = [
   {
+    "name": "AbortController",
+    "deps": [
+      "fetch",
+      "Event"
+    ],
+    "browsers": {
+      "edge": "12 - 15",
+      "edge_mob": "*",
+      "ie": "10 - *",
+      "ie_mob": "10 - *",
+      "firefox": "2 - 56",
+      "opera": "10 - 52",
+      "safari": "3.1 - 12",
+      "chrome": "4 - 65",
+      "ios_saf": "3.2 - 11.2",
+      "firefox_mob": "<64",
+      "samsung_mob": "*",
+      "android": "<67"
+    }
+  },
+  {
     "name": "AudioContext",
     "deps": []
   },
@@ -14,8 +35,9 @@ module.exports = [
       "edge": "*",
       "edge_mob": "*",
       "firefox": "<13",
+      "firefox_mob": "<14",
       "safari": "<6",
-      "ie": "*",
+      "ie": "<10",
       "opera": "<12"
     },
     "detector": true
@@ -36,6 +58,20 @@ module.exports = [
       "chrome": "1 - 14",
       "android": "<=4.3",
       "firefox_mob": "6 - 10"
+    }
+  },
+  {
+    "name": "DOMRect",
+    "deps": [],
+    "browsers": {
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "chrome": "<60",
+      "ios_chr": "<10.1",
+      "safari": "<10.1",
+      "ios_saf": "<10.1",
+      "firefox": "<=30",
+      "android": "<6"
     }
   },
   {
@@ -81,14 +117,14 @@ module.exports = [
       "android": "*",
       "bb": "*",
       "chrome": "<54",
-      "edge": "*",
-      "edge_mob": "*",
+      "edge": "<17",
+      "edge_mob": "<17",
       "firefox": "<49",
       "ios_chr": "*",
       "ios_saf": "<10",
       "ie": "8 - *",
       "ie_mob": "10 - *",
-      "opera": "*",
+      "opera": "<39",
       "op_mini": "*",
       "safari": "<10",
       "firefox_mob": "<49",
@@ -107,14 +143,14 @@ module.exports = [
       "android": "*",
       "bb": "*",
       "chrome": "<54",
-      "edge": "*",
-      "edge_mob": "*",
+      "edge": "<17",
+      "edge_mob": "<17",
       "firefox": "<49",
       "ios_chr": "*",
       "ios_saf": "<10",
       "ie": "8 - *",
       "ie_mob": "10 - *",
-      "opera": "*",
+      "opera": "<39",
       "op_mini": "*",
       "safari": "<10",
       "firefox_mob": "<49",
@@ -142,14 +178,14 @@ module.exports = [
       "android": "*",
       "bb": "*",
       "chrome": "<54",
-      "edge": "*",
-      "edge_mob": "*",
+      "edge": "<17",
+      "edge_mob": "<17",
       "firefox": "<49",
       "ios_chr": "*",
       "ios_saf": "<10",
       "ie": "6 - *",
       "ie_mob": "10 - *",
-      "opera": "*",
+      "opera": "<39",
       "op_mini": "*",
       "safari": "<10",
       "firefox_mob": "<49",
@@ -164,17 +200,17 @@ module.exports = [
       "_mutation"
     ],
     "browsers": {
-      "android": "*",
+      "android": "<5",
       "bb": "*",
       "chrome": "<54",
-      "edge": "*",
-      "edge_mob": "*",
+      "edge": "<17",
+      "edge_mob": "<17",
       "firefox": "<49",
       "ios_chr": "*",
       "ios_saf": "<10",
       "ie": "6 - *",
       "ie_mob": "10 - *",
-      "opera": "*",
+      "opera": "<39",
       "op_mini": "*",
       "safari": "<10",
       "firefox_mob": "<49",
@@ -189,17 +225,17 @@ module.exports = [
       "_mutation"
     ],
     "browsers": {
-      "android": "*",
+      "android": "<5",
       "bb": "*",
       "chrome": "<54",
-      "edge": "*",
-      "edge_mob": "*",
+      "edge": "<17",
+      "edge_mob": "<17",
       "firefox": "<49",
       "ios_chr": "*",
       "ios_saf": "<10",
       "ie": "6 - *",
       "ie_mob": "10 - *",
-      "opera": "*",
+      "opera": "<39",
       "op_mini": "*",
       "safari": "<10",
       "firefox_mob": "<49",
@@ -235,18 +271,18 @@ module.exports = [
     "browsers": {
       "bb": "*",
       "android": "<5",
-      "chrome": "* - 41",
-      "edge": "*",
-      "edge_mob": "*",
+      "chrome": "<41",
+      "edge": "<15",
+      "edge_mob": "<15",
       "ie": "*",
       "ie_mob": "*",
       "ios_saf": "<9",
-      "firefox": "6 - 34",
+      "firefox": "<35",
       "opera": "<28",
       "op_mini": "*",
       "op_mob": "<33",
       "safari": "<9",
-      "firefox_mob": "6 - 43"
+      "firefox_mob": "<35"
     }
   },
   {
@@ -264,14 +300,37 @@ module.exports = [
     }
   },
   {
+    "name": "Element.prototype.inert",
+    "deps": [
+      "Element",
+      "Element.prototype.matches",
+      "MutationObserver",
+      "Node.prototype.contains"
+    ],
+    "browsers": {
+      "edge": "*",
+      "edge_mob": "*",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "*",
+      "opera": "*",
+      "safari": "*",
+      "chrome": "*",
+      "ios_saf": "*",
+      "firefox_mob": "*",
+      "android": "*",
+      "op_mob": "*"
+    }
+  },
+  {
     "name": "Element.prototype.matches",
     "deps": [
       "Element",
       "document.querySelector"
     ],
     "browsers": {
-      "edge": "*",
-      "edge_mob": "*",
+      "edge": "<12",
+      "edge_mob": "<12",
       "ie": "6 - *",
       "ie_mob": "10 - 11",
       "chrome": "* - 33",
@@ -304,17 +363,17 @@ module.exports = [
       "_mutation"
     ],
     "browsers": {
-      "android": "*",
+      "android": "<5",
       "bb": "*",
       "chrome": "<54",
-      "edge": "*",
-      "edge_mob": "*",
+      "edge": "<17",
+      "edge_mob": "<17",
       "firefox": "<49",
       "ios_chr": "*",
       "ios_saf": "<10",
       "ie": "6 - *",
       "ie_mob": "10 - *",
-      "opera": "*",
+      "opera": "<39",
       "op_mini": "*",
       "safari": "<10",
       "firefox_mob": "<49",
@@ -353,21 +412,45 @@ module.exports = [
       "_mutation"
     ],
     "browsers": {
-      "android": "*",
+      "android": "<5",
       "bb": "*",
       "chrome": "<54",
-      "edge": "*",
-      "edge_mob": "*",
+      "edge": "<17",
+      "edge_mob": "<17",
       "firefox": "<49",
       "ios_chr": "*",
       "ios_saf": "<10",
       "ie": "6 - *",
       "ie_mob": "10 - *",
-      "opera": "*",
+      "opera": "<39",
       "op_mini": "*",
       "safari": "<10",
       "firefox_mob": "<49",
       "samsung_mob": "<6"
+    }
+  },
+  {
+    "name": "Element.prototype.toggleAttribute",
+    "deps": [
+      "Element"
+    ],
+    "browsers": {
+      "android": "<69",
+      "bb": "*",
+      "chrome": "<69",
+      "edge": "<18",
+      "edge_mob": "<18",
+      "firefox": "<63",
+      "ios_chr": "<12",
+      "ios_saf": "<12",
+      "ie": "*",
+      "ie_mob": "*",
+      "opera": "<56",
+      "op_mini": "*",
+      "op_mob": "<51",
+      "safari": "<12",
+      "firefox_mob": "<63",
+      "samsung_mob": "*"
     }
   },
   {
@@ -439,7 +522,7 @@ module.exports = [
       "firefox": "<19",
       "safari": "<11",
       "ie": ">=10",
-      "opera": "*",
+      "opera": "<37",
       "ios_saf": "<11"
     }
   },
@@ -471,6 +554,29 @@ module.exports = [
     }
   },
   {
+    "name": "HTMLTemplateElement",
+    "deps": [
+      "DocumentFragment",
+      "document.querySelector",
+      "Event"
+    ],
+    "browsers": {
+      "edge": "<13",
+      "edge_mob": "<13",
+      "ie": "11",
+      "ie_mob": "11",
+      "firefox": "4 - 22",
+      "opera": "10 - 22",
+      "safari": "6 - 8",
+      "chrome": "* - 26",
+      "ios_saf": "* - 8",
+      "firefox_mob": "<67",
+      "bb": "7 - 10",
+      "android": "<67"
+    },
+    "detector": true
+  },
+  {
     "name": "IntersectionObserver",
     "deps": [
       "getComputedStyle",
@@ -478,20 +584,21 @@ module.exports = [
       "performance.now"
     ],
     "browsers": {
-      "android": "4.4 - *",
-      "bb": "7 - 10",
-      "chrome": "<51",
-      "edge": "*",
-      "edge_mob": "*",
-      "firefox": "<55",
-      "firefox_mob": "47 - 55",
+      "android": "*",
+      "bb": "*",
+      "chrome": "< 51",
+      "edge": "< 16",
+      "edge_mob": "< 16",
+      "firefox": "< 55",
+      "firefox_mob": "< 55",
       "ie": "*",
-      "ie_mob": "11 - *",
-      "ios_saf": "7 - *",
-      "op_mini": "17 - *",
-      "opera": "*",
-      "safari": "6 - *",
-      "samsung_mob": "<6"
+      "ie_mob": "*",
+      "ios_saf": "< 12.2",
+      "op_mini": "*",
+      "op_mob": "< 46",
+      "opera": "< 45",
+      "safari": "< 12.2",
+      "samsung_mob": "< 7"
     }
   },
   {
@@ -510,8 +617,8 @@ module.exports = [
     "deps": [],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -523,14 +630,7591 @@ module.exports = [
     "detector": true
   },
   {
+    "name": "Intl.PluralRules",
+    "deps": [
+      "Intl"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<58",
+      "opera": "<50",
+      "chrome": "<63",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<58",
+      "samsung_mob": "*"
+    }
+  },
+  {
+    "name": "Intl.PluralRules.~locale.af",
+    "deps": [
+      "Intl",
+      "Intl.PluralRules"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<58",
+      "opera": "<50",
+      "chrome": "<63",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<58",
+      "samsung_mob": "*"
+    }
+  },
+  {
+    "name": "Intl.PluralRules.~locale.ak",
+    "deps": [
+      "Intl",
+      "Intl.PluralRules"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<58",
+      "opera": "<50",
+      "chrome": "<63",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<58",
+      "samsung_mob": "*"
+    }
+  },
+  {
+    "name": "Intl.PluralRules.~locale.am",
+    "deps": [
+      "Intl",
+      "Intl.PluralRules"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<58",
+      "opera": "<50",
+      "chrome": "<63",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<58",
+      "samsung_mob": "*"
+    }
+  },
+  {
+    "name": "Intl.PluralRules.~locale.ar",
+    "deps": [
+      "Intl",
+      "Intl.PluralRules"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<58",
+      "opera": "<50",
+      "chrome": "<63",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<58",
+      "samsung_mob": "*"
+    }
+  },
+  {
+    "name": "Intl.PluralRules.~locale.as",
+    "deps": [
+      "Intl",
+      "Intl.PluralRules"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<58",
+      "opera": "<50",
+      "chrome": "<63",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<58",
+      "samsung_mob": "*"
+    }
+  },
+  {
+    "name": "Intl.PluralRules.~locale.asa",
+    "deps": [
+      "Intl",
+      "Intl.PluralRules"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<58",
+      "opera": "<50",
+      "chrome": "<63",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<58",
+      "samsung_mob": "*"
+    }
+  },
+  {
+    "name": "Intl.PluralRules.~locale.ast",
+    "deps": [
+      "Intl",
+      "Intl.PluralRules"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<58",
+      "opera": "<50",
+      "chrome": "<63",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<58",
+      "samsung_mob": "*"
+    }
+  },
+  {
+    "name": "Intl.PluralRules.~locale.az",
+    "deps": [
+      "Intl",
+      "Intl.PluralRules"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<58",
+      "opera": "<50",
+      "chrome": "<63",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<58",
+      "samsung_mob": "*"
+    }
+  },
+  {
+    "name": "Intl.PluralRules.~locale.be",
+    "deps": [
+      "Intl",
+      "Intl.PluralRules"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<58",
+      "opera": "<50",
+      "chrome": "<63",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<58",
+      "samsung_mob": "*"
+    }
+  },
+  {
+    "name": "Intl.PluralRules.~locale.bem",
+    "deps": [
+      "Intl",
+      "Intl.PluralRules"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<58",
+      "opera": "<50",
+      "chrome": "<63",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<58",
+      "samsung_mob": "*"
+    }
+  },
+  {
+    "name": "Intl.PluralRules.~locale.bez",
+    "deps": [
+      "Intl",
+      "Intl.PluralRules"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<58",
+      "opera": "<50",
+      "chrome": "<63",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<58",
+      "samsung_mob": "*"
+    }
+  },
+  {
+    "name": "Intl.PluralRules.~locale.bg",
+    "deps": [
+      "Intl",
+      "Intl.PluralRules"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<58",
+      "opera": "<50",
+      "chrome": "<63",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<58",
+      "samsung_mob": "*"
+    }
+  },
+  {
+    "name": "Intl.PluralRules.~locale.bm",
+    "deps": [
+      "Intl",
+      "Intl.PluralRules"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<58",
+      "opera": "<50",
+      "chrome": "<63",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<58",
+      "samsung_mob": "*"
+    }
+  },
+  {
+    "name": "Intl.PluralRules.~locale.bn",
+    "deps": [
+      "Intl",
+      "Intl.PluralRules"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<58",
+      "opera": "<50",
+      "chrome": "<63",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<58",
+      "samsung_mob": "*"
+    }
+  },
+  {
+    "name": "Intl.PluralRules.~locale.bo",
+    "deps": [
+      "Intl",
+      "Intl.PluralRules"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<58",
+      "opera": "<50",
+      "chrome": "<63",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<58",
+      "samsung_mob": "*"
+    }
+  },
+  {
+    "name": "Intl.PluralRules.~locale.br",
+    "deps": [
+      "Intl",
+      "Intl.PluralRules"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<58",
+      "opera": "<50",
+      "chrome": "<63",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<58",
+      "samsung_mob": "*"
+    }
+  },
+  {
+    "name": "Intl.PluralRules.~locale.brx",
+    "deps": [
+      "Intl",
+      "Intl.PluralRules"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<58",
+      "opera": "<50",
+      "chrome": "<63",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<58",
+      "samsung_mob": "*"
+    }
+  },
+  {
+    "name": "Intl.PluralRules.~locale.bs",
+    "deps": [
+      "Intl",
+      "Intl.PluralRules"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<58",
+      "opera": "<50",
+      "chrome": "<63",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<58",
+      "samsung_mob": "*"
+    }
+  },
+  {
+    "name": "Intl.PluralRules.~locale.ca",
+    "deps": [
+      "Intl",
+      "Intl.PluralRules"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<58",
+      "opera": "<50",
+      "chrome": "<63",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<58",
+      "samsung_mob": "*"
+    }
+  },
+  {
+    "name": "Intl.PluralRules.~locale.ce",
+    "deps": [
+      "Intl",
+      "Intl.PluralRules"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<58",
+      "opera": "<50",
+      "chrome": "<63",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<58",
+      "samsung_mob": "*"
+    }
+  },
+  {
+    "name": "Intl.PluralRules.~locale.ceb",
+    "deps": [
+      "Intl",
+      "Intl.PluralRules"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<58",
+      "opera": "<50",
+      "chrome": "<63",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<58",
+      "samsung_mob": "*"
+    }
+  },
+  {
+    "name": "Intl.PluralRules.~locale.cgg",
+    "deps": [
+      "Intl",
+      "Intl.PluralRules"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<58",
+      "opera": "<50",
+      "chrome": "<63",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<58",
+      "samsung_mob": "*"
+    }
+  },
+  {
+    "name": "Intl.PluralRules.~locale.chr",
+    "deps": [
+      "Intl",
+      "Intl.PluralRules"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<58",
+      "opera": "<50",
+      "chrome": "<63",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<58",
+      "samsung_mob": "*"
+    }
+  },
+  {
+    "name": "Intl.PluralRules.~locale.ckb",
+    "deps": [
+      "Intl",
+      "Intl.PluralRules"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<58",
+      "opera": "<50",
+      "chrome": "<63",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<58",
+      "samsung_mob": "*"
+    }
+  },
+  {
+    "name": "Intl.PluralRules.~locale.cs",
+    "deps": [
+      "Intl",
+      "Intl.PluralRules"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<58",
+      "opera": "<50",
+      "chrome": "<63",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<58",
+      "samsung_mob": "*"
+    }
+  },
+  {
+    "name": "Intl.PluralRules.~locale.cy",
+    "deps": [
+      "Intl",
+      "Intl.PluralRules"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<58",
+      "opera": "<50",
+      "chrome": "<63",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<58",
+      "samsung_mob": "*"
+    }
+  },
+  {
+    "name": "Intl.PluralRules.~locale.da",
+    "deps": [
+      "Intl",
+      "Intl.PluralRules"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<58",
+      "opera": "<50",
+      "chrome": "<63",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<58",
+      "samsung_mob": "*"
+    }
+  },
+  {
+    "name": "Intl.PluralRules.~locale.de",
+    "deps": [
+      "Intl",
+      "Intl.PluralRules"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<58",
+      "opera": "<50",
+      "chrome": "<63",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<58",
+      "samsung_mob": "*"
+    }
+  },
+  {
+    "name": "Intl.PluralRules.~locale.dsb",
+    "deps": [
+      "Intl",
+      "Intl.PluralRules"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<58",
+      "opera": "<50",
+      "chrome": "<63",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<58",
+      "samsung_mob": "*"
+    }
+  },
+  {
+    "name": "Intl.PluralRules.~locale.dz",
+    "deps": [
+      "Intl",
+      "Intl.PluralRules"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<58",
+      "opera": "<50",
+      "chrome": "<63",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<58",
+      "samsung_mob": "*"
+    }
+  },
+  {
+    "name": "Intl.PluralRules.~locale.ee",
+    "deps": [
+      "Intl",
+      "Intl.PluralRules"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<58",
+      "opera": "<50",
+      "chrome": "<63",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<58",
+      "samsung_mob": "*"
+    }
+  },
+  {
+    "name": "Intl.PluralRules.~locale.el",
+    "deps": [
+      "Intl",
+      "Intl.PluralRules"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<58",
+      "opera": "<50",
+      "chrome": "<63",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<58",
+      "samsung_mob": "*"
+    }
+  },
+  {
+    "name": "Intl.PluralRules.~locale.en",
+    "deps": [
+      "Intl",
+      "Intl.PluralRules"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<58",
+      "opera": "<50",
+      "chrome": "<63",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<58",
+      "samsung_mob": "*"
+    }
+  },
+  {
+    "name": "Intl.PluralRules.~locale.eo",
+    "deps": [
+      "Intl",
+      "Intl.PluralRules"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<58",
+      "opera": "<50",
+      "chrome": "<63",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<58",
+      "samsung_mob": "*"
+    }
+  },
+  {
+    "name": "Intl.PluralRules.~locale.es",
+    "deps": [
+      "Intl",
+      "Intl.PluralRules"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<58",
+      "opera": "<50",
+      "chrome": "<63",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<58",
+      "samsung_mob": "*"
+    }
+  },
+  {
+    "name": "Intl.PluralRules.~locale.et",
+    "deps": [
+      "Intl",
+      "Intl.PluralRules"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<58",
+      "opera": "<50",
+      "chrome": "<63",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<58",
+      "samsung_mob": "*"
+    }
+  },
+  {
+    "name": "Intl.PluralRules.~locale.eu",
+    "deps": [
+      "Intl",
+      "Intl.PluralRules"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<58",
+      "opera": "<50",
+      "chrome": "<63",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<58",
+      "samsung_mob": "*"
+    }
+  },
+  {
+    "name": "Intl.PluralRules.~locale.fa",
+    "deps": [
+      "Intl",
+      "Intl.PluralRules"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<58",
+      "opera": "<50",
+      "chrome": "<63",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<58",
+      "samsung_mob": "*"
+    }
+  },
+  {
+    "name": "Intl.PluralRules.~locale.ff",
+    "deps": [
+      "Intl",
+      "Intl.PluralRules"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<58",
+      "opera": "<50",
+      "chrome": "<63",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<58",
+      "samsung_mob": "*"
+    }
+  },
+  {
+    "name": "Intl.PluralRules.~locale.fi",
+    "deps": [
+      "Intl",
+      "Intl.PluralRules"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<58",
+      "opera": "<50",
+      "chrome": "<63",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<58",
+      "samsung_mob": "*"
+    }
+  },
+  {
+    "name": "Intl.PluralRules.~locale.fil",
+    "deps": [
+      "Intl",
+      "Intl.PluralRules"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<58",
+      "opera": "<50",
+      "chrome": "<63",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<58",
+      "samsung_mob": "*"
+    }
+  },
+  {
+    "name": "Intl.PluralRules.~locale.fo",
+    "deps": [
+      "Intl",
+      "Intl.PluralRules"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<58",
+      "opera": "<50",
+      "chrome": "<63",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<58",
+      "samsung_mob": "*"
+    }
+  },
+  {
+    "name": "Intl.PluralRules.~locale.fr",
+    "deps": [
+      "Intl",
+      "Intl.PluralRules"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<58",
+      "opera": "<50",
+      "chrome": "<63",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<58",
+      "samsung_mob": "*"
+    }
+  },
+  {
+    "name": "Intl.PluralRules.~locale.fur",
+    "deps": [
+      "Intl",
+      "Intl.PluralRules"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<58",
+      "opera": "<50",
+      "chrome": "<63",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<58",
+      "samsung_mob": "*"
+    }
+  },
+  {
+    "name": "Intl.PluralRules.~locale.fy",
+    "deps": [
+      "Intl",
+      "Intl.PluralRules"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<58",
+      "opera": "<50",
+      "chrome": "<63",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<58",
+      "samsung_mob": "*"
+    }
+  },
+  {
+    "name": "Intl.PluralRules.~locale.ga",
+    "deps": [
+      "Intl",
+      "Intl.PluralRules"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<58",
+      "opera": "<50",
+      "chrome": "<63",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<58",
+      "samsung_mob": "*"
+    }
+  },
+  {
+    "name": "Intl.PluralRules.~locale.gd",
+    "deps": [
+      "Intl",
+      "Intl.PluralRules"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<58",
+      "opera": "<50",
+      "chrome": "<63",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<58",
+      "samsung_mob": "*"
+    }
+  },
+  {
+    "name": "Intl.PluralRules.~locale.gl",
+    "deps": [
+      "Intl",
+      "Intl.PluralRules"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<58",
+      "opera": "<50",
+      "chrome": "<63",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<58",
+      "samsung_mob": "*"
+    }
+  },
+  {
+    "name": "Intl.PluralRules.~locale.gsw",
+    "deps": [
+      "Intl",
+      "Intl.PluralRules"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<58",
+      "opera": "<50",
+      "chrome": "<63",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<58",
+      "samsung_mob": "*"
+    }
+  },
+  {
+    "name": "Intl.PluralRules.~locale.gu",
+    "deps": [
+      "Intl",
+      "Intl.PluralRules"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<58",
+      "opera": "<50",
+      "chrome": "<63",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<58",
+      "samsung_mob": "*"
+    }
+  },
+  {
+    "name": "Intl.PluralRules.~locale.gv",
+    "deps": [
+      "Intl",
+      "Intl.PluralRules"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<58",
+      "opera": "<50",
+      "chrome": "<63",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<58",
+      "samsung_mob": "*"
+    }
+  },
+  {
+    "name": "Intl.PluralRules.~locale.ha",
+    "deps": [
+      "Intl",
+      "Intl.PluralRules"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<58",
+      "opera": "<50",
+      "chrome": "<63",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<58",
+      "samsung_mob": "*"
+    }
+  },
+  {
+    "name": "Intl.PluralRules.~locale.haw",
+    "deps": [
+      "Intl",
+      "Intl.PluralRules"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<58",
+      "opera": "<50",
+      "chrome": "<63",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<58",
+      "samsung_mob": "*"
+    }
+  },
+  {
+    "name": "Intl.PluralRules.~locale.he",
+    "deps": [
+      "Intl",
+      "Intl.PluralRules"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<58",
+      "opera": "<50",
+      "chrome": "<63",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<58",
+      "samsung_mob": "*"
+    }
+  },
+  {
+    "name": "Intl.PluralRules.~locale.hi",
+    "deps": [
+      "Intl",
+      "Intl.PluralRules"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<58",
+      "opera": "<50",
+      "chrome": "<63",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<58",
+      "samsung_mob": "*"
+    }
+  },
+  {
+    "name": "Intl.PluralRules.~locale.hr",
+    "deps": [
+      "Intl",
+      "Intl.PluralRules"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<58",
+      "opera": "<50",
+      "chrome": "<63",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<58",
+      "samsung_mob": "*"
+    }
+  },
+  {
+    "name": "Intl.PluralRules.~locale.hsb",
+    "deps": [
+      "Intl",
+      "Intl.PluralRules"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<58",
+      "opera": "<50",
+      "chrome": "<63",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<58",
+      "samsung_mob": "*"
+    }
+  },
+  {
+    "name": "Intl.PluralRules.~locale.hu",
+    "deps": [
+      "Intl",
+      "Intl.PluralRules"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<58",
+      "opera": "<50",
+      "chrome": "<63",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<58",
+      "samsung_mob": "*"
+    }
+  },
+  {
+    "name": "Intl.PluralRules.~locale.hy",
+    "deps": [
+      "Intl",
+      "Intl.PluralRules"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<58",
+      "opera": "<50",
+      "chrome": "<63",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<58",
+      "samsung_mob": "*"
+    }
+  },
+  {
+    "name": "Intl.PluralRules.~locale.ia",
+    "deps": [
+      "Intl",
+      "Intl.PluralRules"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<58",
+      "opera": "<50",
+      "chrome": "<63",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<58",
+      "samsung_mob": "*"
+    }
+  },
+  {
+    "name": "Intl.PluralRules.~locale.id",
+    "deps": [
+      "Intl",
+      "Intl.PluralRules"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<58",
+      "opera": "<50",
+      "chrome": "<63",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<58",
+      "samsung_mob": "*"
+    }
+  },
+  {
+    "name": "Intl.PluralRules.~locale.ig",
+    "deps": [
+      "Intl",
+      "Intl.PluralRules"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<58",
+      "opera": "<50",
+      "chrome": "<63",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<58",
+      "samsung_mob": "*"
+    }
+  },
+  {
+    "name": "Intl.PluralRules.~locale.ii",
+    "deps": [
+      "Intl",
+      "Intl.PluralRules"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<58",
+      "opera": "<50",
+      "chrome": "<63",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<58",
+      "samsung_mob": "*"
+    }
+  },
+  {
+    "name": "Intl.PluralRules.~locale.is",
+    "deps": [
+      "Intl",
+      "Intl.PluralRules"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<58",
+      "opera": "<50",
+      "chrome": "<63",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<58",
+      "samsung_mob": "*"
+    }
+  },
+  {
+    "name": "Intl.PluralRules.~locale.it",
+    "deps": [
+      "Intl",
+      "Intl.PluralRules"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<58",
+      "opera": "<50",
+      "chrome": "<63",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<58",
+      "samsung_mob": "*"
+    }
+  },
+  {
+    "name": "Intl.PluralRules.~locale.ja",
+    "deps": [
+      "Intl",
+      "Intl.PluralRules"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<58",
+      "opera": "<50",
+      "chrome": "<63",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<58",
+      "samsung_mob": "*"
+    }
+  },
+  {
+    "name": "Intl.PluralRules.~locale.jgo",
+    "deps": [
+      "Intl",
+      "Intl.PluralRules"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<58",
+      "opera": "<50",
+      "chrome": "<63",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<58",
+      "samsung_mob": "*"
+    }
+  },
+  {
+    "name": "Intl.PluralRules.~locale.jmc",
+    "deps": [
+      "Intl",
+      "Intl.PluralRules"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<58",
+      "opera": "<50",
+      "chrome": "<63",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<58",
+      "samsung_mob": "*"
+    }
+  },
+  {
+    "name": "Intl.PluralRules.~locale.jv",
+    "deps": [
+      "Intl",
+      "Intl.PluralRules"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<58",
+      "opera": "<50",
+      "chrome": "<63",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<58",
+      "samsung_mob": "*"
+    }
+  },
+  {
+    "name": "Intl.PluralRules.~locale.ka",
+    "deps": [
+      "Intl",
+      "Intl.PluralRules"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<58",
+      "opera": "<50",
+      "chrome": "<63",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<58",
+      "samsung_mob": "*"
+    }
+  },
+  {
+    "name": "Intl.PluralRules.~locale.kab",
+    "deps": [
+      "Intl",
+      "Intl.PluralRules"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<58",
+      "opera": "<50",
+      "chrome": "<63",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<58",
+      "samsung_mob": "*"
+    }
+  },
+  {
+    "name": "Intl.PluralRules.~locale.kde",
+    "deps": [
+      "Intl",
+      "Intl.PluralRules"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<58",
+      "opera": "<50",
+      "chrome": "<63",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<58",
+      "samsung_mob": "*"
+    }
+  },
+  {
+    "name": "Intl.PluralRules.~locale.kea",
+    "deps": [
+      "Intl",
+      "Intl.PluralRules"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<58",
+      "opera": "<50",
+      "chrome": "<63",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<58",
+      "samsung_mob": "*"
+    }
+  },
+  {
+    "name": "Intl.PluralRules.~locale.kk",
+    "deps": [
+      "Intl",
+      "Intl.PluralRules"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<58",
+      "opera": "<50",
+      "chrome": "<63",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<58",
+      "samsung_mob": "*"
+    }
+  },
+  {
+    "name": "Intl.PluralRules.~locale.kkj",
+    "deps": [
+      "Intl",
+      "Intl.PluralRules"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<58",
+      "opera": "<50",
+      "chrome": "<63",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<58",
+      "samsung_mob": "*"
+    }
+  },
+  {
+    "name": "Intl.PluralRules.~locale.kl",
+    "deps": [
+      "Intl",
+      "Intl.PluralRules"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<58",
+      "opera": "<50",
+      "chrome": "<63",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<58",
+      "samsung_mob": "*"
+    }
+  },
+  {
+    "name": "Intl.PluralRules.~locale.km",
+    "deps": [
+      "Intl",
+      "Intl.PluralRules"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<58",
+      "opera": "<50",
+      "chrome": "<63",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<58",
+      "samsung_mob": "*"
+    }
+  },
+  {
+    "name": "Intl.PluralRules.~locale.kn",
+    "deps": [
+      "Intl",
+      "Intl.PluralRules"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<58",
+      "opera": "<50",
+      "chrome": "<63",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<58",
+      "samsung_mob": "*"
+    }
+  },
+  {
+    "name": "Intl.PluralRules.~locale.ko",
+    "deps": [
+      "Intl",
+      "Intl.PluralRules"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<58",
+      "opera": "<50",
+      "chrome": "<63",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<58",
+      "samsung_mob": "*"
+    }
+  },
+  {
+    "name": "Intl.PluralRules.~locale.ks",
+    "deps": [
+      "Intl",
+      "Intl.PluralRules"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<58",
+      "opera": "<50",
+      "chrome": "<63",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<58",
+      "samsung_mob": "*"
+    }
+  },
+  {
+    "name": "Intl.PluralRules.~locale.ksb",
+    "deps": [
+      "Intl",
+      "Intl.PluralRules"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<58",
+      "opera": "<50",
+      "chrome": "<63",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<58",
+      "samsung_mob": "*"
+    }
+  },
+  {
+    "name": "Intl.PluralRules.~locale.ksh",
+    "deps": [
+      "Intl",
+      "Intl.PluralRules"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<58",
+      "opera": "<50",
+      "chrome": "<63",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<58",
+      "samsung_mob": "*"
+    }
+  },
+  {
+    "name": "Intl.PluralRules.~locale.ku",
+    "deps": [
+      "Intl",
+      "Intl.PluralRules"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<58",
+      "opera": "<50",
+      "chrome": "<63",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<58",
+      "samsung_mob": "*"
+    }
+  },
+  {
+    "name": "Intl.PluralRules.~locale.kw",
+    "deps": [
+      "Intl",
+      "Intl.PluralRules"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<58",
+      "opera": "<50",
+      "chrome": "<63",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<58",
+      "samsung_mob": "*"
+    }
+  },
+  {
+    "name": "Intl.PluralRules.~locale.ky",
+    "deps": [
+      "Intl",
+      "Intl.PluralRules"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<58",
+      "opera": "<50",
+      "chrome": "<63",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<58",
+      "samsung_mob": "*"
+    }
+  },
+  {
+    "name": "Intl.PluralRules.~locale.lag",
+    "deps": [
+      "Intl",
+      "Intl.PluralRules"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<58",
+      "opera": "<50",
+      "chrome": "<63",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<58",
+      "samsung_mob": "*"
+    }
+  },
+  {
+    "name": "Intl.PluralRules.~locale.lb",
+    "deps": [
+      "Intl",
+      "Intl.PluralRules"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<58",
+      "opera": "<50",
+      "chrome": "<63",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<58",
+      "samsung_mob": "*"
+    }
+  },
+  {
+    "name": "Intl.PluralRules.~locale.lg",
+    "deps": [
+      "Intl",
+      "Intl.PluralRules"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<58",
+      "opera": "<50",
+      "chrome": "<63",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<58",
+      "samsung_mob": "*"
+    }
+  },
+  {
+    "name": "Intl.PluralRules.~locale.lkt",
+    "deps": [
+      "Intl",
+      "Intl.PluralRules"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<58",
+      "opera": "<50",
+      "chrome": "<63",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<58",
+      "samsung_mob": "*"
+    }
+  },
+  {
+    "name": "Intl.PluralRules.~locale.ln",
+    "deps": [
+      "Intl",
+      "Intl.PluralRules"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<58",
+      "opera": "<50",
+      "chrome": "<63",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<58",
+      "samsung_mob": "*"
+    }
+  },
+  {
+    "name": "Intl.PluralRules.~locale.lo",
+    "deps": [
+      "Intl",
+      "Intl.PluralRules"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<58",
+      "opera": "<50",
+      "chrome": "<63",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<58",
+      "samsung_mob": "*"
+    }
+  },
+  {
+    "name": "Intl.PluralRules.~locale.lt",
+    "deps": [
+      "Intl",
+      "Intl.PluralRules"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<58",
+      "opera": "<50",
+      "chrome": "<63",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<58",
+      "samsung_mob": "*"
+    }
+  },
+  {
+    "name": "Intl.PluralRules.~locale.lv",
+    "deps": [
+      "Intl",
+      "Intl.PluralRules"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<58",
+      "opera": "<50",
+      "chrome": "<63",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<58",
+      "samsung_mob": "*"
+    }
+  },
+  {
+    "name": "Intl.PluralRules.~locale.mas",
+    "deps": [
+      "Intl",
+      "Intl.PluralRules"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<58",
+      "opera": "<50",
+      "chrome": "<63",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<58",
+      "samsung_mob": "*"
+    }
+  },
+  {
+    "name": "Intl.PluralRules.~locale.mg",
+    "deps": [
+      "Intl",
+      "Intl.PluralRules"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<58",
+      "opera": "<50",
+      "chrome": "<63",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<58",
+      "samsung_mob": "*"
+    }
+  },
+  {
+    "name": "Intl.PluralRules.~locale.mgo",
+    "deps": [
+      "Intl",
+      "Intl.PluralRules"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<58",
+      "opera": "<50",
+      "chrome": "<63",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<58",
+      "samsung_mob": "*"
+    }
+  },
+  {
+    "name": "Intl.PluralRules.~locale.mk",
+    "deps": [
+      "Intl",
+      "Intl.PluralRules"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<58",
+      "opera": "<50",
+      "chrome": "<63",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<58",
+      "samsung_mob": "*"
+    }
+  },
+  {
+    "name": "Intl.PluralRules.~locale.ml",
+    "deps": [
+      "Intl",
+      "Intl.PluralRules"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<58",
+      "opera": "<50",
+      "chrome": "<63",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<58",
+      "samsung_mob": "*"
+    }
+  },
+  {
+    "name": "Intl.PluralRules.~locale.mn",
+    "deps": [
+      "Intl",
+      "Intl.PluralRules"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<58",
+      "opera": "<50",
+      "chrome": "<63",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<58",
+      "samsung_mob": "*"
+    }
+  },
+  {
+    "name": "Intl.PluralRules.~locale.mr",
+    "deps": [
+      "Intl",
+      "Intl.PluralRules"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<58",
+      "opera": "<50",
+      "chrome": "<63",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<58",
+      "samsung_mob": "*"
+    }
+  },
+  {
+    "name": "Intl.PluralRules.~locale.ms",
+    "deps": [
+      "Intl",
+      "Intl.PluralRules"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<58",
+      "opera": "<50",
+      "chrome": "<63",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<58",
+      "samsung_mob": "*"
+    }
+  },
+  {
+    "name": "Intl.PluralRules.~locale.mt",
+    "deps": [
+      "Intl",
+      "Intl.PluralRules"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<58",
+      "opera": "<50",
+      "chrome": "<63",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<58",
+      "samsung_mob": "*"
+    }
+  },
+  {
+    "name": "Intl.PluralRules.~locale.my",
+    "deps": [
+      "Intl",
+      "Intl.PluralRules"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<58",
+      "opera": "<50",
+      "chrome": "<63",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<58",
+      "samsung_mob": "*"
+    }
+  },
+  {
+    "name": "Intl.PluralRules.~locale.naq",
+    "deps": [
+      "Intl",
+      "Intl.PluralRules"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<58",
+      "opera": "<50",
+      "chrome": "<63",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<58",
+      "samsung_mob": "*"
+    }
+  },
+  {
+    "name": "Intl.PluralRules.~locale.nb",
+    "deps": [
+      "Intl",
+      "Intl.PluralRules"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<58",
+      "opera": "<50",
+      "chrome": "<63",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<58",
+      "samsung_mob": "*"
+    }
+  },
+  {
+    "name": "Intl.PluralRules.~locale.nd",
+    "deps": [
+      "Intl",
+      "Intl.PluralRules"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<58",
+      "opera": "<50",
+      "chrome": "<63",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<58",
+      "samsung_mob": "*"
+    }
+  },
+  {
+    "name": "Intl.PluralRules.~locale.ne",
+    "deps": [
+      "Intl",
+      "Intl.PluralRules"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<58",
+      "opera": "<50",
+      "chrome": "<63",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<58",
+      "samsung_mob": "*"
+    }
+  },
+  {
+    "name": "Intl.PluralRules.~locale.nl",
+    "deps": [
+      "Intl",
+      "Intl.PluralRules"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<58",
+      "opera": "<50",
+      "chrome": "<63",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<58",
+      "samsung_mob": "*"
+    }
+  },
+  {
+    "name": "Intl.PluralRules.~locale.nn",
+    "deps": [
+      "Intl",
+      "Intl.PluralRules"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<58",
+      "opera": "<50",
+      "chrome": "<63",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<58",
+      "samsung_mob": "*"
+    }
+  },
+  {
+    "name": "Intl.PluralRules.~locale.nnh",
+    "deps": [
+      "Intl",
+      "Intl.PluralRules"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<58",
+      "opera": "<50",
+      "chrome": "<63",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<58",
+      "samsung_mob": "*"
+    }
+  },
+  {
+    "name": "Intl.PluralRules.~locale.nyn",
+    "deps": [
+      "Intl",
+      "Intl.PluralRules"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<58",
+      "opera": "<50",
+      "chrome": "<63",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<58",
+      "samsung_mob": "*"
+    }
+  },
+  {
+    "name": "Intl.PluralRules.~locale.om",
+    "deps": [
+      "Intl",
+      "Intl.PluralRules"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<58",
+      "opera": "<50",
+      "chrome": "<63",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<58",
+      "samsung_mob": "*"
+    }
+  },
+  {
+    "name": "Intl.PluralRules.~locale.or",
+    "deps": [
+      "Intl",
+      "Intl.PluralRules"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<58",
+      "opera": "<50",
+      "chrome": "<63",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<58",
+      "samsung_mob": "*"
+    }
+  },
+  {
+    "name": "Intl.PluralRules.~locale.os",
+    "deps": [
+      "Intl",
+      "Intl.PluralRules"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<58",
+      "opera": "<50",
+      "chrome": "<63",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<58",
+      "samsung_mob": "*"
+    }
+  },
+  {
+    "name": "Intl.PluralRules.~locale.pa",
+    "deps": [
+      "Intl",
+      "Intl.PluralRules"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<58",
+      "opera": "<50",
+      "chrome": "<63",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<58",
+      "samsung_mob": "*"
+    }
+  },
+  {
+    "name": "Intl.PluralRules.~locale.pl",
+    "deps": [
+      "Intl",
+      "Intl.PluralRules"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<58",
+      "opera": "<50",
+      "chrome": "<63",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<58",
+      "samsung_mob": "*"
+    }
+  },
+  {
+    "name": "Intl.PluralRules.~locale.prg",
+    "deps": [
+      "Intl",
+      "Intl.PluralRules"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<58",
+      "opera": "<50",
+      "chrome": "<63",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<58",
+      "samsung_mob": "*"
+    }
+  },
+  {
+    "name": "Intl.PluralRules.~locale.ps",
+    "deps": [
+      "Intl",
+      "Intl.PluralRules"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<58",
+      "opera": "<50",
+      "chrome": "<63",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<58",
+      "samsung_mob": "*"
+    }
+  },
+  {
+    "name": "Intl.PluralRules.~locale.pt",
+    "deps": [
+      "Intl",
+      "Intl.PluralRules"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<58",
+      "opera": "<50",
+      "chrome": "<63",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<58",
+      "samsung_mob": "*"
+    }
+  },
+  {
+    "name": "Intl.PluralRules.~locale.rm",
+    "deps": [
+      "Intl",
+      "Intl.PluralRules"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<58",
+      "opera": "<50",
+      "chrome": "<63",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<58",
+      "samsung_mob": "*"
+    }
+  },
+  {
+    "name": "Intl.PluralRules.~locale.ro",
+    "deps": [
+      "Intl",
+      "Intl.PluralRules"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<58",
+      "opera": "<50",
+      "chrome": "<63",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<58",
+      "samsung_mob": "*"
+    }
+  },
+  {
+    "name": "Intl.PluralRules.~locale.rof",
+    "deps": [
+      "Intl",
+      "Intl.PluralRules"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<58",
+      "opera": "<50",
+      "chrome": "<63",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<58",
+      "samsung_mob": "*"
+    }
+  },
+  {
+    "name": "Intl.PluralRules.~locale.root",
+    "deps": [
+      "Intl",
+      "Intl.PluralRules"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<58",
+      "opera": "<50",
+      "chrome": "<63",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<58",
+      "samsung_mob": "*"
+    }
+  },
+  {
+    "name": "Intl.PluralRules.~locale.ru",
+    "deps": [
+      "Intl",
+      "Intl.PluralRules"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<58",
+      "opera": "<50",
+      "chrome": "<63",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<58",
+      "samsung_mob": "*"
+    }
+  },
+  {
+    "name": "Intl.PluralRules.~locale.rwk",
+    "deps": [
+      "Intl",
+      "Intl.PluralRules"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<58",
+      "opera": "<50",
+      "chrome": "<63",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<58",
+      "samsung_mob": "*"
+    }
+  },
+  {
+    "name": "Intl.PluralRules.~locale.sah",
+    "deps": [
+      "Intl",
+      "Intl.PluralRules"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<58",
+      "opera": "<50",
+      "chrome": "<63",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<58",
+      "samsung_mob": "*"
+    }
+  },
+  {
+    "name": "Intl.PluralRules.~locale.saq",
+    "deps": [
+      "Intl",
+      "Intl.PluralRules"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<58",
+      "opera": "<50",
+      "chrome": "<63",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<58",
+      "samsung_mob": "*"
+    }
+  },
+  {
+    "name": "Intl.PluralRules.~locale.sd",
+    "deps": [
+      "Intl",
+      "Intl.PluralRules"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<58",
+      "opera": "<50",
+      "chrome": "<63",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<58",
+      "samsung_mob": "*"
+    }
+  },
+  {
+    "name": "Intl.PluralRules.~locale.se",
+    "deps": [
+      "Intl",
+      "Intl.PluralRules"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<58",
+      "opera": "<50",
+      "chrome": "<63",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<58",
+      "samsung_mob": "*"
+    }
+  },
+  {
+    "name": "Intl.PluralRules.~locale.seh",
+    "deps": [
+      "Intl",
+      "Intl.PluralRules"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<58",
+      "opera": "<50",
+      "chrome": "<63",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<58",
+      "samsung_mob": "*"
+    }
+  },
+  {
+    "name": "Intl.PluralRules.~locale.ses",
+    "deps": [
+      "Intl",
+      "Intl.PluralRules"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<58",
+      "opera": "<50",
+      "chrome": "<63",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<58",
+      "samsung_mob": "*"
+    }
+  },
+  {
+    "name": "Intl.PluralRules.~locale.sg",
+    "deps": [
+      "Intl",
+      "Intl.PluralRules"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<58",
+      "opera": "<50",
+      "chrome": "<63",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<58",
+      "samsung_mob": "*"
+    }
+  },
+  {
+    "name": "Intl.PluralRules.~locale.shi",
+    "deps": [
+      "Intl",
+      "Intl.PluralRules"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<58",
+      "opera": "<50",
+      "chrome": "<63",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<58",
+      "samsung_mob": "*"
+    }
+  },
+  {
+    "name": "Intl.PluralRules.~locale.si",
+    "deps": [
+      "Intl",
+      "Intl.PluralRules"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<58",
+      "opera": "<50",
+      "chrome": "<63",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<58",
+      "samsung_mob": "*"
+    }
+  },
+  {
+    "name": "Intl.PluralRules.~locale.sk",
+    "deps": [
+      "Intl",
+      "Intl.PluralRules"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<58",
+      "opera": "<50",
+      "chrome": "<63",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<58",
+      "samsung_mob": "*"
+    }
+  },
+  {
+    "name": "Intl.PluralRules.~locale.sl",
+    "deps": [
+      "Intl",
+      "Intl.PluralRules"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<58",
+      "opera": "<50",
+      "chrome": "<63",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<58",
+      "samsung_mob": "*"
+    }
+  },
+  {
+    "name": "Intl.PluralRules.~locale.smn",
+    "deps": [
+      "Intl",
+      "Intl.PluralRules"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<58",
+      "opera": "<50",
+      "chrome": "<63",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<58",
+      "samsung_mob": "*"
+    }
+  },
+  {
+    "name": "Intl.PluralRules.~locale.sn",
+    "deps": [
+      "Intl",
+      "Intl.PluralRules"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<58",
+      "opera": "<50",
+      "chrome": "<63",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<58",
+      "samsung_mob": "*"
+    }
+  },
+  {
+    "name": "Intl.PluralRules.~locale.so",
+    "deps": [
+      "Intl",
+      "Intl.PluralRules"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<58",
+      "opera": "<50",
+      "chrome": "<63",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<58",
+      "samsung_mob": "*"
+    }
+  },
+  {
+    "name": "Intl.PluralRules.~locale.sq",
+    "deps": [
+      "Intl",
+      "Intl.PluralRules"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<58",
+      "opera": "<50",
+      "chrome": "<63",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<58",
+      "samsung_mob": "*"
+    }
+  },
+  {
+    "name": "Intl.PluralRules.~locale.sr",
+    "deps": [
+      "Intl",
+      "Intl.PluralRules"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<58",
+      "opera": "<50",
+      "chrome": "<63",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<58",
+      "samsung_mob": "*"
+    }
+  },
+  {
+    "name": "Intl.PluralRules.~locale.sv",
+    "deps": [
+      "Intl",
+      "Intl.PluralRules"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<58",
+      "opera": "<50",
+      "chrome": "<63",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<58",
+      "samsung_mob": "*"
+    }
+  },
+  {
+    "name": "Intl.PluralRules.~locale.sw",
+    "deps": [
+      "Intl",
+      "Intl.PluralRules"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<58",
+      "opera": "<50",
+      "chrome": "<63",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<58",
+      "samsung_mob": "*"
+    }
+  },
+  {
+    "name": "Intl.PluralRules.~locale.ta",
+    "deps": [
+      "Intl",
+      "Intl.PluralRules"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<58",
+      "opera": "<50",
+      "chrome": "<63",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<58",
+      "samsung_mob": "*"
+    }
+  },
+  {
+    "name": "Intl.PluralRules.~locale.te",
+    "deps": [
+      "Intl",
+      "Intl.PluralRules"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<58",
+      "opera": "<50",
+      "chrome": "<63",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<58",
+      "samsung_mob": "*"
+    }
+  },
+  {
+    "name": "Intl.PluralRules.~locale.teo",
+    "deps": [
+      "Intl",
+      "Intl.PluralRules"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<58",
+      "opera": "<50",
+      "chrome": "<63",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<58",
+      "samsung_mob": "*"
+    }
+  },
+  {
+    "name": "Intl.PluralRules.~locale.th",
+    "deps": [
+      "Intl",
+      "Intl.PluralRules"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<58",
+      "opera": "<50",
+      "chrome": "<63",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<58",
+      "samsung_mob": "*"
+    }
+  },
+  {
+    "name": "Intl.PluralRules.~locale.ti",
+    "deps": [
+      "Intl",
+      "Intl.PluralRules"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<58",
+      "opera": "<50",
+      "chrome": "<63",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<58",
+      "samsung_mob": "*"
+    }
+  },
+  {
+    "name": "Intl.PluralRules.~locale.tk",
+    "deps": [
+      "Intl",
+      "Intl.PluralRules"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<58",
+      "opera": "<50",
+      "chrome": "<63",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<58",
+      "samsung_mob": "*"
+    }
+  },
+  {
+    "name": "Intl.PluralRules.~locale.to",
+    "deps": [
+      "Intl",
+      "Intl.PluralRules"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<58",
+      "opera": "<50",
+      "chrome": "<63",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<58",
+      "samsung_mob": "*"
+    }
+  },
+  {
+    "name": "Intl.PluralRules.~locale.tr",
+    "deps": [
+      "Intl",
+      "Intl.PluralRules"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<58",
+      "opera": "<50",
+      "chrome": "<63",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<58",
+      "samsung_mob": "*"
+    }
+  },
+  {
+    "name": "Intl.PluralRules.~locale.tzm",
+    "deps": [
+      "Intl",
+      "Intl.PluralRules"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<58",
+      "opera": "<50",
+      "chrome": "<63",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<58",
+      "samsung_mob": "*"
+    }
+  },
+  {
+    "name": "Intl.PluralRules.~locale.ug",
+    "deps": [
+      "Intl",
+      "Intl.PluralRules"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<58",
+      "opera": "<50",
+      "chrome": "<63",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<58",
+      "samsung_mob": "*"
+    }
+  },
+  {
+    "name": "Intl.PluralRules.~locale.uk",
+    "deps": [
+      "Intl",
+      "Intl.PluralRules"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<58",
+      "opera": "<50",
+      "chrome": "<63",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<58",
+      "samsung_mob": "*"
+    }
+  },
+  {
+    "name": "Intl.PluralRules.~locale.ur",
+    "deps": [
+      "Intl",
+      "Intl.PluralRules"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<58",
+      "opera": "<50",
+      "chrome": "<63",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<58",
+      "samsung_mob": "*"
+    }
+  },
+  {
+    "name": "Intl.PluralRules.~locale.uz",
+    "deps": [
+      "Intl",
+      "Intl.PluralRules"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<58",
+      "opera": "<50",
+      "chrome": "<63",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<58",
+      "samsung_mob": "*"
+    }
+  },
+  {
+    "name": "Intl.PluralRules.~locale.vi",
+    "deps": [
+      "Intl",
+      "Intl.PluralRules"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<58",
+      "opera": "<50",
+      "chrome": "<63",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<58",
+      "samsung_mob": "*"
+    }
+  },
+  {
+    "name": "Intl.PluralRules.~locale.vo",
+    "deps": [
+      "Intl",
+      "Intl.PluralRules"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<58",
+      "opera": "<50",
+      "chrome": "<63",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<58",
+      "samsung_mob": "*"
+    }
+  },
+  {
+    "name": "Intl.PluralRules.~locale.vun",
+    "deps": [
+      "Intl",
+      "Intl.PluralRules"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<58",
+      "opera": "<50",
+      "chrome": "<63",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<58",
+      "samsung_mob": "*"
+    }
+  },
+  {
+    "name": "Intl.PluralRules.~locale.wae",
+    "deps": [
+      "Intl",
+      "Intl.PluralRules"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<58",
+      "opera": "<50",
+      "chrome": "<63",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<58",
+      "samsung_mob": "*"
+    }
+  },
+  {
+    "name": "Intl.PluralRules.~locale.wo",
+    "deps": [
+      "Intl",
+      "Intl.PluralRules"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<58",
+      "opera": "<50",
+      "chrome": "<63",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<58",
+      "samsung_mob": "*"
+    }
+  },
+  {
+    "name": "Intl.PluralRules.~locale.xh",
+    "deps": [
+      "Intl",
+      "Intl.PluralRules"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<58",
+      "opera": "<50",
+      "chrome": "<63",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<58",
+      "samsung_mob": "*"
+    }
+  },
+  {
+    "name": "Intl.PluralRules.~locale.xog",
+    "deps": [
+      "Intl",
+      "Intl.PluralRules"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<58",
+      "opera": "<50",
+      "chrome": "<63",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<58",
+      "samsung_mob": "*"
+    }
+  },
+  {
+    "name": "Intl.PluralRules.~locale.yi",
+    "deps": [
+      "Intl",
+      "Intl.PluralRules"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<58",
+      "opera": "<50",
+      "chrome": "<63",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<58",
+      "samsung_mob": "*"
+    }
+  },
+  {
+    "name": "Intl.PluralRules.~locale.yo",
+    "deps": [
+      "Intl",
+      "Intl.PluralRules"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<58",
+      "opera": "<50",
+      "chrome": "<63",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<58",
+      "samsung_mob": "*"
+    }
+  },
+  {
+    "name": "Intl.PluralRules.~locale.yue",
+    "deps": [
+      "Intl",
+      "Intl.PluralRules"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<58",
+      "opera": "<50",
+      "chrome": "<63",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<58",
+      "samsung_mob": "*"
+    }
+  },
+  {
+    "name": "Intl.PluralRules.~locale.zh",
+    "deps": [
+      "Intl",
+      "Intl.PluralRules"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<58",
+      "opera": "<50",
+      "chrome": "<63",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<58",
+      "samsung_mob": "*"
+    }
+  },
+  {
+    "name": "Intl.PluralRules.~locale.zu",
+    "deps": [
+      "Intl",
+      "Intl.PluralRules"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<58",
+      "opera": "<50",
+      "chrome": "<63",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<58",
+      "samsung_mob": "*"
+    }
+  },
+  {
+    "name": "Intl.RelativeTimeFormat",
+    "deps": [
+      "Intl",
+      "Intl.~locale.en",
+      "Intl.PluralRules"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<65",
+      "opera": "<50",
+      "chrome": "<71",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<65",
+      "samsung_mob": "<6"
+    }
+  },
+  {
+    "name": "Intl.RelativeTimeFormat.~locale.af",
+    "deps": [
+      "Intl",
+      "Intl.~locale.en",
+      "Intl.PluralRules",
+      "Intl.RelativeTimeFormat"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<65",
+      "opera": "<50",
+      "chrome": "<71",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<65",
+      "samsung_mob": "<6"
+    }
+  },
+  {
+    "name": "Intl.RelativeTimeFormat.~locale.agq",
+    "deps": [
+      "Intl",
+      "Intl.~locale.en",
+      "Intl.PluralRules",
+      "Intl.RelativeTimeFormat"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<65",
+      "opera": "<50",
+      "chrome": "<71",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<65",
+      "samsung_mob": "<6"
+    }
+  },
+  {
+    "name": "Intl.RelativeTimeFormat.~locale.ak",
+    "deps": [
+      "Intl",
+      "Intl.~locale.en",
+      "Intl.PluralRules",
+      "Intl.RelativeTimeFormat"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<65",
+      "opera": "<50",
+      "chrome": "<71",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<65",
+      "samsung_mob": "<6"
+    }
+  },
+  {
+    "name": "Intl.RelativeTimeFormat.~locale.am",
+    "deps": [
+      "Intl",
+      "Intl.~locale.en",
+      "Intl.PluralRules",
+      "Intl.RelativeTimeFormat"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<65",
+      "opera": "<50",
+      "chrome": "<71",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<65",
+      "samsung_mob": "<6"
+    }
+  },
+  {
+    "name": "Intl.RelativeTimeFormat.~locale.ar",
+    "deps": [
+      "Intl",
+      "Intl.~locale.en",
+      "Intl.PluralRules",
+      "Intl.RelativeTimeFormat"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<65",
+      "opera": "<50",
+      "chrome": "<71",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<65",
+      "samsung_mob": "<6"
+    }
+  },
+  {
+    "name": "Intl.RelativeTimeFormat.~locale.as",
+    "deps": [
+      "Intl",
+      "Intl.~locale.en",
+      "Intl.PluralRules",
+      "Intl.RelativeTimeFormat"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<65",
+      "opera": "<50",
+      "chrome": "<71",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<65",
+      "samsung_mob": "<6"
+    }
+  },
+  {
+    "name": "Intl.RelativeTimeFormat.~locale.asa",
+    "deps": [
+      "Intl",
+      "Intl.~locale.en",
+      "Intl.PluralRules",
+      "Intl.RelativeTimeFormat"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<65",
+      "opera": "<50",
+      "chrome": "<71",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<65",
+      "samsung_mob": "<6"
+    }
+  },
+  {
+    "name": "Intl.RelativeTimeFormat.~locale.ast",
+    "deps": [
+      "Intl",
+      "Intl.~locale.en",
+      "Intl.PluralRules",
+      "Intl.RelativeTimeFormat"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<65",
+      "opera": "<50",
+      "chrome": "<71",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<65",
+      "samsung_mob": "<6"
+    }
+  },
+  {
+    "name": "Intl.RelativeTimeFormat.~locale.az",
+    "deps": [
+      "Intl",
+      "Intl.~locale.en",
+      "Intl.PluralRules",
+      "Intl.RelativeTimeFormat"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<65",
+      "opera": "<50",
+      "chrome": "<71",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<65",
+      "samsung_mob": "<6"
+    }
+  },
+  {
+    "name": "Intl.RelativeTimeFormat.~locale.bas",
+    "deps": [
+      "Intl",
+      "Intl.~locale.en",
+      "Intl.PluralRules",
+      "Intl.RelativeTimeFormat"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<65",
+      "opera": "<50",
+      "chrome": "<71",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<65",
+      "samsung_mob": "<6"
+    }
+  },
+  {
+    "name": "Intl.RelativeTimeFormat.~locale.be",
+    "deps": [
+      "Intl",
+      "Intl.~locale.en",
+      "Intl.PluralRules",
+      "Intl.RelativeTimeFormat"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<65",
+      "opera": "<50",
+      "chrome": "<71",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<65",
+      "samsung_mob": "<6"
+    }
+  },
+  {
+    "name": "Intl.RelativeTimeFormat.~locale.bem",
+    "deps": [
+      "Intl",
+      "Intl.~locale.en",
+      "Intl.PluralRules",
+      "Intl.RelativeTimeFormat"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<65",
+      "opera": "<50",
+      "chrome": "<71",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<65",
+      "samsung_mob": "<6"
+    }
+  },
+  {
+    "name": "Intl.RelativeTimeFormat.~locale.bez",
+    "deps": [
+      "Intl",
+      "Intl.~locale.en",
+      "Intl.PluralRules",
+      "Intl.RelativeTimeFormat"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<65",
+      "opera": "<50",
+      "chrome": "<71",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<65",
+      "samsung_mob": "<6"
+    }
+  },
+  {
+    "name": "Intl.RelativeTimeFormat.~locale.bg",
+    "deps": [
+      "Intl",
+      "Intl.~locale.en",
+      "Intl.PluralRules",
+      "Intl.RelativeTimeFormat"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<65",
+      "opera": "<50",
+      "chrome": "<71",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<65",
+      "samsung_mob": "<6"
+    }
+  },
+  {
+    "name": "Intl.RelativeTimeFormat.~locale.bm",
+    "deps": [
+      "Intl",
+      "Intl.~locale.en",
+      "Intl.PluralRules",
+      "Intl.RelativeTimeFormat"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<65",
+      "opera": "<50",
+      "chrome": "<71",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<65",
+      "samsung_mob": "<6"
+    }
+  },
+  {
+    "name": "Intl.RelativeTimeFormat.~locale.bn",
+    "deps": [
+      "Intl",
+      "Intl.~locale.en",
+      "Intl.PluralRules",
+      "Intl.RelativeTimeFormat"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<65",
+      "opera": "<50",
+      "chrome": "<71",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<65",
+      "samsung_mob": "<6"
+    }
+  },
+  {
+    "name": "Intl.RelativeTimeFormat.~locale.bo",
+    "deps": [
+      "Intl",
+      "Intl.~locale.en",
+      "Intl.PluralRules",
+      "Intl.RelativeTimeFormat"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<65",
+      "opera": "<50",
+      "chrome": "<71",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<65",
+      "samsung_mob": "<6"
+    }
+  },
+  {
+    "name": "Intl.RelativeTimeFormat.~locale.br",
+    "deps": [
+      "Intl",
+      "Intl.~locale.en",
+      "Intl.PluralRules",
+      "Intl.RelativeTimeFormat"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<65",
+      "opera": "<50",
+      "chrome": "<71",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<65",
+      "samsung_mob": "<6"
+    }
+  },
+  {
+    "name": "Intl.RelativeTimeFormat.~locale.brx",
+    "deps": [
+      "Intl",
+      "Intl.~locale.en",
+      "Intl.PluralRules",
+      "Intl.RelativeTimeFormat"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<65",
+      "opera": "<50",
+      "chrome": "<71",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<65",
+      "samsung_mob": "<6"
+    }
+  },
+  {
+    "name": "Intl.RelativeTimeFormat.~locale.bs",
+    "deps": [
+      "Intl",
+      "Intl.~locale.en",
+      "Intl.PluralRules",
+      "Intl.RelativeTimeFormat"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<65",
+      "opera": "<50",
+      "chrome": "<71",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<65",
+      "samsung_mob": "<6"
+    }
+  },
+  {
+    "name": "Intl.RelativeTimeFormat.~locale.ca",
+    "deps": [
+      "Intl",
+      "Intl.~locale.en",
+      "Intl.PluralRules",
+      "Intl.RelativeTimeFormat"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<65",
+      "opera": "<50",
+      "chrome": "<71",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<65",
+      "samsung_mob": "<6"
+    }
+  },
+  {
+    "name": "Intl.RelativeTimeFormat.~locale.ccp",
+    "deps": [
+      "Intl",
+      "Intl.~locale.en",
+      "Intl.PluralRules",
+      "Intl.RelativeTimeFormat"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<65",
+      "opera": "<50",
+      "chrome": "<71",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<65",
+      "samsung_mob": "<6"
+    }
+  },
+  {
+    "name": "Intl.RelativeTimeFormat.~locale.ce",
+    "deps": [
+      "Intl",
+      "Intl.~locale.en",
+      "Intl.PluralRules",
+      "Intl.RelativeTimeFormat"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<65",
+      "opera": "<50",
+      "chrome": "<71",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<65",
+      "samsung_mob": "<6"
+    }
+  },
+  {
+    "name": "Intl.RelativeTimeFormat.~locale.ceb",
+    "deps": [
+      "Intl",
+      "Intl.~locale.en",
+      "Intl.PluralRules",
+      "Intl.RelativeTimeFormat"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<65",
+      "opera": "<50",
+      "chrome": "<71",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<65",
+      "samsung_mob": "<6"
+    }
+  },
+  {
+    "name": "Intl.RelativeTimeFormat.~locale.cgg",
+    "deps": [
+      "Intl",
+      "Intl.~locale.en",
+      "Intl.PluralRules",
+      "Intl.RelativeTimeFormat"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<65",
+      "opera": "<50",
+      "chrome": "<71",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<65",
+      "samsung_mob": "<6"
+    }
+  },
+  {
+    "name": "Intl.RelativeTimeFormat.~locale.chr",
+    "deps": [
+      "Intl",
+      "Intl.~locale.en",
+      "Intl.PluralRules",
+      "Intl.RelativeTimeFormat"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<65",
+      "opera": "<50",
+      "chrome": "<71",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<65",
+      "samsung_mob": "<6"
+    }
+  },
+  {
+    "name": "Intl.RelativeTimeFormat.~locale.ckb",
+    "deps": [
+      "Intl",
+      "Intl.~locale.en",
+      "Intl.PluralRules",
+      "Intl.RelativeTimeFormat"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<65",
+      "opera": "<50",
+      "chrome": "<71",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<65",
+      "samsung_mob": "<6"
+    }
+  },
+  {
+    "name": "Intl.RelativeTimeFormat.~locale.cs",
+    "deps": [
+      "Intl",
+      "Intl.~locale.en",
+      "Intl.PluralRules",
+      "Intl.RelativeTimeFormat"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<65",
+      "opera": "<50",
+      "chrome": "<71",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<65",
+      "samsung_mob": "<6"
+    }
+  },
+  {
+    "name": "Intl.RelativeTimeFormat.~locale.cu",
+    "deps": [
+      "Intl",
+      "Intl.~locale.en",
+      "Intl.PluralRules",
+      "Intl.RelativeTimeFormat"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<65",
+      "opera": "<50",
+      "chrome": "<71",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<65",
+      "samsung_mob": "<6"
+    }
+  },
+  {
+    "name": "Intl.RelativeTimeFormat.~locale.cy",
+    "deps": [
+      "Intl",
+      "Intl.~locale.en",
+      "Intl.PluralRules",
+      "Intl.RelativeTimeFormat"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<65",
+      "opera": "<50",
+      "chrome": "<71",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<65",
+      "samsung_mob": "<6"
+    }
+  },
+  {
+    "name": "Intl.RelativeTimeFormat.~locale.da",
+    "deps": [
+      "Intl",
+      "Intl.~locale.en",
+      "Intl.PluralRules",
+      "Intl.RelativeTimeFormat"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<65",
+      "opera": "<50",
+      "chrome": "<71",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<65",
+      "samsung_mob": "<6"
+    }
+  },
+  {
+    "name": "Intl.RelativeTimeFormat.~locale.dav",
+    "deps": [
+      "Intl",
+      "Intl.~locale.en",
+      "Intl.PluralRules",
+      "Intl.RelativeTimeFormat"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<65",
+      "opera": "<50",
+      "chrome": "<71",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<65",
+      "samsung_mob": "<6"
+    }
+  },
+  {
+    "name": "Intl.RelativeTimeFormat.~locale.de",
+    "deps": [
+      "Intl",
+      "Intl.~locale.en",
+      "Intl.PluralRules",
+      "Intl.RelativeTimeFormat"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<65",
+      "opera": "<50",
+      "chrome": "<71",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<65",
+      "samsung_mob": "<6"
+    }
+  },
+  {
+    "name": "Intl.RelativeTimeFormat.~locale.dje",
+    "deps": [
+      "Intl",
+      "Intl.~locale.en",
+      "Intl.PluralRules",
+      "Intl.RelativeTimeFormat"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<65",
+      "opera": "<50",
+      "chrome": "<71",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<65",
+      "samsung_mob": "<6"
+    }
+  },
+  {
+    "name": "Intl.RelativeTimeFormat.~locale.dsb",
+    "deps": [
+      "Intl",
+      "Intl.~locale.en",
+      "Intl.PluralRules",
+      "Intl.RelativeTimeFormat"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<65",
+      "opera": "<50",
+      "chrome": "<71",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<65",
+      "samsung_mob": "<6"
+    }
+  },
+  {
+    "name": "Intl.RelativeTimeFormat.~locale.dua",
+    "deps": [
+      "Intl",
+      "Intl.~locale.en",
+      "Intl.PluralRules",
+      "Intl.RelativeTimeFormat"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<65",
+      "opera": "<50",
+      "chrome": "<71",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<65",
+      "samsung_mob": "<6"
+    }
+  },
+  {
+    "name": "Intl.RelativeTimeFormat.~locale.dyo",
+    "deps": [
+      "Intl",
+      "Intl.~locale.en",
+      "Intl.PluralRules",
+      "Intl.RelativeTimeFormat"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<65",
+      "opera": "<50",
+      "chrome": "<71",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<65",
+      "samsung_mob": "<6"
+    }
+  },
+  {
+    "name": "Intl.RelativeTimeFormat.~locale.dz",
+    "deps": [
+      "Intl",
+      "Intl.~locale.en",
+      "Intl.PluralRules",
+      "Intl.RelativeTimeFormat"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<65",
+      "opera": "<50",
+      "chrome": "<71",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<65",
+      "samsung_mob": "<6"
+    }
+  },
+  {
+    "name": "Intl.RelativeTimeFormat.~locale.ebu",
+    "deps": [
+      "Intl",
+      "Intl.~locale.en",
+      "Intl.PluralRules",
+      "Intl.RelativeTimeFormat"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<65",
+      "opera": "<50",
+      "chrome": "<71",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<65",
+      "samsung_mob": "<6"
+    }
+  },
+  {
+    "name": "Intl.RelativeTimeFormat.~locale.ee",
+    "deps": [
+      "Intl",
+      "Intl.~locale.en",
+      "Intl.PluralRules",
+      "Intl.RelativeTimeFormat"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<65",
+      "opera": "<50",
+      "chrome": "<71",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<65",
+      "samsung_mob": "<6"
+    }
+  },
+  {
+    "name": "Intl.RelativeTimeFormat.~locale.el",
+    "deps": [
+      "Intl",
+      "Intl.~locale.en",
+      "Intl.PluralRules",
+      "Intl.RelativeTimeFormat"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<65",
+      "opera": "<50",
+      "chrome": "<71",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<65",
+      "samsung_mob": "<6"
+    }
+  },
+  {
+    "name": "Intl.RelativeTimeFormat.~locale.en",
+    "deps": [
+      "Intl",
+      "Intl.~locale.en",
+      "Intl.PluralRules",
+      "Intl.RelativeTimeFormat"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<65",
+      "opera": "<50",
+      "chrome": "<71",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<65",
+      "samsung_mob": "<6"
+    }
+  },
+  {
+    "name": "Intl.RelativeTimeFormat.~locale.eo",
+    "deps": [
+      "Intl",
+      "Intl.~locale.en",
+      "Intl.PluralRules",
+      "Intl.RelativeTimeFormat"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<65",
+      "opera": "<50",
+      "chrome": "<71",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<65",
+      "samsung_mob": "<6"
+    }
+  },
+  {
+    "name": "Intl.RelativeTimeFormat.~locale.es",
+    "deps": [
+      "Intl",
+      "Intl.~locale.en",
+      "Intl.PluralRules",
+      "Intl.RelativeTimeFormat"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<65",
+      "opera": "<50",
+      "chrome": "<71",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<65",
+      "samsung_mob": "<6"
+    }
+  },
+  {
+    "name": "Intl.RelativeTimeFormat.~locale.et",
+    "deps": [
+      "Intl",
+      "Intl.~locale.en",
+      "Intl.PluralRules",
+      "Intl.RelativeTimeFormat"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<65",
+      "opera": "<50",
+      "chrome": "<71",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<65",
+      "samsung_mob": "<6"
+    }
+  },
+  {
+    "name": "Intl.RelativeTimeFormat.~locale.eu",
+    "deps": [
+      "Intl",
+      "Intl.~locale.en",
+      "Intl.PluralRules",
+      "Intl.RelativeTimeFormat"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<65",
+      "opera": "<50",
+      "chrome": "<71",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<65",
+      "samsung_mob": "<6"
+    }
+  },
+  {
+    "name": "Intl.RelativeTimeFormat.~locale.ewo",
+    "deps": [
+      "Intl",
+      "Intl.~locale.en",
+      "Intl.PluralRules",
+      "Intl.RelativeTimeFormat"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<65",
+      "opera": "<50",
+      "chrome": "<71",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<65",
+      "samsung_mob": "<6"
+    }
+  },
+  {
+    "name": "Intl.RelativeTimeFormat.~locale.fa",
+    "deps": [
+      "Intl",
+      "Intl.~locale.en",
+      "Intl.PluralRules",
+      "Intl.RelativeTimeFormat"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<65",
+      "opera": "<50",
+      "chrome": "<71",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<65",
+      "samsung_mob": "<6"
+    }
+  },
+  {
+    "name": "Intl.RelativeTimeFormat.~locale.ff",
+    "deps": [
+      "Intl",
+      "Intl.~locale.en",
+      "Intl.PluralRules",
+      "Intl.RelativeTimeFormat"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<65",
+      "opera": "<50",
+      "chrome": "<71",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<65",
+      "samsung_mob": "<6"
+    }
+  },
+  {
+    "name": "Intl.RelativeTimeFormat.~locale.fi",
+    "deps": [
+      "Intl",
+      "Intl.~locale.en",
+      "Intl.PluralRules",
+      "Intl.RelativeTimeFormat"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<65",
+      "opera": "<50",
+      "chrome": "<71",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<65",
+      "samsung_mob": "<6"
+    }
+  },
+  {
+    "name": "Intl.RelativeTimeFormat.~locale.fil",
+    "deps": [
+      "Intl",
+      "Intl.~locale.en",
+      "Intl.PluralRules",
+      "Intl.RelativeTimeFormat"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<65",
+      "opera": "<50",
+      "chrome": "<71",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<65",
+      "samsung_mob": "<6"
+    }
+  },
+  {
+    "name": "Intl.RelativeTimeFormat.~locale.fo",
+    "deps": [
+      "Intl",
+      "Intl.~locale.en",
+      "Intl.PluralRules",
+      "Intl.RelativeTimeFormat"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<65",
+      "opera": "<50",
+      "chrome": "<71",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<65",
+      "samsung_mob": "<6"
+    }
+  },
+  {
+    "name": "Intl.RelativeTimeFormat.~locale.fr",
+    "deps": [
+      "Intl",
+      "Intl.~locale.en",
+      "Intl.PluralRules",
+      "Intl.RelativeTimeFormat"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<65",
+      "opera": "<50",
+      "chrome": "<71",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<65",
+      "samsung_mob": "<6"
+    }
+  },
+  {
+    "name": "Intl.RelativeTimeFormat.~locale.fur",
+    "deps": [
+      "Intl",
+      "Intl.~locale.en",
+      "Intl.PluralRules",
+      "Intl.RelativeTimeFormat"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<65",
+      "opera": "<50",
+      "chrome": "<71",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<65",
+      "samsung_mob": "<6"
+    }
+  },
+  {
+    "name": "Intl.RelativeTimeFormat.~locale.fy",
+    "deps": [
+      "Intl",
+      "Intl.~locale.en",
+      "Intl.PluralRules",
+      "Intl.RelativeTimeFormat"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<65",
+      "opera": "<50",
+      "chrome": "<71",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<65",
+      "samsung_mob": "<6"
+    }
+  },
+  {
+    "name": "Intl.RelativeTimeFormat.~locale.ga",
+    "deps": [
+      "Intl",
+      "Intl.~locale.en",
+      "Intl.PluralRules",
+      "Intl.RelativeTimeFormat"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<65",
+      "opera": "<50",
+      "chrome": "<71",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<65",
+      "samsung_mob": "<6"
+    }
+  },
+  {
+    "name": "Intl.RelativeTimeFormat.~locale.gd",
+    "deps": [
+      "Intl",
+      "Intl.~locale.en",
+      "Intl.PluralRules",
+      "Intl.RelativeTimeFormat"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<65",
+      "opera": "<50",
+      "chrome": "<71",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<65",
+      "samsung_mob": "<6"
+    }
+  },
+  {
+    "name": "Intl.RelativeTimeFormat.~locale.gl",
+    "deps": [
+      "Intl",
+      "Intl.~locale.en",
+      "Intl.PluralRules",
+      "Intl.RelativeTimeFormat"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<65",
+      "opera": "<50",
+      "chrome": "<71",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<65",
+      "samsung_mob": "<6"
+    }
+  },
+  {
+    "name": "Intl.RelativeTimeFormat.~locale.gsw",
+    "deps": [
+      "Intl",
+      "Intl.~locale.en",
+      "Intl.PluralRules",
+      "Intl.RelativeTimeFormat"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<65",
+      "opera": "<50",
+      "chrome": "<71",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<65",
+      "samsung_mob": "<6"
+    }
+  },
+  {
+    "name": "Intl.RelativeTimeFormat.~locale.gu",
+    "deps": [
+      "Intl",
+      "Intl.~locale.en",
+      "Intl.PluralRules",
+      "Intl.RelativeTimeFormat"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<65",
+      "opera": "<50",
+      "chrome": "<71",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<65",
+      "samsung_mob": "<6"
+    }
+  },
+  {
+    "name": "Intl.RelativeTimeFormat.~locale.guz",
+    "deps": [
+      "Intl",
+      "Intl.~locale.en",
+      "Intl.PluralRules",
+      "Intl.RelativeTimeFormat"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<65",
+      "opera": "<50",
+      "chrome": "<71",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<65",
+      "samsung_mob": "<6"
+    }
+  },
+  {
+    "name": "Intl.RelativeTimeFormat.~locale.gv",
+    "deps": [
+      "Intl",
+      "Intl.~locale.en",
+      "Intl.PluralRules",
+      "Intl.RelativeTimeFormat"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<65",
+      "opera": "<50",
+      "chrome": "<71",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<65",
+      "samsung_mob": "<6"
+    }
+  },
+  {
+    "name": "Intl.RelativeTimeFormat.~locale.ha",
+    "deps": [
+      "Intl",
+      "Intl.~locale.en",
+      "Intl.PluralRules",
+      "Intl.RelativeTimeFormat"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<65",
+      "opera": "<50",
+      "chrome": "<71",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<65",
+      "samsung_mob": "<6"
+    }
+  },
+  {
+    "name": "Intl.RelativeTimeFormat.~locale.haw",
+    "deps": [
+      "Intl",
+      "Intl.~locale.en",
+      "Intl.PluralRules",
+      "Intl.RelativeTimeFormat"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<65",
+      "opera": "<50",
+      "chrome": "<71",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<65",
+      "samsung_mob": "<6"
+    }
+  },
+  {
+    "name": "Intl.RelativeTimeFormat.~locale.he",
+    "deps": [
+      "Intl",
+      "Intl.~locale.en",
+      "Intl.PluralRules",
+      "Intl.RelativeTimeFormat"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<65",
+      "opera": "<50",
+      "chrome": "<71",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<65",
+      "samsung_mob": "<6"
+    }
+  },
+  {
+    "name": "Intl.RelativeTimeFormat.~locale.hi",
+    "deps": [
+      "Intl",
+      "Intl.~locale.en",
+      "Intl.PluralRules",
+      "Intl.RelativeTimeFormat"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<65",
+      "opera": "<50",
+      "chrome": "<71",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<65",
+      "samsung_mob": "<6"
+    }
+  },
+  {
+    "name": "Intl.RelativeTimeFormat.~locale.hr",
+    "deps": [
+      "Intl",
+      "Intl.~locale.en",
+      "Intl.PluralRules",
+      "Intl.RelativeTimeFormat"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<65",
+      "opera": "<50",
+      "chrome": "<71",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<65",
+      "samsung_mob": "<6"
+    }
+  },
+  {
+    "name": "Intl.RelativeTimeFormat.~locale.hsb",
+    "deps": [
+      "Intl",
+      "Intl.~locale.en",
+      "Intl.PluralRules",
+      "Intl.RelativeTimeFormat"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<65",
+      "opera": "<50",
+      "chrome": "<71",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<65",
+      "samsung_mob": "<6"
+    }
+  },
+  {
+    "name": "Intl.RelativeTimeFormat.~locale.hu",
+    "deps": [
+      "Intl",
+      "Intl.~locale.en",
+      "Intl.PluralRules",
+      "Intl.RelativeTimeFormat"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<65",
+      "opera": "<50",
+      "chrome": "<71",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<65",
+      "samsung_mob": "<6"
+    }
+  },
+  {
+    "name": "Intl.RelativeTimeFormat.~locale.hy",
+    "deps": [
+      "Intl",
+      "Intl.~locale.en",
+      "Intl.PluralRules",
+      "Intl.RelativeTimeFormat"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<65",
+      "opera": "<50",
+      "chrome": "<71",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<65",
+      "samsung_mob": "<6"
+    }
+  },
+  {
+    "name": "Intl.RelativeTimeFormat.~locale.ia",
+    "deps": [
+      "Intl",
+      "Intl.~locale.en",
+      "Intl.PluralRules",
+      "Intl.RelativeTimeFormat"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<65",
+      "opera": "<50",
+      "chrome": "<71",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<65",
+      "samsung_mob": "<6"
+    }
+  },
+  {
+    "name": "Intl.RelativeTimeFormat.~locale.id",
+    "deps": [
+      "Intl",
+      "Intl.~locale.en",
+      "Intl.PluralRules",
+      "Intl.RelativeTimeFormat"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<65",
+      "opera": "<50",
+      "chrome": "<71",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<65",
+      "samsung_mob": "<6"
+    }
+  },
+  {
+    "name": "Intl.RelativeTimeFormat.~locale.ig",
+    "deps": [
+      "Intl",
+      "Intl.~locale.en",
+      "Intl.PluralRules",
+      "Intl.RelativeTimeFormat"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<65",
+      "opera": "<50",
+      "chrome": "<71",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<65",
+      "samsung_mob": "<6"
+    }
+  },
+  {
+    "name": "Intl.RelativeTimeFormat.~locale.ii",
+    "deps": [
+      "Intl",
+      "Intl.~locale.en",
+      "Intl.PluralRules",
+      "Intl.RelativeTimeFormat"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<65",
+      "opera": "<50",
+      "chrome": "<71",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<65",
+      "samsung_mob": "<6"
+    }
+  },
+  {
+    "name": "Intl.RelativeTimeFormat.~locale.is",
+    "deps": [
+      "Intl",
+      "Intl.~locale.en",
+      "Intl.PluralRules",
+      "Intl.RelativeTimeFormat"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<65",
+      "opera": "<50",
+      "chrome": "<71",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<65",
+      "samsung_mob": "<6"
+    }
+  },
+  {
+    "name": "Intl.RelativeTimeFormat.~locale.it",
+    "deps": [
+      "Intl",
+      "Intl.~locale.en",
+      "Intl.PluralRules",
+      "Intl.RelativeTimeFormat"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<65",
+      "opera": "<50",
+      "chrome": "<71",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<65",
+      "samsung_mob": "<6"
+    }
+  },
+  {
+    "name": "Intl.RelativeTimeFormat.~locale.ja",
+    "deps": [
+      "Intl",
+      "Intl.~locale.en",
+      "Intl.PluralRules",
+      "Intl.RelativeTimeFormat"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<65",
+      "opera": "<50",
+      "chrome": "<71",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<65",
+      "samsung_mob": "<6"
+    }
+  },
+  {
+    "name": "Intl.RelativeTimeFormat.~locale.jgo",
+    "deps": [
+      "Intl",
+      "Intl.~locale.en",
+      "Intl.PluralRules",
+      "Intl.RelativeTimeFormat"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<65",
+      "opera": "<50",
+      "chrome": "<71",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<65",
+      "samsung_mob": "<6"
+    }
+  },
+  {
+    "name": "Intl.RelativeTimeFormat.~locale.jmc",
+    "deps": [
+      "Intl",
+      "Intl.~locale.en",
+      "Intl.PluralRules",
+      "Intl.RelativeTimeFormat"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<65",
+      "opera": "<50",
+      "chrome": "<71",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<65",
+      "samsung_mob": "<6"
+    }
+  },
+  {
+    "name": "Intl.RelativeTimeFormat.~locale.jv",
+    "deps": [
+      "Intl",
+      "Intl.~locale.en",
+      "Intl.PluralRules",
+      "Intl.RelativeTimeFormat"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<65",
+      "opera": "<50",
+      "chrome": "<71",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<65",
+      "samsung_mob": "<6"
+    }
+  },
+  {
+    "name": "Intl.RelativeTimeFormat.~locale.ka",
+    "deps": [
+      "Intl",
+      "Intl.~locale.en",
+      "Intl.PluralRules",
+      "Intl.RelativeTimeFormat"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<65",
+      "opera": "<50",
+      "chrome": "<71",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<65",
+      "samsung_mob": "<6"
+    }
+  },
+  {
+    "name": "Intl.RelativeTimeFormat.~locale.kab",
+    "deps": [
+      "Intl",
+      "Intl.~locale.en",
+      "Intl.PluralRules",
+      "Intl.RelativeTimeFormat"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<65",
+      "opera": "<50",
+      "chrome": "<71",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<65",
+      "samsung_mob": "<6"
+    }
+  },
+  {
+    "name": "Intl.RelativeTimeFormat.~locale.kam",
+    "deps": [
+      "Intl",
+      "Intl.~locale.en",
+      "Intl.PluralRules",
+      "Intl.RelativeTimeFormat"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<65",
+      "opera": "<50",
+      "chrome": "<71",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<65",
+      "samsung_mob": "<6"
+    }
+  },
+  {
+    "name": "Intl.RelativeTimeFormat.~locale.kde",
+    "deps": [
+      "Intl",
+      "Intl.~locale.en",
+      "Intl.PluralRules",
+      "Intl.RelativeTimeFormat"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<65",
+      "opera": "<50",
+      "chrome": "<71",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<65",
+      "samsung_mob": "<6"
+    }
+  },
+  {
+    "name": "Intl.RelativeTimeFormat.~locale.kea",
+    "deps": [
+      "Intl",
+      "Intl.~locale.en",
+      "Intl.PluralRules",
+      "Intl.RelativeTimeFormat"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<65",
+      "opera": "<50",
+      "chrome": "<71",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<65",
+      "samsung_mob": "<6"
+    }
+  },
+  {
+    "name": "Intl.RelativeTimeFormat.~locale.khq",
+    "deps": [
+      "Intl",
+      "Intl.~locale.en",
+      "Intl.PluralRules",
+      "Intl.RelativeTimeFormat"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<65",
+      "opera": "<50",
+      "chrome": "<71",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<65",
+      "samsung_mob": "<6"
+    }
+  },
+  {
+    "name": "Intl.RelativeTimeFormat.~locale.ki",
+    "deps": [
+      "Intl",
+      "Intl.~locale.en",
+      "Intl.PluralRules",
+      "Intl.RelativeTimeFormat"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<65",
+      "opera": "<50",
+      "chrome": "<71",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<65",
+      "samsung_mob": "<6"
+    }
+  },
+  {
+    "name": "Intl.RelativeTimeFormat.~locale.kk",
+    "deps": [
+      "Intl",
+      "Intl.~locale.en",
+      "Intl.PluralRules",
+      "Intl.RelativeTimeFormat"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<65",
+      "opera": "<50",
+      "chrome": "<71",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<65",
+      "samsung_mob": "<6"
+    }
+  },
+  {
+    "name": "Intl.RelativeTimeFormat.~locale.kkj",
+    "deps": [
+      "Intl",
+      "Intl.~locale.en",
+      "Intl.PluralRules",
+      "Intl.RelativeTimeFormat"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<65",
+      "opera": "<50",
+      "chrome": "<71",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<65",
+      "samsung_mob": "<6"
+    }
+  },
+  {
+    "name": "Intl.RelativeTimeFormat.~locale.kl",
+    "deps": [
+      "Intl",
+      "Intl.~locale.en",
+      "Intl.PluralRules",
+      "Intl.RelativeTimeFormat"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<65",
+      "opera": "<50",
+      "chrome": "<71",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<65",
+      "samsung_mob": "<6"
+    }
+  },
+  {
+    "name": "Intl.RelativeTimeFormat.~locale.kln",
+    "deps": [
+      "Intl",
+      "Intl.~locale.en",
+      "Intl.PluralRules",
+      "Intl.RelativeTimeFormat"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<65",
+      "opera": "<50",
+      "chrome": "<71",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<65",
+      "samsung_mob": "<6"
+    }
+  },
+  {
+    "name": "Intl.RelativeTimeFormat.~locale.km",
+    "deps": [
+      "Intl",
+      "Intl.~locale.en",
+      "Intl.PluralRules",
+      "Intl.RelativeTimeFormat"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<65",
+      "opera": "<50",
+      "chrome": "<71",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<65",
+      "samsung_mob": "<6"
+    }
+  },
+  {
+    "name": "Intl.RelativeTimeFormat.~locale.kn",
+    "deps": [
+      "Intl",
+      "Intl.~locale.en",
+      "Intl.PluralRules",
+      "Intl.RelativeTimeFormat"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<65",
+      "opera": "<50",
+      "chrome": "<71",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<65",
+      "samsung_mob": "<6"
+    }
+  },
+  {
+    "name": "Intl.RelativeTimeFormat.~locale.ko",
+    "deps": [
+      "Intl",
+      "Intl.~locale.en",
+      "Intl.PluralRules",
+      "Intl.RelativeTimeFormat"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<65",
+      "opera": "<50",
+      "chrome": "<71",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<65",
+      "samsung_mob": "<6"
+    }
+  },
+  {
+    "name": "Intl.RelativeTimeFormat.~locale.kok",
+    "deps": [
+      "Intl",
+      "Intl.~locale.en",
+      "Intl.PluralRules",
+      "Intl.RelativeTimeFormat"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<65",
+      "opera": "<50",
+      "chrome": "<71",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<65",
+      "samsung_mob": "<6"
+    }
+  },
+  {
+    "name": "Intl.RelativeTimeFormat.~locale.ks",
+    "deps": [
+      "Intl",
+      "Intl.~locale.en",
+      "Intl.PluralRules",
+      "Intl.RelativeTimeFormat"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<65",
+      "opera": "<50",
+      "chrome": "<71",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<65",
+      "samsung_mob": "<6"
+    }
+  },
+  {
+    "name": "Intl.RelativeTimeFormat.~locale.ksb",
+    "deps": [
+      "Intl",
+      "Intl.~locale.en",
+      "Intl.PluralRules",
+      "Intl.RelativeTimeFormat"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<65",
+      "opera": "<50",
+      "chrome": "<71",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<65",
+      "samsung_mob": "<6"
+    }
+  },
+  {
+    "name": "Intl.RelativeTimeFormat.~locale.ksf",
+    "deps": [
+      "Intl",
+      "Intl.~locale.en",
+      "Intl.PluralRules",
+      "Intl.RelativeTimeFormat"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<65",
+      "opera": "<50",
+      "chrome": "<71",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<65",
+      "samsung_mob": "<6"
+    }
+  },
+  {
+    "name": "Intl.RelativeTimeFormat.~locale.ksh",
+    "deps": [
+      "Intl",
+      "Intl.~locale.en",
+      "Intl.PluralRules",
+      "Intl.RelativeTimeFormat"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<65",
+      "opera": "<50",
+      "chrome": "<71",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<65",
+      "samsung_mob": "<6"
+    }
+  },
+  {
+    "name": "Intl.RelativeTimeFormat.~locale.ku",
+    "deps": [
+      "Intl",
+      "Intl.~locale.en",
+      "Intl.PluralRules",
+      "Intl.RelativeTimeFormat"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<65",
+      "opera": "<50",
+      "chrome": "<71",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<65",
+      "samsung_mob": "<6"
+    }
+  },
+  {
+    "name": "Intl.RelativeTimeFormat.~locale.kw",
+    "deps": [
+      "Intl",
+      "Intl.~locale.en",
+      "Intl.PluralRules",
+      "Intl.RelativeTimeFormat"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<65",
+      "opera": "<50",
+      "chrome": "<71",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<65",
+      "samsung_mob": "<6"
+    }
+  },
+  {
+    "name": "Intl.RelativeTimeFormat.~locale.ky",
+    "deps": [
+      "Intl",
+      "Intl.~locale.en",
+      "Intl.PluralRules",
+      "Intl.RelativeTimeFormat"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<65",
+      "opera": "<50",
+      "chrome": "<71",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<65",
+      "samsung_mob": "<6"
+    }
+  },
+  {
+    "name": "Intl.RelativeTimeFormat.~locale.lag",
+    "deps": [
+      "Intl",
+      "Intl.~locale.en",
+      "Intl.PluralRules",
+      "Intl.RelativeTimeFormat"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<65",
+      "opera": "<50",
+      "chrome": "<71",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<65",
+      "samsung_mob": "<6"
+    }
+  },
+  {
+    "name": "Intl.RelativeTimeFormat.~locale.lb",
+    "deps": [
+      "Intl",
+      "Intl.~locale.en",
+      "Intl.PluralRules",
+      "Intl.RelativeTimeFormat"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<65",
+      "opera": "<50",
+      "chrome": "<71",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<65",
+      "samsung_mob": "<6"
+    }
+  },
+  {
+    "name": "Intl.RelativeTimeFormat.~locale.lg",
+    "deps": [
+      "Intl",
+      "Intl.~locale.en",
+      "Intl.PluralRules",
+      "Intl.RelativeTimeFormat"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<65",
+      "opera": "<50",
+      "chrome": "<71",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<65",
+      "samsung_mob": "<6"
+    }
+  },
+  {
+    "name": "Intl.RelativeTimeFormat.~locale.lkt",
+    "deps": [
+      "Intl",
+      "Intl.~locale.en",
+      "Intl.PluralRules",
+      "Intl.RelativeTimeFormat"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<65",
+      "opera": "<50",
+      "chrome": "<71",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<65",
+      "samsung_mob": "<6"
+    }
+  },
+  {
+    "name": "Intl.RelativeTimeFormat.~locale.ln",
+    "deps": [
+      "Intl",
+      "Intl.~locale.en",
+      "Intl.PluralRules",
+      "Intl.RelativeTimeFormat"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<65",
+      "opera": "<50",
+      "chrome": "<71",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<65",
+      "samsung_mob": "<6"
+    }
+  },
+  {
+    "name": "Intl.RelativeTimeFormat.~locale.lo",
+    "deps": [
+      "Intl",
+      "Intl.~locale.en",
+      "Intl.PluralRules",
+      "Intl.RelativeTimeFormat"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<65",
+      "opera": "<50",
+      "chrome": "<71",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<65",
+      "samsung_mob": "<6"
+    }
+  },
+  {
+    "name": "Intl.RelativeTimeFormat.~locale.lrc",
+    "deps": [
+      "Intl",
+      "Intl.~locale.en",
+      "Intl.PluralRules",
+      "Intl.RelativeTimeFormat"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<65",
+      "opera": "<50",
+      "chrome": "<71",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<65",
+      "samsung_mob": "<6"
+    }
+  },
+  {
+    "name": "Intl.RelativeTimeFormat.~locale.lt",
+    "deps": [
+      "Intl",
+      "Intl.~locale.en",
+      "Intl.PluralRules",
+      "Intl.RelativeTimeFormat"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<65",
+      "opera": "<50",
+      "chrome": "<71",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<65",
+      "samsung_mob": "<6"
+    }
+  },
+  {
+    "name": "Intl.RelativeTimeFormat.~locale.lu",
+    "deps": [
+      "Intl",
+      "Intl.~locale.en",
+      "Intl.PluralRules",
+      "Intl.RelativeTimeFormat"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<65",
+      "opera": "<50",
+      "chrome": "<71",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<65",
+      "samsung_mob": "<6"
+    }
+  },
+  {
+    "name": "Intl.RelativeTimeFormat.~locale.luo",
+    "deps": [
+      "Intl",
+      "Intl.~locale.en",
+      "Intl.PluralRules",
+      "Intl.RelativeTimeFormat"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<65",
+      "opera": "<50",
+      "chrome": "<71",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<65",
+      "samsung_mob": "<6"
+    }
+  },
+  {
+    "name": "Intl.RelativeTimeFormat.~locale.luy",
+    "deps": [
+      "Intl",
+      "Intl.~locale.en",
+      "Intl.PluralRules",
+      "Intl.RelativeTimeFormat"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<65",
+      "opera": "<50",
+      "chrome": "<71",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<65",
+      "samsung_mob": "<6"
+    }
+  },
+  {
+    "name": "Intl.RelativeTimeFormat.~locale.lv",
+    "deps": [
+      "Intl",
+      "Intl.~locale.en",
+      "Intl.PluralRules",
+      "Intl.RelativeTimeFormat"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<65",
+      "opera": "<50",
+      "chrome": "<71",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<65",
+      "samsung_mob": "<6"
+    }
+  },
+  {
+    "name": "Intl.RelativeTimeFormat.~locale.mas",
+    "deps": [
+      "Intl",
+      "Intl.~locale.en",
+      "Intl.PluralRules",
+      "Intl.RelativeTimeFormat"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<65",
+      "opera": "<50",
+      "chrome": "<71",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<65",
+      "samsung_mob": "<6"
+    }
+  },
+  {
+    "name": "Intl.RelativeTimeFormat.~locale.mer",
+    "deps": [
+      "Intl",
+      "Intl.~locale.en",
+      "Intl.PluralRules",
+      "Intl.RelativeTimeFormat"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<65",
+      "opera": "<50",
+      "chrome": "<71",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<65",
+      "samsung_mob": "<6"
+    }
+  },
+  {
+    "name": "Intl.RelativeTimeFormat.~locale.mfe",
+    "deps": [
+      "Intl",
+      "Intl.~locale.en",
+      "Intl.PluralRules",
+      "Intl.RelativeTimeFormat"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<65",
+      "opera": "<50",
+      "chrome": "<71",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<65",
+      "samsung_mob": "<6"
+    }
+  },
+  {
+    "name": "Intl.RelativeTimeFormat.~locale.mg",
+    "deps": [
+      "Intl",
+      "Intl.~locale.en",
+      "Intl.PluralRules",
+      "Intl.RelativeTimeFormat"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<65",
+      "opera": "<50",
+      "chrome": "<71",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<65",
+      "samsung_mob": "<6"
+    }
+  },
+  {
+    "name": "Intl.RelativeTimeFormat.~locale.mgh",
+    "deps": [
+      "Intl",
+      "Intl.~locale.en",
+      "Intl.PluralRules",
+      "Intl.RelativeTimeFormat"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<65",
+      "opera": "<50",
+      "chrome": "<71",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<65",
+      "samsung_mob": "<6"
+    }
+  },
+  {
+    "name": "Intl.RelativeTimeFormat.~locale.mgo",
+    "deps": [
+      "Intl",
+      "Intl.~locale.en",
+      "Intl.PluralRules",
+      "Intl.RelativeTimeFormat"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<65",
+      "opera": "<50",
+      "chrome": "<71",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<65",
+      "samsung_mob": "<6"
+    }
+  },
+  {
+    "name": "Intl.RelativeTimeFormat.~locale.mi",
+    "deps": [
+      "Intl",
+      "Intl.~locale.en",
+      "Intl.PluralRules",
+      "Intl.RelativeTimeFormat"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<65",
+      "opera": "<50",
+      "chrome": "<71",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<65",
+      "samsung_mob": "<6"
+    }
+  },
+  {
+    "name": "Intl.RelativeTimeFormat.~locale.mk",
+    "deps": [
+      "Intl",
+      "Intl.~locale.en",
+      "Intl.PluralRules",
+      "Intl.RelativeTimeFormat"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<65",
+      "opera": "<50",
+      "chrome": "<71",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<65",
+      "samsung_mob": "<6"
+    }
+  },
+  {
+    "name": "Intl.RelativeTimeFormat.~locale.ml",
+    "deps": [
+      "Intl",
+      "Intl.~locale.en",
+      "Intl.PluralRules",
+      "Intl.RelativeTimeFormat"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<65",
+      "opera": "<50",
+      "chrome": "<71",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<65",
+      "samsung_mob": "<6"
+    }
+  },
+  {
+    "name": "Intl.RelativeTimeFormat.~locale.mn",
+    "deps": [
+      "Intl",
+      "Intl.~locale.en",
+      "Intl.PluralRules",
+      "Intl.RelativeTimeFormat"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<65",
+      "opera": "<50",
+      "chrome": "<71",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<65",
+      "samsung_mob": "<6"
+    }
+  },
+  {
+    "name": "Intl.RelativeTimeFormat.~locale.mr",
+    "deps": [
+      "Intl",
+      "Intl.~locale.en",
+      "Intl.PluralRules",
+      "Intl.RelativeTimeFormat"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<65",
+      "opera": "<50",
+      "chrome": "<71",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<65",
+      "samsung_mob": "<6"
+    }
+  },
+  {
+    "name": "Intl.RelativeTimeFormat.~locale.ms",
+    "deps": [
+      "Intl",
+      "Intl.~locale.en",
+      "Intl.PluralRules",
+      "Intl.RelativeTimeFormat"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<65",
+      "opera": "<50",
+      "chrome": "<71",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<65",
+      "samsung_mob": "<6"
+    }
+  },
+  {
+    "name": "Intl.RelativeTimeFormat.~locale.mt",
+    "deps": [
+      "Intl",
+      "Intl.~locale.en",
+      "Intl.PluralRules",
+      "Intl.RelativeTimeFormat"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<65",
+      "opera": "<50",
+      "chrome": "<71",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<65",
+      "samsung_mob": "<6"
+    }
+  },
+  {
+    "name": "Intl.RelativeTimeFormat.~locale.mua",
+    "deps": [
+      "Intl",
+      "Intl.~locale.en",
+      "Intl.PluralRules",
+      "Intl.RelativeTimeFormat"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<65",
+      "opera": "<50",
+      "chrome": "<71",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<65",
+      "samsung_mob": "<6"
+    }
+  },
+  {
+    "name": "Intl.RelativeTimeFormat.~locale.my",
+    "deps": [
+      "Intl",
+      "Intl.~locale.en",
+      "Intl.PluralRules",
+      "Intl.RelativeTimeFormat"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<65",
+      "opera": "<50",
+      "chrome": "<71",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<65",
+      "samsung_mob": "<6"
+    }
+  },
+  {
+    "name": "Intl.RelativeTimeFormat.~locale.mzn",
+    "deps": [
+      "Intl",
+      "Intl.~locale.en",
+      "Intl.PluralRules",
+      "Intl.RelativeTimeFormat"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<65",
+      "opera": "<50",
+      "chrome": "<71",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<65",
+      "samsung_mob": "<6"
+    }
+  },
+  {
+    "name": "Intl.RelativeTimeFormat.~locale.naq",
+    "deps": [
+      "Intl",
+      "Intl.~locale.en",
+      "Intl.PluralRules",
+      "Intl.RelativeTimeFormat"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<65",
+      "opera": "<50",
+      "chrome": "<71",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<65",
+      "samsung_mob": "<6"
+    }
+  },
+  {
+    "name": "Intl.RelativeTimeFormat.~locale.nb",
+    "deps": [
+      "Intl",
+      "Intl.~locale.en",
+      "Intl.PluralRules",
+      "Intl.RelativeTimeFormat"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<65",
+      "opera": "<50",
+      "chrome": "<71",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<65",
+      "samsung_mob": "<6"
+    }
+  },
+  {
+    "name": "Intl.RelativeTimeFormat.~locale.nd",
+    "deps": [
+      "Intl",
+      "Intl.~locale.en",
+      "Intl.PluralRules",
+      "Intl.RelativeTimeFormat"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<65",
+      "opera": "<50",
+      "chrome": "<71",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<65",
+      "samsung_mob": "<6"
+    }
+  },
+  {
+    "name": "Intl.RelativeTimeFormat.~locale.nds",
+    "deps": [
+      "Intl",
+      "Intl.~locale.en",
+      "Intl.PluralRules",
+      "Intl.RelativeTimeFormat"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<65",
+      "opera": "<50",
+      "chrome": "<71",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<65",
+      "samsung_mob": "<6"
+    }
+  },
+  {
+    "name": "Intl.RelativeTimeFormat.~locale.ne",
+    "deps": [
+      "Intl",
+      "Intl.~locale.en",
+      "Intl.PluralRules",
+      "Intl.RelativeTimeFormat"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<65",
+      "opera": "<50",
+      "chrome": "<71",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<65",
+      "samsung_mob": "<6"
+    }
+  },
+  {
+    "name": "Intl.RelativeTimeFormat.~locale.nl",
+    "deps": [
+      "Intl",
+      "Intl.~locale.en",
+      "Intl.PluralRules",
+      "Intl.RelativeTimeFormat"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<65",
+      "opera": "<50",
+      "chrome": "<71",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<65",
+      "samsung_mob": "<6"
+    }
+  },
+  {
+    "name": "Intl.RelativeTimeFormat.~locale.nmg",
+    "deps": [
+      "Intl",
+      "Intl.~locale.en",
+      "Intl.PluralRules",
+      "Intl.RelativeTimeFormat"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<65",
+      "opera": "<50",
+      "chrome": "<71",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<65",
+      "samsung_mob": "<6"
+    }
+  },
+  {
+    "name": "Intl.RelativeTimeFormat.~locale.nn",
+    "deps": [
+      "Intl",
+      "Intl.~locale.en",
+      "Intl.PluralRules",
+      "Intl.RelativeTimeFormat"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<65",
+      "opera": "<50",
+      "chrome": "<71",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<65",
+      "samsung_mob": "<6"
+    }
+  },
+  {
+    "name": "Intl.RelativeTimeFormat.~locale.nnh",
+    "deps": [
+      "Intl",
+      "Intl.~locale.en",
+      "Intl.PluralRules",
+      "Intl.RelativeTimeFormat"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<65",
+      "opera": "<50",
+      "chrome": "<71",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<65",
+      "samsung_mob": "<6"
+    }
+  },
+  {
+    "name": "Intl.RelativeTimeFormat.~locale.nus",
+    "deps": [
+      "Intl",
+      "Intl.~locale.en",
+      "Intl.PluralRules",
+      "Intl.RelativeTimeFormat"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<65",
+      "opera": "<50",
+      "chrome": "<71",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<65",
+      "samsung_mob": "<6"
+    }
+  },
+  {
+    "name": "Intl.RelativeTimeFormat.~locale.nyn",
+    "deps": [
+      "Intl",
+      "Intl.~locale.en",
+      "Intl.PluralRules",
+      "Intl.RelativeTimeFormat"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<65",
+      "opera": "<50",
+      "chrome": "<71",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<65",
+      "samsung_mob": "<6"
+    }
+  },
+  {
+    "name": "Intl.RelativeTimeFormat.~locale.om",
+    "deps": [
+      "Intl",
+      "Intl.~locale.en",
+      "Intl.PluralRules",
+      "Intl.RelativeTimeFormat"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<65",
+      "opera": "<50",
+      "chrome": "<71",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<65",
+      "samsung_mob": "<6"
+    }
+  },
+  {
+    "name": "Intl.RelativeTimeFormat.~locale.or",
+    "deps": [
+      "Intl",
+      "Intl.~locale.en",
+      "Intl.PluralRules",
+      "Intl.RelativeTimeFormat"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<65",
+      "opera": "<50",
+      "chrome": "<71",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<65",
+      "samsung_mob": "<6"
+    }
+  },
+  {
+    "name": "Intl.RelativeTimeFormat.~locale.os",
+    "deps": [
+      "Intl",
+      "Intl.~locale.en",
+      "Intl.PluralRules",
+      "Intl.RelativeTimeFormat"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<65",
+      "opera": "<50",
+      "chrome": "<71",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<65",
+      "samsung_mob": "<6"
+    }
+  },
+  {
+    "name": "Intl.RelativeTimeFormat.~locale.pa",
+    "deps": [
+      "Intl",
+      "Intl.~locale.en",
+      "Intl.PluralRules",
+      "Intl.RelativeTimeFormat"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<65",
+      "opera": "<50",
+      "chrome": "<71",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<65",
+      "samsung_mob": "<6"
+    }
+  },
+  {
+    "name": "Intl.RelativeTimeFormat.~locale.pl",
+    "deps": [
+      "Intl",
+      "Intl.~locale.en",
+      "Intl.PluralRules",
+      "Intl.RelativeTimeFormat"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<65",
+      "opera": "<50",
+      "chrome": "<71",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<65",
+      "samsung_mob": "<6"
+    }
+  },
+  {
+    "name": "Intl.RelativeTimeFormat.~locale.prg",
+    "deps": [
+      "Intl",
+      "Intl.~locale.en",
+      "Intl.PluralRules",
+      "Intl.RelativeTimeFormat"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<65",
+      "opera": "<50",
+      "chrome": "<71",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<65",
+      "samsung_mob": "<6"
+    }
+  },
+  {
+    "name": "Intl.RelativeTimeFormat.~locale.ps",
+    "deps": [
+      "Intl",
+      "Intl.~locale.en",
+      "Intl.PluralRules",
+      "Intl.RelativeTimeFormat"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<65",
+      "opera": "<50",
+      "chrome": "<71",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<65",
+      "samsung_mob": "<6"
+    }
+  },
+  {
+    "name": "Intl.RelativeTimeFormat.~locale.pt",
+    "deps": [
+      "Intl",
+      "Intl.~locale.en",
+      "Intl.PluralRules",
+      "Intl.RelativeTimeFormat"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<65",
+      "opera": "<50",
+      "chrome": "<71",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<65",
+      "samsung_mob": "<6"
+    }
+  },
+  {
+    "name": "Intl.RelativeTimeFormat.~locale.qu",
+    "deps": [
+      "Intl",
+      "Intl.~locale.en",
+      "Intl.PluralRules",
+      "Intl.RelativeTimeFormat"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<65",
+      "opera": "<50",
+      "chrome": "<71",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<65",
+      "samsung_mob": "<6"
+    }
+  },
+  {
+    "name": "Intl.RelativeTimeFormat.~locale.rm",
+    "deps": [
+      "Intl",
+      "Intl.~locale.en",
+      "Intl.PluralRules",
+      "Intl.RelativeTimeFormat"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<65",
+      "opera": "<50",
+      "chrome": "<71",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<65",
+      "samsung_mob": "<6"
+    }
+  },
+  {
+    "name": "Intl.RelativeTimeFormat.~locale.rn",
+    "deps": [
+      "Intl",
+      "Intl.~locale.en",
+      "Intl.PluralRules",
+      "Intl.RelativeTimeFormat"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<65",
+      "opera": "<50",
+      "chrome": "<71",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<65",
+      "samsung_mob": "<6"
+    }
+  },
+  {
+    "name": "Intl.RelativeTimeFormat.~locale.ro",
+    "deps": [
+      "Intl",
+      "Intl.~locale.en",
+      "Intl.PluralRules",
+      "Intl.RelativeTimeFormat"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<65",
+      "opera": "<50",
+      "chrome": "<71",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<65",
+      "samsung_mob": "<6"
+    }
+  },
+  {
+    "name": "Intl.RelativeTimeFormat.~locale.rof",
+    "deps": [
+      "Intl",
+      "Intl.~locale.en",
+      "Intl.PluralRules",
+      "Intl.RelativeTimeFormat"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<65",
+      "opera": "<50",
+      "chrome": "<71",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<65",
+      "samsung_mob": "<6"
+    }
+  },
+  {
+    "name": "Intl.RelativeTimeFormat.~locale.ru",
+    "deps": [
+      "Intl",
+      "Intl.~locale.en",
+      "Intl.PluralRules",
+      "Intl.RelativeTimeFormat"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<65",
+      "opera": "<50",
+      "chrome": "<71",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<65",
+      "samsung_mob": "<6"
+    }
+  },
+  {
+    "name": "Intl.RelativeTimeFormat.~locale.rw",
+    "deps": [
+      "Intl",
+      "Intl.~locale.en",
+      "Intl.PluralRules",
+      "Intl.RelativeTimeFormat"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<65",
+      "opera": "<50",
+      "chrome": "<71",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<65",
+      "samsung_mob": "<6"
+    }
+  },
+  {
+    "name": "Intl.RelativeTimeFormat.~locale.rwk",
+    "deps": [
+      "Intl",
+      "Intl.~locale.en",
+      "Intl.PluralRules",
+      "Intl.RelativeTimeFormat"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<65",
+      "opera": "<50",
+      "chrome": "<71",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<65",
+      "samsung_mob": "<6"
+    }
+  },
+  {
+    "name": "Intl.RelativeTimeFormat.~locale.sah",
+    "deps": [
+      "Intl",
+      "Intl.~locale.en",
+      "Intl.PluralRules",
+      "Intl.RelativeTimeFormat"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<65",
+      "opera": "<50",
+      "chrome": "<71",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<65",
+      "samsung_mob": "<6"
+    }
+  },
+  {
+    "name": "Intl.RelativeTimeFormat.~locale.saq",
+    "deps": [
+      "Intl",
+      "Intl.~locale.en",
+      "Intl.PluralRules",
+      "Intl.RelativeTimeFormat"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<65",
+      "opera": "<50",
+      "chrome": "<71",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<65",
+      "samsung_mob": "<6"
+    }
+  },
+  {
+    "name": "Intl.RelativeTimeFormat.~locale.sbp",
+    "deps": [
+      "Intl",
+      "Intl.~locale.en",
+      "Intl.PluralRules",
+      "Intl.RelativeTimeFormat"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<65",
+      "opera": "<50",
+      "chrome": "<71",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<65",
+      "samsung_mob": "<6"
+    }
+  },
+  {
+    "name": "Intl.RelativeTimeFormat.~locale.sd",
+    "deps": [
+      "Intl",
+      "Intl.~locale.en",
+      "Intl.PluralRules",
+      "Intl.RelativeTimeFormat"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<65",
+      "opera": "<50",
+      "chrome": "<71",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<65",
+      "samsung_mob": "<6"
+    }
+  },
+  {
+    "name": "Intl.RelativeTimeFormat.~locale.se",
+    "deps": [
+      "Intl",
+      "Intl.~locale.en",
+      "Intl.PluralRules",
+      "Intl.RelativeTimeFormat"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<65",
+      "opera": "<50",
+      "chrome": "<71",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<65",
+      "samsung_mob": "<6"
+    }
+  },
+  {
+    "name": "Intl.RelativeTimeFormat.~locale.seh",
+    "deps": [
+      "Intl",
+      "Intl.~locale.en",
+      "Intl.PluralRules",
+      "Intl.RelativeTimeFormat"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<65",
+      "opera": "<50",
+      "chrome": "<71",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<65",
+      "samsung_mob": "<6"
+    }
+  },
+  {
+    "name": "Intl.RelativeTimeFormat.~locale.ses",
+    "deps": [
+      "Intl",
+      "Intl.~locale.en",
+      "Intl.PluralRules",
+      "Intl.RelativeTimeFormat"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<65",
+      "opera": "<50",
+      "chrome": "<71",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<65",
+      "samsung_mob": "<6"
+    }
+  },
+  {
+    "name": "Intl.RelativeTimeFormat.~locale.sg",
+    "deps": [
+      "Intl",
+      "Intl.~locale.en",
+      "Intl.PluralRules",
+      "Intl.RelativeTimeFormat"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<65",
+      "opera": "<50",
+      "chrome": "<71",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<65",
+      "samsung_mob": "<6"
+    }
+  },
+  {
+    "name": "Intl.RelativeTimeFormat.~locale.shi",
+    "deps": [
+      "Intl",
+      "Intl.~locale.en",
+      "Intl.PluralRules",
+      "Intl.RelativeTimeFormat"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<65",
+      "opera": "<50",
+      "chrome": "<71",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<65",
+      "samsung_mob": "<6"
+    }
+  },
+  {
+    "name": "Intl.RelativeTimeFormat.~locale.si",
+    "deps": [
+      "Intl",
+      "Intl.~locale.en",
+      "Intl.PluralRules",
+      "Intl.RelativeTimeFormat"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<65",
+      "opera": "<50",
+      "chrome": "<71",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<65",
+      "samsung_mob": "<6"
+    }
+  },
+  {
+    "name": "Intl.RelativeTimeFormat.~locale.sk",
+    "deps": [
+      "Intl",
+      "Intl.~locale.en",
+      "Intl.PluralRules",
+      "Intl.RelativeTimeFormat"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<65",
+      "opera": "<50",
+      "chrome": "<71",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<65",
+      "samsung_mob": "<6"
+    }
+  },
+  {
+    "name": "Intl.RelativeTimeFormat.~locale.sl",
+    "deps": [
+      "Intl",
+      "Intl.~locale.en",
+      "Intl.PluralRules",
+      "Intl.RelativeTimeFormat"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<65",
+      "opera": "<50",
+      "chrome": "<71",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<65",
+      "samsung_mob": "<6"
+    }
+  },
+  {
+    "name": "Intl.RelativeTimeFormat.~locale.smn",
+    "deps": [
+      "Intl",
+      "Intl.~locale.en",
+      "Intl.PluralRules",
+      "Intl.RelativeTimeFormat"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<65",
+      "opera": "<50",
+      "chrome": "<71",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<65",
+      "samsung_mob": "<6"
+    }
+  },
+  {
+    "name": "Intl.RelativeTimeFormat.~locale.sn",
+    "deps": [
+      "Intl",
+      "Intl.~locale.en",
+      "Intl.PluralRules",
+      "Intl.RelativeTimeFormat"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<65",
+      "opera": "<50",
+      "chrome": "<71",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<65",
+      "samsung_mob": "<6"
+    }
+  },
+  {
+    "name": "Intl.RelativeTimeFormat.~locale.so",
+    "deps": [
+      "Intl",
+      "Intl.~locale.en",
+      "Intl.PluralRules",
+      "Intl.RelativeTimeFormat"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<65",
+      "opera": "<50",
+      "chrome": "<71",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<65",
+      "samsung_mob": "<6"
+    }
+  },
+  {
+    "name": "Intl.RelativeTimeFormat.~locale.sq",
+    "deps": [
+      "Intl",
+      "Intl.~locale.en",
+      "Intl.PluralRules",
+      "Intl.RelativeTimeFormat"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<65",
+      "opera": "<50",
+      "chrome": "<71",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<65",
+      "samsung_mob": "<6"
+    }
+  },
+  {
+    "name": "Intl.RelativeTimeFormat.~locale.sr",
+    "deps": [
+      "Intl",
+      "Intl.~locale.en",
+      "Intl.PluralRules",
+      "Intl.RelativeTimeFormat"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<65",
+      "opera": "<50",
+      "chrome": "<71",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<65",
+      "samsung_mob": "<6"
+    }
+  },
+  {
+    "name": "Intl.RelativeTimeFormat.~locale.sv",
+    "deps": [
+      "Intl",
+      "Intl.~locale.en",
+      "Intl.PluralRules",
+      "Intl.RelativeTimeFormat"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<65",
+      "opera": "<50",
+      "chrome": "<71",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<65",
+      "samsung_mob": "<6"
+    }
+  },
+  {
+    "name": "Intl.RelativeTimeFormat.~locale.sw",
+    "deps": [
+      "Intl",
+      "Intl.~locale.en",
+      "Intl.PluralRules",
+      "Intl.RelativeTimeFormat"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<65",
+      "opera": "<50",
+      "chrome": "<71",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<65",
+      "samsung_mob": "<6"
+    }
+  },
+  {
+    "name": "Intl.RelativeTimeFormat.~locale.ta",
+    "deps": [
+      "Intl",
+      "Intl.~locale.en",
+      "Intl.PluralRules",
+      "Intl.RelativeTimeFormat"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<65",
+      "opera": "<50",
+      "chrome": "<71",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<65",
+      "samsung_mob": "<6"
+    }
+  },
+  {
+    "name": "Intl.RelativeTimeFormat.~locale.te",
+    "deps": [
+      "Intl",
+      "Intl.~locale.en",
+      "Intl.PluralRules",
+      "Intl.RelativeTimeFormat"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<65",
+      "opera": "<50",
+      "chrome": "<71",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<65",
+      "samsung_mob": "<6"
+    }
+  },
+  {
+    "name": "Intl.RelativeTimeFormat.~locale.teo",
+    "deps": [
+      "Intl",
+      "Intl.~locale.en",
+      "Intl.PluralRules",
+      "Intl.RelativeTimeFormat"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<65",
+      "opera": "<50",
+      "chrome": "<71",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<65",
+      "samsung_mob": "<6"
+    }
+  },
+  {
+    "name": "Intl.RelativeTimeFormat.~locale.tg",
+    "deps": [
+      "Intl",
+      "Intl.~locale.en",
+      "Intl.PluralRules",
+      "Intl.RelativeTimeFormat"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<65",
+      "opera": "<50",
+      "chrome": "<71",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<65",
+      "samsung_mob": "<6"
+    }
+  },
+  {
+    "name": "Intl.RelativeTimeFormat.~locale.th",
+    "deps": [
+      "Intl",
+      "Intl.~locale.en",
+      "Intl.PluralRules",
+      "Intl.RelativeTimeFormat"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<65",
+      "opera": "<50",
+      "chrome": "<71",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<65",
+      "samsung_mob": "<6"
+    }
+  },
+  {
+    "name": "Intl.RelativeTimeFormat.~locale.ti",
+    "deps": [
+      "Intl",
+      "Intl.~locale.en",
+      "Intl.PluralRules",
+      "Intl.RelativeTimeFormat"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<65",
+      "opera": "<50",
+      "chrome": "<71",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<65",
+      "samsung_mob": "<6"
+    }
+  },
+  {
+    "name": "Intl.RelativeTimeFormat.~locale.tk",
+    "deps": [
+      "Intl",
+      "Intl.~locale.en",
+      "Intl.PluralRules",
+      "Intl.RelativeTimeFormat"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<65",
+      "opera": "<50",
+      "chrome": "<71",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<65",
+      "samsung_mob": "<6"
+    }
+  },
+  {
+    "name": "Intl.RelativeTimeFormat.~locale.to",
+    "deps": [
+      "Intl",
+      "Intl.~locale.en",
+      "Intl.PluralRules",
+      "Intl.RelativeTimeFormat"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<65",
+      "opera": "<50",
+      "chrome": "<71",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<65",
+      "samsung_mob": "<6"
+    }
+  },
+  {
+    "name": "Intl.RelativeTimeFormat.~locale.tr",
+    "deps": [
+      "Intl",
+      "Intl.~locale.en",
+      "Intl.PluralRules",
+      "Intl.RelativeTimeFormat"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<65",
+      "opera": "<50",
+      "chrome": "<71",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<65",
+      "samsung_mob": "<6"
+    }
+  },
+  {
+    "name": "Intl.RelativeTimeFormat.~locale.tt",
+    "deps": [
+      "Intl",
+      "Intl.~locale.en",
+      "Intl.PluralRules",
+      "Intl.RelativeTimeFormat"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<65",
+      "opera": "<50",
+      "chrome": "<71",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<65",
+      "samsung_mob": "<6"
+    }
+  },
+  {
+    "name": "Intl.RelativeTimeFormat.~locale.twq",
+    "deps": [
+      "Intl",
+      "Intl.~locale.en",
+      "Intl.PluralRules",
+      "Intl.RelativeTimeFormat"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<65",
+      "opera": "<50",
+      "chrome": "<71",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<65",
+      "samsung_mob": "<6"
+    }
+  },
+  {
+    "name": "Intl.RelativeTimeFormat.~locale.tzm",
+    "deps": [
+      "Intl",
+      "Intl.~locale.en",
+      "Intl.PluralRules",
+      "Intl.RelativeTimeFormat"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<65",
+      "opera": "<50",
+      "chrome": "<71",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<65",
+      "samsung_mob": "<6"
+    }
+  },
+  {
+    "name": "Intl.RelativeTimeFormat.~locale.ug",
+    "deps": [
+      "Intl",
+      "Intl.~locale.en",
+      "Intl.PluralRules",
+      "Intl.RelativeTimeFormat"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<65",
+      "opera": "<50",
+      "chrome": "<71",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<65",
+      "samsung_mob": "<6"
+    }
+  },
+  {
+    "name": "Intl.RelativeTimeFormat.~locale.uk",
+    "deps": [
+      "Intl",
+      "Intl.~locale.en",
+      "Intl.PluralRules",
+      "Intl.RelativeTimeFormat"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<65",
+      "opera": "<50",
+      "chrome": "<71",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<65",
+      "samsung_mob": "<6"
+    }
+  },
+  {
+    "name": "Intl.RelativeTimeFormat.~locale.ur",
+    "deps": [
+      "Intl",
+      "Intl.~locale.en",
+      "Intl.PluralRules",
+      "Intl.RelativeTimeFormat"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<65",
+      "opera": "<50",
+      "chrome": "<71",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<65",
+      "samsung_mob": "<6"
+    }
+  },
+  {
+    "name": "Intl.RelativeTimeFormat.~locale.uz",
+    "deps": [
+      "Intl",
+      "Intl.~locale.en",
+      "Intl.PluralRules",
+      "Intl.RelativeTimeFormat"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<65",
+      "opera": "<50",
+      "chrome": "<71",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<65",
+      "samsung_mob": "<6"
+    }
+  },
+  {
+    "name": "Intl.RelativeTimeFormat.~locale.vai",
+    "deps": [
+      "Intl",
+      "Intl.~locale.en",
+      "Intl.PluralRules",
+      "Intl.RelativeTimeFormat"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<65",
+      "opera": "<50",
+      "chrome": "<71",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<65",
+      "samsung_mob": "<6"
+    }
+  },
+  {
+    "name": "Intl.RelativeTimeFormat.~locale.vi",
+    "deps": [
+      "Intl",
+      "Intl.~locale.en",
+      "Intl.PluralRules",
+      "Intl.RelativeTimeFormat"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<65",
+      "opera": "<50",
+      "chrome": "<71",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<65",
+      "samsung_mob": "<6"
+    }
+  },
+  {
+    "name": "Intl.RelativeTimeFormat.~locale.vo",
+    "deps": [
+      "Intl",
+      "Intl.~locale.en",
+      "Intl.PluralRules",
+      "Intl.RelativeTimeFormat"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<65",
+      "opera": "<50",
+      "chrome": "<71",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<65",
+      "samsung_mob": "<6"
+    }
+  },
+  {
+    "name": "Intl.RelativeTimeFormat.~locale.vun",
+    "deps": [
+      "Intl",
+      "Intl.~locale.en",
+      "Intl.PluralRules",
+      "Intl.RelativeTimeFormat"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<65",
+      "opera": "<50",
+      "chrome": "<71",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<65",
+      "samsung_mob": "<6"
+    }
+  },
+  {
+    "name": "Intl.RelativeTimeFormat.~locale.wae",
+    "deps": [
+      "Intl",
+      "Intl.~locale.en",
+      "Intl.PluralRules",
+      "Intl.RelativeTimeFormat"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<65",
+      "opera": "<50",
+      "chrome": "<71",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<65",
+      "samsung_mob": "<6"
+    }
+  },
+  {
+    "name": "Intl.RelativeTimeFormat.~locale.wo",
+    "deps": [
+      "Intl",
+      "Intl.~locale.en",
+      "Intl.PluralRules",
+      "Intl.RelativeTimeFormat"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<65",
+      "opera": "<50",
+      "chrome": "<71",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<65",
+      "samsung_mob": "<6"
+    }
+  },
+  {
+    "name": "Intl.RelativeTimeFormat.~locale.xh",
+    "deps": [
+      "Intl",
+      "Intl.~locale.en",
+      "Intl.PluralRules",
+      "Intl.RelativeTimeFormat"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<65",
+      "opera": "<50",
+      "chrome": "<71",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<65",
+      "samsung_mob": "<6"
+    }
+  },
+  {
+    "name": "Intl.RelativeTimeFormat.~locale.xog",
+    "deps": [
+      "Intl",
+      "Intl.~locale.en",
+      "Intl.PluralRules",
+      "Intl.RelativeTimeFormat"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<65",
+      "opera": "<50",
+      "chrome": "<71",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<65",
+      "samsung_mob": "<6"
+    }
+  },
+  {
+    "name": "Intl.RelativeTimeFormat.~locale.yav",
+    "deps": [
+      "Intl",
+      "Intl.~locale.en",
+      "Intl.PluralRules",
+      "Intl.RelativeTimeFormat"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<65",
+      "opera": "<50",
+      "chrome": "<71",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<65",
+      "samsung_mob": "<6"
+    }
+  },
+  {
+    "name": "Intl.RelativeTimeFormat.~locale.yi",
+    "deps": [
+      "Intl",
+      "Intl.~locale.en",
+      "Intl.PluralRules",
+      "Intl.RelativeTimeFormat"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<65",
+      "opera": "<50",
+      "chrome": "<71",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<65",
+      "samsung_mob": "<6"
+    }
+  },
+  {
+    "name": "Intl.RelativeTimeFormat.~locale.yo",
+    "deps": [
+      "Intl",
+      "Intl.~locale.en",
+      "Intl.PluralRules",
+      "Intl.RelativeTimeFormat"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<65",
+      "opera": "<50",
+      "chrome": "<71",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<65",
+      "samsung_mob": "<6"
+    }
+  },
+  {
+    "name": "Intl.RelativeTimeFormat.~locale.yue",
+    "deps": [
+      "Intl",
+      "Intl.~locale.en",
+      "Intl.PluralRules",
+      "Intl.RelativeTimeFormat"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<65",
+      "opera": "<50",
+      "chrome": "<71",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<65",
+      "samsung_mob": "<6"
+    }
+  },
+  {
+    "name": "Intl.RelativeTimeFormat.~locale.zgh",
+    "deps": [
+      "Intl",
+      "Intl.~locale.en",
+      "Intl.PluralRules",
+      "Intl.RelativeTimeFormat"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<65",
+      "opera": "<50",
+      "chrome": "<71",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<65",
+      "samsung_mob": "<6"
+    }
+  },
+  {
+    "name": "Intl.RelativeTimeFormat.~locale.zh",
+    "deps": [
+      "Intl",
+      "Intl.~locale.en",
+      "Intl.PluralRules",
+      "Intl.RelativeTimeFormat"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<65",
+      "opera": "<50",
+      "chrome": "<71",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<65",
+      "samsung_mob": "<6"
+    }
+  },
+  {
+    "name": "Intl.RelativeTimeFormat.~locale.zu",
+    "deps": [
+      "Intl",
+      "Intl.~locale.en",
+      "Intl.PluralRules",
+      "Intl.RelativeTimeFormat"
+    ],
+    "browsers": {
+      "android": "<63",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "firefox": "<65",
+      "opera": "<50",
+      "chrome": "<71",
+      "safari": "*",
+      "ios_saf": "*",
+      "firefox_mob": "<65",
+      "samsung_mob": "<6"
+    }
+  },
+  {
     "name": "Intl.~locale.af",
     "deps": [
       "Intl"
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -547,8 +8231,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -565,8 +8249,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -583,8 +8267,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -601,8 +8285,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -619,8 +8303,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -637,8 +8321,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -655,8 +8339,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -673,8 +8357,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -691,8 +8375,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -709,8 +8393,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -727,8 +8411,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -745,8 +8429,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -763,8 +8447,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -781,8 +8465,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -799,8 +8483,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -817,8 +8501,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -835,8 +8519,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -853,8 +8537,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -871,8 +8555,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -889,8 +8573,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -907,8 +8591,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -925,8 +8609,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -943,8 +8627,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -961,8 +8645,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -979,8 +8663,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -997,8 +8681,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -1015,8 +8699,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -1033,8 +8717,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -1051,8 +8735,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -1069,8 +8753,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -1087,8 +8771,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -1105,8 +8789,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -1123,8 +8807,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -1141,8 +8825,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -1159,8 +8843,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -1177,8 +8861,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -1195,8 +8879,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -1213,8 +8897,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -1231,8 +8915,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -1249,8 +8933,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -1267,8 +8951,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -1285,8 +8969,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -1303,8 +8987,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -1321,8 +9005,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -1339,8 +9023,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -1357,8 +9041,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -1375,8 +9059,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -1393,8 +9077,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -1411,8 +9095,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -1429,8 +9113,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -1447,8 +9131,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -1465,8 +9149,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -1483,8 +9167,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -1501,8 +9185,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -1519,8 +9203,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -1537,8 +9221,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -1555,8 +9239,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -1573,8 +9257,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -1591,8 +9275,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -1609,8 +9293,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -1627,8 +9311,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -1645,8 +9329,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -1663,8 +9347,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -1681,8 +9365,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -1699,8 +9383,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -1717,8 +9401,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -1735,8 +9419,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -1753,8 +9437,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -1771,8 +9455,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -1789,8 +9473,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -1807,8 +9491,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -1825,8 +9509,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -1843,8 +9527,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -1861,8 +9545,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -1879,8 +9563,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -1897,8 +9581,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -1915,8 +9599,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -1933,8 +9617,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -1951,8 +9635,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -1969,8 +9653,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -1987,8 +9671,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -2005,8 +9689,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -2023,8 +9707,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -2041,8 +9725,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -2059,8 +9743,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -2077,8 +9761,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -2095,8 +9779,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -2113,8 +9797,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -2131,8 +9815,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -2149,8 +9833,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -2167,8 +9851,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -2185,8 +9869,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -2203,8 +9887,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -2221,8 +9905,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -2239,8 +9923,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -2257,8 +9941,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -2275,8 +9959,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -2293,8 +9977,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -2311,8 +9995,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -2329,8 +10013,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -2347,8 +10031,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -2365,8 +10049,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -2383,8 +10067,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -2401,8 +10085,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -2419,8 +10103,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -2437,8 +10121,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -2455,8 +10139,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -2473,8 +10157,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -2491,8 +10175,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -2509,8 +10193,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -2527,8 +10211,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -2545,8 +10229,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -2563,8 +10247,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -2581,8 +10265,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -2599,8 +10283,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -2617,8 +10301,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -2635,8 +10319,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -2653,8 +10337,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -2671,8 +10355,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -2689,8 +10373,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -2707,8 +10391,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -2725,8 +10409,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -2743,8 +10427,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -2761,8 +10445,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -2779,8 +10463,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -2797,8 +10481,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -2815,8 +10499,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -2833,8 +10517,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -2851,8 +10535,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -2869,8 +10553,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -2887,8 +10571,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -2905,8 +10589,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -2923,8 +10607,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -2941,8 +10625,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -2959,8 +10643,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -2977,8 +10661,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -2995,8 +10679,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -3013,8 +10697,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -3031,8 +10715,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -3049,8 +10733,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -3067,8 +10751,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -3085,8 +10769,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -3103,8 +10787,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -3121,8 +10805,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -3139,8 +10823,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -3157,8 +10841,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -3175,8 +10859,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -3193,8 +10877,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -3211,8 +10895,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -3229,8 +10913,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -3247,8 +10931,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -3265,8 +10949,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -3283,8 +10967,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -3301,8 +10985,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -3319,8 +11003,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -3337,8 +11021,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -3355,8 +11039,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -3373,8 +11057,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -3391,8 +11075,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -3409,8 +11093,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -3427,8 +11111,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -3445,8 +11129,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -3463,8 +11147,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -3481,8 +11165,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -3499,8 +11183,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -3517,8 +11201,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -3535,8 +11219,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -3553,8 +11237,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -3571,8 +11255,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -3589,8 +11273,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -3607,8 +11291,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -3625,8 +11309,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -3643,8 +11327,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -3661,8 +11345,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -3679,8 +11363,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -3697,8 +11381,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -3715,8 +11399,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -3733,8 +11417,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -3751,8 +11435,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -3769,8 +11453,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -3787,8 +11471,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -3805,8 +11489,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -3823,8 +11507,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -3841,8 +11525,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -3859,8 +11543,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -3877,8 +11561,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -3895,8 +11579,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -3913,8 +11597,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -3931,8 +11615,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -3949,8 +11633,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -3967,8 +11651,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -3985,8 +11669,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -4003,8 +11687,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -4021,8 +11705,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -4039,8 +11723,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -4057,8 +11741,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -4075,8 +11759,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -4093,8 +11777,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -4111,8 +11795,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -4129,8 +11813,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -4147,8 +11831,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -4165,8 +11849,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -4183,8 +11867,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -4201,8 +11885,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -4219,8 +11903,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -4237,8 +11921,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -4255,8 +11939,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -4273,8 +11957,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -4291,8 +11975,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -4309,8 +11993,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -4327,8 +12011,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -4345,8 +12029,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -4363,8 +12047,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -4381,8 +12065,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -4399,8 +12083,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -4417,8 +12101,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -4435,8 +12119,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -4453,8 +12137,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -4471,8 +12155,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -4489,8 +12173,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -4507,8 +12191,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -4525,8 +12209,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -4543,8 +12227,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -4561,8 +12245,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -4579,8 +12263,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -4597,8 +12281,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -4615,8 +12299,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -4633,8 +12317,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -4651,8 +12335,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -4669,8 +12353,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -4687,8 +12371,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -4705,8 +12389,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -4723,8 +12407,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -4741,8 +12425,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -4759,8 +12443,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -4777,8 +12461,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -4795,8 +12479,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -4813,8 +12497,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -4831,8 +12515,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -4849,8 +12533,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -4867,8 +12551,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -4885,8 +12569,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -4903,8 +12587,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -4921,8 +12605,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -4939,8 +12623,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -4957,8 +12641,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -4975,8 +12659,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -4993,8 +12677,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -5011,8 +12695,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -5029,8 +12713,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -5047,8 +12731,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -5065,8 +12749,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -5083,8 +12767,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -5101,8 +12785,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -5119,8 +12803,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -5137,8 +12821,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -5155,8 +12839,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -5173,8 +12857,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -5191,8 +12875,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -5209,8 +12893,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -5227,8 +12911,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -5245,8 +12929,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -5263,8 +12947,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -5281,8 +12965,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -5299,8 +12983,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -5317,8 +13001,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -5335,8 +13019,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -5353,8 +13037,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -5371,8 +13055,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -5389,8 +13073,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -5407,8 +13091,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -5425,8 +13109,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -5443,8 +13127,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -5461,8 +13145,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -5479,8 +13163,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -5497,8 +13181,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -5515,8 +13199,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -5533,8 +13217,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -5551,8 +13235,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -5569,8 +13253,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -5587,8 +13271,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -5605,8 +13289,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -5623,8 +13307,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -5641,8 +13325,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -5659,8 +13343,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -5677,8 +13361,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -5695,8 +13379,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -5713,8 +13397,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -5731,8 +13415,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -5749,8 +13433,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -5767,8 +13451,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -5785,8 +13469,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -5803,8 +13487,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -5821,8 +13505,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -5839,8 +13523,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -5857,8 +13541,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -5875,8 +13559,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -5893,8 +13577,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -5911,8 +13595,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -5929,8 +13613,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -5947,8 +13631,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -5965,8 +13649,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -5983,8 +13667,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -6001,8 +13685,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -6019,8 +13703,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -6037,8 +13721,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -6055,8 +13739,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -6073,8 +13757,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -6091,8 +13775,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -6109,8 +13793,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -6127,8 +13811,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -6145,8 +13829,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -6163,8 +13847,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -6181,8 +13865,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -6199,8 +13883,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -6217,8 +13901,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -6235,8 +13919,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -6253,8 +13937,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -6271,8 +13955,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -6289,8 +13973,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -6307,8 +13991,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -6325,8 +14009,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -6343,8 +14027,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -6361,8 +14045,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -6379,8 +14063,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -6397,8 +14081,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -6415,8 +14099,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -6433,8 +14117,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -6451,8 +14135,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -6469,8 +14153,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -6487,8 +14171,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -6505,8 +14189,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -6523,8 +14207,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -6541,8 +14225,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -6559,8 +14243,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -6577,8 +14261,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -6595,8 +14279,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -6613,8 +14297,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -6631,8 +14315,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -6649,8 +14333,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -6667,8 +14351,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -6685,8 +14369,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -6703,8 +14387,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -6721,8 +14405,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -6739,8 +14423,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -6757,8 +14441,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -6775,8 +14459,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -6793,8 +14477,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -6811,8 +14495,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -6829,8 +14513,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -6847,8 +14531,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -6865,8 +14549,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -6883,8 +14567,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -6901,8 +14585,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -6919,8 +14603,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -6937,8 +14621,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -6955,8 +14639,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -6973,8 +14657,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -6991,8 +14675,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -7009,8 +14693,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -7027,8 +14711,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -7045,8 +14729,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -7063,8 +14747,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -7081,8 +14765,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -7099,8 +14783,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -7117,8 +14801,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -7135,8 +14819,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -7153,8 +14837,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -7171,8 +14855,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -7189,8 +14873,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -7207,8 +14891,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -7225,8 +14909,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -7243,8 +14927,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -7261,8 +14945,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -7279,8 +14963,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -7297,8 +14981,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -7315,8 +14999,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -7333,8 +15017,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -7351,8 +15035,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -7369,8 +15053,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -7387,8 +15071,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -7405,8 +15089,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -7423,8 +15107,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -7441,8 +15125,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -7459,8 +15143,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -7477,8 +15161,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -7495,8 +15179,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -7513,8 +15197,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -7531,8 +15215,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -7549,8 +15233,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -7567,8 +15251,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -7585,8 +15269,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -7603,8 +15287,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -7621,8 +15305,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -7639,8 +15323,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -7657,8 +15341,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -7675,8 +15359,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -7693,8 +15377,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -7711,8 +15395,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -7729,8 +15413,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -7747,8 +15431,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -7765,8 +15449,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -7783,8 +15467,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -7801,8 +15485,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -7819,8 +15503,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -7837,8 +15521,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -7855,8 +15539,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -7873,8 +15557,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -7891,8 +15575,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -7909,8 +15593,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -7927,8 +15611,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -7945,8 +15629,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -7963,8 +15647,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -7981,8 +15665,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -7999,8 +15683,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -8017,8 +15701,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -8035,8 +15719,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -8053,8 +15737,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -8071,8 +15755,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -8089,8 +15773,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -8107,8 +15791,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -8125,8 +15809,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -8143,8 +15827,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -8161,8 +15845,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -8179,8 +15863,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -8197,8 +15881,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -8215,8 +15899,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -8233,8 +15917,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -8251,8 +15935,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -8269,8 +15953,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -8287,8 +15971,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -8305,8 +15989,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -8323,8 +16007,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -8341,8 +16025,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -8359,8 +16043,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -8377,8 +16061,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -8395,8 +16079,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -8413,8 +16097,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -8431,8 +16115,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -8449,8 +16133,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -8467,8 +16151,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -8485,8 +16169,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -8503,8 +16187,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -8521,8 +16205,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -8539,8 +16223,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -8557,8 +16241,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -8575,8 +16259,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -8593,8 +16277,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -8611,8 +16295,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -8629,8 +16313,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -8647,8 +16331,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -8665,8 +16349,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -8683,8 +16367,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -8701,8 +16385,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -8719,8 +16403,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -8737,8 +16421,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -8755,8 +16439,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -8773,8 +16457,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -8791,8 +16475,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -8809,8 +16493,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -8827,8 +16511,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -8845,8 +16529,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -8863,8 +16547,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -8881,8 +16565,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -8899,8 +16583,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -8917,8 +16601,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -8935,8 +16619,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -8953,8 +16637,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -8971,8 +16655,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -8989,8 +16673,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -9007,8 +16691,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -9025,8 +16709,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -9043,8 +16727,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -9061,8 +16745,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -9079,8 +16763,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -9097,8 +16781,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -9115,8 +16799,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -9133,8 +16817,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -9151,8 +16835,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -9169,8 +16853,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -9187,8 +16871,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -9205,8 +16889,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -9223,8 +16907,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -9241,8 +16925,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -9259,8 +16943,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -9277,8 +16961,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -9295,8 +16979,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -9313,8 +16997,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -9331,8 +17015,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -9349,8 +17033,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -9367,8 +17051,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -9385,8 +17069,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -9403,8 +17087,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -9421,8 +17105,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -9439,8 +17123,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -9457,8 +17141,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -9475,8 +17159,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -9493,8 +17177,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -9511,8 +17195,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -9529,8 +17213,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -9547,8 +17231,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -9565,8 +17249,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -9583,8 +17267,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -9601,8 +17285,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -9619,8 +17303,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -9637,8 +17321,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -9655,8 +17339,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -9673,8 +17357,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -9691,8 +17375,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -9709,8 +17393,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -9727,8 +17411,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -9745,8 +17429,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -9763,8 +17447,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -9781,8 +17465,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -9799,8 +17483,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -9817,8 +17501,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -9835,8 +17519,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -9853,8 +17537,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -9871,8 +17555,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -9889,8 +17573,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -9907,8 +17591,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -9925,8 +17609,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -9943,8 +17627,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -9961,8 +17645,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -9979,8 +17663,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -9997,8 +17681,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -10015,8 +17699,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -10033,8 +17717,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -10051,8 +17735,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -10069,8 +17753,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -10087,8 +17771,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -10105,8 +17789,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -10123,8 +17807,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -10141,8 +17825,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -10159,8 +17843,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -10177,8 +17861,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -10195,8 +17879,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -10213,8 +17897,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -10231,8 +17915,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -10249,8 +17933,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -10267,8 +17951,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -10285,8 +17969,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -10303,8 +17987,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -10321,8 +18005,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -10339,8 +18023,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -10357,8 +18041,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -10375,8 +18059,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -10393,8 +18077,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -10411,8 +18095,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -10429,8 +18113,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -10447,8 +18131,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -10465,8 +18149,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -10483,8 +18167,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -10501,8 +18185,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -10519,8 +18203,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -10537,8 +18221,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -10555,8 +18239,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -10573,8 +18257,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -10591,8 +18275,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -10609,8 +18293,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -10627,8 +18311,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -10645,8 +18329,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -10663,8 +18347,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -10681,8 +18365,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -10699,8 +18383,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -10717,8 +18401,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -10735,8 +18419,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -10753,8 +18437,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -10771,8 +18455,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -10789,8 +18473,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -10807,8 +18491,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -10825,8 +18509,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -10843,8 +18527,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -10861,8 +18545,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -10879,8 +18563,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -10897,8 +18581,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -10915,8 +18599,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -10933,8 +18617,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -10951,8 +18635,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -10969,8 +18653,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -10987,8 +18671,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -11005,8 +18689,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -11023,8 +18707,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -11041,8 +18725,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -11059,8 +18743,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -11077,8 +18761,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -11095,8 +18779,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -11113,8 +18797,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -11131,8 +18815,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -11149,8 +18833,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -11167,8 +18851,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -11185,8 +18869,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -11203,8 +18887,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -11221,8 +18905,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -11239,8 +18923,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -11257,8 +18941,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -11275,8 +18959,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -11293,8 +18977,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -11311,8 +18995,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -11329,8 +19013,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -11347,8 +19031,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -11365,8 +19049,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -11383,8 +19067,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -11401,8 +19085,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -11419,8 +19103,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -11437,8 +19121,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -11455,8 +19139,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -11473,8 +19157,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -11491,8 +19175,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -11509,8 +19193,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -11527,8 +19211,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -11545,8 +19229,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -11563,8 +19247,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -11581,8 +19265,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -11599,8 +19283,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -11617,8 +19301,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -11635,8 +19319,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -11653,8 +19337,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -11671,8 +19355,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -11689,8 +19373,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -11707,8 +19391,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -11725,8 +19409,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -11743,8 +19427,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -11761,8 +19445,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -11779,8 +19463,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -11797,8 +19481,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -11815,8 +19499,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -11833,8 +19517,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -11851,8 +19535,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -11869,8 +19553,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -11887,8 +19571,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -11905,8 +19589,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -11923,8 +19607,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -11941,8 +19625,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -11959,8 +19643,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -11977,8 +19661,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -11995,8 +19679,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -12013,8 +19697,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -12031,8 +19715,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -12049,8 +19733,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -12067,8 +19751,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -12085,8 +19769,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -12103,8 +19787,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -12121,8 +19805,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -12139,8 +19823,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -12157,8 +19841,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -12175,8 +19859,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -12193,8 +19877,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -12211,8 +19895,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -12229,8 +19913,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -12247,8 +19931,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -12265,8 +19949,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -12283,8 +19967,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -12301,8 +19985,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -12319,8 +20003,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -12337,8 +20021,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -12355,8 +20039,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -12373,8 +20057,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -12391,8 +20075,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -12409,8 +20093,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -12427,8 +20111,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -12445,8 +20129,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -12463,8 +20147,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -12481,8 +20165,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -12499,8 +20183,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -12517,8 +20201,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -12535,8 +20219,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -12553,8 +20237,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -12571,8 +20255,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -12589,8 +20273,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -12607,8 +20291,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -12625,8 +20309,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -12643,8 +20327,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -12661,8 +20345,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -12679,8 +20363,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -12697,8 +20381,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -12715,8 +20399,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -12733,8 +20417,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -12751,8 +20435,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -12769,8 +20453,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -12787,8 +20471,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -12805,8 +20489,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -12823,8 +20507,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -12841,8 +20525,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -12859,8 +20543,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -12877,8 +20561,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -12895,8 +20579,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -12913,8 +20597,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -12931,8 +20615,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -12949,8 +20633,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -12967,8 +20651,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -12985,8 +20669,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -13003,8 +20687,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -13021,8 +20705,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -13039,8 +20723,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -13057,8 +20741,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -13075,8 +20759,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -13093,8 +20777,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -13111,8 +20795,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -13129,8 +20813,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -13147,8 +20831,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -13165,8 +20849,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -13183,8 +20867,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -13201,8 +20885,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -13219,8 +20903,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -13237,8 +20921,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -13255,8 +20939,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -13273,8 +20957,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -13291,8 +20975,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -13309,8 +20993,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -13327,8 +21011,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -13345,8 +21029,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -13363,8 +21047,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -13381,8 +21065,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -13399,8 +21083,8 @@ module.exports = [
     ],
     "browsers": {
       "android": "<=4.3",
-      "ie": "9 - 10",
-      "ie_mob": "10",
+      "ie": "<12",
+      "ie_mob": "*",
       "firefox": "<29",
       "opera": "<15",
       "chrome": "<=34",
@@ -13425,10 +21109,10 @@ module.exports = [
     "deps": [],
     "browsers": {
       "chrome": "<26",
-      "edge": "*",
-      "edge_mob": "*",
+      "edge": "<12",
+      "edge_mob": "<12",
       "firefox": "<14",
-      "ie": "*",
+      "ie": "<11",
       "opera": "<15",
       "safari": "<6",
       "android": "<4.4",
@@ -13464,6 +21148,7 @@ module.exports = [
       "chrome": "<51",
       "firefox": "<50",
       "opera": "<38",
+      "op_mob": "<38",
       "safari": "<10",
       "android": "<51",
       "firefox_mob": "<50",
@@ -13472,17 +21157,36 @@ module.exports = [
     }
   },
   {
+    "name": "ResizeObserver",
+    "deps": [],
+    "browsers": {
+      "chrome": "<64",
+      "edge": "*",
+      "edge_mob": "*",
+      "firefox": "<69",
+      "ie": "*",
+      "opera": "<51",
+      "safari": "*",
+      "android": "<5",
+      "firefox_mob": "*",
+      "samsung_mob": "<9",
+      "ie_mob": "*",
+      "op_mob": "<47",
+      "ios_saf": "*"
+    }
+  },
+  {
     "name": "URL",
     "deps": [],
     "browsers": {
       "chrome": "<51",
-      "firefox": "<29",
-      "edge": "*",
-      "edge_mob": "*",
+      "firefox": "<44",
+      "edge": "<17",
+      "edge_mob": "<17",
       "ie": "9 - *",
       "ie_mob": "*",
       "safari": "<12",
-      "firefox_mob": "<29",
+      "firefox_mob": "<44",
       "opera": "<36",
       "op_mini": "*",
       "android": "*",
@@ -13799,10 +21503,11 @@ module.exports = [
       "console"
     ],
     "browsers": {
-      "edge": "*",
-      "edge_mob": "*",
-      "ie": "*",
-      "firefox": "1 - 4"
+      "edge": "<12",
+      "edge_mob": "<12",
+      "ie": "<11",
+      "firefox": "1 - 4",
+      "firefox_mob": "<10"
     }
   },
   {
@@ -13926,18 +21631,18 @@ module.exports = [
       "XMLHttpRequest"
     ],
     "browsers": {
-      "android": "* - 4.4.4",
+      "android": "<67",
       "bb": "10 - *",
-      "edge": "<15",
-      "edge_mob": "<15",
+      "edge": "<16",
+      "edge_mob": "<16",
       "ie": "*",
       "ie_mob": "*",
-      "firefox": "* - 38",
-      "opera": "* - 28",
-      "safari": "< 10.1",
-      "chrome": "* - 41",
-      "ios_saf": "< 10.3 ",
-      "firefox_mob": "* - 38"
+      "firefox": "<57",
+      "opera": "<53",
+      "safari": "<12",
+      "chrome": "<66",
+      "ios_saf": "<12",
+      "firefox_mob": "<64"
     },
     "detector": true
   },
@@ -13948,6 +21653,28 @@ module.exports = [
     ],
     "browsers": {
       "ie": "6 - 8"
+    }
+  },
+  {
+    "name": "globalThis",
+    "deps": [],
+    "browsers": {
+      "android": "<71",
+      "bb": "*",
+      "chrome": "<71",
+      "edge": "*",
+      "edge_mob": "*",
+      "firefox": "<65",
+      "firefox_mob": "<65",
+      "ie": "*",
+      "ie_mob": "*",
+      "ios_chr": "*",
+      "ios_saf": "<12.1",
+      "op_mini": "*",
+      "op_mob": "*",
+      "opera": "*",
+      "safari": "<12.1",
+      "samsung_mob": "<10"
     }
   },
   {
@@ -13981,7 +21708,7 @@ module.exports = [
     "browsers": {
       "android": "2.1 - 2.3",
       "blackberry": "7",
-      "ie": "<9",
+      "ie": "<10",
       "opera": "11.5 - 12.1",
       "op_mini": "*",
       "op_mob": "10 - 12",
@@ -14007,17 +21734,18 @@ module.exports = [
     ],
     "browsers": {
       "chrome": "<39",
-      "edge": "*",
-      "edge_mob": "*",
+      "edge": "<14",
+      "edge_mob": "<14",
       "firefox": "<31",
       "ie": "*",
       "opera": "<26",
-      "safari": "*",
-      "android": "*",
+      "safari": "<11.1",
+      "android": "<5",
       "firefox_mob": "<31",
       "ie_mob": "*",
       "op_mob": "*",
-      "ios_saf": "*"
+      "ios_saf": "<11.3",
+      "samsung_mob": "<4"
     }
   },
   {
@@ -14038,6 +21766,25 @@ module.exports = [
     }
   },
   {
+    "name": "queueMicrotask",
+    "deps": [
+      "Event"
+    ],
+    "browsers": {
+      "chrome": "<71",
+      "edge": "*",
+      "firefox": "<69",
+      "ie": "*",
+      "opera": "<58",
+      "safari": "<12.1",
+      "android": "<71",
+      "firefox_mob": "*",
+      "op_mob": "<50",
+      "ios_saf": "<12.2",
+      "samsung_mob": "<10.0"
+    }
+  },
+  {
     "name": "requestAnimationFrame",
     "deps": [],
     "browsers": {
@@ -14048,10 +21795,36 @@ module.exports = [
       "ios_saf": "3.2 - 6",
       "firefox": "3.6 - 22",
       "opera": "<15",
-      "op_mini": "5 - 7",
+      "op_mini": "5 - *",
       "op_mob": "10 - 12.1",
       "safari": "3.1 - 6",
       "firefox_mob": "3.6"
+    }
+  },
+  {
+    "name": "requestIdleCallback",
+    "deps": [
+      "requestAnimationFrame",
+      "performance.now",
+      "Event"
+    ],
+    "browsers": {
+      "android": "*",
+      "bb": "*",
+      "chrome": "<47",
+      "edge": "*",
+      "edge_mob": "*",
+      "firefox": "<55",
+      "ios_chr": "*",
+      "ios_saf": "*",
+      "ie": "*",
+      "ie_mob": "*",
+      "opera": "<34",
+      "op_mini": "*",
+      "op_mob": "*",
+      "safari": "9 - *",
+      "firefox_mob": "<55",
+      "samsung_mob": "<5"
     }
   },
   {
@@ -14062,15 +21835,15 @@ module.exports = [
       "edge_mob": "*",
       "ie": "9 - *",
       "ie_mob": "*",
-      "firefox": "*",
+      "firefox": "<30",
       "chrome": "* - 37",
       "safari": "*",
       "ios_saf": "*",
-      "opera": "* - 24",
+      "opera": "<25",
       "op_mob": "*",
-      "android": "*",
+      "android": "<5",
       "bb": "*",
-      "firefox_mob": "*"
+      "firefox_mob": "<30"
     }
   },
   {
@@ -14091,6 +21864,24 @@ module.exports = [
       "bb": "*",
       "op_mini": "*",
       "samsung_mob": "*"
+    }
+  },
+  {
+    "name": "smoothscroll",
+    "deps": [
+      "requestAnimationFrame"
+    ],
+    "browsers": {
+      "edge": "* - 76",
+      "edge_mob": "*",
+      "ie": "*",
+      "ie_mob": "*",
+      "firefox": "4 - 36",
+      "opera": "*",
+      "safari": "*",
+      "chrome": "* - 60",
+      "ios_saf": "*",
+      "android": "*"
     }
   },
   {

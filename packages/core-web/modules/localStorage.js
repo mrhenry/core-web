@@ -1,5 +1,5 @@
 (function(undefined) {
-if (!("localStorage"in this&&function(){try{return this.localStorage.setItem("storage_test",1),this.localStorage.removeItem("storage_test"),!0}catch(t){return!1}}.call(this)
+if (!("localStorage"in self&&function(){try{return self.localStorage.setItem("storage_test",1),self.localStorage.removeItem("storage_test"),!0}catch(e){return!1}}.call(self)
 )) {
 // localStorage
 (function (global) {
@@ -87,6 +87,7 @@ if (!("localStorage"in this&&function(){try{return this.localStorage.setItem("st
 		try {
 			element.addBehavior('#default#' + userdata);
 			element.load(userdata);
+		// eslint-disable-next-line no-empty
 		} catch (error) {}
 
 		// get keys
@@ -101,5 +102,5 @@ if (!("localStorage"in this&&function(){try{return this.localStorage.setItem("st
 
 		global.attachEvent('onunload', updateKeys);
 	}
-}(this));
+}(self));
 }}).call('object' === typeof window && window || 'object' === typeof self && self || 'object' === typeof global && global || {});

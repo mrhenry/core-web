@@ -1,5 +1,5 @@
 (function(undefined) {
-if (!("atob"in this
+if (!("atob"in self
 )) {
 // atob
 ;(function () {

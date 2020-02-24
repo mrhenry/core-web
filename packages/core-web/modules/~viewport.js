@@ -1,5 +1,5 @@
 (function(undefined) {
-if (!("innerHeight"in this&&"innerWidth"in this&&"pageXOffset"in this&&"pageYOffset"in this&&"scrollX"in this&&"scrollY"in this
+if (!("innerHeight"in self&&"innerWidth"in self&&"pageXOffset"in self&&"pageYOffset"in self&&"scrollX"in self&&"scrollY"in self
 )) {
 // ~viewport
 (function (global) {
@@ -24,26 +24,26 @@ if (!("innerHeight"in this&&"innerWidth"in this&&"pageXOffset"in this&&"pageYOff
 
 	try {
 		Object.defineProperties(global, {
-			'innerWidth': {
+			innerWidth: {
 				get: function () {
 					return docEl.clientWidth;
 				}
 			},
-			'innerHeight': {
+			innerHeight: {
 				get: function () {
 					return docEl.clientHeight;
 				}
 			},
-			'pageXOffset': {
+			pageXOffset: {
 				get: scrollX
 			},
-			'pageYOffset': {
+			pageYOffset: {
 				get: scrollY
 			},
-			'scrollX': {
+			scrollX: {
 				get: scrollX
 			},
-			'scrollY': {
+			scrollY: {
 				get: scrollY
 			}
 		});
@@ -52,5 +52,5 @@ if (!("innerHeight"in this&&"innerWidth"in this&&"pageXOffset"in this&&"pageYOff
 		window.attachEvent('onscroll', setStatically);
 		setStatically();
 	}
-}(this));
+}(self));
 }}).call('object' === typeof window && window || 'object' === typeof self && self || 'object' === typeof global && global || {});

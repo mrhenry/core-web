@@ -1,5 +1,5 @@
 (function(undefined) {
-if (!("JSON"in this
+if (!("JSON"in self
 )) {
 // JSON
 /*! JSON v3.3.2 | http://bestiejs.github.io/json3 | Copyright 2012-2014, Kit Cambridge | http://kit.mit-license.org */
