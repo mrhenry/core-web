@@ -25,15 +25,15 @@
   resolved "https://registry.yarnpkg.com/@webcomponents/shadycss/-/shadycss-1.9.0.tgz#8450465037370d4f5c32e801bb2554a7cf2f5037"
   integrity sha512-g8Xa+6RSEME4g/wLJW4YII0eq15rvXp76RxPAuv7hx+Bdoi7GzZJ/EoZOUfyIbqAsQbII1TcWD4/+Xhs5NcM1w==
 
-"@webcomponents/shadydom@^1.5.0":
-  version "1.5.0"
-  resolved "https://registry.yarnpkg.com/@webcomponents/shadydom/-/shadydom-1.5.0.tgz#7cf7517eb63871f47bf4b3ec734146b9af944b0c"
-  integrity sha512-d6NamYIoQdrB3U7Ii1R1tUi4XrJ4OevfshJfpbkgY6Z0mio/mcI+UYH7EOd8nRqFAVOhLCssNglLNl4Lw2s1MQ==
+"@webcomponents/shadydom@^1.7.1":
+  version "1.7.1"
+  resolved "https://registry.yarnpkg.com/@webcomponents/shadydom/-/shadydom-1.7.1.tgz#51786c00dcd9bd01237d7b096f92e829a0f41fed"
+  integrity sha512-5+6sadjLBuYqNgfT/jw56hpZjhNrMfasx9PG4ysR1Q7cu1ldVsceBnyR3TcmqsHhExv+7s0h99/uM9Ln1Te4Kw==
 
-"@webcomponents/template@^1.4.0":
-  version "1.4.0"
-  resolved "https://registry.yarnpkg.com/@webcomponents/template/-/template-1.4.0.tgz#2ffd4574a5a2b662f0330dbeb40b231244a41c52"
-  integrity sha512-HJfhAxCD+DZmtm8oCALtvyOL9JlisSDqwE/4FWfaxq4SK3gUIp/2eUjLE6zqt9n6VHeo1zQjMTOA4fKKF6qSQg==
+"@webcomponents/template@^1.4.1":
+  version "1.4.1"
+  resolved "https://registry.yarnpkg.com/@webcomponents/template/-/template-1.4.1.tgz#0ac6fa2053701e067829bf20c8304888472c7382"
+  integrity sha512-v7vwYZPKsAxczkWIjCOfCki9SpRdUcDjMZyweTGj3EPvVi+awQVHFPZ6X3jDW5nLSOs6Ls3h/AX8x8T+df2X0Q==
 
 Base64@^1.0.0:
   version "1.0.2"
@@ -134,10 +134,10 @@ exists-sync@0.0.4:
   resolved "https://registry.yarnpkg.com/exists-sync/-/exists-sync-0.0.4.tgz#9744c2c428cc03b01060db454d4b12f0ef3c8879"
   integrity sha1-l0TCxCjMA7AQYNtFTUsS8O88iHk=
 
-fast-deep-equal@^2.0.1:
-  version "2.0.1"
-  resolved "https://registry.yarnpkg.com/fast-deep-equal/-/fast-deep-equal-2.0.1.tgz#7b05218ddf9667bf7f370bf7fdb2cb15fdd0aa49"
-  integrity sha1-ewUhjd+WZ79/Nwv3/bLLFf3Qqkk=
+fast-deep-equal@^3.1.1:
+  version "3.1.1"
+  resolved "https://registry.yarnpkg.com/fast-deep-equal/-/fast-deep-equal-3.1.1.tgz#545145077c501491e33b15ec408c294376e94ae4"
+  integrity sha512-8UEa58QDLauDNfpbrX55Q9jrGHThw2ZMdOky5Gl1CDtVeJDPVrG4Jxx1N8jw2gkWaff5UUuX1KJd+9zGe2B+ZA==
 
 from2-string@^1.1.0:
   version "1.1.0"
