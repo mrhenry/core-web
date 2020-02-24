@@ -3,10 +3,7 @@ node_js:
 - node
 
 install:
-    - yarn install
-    - cd $TRAVIS_BUILD_DIR/packages/babel-plugin-core-web && yarn install
-    - cd $TRAVIS_BUILD_DIR/packages/core-web && yarn install
-    - cd $TRAVIS_BUILD_DIR/packages/core-web-example && yarn install
-    - cd $TRAVIS_BUILD_DIR/packages/core-web-generator && yarn install
+    - make install
+    - make generate
 script:
-    - cd $TRAVIS_BUILD_DIR/packages/core-web-example && yarn build
+    - make build-example

@@ -1,5 +1,6 @@
 {
   "name": "@mrhenry/core-web-generator",
+  "version": "0.0.0",
   "private": true,
   "scripts": {
     "build": "node ./generate.js"
@@ -15,7 +16,7 @@
     "from2-string": "^1.1.0",
     "merge2": "^1.2.3",
     "polyfill-library": "^3.27.4",
-    "rimraf": "^2.6.3",
+    "rimraf": "^3.0.0",
     "stream-to-string": "^1.2.0"
   }
 }
