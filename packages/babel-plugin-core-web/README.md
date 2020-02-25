@@ -6,6 +6,14 @@
 
 [![version](https://img.shields.io/npm/v/@mrhenry/babel-plugin-core-web.svg)](https://www.npmjs.com/package/@mrhenry/babel-plugin-core-web) [![Build Status](https://travis-ci.com/mrhenry/core-web.svg?branch=master)](https://travis-ci.com/mrhenry/core-web)
 
+
+## why
+
+Maintaining a correct but minimal polyfill bundle from [polyfill.io](https://polyfill.io/v3/) is a manual process and prone to errors. Babel however knows which features you actually used and the environment you are targetting. Bringing the two together works for us, we hope it does for you two.
+
+What is not included is a way to serve different bundles to different browsers. There are many ways to do this and we are working on some recipes for this.
+
+
 ## install
 
 ```sh
@@ -15,6 +23,7 @@ npm install --save-dev @mrhenry/babel-plugin-core-web
 ```sh
 yarn add --dev @mrhenry/babel-plugin-core-web
 ```
+
 
 ## babel.config.js
 
@@ -37,6 +46,7 @@ module.exports = function(api) {
 	};
 };
 ```
+
 
 ## webpack config
 
@@ -79,6 +89,7 @@ const babelPresetEnv = require( '@babel/preset-env' );
 	},
 }
 ```
+
 
 ## issues
 
