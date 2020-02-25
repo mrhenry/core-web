@@ -1,6 +1,6 @@
 const m = require('../lib/ast-matcher');
 
 module.exports = [
-  m('HTMLTemplateElement'),
-  m(`document.createElement('template')`),
+	m('HTMLTemplateElement'),
+	m(`document.createElement('template')`),
 ];
