@@ -2,8 +2,16 @@
 
 [![Build Status](https://travis-ci.com/mrhenry/core-web.svg?branch=master)](https://travis-ci.com/mrhenry/core-web)
 
+## Babel Plugin
+
+[Read more](https://github.com/mrhenry/core-web/tree/master/packages/babel-plugin-core-web)
+
 ```sh
-yarn add -D @mrhenry/babel-plugin-core-web
+npm install --save-dev @mrhenry/babel-plugin-core-web
+```
+
+```sh
+yarn add --dev @mrhenry/babel-plugin-core-web
 ```
 
 ```js

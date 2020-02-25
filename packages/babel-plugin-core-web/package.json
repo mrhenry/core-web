@@ -1,13 +1,23 @@
 {
   "name": "@mrhenry/babel-plugin-core-web",
   "version": "0.2.0",
-  "description": "Polyfill.io as a babel plugin",
+  "description": "browser feature polyfills as a babel plugin",
   "main": "lib/index.js",
   "author": "Simon Menke <simon.menke@gmail.com>",
   "license": "MIT",
   "publishConfig": {
     "access": "public"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mrhenry/core-web.git"
+  },
+  "keywords": [
+    "babel",
+    "polyfill",
+    "dom",
+    "plugin"
+  ],
   "files": [
     "/lib",
     "/detectors",
@@ -20,5 +30,8 @@
     "@babel/types": "^7.3.0",
     "@mrhenry/core-web": "^0.2.0",
     "fast-deep-equal": "^3.1.1"
+  },
+  "bugs": {
+    "url": "https://github.com/mrhenry/core-web/issues"
   }
 }
