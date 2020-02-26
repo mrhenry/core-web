@@ -1,5 +1,9 @@
 import Get from "../helpers/_ESAbstract.Get";
 import IsConstructor from "../helpers/_ESAbstract.IsConstructor";
+import GetMethod from "../helpers/_ESAbstract.GetMethod";
+import GetV from "../helpers/_ESAbstract.GetV";
+import ToObject from "../helpers/_ESAbstract.ToObject";
+import IsCallable from "../helpers/_ESAbstract.IsCallable";
 import Type from "../helpers/_ESAbstract.Type";
 
 // _ESAbstract.SpeciesConstructor
