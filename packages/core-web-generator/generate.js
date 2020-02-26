@@ -69,23 +69,24 @@ async function gen(feature, mapping) {
 	const meta = await polyfillLibrary.describePolyfill(feature);
 	const output = mergeStream();
 	const helperName = normalizeHelperName(feature);
+	const dependencies = await allDependencies(feature);
 
 	if (!helperName) {
 		mapping.push({
 			name: feature,
-			deps: (meta.dependencies || []).filter(n => !providedByBabel(n)),
+			deps: Array.from(dependencies).filter(n => !providedByBabel(n)),
 			browsers: meta.browsers,
 		});
 	}
 
-	for (const dep of (meta.dependencies || [])) {
+	dependencies.forEach((dep) => {
 		const name = normalizeHelperName(dep);
 		if (name && !providedByBabel(dep)) {
 			output.add(streamFromString(
 				`import ${name} from "../helpers/${dep}";\n`
 			));
 		}
-	}
+	});
 
 	if (!helperName) {
 		output.add(streamFromString("(function(undefined) {\n"));
@@ -116,6 +117,22 @@ async function gen(feature, mapping) {
 	}
 
 	return await streamToString(output);
+}
+
+async function allDependencies(feature) {
+	const dependencies = new Set();
+	const meta = await polyfillLibrary.describePolyfill(feature);
+
+	for (const dep of (meta.dependencies || [])) {
+		dependencies.add(dep);
+
+		const nestedDepedencies = await allDependencies(dep);
+		nestedDepedencies.forEach((dep2) => {
+			dependencies.add(dep2);
+		});
+	}
+
+	return dependencies;
 }
 
 function providedByBabel(f) {

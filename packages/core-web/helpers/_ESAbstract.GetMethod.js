@@ -1,4 +1,5 @@
 import GetV from "../helpers/_ESAbstract.GetV";
+import ToObject from "../helpers/_ESAbstract.ToObject";
 import IsCallable from "../helpers/_ESAbstract.IsCallable";
 
 // _ESAbstract.GetMethod

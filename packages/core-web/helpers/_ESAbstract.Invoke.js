@@ -1,5 +1,6 @@
 import Call from "../helpers/_ESAbstract.Call";
 import GetV from "../helpers/_ESAbstract.GetV";
+import ToObject from "../helpers/_ESAbstract.ToObject";
 
 // _ESAbstract.Invoke
 /* global GetV, Call */

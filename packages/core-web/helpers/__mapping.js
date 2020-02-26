@@ -3,7 +3,47 @@ module.exports = [
     "name": "AbortController",
     "deps": [
       "fetch",
-      "Event"
+      "_ESAbstract.CreateMethodProperty",
+      "_ESAbstract.ToObject",
+      "_ESAbstract.ToLength",
+      "_ESAbstract.ToInteger",
+      "_ESAbstract.Get",
+      "_ESAbstract.IsCallable",
+      "_ESAbstract.HasProperty",
+      "_ESAbstract.Call",
+      "_ESAbstract.ToString",
+      "_ESAbstract.ToPrimitive",
+      "_ESAbstract.GetMethod",
+      "_ESAbstract.GetV",
+      "_ESAbstract.OrdinaryToPrimitive",
+      "_ESAbstract.Type",
+      "_ESAbstract.ArraySpeciesCreate",
+      "_ESAbstract.IsArray",
+      "_ESAbstract.ArrayCreate",
+      "_ESAbstract.IsConstructor",
+      "_ESAbstract.Construct",
+      "_ESAbstract.OrdinaryCreateFromConstructor",
+      "_ESAbstract.GetPrototypeFromConstructor",
+      "_ESAbstract.HasOwnProperty",
+      "_ESAbstract.ToPropertyKey",
+      "_ESAbstract.ToBoolean",
+      "_ESAbstract.CreateDataPropertyOrThrow",
+      "_ESAbstract.CreateDataProperty",
+      "XMLHttpRequest",
+      "Event",
+      "Window",
+      "document",
+      "Element",
+      "_ESAbstract.SameValueZero",
+      "_ESAbstract.SameValueNonNumber",
+      "_ESAbstract.CreateIterResultObject",
+      "_ESAbstract.GetIterator",
+      "_ESAbstract.IteratorClose",
+      "_ESAbstract.IteratorComplete",
+      "_ESAbstract.IteratorNext",
+      "_ESAbstract.IteratorStep",
+      "_ESAbstract.IteratorValue",
+      "_ESAbstract.SameValue"
     ],
     "browsers": {
       "edge": "12 - 15",
@@ -28,7 +68,24 @@ module.exports = [
     "name": "Blob",
     "deps": [
       "atob",
-      "URL"
+      "URL",
+      "_ESAbstract.CreateMethodProperty",
+      "_ESAbstract.Get",
+      "_ESAbstract.ToObject",
+      "_ESAbstract.Type",
+      "_ESAbstract.HasOwnProperty",
+      "_ESAbstract.ToPropertyKey",
+      "_ESAbstract.ToPrimitive",
+      "_ESAbstract.Call",
+      "_ESAbstract.GetMethod",
+      "_ESAbstract.GetV",
+      "_ESAbstract.IsCallable",
+      "_ESAbstract.OrdinaryToPrimitive",
+      "_ESAbstract.ToString",
+      "_ESAbstract.ToLength",
+      "_ESAbstract.ToInteger",
+      "_ESAbstract.HasProperty",
+      "_ESAbstract.IsArray"
     ],
     "browsers": {
       "chrome": "<20",
@@ -45,7 +102,26 @@ module.exports = [
   {
     "name": "CustomEvent",
     "deps": [
-      "Event"
+      "Event",
+      "Window",
+      "document",
+      "Element",
+      "_ESAbstract.CreateMethodProperty",
+      "_ESAbstract.ToObject",
+      "_ESAbstract.ToLength",
+      "_ESAbstract.ToInteger",
+      "_ESAbstract.Get",
+      "_ESAbstract.HasProperty",
+      "_ESAbstract.ToString",
+      "_ESAbstract.ToPrimitive",
+      "_ESAbstract.Call",
+      "_ESAbstract.GetMethod",
+      "_ESAbstract.GetV",
+      "_ESAbstract.IsCallable",
+      "_ESAbstract.OrdinaryToPrimitive",
+      "_ESAbstract.Type",
+      "_ESAbstract.SameValueZero",
+      "_ESAbstract.SameValueNonNumber"
     ],
     "browsers": {
       "edge": "<14",
@@ -62,7 +138,21 @@ module.exports = [
   },
   {
     "name": "DOMRect",
-    "deps": [],
+    "deps": [
+      "_ESAbstract.CreateMethodProperty",
+      "_ESAbstract.Get",
+      "_ESAbstract.ToObject",
+      "_ESAbstract.Type",
+      "_ESAbstract.HasOwnProperty",
+      "_ESAbstract.ToPropertyKey",
+      "_ESAbstract.ToPrimitive",
+      "_ESAbstract.Call",
+      "_ESAbstract.GetMethod",
+      "_ESAbstract.GetV",
+      "_ESAbstract.IsCallable",
+      "_ESAbstract.OrdinaryToPrimitive",
+      "_ESAbstract.ToString"
+    ],
     "browsers": {
       "ie": "9 - *",
       "ie_mob": "9 - *",
@@ -172,6 +262,20 @@ module.exports = [
     "deps": [
       "document",
       "Element",
+      "_ESAbstract.CreateMethodProperty",
+      "_ESAbstract.ToObject",
+      "_ESAbstract.ToLength",
+      "_ESAbstract.ToInteger",
+      "_ESAbstract.Get",
+      "_ESAbstract.HasProperty",
+      "_ESAbstract.ToString",
+      "_ESAbstract.ToPrimitive",
+      "_ESAbstract.Call",
+      "_ESAbstract.GetMethod",
+      "_ESAbstract.GetV",
+      "_ESAbstract.IsCallable",
+      "_ESAbstract.OrdinaryToPrimitive",
+      "_ESAbstract.Type",
       "_mutation"
     ],
     "browsers": {
@@ -222,6 +326,20 @@ module.exports = [
     "deps": [
       "document",
       "Element",
+      "_ESAbstract.CreateMethodProperty",
+      "_ESAbstract.ToObject",
+      "_ESAbstract.ToLength",
+      "_ESAbstract.ToInteger",
+      "_ESAbstract.Get",
+      "_ESAbstract.HasProperty",
+      "_ESAbstract.ToString",
+      "_ESAbstract.ToPrimitive",
+      "_ESAbstract.Call",
+      "_ESAbstract.GetMethod",
+      "_ESAbstract.GetV",
+      "_ESAbstract.IsCallable",
+      "_ESAbstract.OrdinaryToPrimitive",
+      "_ESAbstract.Type",
       "_mutation"
     ],
     "browsers": {
@@ -246,7 +364,9 @@ module.exports = [
     "name": "Element.prototype.classList",
     "deps": [
       "DOMTokenList",
-      "Element"
+      "_DOMTokenList",
+      "Element",
+      "document"
     ],
     "browsers": {
       "ie": "8 - 11",
@@ -256,7 +376,8 @@ module.exports = [
   {
     "name": "Element.prototype.cloneNode",
     "deps": [
-      "Element"
+      "Element",
+      "document"
     ],
     "browsers": {
       "ie": "8",
@@ -266,7 +387,10 @@ module.exports = [
   {
     "name": "Element.prototype.closest",
     "deps": [
-      "Element.prototype.matches"
+      "Element.prototype.matches",
+      "Element",
+      "document",
+      "document.querySelector"
     ],
     "browsers": {
       "bb": "*",
@@ -288,8 +412,22 @@ module.exports = [
   {
     "name": "Element.prototype.dataset",
     "deps": [
+      "_ESAbstract.CreateMethodProperty",
+      "_ESAbstract.HasOwnProperty",
+      "_ESAbstract.ToObject",
+      "_ESAbstract.ToPropertyKey",
+      "_ESAbstract.ToPrimitive",
+      "_ESAbstract.Call",
+      "_ESAbstract.GetMethod",
+      "_ESAbstract.GetV",
+      "_ESAbstract.IsCallable",
+      "_ESAbstract.OrdinaryToPrimitive",
+      "_ESAbstract.Get",
+      "_ESAbstract.Type",
+      "_ESAbstract.ToString",
       "document.querySelector",
-      "Element"
+      "Element",
+      "document"
     ],
     "browsers": {
       "chrome": "< 8",
@@ -302,10 +440,48 @@ module.exports = [
   {
     "name": "Element.prototype.inert",
     "deps": [
+      "_ESAbstract.CreateMethodProperty",
+      "_ESAbstract.ToObject",
+      "_ESAbstract.ToLength",
+      "_ESAbstract.ToInteger",
+      "_ESAbstract.Get",
+      "_ESAbstract.IsCallable",
+      "_ESAbstract.HasProperty",
+      "_ESAbstract.Call",
+      "_ESAbstract.ToString",
+      "_ESAbstract.ToPrimitive",
+      "_ESAbstract.GetMethod",
+      "_ESAbstract.GetV",
+      "_ESAbstract.OrdinaryToPrimitive",
+      "_ESAbstract.Type",
       "Element",
+      "document",
       "Element.prototype.matches",
+      "document.querySelector",
+      "_ESAbstract.CreateIterResultObject",
+      "_ESAbstract.CreateDataProperty",
+      "_ESAbstract.GetIterator",
+      "_ESAbstract.HasOwnProperty",
+      "_ESAbstract.ToPropertyKey",
+      "_ESAbstract.ArraySpeciesCreate",
+      "_ESAbstract.IsArray",
+      "_ESAbstract.ArrayCreate",
+      "_ESAbstract.IsConstructor",
+      "_ESAbstract.Construct",
+      "_ESAbstract.OrdinaryCreateFromConstructor",
+      "_ESAbstract.GetPrototypeFromConstructor",
+      "_ESAbstract.ToBoolean",
+      "_ESAbstract.CreateDataPropertyOrThrow",
+      "_ESAbstract.IteratorClose",
+      "_ESAbstract.IteratorComplete",
+      "_ESAbstract.IteratorNext",
+      "_ESAbstract.IteratorStep",
+      "_ESAbstract.IteratorValue",
+      "_ESAbstract.SameValueZero",
+      "_ESAbstract.SameValueNonNumber",
       "MutationObserver",
-      "Node.prototype.contains"
+      "Node.prototype.contains",
+      "_ESAbstract.SameValue"
     ],
     "browsers": {
       "edge": "*",
@@ -326,6 +502,7 @@ module.exports = [
     "name": "Element.prototype.matches",
     "deps": [
       "Element",
+      "document",
       "document.querySelector"
     ],
     "browsers": {
@@ -349,7 +526,8 @@ module.exports = [
     "name": "Element.prototype.placeholder",
     "deps": [
       "document.querySelector",
-      "Element"
+      "Element",
+      "document"
     ],
     "browsers": {
       "ie": "8 - 9"
@@ -432,7 +610,8 @@ module.exports = [
   {
     "name": "Element.prototype.toggleAttribute",
     "deps": [
-      "Element"
+      "Element",
+      "document"
     ],
     "browsers": {
       "android": "<69",
@@ -458,7 +637,23 @@ module.exports = [
     "deps": [
       "Window",
       "document",
-      "Element"
+      "Element",
+      "_ESAbstract.CreateMethodProperty",
+      "_ESAbstract.ToObject",
+      "_ESAbstract.ToLength",
+      "_ESAbstract.ToInteger",
+      "_ESAbstract.Get",
+      "_ESAbstract.HasProperty",
+      "_ESAbstract.ToString",
+      "_ESAbstract.ToPrimitive",
+      "_ESAbstract.Call",
+      "_ESAbstract.GetMethod",
+      "_ESAbstract.GetV",
+      "_ESAbstract.IsCallable",
+      "_ESAbstract.OrdinaryToPrimitive",
+      "_ESAbstract.Type",
+      "_ESAbstract.SameValueZero",
+      "_ESAbstract.SameValueNonNumber"
     ],
     "browsers": {
       "firefox": "6 - 10",
@@ -472,7 +667,26 @@ module.exports = [
   {
     "name": "Event.focusin",
     "deps": [
-      "Event"
+      "Event",
+      "Window",
+      "document",
+      "Element",
+      "_ESAbstract.CreateMethodProperty",
+      "_ESAbstract.ToObject",
+      "_ESAbstract.ToLength",
+      "_ESAbstract.ToInteger",
+      "_ESAbstract.Get",
+      "_ESAbstract.HasProperty",
+      "_ESAbstract.ToString",
+      "_ESAbstract.ToPrimitive",
+      "_ESAbstract.Call",
+      "_ESAbstract.GetMethod",
+      "_ESAbstract.GetV",
+      "_ESAbstract.IsCallable",
+      "_ESAbstract.OrdinaryToPrimitive",
+      "_ESAbstract.Type",
+      "_ESAbstract.SameValueZero",
+      "_ESAbstract.SameValueNonNumber"
     ],
     "browsers": {
       "firefox": "<52",
@@ -482,7 +696,26 @@ module.exports = [
   {
     "name": "Event.hashchange",
     "deps": [
-      "Event"
+      "Event",
+      "Window",
+      "document",
+      "Element",
+      "_ESAbstract.CreateMethodProperty",
+      "_ESAbstract.ToObject",
+      "_ESAbstract.ToLength",
+      "_ESAbstract.ToInteger",
+      "_ESAbstract.Get",
+      "_ESAbstract.HasProperty",
+      "_ESAbstract.ToString",
+      "_ESAbstract.ToPrimitive",
+      "_ESAbstract.Call",
+      "_ESAbstract.GetMethod",
+      "_ESAbstract.GetV",
+      "_ESAbstract.IsCallable",
+      "_ESAbstract.OrdinaryToPrimitive",
+      "_ESAbstract.Type",
+      "_ESAbstract.SameValueZero",
+      "_ESAbstract.SameValueNonNumber"
     ],
     "browsers": {
       "ie": "6 - 7",
@@ -513,7 +746,24 @@ module.exports = [
     "deps": [
       "_ESAbstract.CreateMethodProperty",
       "atob",
-      "Blob"
+      "Blob",
+      "URL",
+      "_ESAbstract.Get",
+      "_ESAbstract.ToObject",
+      "_ESAbstract.Type",
+      "_ESAbstract.HasOwnProperty",
+      "_ESAbstract.ToPropertyKey",
+      "_ESAbstract.ToPrimitive",
+      "_ESAbstract.Call",
+      "_ESAbstract.GetMethod",
+      "_ESAbstract.GetV",
+      "_ESAbstract.IsCallable",
+      "_ESAbstract.OrdinaryToPrimitive",
+      "_ESAbstract.ToString",
+      "_ESAbstract.ToLength",
+      "_ESAbstract.ToInteger",
+      "_ESAbstract.HasProperty",
+      "_ESAbstract.IsArray"
     ],
     "browsers": {
       "chrome": "<50",
@@ -536,7 +786,8 @@ module.exports = [
   {
     "name": "HTMLPictureElement",
     "deps": [
-      "~html5-elements"
+      "~html5-elements",
+      "document"
     ],
     "browsers": {
       "edge": "<12",
@@ -558,7 +809,28 @@ module.exports = [
     "deps": [
       "DocumentFragment",
       "document.querySelector",
-      "Event"
+      "Element",
+      "document",
+      "_ESAbstract.CreateMethodProperty",
+      "_ESAbstract.Get",
+      "_ESAbstract.ToObject",
+      "_ESAbstract.Type",
+      "_ESAbstract.HasOwnProperty",
+      "_ESAbstract.ToPropertyKey",
+      "_ESAbstract.ToPrimitive",
+      "_ESAbstract.Call",
+      "_ESAbstract.GetMethod",
+      "_ESAbstract.GetV",
+      "_ESAbstract.IsCallable",
+      "_ESAbstract.OrdinaryToPrimitive",
+      "_ESAbstract.ToString",
+      "Event",
+      "Window",
+      "_ESAbstract.ToLength",
+      "_ESAbstract.ToInteger",
+      "_ESAbstract.HasProperty",
+      "_ESAbstract.SameValueZero",
+      "_ESAbstract.SameValueNonNumber"
     ],
     "browsers": {
       "edge": "<13",
@@ -580,7 +852,38 @@ module.exports = [
     "name": "IntersectionObserver",
     "deps": [
       "getComputedStyle",
+      "Window",
+      "_ESAbstract.CreateMethodProperty",
+      "_ESAbstract.IsArray",
+      "_ESAbstract.ToObject",
+      "_ESAbstract.ToLength",
+      "_ESAbstract.ToInteger",
+      "_ESAbstract.Get",
+      "_ESAbstract.IsCallable",
+      "_ESAbstract.ArraySpeciesCreate",
+      "_ESAbstract.ArrayCreate",
+      "_ESAbstract.Type",
+      "_ESAbstract.IsConstructor",
+      "_ESAbstract.GetMethod",
+      "_ESAbstract.GetV",
+      "_ESAbstract.Construct",
+      "_ESAbstract.OrdinaryCreateFromConstructor",
+      "_ESAbstract.GetPrototypeFromConstructor",
+      "_ESAbstract.HasOwnProperty",
+      "_ESAbstract.ToPropertyKey",
+      "_ESAbstract.ToPrimitive",
+      "_ESAbstract.Call",
+      "_ESAbstract.OrdinaryToPrimitive",
+      "_ESAbstract.ToString",
+      "_ESAbstract.HasProperty",
+      "_ESAbstract.ToBoolean",
+      "_ESAbstract.CreateDataPropertyOrThrow",
+      "_ESAbstract.CreateDataProperty",
       "Event",
+      "document",
+      "Element",
+      "_ESAbstract.SameValueZero",
+      "_ESAbstract.SameValueNonNumber",
       "performance.now"
     ],
     "browsers": {
@@ -604,7 +907,41 @@ module.exports = [
   {
     "name": "IntersectionObserverEntry",
     "deps": [
-      "IntersectionObserver"
+      "IntersectionObserver",
+      "getComputedStyle",
+      "Window",
+      "_ESAbstract.CreateMethodProperty",
+      "_ESAbstract.IsArray",
+      "_ESAbstract.ToObject",
+      "_ESAbstract.ToLength",
+      "_ESAbstract.ToInteger",
+      "_ESAbstract.Get",
+      "_ESAbstract.IsCallable",
+      "_ESAbstract.ArraySpeciesCreate",
+      "_ESAbstract.ArrayCreate",
+      "_ESAbstract.Type",
+      "_ESAbstract.IsConstructor",
+      "_ESAbstract.GetMethod",
+      "_ESAbstract.GetV",
+      "_ESAbstract.Construct",
+      "_ESAbstract.OrdinaryCreateFromConstructor",
+      "_ESAbstract.GetPrototypeFromConstructor",
+      "_ESAbstract.HasOwnProperty",
+      "_ESAbstract.ToPropertyKey",
+      "_ESAbstract.ToPrimitive",
+      "_ESAbstract.Call",
+      "_ESAbstract.OrdinaryToPrimitive",
+      "_ESAbstract.ToString",
+      "_ESAbstract.HasProperty",
+      "_ESAbstract.ToBoolean",
+      "_ESAbstract.CreateDataPropertyOrThrow",
+      "_ESAbstract.CreateDataProperty",
+      "Event",
+      "document",
+      "Element",
+      "_ESAbstract.SameValueZero",
+      "_ESAbstract.SameValueNonNumber",
+      "performance.now"
     ],
     "browsers": {
       "edge": "15",
@@ -21125,7 +21462,8 @@ module.exports = [
   {
     "name": "Node.prototype.contains",
     "deps": [
-      "Element"
+      "Element",
+      "document"
     ],
     "browsers": {
       "firefox": "* - 8",
@@ -21139,7 +21477,22 @@ module.exports = [
   },
   {
     "name": "NodeList.prototype.forEach",
-    "deps": [],
+    "deps": [
+      "_ESAbstract.CreateMethodProperty",
+      "_ESAbstract.ToObject",
+      "_ESAbstract.ToLength",
+      "_ESAbstract.ToInteger",
+      "_ESAbstract.Get",
+      "_ESAbstract.IsCallable",
+      "_ESAbstract.HasProperty",
+      "_ESAbstract.Call",
+      "_ESAbstract.ToString",
+      "_ESAbstract.ToPrimitive",
+      "_ESAbstract.GetMethod",
+      "_ESAbstract.GetV",
+      "_ESAbstract.OrdinaryToPrimitive",
+      "_ESAbstract.Type"
+    ],
     "browsers": {
       "edge": "<16",
       "edge_mob": "<16",
@@ -21177,7 +21530,25 @@ module.exports = [
   },
   {
     "name": "URL",
-    "deps": [],
+    "deps": [
+      "_ESAbstract.CreateMethodProperty",
+      "_ESAbstract.Get",
+      "_ESAbstract.ToObject",
+      "_ESAbstract.Type",
+      "_ESAbstract.HasOwnProperty",
+      "_ESAbstract.ToPropertyKey",
+      "_ESAbstract.ToPrimitive",
+      "_ESAbstract.Call",
+      "_ESAbstract.GetMethod",
+      "_ESAbstract.GetV",
+      "_ESAbstract.IsCallable",
+      "_ESAbstract.OrdinaryToPrimitive",
+      "_ESAbstract.ToString",
+      "_ESAbstract.ToLength",
+      "_ESAbstract.ToInteger",
+      "_ESAbstract.HasProperty",
+      "_ESAbstract.IsArray"
+    ],
     "browsers": {
       "chrome": "<51",
       "firefox": "<44",
@@ -21243,7 +21614,26 @@ module.exports = [
   {
     "name": "XMLHttpRequest",
     "deps": [
-      "Event"
+      "Event",
+      "Window",
+      "document",
+      "Element",
+      "_ESAbstract.CreateMethodProperty",
+      "_ESAbstract.ToObject",
+      "_ESAbstract.ToLength",
+      "_ESAbstract.ToInteger",
+      "_ESAbstract.Get",
+      "_ESAbstract.HasProperty",
+      "_ESAbstract.ToString",
+      "_ESAbstract.ToPrimitive",
+      "_ESAbstract.Call",
+      "_ESAbstract.GetMethod",
+      "_ESAbstract.GetV",
+      "_ESAbstract.IsCallable",
+      "_ESAbstract.OrdinaryToPrimitive",
+      "_ESAbstract.Type",
+      "_ESAbstract.SameValueZero",
+      "_ESAbstract.SameValueNonNumber"
     ],
     "browsers": {
       "ie": "6 - 8"
@@ -21586,7 +21976,9 @@ module.exports = [
   {
     "name": "document.getElementsByClassName",
     "deps": [
-      "document.querySelector"
+      "document.querySelector",
+      "Element",
+      "document"
     ],
     "browsers": {
       "ie": "<9"
@@ -21615,7 +22007,27 @@ module.exports = [
   {
     "name": "document.visibilityState",
     "deps": [
-      "CustomEvent"
+      "CustomEvent",
+      "Event",
+      "Window",
+      "document",
+      "Element",
+      "_ESAbstract.CreateMethodProperty",
+      "_ESAbstract.ToObject",
+      "_ESAbstract.ToLength",
+      "_ESAbstract.ToInteger",
+      "_ESAbstract.Get",
+      "_ESAbstract.HasProperty",
+      "_ESAbstract.ToString",
+      "_ESAbstract.ToPrimitive",
+      "_ESAbstract.Call",
+      "_ESAbstract.GetMethod",
+      "_ESAbstract.GetV",
+      "_ESAbstract.IsCallable",
+      "_ESAbstract.OrdinaryToPrimitive",
+      "_ESAbstract.Type",
+      "_ESAbstract.SameValueZero",
+      "_ESAbstract.SameValueNonNumber"
     ],
     "browsers": {
       "firefox": "10 - 17",
@@ -21628,7 +22040,39 @@ module.exports = [
   {
     "name": "fetch",
     "deps": [
-      "XMLHttpRequest"
+      "_ESAbstract.CreateMethodProperty",
+      "_ESAbstract.ToObject",
+      "_ESAbstract.ToLength",
+      "_ESAbstract.ToInteger",
+      "_ESAbstract.Get",
+      "_ESAbstract.IsCallable",
+      "_ESAbstract.HasProperty",
+      "_ESAbstract.Call",
+      "_ESAbstract.ToString",
+      "_ESAbstract.ToPrimitive",
+      "_ESAbstract.GetMethod",
+      "_ESAbstract.GetV",
+      "_ESAbstract.OrdinaryToPrimitive",
+      "_ESAbstract.Type",
+      "_ESAbstract.ArraySpeciesCreate",
+      "_ESAbstract.IsArray",
+      "_ESAbstract.ArrayCreate",
+      "_ESAbstract.IsConstructor",
+      "_ESAbstract.Construct",
+      "_ESAbstract.OrdinaryCreateFromConstructor",
+      "_ESAbstract.GetPrototypeFromConstructor",
+      "_ESAbstract.HasOwnProperty",
+      "_ESAbstract.ToPropertyKey",
+      "_ESAbstract.ToBoolean",
+      "_ESAbstract.CreateDataPropertyOrThrow",
+      "_ESAbstract.CreateDataProperty",
+      "XMLHttpRequest",
+      "Event",
+      "Window",
+      "document",
+      "Element",
+      "_ESAbstract.SameValueZero",
+      "_ESAbstract.SameValueNonNumber"
     ],
     "browsers": {
       "android": "<67",
@@ -21680,6 +22124,20 @@ module.exports = [
   {
     "name": "localStorage",
     "deps": [
+      "_ESAbstract.CreateMethodProperty",
+      "_ESAbstract.ToObject",
+      "_ESAbstract.ToLength",
+      "_ESAbstract.ToInteger",
+      "_ESAbstract.Get",
+      "_ESAbstract.IsCallable",
+      "_ESAbstract.HasProperty",
+      "_ESAbstract.Call",
+      "_ESAbstract.ToString",
+      "_ESAbstract.ToPrimitive",
+      "_ESAbstract.GetMethod",
+      "_ESAbstract.GetV",
+      "_ESAbstract.OrdinaryToPrimitive",
+      "_ESAbstract.Type",
       "Window"
     ],
     "browsers": {
@@ -21689,7 +22147,21 @@ module.exports = [
   },
   {
     "name": "location.origin",
-    "deps": [],
+    "deps": [
+      "_ESAbstract.CreateMethodProperty",
+      "_ESAbstract.Get",
+      "_ESAbstract.ToObject",
+      "_ESAbstract.Type",
+      "_ESAbstract.HasOwnProperty",
+      "_ESAbstract.ToPropertyKey",
+      "_ESAbstract.ToPrimitive",
+      "_ESAbstract.Call",
+      "_ESAbstract.GetMethod",
+      "_ESAbstract.GetV",
+      "_ESAbstract.IsCallable",
+      "_ESAbstract.OrdinaryToPrimitive",
+      "_ESAbstract.ToString"
+    ],
     "browsers": {
       "ie": "6 - 10",
       "ie_mob": "10",
@@ -21703,7 +22175,26 @@ module.exports = [
   {
     "name": "matchMedia",
     "deps": [
-      "Event"
+      "Event",
+      "Window",
+      "document",
+      "Element",
+      "_ESAbstract.CreateMethodProperty",
+      "_ESAbstract.ToObject",
+      "_ESAbstract.ToLength",
+      "_ESAbstract.ToInteger",
+      "_ESAbstract.Get",
+      "_ESAbstract.HasProperty",
+      "_ESAbstract.ToString",
+      "_ESAbstract.ToPrimitive",
+      "_ESAbstract.Call",
+      "_ESAbstract.GetMethod",
+      "_ESAbstract.GetV",
+      "_ESAbstract.IsCallable",
+      "_ESAbstract.OrdinaryToPrimitive",
+      "_ESAbstract.Type",
+      "_ESAbstract.SameValueZero",
+      "_ESAbstract.SameValueNonNumber"
     ],
     "browsers": {
       "android": "2.1 - 2.3",
@@ -21719,7 +22210,8 @@ module.exports = [
   {
     "name": "navigator.geolocation",
     "deps": [
-      "document.head"
+      "document.head",
+      "document"
     ],
     "browsers": {
       "ie": "<9",
@@ -21730,7 +22222,27 @@ module.exports = [
   {
     "name": "navigator.sendBeacon",
     "deps": [
-      "XMLHttpRequest"
+      "XMLHttpRequest",
+      "Event",
+      "Window",
+      "document",
+      "Element",
+      "_ESAbstract.CreateMethodProperty",
+      "_ESAbstract.ToObject",
+      "_ESAbstract.ToLength",
+      "_ESAbstract.ToInteger",
+      "_ESAbstract.Get",
+      "_ESAbstract.HasProperty",
+      "_ESAbstract.ToString",
+      "_ESAbstract.ToPrimitive",
+      "_ESAbstract.Call",
+      "_ESAbstract.GetMethod",
+      "_ESAbstract.GetV",
+      "_ESAbstract.IsCallable",
+      "_ESAbstract.OrdinaryToPrimitive",
+      "_ESAbstract.Type",
+      "_ESAbstract.SameValueZero",
+      "_ESAbstract.SameValueNonNumber"
     ],
     "browsers": {
       "chrome": "<39",
@@ -21768,7 +22280,38 @@ module.exports = [
   {
     "name": "queueMicrotask",
     "deps": [
-      "Event"
+      "_ESAbstract.CreateMethodProperty",
+      "_ESAbstract.ToObject",
+      "_ESAbstract.ToLength",
+      "_ESAbstract.ToInteger",
+      "_ESAbstract.Get",
+      "_ESAbstract.IsCallable",
+      "_ESAbstract.HasProperty",
+      "_ESAbstract.Call",
+      "_ESAbstract.ToString",
+      "_ESAbstract.ToPrimitive",
+      "_ESAbstract.GetMethod",
+      "_ESAbstract.GetV",
+      "_ESAbstract.OrdinaryToPrimitive",
+      "_ESAbstract.Type",
+      "_ESAbstract.ArraySpeciesCreate",
+      "_ESAbstract.IsArray",
+      "_ESAbstract.ArrayCreate",
+      "_ESAbstract.IsConstructor",
+      "_ESAbstract.Construct",
+      "_ESAbstract.OrdinaryCreateFromConstructor",
+      "_ESAbstract.GetPrototypeFromConstructor",
+      "_ESAbstract.HasOwnProperty",
+      "_ESAbstract.ToPropertyKey",
+      "_ESAbstract.ToBoolean",
+      "_ESAbstract.CreateDataPropertyOrThrow",
+      "_ESAbstract.CreateDataProperty",
+      "Event",
+      "Window",
+      "document",
+      "Element",
+      "_ESAbstract.SameValueZero",
+      "_ESAbstract.SameValueNonNumber"
     ],
     "browsers": {
       "chrome": "<71",
@@ -21804,9 +22347,40 @@ module.exports = [
   {
     "name": "requestIdleCallback",
     "deps": [
+      "_ESAbstract.CreateMethodProperty",
+      "_ESAbstract.ToObject",
+      "_ESAbstract.ToLength",
+      "_ESAbstract.ToInteger",
+      "_ESAbstract.Get",
+      "_ESAbstract.IsCallable",
+      "_ESAbstract.ArraySpeciesCreate",
+      "_ESAbstract.IsArray",
+      "_ESAbstract.ArrayCreate",
+      "_ESAbstract.Type",
+      "_ESAbstract.IsConstructor",
+      "_ESAbstract.GetMethod",
+      "_ESAbstract.GetV",
+      "_ESAbstract.Construct",
+      "_ESAbstract.OrdinaryCreateFromConstructor",
+      "_ESAbstract.GetPrototypeFromConstructor",
+      "_ESAbstract.HasOwnProperty",
+      "_ESAbstract.ToPropertyKey",
+      "_ESAbstract.ToPrimitive",
+      "_ESAbstract.Call",
+      "_ESAbstract.OrdinaryToPrimitive",
+      "_ESAbstract.ToString",
+      "_ESAbstract.HasProperty",
+      "_ESAbstract.ToBoolean",
+      "_ESAbstract.CreateDataPropertyOrThrow",
+      "_ESAbstract.CreateDataProperty",
+      "_ESAbstract.SameValueZero",
+      "_ESAbstract.SameValueNonNumber",
       "requestAnimationFrame",
       "performance.now",
-      "Event"
+      "Event",
+      "Window",
+      "document",
+      "Element"
     ],
     "browsers": {
       "android": "*",
@@ -21896,7 +22470,21 @@ module.exports = [
   },
   {
     "name": "~viewport",
-    "deps": [],
+    "deps": [
+      "_ESAbstract.CreateMethodProperty",
+      "_ESAbstract.Get",
+      "_ESAbstract.ToObject",
+      "_ESAbstract.Type",
+      "_ESAbstract.HasOwnProperty",
+      "_ESAbstract.ToPropertyKey",
+      "_ESAbstract.ToPrimitive",
+      "_ESAbstract.Call",
+      "_ESAbstract.GetMethod",
+      "_ESAbstract.GetV",
+      "_ESAbstract.IsCallable",
+      "_ESAbstract.OrdinaryToPrimitive",
+      "_ESAbstract.ToString"
+    ],
     "browsers": {
       "ie": "6 - 8"
     },
