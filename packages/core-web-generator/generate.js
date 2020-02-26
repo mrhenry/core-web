@@ -69,16 +69,16 @@ async function gen(feature, mapping) {
 	const meta = await polyfillLibrary.describePolyfill(feature);
 	const output = mergeStream();
 	const helperName = normalizeHelperName(feature);
+	const dependencies = await allDependencies(feature);
 
 	if (!helperName) {
 		mapping.push({
 			name: feature,
-			deps: (meta.dependencies || []).filter(n => !providedByBabel(n)),
+			deps: Array.from(dependencies).filter(n => !providedByBabel(n)),
 			browsers: meta.browsers,
 		});
 	}
 
-	const dependencies = await allDependencies(feature);
 	dependencies.forEach((dep) => {
 		const name = normalizeHelperName(dep);
 		if (name && !providedByBabel(dep)) {
