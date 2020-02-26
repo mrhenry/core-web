@@ -1,5 +1,5 @@
 (function(undefined) {
-if (!("console"in self&&"assert"in self.console
+if (!("console"in this&&"assert"in this.console
 )) {
 // console.assert
 console.assert = function assert() { };

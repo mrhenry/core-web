@@ -1,5 +1,5 @@
 (function(undefined) {
-if (!("document"in self&&"getElementsByClassName"in self.document
+if (!("document"in this&&"getElementsByClassName"in this.document
 )) {
 // document.getElementsByClassName
 document.getElementsByClassName = function(search) {

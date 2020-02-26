@@ -1,5 +1,5 @@
 (function(undefined) {
-if (!("document"in self&&"hidden"in document&&"visibilityState"in document
+if (!("document"in this&&"hidden"in document&&"visibilityState"in document
 )) {
 // document.visibilityState
 // PageVisibility

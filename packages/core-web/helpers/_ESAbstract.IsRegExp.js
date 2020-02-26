@@ -11,7 +11,7 @@ function IsRegExp(argument) { // eslint-disable-line no-unused-vars
 		return false;
 	}
 	// 2. Let matcher be ? Get(argument, @@match).
-	var matcher = 'Symbol' in self && 'match' in self.Symbol ? Get(argument, self.Symbol.match) : undefined;
+	var matcher = 'Symbol' in this && 'match' in this.Symbol ? Get(argument, this.Symbol.match) : undefined;
 	// 3. If matcher is not undefined, return ToBoolean(matcher).
 	if (matcher !== undefined) {
 		return ToBoolean(matcher);
@@ -22,7 +22,6 @@ function IsRegExp(argument) { // eslint-disable-line no-unused-vars
 		argument.lastIndex = 0;
 		RegExp.prototype.exec.call(argument);
 		return true;
-	// eslint-disable-next-line no-empty
 	} catch (e) {} finally {
 		argument.lastIndex = lastIndex;
 	}

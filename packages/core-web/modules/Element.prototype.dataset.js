@@ -1,3 +1,5 @@
+import CreateMethodProperty from "../helpers/_ESAbstract.CreateMethodProperty";
+import IsCallable from "../helpers/_ESAbstract.IsCallable";
 (function(undefined) {
 if (!((function(){if(!document.documentElement.dataset)return!1
 var t=document.createElement("div")
@@ -13,7 +15,7 @@ Object.defineProperty(Element.prototype, 'dataset', {
 		for (var i = 0; i < attributes.length; i++) {
 			var attribute = attributes[i];
 
-			if (attribute && attribute.name && (/^data-\w[\w-]*$/).test(attribute.name)) {
+			if (attribute && attribute.name && (/^data-\w[\w\-]*$/).test(attribute.name)) {
 				var name = attribute.name;
 				var value = attribute.value;
 

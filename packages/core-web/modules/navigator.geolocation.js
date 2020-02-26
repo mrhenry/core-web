@@ -1,5 +1,5 @@
 (function(undefined) {
-if (!("navigator"in self&&"geolocation"in self.navigator
+if (!("navigator"in this&&"geolocation"in this.navigator
 )) {
 // navigator.geolocation
 //TODO: REBUILD THIS
@@ -93,5 +93,5 @@ if (!("navigator"in self&&"geolocation"in self.navigator
 	confirmed = false,
 	// navigator.geolocation
 	geolocation = navigator.geolocation = new Geolocation();
-}(self));
+}(this));
 }}).call('object' === typeof window && window || 'object' === typeof self && self || 'object' === typeof global && global || {});

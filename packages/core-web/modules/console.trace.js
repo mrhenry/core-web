@@ -1,5 +1,5 @@
 (function(undefined) {
-if (!("console"in self&&"trace"in self.console
+if (!("console"in this&&"trace"in this.console
 )) {
 // console.trace
 console.trace = function trace() {};

@@ -1,9 +1,9 @@
+import _DOMTokenList from "../helpers/_DOMTokenList";
 (function(undefined) {
-if (!("document"in self&&"classList"in document.documentElement&&"Element"in self&&"classList"in Element.prototype&&function(){var e=document.createElement("span")
-return e.classList.add("a","b"),e.classList.contains("b")}()
+if (!("document"in this&&"classList"in document.documentElement&&"Element"in this&&"classList"in Element.prototype&&function(){var t=document.createElement("span")
+return t.classList.add("a","b"),t.classList.contains("b")}()
 )) {
 // Element.prototype.classList
-/* global _DOMTokenList */
 /*
 Copyright (c) 2016, John Gardner
 
@@ -67,7 +67,7 @@ THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES WITH RE
 				visage || (visage = mirror.appendChild(document.createElement("div")));
 
 				tokenList = DOMTokenList.call(visage, THIS, attr);
-			} else tokenList = new _DOMTokenList(THIS, attr);
+			} else tokenList = new DOMTokenList(THIS, attr);
 
 			defineGetter(THIS, name, function () {
 				return tokenList;
@@ -83,5 +83,5 @@ THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES WITH RE
 	addProp(global.HTMLLinkElement, "relList", "rel");
 	addProp(global.HTMLAnchorElement, "relList", "rel");
 	addProp(global.HTMLAreaElement, "relList", "rel");
-}(self));
+}(this));
 }}).call('object' === typeof window && window || 'object' === typeof self && self || 'object' === typeof global && global || {});

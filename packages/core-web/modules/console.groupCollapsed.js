@@ -1,5 +1,5 @@
 (function(undefined) {
-if (!("console"in self&&"groupCollapsed"in self.console
+if (!("console"in this&&"groupCollapsed"in this.console
 )) {
 // console.groupCollapsed
 console.groupCollapsed = function groupCollapsed() {};

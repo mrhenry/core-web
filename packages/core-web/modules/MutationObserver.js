@@ -1,5 +1,5 @@
 (function(undefined) {
-if (!("MutationObserver"in self
+if (!("MutationObserver"in this
 )) {
 // MutationObserver
 /*!

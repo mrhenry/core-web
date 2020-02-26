@@ -1,5 +1,5 @@
 (function(undefined) {
-if (!("matchMedia"in self&&"MediaQueryList"in self
+if (!("matchMedia"in this&&"MediaQueryList"in this
 )) {
 // matchMedia
 (function (global) {
@@ -94,5 +94,5 @@ if (!("matchMedia"in self&&"MediaQueryList"in self
 
 		return list;
 	};
-}(self));
+}(this));
 }}).call('object' === typeof window && window || 'object' === typeof self && self || 'object' === typeof global && global || {});

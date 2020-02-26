@@ -1,5 +1,7 @@
 import Get from "../helpers/_ESAbstract.Get";
 import Type from "../helpers/_ESAbstract.Type";
+import CreateMethodProperty from "../helpers/_ESAbstract.CreateMethodProperty";
+import IsCallable from "../helpers/_ESAbstract.IsCallable";
 
 // _ESAbstract.EnumerableOwnProperties
 /* globals Type, Get */

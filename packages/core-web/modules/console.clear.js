@@ -1,5 +1,5 @@
 (function(undefined) {
-if (!("console"in self&&"clear"in self.console
+if (!("console"in this&&"clear"in this.console
 )) {
 // console.clear
 console.clear = function clear() {};

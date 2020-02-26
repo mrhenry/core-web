@@ -1,9 +1,24 @@
+import CreateMethodProperty from "../helpers/_ESAbstract.CreateMethodProperty";
+import Get from "../helpers/_ESAbstract.Get";
+import ToObject from "../helpers/_ESAbstract.ToObject";
+import Type from "../helpers/_ESAbstract.Type";
+import IsCallable from "../helpers/_ESAbstract.IsCallable";
+import ToLength from "../helpers/_ESAbstract.ToLength";
+import ToInteger from "../helpers/_ESAbstract.ToInteger";
+import HasProperty from "../helpers/_ESAbstract.HasProperty";
+import Call from "../helpers/_ESAbstract.Call";
+import ToString from "../helpers/_ESAbstract.ToString";
+import ToPrimitive from "../helpers/_ESAbstract.ToPrimitive";
+import GetMethod from "../helpers/_ESAbstract.GetMethod";
+import GetV from "../helpers/_ESAbstract.GetV";
+import OrdinaryToPrimitive from "../helpers/_ESAbstract.OrdinaryToPrimitive";
+import IsArray from "../helpers/_ESAbstract.IsArray";
 (function(undefined) {
 if (!((function(e){"use strict"
 try{var a=new e.URL("http://example.com")
 if("href"in a&&"searchParams"in a){var r=new URL("http://example.com")
-if(r.search="a=1&b=2","http://example.com/?a=1&b=2"===r.href&&(r.search="","http://example.com/"===r.href)){var t=new e.URLSearchParams("a=1"),c=new e.URLSearchParams(t)
-if("a=1"===String(c))return!0}}return!1}catch(h){return!1}})(self)
+if(r.search="a=1&b=2","http://example.com/?a=1&b=2"===r.href&&(r.search="","http://example.com/"===r.href)){var t=new e.URLSearchParams("a=1"),h=new e.URLSearchParams(t)
+if("a=1"===String(h))return!0}}return!1}catch(c){return!1}})(this)
 )) {
 // URL
 /* global Symbol */
@@ -56,7 +71,6 @@ if("a=1"===String(c))return!0}}return!1}catch(h){return!1}})(self)
 				}
 				nativeURL = undefined;
       }
-    // eslint-disable-next-line no-empty
     } catch (_) {}
 
     // NOTE: Doesn't do the encoding/decoding dance
@@ -269,7 +283,7 @@ if("a=1"===String(c))return!0}}return!1}catch(h){return!1}})(self)
 
     function Iterator(source, kind) {
       var index = 0;
-      this.next = function() {
+      this['next'] = function() {
         if (index >= source.length)
           return {done: true, value: undefined};
         var pair = source[index++];
@@ -313,7 +327,7 @@ if("a=1"===String(c))return!0}}return!1}catch(h){return!1}})(self)
               doc.documentElement.appendChild(doc.createElement('body'));
             } else if (window.ActiveXObject) {
               doc = new window.ActiveXObject('htmlfile');
-              doc.write('<head></head><body></body>');
+              doc.write('<head><\/head><body><\/body>');
               doc.close();
             }
 
@@ -347,7 +361,7 @@ if("a=1"===String(c))return!0}}return!1}catch(h){return!1}})(self)
         if (!('defineProperties' in Object)) return false;
         try {
           var obj = {};
-          Object.defineProperties(obj, { prop: { get: function () { return true; } } });
+          Object.defineProperties(obj, { prop: { 'get': function () { return true; } } });
           return obj.prop;
         } catch (_) {
           return false;
@@ -461,7 +475,7 @@ if("a=1"===String(c))return!0}}return!1}catch(h){return!1}})(self)
 
     if (origURL) {
       for (var i in origURL) {
-        if (Object.prototype.hasOwnProperty.call(origURL, i) && typeof origURL[i] === 'function')
+        if (origURL.hasOwnProperty(i) && typeof origURL[i] === 'function')
           URL[i] = origURL[i];
       }
     }

@@ -1,5 +1,5 @@
 (function(undefined) {
-if (!("Element"in self&&"HTMLElement"in self
+if (!("Element"in this&&"HTMLElement"in this
 )) {
 // Element
 (function () {
@@ -38,7 +38,6 @@ if (!("Element"in self&&"HTMLElement"in self
 			}
 		}
 
-		// eslint-disable-next-line no-cond-assign
 		while (childNode = deep && childNodes[++index]) {
 			shiv(childNode, deep);
 		}
@@ -54,13 +53,12 @@ if (!("Element"in self&&"HTMLElement"in self
 	prototype.attachEvent('onpropertychange', function (event) {
 		var
 		propertyName = event.propertyName,
-		nonValue = !Object.prototype.hasOwnProperty.call(cache, propertyName),
+		nonValue = !cache.hasOwnProperty(propertyName),
 		newValue = prototype[propertyName],
 		oldValue = cache[propertyName],
 		index = -1,
 		element;
 
-		// eslint-disable-next-line no-cond-assign
 		while (element = elements[++index]) {
 			if (element.nodeType === 1) {
 				if (nonValue || element[propertyName] === oldValue) {

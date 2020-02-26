@@ -1,9 +1,8 @@
 import _mutation from "../helpers/_mutation";
 (function(undefined) {
-if (!("Element"in self&&"prepend"in Element.prototype
+if (!("Element"in this&&"prepend"in Element.prototype
 )) {
 // Element.prototype.prepend
-/* global _mutation */
 Document.prototype.prepend = Element.prototype.prepend = function prepend() {
 	this.insertBefore(_mutation(arguments), this.firstChild);
 };

@@ -1,5 +1,5 @@
 (function(undefined) {
-if (!("console"in self&&"groupEnd"in self.console
+if (!("console"in this&&"groupEnd"in this.console
 )) {
 // console.groupEnd
 console.groupEnd = function groupEnd() {};

@@ -1,5 +1,5 @@
 (function(undefined) {
-if (!("console"in self&&"log"in self.console
+if (!("console"in this&&"log"in this.console
 )) {
 // console.log
 console.log = function log() {};

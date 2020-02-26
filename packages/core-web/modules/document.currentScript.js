@@ -1,5 +1,5 @@
 (function(undefined) {
-if (!("document"in self&&"currentScript"in self.document
+if (!("document"in this&&"currentScript"in this.document
 )) {
 // document.currentScript
 if ((typeof WorkerGlobalScope === "undefined") && (typeof importScripts !== "function")) {
@@ -13,7 +13,7 @@ if ((typeof WorkerGlobalScope === "undefined") && (typeof importScripts !== "fun
 			supportsScriptReadyState = 'readyState' in document.createElement('script'),
 
 			// Unfortunately necessary browser detection for Opera.
-			isOpera = self.opera && self.opera.toString() === '[object Opera]',
+			isOpera = this.opera && this.opera.toString() === '[object Opera]',
 
 			// Has support for `Object.defineProperty`.
 			// Even IE8's incomplete implementation is sufficient here since it works on

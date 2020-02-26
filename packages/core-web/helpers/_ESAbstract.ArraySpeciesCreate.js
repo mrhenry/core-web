@@ -3,7 +3,14 @@ import ArrayCreate from "../helpers/_ESAbstract.ArrayCreate";
 import Get from "../helpers/_ESAbstract.Get";
 import Type from "../helpers/_ESAbstract.Type";
 import IsConstructor from "../helpers/_ESAbstract.IsConstructor";
+import GetMethod from "../helpers/_ESAbstract.GetMethod";
+import GetV from "../helpers/_ESAbstract.GetV";
+import ToObject from "../helpers/_ESAbstract.ToObject";
+import IsCallable from "../helpers/_ESAbstract.IsCallable";
 import Construct from "../helpers/_ESAbstract.Construct";
+import OrdinaryCreateFromConstructor from "../helpers/_ESAbstract.OrdinaryCreateFromConstructor";
+import GetPrototypeFromConstructor from "../helpers/_ESAbstract.GetPrototypeFromConstructor";
+import CreateMethodProperty from "../helpers/_ESAbstract.CreateMethodProperty";
 
 // _ESAbstract.ArraySpeciesCreate
 /* global IsArray, ArrayCreate, Get, Type, IsConstructor, Construct */
@@ -11,7 +18,7 @@ import Construct from "../helpers/_ESAbstract.Construct";
 function ArraySpeciesCreate(originalArray, length) { // eslint-disable-line no-unused-vars
 	// 1. Assert: length is an integer Number ≥ 0.
 	// 2. If length is -0, set length to +0.
-	if (length === 0 && 1/length === -Infinity) {
+	if (1/length === -Infinity) {
 		length = 0;
 	}
 
@@ -37,7 +44,7 @@ function ArraySpeciesCreate(originalArray, length) { // eslint-disable-line no-u
 	// 7. If Type(C) is Object, then
 	if (Type(C) === 'object') {
 		// a. Set C to ? Get(C, @@species).
-		C = 'Symbol' in self && 'species' in self.Symbol ? Get(C, self.Symbol.species) : undefined;
+		C = 'Symbol' in this && 'species' in this.Symbol ? Get(C, this.Symbol.species) : undefined;
 		// b. If C is null, set C to undefined.
 		if (C === null) {
 			C = undefined;

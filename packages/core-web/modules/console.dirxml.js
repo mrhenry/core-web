@@ -1,5 +1,5 @@
 (function(undefined) {
-if (!("console"in self&&"dirxml"in self.console
+if (!("console"in this&&"dirxml"in this.console
 )) {
 // console.dirxml
 console.dirxml = function dirxml() {};

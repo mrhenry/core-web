@@ -1,8 +1,8 @@
 (function(undefined) {
-if (!("CustomEvent"in self&&("function"==typeof self.CustomEvent||self.CustomEvent.toString().indexOf("CustomEventConstructor")>-1)
+if (!("CustomEvent"in this&&("function"==typeof this.CustomEvent||this.CustomEvent.toString().indexOf("CustomEventConstructor")>-1)
 )) {
 // CustomEvent
-self.CustomEvent = function CustomEvent(type, eventInitDict) {
+this.CustomEvent = function CustomEvent(type, eventInitDict) {
 	if (!type) {
 		throw Error('TypeError: Failed to construct "CustomEvent": An event name must be provided.');
 	}

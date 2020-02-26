@@ -1,5 +1,5 @@
 (function(undefined) {
-if (!("console"in self&&"timeStamp"in self.console
+if (!("console"in this&&"timeStamp"in this.console
 )) {
 // console.timeStamp
 console.timeStamp = function cd() {};

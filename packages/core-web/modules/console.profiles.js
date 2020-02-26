@@ -1,5 +1,5 @@
 (function(undefined) {
-if (!("console"in self&&"profiles"in self.console
+if (!("console"in this&&"profiles"in this.console
 )) {
 // console.profiles
 console.profiles = function profiles() {};

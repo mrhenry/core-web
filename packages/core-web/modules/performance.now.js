@@ -1,5 +1,5 @@
 (function(undefined) {
-if (!("performance"in self&&"now"in self.performance
+if (!("performance"in this&&"now"in this.performance
 )) {
 // performance.now
 (function (global) {
@@ -14,5 +14,5 @@ global.performance.now = function () {
     return Date.now() - startTime;
 };
 
-}(self));
+}(this));
 }}).call('object' === typeof window && window || 'object' === typeof self && self || 'object' === typeof global && global || {});

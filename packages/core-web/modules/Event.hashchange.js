@@ -1,5 +1,5 @@
 (function(undefined) {
-if (!("onhashchange"in self&&(null==self.onhashchange||"function"==typeof self.onhashchange)
+if (!("onhashchange"in this&&(null==this.onhashchange||"function"==typeof this.onhashchange)
 )) {
 // Event.hashchange
 (function (global) {
@@ -19,5 +19,5 @@ if (!("onhashchange"in self&&(null==self.onhashchange||"function"==typeof self.o
 	global.onhashchange = function () { };
 
 	poll();
-}(self));
+}(this));
 }}).call('object' === typeof window && window || 'object' === typeof self && self || 'object' === typeof global && global || {});

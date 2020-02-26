@@ -1,5 +1,5 @@
 (function(undefined) {
-if (!("console"in self&&"markTimeline"in self.console
+if (!("console"in this&&"markTimeline"in this.console
 )) {
 // console.markTimeline
 console.markTimeline = function markTimeline() {};

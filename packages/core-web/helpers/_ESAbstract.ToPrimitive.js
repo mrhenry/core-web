@@ -1,6 +1,10 @@
 import Call from "../helpers/_ESAbstract.Call";
 import GetMethod from "../helpers/_ESAbstract.GetMethod";
+import GetV from "../helpers/_ESAbstract.GetV";
+import ToObject from "../helpers/_ESAbstract.ToObject";
+import IsCallable from "../helpers/_ESAbstract.IsCallable";
 import OrdinaryToPrimitive from "../helpers/_ESAbstract.OrdinaryToPrimitive";
+import Get from "../helpers/_ESAbstract.Get";
 import Type from "../helpers/_ESAbstract.Type";
 
 // _ESAbstract.ToPrimitive
@@ -22,7 +26,7 @@ function ToPrimitive(input /* [, PreferredType] */) { // eslint-disable-line no-
 			hint = 'number';
 		}
 		// d. Let exoticToPrim be ? GetMethod(input, @@toPrimitive).
-		var exoticToPrim = typeof self.Symbol === 'function' && typeof self.Symbol.toPrimitive === 'symbol' ? GetMethod(input, self.Symbol.toPrimitive) : undefined;
+		var exoticToPrim = typeof this.Symbol === 'function' && typeof this.Symbol.toPrimitive === 'symbol' ? GetMethod(input, this.Symbol.toPrimitive) : undefined;
 		// e. If exoticToPrim is not undefined, then
 		if (exoticToPrim !== undefined) {
 			// i. Let result be ? Call(exoticToPrim, input, « hint »).
@@ -43,4 +47,5 @@ function ToPrimitive(input /* [, PreferredType] */) { // eslint-disable-line no-
 	}
 	// 3. Return input
 	return input;
-}export default ToPrimitive;
+}
+export default ToPrimitive;

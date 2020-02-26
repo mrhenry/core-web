@@ -1,7 +1,11 @@
 import Call from "../helpers/_ESAbstract.Call";
 import GetMethod from "../helpers/_ESAbstract.GetMethod";
 import GetV from "../helpers/_ESAbstract.GetV";
+import ToObject from "../helpers/_ESAbstract.ToObject";
+import IsCallable from "../helpers/_ESAbstract.IsCallable";
 import Type from "../helpers/_ESAbstract.Type";
+import CreateMethodProperty from "../helpers/_ESAbstract.CreateMethodProperty";
+import Get from "../helpers/_ESAbstract.Get";
 
 // _ESAbstract.GetIterator
 /* global GetMethod, Symbol, Call, Type, GetV */

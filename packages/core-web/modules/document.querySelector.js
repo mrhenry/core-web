@@ -1,5 +1,5 @@
 (function(undefined) {
-if (!("document"in self&&"querySelector"in self.document
+if (!("document"in this&&"querySelector"in this.document
 )) {
 // document.querySelector
 (function () {
@@ -37,7 +37,6 @@ if (!("document"in self&&"querySelector"in self.document
 			}
 		}
 
-		// eslint-disable-next-line no-cond-assign
 		while (childNode = childNodes[++index]) {
 			elements = elements.concat(getElements(childNode, selector, one, id));
 

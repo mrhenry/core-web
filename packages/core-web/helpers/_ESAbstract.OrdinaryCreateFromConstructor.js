@@ -1,4 +1,9 @@
 import GetPrototypeFromConstructor from "../helpers/_ESAbstract.GetPrototypeFromConstructor";
+import Get from "../helpers/_ESAbstract.Get";
+import Type from "../helpers/_ESAbstract.Type";
+import CreateMethodProperty from "../helpers/_ESAbstract.CreateMethodProperty";
+import ToObject from "../helpers/_ESAbstract.ToObject";
+import IsCallable from "../helpers/_ESAbstract.IsCallable";
 
 // _ESAbstract.OrdinaryCreateFromConstructor
 /* global GetPrototypeFromConstructor */

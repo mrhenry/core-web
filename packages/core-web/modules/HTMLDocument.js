@@ -1,6 +1,6 @@
 (function(undefined) {
-if (!("HTMLDocument"in self
+if (!("HTMLDocument"in this
 )) {
 // HTMLDocument
-self.HTMLDocument = self.Document;
+this.HTMLDocument = this.Document;
 }}).call('object' === typeof window && window || 'object' === typeof self && self || 'object' === typeof global && global || {});

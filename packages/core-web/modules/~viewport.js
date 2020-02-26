@@ -1,5 +1,10 @@
+import CreateMethodProperty from "../helpers/_ESAbstract.CreateMethodProperty";
+import Get from "../helpers/_ESAbstract.Get";
+import ToObject from "../helpers/_ESAbstract.ToObject";
+import Type from "../helpers/_ESAbstract.Type";
+import IsCallable from "../helpers/_ESAbstract.IsCallable";
 (function(undefined) {
-if (!("innerHeight"in self&&"innerWidth"in self&&"pageXOffset"in self&&"pageYOffset"in self&&"scrollX"in self&&"scrollY"in self
+if (!("innerHeight"in this&&"innerWidth"in this&&"pageXOffset"in this&&"pageYOffset"in this&&"scrollX"in this&&"scrollY"in this
 )) {
 // ~viewport
 (function (global) {
@@ -24,26 +29,26 @@ if (!("innerHeight"in self&&"innerWidth"in self&&"pageXOffset"in self&&"pageYOff
 
 	try {
 		Object.defineProperties(global, {
-			innerWidth: {
+			'innerWidth': {
 				get: function () {
 					return docEl.clientWidth;
 				}
 			},
-			innerHeight: {
+			'innerHeight': {
 				get: function () {
 					return docEl.clientHeight;
 				}
 			},
-			pageXOffset: {
+			'pageXOffset': {
 				get: scrollX
 			},
-			pageYOffset: {
+			'pageYOffset': {
 				get: scrollY
 			},
-			scrollX: {
+			'scrollX': {
 				get: scrollX
 			},
-			scrollY: {
+			'scrollY': {
 				get: scrollY
 			}
 		});
@@ -52,5 +57,5 @@ if (!("innerHeight"in self&&"innerWidth"in self&&"pageXOffset"in self&&"pageYOff
 		window.attachEvent('onscroll', setStatically);
 		setStatically();
 	}
-}(self));
+}(this));
 }}).call('object' === typeof window && window || 'object' === typeof self && self || 'object' === typeof global && global || {});

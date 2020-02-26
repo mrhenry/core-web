@@ -1,5 +1,5 @@
 (function(undefined) {
-if (!("document"in self&&"head"in self.document
+if (!("document"in this&&"head"in this.document
 )) {
 // document.head
 document.head = document.getElementsByTagName('head')[0];

@@ -1,5 +1,5 @@
 (function(undefined) {
-if (!("document"in self&&"closest"in document.documentElement
+if (!("document"in this&&"closest"in document.documentElement
 )) {
 // Element.prototype.closest
 Element.prototype.closest = function closest(selector) {

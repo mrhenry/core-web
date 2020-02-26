@@ -1,5 +1,10 @@
+import CreateMethodProperty from "../helpers/_ESAbstract.CreateMethodProperty";
+import Get from "../helpers/_ESAbstract.Get";
+import ToObject from "../helpers/_ESAbstract.ToObject";
+import Type from "../helpers/_ESAbstract.Type";
+import IsCallable from "../helpers/_ESAbstract.IsCallable";
 (function(undefined) {
-if (!("location"in self&&"origin"in self.location
+if (!("location"in this&&"origin"in this.location
 )) {
 // location.origin
 try {

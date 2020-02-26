@@ -1,5 +1,9 @@
 import Get from "../helpers/_ESAbstract.Get";
 import IsConstructor from "../helpers/_ESAbstract.IsConstructor";
+import GetMethod from "../helpers/_ESAbstract.GetMethod";
+import GetV from "../helpers/_ESAbstract.GetV";
+import ToObject from "../helpers/_ESAbstract.ToObject";
+import IsCallable from "../helpers/_ESAbstract.IsCallable";
 import Type from "../helpers/_ESAbstract.Type";
 
 // _ESAbstract.SpeciesConstructor
@@ -18,7 +22,7 @@ function SpeciesConstructor (O, defaultConstructor) { // eslint-disable-line no-
 		throw new TypeError('O.constructor is not an Object');
 	}
 	// 7.3.20.5 Let S be ? Get(C, @@species).
-	var S = typeof self.Symbol === 'function' && typeof self.Symbol.species === 'symbol' ? C[self.Symbol.species] : undefined;
+	var S = typeof this.Symbol === 'function' && typeof this.Symbol.species === 'symbol' ? C[this.Symbol.species] : undefined;
 	// 7.3.20.6 If S is either undefined or null, return defaultConstructor.
 	if (S === undefined || S === null) {
 		return defaultConstructor;
