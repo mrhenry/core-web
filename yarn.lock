@@ -1078,10 +1078,10 @@
   resolved "https://registry.yarnpkg.com/@webcomponents/shadycss/-/shadycss-1.9.4.tgz#4f9d8ea1526bab084c60b53d4854dc39fdb2bb48"
   integrity sha512-tgNcVEaKssyeZPbUBjVQf4aryO5Fi7fxRvOxV982ZJuRVDcefmIblBh0SXAbcvAAlQ2zpNEP4SuQUnr8uApIpw==
 
-"@webcomponents/shadydom@^1.7.1":
-  version "1.7.1"
-  resolved "https://registry.yarnpkg.com/@webcomponents/shadydom/-/shadydom-1.7.1.tgz#51786c00dcd9bd01237d7b096f92e829a0f41fed"
-  integrity sha512-5+6sadjLBuYqNgfT/jw56hpZjhNrMfasx9PG4ysR1Q7cu1ldVsceBnyR3TcmqsHhExv+7s0h99/uM9Ln1Te4Kw==
+"@webcomponents/shadydom@^1.7.2":
+  version "1.7.2"
+  resolved "https://registry.yarnpkg.com/@webcomponents/shadydom/-/shadydom-1.7.2.tgz#af0945ccb0c5e799bc96e4fd429db184ba663131"
+  integrity sha512-XqOx3I2mYYIi8fUbHJCVzKa+5qGbNXSasbYAs9NumNKUy/sBrwzMuDibMb+y0DxEmunKuqhEe3AbstPsM595xA==
 
 "@webcomponents/template@^1.4.0", "@webcomponents/template@^1.4.1":
   version "1.4.1"
