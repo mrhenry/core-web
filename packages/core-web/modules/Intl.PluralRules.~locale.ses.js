@@ -1,5 +1,5 @@
 (function(undefined) {
-if (!("Intl"in this&&Intl.PluralRules&&Intl.PluralRules.supportedLocalesOf&&1===Intl.PluralRules.supportedLocalesOf("ses").length
+if (!("Intl"in this&&Intl.PluralRules&&Intl.PluralRules.supportedLocalesOf&&function(){try{return 1===Intl.PluralRules.supportedLocalesOf("ses").length}catch(l){return!1}}
 )) {
 // Intl.PluralRules.~locale.ses
 /* @generated */

@@ -25,6 +25,8 @@ import GetPrototypeFromConstructor from "../helpers/_ESAbstract.GetPrototypeFrom
 import ToBoolean from "../helpers/_ESAbstract.ToBoolean";
 import CreateDataPropertyOrThrow from "../helpers/_ESAbstract.CreateDataPropertyOrThrow";
 import CreateDataProperty from "../helpers/_ESAbstract.CreateDataProperty";
+import SameValueZero from "../helpers/_ESAbstract.SameValueZero";
+import SameValueNonNumber from "../helpers/_ESAbstract.SameValueNonNumber";
 import IteratorStep from "../helpers/_ESAbstract.IteratorStep";
 import IteratorNext from "../helpers/_ESAbstract.IteratorNext";
 import IteratorComplete from "../helpers/_ESAbstract.IteratorComplete";

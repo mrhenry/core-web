@@ -26,13 +26,13 @@ import OrdinaryCreateFromConstructor from "../helpers/_ESAbstract.OrdinaryCreate
 import GetPrototypeFromConstructor from "../helpers/_ESAbstract.GetPrototypeFromConstructor";
 import ToBoolean from "../helpers/_ESAbstract.ToBoolean";
 import CreateDataPropertyOrThrow from "../helpers/_ESAbstract.CreateDataPropertyOrThrow";
+import SameValueZero from "../helpers/_ESAbstract.SameValueZero";
+import SameValueNonNumber from "../helpers/_ESAbstract.SameValueNonNumber";
 import IteratorClose from "../helpers/_ESAbstract.IteratorClose";
 import IteratorComplete from "../helpers/_ESAbstract.IteratorComplete";
 import IteratorNext from "../helpers/_ESAbstract.IteratorNext";
 import IteratorStep from "../helpers/_ESAbstract.IteratorStep";
 import IteratorValue from "../helpers/_ESAbstract.IteratorValue";
-import SameValueZero from "../helpers/_ESAbstract.SameValueZero";
-import SameValueNonNumber from "../helpers/_ESAbstract.SameValueNonNumber";
 import SameValue from "../helpers/_ESAbstract.SameValue";
 (function(undefined) {
 if (!("Element"in self&&"inert"in Element.prototype

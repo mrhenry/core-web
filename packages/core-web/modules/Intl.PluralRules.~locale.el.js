@@ -1,5 +1,5 @@
 (function(undefined) {
-if (!("Intl"in this&&Intl.PluralRules&&Intl.PluralRules.supportedLocalesOf&&1===Intl.PluralRules.supportedLocalesOf("el").length
+if (!("Intl"in this&&Intl.PluralRules&&Intl.PluralRules.supportedLocalesOf&&function(){try{return 1===Intl.PluralRules.supportedLocalesOf("el").length}catch(l){return!1}}
 )) {
 // Intl.PluralRules.~locale.el
 /* @generated */
