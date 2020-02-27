@@ -9,7 +9,7 @@
 
 ## why
 
-Maintaining a correct but minimal polyfill bundle from [polyfill.io](https://polyfill.io/v3/) is a manual process and prone to errors. Babel however knows which features you actually used and the environment you are targetting. Bringing the two together works for us, we hope it does for you two.
+Maintaining a correct but minimal polyfill bundle from [polyfill.io](https://polyfill.io/v3/) is a manual process and prone to errors. Babel however knows which features you actually used and the environment you are targetting. Bringing the two together works for us, we hope it does for you too.
 
 What is not included is a way to serve different bundles to different browsers. There are many ways to do this and we are working on some recipes for this.
 
