@@ -17,6 +17,8 @@ module.exports = [
       "_ESAbstract.GetV",
       "_ESAbstract.OrdinaryToPrimitive",
       "_ESAbstract.Type",
+      "_ESAbstract.SameValueZero",
+      "_ESAbstract.SameValueNonNumber",
       "_ESAbstract.ArraySpeciesCreate",
       "_ESAbstract.IsArray",
       "_ESAbstract.ArrayCreate",
@@ -34,8 +36,6 @@ module.exports = [
       "Window",
       "document",
       "Element",
-      "_ESAbstract.SameValueZero",
-      "_ESAbstract.SameValueNonNumber",
       "_ESAbstract.CreateIterResultObject",
       "_ESAbstract.GetIterator",
       "_ESAbstract.IteratorClose",
@@ -472,13 +472,13 @@ module.exports = [
       "_ESAbstract.GetPrototypeFromConstructor",
       "_ESAbstract.ToBoolean",
       "_ESAbstract.CreateDataPropertyOrThrow",
+      "_ESAbstract.SameValueZero",
+      "_ESAbstract.SameValueNonNumber",
       "_ESAbstract.IteratorClose",
       "_ESAbstract.IteratorComplete",
       "_ESAbstract.IteratorNext",
       "_ESAbstract.IteratorStep",
       "_ESAbstract.IteratorValue",
-      "_ESAbstract.SameValueZero",
-      "_ESAbstract.SameValueNonNumber",
       "MutationObserver",
       "Node.prototype.contains",
       "_ESAbstract.SameValue"
@@ -523,6 +523,23 @@ module.exports = [
     }
   },
   {
+    "name": "Element.prototype.nextElementSibling",
+    "deps": [
+      "Element",
+      "document"
+    ],
+    "browsers": {
+      "chrome": "<4",
+      "edge": "<12",
+      "firefox": "<3.5",
+      "ie": "<9",
+      "opera": "<10",
+      "op_mob": "<10.1",
+      "safari": "<4",
+      "firefox_mob": "<4"
+    }
+  },
+  {
     "name": "Element.prototype.placeholder",
     "deps": [
       "document.querySelector",
@@ -556,6 +573,23 @@ module.exports = [
       "safari": "<10",
       "firefox_mob": "<49",
       "samsung_mob": "<6"
+    }
+  },
+  {
+    "name": "Element.prototype.previousElementSibling",
+    "deps": [
+      "Element",
+      "document"
+    ],
+    "browsers": {
+      "chrome": "<4",
+      "edge": "<12",
+      "firefox": "<3.5",
+      "ie": "<9",
+      "opera": "<10",
+      "op_mob": "<10.1",
+      "safari": "<4",
+      "firefox_mob": "<4"
     }
   },
   {
@@ -21970,7 +22004,7 @@ module.exports = [
     "name": "document.currentScript",
     "deps": [],
     "browsers": {
-      "ie": "8 - 10"
+      "ie": "*"
     }
   },
   {
@@ -22054,6 +22088,8 @@ module.exports = [
       "_ESAbstract.GetV",
       "_ESAbstract.OrdinaryToPrimitive",
       "_ESAbstract.Type",
+      "_ESAbstract.SameValueZero",
+      "_ESAbstract.SameValueNonNumber",
       "_ESAbstract.ArraySpeciesCreate",
       "_ESAbstract.IsArray",
       "_ESAbstract.ArrayCreate",
@@ -22070,9 +22106,7 @@ module.exports = [
       "Event",
       "Window",
       "document",
-      "Element",
-      "_ESAbstract.SameValueZero",
-      "_ESAbstract.SameValueNonNumber"
+      "Element"
     ],
     "browsers": {
       "android": "<67",
@@ -22306,12 +22340,12 @@ module.exports = [
       "_ESAbstract.ToBoolean",
       "_ESAbstract.CreateDataPropertyOrThrow",
       "_ESAbstract.CreateDataProperty",
+      "_ESAbstract.SameValueZero",
+      "_ESAbstract.SameValueNonNumber",
       "Event",
       "Window",
       "document",
-      "Element",
-      "_ESAbstract.SameValueZero",
-      "_ESAbstract.SameValueNonNumber"
+      "Element"
     ],
     "browsers": {
       "chrome": "<71",
