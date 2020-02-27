@@ -1873,6 +1873,11 @@ cross-spawn@^6.0.0:
     shebang-command "^1.2.0"
     which "^1.2.9"
 
+current-script-polyfill@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/current-script-polyfill/-/current-script-polyfill-1.0.0.tgz#f31cf7e4f3e218b0726e738ca92a02d3488ef615"
+  integrity sha1-8xz35PPiGLBybnOMqSoC00iO9hU=
+
 currently-unhandled@^0.4.1:
   version "0.4.1"
   resolved "https://registry.yarnpkg.com/currently-unhandled/-/currently-unhandled-0.4.1.tgz#988df33feab191ef799a61369dd76c17adf957ea"
@@ -4205,10 +4210,10 @@ pkg-dir@^3.0.0:
   dependencies:
     find-up "^3.0.0"
 
-polyfill-library@^3.27.4:
-  version "3.46.0"
-  resolved "https://registry.yarnpkg.com/polyfill-library/-/polyfill-library-3.46.0.tgz#70e4591e27a4aee6350e844e5d89551c594285bc"
-  integrity sha512-UmUcAWm8xL4DevCuSbBzQ4Lzj4IULebElDZXGK80mEgorFfbp1NHhLtbWFHwiSyZV7AnSKSAxFI1NwJt3WYtNQ==
+polyfill-library@^3.51.0:
+  version "3.51.0"
+  resolved "https://registry.yarnpkg.com/polyfill-library/-/polyfill-library-3.51.0.tgz#bded5f9e0c4983e310e43f1344202f239296ad18"
+  integrity sha512-heJ2JJRDoFkiEmYeNedwtqlarXBQLD3ZwGkrucnkhBp9SHrnFZSFVq04MRnoBrkZPq4A4hXKB7X8vgp72FImpA==
   dependencies:
     "@financial-times/polyfill-useragent-normaliser" "^1.2.0"
     "@formatjs/intl-pluralrules" "^1.1.2"
@@ -4217,6 +4222,7 @@ polyfill-library@^3.27.4:
     Base64 "^1.0.0"
     abort-controller "^3.0.0"
     audio-context-polyfill "^1.0.0"
+    current-script-polyfill "^1.0.0"
     diff "4.0.2"
     event-source-polyfill "^1.0.12"
     from2-string "^1.1.0"
