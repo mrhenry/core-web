@@ -9,7 +9,7 @@
     "@financial-times/polyfill-useragent-normaliser": "^1.0.6",
     "@webcomponents/custom-elements": "^1.4.0",
     "@webcomponents/shadycss": "^1.9.0",
-    "@webcomponents/shadydom": "^1.7.1",
+    "@webcomponents/shadydom": "^1.7.2",
     "@webcomponents/template": "^1.4.1",
     "denodeify": "^1.2.1",
     "fast-deep-equal": "^3.1.1",
