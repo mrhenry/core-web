@@ -7,7 +7,7 @@
   },
   "dependencies": {
     "@financial-times/polyfill-useragent-normaliser": "^1.0.6",
-    "@webcomponents/custom-elements": "^1.2.1",
+    "@webcomponents/custom-elements": "^1.4.0",
     "@webcomponents/shadycss": "^1.9.0",
     "@webcomponents/shadydom": "^1.7.2",
     "@webcomponents/template": "^1.4.1",
@@ -15,7 +15,7 @@
     "fast-deep-equal": "^3.1.1",
     "from2-string": "^1.1.0",
     "merge2": "^1.2.3",
-    "polyfill-library": "^3.27.4",
+    "polyfill-library": "^3.51.0",
     "rimraf": "^3.0.0",
     "stream-to-string": "^1.2.0"
   }
