@@ -16,6 +16,35 @@ module.exports = {
     rules: [
       {
         test: /\.js$/,
+        include: /core-web\/modules/,
+        use: {
+          loader: "babel-loader",
+          options: {
+            comments: false,
+            presets: [
+              [
+                babelPresetEnv,
+                {
+                  corejs: "^3.6.3",
+                  targets: {
+                    browsers: [
+                      "chrome >= 31",
+                      "edge >= 12",
+                      "firefox >= 26",
+                      "opera >= 26",
+                      "safari >= 6",
+                      "ie >= 11"
+                    ]
+                  },
+                  useBuiltIns: "usage"
+                }
+              ]
+            ]
+          }
+        }
+      },
+      {
+        test: /\.js$/,
         exclude: /(node_modules|core-web\/modules)/,
         use: {
           loader: "babel-loader",
