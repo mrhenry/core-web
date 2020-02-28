@@ -30,7 +30,7 @@ module.exports = {
                     firefox: "26",
                     edge: "12",
                     opera: "26",
-                    safari: "8",
+                    safari: "6",
                     ie: "11"
                   }
                 }
@@ -47,7 +47,7 @@ module.exports = {
                       "edge >= 12",
                       "firefox >= 26",
                       "opera >= 26",
-                      "safari >= 8",
+                      "safari >= 6",
                       "ie >= 11"
                     ]
                   },
