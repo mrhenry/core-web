@@ -21633,7 +21633,8 @@ module.exports = [
       "ios_saf": "7.1 - *",
       "firefox_mob": "27 - 50",
       "android": "<53"
-    }
+    },
+    "detector": true
   },
   {
     "name": "Window",
