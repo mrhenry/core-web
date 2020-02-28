@@ -1,4 +1,5 @@
 {
+  "exit_with_fail": true,
   "test_framework": "qunit",
   "test_path": ["index.html"],
   "test_server_port": "8899",
