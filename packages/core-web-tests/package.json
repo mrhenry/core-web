@@ -13,6 +13,7 @@
     "core-js": "^3.6.4",
     "webpack": "4.41.x",
     "webpack-cli": "^3.3.11",
-    "browserstack-runner": "^0.9.1"
+    "browserstack-runner": "^0.9.1",
+    "regenerator-runtime": "0.13.x"
   }
 }
