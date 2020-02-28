@@ -11,4 +11,10 @@ QUnit.module("Blob", function() {
     assert.equal(blob.size, 12);
     assert.equal(blob.type, "text/plain");
   });
+
+  QUnit.todo("Blob.text()", async assert => {
+    assert.ok(false, "needs polyfill");
+    const blob = new Blob(["Hello", " World", "!"], { type: "text/plain" });
+    assert.equal(await blob.text(), "Hello World!");
+  });
 });

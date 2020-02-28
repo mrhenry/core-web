@@ -11,9 +11,7 @@ module.exports = {
   entry: {
     "non-interactive": "./non_interactive.js"
   },
-  // optimization: {
-  //   minimize: false
-  // },
+  devtool: "source-map",
   module: {
     rules: [
       {
