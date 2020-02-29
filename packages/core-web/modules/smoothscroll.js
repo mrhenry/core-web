@@ -1,5 +1,8 @@
+import CreateMethodProperty from "../helpers/_ESAbstract.CreateMethodProperty";
+import IsCallable from "../helpers/_ESAbstract.IsCallable";
 (function(undefined) {
-if (!(!0
+if (!("document"in self&&"documentElement"in self.document&&"style"in self.document.documentElement&&"scrollBehavior"in document.documentElement.style||function(){try{var e=!1,t={top:0,left:0}
+return Object.defineProperty(t,"behavior",{get:function(){return e=!0,"smooth"}}),document.body.scrollTo(t),e}catch(n){return!1}}()
 )) {
 // smoothscroll
 /* smoothscroll v0.4.4 - 2019 - Dustan Kasten, Jeremias Menichelli - MIT License */
