@@ -6168,10 +6168,10 @@ pkg-dir@^3.0.0:
   dependencies:
     find-up "^3.0.0"
 
-polyfill-library@^3.52.1:
-  version "3.52.1"
-  resolved "https://registry.yarnpkg.com/polyfill-library/-/polyfill-library-3.52.1.tgz#29bb4fdc5b00b4256352be3ffdbcff0ab0e40444"
-  integrity sha512-68h9FH2hxw8hppNR9vRuVoD2WK/yrtgQqjwYCrnDYGmfB2IUd+DLpc9QMiQUdwRfVF6tU7cTZQ2qDmhlhyGG6g==
+polyfill-library@^3.51.0:
+  version "3.51.0"
+  resolved "https://registry.yarnpkg.com/polyfill-library/-/polyfill-library-3.51.0.tgz#bded5f9e0c4983e310e43f1344202f239296ad18"
+  integrity sha512-heJ2JJRDoFkiEmYeNedwtqlarXBQLD3ZwGkrucnkhBp9SHrnFZSFVq04MRnoBrkZPq4A4hXKB7X8vgp72FImpA==
   dependencies:
     "@financial-times/polyfill-useragent-normaliser" "^1.2.0"
     "@formatjs/intl-pluralrules" "^1.1.2"
