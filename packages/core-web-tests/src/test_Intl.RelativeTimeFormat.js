@@ -1,3 +1,7 @@
+import "@mrhenry/core-web/modules/Intl.~locale.en";
+import "@mrhenry/core-web/modules/Intl.PluralRules.~locale.en";
+import "@mrhenry/core-web/modules/Intl.RelativeTimeFormat.~locale.en";
+
 QUnit.test('Intl.RelativeTimeFormat', function(assert) {
 	const format = new Intl.RelativeTimeFormat('en', { style: 'narrow' });
 	const expected = 'in 3 qtrs.';
