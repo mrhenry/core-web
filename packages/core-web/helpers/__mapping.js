@@ -22478,17 +22478,13 @@ module.exports = [
   {
     "name": "smoothscroll",
     "deps": [
-      "requestAnimationFrame",
-      "_ESAbstract.CreateMethodProperty",
-      "_ESAbstract.IsCallable",
-      "getComputedStyle",
-      "Window"
+      "requestAnimationFrame"
     ],
     "browsers": {
       "edge": "* - 76",
       "edge_mob": "*",
-      "ie": "9 - *",
-      "ie_mob": "9 - *",
+      "ie": "*",
+      "ie_mob": "*",
       "firefox": "4 - 36",
       "opera": "*",
       "safari": "*",

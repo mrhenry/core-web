@@ -1,5 +1,5 @@
 (function(undefined) {
-if (!("AudioContext"in self||!("webkitAudioContext"in self)
+if (!("AudioContext"in self
 )) {
 // AudioContext
 (function () {

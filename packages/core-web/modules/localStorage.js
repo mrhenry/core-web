@@ -13,10 +13,10 @@ import GetV from "../helpers/_ESAbstract.GetV";
 import OrdinaryToPrimitive from "../helpers/_ESAbstract.OrdinaryToPrimitive";
 import Type from "../helpers/_ESAbstract.Type";
 (function(undefined) {
-if (!((function(){try{return self.localStorage.setItem("storage_test",1),self.localStorage.removeItem("storage_test"),!0}catch(t){return!1}})()
+if (!("localStorage"in self&&function(){try{return self.localStorage.setItem("storage_test",1),self.localStorage.removeItem("storage_test"),!0}catch(e){return!1}}.call(self)
 )) {
 // localStorage
-(function () {
+(function (global) {
 	function Storage() {}
 
 	Storage.prototype = {
@@ -87,20 +87,12 @@ if (!((function(){try{return self.localStorage.setItem("storage_test",1),self.lo
 		element.save(userdata);
 	}
 
-	var localStorageExists = (function() {
-		try {
-			return !!self.localStorage;
-		} catch (e) {
-			return false;
-		}
-	})();
-	
-	if (!localStorageExists) {
+	if (!global.localStorage) {
 		var
 		// <Global>.localStorage
-		localStorage = self.localStorage = new Storage(),
+		localStorage = global.localStorage = new Storage(),
 		// set storage element
-		element = self.document.lastChild.lastChild.appendChild(self.document.createElement('x-local-storage')),
+		element = global.document.lastChild.lastChild.appendChild(global.document.createElement('x-local-storage')),
 		// set userdata key and prefix
 		userdata = 'userdata',
 		keys;
@@ -122,9 +114,7 @@ if (!((function(){try{return self.localStorage.setItem("storage_test",1),self.lo
 			localStorage[key] = element.getAttribute(userdata + key);
 		});
 
-		if (self.attachEvent) {
-			self.attachEvent('onunload', updateKeys);
-		}
+		global.attachEvent('onunload', updateKeys);
 	}
-}());
+}(self));
 }}).call('object' === typeof window && window || 'object' === typeof self && self || 'object' === typeof global && global || {});
