@@ -93,11 +93,11 @@ const babelPresetEnv = require( '@babel/preset-env' );
 
 ## issues
 
-If have any trouble using `babel-plugin-core-web` please [open an issue here](https://github.com/mrhenry/core-web/issues). We will try to get back to you as soon as possible.
+If have any trouble using `babel-plugin-core-web` please [open an issue here](https://github.com/mrhenry/core-web/issues/new?assignees=&labels=bug&template=report-a-bug.md&title=). We will try to get back to you as soon as possible.
 
 
 ## missing polyfills
 
-If a polyfill is missing from this plugin please [open an issue here](https://github.com/mrhenry/core-web/issues).
+If a polyfill is missing from this plugin please [open an issue here](https://github.com/mrhenry/core-web/issues/new?assignees=&labels=missing-polyfill&template=request-a-polyfill.md&title=).
 
 We do take the specification status into consideration before adding new polyfills.
