@@ -5,5 +5,5 @@ QUnit.test("Element.prototype.classList", function(assert) {
 	fixture.appendChild(div);
 
 	div.classList.add('classlist-test');
-  assert.equal( div.className, 'classlist-test' );
+	assert.equal( div.className, 'classlist-test' );
 });
