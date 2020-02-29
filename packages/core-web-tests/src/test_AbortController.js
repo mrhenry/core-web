@@ -1,4 +1,4 @@
-QUnit.test('AbortController', async assert => {
+QUnit.skip('AbortController', async assert => {
 	const ac = new AbortController();
 
 	await fetch('package.json', { signal: ac.signal });
