@@ -28,11 +28,11 @@ module.exports = {
                   corejs: "^3.6.3",
                   targets: {
                     browsers: [
-                      "chrome >= 31",
+                      "chrome >= 40",
                       "edge >= 12",
-                      "firefox >= 26",
-                      "opera >= 26",
-                      "safari >= 6",
+                      "firefox >= 35",
+                      "opera >= 27",
+                      "safari >= 9",
                       "ie >= 11"
                     ]
                   },
@@ -55,11 +55,11 @@ module.exports = {
                 "@mrhenry/core-web",
                 {
                   browsers: {
-                    chrome: "31",
-                    firefox: "26",
+                    chrome: "40",
+                    firefox: "35",
                     edge: "12",
-                    opera: "26",
-                    safari: "6",
+                    opera: "27",
+                    safari: "9",
                     ie: "11"
                   }
                 }
@@ -72,11 +72,11 @@ module.exports = {
                   corejs: "^3.6.3",
                   targets: {
                     browsers: [
-                      "chrome >= 31",
+                      "chrome >= 40",
                       "edge >= 12",
-                      "firefox >= 26",
-                      "opera >= 26",
-                      "safari >= 6",
+                      "firefox >= 35",
+                      "opera >= 27",
+                      "safari >= 9",
                       "ie >= 11"
                     ]
                   },

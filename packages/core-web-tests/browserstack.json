@@ -5,8 +5,8 @@
   "test_server_port": "8899",
   "browsers": [
     "ie_11",
-    "safari_8",
-    "chrome_25",
+    "safari_9",
+    "chrome_40",
 
     "safari_latest",
     "chrome_latest",
