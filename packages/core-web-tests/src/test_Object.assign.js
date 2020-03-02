@@ -6,14 +6,14 @@ QUnit.test('Element.prototype.classList', function(assert) {
 
 	Object.assign(div, {
 		width: '100px',
-		height: '200px',
+		height: '200px'
 	});
-	assert.equal( div.width, '100px' );
-	assert.equal( div.height, '200px' );
+	assert.equal(div.width, '100px');
+	assert.equal(div.height, '200px');
 
 	Object.assign(div.style, {
-		backgroundColor: 'black',
+		backgroundColor: 'black'
 	});
 
-	assert.equal( div.getAttribute('style'), 'background-color: black;' );
+	assert.equal(div.getAttribute('style'), 'background-color: black;');
 });

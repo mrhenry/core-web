@@ -13,6 +13,12 @@ QUnit.module('Blob', function() {
 		assert.equal(blob.type, 'text/plain');
 	});
 
+	QUnit.test('Blob/Response interop', async assert => {
+		const blob = new Blob(['Hello', ' World', '!'], { type: 'text/plain' });
+		const text = await new Response(blob).text();
+		assert.equal(text, 'Hello World!');
+	});
+
 	// TODO: needs polyfill
 	QUnit.skip('Blob.text()', async assert => {
 		const blob = new Blob(['Hello', ' World', '!'], { type: 'text/plain' });
