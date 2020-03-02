@@ -1,4 +1,4 @@
-QUnit.test('Element.prototype.classList', function(assert) {
+QUnit.test('Object.assign', function(assert) {
 	const fixture = document.getElementById('qunit-fixture');
 
 	const div = document.createElement('div');
