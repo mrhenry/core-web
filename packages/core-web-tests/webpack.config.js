@@ -15,7 +15,7 @@ module.exports = {
 	module: {
 		rules: [
 			{
-				test: /\.js$/,
+				test: /\.m?js$/,
 				include: /core-web\/modules|abort-controller/,
 				use: {
 					loader: "babel-loader",
