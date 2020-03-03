@@ -9,7 +9,7 @@ const USAGE = 'Usage:\n' +
 	'  core-web-check-browser --browser=chrome --browser-version=79\n';
 
 function isArg (arg) {
-		return args.some(function (str) {
+	return args.some(function (str) {
 		return str === arg || str.indexOf(arg + '=') === 0;
 	})
 }
@@ -20,26 +20,28 @@ function error (msg) {
 }
 
 if (isArg('--help') || isArg('-h')) {
-	process.stdout.write(pkg.description + '.\n\n' + USAGE + '\n')
+	process.stdout.write(pkg.description + '.\n\n' + USAGE + '\n');
 } else if (isArg('--version') || isArg('-v')) {
-	process.stdout.write(pkg.name + ' ' + pkg.version + '\n')
+	process.stdout.write(pkg.name + ' ' + pkg.version + '\n');
 } else {
 	let browser = '';
 	let version = '0';
 
-	for (var i = 0; i < args.length; i++) {
-		var arg = args[i].split('=')
-		var name = arg[0]
-		var value = arg[1]
+	for (let i = 0; i < args.length; i++) {
+		const arg = args[i].split('=');
+		const name = arg[0];
+		let value = arg[1];
 
-		if (value) value = value.replace(/^["']|["']$/g, '')
+		if (value) {
+			value = value.replace(/^["']|["']$/g, '');
+		}
 
 		if (name === '--browser' || name === '-b') {
-			browser = value
+			browser = value;
 		} else if (name === '--browser-version' || name === '-r') {
-			version = value
+			version = value;
 		} else {
-			error('Unknown arguments ' + args[i] + '.\n\n' + USAGE)
+			error('Unknown arguments ' + args[i] + '.\n\n' + USAGE);
 		}
 	}
 
