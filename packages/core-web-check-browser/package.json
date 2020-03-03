@@ -1,0 +1,27 @@
+{
+  "name": "@mrhenry/core-web-check-browser",
+  "version": "0.2.4",
+  "description": "check that a browser is recognised by core-web",
+  "author": "Romain Menke <romainmenke@gmail.com>",
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "main": "index.js",
+  "files": [
+    "index.js"
+  ],
+  "bin": {
+    "core-web-check-browser": "./index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mrhenry/core-web.git"
+  },
+  "dependencies": {
+    "@financial-times/polyfill-useragent-normaliser": "^1.0.6"
+  },
+  "bugs": {
+    "url": "https://github.com/mrhenry/core-web/issues"
+  }
+}
