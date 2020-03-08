@@ -21780,7 +21780,8 @@ module.exports = [
     "browsers": {
       "ie": "*",
       "firefox": "1 - 4",
-      "samsung_mob": "*"
+      "samsung_mob": "*",
+      "chrome": "*"
     }
   },
   {
@@ -21850,7 +21851,8 @@ module.exports = [
       "edge": "*",
       "edge_mob": "*",
       "ie": "*",
-      "firefox": "1 - 4"
+      "firefox": "1 - 4",
+      "chrome": "<79"
     }
   },
   {
@@ -21944,7 +21946,8 @@ module.exports = [
       "edge": "*",
       "edge_mob": "*",
       "ie": "*",
-      "firefox": "1 - 4"
+      "firefox": "1 - 4",
+      "chrome": "<79"
     }
   },
   {
@@ -21957,7 +21960,8 @@ module.exports = [
       "edge": "*",
       "edge_mob": "*",
       "ie": "*",
-      "firefox": "1 - 4"
+      "firefox": "1 - 4",
+      "chrome": "<79"
     }
   },
   {
