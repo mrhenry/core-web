@@ -4,9 +4,11 @@ QUnit.test('WebAnimations', assert => {
 	assert.equal(window.getComputedStyle(el).opacity, '1');
 
 	const animations = el.animate(
-		{
-			opacity: [1, 0.5]
-		},
+		[
+			{
+				opacity: [1, 0.5]
+			}
+		],
 		{
 			duration: 250,
 			fill: 'forwards'
