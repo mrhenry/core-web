@@ -17,8 +17,10 @@ QUnit.test('WebAnimations', assert => {
 
 	const done = assert.async();
 	animations.onfinish = () => {
-		done();
-		assert.equal(window.getComputedStyle(el).opacity, '0.5');
-		el.remove();
+		requestAnimationFrame(() => {
+			done();
+			assert.equal(window.getComputedStyle(el).opacity, '0.5');
+			el.remove();
+		});
 	};
 });
