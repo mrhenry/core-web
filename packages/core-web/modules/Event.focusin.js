@@ -16,7 +16,7 @@ import SameValueZero from "../helpers/_ESAbstract.SameValueZero";
 import SameValueNonNumber from "../helpers/_ESAbstract.SameValueNonNumber";
 (function(undefined) {
 if (!((function(){var n=!1
-return document.body.addEventListener("focusin",function(){n=!0}),document.body.dispatchEvent(new Event("focusin")),n})()
+return document.documentElement.addEventListener("focusin",function(){n=!0}),document.documentElement.dispatchEvent(new Event("focusin")),n})()
 )) {
 // Event.focusin
 self.addEventListener('focus', function (event) {
