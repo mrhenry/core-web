@@ -5,7 +5,8 @@ QUnit.module('Blob', function() {
 		assert.equal(blob.type, 'text/plain');
 	});
 
-	QUnit.test('Blob/Response interop', async assert => {
+	// TODO: needs polyfill for "stream()"
+	QUnit.skip('Blob/Response interop', async assert => {
 		const blob = new Blob(['Hello', ' World', '!'], { type: 'text/plain' });
 		const text = await new Response(blob).text();
 		assert.equal(text, 'Hello World!');
@@ -19,7 +20,7 @@ QUnit.module('Blob', function() {
 		assert.equal(actual, 'Hello World!');
 	});
 
-	// TODO: needs polyfill
+	// TODO: needs polyfill for "text()"
 	QUnit.skip('Blob.text()', async assert => {
 		const blob = new Blob(['Hello', ' World', '!'], { type: 'text/plain' });
 		assert.equal(await blob.text(), 'Hello World!');
