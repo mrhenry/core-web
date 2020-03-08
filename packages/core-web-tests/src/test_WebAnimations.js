@@ -1,12 +1,18 @@
 QUnit.test('WebAnimations', assert => {
+	const fixture = document.getElementById('qunit-fixture');
+
 	const el = document.createElement('div');
-	document.body.appendChild(el);
+	fixture.appendChild(el);
+
 	assert.equal(window.getComputedStyle(el).opacity, '1');
 
 	const animations = el.animate(
 		[
 			{
-				opacity: [1, 0.5]
+				opacity:  1
+			},
+			{
+				opacity:  0.5
 			}
 		],
 		{
@@ -17,10 +23,8 @@ QUnit.test('WebAnimations', assert => {
 
 	const done = assert.async();
 	animations.onfinish = () => {
-		requestAnimationFrame(() => {
-			done();
-			assert.equal(window.getComputedStyle(el).opacity, '0.5');
-			el.remove();
-		});
+		done();
+		assert.equal(window.getComputedStyle(el).opacity, '0.5');
+		el.remove();
 	};
 });
