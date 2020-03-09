@@ -7,6 +7,9 @@
   "scripts": {
     "bootstrap": "lerna bootstrap"
   },
+  "prettier": {
+    "useTabs": true
+  },
   "devDependencies": {
     "lerna": "^3.20.2"
   }

@@ -94,6 +94,13 @@ async function gen(feature, mapping) {
 		if (meta.detectSource) {
 			output.add(streamFromString(`if (!(${meta.detectSource})) {`));
 		}
+
+		// TODO: polyfill is broken upstream
+		// fix umdOutro in AbortController
+		// https://github.com/mysticatea/abort-controller/blob/master/rollup.config.js#L14
+		if (feature === 'AbortController') {
+			output.add(streamFromString(`var define;\nvar module;\n`));
+		}
 	}
 
 	output.add(sources.streamPolyfillSource(feature, 'raw'));

@@ -4,7 +4,7 @@
 >
 > Bringing [polyfill.io](https://polyfill.io/v3/) to your babel flow.
 
-[![version](https://img.shields.io/npm/v/@mrhenry/babel-plugin-core-web.svg)](https://www.npmjs.com/package/@mrhenry/babel-plugin-core-web) [![Build Status](https://travis-ci.com/mrhenry/core-web.svg?branch=master)](https://travis-ci.com/mrhenry/core-web) [![Dependabot Status](https://api.dependabot.com/badges/status?host=github&repo=mrhenry/core-web)](https://dependabot.com)
+[![version](https://img.shields.io/npm/v/@mrhenry/babel-plugin-core-web.svg)](https://www.npmjs.com/package/@mrhenry/babel-plugin-core-web) [![Build Status](https://travis-ci.com/mrhenry/core-web.svg?branch=master)](https://travis-ci.com/mrhenry/core-web) [![BrowserStack Status](https://automate.browserstack.com/badge.svg?badge_key=MkE1NFM0ZkZESGg1VkNVd0htbm1BSTNFNjJHUGRhSjlEcU1PQ0JOMVVLOD0tLUVQMFpFUWIxTCtJWUtKYkFXYnN3OGc9PQ==--e6f705c0dc92b0ed20bd3a64df779e846f1ceeda)](https://automate.browserstack.com/public-build/MkE1NFM0ZkZESGg1VkNVd0htbm1BSTNFNjJHUGRhSjlEcU1PQ0JOMVVLOD0tLUVQMFpFUWIxTCtJWUtKYkFXYnN3OGc9PQ==--e6f705c0dc92b0ed20bd3a64df779e846f1ceeda) [![Dependabot Status](https://api.dependabot.com/badges/status?host=github&repo=mrhenry/core-web)](https://dependabot.com)
 
 
 ## why

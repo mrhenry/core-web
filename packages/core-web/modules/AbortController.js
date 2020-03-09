@@ -36,7 +36,9 @@ import IteratorValue from "../helpers/_ESAbstract.IteratorValue";
 import SameValue from "../helpers/_ESAbstract.SameValue";
 (function(undefined) {
 if (!("AbortController"in self&&"function"==typeof self.AbortController
-)) {
+)) {var define;
+var module;
+
 // AbortController
 /**
  * @author Toru Nagashima <https://github.com/mysticatea>
