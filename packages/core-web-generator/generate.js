@@ -4,11 +4,11 @@ const streamToString = require("stream-to-string");
 const streamFromString = require("from2-string");
 const sources = require("polyfill-library/lib/sources");
 const denodeify = require('denodeify');
-const rimraf = denodeify(require('rimraf'));
 const path = require('path');
 const fs = require('fs');
 const writeFile = denodeify(fs.writeFile);
 const mkdir = denodeify(fs.mkdir);
+const rmdir = denodeify(fs.rmdir);
 const readdir = denodeify(fs.readdir);
 
 const modulesDir = path.resolve(__dirname, '../core-web/modules');
@@ -20,9 +20,9 @@ const generateWebComponents = require('./generate-webcomponents');
 genAll();
 
 async function genAll() {
-	await rimraf(modulesDir);
+	await rmdir(modulesDir, {recursive: true});
 	await mkdir(modulesDir);
-	await rimraf(helpersDir);
+	await rmdir(helpersDir, {recursive: true});
 	await mkdir(helpersDir);
 
 	const mapping = [];
