@@ -12,5 +12,9 @@
   },
   "devDependencies": {
     "lerna": "^3.20.2"
+  },
+  "resolutions": {
+    "**/mkdirp/minimist": "^0.2.1",
+    "**/optimist/minimist": "^0.2.1"
   }
 }
