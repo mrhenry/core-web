@@ -71,7 +71,7 @@ async function generateShadyDOM(mapping) {
 		],
 		"browsers": {
 			"chrome": "<53",
-			"edge": "*",
+			"edge": "<79",
 			"edge_mob": "*",
 			"firefox": "<63",
 			"safari": "*",
@@ -123,7 +123,7 @@ async function generateShadyCSS(mapping) {
 		],
 		"browsers": {
 			"chrome": "<53",
-			"edge": "*",
+			"edge": "<79",
 			"edge_mob": "*",
 			"firefox": "<63",
 			"safari": "*",
@@ -162,7 +162,7 @@ async function generateShadyCSS(mapping) {
 		],
 		"browsers": {
 			"chrome": "<53",
-			"edge": "*",
+			"edge": "<79",
 			"edge_mob": "*",
 			"firefox": "<63",
 			"safari": "*",
@@ -205,7 +205,7 @@ async function generateShadyCSS(mapping) {
 		],
 		"browsers": {
 			"chrome": "<53",
-			"edge": "*",
+			"edge": "<79",
 			"edge_mob": "*",
 			"firefox": "<63",
 			"safari": "*",
@@ -222,7 +222,6 @@ async function generateCustomElements(mapping) {
 	mapping.push({
 		"name": "~custom-elements",
 		"deps": [
-			"~shadydom",
 			"console.error",
 			"console.log",
 			"console.warn",
@@ -253,12 +252,12 @@ async function generateCustomElements(mapping) {
 		],
 		"browsers": {
 			"chrome": "<67",
-			"edge": "*",
+			"edge": "<79",
 			"edge_mob": "*",
 			"firefox": "<63",
 			"safari": "*",
 			"ie": "*",
-			"opera": "*"
+			"opera": "<64"
 		},
 		"detector": true
 	});

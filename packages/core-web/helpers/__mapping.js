@@ -22582,7 +22582,7 @@ module.exports = [
     ],
     "browsers": {
       "chrome": "<53",
-      "edge": "*",
+      "edge": "<79",
       "edge_mob": "*",
       "firefox": "<63",
       "safari": "*",
@@ -22622,7 +22622,7 @@ module.exports = [
     ],
     "browsers": {
       "chrome": "<53",
-      "edge": "*",
+      "edge": "<79",
       "edge_mob": "*",
       "firefox": "<63",
       "safari": "*",
@@ -22660,7 +22660,7 @@ module.exports = [
     ],
     "browsers": {
       "chrome": "<53",
-      "edge": "*",
+      "edge": "<79",
       "edge_mob": "*",
       "firefox": "<63",
       "safari": "*",
@@ -22702,7 +22702,7 @@ module.exports = [
     ],
     "browsers": {
       "chrome": "<53",
-      "edge": "*",
+      "edge": "<79",
       "edge_mob": "*",
       "firefox": "<63",
       "safari": "*",
@@ -22714,7 +22714,6 @@ module.exports = [
   {
     "name": "~custom-elements",
     "deps": [
-      "~shadydom",
       "console.error",
       "console.log",
       "console.warn",
@@ -22745,12 +22744,12 @@ module.exports = [
     ],
     "browsers": {
       "chrome": "<67",
-      "edge": "*",
+      "edge": "<79",
       "edge_mob": "*",
       "firefox": "<63",
       "safari": "*",
       "ie": "*",
-      "opera": "*"
+      "opera": "<64"
     },
     "detector": true
   }
