@@ -2,7 +2,7 @@
 QUnit.test('AbortController', async assert => {
 	const ac = new AbortController();
 
-	await fetch('package.json', { signal: ac.signal });
+	await fetch('package.json?z=1', { signal: ac.signal });
 	ac.abort();
-	assert.rejects(fetch('package.json', { signal: ac.signal }));
+	assert.rejects(fetch('package.json?z=2', { signal: ac.signal }));
 });
