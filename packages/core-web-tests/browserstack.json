@@ -1,17 +1,26 @@
 {
-	"exit_with_fail": true,
-	"test_framework": "qunit",
-	"test_path": ["index.html"],
-	"test_server_port": "8899",
-	"browsers": [
-		"ie_11",
-		"safari_8",
-		"chrome_41",
-
-		"safari_latest",
-		"chrome_latest",
-		"opera_latest",
-		"firefox_latest",
-		"edge_latest"
-	]
+  "exit_with_fail": true,
+  "test_framework": "qunit",
+  "test_path": [
+    "index.html"
+  ],
+  "test_server_port": "8899",
+  "browsers": [
+    "ie_11",
+    "safari_8",
+    "chrome_41",
+    "safari_latest",
+    "chrome_latest",
+    "opera_latest",
+    "firefox_latest",
+    "edge_latest",
+    {
+      "os": "ios",
+      "os_version": "13",
+      "browser": "iphone",
+      "device": "iPhone XS",
+      "browser_version": null,
+      "real_mobile": true
+    }
+  ]
 }
