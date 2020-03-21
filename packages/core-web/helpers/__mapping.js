@@ -506,8 +506,8 @@ module.exports = [
       "document.querySelector"
     ],
     "browsers": {
-      "edge": "<12",
-      "edge_mob": "<12",
+      "edge": "<18",
+      "edge_mob": "<18",
       "ie": "6 - *",
       "ie_mob": "10 - 11",
       "chrome": "* - 33",
