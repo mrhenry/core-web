@@ -6208,10 +6208,10 @@ pkg-up@^3.1.0:
   dependencies:
     find-up "^3.0.0"
 
-polyfill-library@^3.52.1:
-  version "3.53.1"
-  resolved "https://registry.yarnpkg.com/polyfill-library/-/polyfill-library-3.53.1.tgz#f0af6d23deb85b37f0bf398a185483857b2b97d2"
-  integrity sha512-pcLZb3hlH4fnGbfr1z5JN+MpypMv4/NX2x3kfWxNTC9v6zKEX5wjAPYIzwCPJMM56z0nrdxqFYKcxxHqRkPO1Q==
+polyfill-library@^3.54.0:
+  version "3.54.0"
+  resolved "https://registry.yarnpkg.com/polyfill-library/-/polyfill-library-3.54.0.tgz#8b0ff981627d01810af78b22ff2367e0b9268a56"
+  integrity sha512-liieJqXMJ5sdZRPQbMcS6xv8V9ZqY43efjSHfivvmZwqXpEO8QI4aRwDiG4dFmfh/VOFDwXvn+IlP6vysbp3Yw==
   dependencies:
     "@financial-times/polyfill-useragent-normaliser" "^1.7.0"
     "@formatjs/intl-pluralrules" "^1.1.2"
