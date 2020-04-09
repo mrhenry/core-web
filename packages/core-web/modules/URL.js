@@ -281,6 +281,35 @@ if("a=1"===String(c))return!0}}return!1}catch(h){return!1}})(self)
         value: function () {
           return urlencoded_serialize(this._list);
         }, writable: true, enumerable: false, configurable: true
+      },
+
+      sort: {
+        value: function sort() {
+          var entries = this.entries();
+          var entry = entries.next();
+          var keys = [];
+          var values = {};
+
+          while (!entry.done) {
+            var value = entry.value;
+            var key = value[0];
+            keys.push(key);
+            if (!(Object.prototype.hasOwnProperty.call(values, key))) {
+              values[key] = [];
+            }
+            values[key].push(value[1]);
+            entry = entries.next();
+          }
+
+          keys.sort();
+          for (var i = 0; i < keys.length; i++) {
+            this["delete"](keys[i]);
+          }
+          for (var j = 0; j < keys.length; j++) {
+            key = keys[j];
+            this.append(key, values[key].shift());
+          }
+        }
       }
     });
 

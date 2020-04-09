@@ -127,15 +127,6 @@
     "@babel/template" "^7.8.3"
     "@babel/types" "^7.9.5"
 
-"@babel/helper-function-name@^7.9.5":
-  version "7.9.5"
-  resolved "https://registry.yarnpkg.com/@babel/helper-function-name/-/helper-function-name-7.9.5.tgz#2b53820d35275120e1874a82e5aabe1376920a5c"
-  integrity sha512-JVcQZeXM59Cd1qanDUxv9fgJpt3NeKUaqBqUEvfmQ+BCOKq2xUgaWZW2hr0dkbyJgezYuplEoh5knmrnS68efw==
-  dependencies:
-    "@babel/helper-get-function-arity" "^7.8.3"
-    "@babel/template" "^7.8.3"
-    "@babel/types" "^7.9.5"
-
 "@babel/helper-get-function-arity@^7.8.3":
   version "7.8.3"
   resolved "https://registry.yarnpkg.com/@babel/helper-get-function-arity/-/helper-get-function-arity-7.8.3.tgz#b894b947bd004381ce63ea1db9f08547e920abd5"
@@ -6208,10 +6199,10 @@ pkg-up@^3.1.0:
   dependencies:
     find-up "^3.0.0"
 
-polyfill-library@^3.54.0:
-  version "3.54.0"
-  resolved "https://registry.yarnpkg.com/polyfill-library/-/polyfill-library-3.54.0.tgz#8b0ff981627d01810af78b22ff2367e0b9268a56"
-  integrity sha512-liieJqXMJ5sdZRPQbMcS6xv8V9ZqY43efjSHfivvmZwqXpEO8QI4aRwDiG4dFmfh/VOFDwXvn+IlP6vysbp3Yw==
+polyfill-library@^3.55.0:
+  version "3.55.0"
+  resolved "https://registry.yarnpkg.com/polyfill-library/-/polyfill-library-3.55.0.tgz#8f8df28f423b9569cadc23288174706fd149291a"
+  integrity sha512-ElwjR+M9A7Budy+tnXBv9JWnV5V0qCj/T4VgbBV4hK3sgnSZv+dF5lNEzLnPT/y7/3TPE6Pb0aYdX77o+JDJtQ==
   dependencies:
     "@financial-times/polyfill-useragent-normaliser" "^1.7.0"
     "@formatjs/intl-pluralrules" "^1.1.2"
