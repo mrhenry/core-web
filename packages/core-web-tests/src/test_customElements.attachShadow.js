@@ -1,9 +1,6 @@
 QUnit.test('customElements.attachShadow', function(assert) {
 	class TestElementShadow extends HTMLElement {
-		constructor() {
-			// Always call super first in constructor
-			super();
-
+		connectedCallback() {
 			// Create a shadow root
 			var shadow = this.attachShadow({mode: 'open'});
 
