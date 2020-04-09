@@ -13,14 +13,6 @@
     "chrome_latest",
     "opera_latest",
     "firefox_latest",
-    "edge_latest",
-    {
-      "os": "ios",
-      "os_version": "12",
-      "browser": "iphone",
-      "device": "iPhone 8",
-      "browser_version": null,
-      "real_mobile": true
-    }
+    "edge_latest"
   ]
 }
