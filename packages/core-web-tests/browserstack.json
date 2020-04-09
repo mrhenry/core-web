@@ -16,9 +16,9 @@
     "edge_latest",
     {
       "os": "ios",
-      "os_version": "13",
+      "os_version": "11",
       "browser": "iphone",
-      "device": "iPhone XS",
+      "device": "iPhone 8",
       "browser_version": null,
       "real_mobile": true
     }
