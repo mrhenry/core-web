@@ -13,7 +13,7 @@
     "@types/qunit": "2.9.x",
     "babel-loader": "^8.0.6",
     "browserstack-runner": "^0.9.1",
-    "core-js": "^3.6.4",
+    "core-js": "^3.6.5",
     "eslint": "^6.8.0",
     "regenerator-runtime": "0.13.x",
     "webpack": "^4.42.x",
