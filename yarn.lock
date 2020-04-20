@@ -5456,17 +5456,10 @@ mkdirp@*:
   resolved "https://registry.yarnpkg.com/mkdirp/-/mkdirp-1.0.3.tgz#4cf2e30ad45959dddea53ad97d518b6c8205e1ea"
   integrity sha512-6uCP4Qc0sWsgMLy1EOqqS/3rjDHOEnsStVr/4vtAIK2Y5i2kA7lFFejYrpIyiN9w0pYf4ckeCYT9f1r1P9KX5g==
 
-mkdirp@^0.5.0:
+mkdirp@^0.5.0, mkdirp@^0.5.1, mkdirp@^0.5.3:
   version "0.5.5"
   resolved "https://registry.yarnpkg.com/mkdirp/-/mkdirp-0.5.5.tgz#d91cefd62d1436ca0f41620e251288d420099def"
   integrity sha512-NKmAlESf6jMGym1++R0Ra7wvhV+wFW63FaSOFPwRahvea0gMUcGUhVeAg/0BC0wiv9ih5NYPB1Wn1UEI1/L+xQ==
-  dependencies:
-    minimist "^1.2.5"
-
-mkdirp@^0.5.1, mkdirp@^0.5.3:
-  version "0.5.3"
-  resolved "https://registry.yarnpkg.com/mkdirp/-/mkdirp-0.5.3.tgz#5a514b7179259287952881e94410ec5465659f8c"
-  integrity sha512-P+2gwrFqx8lhew375MQHHeTlY8AuOJSrGf0R5ddkEndUkmwpgUob/vQuBD1V22/Cw1/lJr4x+EjllSezBThzBg==
   dependencies:
     minimist "^1.2.5"
 
@@ -6206,10 +6199,10 @@ pkg-up@^3.1.0:
   dependencies:
     find-up "^3.0.0"
 
-polyfill-library@^3.89.0:
-  version "3.89.1"
-  resolved "https://registry.yarnpkg.com/polyfill-library/-/polyfill-library-3.89.1.tgz#6adc29af6e7767f83b28a6ec50e7e85cbdbf1cd7"
-  integrity sha512-RddEEK7jDemku+YFfEhIR/m/bOw06hC7SO8F4fwUluTJ7eQz36os3OZOFUEJ2hzgKzEDBHYW8PoCKOKwN1IaRw==
+polyfill-library@^3.89.3:
+  version "3.89.3"
+  resolved "https://registry.yarnpkg.com/polyfill-library/-/polyfill-library-3.89.3.tgz#d6315ade51484177b44fb8b5b180882127819222"
+  integrity sha512-7JhUT0xWXCham4uxHovTDU99K+TF9NbXS8zTHy2dUZXbc+G9iqaQi0lEj/7Lm6pWPO4lWA3ip3ud7ucjF9qXxw==
   dependencies:
     "@financial-times/polyfill-useragent-normaliser" "^1.7.0"
     "@formatjs/intl-pluralrules" "^1.1.2"
