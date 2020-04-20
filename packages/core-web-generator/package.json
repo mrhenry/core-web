@@ -15,7 +15,7 @@
     "fast-deep-equal": "^3.1.1",
     "from2-string": "^1.1.0",
     "merge2": "^1.2.3",
-    "polyfill-library": "^3.56.3",
+    "polyfill-library": "^3.89.0",
     "stream-to-string": "^1.2.0"
   }
 }
