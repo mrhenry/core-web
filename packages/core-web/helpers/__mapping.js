@@ -100,6 +100,20 @@ module.exports = [
     "detector": true
   },
   {
+    "name": "CSS.supports",
+    "deps": [],
+    "browsers": {
+      "ie": "*",
+      "firefox": "<=21",
+      "chrome": "<=27",
+      "safari": "<9",
+      "ios_saf": "<9.0",
+      "opera": "<15",
+      "op_mini": "*",
+      "android": "<4.4"
+    }
+  },
+  {
     "name": "CustomEvent",
     "deps": [
       "Event",
@@ -21584,9 +21598,9 @@ module.exports = [
       "_ESAbstract.IsArray"
     ],
     "browsers": {
-      "chrome": "<51",
+      "chrome": "<60",
       "firefox": "<44",
-      "edge": "<17",
+      "edge": "<18.17134",
       "edge_mob": "<17",
       "ie": "9 - *",
       "ie_mob": "*",
@@ -21711,7 +21725,7 @@ module.exports = [
     ],
     "browsers": {
       "ie": "*",
-      "firefox": "1 - 4"
+      "firefox": "<39"
     }
   },
   {
@@ -21756,7 +21770,7 @@ module.exports = [
     ],
     "browsers": {
       "ie": "*",
-      "firefox": "1 - 4"
+      "firefox": "<39"
     }
   },
   {
@@ -21849,11 +21863,11 @@ module.exports = [
       "console"
     ],
     "browsers": {
-      "edge": "*",
+      "edge": "<17.17134.0",
       "edge_mob": "*",
       "ie": "*",
-      "firefox": "1 - 4",
-      "chrome": "<79"
+      "firefox": "<75",
+      "chrome": "<68.0.0"
     }
   },
   {
@@ -21908,7 +21922,8 @@ module.exports = [
     ],
     "browsers": {
       "ie": "*",
-      "firefox": "1 - 4"
+      "firefox": "1 - 4",
+      "chrome": "<31"
     }
   },
   {
@@ -21930,7 +21945,7 @@ module.exports = [
       "console"
     ],
     "browsers": {
-      "edge": "<12",
+      "edge": "<16.15063",
       "edge_mob": "<12",
       "ie": "<11",
       "firefox": "1 - 4",
@@ -21944,11 +21959,11 @@ module.exports = [
       "console"
     ],
     "browsers": {
-      "edge": "*",
+      "edge": "<17.17134.0",
       "edge_mob": "*",
       "ie": "*",
-      "firefox": "1 - 4",
-      "chrome": "<79"
+      "firefox": "<75",
+      "chrome": "<81"
     }
   },
   {
@@ -21958,11 +21973,11 @@ module.exports = [
       "console"
     ],
     "browsers": {
-      "edge": "*",
+      "edge": "<17.17134.0",
       "edge_mob": "*",
       "ie": "*",
       "firefox": "1 - 4",
-      "chrome": "<79"
+      "chrome": "<81"
     }
   },
   {
@@ -22207,7 +22222,7 @@ module.exports = [
       "firefox": "<=20",
       "safari": "<=6",
       "ios_saf": "<=6",
-      "chrome": "<=29",
+      "chrome": "<29.0.0",
       "firefox_mob": "<=20"
     }
   },
@@ -22242,7 +22257,8 @@ module.exports = [
       "opera": "11.5 - 12.1",
       "op_mini": "*",
       "op_mob": "10 - 12",
-      "safari": "4 - 5"
+      "safari": "4 - 5",
+      "chrome": "<37"
     },
     "detector": true
   },
@@ -22372,7 +22388,7 @@ module.exports = [
     "browsers": {
       "android": "*",
       "bb": "7",
-      "chrome": "1 - 23",
+      "chrome": "<46",
       "ie": "6 - 9",
       "ios_saf": "3.2 - 6",
       "firefox": "3.6 - 22",
@@ -22424,7 +22440,7 @@ module.exports = [
     "browsers": {
       "android": "*",
       "bb": "*",
-      "chrome": "<47",
+      "chrome": "<61",
       "edge": "*",
       "edge_mob": "*",
       "firefox": "<55",
@@ -22449,7 +22465,7 @@ module.exports = [
       "ie": "9 - *",
       "ie_mob": "*",
       "firefox": "<30",
-      "chrome": "* - 37",
+      "chrome": "<49",
       "safari": "*",
       "ios_saf": "*",
       "opera": "<25",
