@@ -100,6 +100,20 @@ module.exports = [
     "detector": true
   },
   {
+    "name": "CSS.supports",
+    "deps": [],
+    "browsers": {
+      "ie": "*",
+      "firefox": "<=21",
+      "chrome": "<=27",
+      "safari": "<9",
+      "ios_saf": "<9.0",
+      "opera": "<15",
+      "op_mini": "*",
+      "android": "<4.4"
+    }
+  },
+  {
     "name": "CustomEvent",
     "deps": [
       "Event",
