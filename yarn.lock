@@ -6199,10 +6199,10 @@ pkg-up@^3.1.0:
   dependencies:
     find-up "^3.0.0"
 
-polyfill-library@^3.89.3:
-  version "3.89.3"
-  resolved "https://registry.yarnpkg.com/polyfill-library/-/polyfill-library-3.89.3.tgz#d6315ade51484177b44fb8b5b180882127819222"
-  integrity sha512-7JhUT0xWXCham4uxHovTDU99K+TF9NbXS8zTHy2dUZXbc+G9iqaQi0lEj/7Lm6pWPO4lWA3ip3ud7ucjF9qXxw==
+polyfill-library@^3.89.4:
+  version "3.89.4"
+  resolved "https://registry.yarnpkg.com/polyfill-library/-/polyfill-library-3.89.4.tgz#be59673cb9a0175ffbd1694e0d291c924531c17c"
+  integrity sha512-9ZJUVCY8R6x5lHjTCEgr6tMmI98NEQ+Ch1vZYwzJ42A2CrJpkiiaHwPe6RXv3ODLHainSegMqFRR14uuIfAWng==
   dependencies:
     "@financial-times/polyfill-useragent-normaliser" "^1.7.0"
     "@formatjs/intl-pluralrules" "^1.1.2"
