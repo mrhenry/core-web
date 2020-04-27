@@ -22440,7 +22440,7 @@ module.exports = [
     "browsers": {
       "android": "*",
       "bb": "*",
-      "chrome": "<61",
+      "chrome": "<47",
       "edge": "*",
       "edge_mob": "*",
       "firefox": "<55",
