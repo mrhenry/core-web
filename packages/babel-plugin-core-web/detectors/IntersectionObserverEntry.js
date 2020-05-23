@@ -1,6 +1,3 @@
-const m = require('../lib/ast-matcher');
+const m = require("../lib/ast-matcher");
 
-module.exports = [
-	m('isIntersecting'),
-	m('IntersectionObserverEntry'),
-];
+module.exports = [m("isIntersecting"), m("IntersectionObserverEntry")];

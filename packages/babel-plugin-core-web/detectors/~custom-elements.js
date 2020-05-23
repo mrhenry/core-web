@@ -1,6 +1,6 @@
-const m = require('../lib/ast-matcher');
+const m = require("../lib/ast-matcher");
 
 module.exports = [
-	m('customElements.define'),
-	m('customElements.polyfillWrapFlushCallback'),
+	m("customElements.define"),
+	m("customElements.polyfillWrapFlushCallback")
 ];

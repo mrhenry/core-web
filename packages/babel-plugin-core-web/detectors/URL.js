@@ -1,6 +1,3 @@
-const m = require('../lib/ast-matcher');
+const m = require("../lib/ast-matcher");
 
-module.exports = [
-	m('URL'),
-	m('URLSearchParams'),
-];
+module.exports = [m("URL"), m("URLSearchParams")];
