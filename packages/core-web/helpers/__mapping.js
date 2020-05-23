@@ -1021,6 +1021,7 @@ module.exports = [
     ],
     "browsers": {
       "android": "<63",
+      "edge": "<18",
       "ie": "9 - *",
       "ie_mob": "9 - *",
       "firefox": "<58",
@@ -1040,6 +1041,7 @@ module.exports = [
     ],
     "browsers": {
       "android": "<63",
+      "edge": "<18",
       "ie": "9 - *",
       "ie_mob": "9 - *",
       "firefox": "<58",
@@ -1059,6 +1061,7 @@ module.exports = [
     ],
     "browsers": {
       "android": "<63",
+      "edge": "<18",
       "ie": "9 - *",
       "ie_mob": "9 - *",
       "firefox": "<58",
@@ -1078,6 +1081,7 @@ module.exports = [
     ],
     "browsers": {
       "android": "<63",
+      "edge": "<18",
       "ie": "9 - *",
       "ie_mob": "9 - *",
       "firefox": "<58",
@@ -1097,6 +1101,7 @@ module.exports = [
     ],
     "browsers": {
       "android": "<63",
+      "edge": "<18",
       "ie": "9 - *",
       "ie_mob": "9 - *",
       "firefox": "<58",
@@ -1116,6 +1121,7 @@ module.exports = [
     ],
     "browsers": {
       "android": "<63",
+      "edge": "<18",
       "ie": "9 - *",
       "ie_mob": "9 - *",
       "firefox": "<58",
@@ -1135,6 +1141,7 @@ module.exports = [
     ],
     "browsers": {
       "android": "<63",
+      "edge": "<18",
       "ie": "9 - *",
       "ie_mob": "9 - *",
       "firefox": "<58",
@@ -1154,6 +1161,7 @@ module.exports = [
     ],
     "browsers": {
       "android": "<63",
+      "edge": "<18",
       "ie": "9 - *",
       "ie_mob": "9 - *",
       "firefox": "<58",
@@ -1173,6 +1181,7 @@ module.exports = [
     ],
     "browsers": {
       "android": "<63",
+      "edge": "<18",
       "ie": "9 - *",
       "ie_mob": "9 - *",
       "firefox": "<58",
@@ -1192,6 +1201,7 @@ module.exports = [
     ],
     "browsers": {
       "android": "<63",
+      "edge": "<18",
       "ie": "9 - *",
       "ie_mob": "9 - *",
       "firefox": "<58",
@@ -1211,6 +1221,7 @@ module.exports = [
     ],
     "browsers": {
       "android": "<63",
+      "edge": "<18",
       "ie": "9 - *",
       "ie_mob": "9 - *",
       "firefox": "<58",
@@ -1230,6 +1241,7 @@ module.exports = [
     ],
     "browsers": {
       "android": "<63",
+      "edge": "<18",
       "ie": "9 - *",
       "ie_mob": "9 - *",
       "firefox": "<58",
@@ -1249,6 +1261,7 @@ module.exports = [
     ],
     "browsers": {
       "android": "<63",
+      "edge": "<18",
       "ie": "9 - *",
       "ie_mob": "9 - *",
       "firefox": "<58",
@@ -1268,6 +1281,7 @@ module.exports = [
     ],
     "browsers": {
       "android": "<63",
+      "edge": "<18",
       "ie": "9 - *",
       "ie_mob": "9 - *",
       "firefox": "<58",
@@ -1287,6 +1301,7 @@ module.exports = [
     ],
     "browsers": {
       "android": "<63",
+      "edge": "<18",
       "ie": "9 - *",
       "ie_mob": "9 - *",
       "firefox": "<58",
@@ -1306,6 +1321,7 @@ module.exports = [
     ],
     "browsers": {
       "android": "<63",
+      "edge": "<18",
       "ie": "9 - *",
       "ie_mob": "9 - *",
       "firefox": "<58",
@@ -1325,6 +1341,7 @@ module.exports = [
     ],
     "browsers": {
       "android": "<63",
+      "edge": "<18",
       "ie": "9 - *",
       "ie_mob": "9 - *",
       "firefox": "<58",
@@ -1344,6 +1361,7 @@ module.exports = [
     ],
     "browsers": {
       "android": "<63",
+      "edge": "<18",
       "ie": "9 - *",
       "ie_mob": "9 - *",
       "firefox": "<58",
@@ -1363,6 +1381,7 @@ module.exports = [
     ],
     "browsers": {
       "android": "<63",
+      "edge": "<18",
       "ie": "9 - *",
       "ie_mob": "9 - *",
       "firefox": "<58",
@@ -1382,6 +1401,7 @@ module.exports = [
     ],
     "browsers": {
       "android": "<63",
+      "edge": "<18",
       "ie": "9 - *",
       "ie_mob": "9 - *",
       "firefox": "<58",
@@ -1401,6 +1421,7 @@ module.exports = [
     ],
     "browsers": {
       "android": "<63",
+      "edge": "<18",
       "ie": "9 - *",
       "ie_mob": "9 - *",
       "firefox": "<58",
@@ -1420,6 +1441,7 @@ module.exports = [
     ],
     "browsers": {
       "android": "<63",
+      "edge": "<18",
       "ie": "9 - *",
       "ie_mob": "9 - *",
       "firefox": "<58",
@@ -1439,6 +1461,7 @@ module.exports = [
     ],
     "browsers": {
       "android": "<63",
+      "edge": "<18",
       "ie": "9 - *",
       "ie_mob": "9 - *",
       "firefox": "<58",
@@ -1458,6 +1481,7 @@ module.exports = [
     ],
     "browsers": {
       "android": "<63",
+      "edge": "<18",
       "ie": "9 - *",
       "ie_mob": "9 - *",
       "firefox": "<58",
@@ -1477,6 +1501,7 @@ module.exports = [
     ],
     "browsers": {
       "android": "<63",
+      "edge": "<18",
       "ie": "9 - *",
       "ie_mob": "9 - *",
       "firefox": "<58",
@@ -1496,6 +1521,7 @@ module.exports = [
     ],
     "browsers": {
       "android": "<63",
+      "edge": "<18",
       "ie": "9 - *",
       "ie_mob": "9 - *",
       "firefox": "<58",
@@ -1515,6 +1541,7 @@ module.exports = [
     ],
     "browsers": {
       "android": "<63",
+      "edge": "<18",
       "ie": "9 - *",
       "ie_mob": "9 - *",
       "firefox": "<58",
@@ -1534,6 +1561,7 @@ module.exports = [
     ],
     "browsers": {
       "android": "<63",
+      "edge": "<18",
       "ie": "9 - *",
       "ie_mob": "9 - *",
       "firefox": "<58",
@@ -1553,6 +1581,7 @@ module.exports = [
     ],
     "browsers": {
       "android": "<63",
+      "edge": "<18",
       "ie": "9 - *",
       "ie_mob": "9 - *",
       "firefox": "<58",
@@ -1572,6 +1601,7 @@ module.exports = [
     ],
     "browsers": {
       "android": "<63",
+      "edge": "<18",
       "ie": "9 - *",
       "ie_mob": "9 - *",
       "firefox": "<58",
@@ -1591,6 +1621,7 @@ module.exports = [
     ],
     "browsers": {
       "android": "<63",
+      "edge": "<18",
       "ie": "9 - *",
       "ie_mob": "9 - *",
       "firefox": "<58",
@@ -1610,6 +1641,7 @@ module.exports = [
     ],
     "browsers": {
       "android": "<63",
+      "edge": "<18",
       "ie": "9 - *",
       "ie_mob": "9 - *",
       "firefox": "<58",
@@ -1629,6 +1661,7 @@ module.exports = [
     ],
     "browsers": {
       "android": "<63",
+      "edge": "<18",
       "ie": "9 - *",
       "ie_mob": "9 - *",
       "firefox": "<58",
@@ -1648,6 +1681,7 @@ module.exports = [
     ],
     "browsers": {
       "android": "<63",
+      "edge": "<18",
       "ie": "9 - *",
       "ie_mob": "9 - *",
       "firefox": "<58",
@@ -1667,6 +1701,7 @@ module.exports = [
     ],
     "browsers": {
       "android": "<63",
+      "edge": "<18",
       "ie": "9 - *",
       "ie_mob": "9 - *",
       "firefox": "<58",
@@ -1686,6 +1721,7 @@ module.exports = [
     ],
     "browsers": {
       "android": "<63",
+      "edge": "<18",
       "ie": "9 - *",
       "ie_mob": "9 - *",
       "firefox": "<58",
@@ -1705,6 +1741,7 @@ module.exports = [
     ],
     "browsers": {
       "android": "<63",
+      "edge": "<18",
       "ie": "9 - *",
       "ie_mob": "9 - *",
       "firefox": "<58",
@@ -1724,6 +1761,7 @@ module.exports = [
     ],
     "browsers": {
       "android": "<63",
+      "edge": "<18",
       "ie": "9 - *",
       "ie_mob": "9 - *",
       "firefox": "<58",
@@ -1743,6 +1781,7 @@ module.exports = [
     ],
     "browsers": {
       "android": "<63",
+      "edge": "<18",
       "ie": "9 - *",
       "ie_mob": "9 - *",
       "firefox": "<58",
@@ -1762,6 +1801,7 @@ module.exports = [
     ],
     "browsers": {
       "android": "<63",
+      "edge": "<18",
       "ie": "9 - *",
       "ie_mob": "9 - *",
       "firefox": "<58",
@@ -1781,6 +1821,7 @@ module.exports = [
     ],
     "browsers": {
       "android": "<63",
+      "edge": "<18",
       "ie": "9 - *",
       "ie_mob": "9 - *",
       "firefox": "<58",
@@ -1800,6 +1841,7 @@ module.exports = [
     ],
     "browsers": {
       "android": "<63",
+      "edge": "<18",
       "ie": "9 - *",
       "ie_mob": "9 - *",
       "firefox": "<58",
@@ -1819,6 +1861,7 @@ module.exports = [
     ],
     "browsers": {
       "android": "<63",
+      "edge": "<18",
       "ie": "9 - *",
       "ie_mob": "9 - *",
       "firefox": "<58",
@@ -1838,6 +1881,7 @@ module.exports = [
     ],
     "browsers": {
       "android": "<63",
+      "edge": "<18",
       "ie": "9 - *",
       "ie_mob": "9 - *",
       "firefox": "<58",
@@ -1857,6 +1901,7 @@ module.exports = [
     ],
     "browsers": {
       "android": "<63",
+      "edge": "<18",
       "ie": "9 - *",
       "ie_mob": "9 - *",
       "firefox": "<58",
@@ -1876,6 +1921,7 @@ module.exports = [
     ],
     "browsers": {
       "android": "<63",
+      "edge": "<18",
       "ie": "9 - *",
       "ie_mob": "9 - *",
       "firefox": "<58",
@@ -1895,6 +1941,7 @@ module.exports = [
     ],
     "browsers": {
       "android": "<63",
+      "edge": "<18",
       "ie": "9 - *",
       "ie_mob": "9 - *",
       "firefox": "<58",
@@ -1914,6 +1961,7 @@ module.exports = [
     ],
     "browsers": {
       "android": "<63",
+      "edge": "<18",
       "ie": "9 - *",
       "ie_mob": "9 - *",
       "firefox": "<58",
@@ -1933,6 +1981,7 @@ module.exports = [
     ],
     "browsers": {
       "android": "<63",
+      "edge": "<18",
       "ie": "9 - *",
       "ie_mob": "9 - *",
       "firefox": "<58",
@@ -1952,6 +2001,7 @@ module.exports = [
     ],
     "browsers": {
       "android": "<63",
+      "edge": "<18",
       "ie": "9 - *",
       "ie_mob": "9 - *",
       "firefox": "<58",
@@ -1971,6 +2021,7 @@ module.exports = [
     ],
     "browsers": {
       "android": "<63",
+      "edge": "<18",
       "ie": "9 - *",
       "ie_mob": "9 - *",
       "firefox": "<58",
@@ -1990,6 +2041,7 @@ module.exports = [
     ],
     "browsers": {
       "android": "<63",
+      "edge": "<18",
       "ie": "9 - *",
       "ie_mob": "9 - *",
       "firefox": "<58",
@@ -2009,6 +2061,7 @@ module.exports = [
     ],
     "browsers": {
       "android": "<63",
+      "edge": "<18",
       "ie": "9 - *",
       "ie_mob": "9 - *",
       "firefox": "<58",
@@ -2028,6 +2081,7 @@ module.exports = [
     ],
     "browsers": {
       "android": "<63",
+      "edge": "<18",
       "ie": "9 - *",
       "ie_mob": "9 - *",
       "firefox": "<58",
@@ -2047,6 +2101,7 @@ module.exports = [
     ],
     "browsers": {
       "android": "<63",
+      "edge": "<18",
       "ie": "9 - *",
       "ie_mob": "9 - *",
       "firefox": "<58",
@@ -2066,6 +2121,7 @@ module.exports = [
     ],
     "browsers": {
       "android": "<63",
+      "edge": "<18",
       "ie": "9 - *",
       "ie_mob": "9 - *",
       "firefox": "<58",
@@ -2085,6 +2141,7 @@ module.exports = [
     ],
     "browsers": {
       "android": "<63",
+      "edge": "<18",
       "ie": "9 - *",
       "ie_mob": "9 - *",
       "firefox": "<58",
@@ -2104,6 +2161,7 @@ module.exports = [
     ],
     "browsers": {
       "android": "<63",
+      "edge": "<18",
       "ie": "9 - *",
       "ie_mob": "9 - *",
       "firefox": "<58",
@@ -2123,6 +2181,7 @@ module.exports = [
     ],
     "browsers": {
       "android": "<63",
+      "edge": "<18",
       "ie": "9 - *",
       "ie_mob": "9 - *",
       "firefox": "<58",
@@ -2142,6 +2201,7 @@ module.exports = [
     ],
     "browsers": {
       "android": "<63",
+      "edge": "<18",
       "ie": "9 - *",
       "ie_mob": "9 - *",
       "firefox": "<58",
@@ -2161,6 +2221,7 @@ module.exports = [
     ],
     "browsers": {
       "android": "<63",
+      "edge": "<18",
       "ie": "9 - *",
       "ie_mob": "9 - *",
       "firefox": "<58",
@@ -2180,6 +2241,7 @@ module.exports = [
     ],
     "browsers": {
       "android": "<63",
+      "edge": "<18",
       "ie": "9 - *",
       "ie_mob": "9 - *",
       "firefox": "<58",
@@ -2199,6 +2261,7 @@ module.exports = [
     ],
     "browsers": {
       "android": "<63",
+      "edge": "<18",
       "ie": "9 - *",
       "ie_mob": "9 - *",
       "firefox": "<58",
@@ -2218,6 +2281,7 @@ module.exports = [
     ],
     "browsers": {
       "android": "<63",
+      "edge": "<18",
       "ie": "9 - *",
       "ie_mob": "9 - *",
       "firefox": "<58",
@@ -2237,6 +2301,7 @@ module.exports = [
     ],
     "browsers": {
       "android": "<63",
+      "edge": "<18",
       "ie": "9 - *",
       "ie_mob": "9 - *",
       "firefox": "<58",
@@ -2256,6 +2321,7 @@ module.exports = [
     ],
     "browsers": {
       "android": "<63",
+      "edge": "<18",
       "ie": "9 - *",
       "ie_mob": "9 - *",
       "firefox": "<58",
@@ -2275,6 +2341,7 @@ module.exports = [
     ],
     "browsers": {
       "android": "<63",
+      "edge": "<18",
       "ie": "9 - *",
       "ie_mob": "9 - *",
       "firefox": "<58",
@@ -2294,6 +2361,7 @@ module.exports = [
     ],
     "browsers": {
       "android": "<63",
+      "edge": "<18",
       "ie": "9 - *",
       "ie_mob": "9 - *",
       "firefox": "<58",
@@ -2313,6 +2381,7 @@ module.exports = [
     ],
     "browsers": {
       "android": "<63",
+      "edge": "<18",
       "ie": "9 - *",
       "ie_mob": "9 - *",
       "firefox": "<58",
@@ -2332,6 +2401,7 @@ module.exports = [
     ],
     "browsers": {
       "android": "<63",
+      "edge": "<18",
       "ie": "9 - *",
       "ie_mob": "9 - *",
       "firefox": "<58",
@@ -2351,6 +2421,7 @@ module.exports = [
     ],
     "browsers": {
       "android": "<63",
+      "edge": "<18",
       "ie": "9 - *",
       "ie_mob": "9 - *",
       "firefox": "<58",
@@ -2370,6 +2441,7 @@ module.exports = [
     ],
     "browsers": {
       "android": "<63",
+      "edge": "<18",
       "ie": "9 - *",
       "ie_mob": "9 - *",
       "firefox": "<58",
@@ -2389,6 +2461,7 @@ module.exports = [
     ],
     "browsers": {
       "android": "<63",
+      "edge": "<18",
       "ie": "9 - *",
       "ie_mob": "9 - *",
       "firefox": "<58",
@@ -2408,6 +2481,7 @@ module.exports = [
     ],
     "browsers": {
       "android": "<63",
+      "edge": "<18",
       "ie": "9 - *",
       "ie_mob": "9 - *",
       "firefox": "<58",
@@ -2427,6 +2501,7 @@ module.exports = [
     ],
     "browsers": {
       "android": "<63",
+      "edge": "<18",
       "ie": "9 - *",
       "ie_mob": "9 - *",
       "firefox": "<58",
@@ -2446,6 +2521,7 @@ module.exports = [
     ],
     "browsers": {
       "android": "<63",
+      "edge": "<18",
       "ie": "9 - *",
       "ie_mob": "9 - *",
       "firefox": "<58",
@@ -2465,6 +2541,7 @@ module.exports = [
     ],
     "browsers": {
       "android": "<63",
+      "edge": "<18",
       "ie": "9 - *",
       "ie_mob": "9 - *",
       "firefox": "<58",
@@ -2484,6 +2561,7 @@ module.exports = [
     ],
     "browsers": {
       "android": "<63",
+      "edge": "<18",
       "ie": "9 - *",
       "ie_mob": "9 - *",
       "firefox": "<58",
@@ -2503,6 +2581,7 @@ module.exports = [
     ],
     "browsers": {
       "android": "<63",
+      "edge": "<18",
       "ie": "9 - *",
       "ie_mob": "9 - *",
       "firefox": "<58",
@@ -2522,6 +2601,7 @@ module.exports = [
     ],
     "browsers": {
       "android": "<63",
+      "edge": "<18",
       "ie": "9 - *",
       "ie_mob": "9 - *",
       "firefox": "<58",
@@ -2541,6 +2621,7 @@ module.exports = [
     ],
     "browsers": {
       "android": "<63",
+      "edge": "<18",
       "ie": "9 - *",
       "ie_mob": "9 - *",
       "firefox": "<58",
@@ -2560,6 +2641,7 @@ module.exports = [
     ],
     "browsers": {
       "android": "<63",
+      "edge": "<18",
       "ie": "9 - *",
       "ie_mob": "9 - *",
       "firefox": "<58",
@@ -2579,6 +2661,7 @@ module.exports = [
     ],
     "browsers": {
       "android": "<63",
+      "edge": "<18",
       "ie": "9 - *",
       "ie_mob": "9 - *",
       "firefox": "<58",
@@ -2598,6 +2681,7 @@ module.exports = [
     ],
     "browsers": {
       "android": "<63",
+      "edge": "<18",
       "ie": "9 - *",
       "ie_mob": "9 - *",
       "firefox": "<58",
@@ -2617,6 +2701,7 @@ module.exports = [
     ],
     "browsers": {
       "android": "<63",
+      "edge": "<18",
       "ie": "9 - *",
       "ie_mob": "9 - *",
       "firefox": "<58",
@@ -2636,6 +2721,7 @@ module.exports = [
     ],
     "browsers": {
       "android": "<63",
+      "edge": "<18",
       "ie": "9 - *",
       "ie_mob": "9 - *",
       "firefox": "<58",
@@ -2655,6 +2741,7 @@ module.exports = [
     ],
     "browsers": {
       "android": "<63",
+      "edge": "<18",
       "ie": "9 - *",
       "ie_mob": "9 - *",
       "firefox": "<58",
@@ -2674,6 +2761,7 @@ module.exports = [
     ],
     "browsers": {
       "android": "<63",
+      "edge": "<18",
       "ie": "9 - *",
       "ie_mob": "9 - *",
       "firefox": "<58",
@@ -2693,6 +2781,7 @@ module.exports = [
     ],
     "browsers": {
       "android": "<63",
+      "edge": "<18",
       "ie": "9 - *",
       "ie_mob": "9 - *",
       "firefox": "<58",
@@ -2712,6 +2801,7 @@ module.exports = [
     ],
     "browsers": {
       "android": "<63",
+      "edge": "<18",
       "ie": "9 - *",
       "ie_mob": "9 - *",
       "firefox": "<58",
@@ -2731,6 +2821,7 @@ module.exports = [
     ],
     "browsers": {
       "android": "<63",
+      "edge": "<18",
       "ie": "9 - *",
       "ie_mob": "9 - *",
       "firefox": "<58",
@@ -2750,6 +2841,7 @@ module.exports = [
     ],
     "browsers": {
       "android": "<63",
+      "edge": "<18",
       "ie": "9 - *",
       "ie_mob": "9 - *",
       "firefox": "<58",
@@ -2769,6 +2861,7 @@ module.exports = [
     ],
     "browsers": {
       "android": "<63",
+      "edge": "<18",
       "ie": "9 - *",
       "ie_mob": "9 - *",
       "firefox": "<58",
@@ -2788,6 +2881,7 @@ module.exports = [
     ],
     "browsers": {
       "android": "<63",
+      "edge": "<18",
       "ie": "9 - *",
       "ie_mob": "9 - *",
       "firefox": "<58",
@@ -2807,6 +2901,7 @@ module.exports = [
     ],
     "browsers": {
       "android": "<63",
+      "edge": "<18",
       "ie": "9 - *",
       "ie_mob": "9 - *",
       "firefox": "<58",
@@ -2826,6 +2921,7 @@ module.exports = [
     ],
     "browsers": {
       "android": "<63",
+      "edge": "<18",
       "ie": "9 - *",
       "ie_mob": "9 - *",
       "firefox": "<58",
@@ -2845,6 +2941,7 @@ module.exports = [
     ],
     "browsers": {
       "android": "<63",
+      "edge": "<18",
       "ie": "9 - *",
       "ie_mob": "9 - *",
       "firefox": "<58",
@@ -2864,6 +2961,7 @@ module.exports = [
     ],
     "browsers": {
       "android": "<63",
+      "edge": "<18",
       "ie": "9 - *",
       "ie_mob": "9 - *",
       "firefox": "<58",
@@ -2883,6 +2981,7 @@ module.exports = [
     ],
     "browsers": {
       "android": "<63",
+      "edge": "<18",
       "ie": "9 - *",
       "ie_mob": "9 - *",
       "firefox": "<58",
@@ -2902,6 +3001,7 @@ module.exports = [
     ],
     "browsers": {
       "android": "<63",
+      "edge": "<18",
       "ie": "9 - *",
       "ie_mob": "9 - *",
       "firefox": "<58",
@@ -2921,6 +3021,7 @@ module.exports = [
     ],
     "browsers": {
       "android": "<63",
+      "edge": "<18",
       "ie": "9 - *",
       "ie_mob": "9 - *",
       "firefox": "<58",
@@ -2940,6 +3041,7 @@ module.exports = [
     ],
     "browsers": {
       "android": "<63",
+      "edge": "<18",
       "ie": "9 - *",
       "ie_mob": "9 - *",
       "firefox": "<58",
@@ -2959,6 +3061,7 @@ module.exports = [
     ],
     "browsers": {
       "android": "<63",
+      "edge": "<18",
       "ie": "9 - *",
       "ie_mob": "9 - *",
       "firefox": "<58",
@@ -2978,6 +3081,7 @@ module.exports = [
     ],
     "browsers": {
       "android": "<63",
+      "edge": "<18",
       "ie": "9 - *",
       "ie_mob": "9 - *",
       "firefox": "<58",
@@ -2997,6 +3101,7 @@ module.exports = [
     ],
     "browsers": {
       "android": "<63",
+      "edge": "<18",
       "ie": "9 - *",
       "ie_mob": "9 - *",
       "firefox": "<58",
@@ -3016,6 +3121,7 @@ module.exports = [
     ],
     "browsers": {
       "android": "<63",
+      "edge": "<18",
       "ie": "9 - *",
       "ie_mob": "9 - *",
       "firefox": "<58",
@@ -3035,6 +3141,7 @@ module.exports = [
     ],
     "browsers": {
       "android": "<63",
+      "edge": "<18",
       "ie": "9 - *",
       "ie_mob": "9 - *",
       "firefox": "<58",
@@ -3054,6 +3161,7 @@ module.exports = [
     ],
     "browsers": {
       "android": "<63",
+      "edge": "<18",
       "ie": "9 - *",
       "ie_mob": "9 - *",
       "firefox": "<58",
@@ -3073,6 +3181,7 @@ module.exports = [
     ],
     "browsers": {
       "android": "<63",
+      "edge": "<18",
       "ie": "9 - *",
       "ie_mob": "9 - *",
       "firefox": "<58",
@@ -3092,6 +3201,7 @@ module.exports = [
     ],
     "browsers": {
       "android": "<63",
+      "edge": "<18",
       "ie": "9 - *",
       "ie_mob": "9 - *",
       "firefox": "<58",
@@ -3111,6 +3221,7 @@ module.exports = [
     ],
     "browsers": {
       "android": "<63",
+      "edge": "<18",
       "ie": "9 - *",
       "ie_mob": "9 - *",
       "firefox": "<58",
@@ -3130,6 +3241,7 @@ module.exports = [
     ],
     "browsers": {
       "android": "<63",
+      "edge": "<18",
       "ie": "9 - *",
       "ie_mob": "9 - *",
       "firefox": "<58",
@@ -3149,6 +3261,7 @@ module.exports = [
     ],
     "browsers": {
       "android": "<63",
+      "edge": "<18",
       "ie": "9 - *",
       "ie_mob": "9 - *",
       "firefox": "<58",
@@ -3168,6 +3281,7 @@ module.exports = [
     ],
     "browsers": {
       "android": "<63",
+      "edge": "<18",
       "ie": "9 - *",
       "ie_mob": "9 - *",
       "firefox": "<58",
@@ -3187,6 +3301,7 @@ module.exports = [
     ],
     "browsers": {
       "android": "<63",
+      "edge": "<18",
       "ie": "9 - *",
       "ie_mob": "9 - *",
       "firefox": "<58",
@@ -3206,6 +3321,7 @@ module.exports = [
     ],
     "browsers": {
       "android": "<63",
+      "edge": "<18",
       "ie": "9 - *",
       "ie_mob": "9 - *",
       "firefox": "<58",
@@ -3225,6 +3341,7 @@ module.exports = [
     ],
     "browsers": {
       "android": "<63",
+      "edge": "<18",
       "ie": "9 - *",
       "ie_mob": "9 - *",
       "firefox": "<58",
@@ -3244,6 +3361,7 @@ module.exports = [
     ],
     "browsers": {
       "android": "<63",
+      "edge": "<18",
       "ie": "9 - *",
       "ie_mob": "9 - *",
       "firefox": "<58",
@@ -3263,6 +3381,7 @@ module.exports = [
     ],
     "browsers": {
       "android": "<63",
+      "edge": "<18",
       "ie": "9 - *",
       "ie_mob": "9 - *",
       "firefox": "<58",
@@ -3282,6 +3401,7 @@ module.exports = [
     ],
     "browsers": {
       "android": "<63",
+      "edge": "<18",
       "ie": "9 - *",
       "ie_mob": "9 - *",
       "firefox": "<58",
@@ -3301,6 +3421,7 @@ module.exports = [
     ],
     "browsers": {
       "android": "<63",
+      "edge": "<18",
       "ie": "9 - *",
       "ie_mob": "9 - *",
       "firefox": "<58",
@@ -3320,6 +3441,7 @@ module.exports = [
     ],
     "browsers": {
       "android": "<63",
+      "edge": "<18",
       "ie": "9 - *",
       "ie_mob": "9 - *",
       "firefox": "<58",
@@ -3339,6 +3461,7 @@ module.exports = [
     ],
     "browsers": {
       "android": "<63",
+      "edge": "<18",
       "ie": "9 - *",
       "ie_mob": "9 - *",
       "firefox": "<58",
@@ -3358,6 +3481,7 @@ module.exports = [
     ],
     "browsers": {
       "android": "<63",
+      "edge": "<18",
       "ie": "9 - *",
       "ie_mob": "9 - *",
       "firefox": "<58",
@@ -3377,6 +3501,7 @@ module.exports = [
     ],
     "browsers": {
       "android": "<63",
+      "edge": "<18",
       "ie": "9 - *",
       "ie_mob": "9 - *",
       "firefox": "<58",
@@ -3396,6 +3521,7 @@ module.exports = [
     ],
     "browsers": {
       "android": "<63",
+      "edge": "<18",
       "ie": "9 - *",
       "ie_mob": "9 - *",
       "firefox": "<58",
@@ -3415,6 +3541,7 @@ module.exports = [
     ],
     "browsers": {
       "android": "<63",
+      "edge": "<18",
       "ie": "9 - *",
       "ie_mob": "9 - *",
       "firefox": "<58",
@@ -3434,6 +3561,7 @@ module.exports = [
     ],
     "browsers": {
       "android": "<63",
+      "edge": "<18",
       "ie": "9 - *",
       "ie_mob": "9 - *",
       "firefox": "<58",
@@ -3453,6 +3581,7 @@ module.exports = [
     ],
     "browsers": {
       "android": "<63",
+      "edge": "<18",
       "ie": "9 - *",
       "ie_mob": "9 - *",
       "firefox": "<58",
@@ -3472,6 +3601,7 @@ module.exports = [
     ],
     "browsers": {
       "android": "<63",
+      "edge": "<18",
       "ie": "9 - *",
       "ie_mob": "9 - *",
       "firefox": "<58",
@@ -3491,6 +3621,7 @@ module.exports = [
     ],
     "browsers": {
       "android": "<63",
+      "edge": "<18",
       "ie": "9 - *",
       "ie_mob": "9 - *",
       "firefox": "<58",
@@ -3510,6 +3641,7 @@ module.exports = [
     ],
     "browsers": {
       "android": "<63",
+      "edge": "<18",
       "ie": "9 - *",
       "ie_mob": "9 - *",
       "firefox": "<58",
@@ -3529,6 +3661,7 @@ module.exports = [
     ],
     "browsers": {
       "android": "<63",
+      "edge": "<18",
       "ie": "9 - *",
       "ie_mob": "9 - *",
       "firefox": "<58",
@@ -3548,6 +3681,7 @@ module.exports = [
     ],
     "browsers": {
       "android": "<63",
+      "edge": "<18",
       "ie": "9 - *",
       "ie_mob": "9 - *",
       "firefox": "<58",
@@ -3567,6 +3701,7 @@ module.exports = [
     ],
     "browsers": {
       "android": "<63",
+      "edge": "<18",
       "ie": "9 - *",
       "ie_mob": "9 - *",
       "firefox": "<58",
@@ -3586,6 +3721,7 @@ module.exports = [
     ],
     "browsers": {
       "android": "<63",
+      "edge": "<18",
       "ie": "9 - *",
       "ie_mob": "9 - *",
       "firefox": "<58",
@@ -3605,6 +3741,7 @@ module.exports = [
     ],
     "browsers": {
       "android": "<63",
+      "edge": "<18",
       "ie": "9 - *",
       "ie_mob": "9 - *",
       "firefox": "<58",
@@ -3624,6 +3761,7 @@ module.exports = [
     ],
     "browsers": {
       "android": "<63",
+      "edge": "<18",
       "ie": "9 - *",
       "ie_mob": "9 - *",
       "firefox": "<58",
@@ -3643,6 +3781,7 @@ module.exports = [
     ],
     "browsers": {
       "android": "<63",
+      "edge": "<18",
       "ie": "9 - *",
       "ie_mob": "9 - *",
       "firefox": "<58",
@@ -3662,6 +3801,7 @@ module.exports = [
     ],
     "browsers": {
       "android": "<63",
+      "edge": "<18",
       "ie": "9 - *",
       "ie_mob": "9 - *",
       "firefox": "<58",
@@ -3681,6 +3821,7 @@ module.exports = [
     ],
     "browsers": {
       "android": "<63",
+      "edge": "<18",
       "ie": "9 - *",
       "ie_mob": "9 - *",
       "firefox": "<58",
@@ -3700,6 +3841,7 @@ module.exports = [
     ],
     "browsers": {
       "android": "<63",
+      "edge": "<18",
       "ie": "9 - *",
       "ie_mob": "9 - *",
       "firefox": "<58",
@@ -3719,6 +3861,7 @@ module.exports = [
     ],
     "browsers": {
       "android": "<63",
+      "edge": "<18",
       "ie": "9 - *",
       "ie_mob": "9 - *",
       "firefox": "<58",
@@ -3738,6 +3881,7 @@ module.exports = [
     ],
     "browsers": {
       "android": "<63",
+      "edge": "<18",
       "ie": "9 - *",
       "ie_mob": "9 - *",
       "firefox": "<58",
@@ -3757,6 +3901,7 @@ module.exports = [
     ],
     "browsers": {
       "android": "<63",
+      "edge": "<18",
       "ie": "9 - *",
       "ie_mob": "9 - *",
       "firefox": "<58",
@@ -3776,6 +3921,7 @@ module.exports = [
     ],
     "browsers": {
       "android": "<63",
+      "edge": "<18",
       "ie": "9 - *",
       "ie_mob": "9 - *",
       "firefox": "<58",
@@ -3795,6 +3941,7 @@ module.exports = [
     ],
     "browsers": {
       "android": "<63",
+      "edge": "<18",
       "ie": "9 - *",
       "ie_mob": "9 - *",
       "firefox": "<58",
@@ -3814,6 +3961,7 @@ module.exports = [
     ],
     "browsers": {
       "android": "<63",
+      "edge": "<18",
       "ie": "9 - *",
       "ie_mob": "9 - *",
       "firefox": "<58",
@@ -3833,6 +3981,7 @@ module.exports = [
     ],
     "browsers": {
       "android": "<63",
+      "edge": "<18",
       "ie": "9 - *",
       "ie_mob": "9 - *",
       "firefox": "<58",
@@ -3852,6 +4001,7 @@ module.exports = [
     ],
     "browsers": {
       "android": "<63",
+      "edge": "<18",
       "ie": "9 - *",
       "ie_mob": "9 - *",
       "firefox": "<58",
@@ -3871,6 +4021,7 @@ module.exports = [
     ],
     "browsers": {
       "android": "<63",
+      "edge": "<18",
       "ie": "9 - *",
       "ie_mob": "9 - *",
       "firefox": "<58",
@@ -3890,6 +4041,7 @@ module.exports = [
     ],
     "browsers": {
       "android": "<63",
+      "edge": "<18",
       "ie": "9 - *",
       "ie_mob": "9 - *",
       "firefox": "<58",
@@ -3909,6 +4061,7 @@ module.exports = [
     ],
     "browsers": {
       "android": "<63",
+      "edge": "<18",
       "ie": "9 - *",
       "ie_mob": "9 - *",
       "firefox": "<58",
@@ -3928,6 +4081,7 @@ module.exports = [
     ],
     "browsers": {
       "android": "<63",
+      "edge": "<18",
       "ie": "9 - *",
       "ie_mob": "9 - *",
       "firefox": "<58",
@@ -3947,6 +4101,7 @@ module.exports = [
     ],
     "browsers": {
       "android": "<63",
+      "edge": "<18",
       "ie": "9 - *",
       "ie_mob": "9 - *",
       "firefox": "<58",
@@ -3966,6 +4121,7 @@ module.exports = [
     ],
     "browsers": {
       "android": "<63",
+      "edge": "<18",
       "ie": "9 - *",
       "ie_mob": "9 - *",
       "firefox": "<58",
@@ -3985,6 +4141,7 @@ module.exports = [
     ],
     "browsers": {
       "android": "<63",
+      "edge": "<18",
       "ie": "9 - *",
       "ie_mob": "9 - *",
       "firefox": "<58",
@@ -4004,6 +4161,7 @@ module.exports = [
     ],
     "browsers": {
       "android": "<63",
+      "edge": "<18",
       "ie": "9 - *",
       "ie_mob": "9 - *",
       "firefox": "<58",
@@ -4023,6 +4181,7 @@ module.exports = [
     ],
     "browsers": {
       "android": "<63",
+      "edge": "<18",
       "ie": "9 - *",
       "ie_mob": "9 - *",
       "firefox": "<58",
@@ -4042,6 +4201,7 @@ module.exports = [
     ],
     "browsers": {
       "android": "<63",
+      "edge": "<18",
       "ie": "9 - *",
       "ie_mob": "9 - *",
       "firefox": "<58",
@@ -4061,6 +4221,7 @@ module.exports = [
     ],
     "browsers": {
       "android": "<63",
+      "edge": "<18",
       "ie": "9 - *",
       "ie_mob": "9 - *",
       "firefox": "<58",
@@ -4080,6 +4241,7 @@ module.exports = [
     ],
     "browsers": {
       "android": "<63",
+      "edge": "<18",
       "ie": "9 - *",
       "ie_mob": "9 - *",
       "firefox": "<58",
@@ -4099,6 +4261,7 @@ module.exports = [
     ],
     "browsers": {
       "android": "<63",
+      "edge": "<18",
       "ie": "9 - *",
       "ie_mob": "9 - *",
       "firefox": "<58",
@@ -4118,6 +4281,7 @@ module.exports = [
     ],
     "browsers": {
       "android": "<63",
+      "edge": "<18",
       "ie": "9 - *",
       "ie_mob": "9 - *",
       "firefox": "<58",
@@ -4137,6 +4301,7 @@ module.exports = [
     ],
     "browsers": {
       "android": "<63",
+      "edge": "<18",
       "ie": "9 - *",
       "ie_mob": "9 - *",
       "firefox": "<58",
@@ -4156,6 +4321,7 @@ module.exports = [
     ],
     "browsers": {
       "android": "<63",
+      "edge": "<18",
       "ie": "9 - *",
       "ie_mob": "9 - *",
       "firefox": "<58",
@@ -4175,6 +4341,7 @@ module.exports = [
     ],
     "browsers": {
       "android": "<63",
+      "edge": "<18",
       "ie": "9 - *",
       "ie_mob": "9 - *",
       "firefox": "<58",
@@ -4194,6 +4361,7 @@ module.exports = [
     ],
     "browsers": {
       "android": "<63",
+      "edge": "<18",
       "ie": "9 - *",
       "ie_mob": "9 - *",
       "firefox": "<58",
@@ -4213,6 +4381,7 @@ module.exports = [
     ],
     "browsers": {
       "android": "<63",
+      "edge": "<18",
       "ie": "9 - *",
       "ie_mob": "9 - *",
       "firefox": "<58",
@@ -21629,7 +21798,8 @@ module.exports = [
       "ios_saf": "*",
       "op_mob": "*",
       "opera": "<=12",
-      "safari": "*"
+      "safari": "*",
+      "edge": "<18.17134"
     }
   },
   {
@@ -21948,7 +22118,7 @@ module.exports = [
       "edge": "<16.15063",
       "edge_mob": "<12",
       "ie": "<11",
-      "firefox": "1 - 4",
+      "firefox": "<39",
       "firefox_mob": "<10"
     }
   },
@@ -21976,7 +22146,7 @@ module.exports = [
       "edge": "<17.17134.0",
       "edge_mob": "*",
       "ie": "*",
-      "firefox": "1 - 4",
+      "firefox": "<75",
       "chrome": "<81"
     }
   },
