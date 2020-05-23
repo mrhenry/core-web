@@ -1,5 +1,5 @@
-const mapping = require('../helpers/__mapping');
-const UA = require('@financial-times/polyfill-useragent-normaliser');
+const mapping = require("../helpers/__mapping");
+const UA = require("@financial-times/polyfill-useragent-normaliser");
 
 const map = new Map();
 for (let spec of mapping) {
@@ -20,7 +20,7 @@ function get(name) {
 
 exports.has = function(name) {
 	return map.has(name);
-}
+};
 
 exports.required = function(targets) {
 	let all = [];
@@ -28,7 +28,7 @@ exports.required = function(targets) {
 		all = all.concat(required(browser, targets[browser]));
 	}
 	return Array.from(new Set(all));
-}
+};
 
 function required(browser, version) {
 	const out = [];
