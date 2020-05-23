@@ -1,10 +1,10 @@
-const m = require('../lib/ast-matcher');
+const m = require("../lib/ast-matcher");
 
 module.exports = [
-	m('innerHeight'),
-	m('innerWidth'),
-	m('pageXOffset'),
-	m('pageYOffset'),
-	m('scrollX'),
-	m('scrollY'),
+	m("innerHeight"),
+	m("innerWidth"),
+	m("pageXOffset"),
+	m("pageYOffset"),
+	m("scrollX"),
+	m("scrollY")
 ];

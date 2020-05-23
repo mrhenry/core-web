@@ -1,3 +1,3 @@
-QUnit.test('location.origin', assert => {
-	assert.equal(typeof location.origin, 'string');
+QUnit.test("location.origin", assert => {
+	assert.equal(typeof location.origin, "string");
 });
