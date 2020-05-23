@@ -1,53 +1,41 @@
-const path = require('path');
-const {
-	addSideEffect
-} = require("@babel/helper-module-imports");
-const {
-	get,
-	has
-} = require('@mrhenry/core-web');
-const m = require('./ast-matcher');
-const detectorsDir = path.join(path.dirname(__dirname), 'detectors');
+const path = require("path");
+const { addSideEffect } = require("@babel/helper-module-imports");
+const { get, has } = require("@mrhenry/core-web");
+const m = require("./ast-matcher");
+const detectorsDir = path.join(path.dirname(__dirname), "detectors");
 
 class Injector {
-
 	constructor(features) {
 		this.features = features.filter(n => has(n));
 		this.featureSet = new Set(this.features);
 		this.importSet = new Set();
 		this.removeSet = new Set();
 
-		this.matchers = this.features.map((name) => {
+		this.matchers = this.features.map(name => {
 			const spec = get(name);
 
 			if (spec.detector) {
 				return this._cachingMatcher(
 					name,
 					require(path.join(detectorsDir, name + ".js")),
-					() => this._addPolyfill(name),
+					() => this._addPolyfill(name)
 				);
 			}
 
-			if (name.indexOf('~') >= 0) {
+			if (name.indexOf("~") >= 0) {
+				return this._cachingMatcher(name, [], () => this._addPolyfill(name));
+			}
+
+			if (name.indexOf(".prototype.") >= 0) {
 				return this._cachingMatcher(
 					name,
-					[],
-					() => this._addPolyfill(name),
+					[m(name.replace(/^.+\.prototype\./, ""))],
+					() => this._addPolyfill(name)
 				);
 			}
 
-			if (name.indexOf('.prototype.') >= 0) {
-				return this._cachingMatcher(
-					name,
-					[m(name.replace(/^.+\.prototype\./, ''))],
-					() => this._addPolyfill(name),
-				);
-			}
-
-			return this._cachingMatcher(
-				name,
-				[m(name)],
-				() => this._addPolyfill(name),
+			return this._cachingMatcher(name, [m(name)], () =>
+				this._addPolyfill(name)
 			);
 		});
 	}
@@ -64,7 +52,6 @@ class Injector {
 		}
 	}
 
-
 	_cachingMatcher(name, matchers, action) {
 		return (path, state) => {
 			if (this.importSet.has(name)) {
@@ -80,11 +67,10 @@ class Injector {
 	}
 
 	inject(path, state) {
-
 		// insert in reverse order
 		const all = [...this.importSet];
 		while (all.length) {
-			const importName = all.pop()
+			const importName = all.pop();
 			addSideEffect(path, `@mrhenry/core-web/modules/${importName}`);
 		}
 
@@ -92,7 +78,6 @@ class Injector {
 		for (const path of this.removeSet) {
 			path.remove();
 		}
-
 	}
 
 	handleImport(path, state) {
@@ -109,7 +94,6 @@ class Injector {
 			m(path, state);
 		}
 	}
-
 }
 
 module.exports = Injector;

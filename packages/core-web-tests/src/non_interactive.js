@@ -3,4 +3,4 @@ function importAll(r) {
 }
 
 // eslint-disable-next-line no-undef, no-useless-escape
-importAll(require.context('./', true, /test_[^\/]+\.js$/));
+importAll(require.context("./", true, /test_[^\/]+\.js$/));

@@ -1,7 +1,7 @@
-QUnit.test('requestAnimationFrame', assert => {
+QUnit.test("requestAnimationFrame", assert => {
 	const done = assert.async();
 	requestAnimationFrame(() => {
-		assert.ok(true, 'expected requestAnimationFrame to call');
+		assert.ok(true, "expected requestAnimationFrame to call");
 		done();
 	});
 });

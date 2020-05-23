@@ -1,7 +1,4 @@
-const m = require('../lib/ast-matcher');
-const p = require('path');
+const m = require("../lib/ast-matcher");
+const p = require("path");
 
-module.exports = [
-	m('btoa'),
-	m('atob'),
-];
+module.exports = [m("btoa"), m("atob")];
