@@ -892,29 +892,59 @@
   resolved "https://registry.yarnpkg.com/@financial-times/useragent_parser/-/useragent_parser-1.5.1.tgz#14ef3e420b7a6617512e02bdd79189b5cb37f65d"
   integrity sha512-g6MJ5tVszip1wAOq41yk8Z0WJqjfpu3hKaos/IaechYC4RqIn8bTanNR/EGD6oeOdJ9/fTPbQQX5/3ZQwSTXtQ==
 
-"@formatjs/intl-pluralrules@^1.1.2":
-  version "1.5.9"
-  resolved "https://registry.yarnpkg.com/@formatjs/intl-pluralrules/-/intl-pluralrules-1.5.9.tgz#c363c833c0ccde11eb508de4c09d3eaa232e819a"
-  integrity sha512-37E1ZG+Oqo3qrpUfumzNcFTV+V+NCExmTkkQ9Zw4FSlvJ4WhbbeYdieVapUVz9M0cLy8XrhCkfuM/Kn03iKReg==
+"@formatjs/intl-displaynames@^2.2.6":
+  version "2.2.7"
+  resolved "https://registry.yarnpkg.com/@formatjs/intl-displaynames/-/intl-displaynames-2.2.7.tgz#45b88f2c659743d22ac0f3a1ef1d0fdadf3cedef"
+  integrity sha512-KcUty8JETiKZ59rld7xsSBLGIKTYbMTaI/04pb0PuZlSqlJJvd+cPzm0pEK6TK7VXX4K7tcTVuY/rvntHgoz9w==
   dependencies:
-    "@formatjs/intl-utils" "^2.3.0"
+    "@formatjs/intl-utils" "^3.4.0"
 
-"@formatjs/intl-relativetimeformat@^3.0.2":
-  version "3.1.0"
-  resolved "https://registry.yarnpkg.com/@formatjs/intl-relativetimeformat/-/intl-relativetimeformat-3.1.0.tgz#a657d67e8e26a5985d72a80699be874c9bc470d3"
-  integrity sha512-xSW9RMJtZZTGAlT7qCom+0INLYgshowpBN0Xf+j4kME+U/g/ogTVRFeGvCZX3nDQ21vdTHAabR3AIGQRX7NU1g==
+"@formatjs/intl-getcanonicallocales@^1.2.6":
+  version "1.2.6"
+  resolved "https://registry.yarnpkg.com/@formatjs/intl-getcanonicallocales/-/intl-getcanonicallocales-1.2.6.tgz#7aea999dc3130bd2a04b6eea490f3ec22759d04b"
+  integrity sha512-ZO38NUZoGHAeIn0B4ZXMdpcgdH5i2pZUIMvrf/l2XLAB339x8Yxx+P6WHTD66bQhyntuFpry5iN6zPBqnMubdA==
   dependencies:
-    "@formatjs/intl-utils" "^1.1.0"
+    cldr-core "36.0.0"
 
-"@formatjs/intl-utils@^1.1.0":
-  version "1.6.0"
-  resolved "https://registry.yarnpkg.com/@formatjs/intl-utils/-/intl-utils-1.6.0.tgz#43b094232b9ef98b57a270bcecee99168d329e9f"
-  integrity sha512-5D0C4tQgNFJNaJ17BYum0GfAcKNK3oa1VWzgkv/AN7i52fg4r69ZLcpEGpf6tZiX9Qld8CDwTQOeFt6fuOqgVw==
+"@formatjs/intl-listformat@^2.2.6":
+  version "2.2.7"
+  resolved "https://registry.yarnpkg.com/@formatjs/intl-listformat/-/intl-listformat-2.2.7.tgz#dde9648bfa30723a64335391b66d5196d98761f3"
+  integrity sha512-sY9Dpk1PqJ+i+pr9GAclbhGhMU2q7eFHwUCL+UcdXml8ypxo+SYsD5eE3FmVOpKT9JZQDvUuG6j5XnOLPuZB0Q==
+  dependencies:
+    "@formatjs/intl-utils" "^3.4.0"
 
-"@formatjs/intl-utils@^2.3.0":
-  version "2.3.0"
-  resolved "https://registry.yarnpkg.com/@formatjs/intl-utils/-/intl-utils-2.3.0.tgz#2dc8c57044de0340eb53a7ba602e59abf80dc799"
-  integrity sha512-KWk80UPIzPmUg+P0rKh6TqspRw0G6eux1PuJr+zz47ftMaZ9QDwbGzHZbtzWkl5hgayM/qrKRutllRC7D/vVXQ==
+"@formatjs/intl-numberformat@^4.2.6":
+  version "4.2.7"
+  resolved "https://registry.yarnpkg.com/@formatjs/intl-numberformat/-/intl-numberformat-4.2.7.tgz#7c4976312a0cbfc174a5902281dde50cd3719cd1"
+  integrity sha512-eXBWegYQUANkPqHSAZ1cQ2ajYGBscQ3Aue+xVl1Fc9jEUmQSR4LBgAv0+GEHTlwtqAVaRQ+NYSDbOk7SORnESA==
+  dependencies:
+    "@formatjs/intl-utils" "^3.4.0"
+
+"@formatjs/intl-pluralrules@^2.2.6":
+  version "2.2.7"
+  resolved "https://registry.yarnpkg.com/@formatjs/intl-pluralrules/-/intl-pluralrules-2.2.7.tgz#7ae6d1430b562992e210289de557c67347f0f88f"
+  integrity sha512-DQrUloei4TuhnIbqo1NXC4AlQk9SSX3IWGa6qKzN6GjZmGb72T/gOqn2MnYDGNa+rus1PeYrQxlROle8GTqSpQ==
+  dependencies:
+    "@formatjs/intl-utils" "^3.4.0"
+
+"@formatjs/intl-relativetimeformat@^5.2.6":
+  version "5.2.7"
+  resolved "https://registry.yarnpkg.com/@formatjs/intl-relativetimeformat/-/intl-relativetimeformat-5.2.7.tgz#16febdf868c1c0cbfdbb5a3a4da770d0c1cf369a"
+  integrity sha512-Z7lAoih861T/8YIyh30yEcc9XaMwxcHaj3OOyOfT6hDlB3hxsuAu2mOoZPf128a32hW3oOzQqfdo5ytT+jfX3A==
+  dependencies:
+    "@formatjs/intl-utils" "^3.4.0"
+
+"@formatjs/intl-utils@^3.4.0":
+  version "3.4.0"
+  resolved "https://registry.yarnpkg.com/@formatjs/intl-utils/-/intl-utils-3.4.0.tgz#91fcaffcf3925feab888b4a9bad08a51bd0365be"
+  integrity sha512-rP79Y0e6tWXYO+DBddfIi3TFBh0/wE4x+XCDf43nDcnXD5OUTwLBDX521+e0wwDByq6rc/9Bu/W5llwaBsy6bQ==
+  dependencies:
+    emojis-list "^3.0.0"
+
+"@juggle/resize-observer@^3.2.0":
+  version "3.2.0"
+  resolved "https://registry.yarnpkg.com/@juggle/resize-observer/-/resize-observer-3.2.0.tgz#5e0b448d27fe3091bae6216456512c5904d05661"
+  integrity sha512-fsLxt0CHx2HCV9EL8lDoVkwHffsA0snUpddYjdLyXcG5E41xaamn9ZyQqOE9TUJdrRlH8/hjIf+UdOdDeKCUgg==
 
 "@lerna/add@3.21.0":
   version "3.21.0"
@@ -2787,6 +2817,11 @@ class-utils@^0.3.5:
     define-property "^0.2.5"
     isobject "^3.0.0"
     static-extend "^0.1.1"
+
+cldr-core@36.0.0:
+  version "36.0.0"
+  resolved "https://registry.yarnpkg.com/cldr-core/-/cldr-core-36.0.0.tgz#1d2148ed6802411845baeeb21432d7bbfde7d4f7"
+  integrity sha512-QLnAjt20rZe38c8h8OJ9jPND+O4o5O8Nw0TK/P3KpNn1cmOhMu0rk6Kc3ap96c5OStQ9gAngs9+Be2sum26NOw==
 
 cli-cursor@^2.1.0:
   version "2.1.0"
@@ -6449,14 +6484,19 @@ pkg-up@^2.0.0:
   dependencies:
     find-up "^2.1.0"
 
-polyfill-library@^3.93.0:
-  version "3.93.0"
-  resolved "https://registry.yarnpkg.com/polyfill-library/-/polyfill-library-3.93.0.tgz#75c091a4f8eaddd338ce1b8408c6e44ce17ef635"
-  integrity sha512-Sv4A4hUK5/s95EqUtOnbZawQj2o9aVsnZbIQ6pCg400I0Ip4mWNLyDhpXwj78WV6OWvGhh4LBNjm5G43c1R5TA==
+polyfill-library@^3.94.0:
+  version "3.94.0"
+  resolved "https://registry.yarnpkg.com/polyfill-library/-/polyfill-library-3.94.0.tgz#672f37ad71d36e58bdd867977c20570b352e450d"
+  integrity sha512-LXUc9TOeP54uRq57kch6SkvOJgqpwHti2GOD/hBWRx/gFT9NQbMCoMm8n/d6C53jHExAfLdF3uqu6ZuZyAdAYQ==
   dependencies:
     "@financial-times/polyfill-useragent-normaliser" "^1.7.0"
-    "@formatjs/intl-pluralrules" "^1.1.2"
-    "@formatjs/intl-relativetimeformat" "^3.0.2"
+    "@formatjs/intl-displaynames" "^2.2.6"
+    "@formatjs/intl-getcanonicallocales" "^1.2.6"
+    "@formatjs/intl-listformat" "^2.2.6"
+    "@formatjs/intl-numberformat" "^4.2.6"
+    "@formatjs/intl-pluralrules" "^2.2.6"
+    "@formatjs/intl-relativetimeformat" "^5.2.6"
+    "@juggle/resize-observer" "^3.2.0"
     "@webcomponents/template" "^1.4.0"
     Base64 "^1.0.0"
     abort-controller "^3.0.0"
@@ -6476,9 +6516,8 @@ polyfill-library@^3.93.0:
     mnemonist "^0.32.0"
     mutationobserver-shim "^0.3.2"
     picturefill "^3.0.1"
-    resize-observer-polyfill "^1.5.1"
     rimraf "^3.0.0"
-    smoothscroll-polyfill "^0.4.4"
+    seamless-scroll-polyfill "^1.0.10"
     spdx-licenses "^1.0.0"
     stream-cache "^0.0.2"
     stream-from-promise "^1.0.0"
@@ -6966,11 +7005,6 @@ require-main-filename@^2.0.0:
   resolved "https://registry.yarnpkg.com/require-main-filename/-/require-main-filename-2.0.0.tgz#d0b329ecc7cc0f61649f62215be69af54aa8989b"
   integrity sha512-NKN5kMDylKuldxYLSUfrbo5Tuzh4hd+2E8NPPX02mZtn1VuREQToYe/ZdlJy+J3uCpfaiGF05e7B8W0iXbQHmg==
 
-resize-observer-polyfill@^1.5.1:
-  version "1.5.1"
-  resolved "https://registry.yarnpkg.com/resize-observer-polyfill/-/resize-observer-polyfill-1.5.1.tgz#0e9020dd3d21024458d4ebd27e23e40269810464"
-  integrity sha512-LwZrotdHOo12nQuZlHEmtuXdqGoOD0OhaxopaNFxWzInpEgaLWoVuAMbTzixuosCx2nEG58ngzW3vxdWoxIgdg==
-
 resolve-cwd@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/resolve-cwd/-/resolve-cwd-2.0.0.tgz#00a9f7387556e27038eae232caa372a6a59b665a"
@@ -7134,6 +7168,11 @@ schema-utils@^2.6.5:
     ajv "^6.12.2"
     ajv-keywords "^3.4.1"
 
+seamless-scroll-polyfill@^1.0.10:
+  version "1.0.10"
+  resolved "https://registry.yarnpkg.com/seamless-scroll-polyfill/-/seamless-scroll-polyfill-1.0.10.tgz#08b2b19d747a355a337c59cea5f7a8afcf43752b"
+  integrity sha512-T6kBngvA2600YSmIEAQUpjvM77dDxNOXuTqAaCE8Y2bjb5pITHVdxvds+e7dIL4gdA3QczQrmgpCWTRMGpodqQ==
+
 "semver@2 || 3 || 4 || 5", "semver@2.x || 3.x || 4 || 5", semver@^5.4.1, semver@^5.5.0, semver@^5.5.1, semver@^5.6.0, semver@^5.7.0, semver@^5.7.1:
   version "5.7.1"
   resolved "https://registry.yarnpkg.com/semver/-/semver-5.7.1.tgz#a954f931aeba508d307bbf069eff0c01c96116f7"
@@ -7270,11 +7309,6 @@ smart-buffer@^4.1.0:
   version "4.1.0"
   resolved "https://registry.yarnpkg.com/smart-buffer/-/smart-buffer-4.1.0.tgz#91605c25d91652f4661ea69ccf45f1b331ca21ba"
   integrity sha512-iVICrxOzCynf/SNaBQCw34eM9jROU/s5rzIhpOvzhzuYHfJR/DhZfDkXiZSgKXfgv26HT3Yni3AV/DGw0cGnnw==
-
-smoothscroll-polyfill@^0.4.4:
-  version "0.4.4"
-  resolved "https://registry.yarnpkg.com/smoothscroll-polyfill/-/smoothscroll-polyfill-0.4.4.tgz#3a259131dc6930e6ca80003e1cb03b603b69abf8"
-  integrity sha512-TK5ZA9U5RqCwMpfoMq/l1mrH0JAR7y7KRvOBx0n2869aLxch+gT9GhN3yUfjiw+d/DiF1mKo14+hd62JyMmoBg==
 
 snapdragon-node@^2.0.1:
   version "2.1.1"
