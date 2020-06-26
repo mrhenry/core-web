@@ -1,3 +1,4 @@
+import '@mrhenry/core-web/modules/Intl.~locale.en';
 import '@mrhenry/core-web/modules/Intl.~locale.en-US';
 import '@mrhenry/core-web/modules/Intl.~locale.en-GB';
 import '@mrhenry/core-web/modules/Intl.NumberFormat.~locale.en-US';
