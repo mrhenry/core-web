@@ -1,7 +1,8 @@
 (function(undefined) {
 if (!('Intl' in self && 
  Intl.Collator && 
- Intl.DateTimeFormat && 
+ Intl.DateTimeFormat  && 
+ Intl.DateTimeFormat.prototype.formatToParts && 
  Intl.NumberFormat && 
  Intl.NumberFormat.supportedLocalesOf && (function() {
 	function supportsLocale(locale) {
