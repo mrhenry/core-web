@@ -7,7 +7,7 @@
   },
   "devDependencies": {
     "@babel/cli": "^7.10.3",
-    "@babel/core": "^7.10.3",
+    "@babel/core": "^7.10.4",
     "@mrhenry/babel-plugin-core-web": "^0.3.7"
   }
 }
