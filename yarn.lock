@@ -1931,10 +1931,10 @@
   resolved "https://registry.yarnpkg.com/@webcomponents/shadydom/-/shadydom-1.7.4.tgz#1250d4078425058d015b2a85063dff482841d292"
   integrity sha512-ZnmHcG0YPyZtwG17dLoSyBhVZUMwowgEdrraOFmftNTppCdYiKQfoQkFp3f4al2Kc0HKOJtG96maCBGgce6HIg==
 
-"@webcomponents/template@^1.4.0", "@webcomponents/template@^1.4.1":
-  version "1.4.2"
-  resolved "https://registry.yarnpkg.com/@webcomponents/template/-/template-1.4.2.tgz#d4210ddd47159539dcf83e6c43cece95807f7f0e"
-  integrity sha512-UMDbju+BTgZmMvGXczjxqM4lukmWrnPrxpDX/nMTM/nGFeNhRBc/5mamQnhyys4EZVGReRL/TLeTxse6fRLltQ==
+"@webcomponents/template@^1.4.0", "@webcomponents/template@^1.4.3":
+  version "1.4.3"
+  resolved "https://registry.yarnpkg.com/@webcomponents/template/-/template-1.4.3.tgz#edf3cb7e8870be484463d4711e2ff106e30d187d"
+  integrity sha512-Sx4vfXuHUz2pwhjFRv9maFiaKouXqImFlb7L5GwdCxwxflmbAchWTJaf3UyE2of1tVOFzB1gjZx+BAB7KVa7kw==
 
 "@xtuc/ieee754@^1.2.0":
   version "1.2.0"
