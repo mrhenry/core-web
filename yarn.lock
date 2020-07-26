@@ -1916,20 +1916,20 @@
     "@webassemblyjs/wast-parser" "1.9.0"
     "@xtuc/long" "4.2.2"
 
-"@webcomponents/custom-elements@^1.4.0":
-  version "1.4.1"
-  resolved "https://registry.yarnpkg.com/@webcomponents/custom-elements/-/custom-elements-1.4.1.tgz#9803aaa2286a13a4ba200a7a2ea767871598eb60"
-  integrity sha512-vNCS1+3sxJOpoIsBjUQiXjGLngakEAGOD5Ale+6ikg6OZG5qI5O39frm3raPhud/IwnF4vec5ags05YBsgzcuA==
+"@webcomponents/custom-elements@^1.4.2":
+  version "1.4.2"
+  resolved "https://registry.yarnpkg.com/@webcomponents/custom-elements/-/custom-elements-1.4.2.tgz#a6fe80325c2b09e88e988c712144bc667c565499"
+  integrity sha512-bLw2XH9+2NBwmn7BI6WA2oIo2eOfBpl+GjAqkF/qnkZ8kq3HY5tKYTxtKowWALAferTp3wKD8W6FSn5OyK+rtQ==
 
-"@webcomponents/shadycss@^1.10.0":
-  version "1.10.0"
-  resolved "https://registry.yarnpkg.com/@webcomponents/shadycss/-/shadycss-1.10.0.tgz#7a80ec1e8b271fb3f0cc02cd4358b877a303545d"
-  integrity sha512-UMS+dF4DXDrcUmQqK6aLd/3mFyfGktKG/hZR6FtrsQK/INO07G0H8FxElLkuvHj0iePeZGpR7R4lWFTvX7rc9g==
+"@webcomponents/shadycss@^1.10.1":
+  version "1.10.1"
+  resolved "https://registry.yarnpkg.com/@webcomponents/shadycss/-/shadycss-1.10.1.tgz#6f377b313c96a93a690f25206b32a20eada4b2a9"
+  integrity sha512-XEVDA7oH6o4Au9apyRDucjcIzvP44Ur4sqTMGRKCcE6sCAeKiOkRE03TCYNJAFkzckMWWT8Xx3IxG3iwjAcsRQ==
 
-"@webcomponents/shadydom@^1.7.2":
-  version "1.7.3"
-  resolved "https://registry.yarnpkg.com/@webcomponents/shadydom/-/shadydom-1.7.3.tgz#cbb6b17be619d4cae2dd97f5d9bf1448523fabb9"
-  integrity sha512-wAQCuHX6x3pJHRNGbgGhKgY1kZoXwXwWNLe0FdyUpCeyHqmGI8Q8wthyHroUQQIsmoKzM09iTlqO/1JmPWZERg==
+"@webcomponents/shadydom@^1.7.4":
+  version "1.7.4"
+  resolved "https://registry.yarnpkg.com/@webcomponents/shadydom/-/shadydom-1.7.4.tgz#1250d4078425058d015b2a85063dff482841d292"
+  integrity sha512-ZnmHcG0YPyZtwG17dLoSyBhVZUMwowgEdrraOFmftNTppCdYiKQfoQkFp3f4al2Kc0HKOJtG96maCBGgce6HIg==
 
 "@webcomponents/template@^1.4.0", "@webcomponents/template@^1.4.1":
   version "1.4.2"
