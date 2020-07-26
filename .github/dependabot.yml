@@ -1,11 +1,12 @@
 version: 2
 updates:
-- package-ecosystem: npm
+- package-ecosystem: "npm"
   directory: "/"
   schedule:
-    interval: weekly
+    interval: "weekly"
+    day: "sunday"
     time: "01:00"
-    timezone: Europe/Brussels
+    timezone: "Europe/Brussels"
   open-pull-requests-limit: 10
   reviewers:
   - romainmenke
