@@ -16,7 +16,7 @@
     "core-js": "^3.6.5",
     "eslint": "^7.4.0",
     "regenerator-runtime": "0.13.x",
-    "webpack": "^4.43.x",
+    "webpack": "^4.44.x",
     "webpack-cli": "^3.3.12"
   }
 }
