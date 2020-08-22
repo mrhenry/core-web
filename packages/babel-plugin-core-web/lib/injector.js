@@ -9,6 +9,7 @@ class Injector {
 		this.features = features.filter(n => has(n));
 		this.featureSet = new Set(this.features);
 		this.importSet = new Set();
+		this.aliasSet = new Set();
 		this.removeSet = new Set();
 
 		this.matchers = this.features.map(name => {
@@ -34,17 +35,24 @@ class Injector {
 				);
 			}
 
-			return this._cachingMatcher(name, [m(name)], () =>
+			return this._cachingMatcher(name, [m(name)], () => 
 				this._addPolyfill(name)
 			);
 		});
 	}
 
 	_addPolyfill(name) {
-		if (!has(name)) return;
+		if (!has(name)) {
+			return;
+		}
 
 		for (const dep of get(name).deps) {
 			this._addPolyfill(dep);
+		}
+
+		if (get(name).isAlias) {
+			this.aliasSet.add(name);
+			return;
 		}
 
 		if (this.featureSet.has(name)) {
@@ -55,7 +63,11 @@ class Injector {
 	_cachingMatcher(name, matchers, action) {
 		return (path, state) => {
 			if (this.importSet.has(name)) {
-				return; // nop
+				return; // noop
+			}
+
+			if (this.aliasSet.has(name)) {
+				return; // noop
 			}
 
 			for (const m of matchers) {

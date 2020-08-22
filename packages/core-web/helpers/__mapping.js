@@ -132202,5 +132202,4978 @@ module.exports = [
       "opera": "<64"
     },
     "detector": true
+  },
+  {
+    "name": "HTMLCanvasElement.protoype.toBlob",
+    "deps": [
+      "HTMLCanvasElement.prototype.toBlob"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl",
+    "deps": [
+      "Intl.DateTimeFormat",
+      "Intl.DateTimeFormat.~locale.en",
+      "Intl.NumberFormat",
+      "Intl.NumberFormat.~locale.en",
+      "Intl.PluralRules",
+      "Intl.PluralRules.~locale.en",
+      "Intl.getCanonicalLocales"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.DateTimeFormat.prototype.formatToParts",
+    "deps": [
+      "Intl.DateTimeFormat"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.af",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.af",
+      "Intl.NumberFormat.~locale.af",
+      "Intl.PluralRules.~locale.af"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.af-NA",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.af-NA",
+      "Intl.NumberFormat.~locale.af-NA"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.agq",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.agq",
+      "Intl.NumberFormat.~locale.agq"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.ak",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.ak",
+      "Intl.NumberFormat.~locale.ak",
+      "Intl.PluralRules.~locale.ak"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.am",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.am",
+      "Intl.NumberFormat.~locale.am",
+      "Intl.PluralRules.~locale.am"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.ar",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.ar",
+      "Intl.NumberFormat.~locale.ar",
+      "Intl.PluralRules.~locale.ar"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.ar-AE",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.ar-AE",
+      "Intl.NumberFormat.~locale.ar-AE"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.ar-BH",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.ar-BH",
+      "Intl.NumberFormat.~locale.ar-BH"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.ar-DJ",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.ar-DJ",
+      "Intl.NumberFormat.~locale.ar-DJ"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.ar-DZ",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.ar-DZ",
+      "Intl.NumberFormat.~locale.ar-DZ"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.ar-EG",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.ar-EG",
+      "Intl.NumberFormat.~locale.ar-EG"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.ar-EH",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.ar-EH",
+      "Intl.NumberFormat.~locale.ar-EH"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.ar-ER",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.ar-ER",
+      "Intl.NumberFormat.~locale.ar-ER"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.ar-IL",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.ar-IL",
+      "Intl.NumberFormat.~locale.ar-IL"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.ar-IQ",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.ar-IQ",
+      "Intl.NumberFormat.~locale.ar-IQ"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.ar-JO",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.ar-JO",
+      "Intl.NumberFormat.~locale.ar-JO"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.ar-KM",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.ar-KM",
+      "Intl.NumberFormat.~locale.ar-KM"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.ar-KW",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.ar-KW",
+      "Intl.NumberFormat.~locale.ar-KW"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.ar-LB",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.ar-LB",
+      "Intl.NumberFormat.~locale.ar-LB"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.ar-LY",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.ar-LY",
+      "Intl.NumberFormat.~locale.ar-LY"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.ar-MA",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.ar-MA",
+      "Intl.NumberFormat.~locale.ar-MA"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.ar-MR",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.ar-MR",
+      "Intl.NumberFormat.~locale.ar-MR"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.ar-OM",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.ar-OM",
+      "Intl.NumberFormat.~locale.ar-OM"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.ar-PS",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.ar-PS",
+      "Intl.NumberFormat.~locale.ar-PS"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.ar-QA",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.ar-QA",
+      "Intl.NumberFormat.~locale.ar-QA"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.ar-SA",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.ar-SA",
+      "Intl.NumberFormat.~locale.ar-SA"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.ar-SD",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.ar-SD",
+      "Intl.NumberFormat.~locale.ar-SD"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.ar-SO",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.ar-SO",
+      "Intl.NumberFormat.~locale.ar-SO"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.ar-SS",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.ar-SS",
+      "Intl.NumberFormat.~locale.ar-SS"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.ar-SY",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.ar-SY",
+      "Intl.NumberFormat.~locale.ar-SY"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.ar-TD",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.ar-TD",
+      "Intl.NumberFormat.~locale.ar-TD"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.ar-TN",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.ar-TN",
+      "Intl.NumberFormat.~locale.ar-TN"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.ar-YE",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.ar-YE",
+      "Intl.NumberFormat.~locale.ar-YE"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.as",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.as",
+      "Intl.NumberFormat.~locale.as",
+      "Intl.PluralRules.~locale.as"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.asa",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.asa",
+      "Intl.NumberFormat.~locale.asa",
+      "Intl.PluralRules.~locale.asa"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.ast",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.ast",
+      "Intl.NumberFormat.~locale.ast",
+      "Intl.PluralRules.~locale.ast"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.az",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.az",
+      "Intl.NumberFormat.~locale.az",
+      "Intl.PluralRules.~locale.az"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.az-Cyrl",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.az-Cyrl",
+      "Intl.NumberFormat.~locale.az-Cyrl"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.az-Latn",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.az-Latn",
+      "Intl.NumberFormat.~locale.az-Latn"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.bas",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.bas",
+      "Intl.NumberFormat.~locale.bas"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.be",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.be",
+      "Intl.NumberFormat.~locale.be",
+      "Intl.PluralRules.~locale.be"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.bem",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.bem",
+      "Intl.NumberFormat.~locale.bem",
+      "Intl.PluralRules.~locale.bem"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.bez",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.bez",
+      "Intl.NumberFormat.~locale.bez",
+      "Intl.PluralRules.~locale.bez"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.bg",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.bg",
+      "Intl.NumberFormat.~locale.bg",
+      "Intl.PluralRules.~locale.bg"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.bm",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.bm",
+      "Intl.NumberFormat.~locale.bm",
+      "Intl.PluralRules.~locale.bm"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.bn",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.bn",
+      "Intl.NumberFormat.~locale.bn",
+      "Intl.PluralRules.~locale.bn"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.bn-IN",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.bn-IN",
+      "Intl.NumberFormat.~locale.bn-IN"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.bo",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.bo",
+      "Intl.NumberFormat.~locale.bo",
+      "Intl.PluralRules.~locale.bo"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.bo-IN",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.bo-IN",
+      "Intl.NumberFormat.~locale.bo-IN"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.br",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.br",
+      "Intl.NumberFormat.~locale.br",
+      "Intl.PluralRules.~locale.br"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.brx",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.brx",
+      "Intl.NumberFormat.~locale.brx",
+      "Intl.PluralRules.~locale.brx"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.bs",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.bs",
+      "Intl.NumberFormat.~locale.bs",
+      "Intl.PluralRules.~locale.bs"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.bs-Cyrl",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.bs-Cyrl",
+      "Intl.NumberFormat.~locale.bs-Cyrl"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.bs-Latn",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.bs-Latn",
+      "Intl.NumberFormat.~locale.bs-Latn"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.ca",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.ca",
+      "Intl.NumberFormat.~locale.ca",
+      "Intl.PluralRules.~locale.ca"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.ca-AD",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.ca-AD",
+      "Intl.NumberFormat.~locale.ca-AD"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.ca-ES-VALENCIA",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.ca-ES-VALENCIA",
+      "Intl.NumberFormat.~locale.ca-ES-VALENCIA"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.ca-FR",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.ca-FR",
+      "Intl.NumberFormat.~locale.ca-FR"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.ca-IT",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.ca-IT",
+      "Intl.NumberFormat.~locale.ca-IT"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.ccp",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.ccp",
+      "Intl.NumberFormat.~locale.ccp"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.ccp-IN",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.ccp-IN",
+      "Intl.NumberFormat.~locale.ccp-IN"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.ce",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.ce",
+      "Intl.NumberFormat.~locale.ce",
+      "Intl.PluralRules.~locale.ce"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.ceb",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.ceb",
+      "Intl.NumberFormat.~locale.ceb",
+      "Intl.PluralRules.~locale.ceb"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.cgg",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.cgg",
+      "Intl.NumberFormat.~locale.cgg",
+      "Intl.PluralRules.~locale.cgg"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.chr",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.chr",
+      "Intl.NumberFormat.~locale.chr",
+      "Intl.PluralRules.~locale.chr"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.ckb",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.ckb",
+      "Intl.NumberFormat.~locale.ckb",
+      "Intl.PluralRules.~locale.ckb"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.ckb-IR",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.ckb-IR",
+      "Intl.NumberFormat.~locale.ckb-IR"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.cs",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.cs",
+      "Intl.NumberFormat.~locale.cs",
+      "Intl.PluralRules.~locale.cs"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.cu",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.cu",
+      "Intl.NumberFormat.~locale.cu"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.cy",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.cy",
+      "Intl.NumberFormat.~locale.cy",
+      "Intl.PluralRules.~locale.cy"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.da",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.da",
+      "Intl.NumberFormat.~locale.da",
+      "Intl.PluralRules.~locale.da"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.da-GL",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.da-GL",
+      "Intl.NumberFormat.~locale.da-GL"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.dav",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.dav",
+      "Intl.NumberFormat.~locale.dav"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.de",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.de",
+      "Intl.NumberFormat.~locale.de",
+      "Intl.PluralRules.~locale.de"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.de-AT",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.de-AT",
+      "Intl.NumberFormat.~locale.de-AT"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.de-BE",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.de-BE",
+      "Intl.NumberFormat.~locale.de-BE"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.de-CH",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.de-CH",
+      "Intl.NumberFormat.~locale.de-CH"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.de-IT",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.de-IT",
+      "Intl.NumberFormat.~locale.de-IT"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.de-LI",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.de-LI",
+      "Intl.NumberFormat.~locale.de-LI"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.de-LU",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.de-LU",
+      "Intl.NumberFormat.~locale.de-LU"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.dje",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.dje",
+      "Intl.NumberFormat.~locale.dje"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.dsb",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.dsb",
+      "Intl.NumberFormat.~locale.dsb",
+      "Intl.PluralRules.~locale.dsb"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.dua",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.dua",
+      "Intl.NumberFormat.~locale.dua"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.dyo",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.dyo",
+      "Intl.NumberFormat.~locale.dyo"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.dz",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.dz",
+      "Intl.NumberFormat.~locale.dz",
+      "Intl.PluralRules.~locale.dz"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.ebu",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.ebu",
+      "Intl.NumberFormat.~locale.ebu"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.ee",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.ee",
+      "Intl.NumberFormat.~locale.ee",
+      "Intl.PluralRules.~locale.ee"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.ee-TG",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.ee-TG",
+      "Intl.NumberFormat.~locale.ee-TG"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.el",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.el",
+      "Intl.NumberFormat.~locale.el",
+      "Intl.PluralRules.~locale.el"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.el-CY",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.el-CY",
+      "Intl.NumberFormat.~locale.el-CY"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.en",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.en",
+      "Intl.NumberFormat.~locale.en",
+      "Intl.PluralRules.~locale.en"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.en-001",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.en-001",
+      "Intl.NumberFormat.~locale.en-001"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.en-150",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.en-150",
+      "Intl.NumberFormat.~locale.en-150"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.en-AE",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.en-AE",
+      "Intl.NumberFormat.~locale.en-AE"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.en-AG",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.en-AG",
+      "Intl.NumberFormat.~locale.en-AG"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.en-AI",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.en-AI",
+      "Intl.NumberFormat.~locale.en-AI"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.en-AS",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.en-AS",
+      "Intl.NumberFormat.~locale.en-AS"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.en-AT",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.en-AT",
+      "Intl.NumberFormat.~locale.en-AT"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.en-AU",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.en-AU",
+      "Intl.NumberFormat.~locale.en-AU"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.en-BB",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.en-BB",
+      "Intl.NumberFormat.~locale.en-BB"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.en-BE",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.en-BE",
+      "Intl.NumberFormat.~locale.en-BE"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.en-BI",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.en-BI",
+      "Intl.NumberFormat.~locale.en-BI"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.en-BM",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.en-BM",
+      "Intl.NumberFormat.~locale.en-BM"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.en-BS",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.en-BS",
+      "Intl.NumberFormat.~locale.en-BS"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.en-BW",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.en-BW",
+      "Intl.NumberFormat.~locale.en-BW"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.en-BZ",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.en-BZ",
+      "Intl.NumberFormat.~locale.en-BZ"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.en-CA",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.en-CA",
+      "Intl.NumberFormat.~locale.en-CA"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.en-CC",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.en-CC",
+      "Intl.NumberFormat.~locale.en-CC"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.en-CH",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.en-CH",
+      "Intl.NumberFormat.~locale.en-CH"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.en-CK",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.en-CK",
+      "Intl.NumberFormat.~locale.en-CK"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.en-CM",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.en-CM",
+      "Intl.NumberFormat.~locale.en-CM"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.en-CX",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.en-CX",
+      "Intl.NumberFormat.~locale.en-CX"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.en-CY",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.en-CY",
+      "Intl.NumberFormat.~locale.en-CY"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.en-DE",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.en-DE",
+      "Intl.NumberFormat.~locale.en-DE"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.en-DG",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.en-DG",
+      "Intl.NumberFormat.~locale.en-DG"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.en-DK",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.en-DK",
+      "Intl.NumberFormat.~locale.en-DK"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.en-DM",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.en-DM",
+      "Intl.NumberFormat.~locale.en-DM"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.en-ER",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.en-ER",
+      "Intl.NumberFormat.~locale.en-ER"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.en-FI",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.en-FI",
+      "Intl.NumberFormat.~locale.en-FI"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.en-FJ",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.en-FJ",
+      "Intl.NumberFormat.~locale.en-FJ"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.en-FK",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.en-FK",
+      "Intl.NumberFormat.~locale.en-FK"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.en-FM",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.en-FM",
+      "Intl.NumberFormat.~locale.en-FM"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.en-GB",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.en-GB",
+      "Intl.NumberFormat.~locale.en-GB"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.en-GD",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.en-GD",
+      "Intl.NumberFormat.~locale.en-GD"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.en-GG",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.en-GG",
+      "Intl.NumberFormat.~locale.en-GG"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.en-GH",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.en-GH",
+      "Intl.NumberFormat.~locale.en-GH"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.en-GI",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.en-GI",
+      "Intl.NumberFormat.~locale.en-GI"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.en-GM",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.en-GM",
+      "Intl.NumberFormat.~locale.en-GM"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.en-GU",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.en-GU",
+      "Intl.NumberFormat.~locale.en-GU"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.en-GY",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.en-GY",
+      "Intl.NumberFormat.~locale.en-GY"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.en-HK",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.en-HK",
+      "Intl.NumberFormat.~locale.en-HK"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.en-IE",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.en-IE",
+      "Intl.NumberFormat.~locale.en-IE"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.en-IL",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.en-IL",
+      "Intl.NumberFormat.~locale.en-IL"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.en-IM",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.en-IM",
+      "Intl.NumberFormat.~locale.en-IM"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.en-IN",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.en-IN",
+      "Intl.NumberFormat.~locale.en-IN"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.en-IO",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.en-IO",
+      "Intl.NumberFormat.~locale.en-IO"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.en-JE",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.en-JE",
+      "Intl.NumberFormat.~locale.en-JE"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.en-JM",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.en-JM",
+      "Intl.NumberFormat.~locale.en-JM"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.en-KE",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.en-KE",
+      "Intl.NumberFormat.~locale.en-KE"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.en-KI",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.en-KI",
+      "Intl.NumberFormat.~locale.en-KI"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.en-KN",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.en-KN",
+      "Intl.NumberFormat.~locale.en-KN"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.en-KY",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.en-KY",
+      "Intl.NumberFormat.~locale.en-KY"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.en-LC",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.en-LC",
+      "Intl.NumberFormat.~locale.en-LC"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.en-LR",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.en-LR",
+      "Intl.NumberFormat.~locale.en-LR"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.en-LS",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.en-LS",
+      "Intl.NumberFormat.~locale.en-LS"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.en-MG",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.en-MG",
+      "Intl.NumberFormat.~locale.en-MG"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.en-MH",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.en-MH",
+      "Intl.NumberFormat.~locale.en-MH"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.en-MO",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.en-MO",
+      "Intl.NumberFormat.~locale.en-MO"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.en-MP",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.en-MP",
+      "Intl.NumberFormat.~locale.en-MP"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.en-MS",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.en-MS",
+      "Intl.NumberFormat.~locale.en-MS"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.en-MT",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.en-MT",
+      "Intl.NumberFormat.~locale.en-MT"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.en-MU",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.en-MU",
+      "Intl.NumberFormat.~locale.en-MU"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.en-MW",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.en-MW",
+      "Intl.NumberFormat.~locale.en-MW"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.en-MY",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.en-MY",
+      "Intl.NumberFormat.~locale.en-MY"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.en-NA",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.en-NA",
+      "Intl.NumberFormat.~locale.en-NA"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.en-NF",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.en-NF",
+      "Intl.NumberFormat.~locale.en-NF"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.en-NG",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.en-NG",
+      "Intl.NumberFormat.~locale.en-NG"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.en-NL",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.en-NL",
+      "Intl.NumberFormat.~locale.en-NL"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.en-NR",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.en-NR",
+      "Intl.NumberFormat.~locale.en-NR"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.en-NU",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.en-NU",
+      "Intl.NumberFormat.~locale.en-NU"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.en-NZ",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.en-NZ",
+      "Intl.NumberFormat.~locale.en-NZ"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.en-PG",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.en-PG",
+      "Intl.NumberFormat.~locale.en-PG"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.en-PH",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.en-PH",
+      "Intl.NumberFormat.~locale.en-PH"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.en-PK",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.en-PK",
+      "Intl.NumberFormat.~locale.en-PK"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.en-PN",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.en-PN",
+      "Intl.NumberFormat.~locale.en-PN"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.en-PR",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.en-PR",
+      "Intl.NumberFormat.~locale.en-PR"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.en-PW",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.en-PW",
+      "Intl.NumberFormat.~locale.en-PW"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.en-RW",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.en-RW",
+      "Intl.NumberFormat.~locale.en-RW"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.en-SB",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.en-SB",
+      "Intl.NumberFormat.~locale.en-SB"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.en-SC",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.en-SC",
+      "Intl.NumberFormat.~locale.en-SC"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.en-SD",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.en-SD",
+      "Intl.NumberFormat.~locale.en-SD"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.en-SE",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.en-SE",
+      "Intl.NumberFormat.~locale.en-SE"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.en-SG",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.en-SG",
+      "Intl.NumberFormat.~locale.en-SG"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.en-SH",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.en-SH",
+      "Intl.NumberFormat.~locale.en-SH"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.en-SI",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.en-SI",
+      "Intl.NumberFormat.~locale.en-SI"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.en-SL",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.en-SL",
+      "Intl.NumberFormat.~locale.en-SL"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.en-SS",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.en-SS",
+      "Intl.NumberFormat.~locale.en-SS"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.en-SX",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.en-SX",
+      "Intl.NumberFormat.~locale.en-SX"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.en-SZ",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.en-SZ",
+      "Intl.NumberFormat.~locale.en-SZ"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.en-TC",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.en-TC",
+      "Intl.NumberFormat.~locale.en-TC"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.en-TK",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.en-TK",
+      "Intl.NumberFormat.~locale.en-TK"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.en-TO",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.en-TO",
+      "Intl.NumberFormat.~locale.en-TO"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.en-TT",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.en-TT",
+      "Intl.NumberFormat.~locale.en-TT"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.en-TV",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.en-TV",
+      "Intl.NumberFormat.~locale.en-TV"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.en-TZ",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.en-TZ",
+      "Intl.NumberFormat.~locale.en-TZ"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.en-UG",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.en-UG",
+      "Intl.NumberFormat.~locale.en-UG"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.en-UM",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.en-UM",
+      "Intl.NumberFormat.~locale.en-UM"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.en-US-POSIX",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.en-US-POSIX",
+      "Intl.NumberFormat.~locale.en-US-POSIX"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.en-VC",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.en-VC",
+      "Intl.NumberFormat.~locale.en-VC"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.en-VG",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.en-VG",
+      "Intl.NumberFormat.~locale.en-VG"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.en-VI",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.en-VI",
+      "Intl.NumberFormat.~locale.en-VI"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.en-VU",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.en-VU",
+      "Intl.NumberFormat.~locale.en-VU"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.en-WS",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.en-WS",
+      "Intl.NumberFormat.~locale.en-WS"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.en-ZA",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.en-ZA",
+      "Intl.NumberFormat.~locale.en-ZA"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.en-ZM",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.en-ZM",
+      "Intl.NumberFormat.~locale.en-ZM"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.en-ZW",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.en-ZW",
+      "Intl.NumberFormat.~locale.en-ZW"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.eo",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.eo",
+      "Intl.NumberFormat.~locale.eo",
+      "Intl.PluralRules.~locale.eo"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.es",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.es",
+      "Intl.NumberFormat.~locale.es",
+      "Intl.PluralRules.~locale.es"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.es-419",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.es-419",
+      "Intl.NumberFormat.~locale.es-419"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.es-AR",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.es-AR",
+      "Intl.NumberFormat.~locale.es-AR"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.es-BO",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.es-BO",
+      "Intl.NumberFormat.~locale.es-BO"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.es-BR",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.es-BR",
+      "Intl.NumberFormat.~locale.es-BR"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.es-BZ",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.es-BZ",
+      "Intl.NumberFormat.~locale.es-BZ"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.es-CL",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.es-CL",
+      "Intl.NumberFormat.~locale.es-CL"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.es-CO",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.es-CO",
+      "Intl.NumberFormat.~locale.es-CO"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.es-CR",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.es-CR",
+      "Intl.NumberFormat.~locale.es-CR"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.es-CU",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.es-CU",
+      "Intl.NumberFormat.~locale.es-CU"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.es-DO",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.es-DO",
+      "Intl.NumberFormat.~locale.es-DO"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.es-EA",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.es-EA",
+      "Intl.NumberFormat.~locale.es-EA"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.es-EC",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.es-EC",
+      "Intl.NumberFormat.~locale.es-EC"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.es-GQ",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.es-GQ",
+      "Intl.NumberFormat.~locale.es-GQ"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.es-GT",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.es-GT",
+      "Intl.NumberFormat.~locale.es-GT"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.es-HN",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.es-HN",
+      "Intl.NumberFormat.~locale.es-HN"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.es-IC",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.es-IC",
+      "Intl.NumberFormat.~locale.es-IC"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.es-MX",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.es-MX",
+      "Intl.NumberFormat.~locale.es-MX"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.es-NI",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.es-NI",
+      "Intl.NumberFormat.~locale.es-NI"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.es-PA",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.es-PA",
+      "Intl.NumberFormat.~locale.es-PA"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.es-PE",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.es-PE",
+      "Intl.NumberFormat.~locale.es-PE"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.es-PH",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.es-PH",
+      "Intl.NumberFormat.~locale.es-PH"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.es-PR",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.es-PR",
+      "Intl.NumberFormat.~locale.es-PR"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.es-PY",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.es-PY",
+      "Intl.NumberFormat.~locale.es-PY"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.es-SV",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.es-SV",
+      "Intl.NumberFormat.~locale.es-SV"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.es-US",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.es-US",
+      "Intl.NumberFormat.~locale.es-US"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.es-UY",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.es-UY",
+      "Intl.NumberFormat.~locale.es-UY"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.es-VE",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.es-VE",
+      "Intl.NumberFormat.~locale.es-VE"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.et",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.et",
+      "Intl.NumberFormat.~locale.et",
+      "Intl.PluralRules.~locale.et"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.eu",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.eu",
+      "Intl.NumberFormat.~locale.eu",
+      "Intl.PluralRules.~locale.eu"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.ewo",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.ewo",
+      "Intl.NumberFormat.~locale.ewo"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.fa",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.fa",
+      "Intl.NumberFormat.~locale.fa",
+      "Intl.PluralRules.~locale.fa"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.fa-AF",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.fa-AF",
+      "Intl.NumberFormat.~locale.fa-AF"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.ff",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.ff",
+      "Intl.NumberFormat.~locale.ff",
+      "Intl.PluralRules.~locale.ff"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.ff-Latn",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.ff-Latn",
+      "Intl.NumberFormat.~locale.ff-Latn"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.ff-Latn-BF",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.ff-Latn-BF",
+      "Intl.NumberFormat.~locale.ff-Latn-BF"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.ff-Latn-CM",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.ff-Latn-CM",
+      "Intl.NumberFormat.~locale.ff-Latn-CM"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.ff-Latn-GH",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.ff-Latn-GH",
+      "Intl.NumberFormat.~locale.ff-Latn-GH"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.ff-Latn-GM",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.ff-Latn-GM",
+      "Intl.NumberFormat.~locale.ff-Latn-GM"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.ff-Latn-GN",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.ff-Latn-GN",
+      "Intl.NumberFormat.~locale.ff-Latn-GN"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.ff-Latn-GW",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.ff-Latn-GW",
+      "Intl.NumberFormat.~locale.ff-Latn-GW"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.ff-Latn-LR",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.ff-Latn-LR",
+      "Intl.NumberFormat.~locale.ff-Latn-LR"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.ff-Latn-MR",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.ff-Latn-MR",
+      "Intl.NumberFormat.~locale.ff-Latn-MR"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.ff-Latn-NE",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.ff-Latn-NE",
+      "Intl.NumberFormat.~locale.ff-Latn-NE"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.ff-Latn-NG",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.ff-Latn-NG",
+      "Intl.NumberFormat.~locale.ff-Latn-NG"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.ff-Latn-SL",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.ff-Latn-SL",
+      "Intl.NumberFormat.~locale.ff-Latn-SL"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.fi",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.fi",
+      "Intl.NumberFormat.~locale.fi",
+      "Intl.PluralRules.~locale.fi"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.fil",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.fil",
+      "Intl.NumberFormat.~locale.fil",
+      "Intl.PluralRules.~locale.fil"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.fo",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.fo",
+      "Intl.NumberFormat.~locale.fo",
+      "Intl.PluralRules.~locale.fo"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.fo-DK",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.fo-DK",
+      "Intl.NumberFormat.~locale.fo-DK"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.fr",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.fr",
+      "Intl.NumberFormat.~locale.fr",
+      "Intl.PluralRules.~locale.fr"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.fr-BE",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.fr-BE",
+      "Intl.NumberFormat.~locale.fr-BE"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.fr-BF",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.fr-BF",
+      "Intl.NumberFormat.~locale.fr-BF"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.fr-BI",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.fr-BI",
+      "Intl.NumberFormat.~locale.fr-BI"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.fr-BJ",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.fr-BJ",
+      "Intl.NumberFormat.~locale.fr-BJ"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.fr-BL",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.fr-BL",
+      "Intl.NumberFormat.~locale.fr-BL"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.fr-CA",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.fr-CA",
+      "Intl.NumberFormat.~locale.fr-CA"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.fr-CD",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.fr-CD",
+      "Intl.NumberFormat.~locale.fr-CD"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.fr-CF",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.fr-CF",
+      "Intl.NumberFormat.~locale.fr-CF"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.fr-CG",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.fr-CG",
+      "Intl.NumberFormat.~locale.fr-CG"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.fr-CH",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.fr-CH",
+      "Intl.NumberFormat.~locale.fr-CH"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.fr-CI",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.fr-CI",
+      "Intl.NumberFormat.~locale.fr-CI"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.fr-CM",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.fr-CM",
+      "Intl.NumberFormat.~locale.fr-CM"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.fr-DJ",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.fr-DJ",
+      "Intl.NumberFormat.~locale.fr-DJ"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.fr-DZ",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.fr-DZ",
+      "Intl.NumberFormat.~locale.fr-DZ"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.fr-GA",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.fr-GA",
+      "Intl.NumberFormat.~locale.fr-GA"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.fr-GF",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.fr-GF",
+      "Intl.NumberFormat.~locale.fr-GF"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.fr-GN",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.fr-GN",
+      "Intl.NumberFormat.~locale.fr-GN"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.fr-GP",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.fr-GP",
+      "Intl.NumberFormat.~locale.fr-GP"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.fr-GQ",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.fr-GQ",
+      "Intl.NumberFormat.~locale.fr-GQ"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.fr-HT",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.fr-HT",
+      "Intl.NumberFormat.~locale.fr-HT"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.fr-KM",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.fr-KM",
+      "Intl.NumberFormat.~locale.fr-KM"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.fr-LU",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.fr-LU",
+      "Intl.NumberFormat.~locale.fr-LU"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.fr-MA",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.fr-MA",
+      "Intl.NumberFormat.~locale.fr-MA"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.fr-MC",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.fr-MC",
+      "Intl.NumberFormat.~locale.fr-MC"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.fr-MF",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.fr-MF",
+      "Intl.NumberFormat.~locale.fr-MF"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.fr-MG",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.fr-MG",
+      "Intl.NumberFormat.~locale.fr-MG"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.fr-ML",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.fr-ML",
+      "Intl.NumberFormat.~locale.fr-ML"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.fr-MQ",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.fr-MQ",
+      "Intl.NumberFormat.~locale.fr-MQ"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.fr-MR",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.fr-MR",
+      "Intl.NumberFormat.~locale.fr-MR"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.fr-MU",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.fr-MU",
+      "Intl.NumberFormat.~locale.fr-MU"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.fr-NC",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.fr-NC",
+      "Intl.NumberFormat.~locale.fr-NC"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.fr-NE",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.fr-NE",
+      "Intl.NumberFormat.~locale.fr-NE"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.fr-PF",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.fr-PF",
+      "Intl.NumberFormat.~locale.fr-PF"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.fr-PM",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.fr-PM",
+      "Intl.NumberFormat.~locale.fr-PM"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.fr-RE",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.fr-RE",
+      "Intl.NumberFormat.~locale.fr-RE"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.fr-RW",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.fr-RW",
+      "Intl.NumberFormat.~locale.fr-RW"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.fr-SC",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.fr-SC",
+      "Intl.NumberFormat.~locale.fr-SC"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.fr-SN",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.fr-SN",
+      "Intl.NumberFormat.~locale.fr-SN"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.fr-SY",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.fr-SY",
+      "Intl.NumberFormat.~locale.fr-SY"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.fr-TD",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.fr-TD",
+      "Intl.NumberFormat.~locale.fr-TD"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.fr-TG",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.fr-TG",
+      "Intl.NumberFormat.~locale.fr-TG"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.fr-TN",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.fr-TN",
+      "Intl.NumberFormat.~locale.fr-TN"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.fr-VU",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.fr-VU",
+      "Intl.NumberFormat.~locale.fr-VU"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.fr-WF",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.fr-WF",
+      "Intl.NumberFormat.~locale.fr-WF"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.fr-YT",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.fr-YT",
+      "Intl.NumberFormat.~locale.fr-YT"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.fur",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.fur",
+      "Intl.NumberFormat.~locale.fur",
+      "Intl.PluralRules.~locale.fur"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.fy",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.fy",
+      "Intl.NumberFormat.~locale.fy",
+      "Intl.PluralRules.~locale.fy"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.ga",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.ga",
+      "Intl.NumberFormat.~locale.ga",
+      "Intl.PluralRules.~locale.ga"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.ga-GB",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.ga-GB",
+      "Intl.NumberFormat.~locale.ga-GB"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.gd",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.gd",
+      "Intl.NumberFormat.~locale.gd",
+      "Intl.PluralRules.~locale.gd"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.gl",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.gl",
+      "Intl.NumberFormat.~locale.gl",
+      "Intl.PluralRules.~locale.gl"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.gsw",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.gsw",
+      "Intl.NumberFormat.~locale.gsw",
+      "Intl.PluralRules.~locale.gsw"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.gsw-FR",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.gsw-FR",
+      "Intl.NumberFormat.~locale.gsw-FR"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.gsw-LI",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.gsw-LI",
+      "Intl.NumberFormat.~locale.gsw-LI"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.gu",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.gu",
+      "Intl.NumberFormat.~locale.gu",
+      "Intl.PluralRules.~locale.gu"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.guz",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.guz",
+      "Intl.NumberFormat.~locale.guz"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.gv",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.gv",
+      "Intl.NumberFormat.~locale.gv",
+      "Intl.PluralRules.~locale.gv"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.ha",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.ha",
+      "Intl.NumberFormat.~locale.ha",
+      "Intl.PluralRules.~locale.ha"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.ha-GH",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.ha-GH",
+      "Intl.NumberFormat.~locale.ha-GH"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.ha-NE",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.ha-NE",
+      "Intl.NumberFormat.~locale.ha-NE"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.haw",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.haw",
+      "Intl.NumberFormat.~locale.haw",
+      "Intl.PluralRules.~locale.haw"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.he",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.he",
+      "Intl.NumberFormat.~locale.he",
+      "Intl.PluralRules.~locale.he"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.hi",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.hi",
+      "Intl.NumberFormat.~locale.hi",
+      "Intl.PluralRules.~locale.hi"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.hr",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.hr",
+      "Intl.NumberFormat.~locale.hr",
+      "Intl.PluralRules.~locale.hr"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.hr-BA",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.hr-BA",
+      "Intl.NumberFormat.~locale.hr-BA"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.hsb",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.hsb",
+      "Intl.NumberFormat.~locale.hsb",
+      "Intl.PluralRules.~locale.hsb"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.hu",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.hu",
+      "Intl.NumberFormat.~locale.hu",
+      "Intl.PluralRules.~locale.hu"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.hy",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.hy",
+      "Intl.NumberFormat.~locale.hy",
+      "Intl.PluralRules.~locale.hy"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.ia",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.ia",
+      "Intl.NumberFormat.~locale.ia",
+      "Intl.PluralRules.~locale.ia"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.id",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.id",
+      "Intl.NumberFormat.~locale.id",
+      "Intl.PluralRules.~locale.id"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.ig",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.ig",
+      "Intl.NumberFormat.~locale.ig",
+      "Intl.PluralRules.~locale.ig"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.ii",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.ii",
+      "Intl.NumberFormat.~locale.ii",
+      "Intl.PluralRules.~locale.ii"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.is",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.is",
+      "Intl.NumberFormat.~locale.is",
+      "Intl.PluralRules.~locale.is"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.it",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.it",
+      "Intl.NumberFormat.~locale.it",
+      "Intl.PluralRules.~locale.it"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.it-CH",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.it-CH",
+      "Intl.NumberFormat.~locale.it-CH"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.it-SM",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.it-SM",
+      "Intl.NumberFormat.~locale.it-SM"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.it-VA",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.it-VA",
+      "Intl.NumberFormat.~locale.it-VA"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.ja",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.ja",
+      "Intl.NumberFormat.~locale.ja",
+      "Intl.PluralRules.~locale.ja"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.jgo",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.jgo",
+      "Intl.NumberFormat.~locale.jgo",
+      "Intl.PluralRules.~locale.jgo"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.jmc",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.jmc",
+      "Intl.NumberFormat.~locale.jmc",
+      "Intl.PluralRules.~locale.jmc"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.jv",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.jv",
+      "Intl.NumberFormat.~locale.jv",
+      "Intl.PluralRules.~locale.jv"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.ka",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.ka",
+      "Intl.NumberFormat.~locale.ka",
+      "Intl.PluralRules.~locale.ka"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.kab",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.kab",
+      "Intl.NumberFormat.~locale.kab",
+      "Intl.PluralRules.~locale.kab"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.kam",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.kam",
+      "Intl.NumberFormat.~locale.kam"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.kde",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.kde",
+      "Intl.NumberFormat.~locale.kde",
+      "Intl.PluralRules.~locale.kde"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.kea",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.kea",
+      "Intl.NumberFormat.~locale.kea",
+      "Intl.PluralRules.~locale.kea"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.khq",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.khq",
+      "Intl.NumberFormat.~locale.khq"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.ki",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.ki",
+      "Intl.NumberFormat.~locale.ki"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.kk",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.kk",
+      "Intl.NumberFormat.~locale.kk",
+      "Intl.PluralRules.~locale.kk"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.kkj",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.kkj",
+      "Intl.NumberFormat.~locale.kkj",
+      "Intl.PluralRules.~locale.kkj"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.kl",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.kl",
+      "Intl.NumberFormat.~locale.kl",
+      "Intl.PluralRules.~locale.kl"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.kln",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.kln",
+      "Intl.NumberFormat.~locale.kln"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.km",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.km",
+      "Intl.NumberFormat.~locale.km",
+      "Intl.PluralRules.~locale.km"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.kn",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.kn",
+      "Intl.NumberFormat.~locale.kn",
+      "Intl.PluralRules.~locale.kn"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.ko",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.ko",
+      "Intl.NumberFormat.~locale.ko",
+      "Intl.PluralRules.~locale.ko"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.ko-KP",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.ko-KP",
+      "Intl.NumberFormat.~locale.ko-KP"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.kok",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.kok",
+      "Intl.NumberFormat.~locale.kok"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.ks",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.ks",
+      "Intl.NumberFormat.~locale.ks",
+      "Intl.PluralRules.~locale.ks"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.ksb",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.ksb",
+      "Intl.NumberFormat.~locale.ksb",
+      "Intl.PluralRules.~locale.ksb"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.ksf",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.ksf",
+      "Intl.NumberFormat.~locale.ksf"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.ksh",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.ksh",
+      "Intl.NumberFormat.~locale.ksh",
+      "Intl.PluralRules.~locale.ksh"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.ku",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.ku",
+      "Intl.NumberFormat.~locale.ku",
+      "Intl.PluralRules.~locale.ku"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.kw",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.kw",
+      "Intl.NumberFormat.~locale.kw",
+      "Intl.PluralRules.~locale.kw"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.ky",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.ky",
+      "Intl.NumberFormat.~locale.ky",
+      "Intl.PluralRules.~locale.ky"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.lag",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.lag",
+      "Intl.NumberFormat.~locale.lag",
+      "Intl.PluralRules.~locale.lag"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.lb",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.lb",
+      "Intl.NumberFormat.~locale.lb",
+      "Intl.PluralRules.~locale.lb"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.lg",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.lg",
+      "Intl.NumberFormat.~locale.lg",
+      "Intl.PluralRules.~locale.lg"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.lkt",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.lkt",
+      "Intl.NumberFormat.~locale.lkt",
+      "Intl.PluralRules.~locale.lkt"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.ln",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.ln",
+      "Intl.NumberFormat.~locale.ln",
+      "Intl.PluralRules.~locale.ln"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.ln-AO",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.ln-AO",
+      "Intl.NumberFormat.~locale.ln-AO"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.ln-CF",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.ln-CF",
+      "Intl.NumberFormat.~locale.ln-CF"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.ln-CG",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.ln-CG",
+      "Intl.NumberFormat.~locale.ln-CG"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.lo",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.lo",
+      "Intl.NumberFormat.~locale.lo",
+      "Intl.PluralRules.~locale.lo"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.lrc",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.lrc",
+      "Intl.NumberFormat.~locale.lrc"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.lrc-IQ",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.lrc-IQ",
+      "Intl.NumberFormat.~locale.lrc-IQ"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.lt",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.lt",
+      "Intl.NumberFormat.~locale.lt",
+      "Intl.PluralRules.~locale.lt"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.lu",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.lu",
+      "Intl.NumberFormat.~locale.lu"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.luo",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.luo",
+      "Intl.NumberFormat.~locale.luo"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.luy",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.luy",
+      "Intl.NumberFormat.~locale.luy"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.lv",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.lv",
+      "Intl.NumberFormat.~locale.lv",
+      "Intl.PluralRules.~locale.lv"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.mas",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.mas",
+      "Intl.NumberFormat.~locale.mas",
+      "Intl.PluralRules.~locale.mas"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.mas-TZ",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.mas-TZ",
+      "Intl.NumberFormat.~locale.mas-TZ"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.mer",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.mer",
+      "Intl.NumberFormat.~locale.mer"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.mfe",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.mfe",
+      "Intl.NumberFormat.~locale.mfe"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.mg",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.mg",
+      "Intl.NumberFormat.~locale.mg",
+      "Intl.PluralRules.~locale.mg"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.mgh",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.mgh",
+      "Intl.NumberFormat.~locale.mgh"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.mgo",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.mgo",
+      "Intl.NumberFormat.~locale.mgo",
+      "Intl.PluralRules.~locale.mgo"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.mi",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.mi",
+      "Intl.NumberFormat.~locale.mi"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.mk",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.mk",
+      "Intl.NumberFormat.~locale.mk",
+      "Intl.PluralRules.~locale.mk"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.ml",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.ml",
+      "Intl.NumberFormat.~locale.ml",
+      "Intl.PluralRules.~locale.ml"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.mn",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.mn",
+      "Intl.NumberFormat.~locale.mn",
+      "Intl.PluralRules.~locale.mn"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.mr",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.mr",
+      "Intl.NumberFormat.~locale.mr",
+      "Intl.PluralRules.~locale.mr"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.ms",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.ms",
+      "Intl.NumberFormat.~locale.ms",
+      "Intl.PluralRules.~locale.ms"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.ms-BN",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.ms-BN",
+      "Intl.NumberFormat.~locale.ms-BN"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.ms-SG",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.ms-SG",
+      "Intl.NumberFormat.~locale.ms-SG"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.mt",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.mt",
+      "Intl.NumberFormat.~locale.mt",
+      "Intl.PluralRules.~locale.mt"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.mua",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.mua",
+      "Intl.NumberFormat.~locale.mua"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.my",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.my",
+      "Intl.NumberFormat.~locale.my",
+      "Intl.PluralRules.~locale.my"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.mzn",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.mzn",
+      "Intl.NumberFormat.~locale.mzn"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.naq",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.naq",
+      "Intl.NumberFormat.~locale.naq",
+      "Intl.PluralRules.~locale.naq"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.nb",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.nb",
+      "Intl.NumberFormat.~locale.nb",
+      "Intl.PluralRules.~locale.nb"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.nb-SJ",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.nb-SJ",
+      "Intl.NumberFormat.~locale.nb-SJ"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.nd",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.nd",
+      "Intl.NumberFormat.~locale.nd",
+      "Intl.PluralRules.~locale.nd"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.nds",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.nds",
+      "Intl.NumberFormat.~locale.nds"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.nds-NL",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.nds-NL",
+      "Intl.NumberFormat.~locale.nds-NL"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.ne",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.ne",
+      "Intl.NumberFormat.~locale.ne",
+      "Intl.PluralRules.~locale.ne"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.ne-IN",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.ne-IN",
+      "Intl.NumberFormat.~locale.ne-IN"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.nl",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.nl",
+      "Intl.NumberFormat.~locale.nl",
+      "Intl.PluralRules.~locale.nl"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.nl-AW",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.nl-AW",
+      "Intl.NumberFormat.~locale.nl-AW"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.nl-BE",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.nl-BE",
+      "Intl.NumberFormat.~locale.nl-BE"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.nl-BQ",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.nl-BQ",
+      "Intl.NumberFormat.~locale.nl-BQ"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.nl-CW",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.nl-CW",
+      "Intl.NumberFormat.~locale.nl-CW"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.nl-SR",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.nl-SR",
+      "Intl.NumberFormat.~locale.nl-SR"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.nl-SX",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.nl-SX",
+      "Intl.NumberFormat.~locale.nl-SX"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.nmg",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.nmg",
+      "Intl.NumberFormat.~locale.nmg"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.nn",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.nn",
+      "Intl.NumberFormat.~locale.nn",
+      "Intl.PluralRules.~locale.nn"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.nnh",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.nnh",
+      "Intl.NumberFormat.~locale.nnh",
+      "Intl.PluralRules.~locale.nnh"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.nus",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.nus",
+      "Intl.NumberFormat.~locale.nus"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.nyn",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.nyn",
+      "Intl.NumberFormat.~locale.nyn",
+      "Intl.PluralRules.~locale.nyn"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.om",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.om",
+      "Intl.NumberFormat.~locale.om",
+      "Intl.PluralRules.~locale.om"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.om-KE",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.om-KE",
+      "Intl.NumberFormat.~locale.om-KE"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.or",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.or",
+      "Intl.NumberFormat.~locale.or",
+      "Intl.PluralRules.~locale.or"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.os",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.os",
+      "Intl.NumberFormat.~locale.os",
+      "Intl.PluralRules.~locale.os"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.os-RU",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.os-RU",
+      "Intl.NumberFormat.~locale.os-RU"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.pa",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.pa",
+      "Intl.NumberFormat.~locale.pa",
+      "Intl.PluralRules.~locale.pa"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.pa-Arab",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.pa-Arab",
+      "Intl.NumberFormat.~locale.pa-Arab"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.pa-Guru",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.pa-Guru",
+      "Intl.NumberFormat.~locale.pa-Guru"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.pl",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.pl",
+      "Intl.NumberFormat.~locale.pl",
+      "Intl.PluralRules.~locale.pl"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.prg",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.prg",
+      "Intl.NumberFormat.~locale.prg",
+      "Intl.PluralRules.~locale.prg"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.ps",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.ps",
+      "Intl.NumberFormat.~locale.ps",
+      "Intl.PluralRules.~locale.ps"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.ps-PK",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.ps-PK",
+      "Intl.NumberFormat.~locale.ps-PK"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.pt",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.pt",
+      "Intl.NumberFormat.~locale.pt",
+      "Intl.PluralRules.~locale.pt"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.pt-AO",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.pt-AO",
+      "Intl.NumberFormat.~locale.pt-AO"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.pt-CH",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.pt-CH",
+      "Intl.NumberFormat.~locale.pt-CH"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.pt-CV",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.pt-CV",
+      "Intl.NumberFormat.~locale.pt-CV"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.pt-GQ",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.pt-GQ",
+      "Intl.NumberFormat.~locale.pt-GQ"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.pt-GW",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.pt-GW",
+      "Intl.NumberFormat.~locale.pt-GW"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.pt-LU",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.pt-LU",
+      "Intl.NumberFormat.~locale.pt-LU"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.pt-MO",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.pt-MO",
+      "Intl.NumberFormat.~locale.pt-MO"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.pt-MZ",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.pt-MZ",
+      "Intl.NumberFormat.~locale.pt-MZ"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.pt-PT",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.pt-PT",
+      "Intl.NumberFormat.~locale.pt-PT",
+      "Intl.PluralRules.~locale.pt-PT"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.pt-ST",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.pt-ST",
+      "Intl.NumberFormat.~locale.pt-ST"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.pt-TL",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.pt-TL",
+      "Intl.NumberFormat.~locale.pt-TL"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.qu",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.qu",
+      "Intl.NumberFormat.~locale.qu"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.qu-BO",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.qu-BO",
+      "Intl.NumberFormat.~locale.qu-BO"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.qu-EC",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.qu-EC",
+      "Intl.NumberFormat.~locale.qu-EC"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.rm",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.rm",
+      "Intl.NumberFormat.~locale.rm",
+      "Intl.PluralRules.~locale.rm"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.rn",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.rn",
+      "Intl.NumberFormat.~locale.rn"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.ro",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.ro",
+      "Intl.NumberFormat.~locale.ro",
+      "Intl.PluralRules.~locale.ro"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.ro-MD",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.ro-MD",
+      "Intl.NumberFormat.~locale.ro-MD"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.rof",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.rof",
+      "Intl.NumberFormat.~locale.rof",
+      "Intl.PluralRules.~locale.rof"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.root",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.root",
+      "Intl.NumberFormat.~locale.root",
+      "Intl.PluralRules.~locale.root"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.ru",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.ru",
+      "Intl.NumberFormat.~locale.ru",
+      "Intl.PluralRules.~locale.ru"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.ru-BY",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.ru-BY",
+      "Intl.NumberFormat.~locale.ru-BY"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.ru-KG",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.ru-KG",
+      "Intl.NumberFormat.~locale.ru-KG"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.ru-KZ",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.ru-KZ",
+      "Intl.NumberFormat.~locale.ru-KZ"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.ru-MD",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.ru-MD",
+      "Intl.NumberFormat.~locale.ru-MD"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.ru-UA",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.ru-UA",
+      "Intl.NumberFormat.~locale.ru-UA"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.rw",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.rw",
+      "Intl.NumberFormat.~locale.rw"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.rwk",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.rwk",
+      "Intl.NumberFormat.~locale.rwk",
+      "Intl.PluralRules.~locale.rwk"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.sah",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.sah",
+      "Intl.NumberFormat.~locale.sah",
+      "Intl.PluralRules.~locale.sah"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.saq",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.saq",
+      "Intl.NumberFormat.~locale.saq",
+      "Intl.PluralRules.~locale.saq"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.sbp",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.sbp",
+      "Intl.NumberFormat.~locale.sbp"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.sd",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.sd",
+      "Intl.NumberFormat.~locale.sd",
+      "Intl.PluralRules.~locale.sd"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.se",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.se",
+      "Intl.NumberFormat.~locale.se",
+      "Intl.PluralRules.~locale.se"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.se-FI",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.se-FI",
+      "Intl.NumberFormat.~locale.se-FI"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.se-SE",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.se-SE",
+      "Intl.NumberFormat.~locale.se-SE"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.seh",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.seh",
+      "Intl.NumberFormat.~locale.seh",
+      "Intl.PluralRules.~locale.seh"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.ses",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.ses",
+      "Intl.NumberFormat.~locale.ses",
+      "Intl.PluralRules.~locale.ses"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.sg",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.sg",
+      "Intl.NumberFormat.~locale.sg",
+      "Intl.PluralRules.~locale.sg"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.shi",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.shi",
+      "Intl.NumberFormat.~locale.shi",
+      "Intl.PluralRules.~locale.shi"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.shi-Latn",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.shi-Latn",
+      "Intl.NumberFormat.~locale.shi-Latn"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.shi-Tfng",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.shi-Tfng",
+      "Intl.NumberFormat.~locale.shi-Tfng"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.si",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.si",
+      "Intl.NumberFormat.~locale.si",
+      "Intl.PluralRules.~locale.si"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.sk",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.sk",
+      "Intl.NumberFormat.~locale.sk",
+      "Intl.PluralRules.~locale.sk"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.sl",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.sl",
+      "Intl.NumberFormat.~locale.sl",
+      "Intl.PluralRules.~locale.sl"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.smn",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.smn",
+      "Intl.NumberFormat.~locale.smn",
+      "Intl.PluralRules.~locale.smn"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.sn",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.sn",
+      "Intl.NumberFormat.~locale.sn",
+      "Intl.PluralRules.~locale.sn"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.so",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.so",
+      "Intl.NumberFormat.~locale.so",
+      "Intl.PluralRules.~locale.so"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.so-DJ",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.so-DJ",
+      "Intl.NumberFormat.~locale.so-DJ"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.so-ET",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.so-ET",
+      "Intl.NumberFormat.~locale.so-ET"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.so-KE",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.so-KE",
+      "Intl.NumberFormat.~locale.so-KE"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.sq",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.sq",
+      "Intl.NumberFormat.~locale.sq",
+      "Intl.PluralRules.~locale.sq"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.sq-MK",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.sq-MK",
+      "Intl.NumberFormat.~locale.sq-MK"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.sq-XK",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.sq-XK",
+      "Intl.NumberFormat.~locale.sq-XK"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.sr",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.sr",
+      "Intl.NumberFormat.~locale.sr",
+      "Intl.PluralRules.~locale.sr"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.sr-Cyrl",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.sr-Cyrl",
+      "Intl.NumberFormat.~locale.sr-Cyrl"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.sr-Cyrl-BA",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.sr-Cyrl-BA",
+      "Intl.NumberFormat.~locale.sr-Cyrl-BA"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.sr-Cyrl-ME",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.sr-Cyrl-ME",
+      "Intl.NumberFormat.~locale.sr-Cyrl-ME"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.sr-Cyrl-XK",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.sr-Cyrl-XK",
+      "Intl.NumberFormat.~locale.sr-Cyrl-XK"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.sr-Latn",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.sr-Latn",
+      "Intl.NumberFormat.~locale.sr-Latn"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.sr-Latn-BA",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.sr-Latn-BA",
+      "Intl.NumberFormat.~locale.sr-Latn-BA"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.sr-Latn-ME",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.sr-Latn-ME",
+      "Intl.NumberFormat.~locale.sr-Latn-ME"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.sr-Latn-XK",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.sr-Latn-XK",
+      "Intl.NumberFormat.~locale.sr-Latn-XK"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.sv",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.sv",
+      "Intl.NumberFormat.~locale.sv",
+      "Intl.PluralRules.~locale.sv"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.sv-AX",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.sv-AX",
+      "Intl.NumberFormat.~locale.sv-AX"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.sv-FI",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.sv-FI",
+      "Intl.NumberFormat.~locale.sv-FI"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.sw",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.sw",
+      "Intl.NumberFormat.~locale.sw",
+      "Intl.PluralRules.~locale.sw"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.sw-CD",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.sw-CD",
+      "Intl.NumberFormat.~locale.sw-CD"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.sw-KE",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.sw-KE",
+      "Intl.NumberFormat.~locale.sw-KE"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.sw-UG",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.sw-UG",
+      "Intl.NumberFormat.~locale.sw-UG"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.ta",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.ta",
+      "Intl.NumberFormat.~locale.ta",
+      "Intl.PluralRules.~locale.ta"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.ta-LK",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.ta-LK",
+      "Intl.NumberFormat.~locale.ta-LK"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.ta-MY",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.ta-MY",
+      "Intl.NumberFormat.~locale.ta-MY"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.ta-SG",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.ta-SG",
+      "Intl.NumberFormat.~locale.ta-SG"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.te",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.te",
+      "Intl.NumberFormat.~locale.te",
+      "Intl.PluralRules.~locale.te"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.teo",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.teo",
+      "Intl.NumberFormat.~locale.teo",
+      "Intl.PluralRules.~locale.teo"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.teo-KE",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.teo-KE",
+      "Intl.NumberFormat.~locale.teo-KE"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.tg",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.tg",
+      "Intl.NumberFormat.~locale.tg"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.th",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.th",
+      "Intl.NumberFormat.~locale.th",
+      "Intl.PluralRules.~locale.th"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.ti",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.ti",
+      "Intl.NumberFormat.~locale.ti",
+      "Intl.PluralRules.~locale.ti"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.ti-ER",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.ti-ER",
+      "Intl.NumberFormat.~locale.ti-ER"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.tk",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.tk",
+      "Intl.NumberFormat.~locale.tk",
+      "Intl.PluralRules.~locale.tk"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.to",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.to",
+      "Intl.NumberFormat.~locale.to",
+      "Intl.PluralRules.~locale.to"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.tr",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.tr",
+      "Intl.NumberFormat.~locale.tr",
+      "Intl.PluralRules.~locale.tr"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.tr-CY",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.tr-CY",
+      "Intl.NumberFormat.~locale.tr-CY"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.tt",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.tt",
+      "Intl.NumberFormat.~locale.tt"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.twq",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.twq",
+      "Intl.NumberFormat.~locale.twq"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.tzm",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.tzm",
+      "Intl.NumberFormat.~locale.tzm",
+      "Intl.PluralRules.~locale.tzm"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.ug",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.ug",
+      "Intl.NumberFormat.~locale.ug",
+      "Intl.PluralRules.~locale.ug"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.uk",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.uk",
+      "Intl.NumberFormat.~locale.uk",
+      "Intl.PluralRules.~locale.uk"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.ur",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.ur",
+      "Intl.NumberFormat.~locale.ur",
+      "Intl.PluralRules.~locale.ur"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.ur-IN",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.ur-IN",
+      "Intl.NumberFormat.~locale.ur-IN"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.uz",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.uz",
+      "Intl.NumberFormat.~locale.uz",
+      "Intl.PluralRules.~locale.uz"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.uz-Arab",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.uz-Arab",
+      "Intl.NumberFormat.~locale.uz-Arab"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.uz-Cyrl",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.uz-Cyrl",
+      "Intl.NumberFormat.~locale.uz-Cyrl"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.uz-Latn",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.uz-Latn",
+      "Intl.NumberFormat.~locale.uz-Latn"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.vai",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.vai",
+      "Intl.NumberFormat.~locale.vai"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.vai-Latn",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.vai-Latn",
+      "Intl.NumberFormat.~locale.vai-Latn"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.vai-Vaii",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.vai-Vaii",
+      "Intl.NumberFormat.~locale.vai-Vaii"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.vi",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.vi",
+      "Intl.NumberFormat.~locale.vi",
+      "Intl.PluralRules.~locale.vi"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.vo",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.vo",
+      "Intl.NumberFormat.~locale.vo",
+      "Intl.PluralRules.~locale.vo"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.vun",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.vun",
+      "Intl.NumberFormat.~locale.vun",
+      "Intl.PluralRules.~locale.vun"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.wae",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.wae",
+      "Intl.NumberFormat.~locale.wae",
+      "Intl.PluralRules.~locale.wae"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.wo",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.wo",
+      "Intl.NumberFormat.~locale.wo",
+      "Intl.PluralRules.~locale.wo"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.xh",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.xh",
+      "Intl.NumberFormat.~locale.xh",
+      "Intl.PluralRules.~locale.xh"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.xog",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.xog",
+      "Intl.NumberFormat.~locale.xog",
+      "Intl.PluralRules.~locale.xog"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.yav",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.yav",
+      "Intl.NumberFormat.~locale.yav"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.yi",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.yi",
+      "Intl.NumberFormat.~locale.yi",
+      "Intl.PluralRules.~locale.yi"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.yo",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.yo",
+      "Intl.NumberFormat.~locale.yo",
+      "Intl.PluralRules.~locale.yo"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.yo-BJ",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.yo-BJ",
+      "Intl.NumberFormat.~locale.yo-BJ"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.yue",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.yue",
+      "Intl.NumberFormat.~locale.yue",
+      "Intl.PluralRules.~locale.yue"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.yue-Hans",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.yue-Hans",
+      "Intl.NumberFormat.~locale.yue-Hans"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.yue-Hant",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.yue-Hant",
+      "Intl.NumberFormat.~locale.yue-Hant"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.zgh",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.zgh",
+      "Intl.NumberFormat.~locale.zgh"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.zh",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.zh",
+      "Intl.NumberFormat.~locale.zh",
+      "Intl.PluralRules.~locale.zh"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.zh-Hans",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.zh-Hans",
+      "Intl.NumberFormat.~locale.zh-Hans"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.zh-Hans-HK",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.zh-Hans-HK",
+      "Intl.NumberFormat.~locale.zh-Hans-HK"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.zh-Hans-MO",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.zh-Hans-MO",
+      "Intl.NumberFormat.~locale.zh-Hans-MO"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.zh-Hans-SG",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.zh-Hans-SG",
+      "Intl.NumberFormat.~locale.zh-Hans-SG"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.zh-Hant",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.zh-Hant",
+      "Intl.NumberFormat.~locale.zh-Hant"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.zh-Hant-HK",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.zh-Hant-HK",
+      "Intl.NumberFormat.~locale.zh-Hant-HK"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.zh-Hant-MO",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.zh-Hant-MO",
+      "Intl.NumberFormat.~locale.zh-Hant-MO"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.zu",
+    "deps": [
+      "Intl.DateTimeFormat.~locale.zu",
+      "Intl.NumberFormat.~locale.zu",
+      "Intl.PluralRules.~locale.zu"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.an",
+    "deps": [
+      "Intl.PluralRules.~locale.an"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.ars",
+    "deps": [
+      "Intl.PluralRules.~locale.ars"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.bho",
+    "deps": [
+      "Intl.PluralRules.~locale.bho"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.dv",
+    "deps": [
+      "Intl.PluralRules.~locale.dv"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.guw",
+    "deps": [
+      "Intl.PluralRules.~locale.guw"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.in",
+    "deps": [
+      "Intl.PluralRules.~locale.in"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.io",
+    "deps": [
+      "Intl.PluralRules.~locale.io"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.iu",
+    "deps": [
+      "Intl.PluralRules.~locale.iu"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.iw",
+    "deps": [
+      "Intl.PluralRules.~locale.iw"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.jbo",
+    "deps": [
+      "Intl.PluralRules.~locale.jbo"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.ji",
+    "deps": [
+      "Intl.PluralRules.~locale.ji"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.jw",
+    "deps": [
+      "Intl.PluralRules.~locale.jw"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.kaj",
+    "deps": [
+      "Intl.PluralRules.~locale.kaj"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.kcg",
+    "deps": [
+      "Intl.PluralRules.~locale.kcg"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.mo",
+    "deps": [
+      "Intl.PluralRules.~locale.mo"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.nah",
+    "deps": [
+      "Intl.PluralRules.~locale.nah"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.no",
+    "deps": [
+      "Intl.PluralRules.~locale.no"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.nqo",
+    "deps": [
+      "Intl.PluralRules.~locale.nqo"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.nr",
+    "deps": [
+      "Intl.PluralRules.~locale.nr"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.nso",
+    "deps": [
+      "Intl.PluralRules.~locale.nso"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.ny",
+    "deps": [
+      "Intl.PluralRules.~locale.ny"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.osa",
+    "deps": [
+      "Intl.PluralRules.~locale.osa"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.pap",
+    "deps": [
+      "Intl.PluralRules.~locale.pap"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.sc",
+    "deps": [
+      "Intl.PluralRules.~locale.sc"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.scn",
+    "deps": [
+      "Intl.PluralRules.~locale.scn"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.sdh",
+    "deps": [
+      "Intl.PluralRules.~locale.sdh"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.sh",
+    "deps": [
+      "Intl.PluralRules.~locale.sh"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.sma",
+    "deps": [
+      "Intl.PluralRules.~locale.sma"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.smi",
+    "deps": [
+      "Intl.PluralRules.~locale.smi"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.smj",
+    "deps": [
+      "Intl.PluralRules.~locale.smj"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.sms",
+    "deps": [
+      "Intl.PluralRules.~locale.sms"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.ss",
+    "deps": [
+      "Intl.PluralRules.~locale.ss"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.ssy",
+    "deps": [
+      "Intl.PluralRules.~locale.ssy"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.st",
+    "deps": [
+      "Intl.PluralRules.~locale.st"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.su",
+    "deps": [
+      "Intl.PluralRules.~locale.su"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.syr",
+    "deps": [
+      "Intl.PluralRules.~locale.syr"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.tig",
+    "deps": [
+      "Intl.PluralRules.~locale.tig"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.tl",
+    "deps": [
+      "Intl.PluralRules.~locale.tl"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.tn",
+    "deps": [
+      "Intl.PluralRules.~locale.tn"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.ts",
+    "deps": [
+      "Intl.PluralRules.~locale.ts"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.ve",
+    "deps": [
+      "Intl.PluralRules.~locale.ve"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Intl.~locale.wa",
+    "deps": [
+      "Intl.PluralRules.~locale.wa"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "TextDecoder",
+    "deps": [
+      "TextEncoder"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "URLSearchParams",
+    "deps": [
+      "URL"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Document",
+    "deps": [
+      "document"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "PageVisibility",
+    "deps": [
+      "document.visibilityState"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Navigator.prototype.geolocation",
+    "deps": [
+      "navigator.geolocation"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "scroll",
+    "deps": [
+      "smoothscroll"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "scrollBy",
+    "deps": [
+      "smoothscroll"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "scrollIntoView",
+    "deps": [
+      "smoothscroll"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Element.prototype.scroll",
+    "deps": [
+      "smoothscroll"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Element.prototype.scrollBy",
+    "deps": [
+      "smoothscroll"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Element.prototype.scrollIntoView",
+    "deps": [
+      "smoothscroll"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "window.scroll",
+    "deps": [
+      "smoothscroll"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "window.scrollBy",
+    "deps": [
+      "smoothscroll"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "html5shiv",
+    "deps": [
+      "~html5-elements"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "viewport",
+    "deps": [
+      "~viewport"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "innerHeight",
+    "deps": [
+      "~viewport"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "innerWidth",
+    "deps": [
+      "~viewport"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "pageXOffset",
+    "deps": [
+      "~viewport"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "pageYOffset",
+    "deps": [
+      "~viewport"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "scrollX",
+    "deps": [
+      "~viewport"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "scrollY",
+    "deps": [
+      "~viewport"
+    ],
+    "isAlias": true
   }
 ]

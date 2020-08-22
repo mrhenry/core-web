@@ -29,6 +29,7 @@ async function genAll() {
 	await mkdir(helpersDir);
 
 	const mapping = [];
+	const aliases = [];
 
 	const features = await polyfillLibrary.listAllPolyfills();
 	for (const feature of features) {
@@ -41,7 +42,7 @@ async function genAll() {
 			filename = path.join(helpersDir, feature + ".js");
 		}
 
-		await writeFile(filename, await gen(feature, mapping), {
+		await writeFile(filename, await gen(feature, mapping, aliases), {
 			encoding: "utf-8"
 		});
 	}
@@ -60,13 +61,55 @@ async function genAll() {
 	// webcomponents
 	await generateWebComponents(mapping);
 
+	// aliases
+	const inversedAliases = {};
+	aliases.forEach((alias) => {
+		alias.entries.forEach((entry) => {
+			inversedAliases[entry] = inversedAliases[entry] || [];
+			inversedAliases[entry].push(alias.name);
+		});
+	});
+
+	for (let entrypoint in inversedAliases) {
+		const features = inversedAliases[entrypoint];
+		if (entrypoint.indexOf('caniuse') === 0) {
+			continue;
+		}
+
+		if (entrypoint.indexOf('default') === 0) {
+			continue;
+		}
+
+		if (entrypoint.indexOf('modernizr') === 0) {
+			continue;
+		}
+
+		if (entrypoint.indexOf('dom') === 0) {
+			continue;
+		}
+
+		if (entrypoint.indexOf('css') === 0) {
+			continue;
+		}
+
+		if (entrypoint.indexOf('blissfuljs') === 0) {
+			continue;
+		}
+
+		mapping.push({
+			name: entrypoint,
+			deps: features,
+			isAlias: true,
+		});
+	}
+
 	await writeFile(
 		path.join(helpersDir, "__mapping.js"),
 		`module.exports = ${JSON.stringify(mapping, undefined, "  ")}`
 	);
 }
 
-async function gen(feature, mapping) {
+async function gen(feature, mapping, aliases) {
 	const meta = await polyfillLibrary.describePolyfill(feature);
 	const output = mergeStream();
 	const helperName = normalizeHelperName(feature);
@@ -77,6 +120,13 @@ async function gen(feature, mapping) {
 			name: feature,
 			deps: Array.from(dependencies).filter(n => !providedByBabel(n)),
 			browsers: meta.browsers
+		});
+	}
+
+	if (meta.aliases) {
+		aliases.push({
+			name: feature,
+			entries: meta.aliases
 		});
 	}
 

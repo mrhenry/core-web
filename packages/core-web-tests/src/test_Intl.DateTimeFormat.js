@@ -1,5 +1,3 @@
-import '@mrhenry/core-web/modules/Intl.~locale.en-US';
-import '@mrhenry/core-web/modules/Intl.~locale.en-GB';
 import '@mrhenry/core-web/modules/Intl.DateTimeFormat.~locale.en-US';
 import '@mrhenry/core-web/modules/Intl.DateTimeFormat.~locale.en-GB';
 
