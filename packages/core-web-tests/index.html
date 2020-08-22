@@ -12,6 +12,12 @@
 	<body>
 		<div id="qunit"></div>
 		<div id="qunit-fixture"></div>
+
+		<script>
+			delete window.Intl
+			delete Intl
+		</script>
+
 		<script src="qunit-2.9.2.js"></script>
 		<script src="dist/non-interactive.bundle.js"></script>
 	</body>
