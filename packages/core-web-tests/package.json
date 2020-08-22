@@ -1,20 +1,20 @@
 {
   "name": "@mrhenry/core-web-tests",
-  "version": "0.3.7",
+  "version": "0.3.9",
   "private": true,
   "scripts": {
     "build": "webpack",
     "lint": "eslint --fix ./src/*.js"
   },
   "devDependencies": {
-    "@babel/core": "^7.10.5",
+    "@babel/core": "^7.11.1",
     "@babel/preset-env": "^7.10.4",
-    "@mrhenry/babel-plugin-core-web": "^0.3.7",
+    "@mrhenry/babel-plugin-core-web": "^0.3.9",
     "@types/qunit": "2.9.x",
     "babel-loader": "^8.0.6",
-    "browserstack-runner": "^0.9.2",
+    "browserstack-runner": "^0.9.3",
     "core-js": "^3.6.5",
-    "eslint": "^7.5.0",
+    "eslint": "^7.7.0",
     "regenerator-runtime": "0.13.x",
     "webpack": "^4.44.x",
     "webpack-cli": "^3.3.12"
