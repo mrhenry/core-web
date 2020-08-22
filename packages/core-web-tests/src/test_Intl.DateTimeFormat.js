@@ -1,7 +1,7 @@
 import '@mrhenry/core-web/modules/Intl.~locale.en-US';
 import '@mrhenry/core-web/modules/Intl.~locale.en-GB';
-import '@mrhenry/core-web/modules/Intl.DateTimeFormat.~locale.en-US';
-import '@mrhenry/core-web/modules/Intl.DateTimeFormat.~locale.en-GB';
+// import '@mrhenry/core-web/modules/Intl.DateTimeFormat.~locale.en-US';
+// import '@mrhenry/core-web/modules/Intl.DateTimeFormat.~locale.en-GB';
 
 QUnit.test('Intl.DateTimeFormat ', function(assert) {
 	const date = new Date(Date.UTC(2012, 11, 20, 12, 0, 0));
