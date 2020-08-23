@@ -6,7 +6,7 @@ QUnit.test('Intl.DateTimeFormat – en', function (assert) {
 	const remove_LEFT_TO_RIGHT_MARKER = s => s.replace(/\u200E/g, '');
 	assert.equal(
 		remove_LEFT_TO_RIGHT_MARKER(new Intl.DateTimeFormat('en').format(date)),
-		'12/20/2012, 12 PM'
+		'12/20/2012'
 	);
 });
 
@@ -15,7 +15,7 @@ QUnit.test('Intl.DateTimeFormat – en-GB', function (assert) {
 	const remove_LEFT_TO_RIGHT_MARKER = s => s.replace(/\u200E/g, '');
 	assert.equal(
 		remove_LEFT_TO_RIGHT_MARKER(new Intl.DateTimeFormat('en-GB').format(date)),
-		'20 12 2012'
+		'20/12/2012'
 	);
 });
 
@@ -24,6 +24,6 @@ QUnit.test('Intl.DateTimeFormat – en-US-POSIX', function (assert) {
 	const remove_LEFT_TO_RIGHT_MARKER = s => s.replace(/\u200E/g, '');
 	assert.equal(
 		remove_LEFT_TO_RIGHT_MARKER(new Intl.DateTimeFormat('en-US-POSIX').format(date)),
-		'12/20/2012, 12 PM'
+		'12/20/2012'
 	);
 });
