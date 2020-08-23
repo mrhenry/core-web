@@ -1,6 +1,6 @@
 install:
 	yarn
-	yarn bootstrap
+	yarn lerna bootstrap
 
 generate: yarn
 	(cd packages/core-web-generator && yarn build)

@@ -1,5 +1,19 @@
 version: 2
 updates:
+- package-ecosystem: "github-actions"
+  directory: "/"
+  schedule:
+    interval: "weekly"
+    day: "sunday"
+    time: "01:00"
+    timezone: "Europe/Brussels"
+  open-pull-requests-limit: 10
+  reviewers:
+  - romainmenke
+  - fd
+  labels:
+  - "github-actions"
+  - "dependencies"
 - package-ecosystem: "npm"
   directory: "/"
   schedule:
@@ -12,4 +26,3 @@ updates:
   - romainmenke
   - fd
   versioning-strategy: increase
-  rebase-strategy: disabled
