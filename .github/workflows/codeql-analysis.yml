@@ -35,8 +35,8 @@ jobs:
       #   languages: go, javascript, csharp, python, cpp, java
 
     - run: |
-      make install
-      make generate
+        make install
+        make generate
 
     - name: Perform CodeQL Analysis
       uses: github/codeql-action/analyze@v1
