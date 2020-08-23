@@ -208,4 +208,5 @@ const aliasPrefixesToSkip = [
 	'dom',
 	'html5',
 	'modernizr',
+	'HTMLCanvasElement.protoype.toBlob', // see : https://github.com/Financial-Times/polyfill-library/issues/836
 ];

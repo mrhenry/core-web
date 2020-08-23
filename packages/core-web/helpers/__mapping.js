@@ -22940,13 +22940,6 @@ module.exports = [
     "detector": true
   },
   {
-    "name": "HTMLCanvasElement.protoype.toBlob",
-    "deps": [
-      "HTMLCanvasElement.prototype.toBlob"
-    ],
-    "isAlias": true
-  },
-  {
     "name": "URLSearchParams",
     "deps": [
       "URL"
