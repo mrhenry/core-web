@@ -1,6 +1,6 @@
 {
   "name": "@mrhenry/core-web-generator",
-  "version": "0.3.9",
+  "version": "0.3.10",
   "private": true,
   "scripts": {
     "build": "node ./generate.js"
