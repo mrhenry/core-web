@@ -22938,5 +22938,138 @@ module.exports = [
       "opera": "<64"
     },
     "detector": true
+  },
+  {
+    "name": "URLSearchParams",
+    "deps": [
+      "URL"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Document",
+    "deps": [
+      "document"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "PageVisibility",
+    "deps": [
+      "document.visibilityState"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Navigator.prototype.geolocation",
+    "deps": [
+      "navigator.geolocation"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "scroll",
+    "deps": [
+      "smoothscroll"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "scrollBy",
+    "deps": [
+      "smoothscroll"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "scrollIntoView",
+    "deps": [
+      "smoothscroll"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Element.prototype.scroll",
+    "deps": [
+      "smoothscroll"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Element.prototype.scrollBy",
+    "deps": [
+      "smoothscroll"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "Element.prototype.scrollIntoView",
+    "deps": [
+      "smoothscroll"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "window.scroll",
+    "deps": [
+      "smoothscroll"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "window.scrollBy",
+    "deps": [
+      "smoothscroll"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "viewport",
+    "deps": [
+      "~viewport"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "innerHeight",
+    "deps": [
+      "~viewport"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "innerWidth",
+    "deps": [
+      "~viewport"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "pageXOffset",
+    "deps": [
+      "~viewport"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "pageYOffset",
+    "deps": [
+      "~viewport"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "scrollX",
+    "deps": [
+      "~viewport"
+    ],
+    "isAlias": true
+  },
+  {
+    "name": "scrollY",
+    "deps": [
+      "~viewport"
+    ],
+    "isAlias": true
   }
 ]

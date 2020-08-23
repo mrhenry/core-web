@@ -36,7 +36,14 @@ function required(browser, version) {
 
 	for (const feature of names()) {
 		const meta = get(feature);
-		if (!meta) continue;
+		if (!meta) {
+			continue;
+		}
+
+		if (meta.isAlias) {
+			out.push(feature);
+			continue;
+		}
 
 		const isBrowserMatch =
 			meta.browsers &&
@@ -46,6 +53,7 @@ function required(browser, version) {
 
 		if (isBrowserMatch || unknownOverride) {
 			out.push(feature);
+			continue;
 		}
 	}
 
