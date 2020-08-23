@@ -201,11 +201,11 @@ function skipAlias(aliasEntrypoint) {
 }
 
 const aliasPrefixesToSkip = [
-	'html5',
-	'caniuse',
-	'default',
-	'modernizr',
-	'dom',
-	'css',
 	'blissfuljs',
+	'caniuse',
+	'css',
+	'default',
+	'dom',
+	'html5',
+	'modernizr',
 ];
