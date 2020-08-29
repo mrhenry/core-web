@@ -5,12 +5,13 @@ const m = require("./ast-matcher");
 const detectorsDir = path.join(path.dirname(__dirname), "detectors");
 
 class Injector {
-	constructor(features) {
+	constructor(features, options = {}) {
 		this.features = features.filter(n => has(n));
 		this.featureSet = new Set(this.features);
 		this.importSet = new Set();
 		this.aliasSet = new Set();
 		this.removeSet = new Set();
+		this.debug = options.debug || false;
 
 		this.matchers = this.features.map(name => {
 			const spec = get(name);
@@ -79,6 +80,10 @@ class Injector {
 	}
 
 	inject(path, state) {
+		if (this.debug) {
+			logImportedPolyfills([...this.importSet]);
+		}
+
 		// insert in reverse order
 		const all = [...this.importSet];
 		while (all.length) {
@@ -109,3 +114,17 @@ class Injector {
 }
 
 module.exports = Injector;
+
+function logImportedPolyfills(list) {
+	if (!list || !list.length) {
+		return;
+	}
+
+	console.log("@mrhenry/core-web - importing:");
+
+	list.sort().forEach((imported) => {
+		console.log('  ' + imported);
+	});
+
+	console.log('\n');
+}

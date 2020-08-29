@@ -28,8 +28,14 @@ function getInjector(state) {
 			required(
 				state.opts.browsers || {
 					chrome: "41"
+				},
+				{
+					debug: state.opts.debug || false,
 				}
-			)
+			),
+			{
+				debug: state.opts.debug || false,
+			}
 		);
 		state.file.set(INJECTOR, injector);
 	}
