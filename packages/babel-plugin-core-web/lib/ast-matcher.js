@@ -45,21 +45,30 @@ function matchNode(matcher, ast, state) {
 	if (nullish(matcher) && nullish(ast)) {
 		return true;
 	}
+
 	if (arrayish(matcher)) {
 		return matchNodes(matcher, ast, state);
 	}
+
 	if (typeof matcher !== "object") {
 		return false;
 	}
+
 	if (typeof ast !== "object") {
 		return false;
 	}
+
 	if (matcher.type === "Identifier" && matcher.isVariable) {
 		state[matcher.name] = ast;
 		return true;
 	}
+
 	if (matcher.type !== ast.type) {
 		return false;
+	}
+
+	if (matcher.type === 'CallExpression') {
+		return matchNodes(matcher.arguments, ast.arguments, state);
 	}
 
 	for (const key of getMatcherKeys(matcher)) {

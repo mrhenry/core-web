@@ -7,7 +7,7 @@ module.exports = function() {
 			ImportDeclaration(path, state) {
 				getInjector(state).handleImport(path, state);
 			},
-			"Identifier|MemberExpression"(path, state) {
+			"Identifier|MemberExpression|CallExpression"(path, state) {
 				getInjector(state).handleGeneric(path, state);
 			},
 			Program: {
