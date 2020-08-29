@@ -282,9 +282,10 @@ async function generateCustomElements(mapping) {
 			edge: "<79",
 			edge_mob: "*",
 			firefox: "<63",
-			safari: "*",
+			safari: "<11",
 			ie: "*",
-			opera: "<64"
+			opera: "<65",
+			samsung_mob: '<8'
 		},
 		detector: true
 	});

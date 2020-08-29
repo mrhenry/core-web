@@ -6,9 +6,7 @@ import "@mrhenry/core-web/modules/Intl.~locale.fr-FR";
 var event = new Date(Date.UTC(2012, 11, 20, 3, 0, 0));
 console.log(event.toLocaleString('nl-BE', { timeZone: 'UTC' }));
 
-customElements.define('mr-x', class extends HTMLElement {
-
-})
+customElements.define('mr-x', class extends HTMLElement {});
 
 // ["@mrhenry/core-web", {
 // 	browsers: {
