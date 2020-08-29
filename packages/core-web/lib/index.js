@@ -22,8 +22,8 @@ exports.has = function(name) {
 	return map.has(name);
 };
 
-exports.required = function (targets, options = {}) {
-	if (options && options.debug) {
+exports.required = function (targets, opts = {}) {
+	if (opts && opts.debug) {
 		logUsedTargets(targets);
 	}
 

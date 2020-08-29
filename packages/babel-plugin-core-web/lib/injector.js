@@ -5,13 +5,13 @@ const m = require("./ast-matcher");
 const detectorsDir = path.join(path.dirname(__dirname), "detectors");
 
 class Injector {
-	constructor(features, options = {}) {
+	constructor(features, opts = {}) {
 		this.features = features.filter(n => has(n));
 		this.featureSet = new Set(this.features);
 		this.importSet = new Set();
 		this.aliasSet = new Set();
 		this.removeSet = new Set();
-		this.debug = options.debug || false;
+		this.debug = opts.debug || false;
 
 		this.matchers = this.features.map(name => {
 			const spec = get(name);
@@ -110,6 +110,12 @@ class Injector {
 		for (const m of this.matchers) {
 			m(path, state);
 		}
+	}
+
+	reset() {
+		this.importSet = new Set();
+		this.aliasSet = new Set();
+		this.removeSet = new Set();
 	}
 }
 

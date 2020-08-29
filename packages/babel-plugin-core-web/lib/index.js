@@ -1,43 +1,42 @@
 const Injector = require("./injector");
 const { required } = require("@mrhenry/core-web");
 
-module.exports = function() {
+module.exports = function (_, opts) {
+	const featureSet = required(
+		opts.browsers || {
+			chrome: "41"
+		},
+		{
+			debug: opts.debug || false,
+		}
+	);
+
+	const injector = new Injector(
+		featureSet,
+		{
+			debug: opts.debug || false,
+		}
+	);
+
 	return {
+		pre(state) {
+			injector.reset();
+		},
 		visitor: {
 			ImportDeclaration(path, state) {
-				getInjector(state).handleImport(path, state);
+				injector.handleImport(path, state);
 			},
 			"Identifier|MemberExpression"(path, state) {
-				getInjector(state).handleGeneric(path, state);
+				injector.handleGeneric(path, state);
 			},
 			Program: {
 				exit(path, state) {
-					getInjector(state).inject(path, state);
+					injector.inject(path, state);
 				}
-			}
-		}
+			},
+		},
+		post(state) {
+			injector.reset();
+		},
 	};
 };
-
-const INJECTOR = Symbol();
-
-function getInjector(state) {
-	let injector = state.file.get(INJECTOR);
-	if (!injector) {
-		injector = new Injector(
-			required(
-				state.opts.browsers || {
-					chrome: "41"
-				},
-				{
-					debug: state.opts.debug || false,
-				}
-			),
-			{
-				debug: state.opts.debug || false,
-			}
-		);
-		state.file.set(INJECTOR, injector);
-	}
-	return injector;
-}
