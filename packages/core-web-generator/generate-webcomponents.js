@@ -284,7 +284,9 @@ async function generateCustomElements(mapping) {
 			firefox: "<63",
 			safari: "<11",
 			ie: "*",
-			opera: "<65",
+			opera: "<64",
+			op_mob: "<46",
+			op_mini: "*",
 			samsung_mob: '<8'
 		},
 		detector: true
