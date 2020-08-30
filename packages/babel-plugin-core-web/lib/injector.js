@@ -20,25 +20,35 @@ class Injector {
 				return this._cachingMatcher(
 					name,
 					require(path.join(detectorsDir, name + ".js")),
-					() => this._addPolyfill(name)
+					() => {
+						this._addPolyfill(name)
+					}
 				);
 			}
 
 			if (name.indexOf("~") >= 0) {
-				return this._cachingMatcher(name, [], () => this._addPolyfill(name));
+				return;
 			}
 
 			if (name.indexOf(".prototype.") >= 0) {
 				return this._cachingMatcher(
 					name,
 					[m(name.replace(/^.+\.prototype\./, ""))],
-					() => this._addPolyfill(name)
+					() => {
+						this._addPolyfill(name)
+					}
 				);
 			}
 
-			return this._cachingMatcher(name, [m(name)], () =>
-				this._addPolyfill(name)
+			return this._cachingMatcher(
+				name,
+				[m(name)],
+				() => {
+					this._addPolyfill(name)
+				}
 			);
+		}).filter((matcher) => {
+			return !!matcher;	
 		});
 	}
 
