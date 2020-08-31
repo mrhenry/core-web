@@ -22,7 +22,11 @@ exports.has = function(name) {
 	return map.has(name);
 };
 
-exports.required = function(targets) {
+exports.required = function (targets, opts = {}) {
+	if (opts && opts.debug) {
+		logUsedTargets(targets);
+	}
+
 	let all = [];
 	for (const browser of Object.keys(targets)) {
 		all = all.concat(required(browser, targets[browser]));
@@ -58,4 +62,19 @@ function required(browser, version) {
 	}
 
 	return out;
+}
+
+function logUsedTargets(targets) {
+	let all = {};
+
+	for (const browser of Object.keys(targets)) {
+		const ua = new UA(`${browser}/${targets[browser]}`);
+		all[`${browser}/${targets[browser]}`] = {
+			family: ua.getFamily(),
+			version: ua.isUnknown() ? 'unknown' : ua.getVersion(),
+		};
+	}
+
+	console.log("@mrhenry/core-web - using targets:");
+	console.log(JSON.stringify(all, null, 2) + '\n');
 }
