@@ -14,7 +14,7 @@
     "babel-loader": "^8.0.6",
     "browserstack-runner": "^0.9.3",
     "core-js": "^3.6.5",
-    "eslint": "^7.7.0",
+    "eslint": "^7.8.1",
     "regenerator-runtime": "0.13.x",
     "webpack": "^4.44.x",
     "webpack-cli": "^3.3.12"
