@@ -1,8 +1,6 @@
 const lite = require('caniuse-lite');
 const semver = require("semver");
 
-// Find any feature that is not supported in the targeted version minus one.
-// In browser the detector will pass in the targetted version and fail in any older versions
 module.exports = function generateClientSideDetectors(mapping) {
 	const out = {};
 	for (const browser of Object.keys(lite.agents)) {
