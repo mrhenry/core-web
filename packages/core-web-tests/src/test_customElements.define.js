@@ -1,38 +1,38 @@
-QUnit.test("customElements.define", function(assert) {
+QUnit.test('customElements.define', function(assert) {
 	class TestElementA extends HTMLElement {
 		foo() {
-			return "baz";
+			return 'baz';
 		}
 	}
 
-	customElements.define("test-element-a", TestElementA);
-	const fixture = document.getElementById("qunit-fixture");
+	customElements.define('test-element-a', TestElementA);
+	const fixture = document.getElementById('qunit-fixture');
 
-	fixture.innerHTML = "<test-element-a></test-element-a>";
+	fixture.innerHTML = '<test-element-a></test-element-a>';
 
-	const el = fixture.querySelector("test-element-a");
-	assert.equal(el.foo(), "baz");
+	const el = fixture.querySelector('test-element-a');
+	assert.equal(el.foo(), 'baz');
 });
 
-QUnit.test("customElements.connectedCallback", function(assert) {
+QUnit.test('customElements.connectedCallback', function(assert) {
 	class TestElementB extends HTMLElement {
 		constructor() {
 			super();
 
-			this._content = "rendered content";
+			this._content = 'rendered content';
 		}
 
 		connectedCallback() {
-			this.innerHTML = this._content || "";
+			this.innerHTML = this._content || '';
 		}
 	}
 
-	customElements.define("test-element-b", TestElementB);
-	const fixture = document.getElementById("qunit-fixture");
+	customElements.define('test-element-b', TestElementB);
+	const fixture = document.getElementById('qunit-fixture');
 	const elStart = new TestElementB();
 
 	fixture.appendChild(elStart);
 
-	const elOut = fixture.querySelector("test-element-b");
-	assert.equal(elOut.innerHTML, "rendered content");
+	const elOut = fixture.querySelector('test-element-b');
+	assert.equal(elOut.innerHTML, 'rendered content');
 });
