@@ -36,3 +36,26 @@ QUnit.test('customElements.connectedCallback', function(assert) {
 	const elOut = fixture.querySelector('test-element-b');
 	assert.equal(elOut.innerHTML, 'rendered content');
 });
+
+QUnit.test('customElements super', function (assert) {
+	class TestElementSuper extends HTMLElement {
+		foo() {
+			return 'super';
+		}
+	}
+
+	class TestElementSub extends TestElementSuper {
+		foo() {
+			return 'sub';
+		}
+	}
+
+	customElements.define('test-element-sub', TestElementSub);
+	const fixture = document.getElementById('qunit-fixture');
+	const elStart = new TestElementSub();
+
+	fixture.appendChild(elStart);
+
+	const elOut = fixture.querySelector('test-element-sub');
+	assert.equal(elOut.foo(), 'sub');
+});
