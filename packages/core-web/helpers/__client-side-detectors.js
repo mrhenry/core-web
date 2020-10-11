@@ -3062,7 +3062,8 @@ module.exports = {
       "81.0.0",
       "83.0.0",
       "84.0.0",
-      "85.0.0"
+      "85.0.0",
+      "86.0.0"
     ],
     "versions": {
       "12.0.0": {
@@ -3850,18 +3851,6 @@ module.exports = {
           {
             "name": "Intl.PluralRules.~locale.zu",
             "detectSource": "\"Intl\"in this&&Intl.PluralRules&&Intl.PluralRules.supportedLocalesOf&&function(){try{return 1===Intl.PluralRules.supportedLocalesOf(\"zu\").length}catch(l){return!1}}()\n"
-          },
-          {
-            "name": "console.markTimeline",
-            "detectSource": "\"console\"in self&&\"markTimeline\"in self.console\n"
-          },
-          {
-            "name": "console.timeline",
-            "detectSource": "\"console\"in self&&\"timeline\"in self.console\n"
-          },
-          {
-            "name": "console.timelineEnd",
-            "detectSource": "\"console\"in self&&\"timelineEnd\"in self.console\n"
           }
         ]
       },
@@ -3893,6 +3882,9 @@ module.exports = {
         "detectors": []
       },
       "85.0.0": {
+        "detectors": []
+      },
+      "86.0.0": {
         "detectors": []
       }
     }
@@ -3982,7 +3974,8 @@ module.exports = {
       "79.0.0",
       "80.0.0",
       "81.0.0",
-      "82.0.0"
+      "82.0.0",
+      "83.0.0"
     ],
     "versions": {
       "2.0.0": {
@@ -8897,20 +8890,7 @@ module.exports = {
         "detectors": []
       },
       "74.0.0": {
-        "detectors": [
-          {
-            "name": "console.markTimeline",
-            "detectSource": "\"console\"in self&&\"markTimeline\"in self.console\n"
-          },
-          {
-            "name": "console.timeline",
-            "detectSource": "\"console\"in self&&\"timeline\"in self.console\n"
-          },
-          {
-            "name": "console.timelineEnd",
-            "detectSource": "\"console\"in self&&\"timelineEnd\"in self.console\n"
-          }
-        ]
+        "detectors": []
       },
       "75.0.0": {
         "detectors": []
@@ -8934,6 +8914,9 @@ module.exports = {
         "detectors": []
       },
       "82.0.0": {
+        "detectors": []
+      },
+      "83.0.0": {
         "detectors": []
       }
     }
@@ -9024,7 +9007,8 @@ module.exports = {
       "85.0.0",
       "86.0.0",
       "87.0.0",
-      "88.0.0"
+      "88.0.0",
+      "89.0.0"
     ],
     "versions": {
       "4.0.0": {
@@ -12923,12 +12907,7 @@ module.exports = {
         "detectors": []
       },
       "67.0.0": {
-        "detectors": [
-          {
-            "name": "console.markTimeline",
-            "detectSource": "\"console\"in self&&\"markTimeline\"in self.console\n"
-          }
-        ]
+        "detectors": []
       },
       "68.0.0": {
         "detectors": [
@@ -13813,16 +13792,7 @@ module.exports = {
         "detectors": []
       },
       "80.0.0": {
-        "detectors": [
-          {
-            "name": "console.timeline",
-            "detectSource": "\"console\"in self&&\"timeline\"in self.console\n"
-          },
-          {
-            "name": "console.timelineEnd",
-            "detectSource": "\"console\"in self&&\"timelineEnd\"in self.console\n"
-          }
-        ]
+        "detectors": []
       },
       "81.0.0": {
         "detectors": []
@@ -13843,6 +13813,9 @@ module.exports = {
         "detectors": []
       },
       "88.0.0": {
+        "detectors": []
+      },
+      "89.0.0": {
         "detectors": []
       }
     }
@@ -17077,7 +17050,8 @@ module.exports = {
       "67.0.0",
       "68.0.0",
       "69.0.0",
-      "70.0.0"
+      "70.0.0",
+      "71.0.0"
     ],
     "versions": {
       "9.0.0": {
@@ -21834,6 +21808,9 @@ module.exports = {
         "detectors": []
       },
       "70.0.0": {
+        "detectors": []
+      },
+      "71.0.0": {
         "detectors": []
       }
     }
