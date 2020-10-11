@@ -37,7 +37,7 @@ module.exports = [
 
 	configBuilder({
 		name: 'old',
-		target: ['web', 'browserslist:IE 11 or Safari 6 or Opera 26'],
+		target: ['web', 'es5'],
 		core_js_browsers: [
 			'chrome >= 31',
 			'edge >= 12',
