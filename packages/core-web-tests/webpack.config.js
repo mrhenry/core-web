@@ -60,10 +60,20 @@ module.exports = [
 		name: 'ancient',
 		target: ['web', 'browserslist:IE 8'],
 		core_js_browsers: [
-			'ie >= 8',
+			'chrome >= 26',
+			'edge >= 12',
+			'firefox >= 26',
+			'opera >= 26',
+			'safari >= 6',
+			'ie >= 8'
 		],
 		core_web_browsers: {
-			ie: '8',
+			chrome: '31',
+			firefox: '26',
+			edge: '12',
+			opera: '26',
+			safari: '6',
+			ie: '8'
 		}
 	}),
 ];
