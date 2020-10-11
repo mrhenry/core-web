@@ -46,7 +46,7 @@ QUnit.test('customElements super', function (assert) {
 
 	class TestElementSub extends TestElementSuper {
 		foo() {
-			return 'sub';
+			return super.foo() + ':sub';
 		}
 	}
 
@@ -57,5 +57,5 @@ QUnit.test('customElements super', function (assert) {
 	fixture.appendChild(elStart);
 
 	const elOut = fixture.querySelector('test-element-sub');
-	assert.equal(elOut.foo(), 'sub');
+	assert.equal(elOut.foo(), 'super:sub');
 });
