@@ -128,10 +128,15 @@ exports.clientSideDetect = function (targets, opts = {}) {
 
 	let condition = "(\n";
 
-	condition += crossBrowserDetectors
+	condition += crossBrowserDetectors.map((d) => {
+		return d.detectSource;	
+	})
+		.filter((value, index, self) => {
+			return self.indexOf(value) === index;
+		})
 		.map((d) => {
 			let sub = "\t(";
-			sub += d.detectSource.trim();
+			sub += d.trim();
 			sub += ")";
 
 			return sub;

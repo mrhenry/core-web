@@ -2,7 +2,8 @@
   "exit_with_fail": true,
   "test_framework": "qunit",
   "test_path": [
-    "index.html"
+    "index-main.html",
+    "index-client-side-detect.html"
   ],
   "test_server_port": "8899",
   "browsers": [
@@ -13,6 +14,6 @@
     "chrome_latest",
     "opera_latest",
     "firefox_latest",
-    "edge_latest"
+    "edge_18"
   ]
 }

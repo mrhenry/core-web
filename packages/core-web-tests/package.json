@@ -3,7 +3,7 @@
   "version": "0.3.13",
   "private": true,
   "scripts": {
-    "build": "webpack",
+    "build": "node ./build-index-client-side-detect.js && webpack",
     "lint": "eslint --fix ./src/*.js"
   },
   "devDependencies": {
@@ -17,6 +17,6 @@
     "eslint": "^7.11.0",
     "regenerator-runtime": "0.13.x",
     "webpack": "^5.0.x",
-    "webpack-cli": "^3.3.12"
+    "webpack-cli": "^4.0.0"
   }
 }

@@ -49,6 +49,16 @@ module.exports = function generateClientSideDetectors(mapping) {
 				continue;
 			}
 
+			if (meta.name === 'console.timeline') { // Non standards track polyfill
+				continue;
+			}
+			if (meta.name === 'console.timelineEnd') { // Non standards track polyfill
+				continue;
+			}
+			if (meta.name === 'console.markTimeline') { // Non standards track polyfill
+				continue;
+			}
+
 			if (!meta.browsers || !meta.browsers[browserInfo.family]) {
 				continue;
 			}
