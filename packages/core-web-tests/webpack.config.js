@@ -12,6 +12,10 @@ module.exports = {
 		'non-interactive': './non_interactive.js'
 	},
 	devtool: 'source-map',
+	target: [
+		'web',
+		'es5'
+	],
 	module: {
 		rules: [
 			{
