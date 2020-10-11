@@ -91,6 +91,9 @@ function configBuilder(opts) {
 		},
 		devtool: 'source-map',
 		target: opts.target,
+		optimization: {
+			minimize: false
+		},
 		module: {
 			rules: [
 				{

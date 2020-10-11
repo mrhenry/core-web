@@ -58,4 +58,8 @@ QUnit.test('customElements super', function (assert) {
 
 	const elOut = fixture.querySelector('test-element-sub');
 	assert.equal(elOut.foo(), 'super:sub');
+
+	fixture.innerHTML = '<test-element-sub id="second-sub"></test-element-sub>';
+	const elOut2 = fixture.querySelector('#second-sub');
+	assert.equal(elOut2.foo(), 'super:sub');
 });
