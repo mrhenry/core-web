@@ -1,22 +1,22 @@
 {
   "name": "@mrhenry/core-web-tests",
-  "version": "0.3.12",
+  "version": "0.3.13",
   "private": true,
   "scripts": {
-    "build": "webpack",
+    "build": "node ./build-index-client-side-detect.js && webpack",
     "lint": "eslint --fix ./src/*.js"
   },
   "devDependencies": {
     "@babel/core": "^7.11.6",
     "@babel/preset-env": "^7.11.5",
-    "@mrhenry/babel-plugin-core-web": "^0.3.12",
+    "@mrhenry/babel-plugin-core-web": "^0.3.13",
     "@types/qunit": "2.9.x",
     "babel-loader": "^8.0.6",
     "browserstack-runner": "^0.9.3",
     "core-js": "^3.6.5",
-    "eslint": "^7.9.0",
+    "eslint": "^7.11.0",
     "regenerator-runtime": "0.13.x",
-    "webpack": "^4.44.x",
-    "webpack-cli": "^3.3.12"
+    "webpack": "^5.0.x",
+    "webpack-cli": "^4.0.0"
   }
 }

@@ -19,13 +19,19 @@ const detectorsDir = path.resolve(
 );
 
 const generateWebComponents = require("./generate-webcomponents");
+const generateClientSideDetectors = require("./generate-client-side-detectors");
 
 genAll();
 
 async function genAll() {
-	await rmdir(modulesDir, { recursive: true });
+	await rmdir(modulesDir, {
+		recursive: true
+	});
 	await mkdir(modulesDir);
-	await rmdir(helpersDir, { recursive: true });
+
+	await rmdir(helpersDir, {
+		recursive: true
+	});
 	await mkdir(helpersDir);
 
 	const mapping = [];
@@ -87,6 +93,11 @@ async function genAll() {
 		path.join(helpersDir, "__mapping.js"),
 		`module.exports = ${JSON.stringify(mapping, undefined, "  ")}`
 	);
+
+	await writeFile(
+		path.join(helpersDir, "__client-side-detectors.js"),
+		`module.exports = ${JSON.stringify(generateClientSideDetectors(mapping), undefined, "  ")}`
+	);
 }
 
 async function gen(feature, mapping, aliases) {
@@ -99,7 +110,8 @@ async function gen(feature, mapping, aliases) {
 		mapping.push({
 			name: feature,
 			deps: Array.from(dependencies).filter(n => !providedByBabel(n)),
-			browsers: meta.browsers
+			browsers: meta.browsers,
+			detectSource: meta.detectSource
 		});
 	}
 

@@ -1,4 +1,5 @@
 const mapping = require("../helpers/__mapping");
+const clientSideDetectors = require("../helpers/__client-side-detectors");
 const UA = require("@financial-times/polyfill-useragent-normaliser");
 
 const map = new Map();
@@ -63,6 +64,89 @@ function required(browser, version) {
 
 	return out;
 }
+
+exports.clientSideDetect = function (targets, opts = {}) {
+	if (opts && opts.debug) {
+		logUsedTargets(targets);
+	}
+
+	let crossBrowserDetectors = [];
+
+	for (const browser of Object.keys(targets)) {
+		const versionRange = '<=' + targets[browser];
+		const versionedDetectors = clientSideDetectors[browser];
+		if (!versionedDetectors) {
+			continue;
+		}
+
+		for (let i = (versionedDetectors.versionList.length - 1); i >= 0 ; i--) {
+			const version = versionedDetectors.versionList[i];
+			const ua = new UA(`${browser}/${version}`);
+
+			if (ua.satisfies(versionRange)) {
+				const detectors = versionedDetectors.versions[version].detectors;
+				if (!detectors || !detectors.length) {
+					continue;
+				}
+
+				detectors.sort((a, b) => {
+					// Picking from Intl related polyfills last.
+					// Stupid heuristic to get a wider range of features used in detection.
+					if (a.name.indexOf('Intl') === -1 && b.name.indexOf('Intl') > -1) {
+						return -1
+					}
+
+					if (a.name.indexOf('Intl') > -1 && b.name.indexOf('Intl') === -1) {
+						return 1
+					}
+
+					if (a.detectSource.length < b.detectSource.length) {
+						return -1;
+					}
+
+					if (a.detectSource.length > b.detectSource.length) {
+						return 1;
+					}
+
+					if (a.name < b.name) {
+						return -1;
+					}
+
+					if (a.name > b.name) {
+						return 1;
+					}
+					
+					return 0;
+				});
+
+				crossBrowserDetectors = crossBrowserDetectors.concat(detectors.slice(0, 3));
+				
+				break;
+			}
+		}
+	}
+
+	let condition = "(\n";
+
+	condition += crossBrowserDetectors.map((d) => {
+		return d.detectSource;	
+	})
+		.filter((value, index, self) => {
+			return self.indexOf(value) === index;
+		})
+		.map((d) => {
+			let sub = "\t(";
+			sub += d.trim();
+			sub += ")";
+
+			return sub;
+		})
+		.join(" && \n");
+
+	condition += "\n)\n";
+
+	return condition;
+};
 
 function logUsedTargets(targets) {
 	let all = {};
