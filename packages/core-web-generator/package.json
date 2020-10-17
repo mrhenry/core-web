@@ -11,7 +11,7 @@
     "@webcomponents/shadycss": "^1.10.1",
     "@webcomponents/shadydom": "^1.7.4",
     "@webcomponents/template": "^1.4.3",
-    "caniuse-lite": "^1.0.30001147",
+    "caniuse-lite": "^1.0.30001148",
     "denodeify": "^1.2.1",
     "fast-deep-equal": "^3.1.3",
     "from2-string": "^1.1.0",
