@@ -1,6 +1,6 @@
 {
   "name": "@mrhenry/babel-plugin-core-web",
-  "version": "0.3.13",
+  "version": "0.3.14",
   "description": "browser feature polyfills as a babel plugin",
   "main": "lib/index.js",
   "author": "Simon Menke <simon.menke@gmail.com>",
@@ -28,7 +28,7 @@
     "@babel/parser": "^7.11.5",
     "@babel/traverse": "^7.10.1",
     "@babel/types": "^7.9.6",
-    "@mrhenry/core-web": "^0.3.13",
+    "@mrhenry/core-web": "^0.3.14",
     "fast-deep-equal": "^3.1.3"
   },
   "bugs": {
