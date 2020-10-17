@@ -90,16 +90,6 @@ exports.clientSideDetect = function (targets, opts = {}) {
 				}
 
 				detectors.sort((a, b) => {
-					// Picking from Intl related polyfills last.
-					// Stupid heuristic to get a wider range of features used in detection.
-					if (a.name.indexOf('Intl') === -1 && b.name.indexOf('Intl') > -1) {
-						return -1
-					}
-
-					if (a.name.indexOf('Intl') > -1 && b.name.indexOf('Intl') === -1) {
-						return 1
-					}
-
 					if (a.detectSource.length < b.detectSource.length) {
 						return -1;
 					}

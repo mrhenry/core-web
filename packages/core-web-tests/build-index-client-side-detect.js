@@ -26,12 +26,6 @@ function main() {
 		detectorTemplate({
 			name: 'old',
 			browsers: {
-				opera: '71'
-			}
-		}),
-		detectorTemplate({
-			name: 'safari-latest',
-			browsers: {
 				chrome: '31',
 				firefox: '26',
 				edge: '12',

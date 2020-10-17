@@ -49,13 +49,11 @@ module.exports = function generateClientSideDetectors(mapping) {
 				continue;
 			}
 
-			if (meta.name === 'console.timeline') { // Non standards track polyfill
+			if (meta.name.indexOf('console')  === 0) { // Too many quirks
 				continue;
 			}
-			if (meta.name === 'console.timelineEnd') { // Non standards track polyfill
-				continue;
-			}
-			if (meta.name === 'console.markTimeline') { // Non standards track polyfill
+
+			if (meta.name.indexOf('Intl')  === 0) { // Too many quirks
 				continue;
 			}
 
