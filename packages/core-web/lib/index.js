@@ -37,7 +37,7 @@ exports.required = function (targets, opts = {}) {
 
 function required(browser, version) {
 	const out = [];
-	const ua = new UA(`${browser}/${version}`);
+	const ua = fallbackUA(new UA(`${browser}/${version}`), browser, version);
 
 	for (const feature of names()) {
 		const meta = get(feature);
@@ -54,9 +54,8 @@ function required(browser, version) {
 			meta.browsers &&
 			meta.browsers[ua.getFamily()] &&
 			ua.satisfies(meta.browsers[ua.getFamily()]);
-		const unknownOverride = ua.isUnknown();
 
-		if (isBrowserMatch || unknownOverride) {
+		if (isBrowserMatch || ua.getFamily() === 'other') {
 			out.push(feature);
 			continue;
 		}
@@ -81,7 +80,7 @@ exports.clientSideDetect = function (targets, opts = {}) {
 
 		for (let i = (versionedDetectors.versionList.length - 1); i >= 0 ; i--) {
 			const version = versionedDetectors.versionList[i];
-			const ua = new UA(`${browser}/${version}`);
+			const ua = fallbackUA(new UA(`${browser}/${version}`), browser, version);
 
 			if (ua.satisfies(versionRange)) {
 				const detectors = versionedDetectors.versions[version].detectors;
@@ -142,13 +141,31 @@ function logUsedTargets(targets) {
 	let all = {};
 
 	for (const browser of Object.keys(targets)) {
-		const ua = new UA(`${browser}/${targets[browser]}`);
+		const ua = fallbackUA(new UA(`${browser}/${targets[browser]}`), browser, targets[browser]);
 		all[`${browser}/${targets[browser]}`] = {
 			family: ua.getFamily(),
-			version: ua.isUnknown() ? 'unknown' : ua.getVersion(),
+			version: (ua.getFamily() === 'other') ? 'unknown' : ua.getVersion(),
 		};
 	}
 
 	console.log("@mrhenry/core-web - using targets:");
 	console.log(JSON.stringify(all, null, 2) + '\n');
+}
+
+function fallbackUA(ua, browser, version) {
+	if (ua.isUnknown() && /^(\w+)\/(\d+)(?:\.(\d+)(?:\.(\d+))?)?$/i.test(`${browser}/${version}`)) {
+		const normalized = `${browser}/${version}`.match(/^(\w+)\/(\d+)(?:\.(\d+)(?:\.(\d+))?)?$/i);
+
+		if (!UA.getBaselines()[normalized[1].toLowerCase()]) {
+			return ua;
+		}
+
+		ua.ua.family = normalized[1].toLowerCase();
+		ua.ua.major = normalized[2];
+		ua.ua.minor = normalized[3] || "0";
+		ua.ua.patch = "0";
+		ua.version = (Number(ua.ua.major) || 0) + "." + (Number(ua.ua.minor) || 0) + ".0";
+	}
+
+	return ua;
 }
