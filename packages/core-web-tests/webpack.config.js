@@ -16,7 +16,7 @@ module.exports = [
 			opera: '70',
 			safari: '13',
 		},
-		includeDeprecated : false,
+		excludeDeprecated : false,
 	}),
 
 	configBuilder({
@@ -34,7 +34,7 @@ module.exports = [
 			firefox: '40',
 			safari: '10',
 		},
-		includeDeprecated : false,
+		excludeDeprecated : false,
 	}),
 
 	configBuilder({
@@ -56,7 +56,7 @@ module.exports = [
 			safari: '6',
 			ie: '11'
 		},
-		includeDeprecated : false,
+		excludeDeprecated : false,
 	}),
 
 	configBuilder({
@@ -133,7 +133,7 @@ function configBuilder(opts) {
 									'@mrhenry/core-web',
 									{
 										browsers: opts.coreWebBrowsers,
-										includeDeprecated: opts.includeDeprecated,
+										excludeDeprecated: opts.excludeDeprecated,
 									}
 								]
 							],
