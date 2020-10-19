@@ -8,6 +8,7 @@ module.exports = function (_, opts) {
 		},
 		{
 			debug: opts.debug || false,
+			excludeDeprecated: opts.excludeDeprecated  || false,
 		}
 	);
 
@@ -15,6 +16,7 @@ module.exports = function (_, opts) {
 		featureSet,
 		{
 			debug: opts.debug || false,
+			excludeDeprecated: opts.excludeDeprecated || false,
 		}
 	);
 
