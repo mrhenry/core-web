@@ -4,41 +4,43 @@ module.exports = [
 	configBuilder({
 		name: 'modern',
 		target: ['web', 'browserslist:last 2 versions and > 2%'],
-		core_js_browsers: [
+		coreJsBrowsers: [
 			'chrome >= 80',
 			'firefox >= 76',
 			'opera >= 70',
 			'safari >= 13',
 		],
-		core_web_browsers: {
+		coreWebBrowsers: {
 			chrome: '80',
 			firefox: '76',
 			opera: '70',
 			safari: '13',
-		}
+		},
+		includeDeprecated : false,
 	}),
 
 	configBuilder({
 		name: 'main',
 		target: ['web', 'browserslist:Edge 18 or Safari 10 or Firefox 40'],
-		core_js_browsers: [
+		coreJsBrowsers: [
 			'chrome >= 56',
 			'edge >= 18',
 			'firefox >= 40',
 			'safari >= 10',
 		],
-		core_web_browsers: {
+		coreWebBrowsers: {
 			chrome: '56',
 			edge: '18',
 			firefox: '40',
 			safari: '10',
-		}
+		},
+		includeDeprecated : false,
 	}),
 
 	configBuilder({
 		name: 'old',
 		target: ['web', 'es5'],
-		core_js_browsers: [
+		coreJsBrowsers: [
 			'chrome >= 31',
 			'edge >= 12',
 			'firefox >= 26',
@@ -46,20 +48,21 @@ module.exports = [
 			'safari >= 6',
 			'ie >= 11'
 		],
-		core_web_browsers: {
+		coreWebBrowsers: {
 			chrome: '31',
 			firefox: '26',
 			edge: '12',
 			opera: '26',
 			safari: '6',
 			ie: '11'
-		}
+		},
+		includeDeprecated : false,
 	}),
 
 	configBuilder({
 		name: 'ancient',
 		target: ['web', 'browserslist:IE 8'],
-		core_js_browsers: [
+		coreJsBrowsers: [
 			'chrome >= 26',
 			'edge >= 12',
 			'firefox >= 26',
@@ -67,7 +70,7 @@ module.exports = [
 			'safari >= 6',
 			'ie >= 8'
 		],
-		core_web_browsers: {
+		coreWebBrowsers: {
 			chrome: '31',
 			firefox: '26',
 			edge: '12',
@@ -109,7 +112,7 @@ function configBuilder(opts) {
 									{
 										corejs: '^3.6.3',
 										targets: {
-											browsers: opts.core_js_browsers
+											browsers: opts.coreJsBrowsers
 										},
 										useBuiltIns: 'usage'
 									}
@@ -129,7 +132,8 @@ function configBuilder(opts) {
 								[
 									'@mrhenry/core-web',
 									{
-										browsers: opts.core_web_browsers
+										browsers: opts.coreWebBrowsers,
+										includeDeprecated: opts.includeDeprecated,
 									}
 								]
 							],
@@ -139,7 +143,7 @@ function configBuilder(opts) {
 									{
 										corejs: '^3.6.3',
 										targets: {
-											browsers: opts.core_js_browsers
+											browsers: opts.coreJsBrowsers
 										},
 										useBuiltIns: 'usage'
 									}

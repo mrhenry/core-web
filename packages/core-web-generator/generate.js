@@ -111,7 +111,8 @@ async function gen(feature, mapping, aliases) {
 			name: feature,
 			deps: Array.from(dependencies).filter(n => !providedByBabel(n)),
 			browsers: meta.browsers,
-			detectSource: meta.detectSource
+			detectSource: meta.detectSource,
+			deprecated: deprecated(feature)
 		});
 	}
 
@@ -186,6 +187,18 @@ async function allDependencies(feature) {
 function providedByBabel(f) {
 	const p = /^(_(String|Array)?Iterator|_TypedArray|Function|Date|Math|Object|String|Number|(Weak)?(Map|Set)|Symbol|Array|RegExp|Promise|Reflect)($|\.)/;
 	return p.test(f) || f.endsWith(".@@iterator");
+}
+
+function deprecated(f) {
+	const deprecatedList = [
+		"localStorage",
+	];
+
+	if (deprecatedList.includes(f)) {
+		return true;
+	}
+
+	return false;
 }
 
 function normalizeHelperName(name) {
