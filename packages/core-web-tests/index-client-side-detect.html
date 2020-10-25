@@ -72,12 +72,10 @@ if("a=1"===String(c))return!0}}return!1}catch(h){return!1}})(self)) &&
 
 	if (
 	("location"in self&&"origin"in self.location) && 
-	("HTMLPictureElement"in self||"picturefill"in self) && 
-	("performance"in self&&"function"==typeof self.performance.getEntriesByType&&"function"==typeof self.performance.mark) && 
 	("HTMLTemplateElement"in self) && 
-	("document"in self&&"hidden"in document&&"visibilityState"in document) && 
-	("document"in self&&"closest"in document.documentElement) && 
-	(("function"==typeof self.CSS||"object"==typeof self.CSS)&&"function"==typeof self.CSS.supports) && 
+	("requestAnimationFrame"in self) && 
+	("navigator"in self&&"sendBeacon"in navigator) && 
+	("EventSource"in self&&"function"==typeof self.EventSource) && 
 	("toBlob"in HTMLCanvasElement.prototype) && 
 	((function(n){if(!("Event"in n))return!1
 try{return new Event("click"),!0}catch(t){return!1}})(self))

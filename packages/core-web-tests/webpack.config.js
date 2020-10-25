@@ -16,7 +16,6 @@ module.exports = [
 			opera: '70',
 			safari: '13',
 		},
-		excludeDeprecated : false,
 	}),
 
 	configBuilder({
@@ -34,7 +33,6 @@ module.exports = [
 			firefox: '40',
 			safari: '10',
 		},
-		excludeDeprecated : false,
 	}),
 
 	configBuilder({
@@ -56,7 +54,6 @@ module.exports = [
 			safari: '6',
 			ie: '11'
 		},
-		excludeDeprecated : false,
 	}),
 
 	configBuilder({

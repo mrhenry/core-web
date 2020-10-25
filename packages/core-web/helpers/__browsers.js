@@ -1,0 +1,19 @@
+module.exports = [
+  "edge",
+  "edge_mob",
+  "ie",
+  "ie_mob",
+  "firefox",
+  "opera",
+  "safari",
+  "chrome",
+  "ios_saf",
+  "firefox_mob",
+  "samsung_mob",
+  "android",
+  "op_mini",
+  "ios_chr",
+  "bb",
+  "op_mob",
+  "blackberry"
+]
