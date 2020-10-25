@@ -16,10 +16,6 @@ class Injector {
 		this.matchers = this.features.map(name => {
 			const spec = get(name);
 
-			if (spec.deprecated && opts.excludeDeprecated === true) {
-				return;
-			}
-
 			if (spec.detector) {
 				return this._cachingMatcher(
 					name,

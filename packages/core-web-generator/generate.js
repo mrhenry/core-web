@@ -89,6 +89,15 @@ async function genAll() {
 		});
 	}
 
+	let knownBrowsers = [];
+	mapping.forEach((feature) => {
+		for (const browser in feature.browsers) {
+			if (!knownBrowsers.includes(browser)) {
+				knownBrowsers.push(browser);
+			}
+		}
+	});
+
 	await writeFile(
 		path.join(helpersDir, "__mapping.js"),
 		`module.exports = ${JSON.stringify(mapping, undefined, "  ")}`
@@ -97,6 +106,11 @@ async function genAll() {
 	await writeFile(
 		path.join(helpersDir, "__client-side-detectors.js"),
 		`module.exports = ${JSON.stringify(generateClientSideDetectors(mapping), undefined, "  ")}`
+	);
+
+	await writeFile(
+		path.join(helpersDir, "__browsers.js"),
+		`module.exports = ${JSON.stringify(knownBrowsers, undefined, "  ")}`
 	);
 }
 
@@ -111,8 +125,7 @@ async function gen(feature, mapping, aliases) {
 			name: feature,
 			deps: Array.from(dependencies).filter(n => !providedByBabel(n)),
 			browsers: meta.browsers,
-			detectSource: meta.detectSource,
-			deprecated: deprecated(feature)
+			detectSource: meta.detectSource
 		});
 	}
 
@@ -187,18 +200,6 @@ async function allDependencies(feature) {
 function providedByBabel(f) {
 	const p = /^(_(String|Array)?Iterator|_TypedArray|Function|Date|Math|Object|String|Number|(Weak)?(Map|Set)|Symbol|Array|RegExp|Promise|Reflect)($|\.)/;
 	return p.test(f) || f.endsWith(".@@iterator");
-}
-
-function deprecated(f) {
-	const deprecatedList = [
-		"localStorage",
-	];
-
-	if (deprecatedList.includes(f)) {
-		return true;
-	}
-
-	return false;
 }
 
 function normalizeHelperName(name) {
