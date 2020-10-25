@@ -2012,10 +2012,10 @@
   resolved "https://registry.yarnpkg.com/@webcomponents/shadydom/-/shadydom-1.8.0.tgz#be4bce3549a04c8db0f5fae142bebead5f94b04a"
   integrity sha512-GYTJ4dr4uUZnut80cA94tpXXVip2RdoJpGMnYNKgh/Diz5x1U/m9Dy0RwZEzoEd7v2aRfEICac7TQ1wc50EKbQ==
 
-"@webcomponents/template@^1.4.0", "@webcomponents/template@^1.4.3":
-  version "1.4.3"
-  resolved "https://registry.yarnpkg.com/@webcomponents/template/-/template-1.4.3.tgz#edf3cb7e8870be484463d4711e2ff106e30d187d"
-  integrity sha512-Sx4vfXuHUz2pwhjFRv9maFiaKouXqImFlb7L5GwdCxwxflmbAchWTJaf3UyE2of1tVOFzB1gjZx+BAB7KVa7kw==
+"@webcomponents/template@^1.4.0", "@webcomponents/template@^1.4.4":
+  version "1.4.4"
+  resolved "https://registry.yarnpkg.com/@webcomponents/template/-/template-1.4.4.tgz#2ca5a68b65b6e9cd9b17b25a951514f254c00742"
+  integrity sha512-QqCmmywIKJTilkl6UIPLxEBBuqhDaOBpvQyKOnUEwl9lJuVHBrVlhMIhhnp9VSZJ6xEUnp+PiX8DST1k0q/v4Q==
 
 "@webpack-cli/info@^1.0.2":
   version "1.0.2"
