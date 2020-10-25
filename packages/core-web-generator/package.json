@@ -8,7 +8,7 @@
   "dependencies": {
     "@financial-times/polyfill-useragent-normaliser": "^1.9.0",
     "@webcomponents/custom-elements": "^1.4.3",
-    "@webcomponents/shadycss": "^1.10.1",
+    "@webcomponents/shadycss": "^1.10.2",
     "@webcomponents/shadydom": "^1.8.0",
     "@webcomponents/template": "^1.4.3",
     "caniuse-lite": "^1.0.30001148",
