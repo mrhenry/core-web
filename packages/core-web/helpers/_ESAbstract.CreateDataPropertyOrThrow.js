@@ -1,4 +1,4 @@
-import CreateDataProperty from "../helpers/_ESAbstract.CreateDataProperty";
+import CreateDataProperty from "@mrhenry/core-web/helpers/_ESAbstract.CreateDataProperty";
 
 // _ESAbstract.CreateDataPropertyOrThrow
 /* global CreateDataProperty */

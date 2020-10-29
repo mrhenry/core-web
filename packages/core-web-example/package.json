@@ -1,13 +1,15 @@
 {
   "name": "@mrhenry/core-web-example",
-  "version": "0.3.9",
+  "version": "0.3.16",
   "private": true,
   "scripts": {
-    "build": "babel src -d lib"
+    "build": "babel src -d lib",
+    "example-detect": "node ./src/detectors.js"
   },
   "devDependencies": {
-    "@babel/cli": "^7.10.5",
-    "@babel/core": "^7.11.4",
-    "@mrhenry/babel-plugin-core-web": "^0.3.9"
+    "@babel/cli": "^7.12.1",
+    "@babel/core": "^7.12.3",
+    "@mrhenry/babel-plugin-core-web": "^0.3.16",
+    "@mrhenry/core-web": "^0.3.16"
   }
 }
