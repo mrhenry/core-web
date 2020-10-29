@@ -1,6 +1,6 @@
-import Type from "../helpers/_ESAbstract.Type";
-import ToBoolean from "../helpers/_ESAbstract.ToBoolean";
-import Get from "../helpers/_ESAbstract.Get";
+import Type from "@mrhenry/core-web/helpers/_ESAbstract.Type";
+import ToBoolean from "@mrhenry/core-web/helpers/_ESAbstract.ToBoolean";
+import Get from "@mrhenry/core-web/helpers/_ESAbstract.Get";
 
 // _ESAbstract.IteratorComplete
 /* global Type, ToBoolean, Get */

@@ -140,7 +140,7 @@ async function gen(feature, mapping, aliases) {
 		const name = normalizeHelperName(dep);
 		if (name && !providedByBabel(dep)) {
 			output.add(
-				streamFromString(`import ${name} from "../helpers/${dep}";\n`)
+				streamFromString(`import ${name} from "@mrhenry/core-web/helpers/${dep}";\n`)
 			);
 		}
 	});

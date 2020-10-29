@@ -1,5 +1,5 @@
-import CreateMethodProperty from "../helpers/_ESAbstract.CreateMethodProperty";
-import IsCallable from "../helpers/_ESAbstract.IsCallable";
+import CreateMethodProperty from "@mrhenry/core-web/helpers/_ESAbstract.CreateMethodProperty";
+import IsCallable from "@mrhenry/core-web/helpers/_ESAbstract.IsCallable";
 (function(undefined) {
 if (!("document"in self&&"documentElement"in self.document&&"style"in self.document.documentElement&&"scrollBehavior"in document.documentElement.style||function(){try{var e=!1,t={top:1,left:0}
 Object.defineProperty(t,"behavior",{get:function(){return e=!0,"smooth"},enumerable:!0})

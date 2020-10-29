@@ -1,16 +1,16 @@
-import SameValue from "../helpers/_ESAbstract.SameValue";
-import SameValueNonNumber from "../helpers/_ESAbstract.SameValueNonNumber";
-import Type from "../helpers/_ESAbstract.Type";
-import ToNumber from "../helpers/_ESAbstract.ToNumber";
-import ToString from "../helpers/_ESAbstract.ToString";
-import ToPrimitive from "../helpers/_ESAbstract.ToPrimitive";
-import Call from "../helpers/_ESAbstract.Call";
-import GetMethod from "../helpers/_ESAbstract.GetMethod";
-import GetV from "../helpers/_ESAbstract.GetV";
-import ToObject from "../helpers/_ESAbstract.ToObject";
-import IsCallable from "../helpers/_ESAbstract.IsCallable";
-import OrdinaryToPrimitive from "../helpers/_ESAbstract.OrdinaryToPrimitive";
-import Get from "../helpers/_ESAbstract.Get";
+import SameValue from "@mrhenry/core-web/helpers/_ESAbstract.SameValue";
+import SameValueNonNumber from "@mrhenry/core-web/helpers/_ESAbstract.SameValueNonNumber";
+import Type from "@mrhenry/core-web/helpers/_ESAbstract.Type";
+import ToNumber from "@mrhenry/core-web/helpers/_ESAbstract.ToNumber";
+import ToString from "@mrhenry/core-web/helpers/_ESAbstract.ToString";
+import ToPrimitive from "@mrhenry/core-web/helpers/_ESAbstract.ToPrimitive";
+import Call from "@mrhenry/core-web/helpers/_ESAbstract.Call";
+import GetMethod from "@mrhenry/core-web/helpers/_ESAbstract.GetMethod";
+import GetV from "@mrhenry/core-web/helpers/_ESAbstract.GetV";
+import ToObject from "@mrhenry/core-web/helpers/_ESAbstract.ToObject";
+import IsCallable from "@mrhenry/core-web/helpers/_ESAbstract.IsCallable";
+import OrdinaryToPrimitive from "@mrhenry/core-web/helpers/_ESAbstract.OrdinaryToPrimitive";
+import Get from "@mrhenry/core-web/helpers/_ESAbstract.Get";
 
 // _ESAbstract.CanonicalNumericIndexString
 /* global ToNumber, SameValue, ToString */

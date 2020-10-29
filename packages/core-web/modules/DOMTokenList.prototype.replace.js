@@ -1,4 +1,4 @@
-import _DOMTokenList from "../helpers/_DOMTokenList";
+import _DOMTokenList from "@mrhenry/core-web/helpers/_DOMTokenList";
 (function(undefined) {
 if (!("replace"in(document.createElement("div").classList||{})
 )) {
