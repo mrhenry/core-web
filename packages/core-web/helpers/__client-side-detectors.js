@@ -97,7 +97,7 @@ module.exports = {
           },
           {
             "name": "DocumentFragment",
-            "detectSource": "\"DocumentFragment\"in self&&self.DocumentFragment===document.createDocumentFragment().constructor\n"
+            "detectSource": "\"DocumentFragment\"in self&&function(){try{return new DocumentFragment,!0}catch(n){return!1}}()\n"
           },
           {
             "name": "Element.prototype.placeholder",
@@ -293,6 +293,10 @@ module.exports = {
       "17.0.0": {
         "detectors": [
           {
+            "name": "DOMTokenList.prototype.replace",
+            "detectSource": "\"replace\"in(document.createElement(\"div\").classList||{})\n"
+          },
+          {
             "name": "Element.prototype.matches",
             "detectSource": "\"document\"in self&&\"matches\"in document.documentElement\n"
           },
@@ -304,6 +308,10 @@ module.exports = {
       },
       "18.0.0": {
         "detectors": [
+          {
+            "name": "TextEncoder",
+            "detectSource": "\"TextEncoder\"in self&&\"TextDecoder\"in self\n"
+          },
           {
             "name": "URL",
             "detectSource": "(function(e){\"use strict\"\ntry{var a=new e.URL(\"http://example.com\")\nif(\"href\"in a&&\"searchParams\"in a){var r=new URL(\"http://example.com\")\nif(r.search=\"a=1&b=2\",\"http://example.com/?a=1&b=2\"===r.href&&(r.search=\"\",\"http://example.com/\"===r.href)){var t=new e.URLSearchParams(\"a=1\"),c=new e.URLSearchParams(t)\nif(\"a=1\"===String(c))return!0}}return!1}catch(h){return!1}})(self)\n"
@@ -452,7 +460,7 @@ module.exports = {
         "detectors": [
           {
             "name": "DocumentFragment",
-            "detectSource": "\"DocumentFragment\"in self&&self.DocumentFragment===document.createDocumentFragment().constructor\n"
+            "detectSource": "\"DocumentFragment\"in self&&function(){try{return new DocumentFragment,!0}catch(n){return!1}}()\n"
           }
         ]
       },
@@ -541,6 +549,10 @@ module.exports = {
           {
             "name": "HTMLCanvasElement.prototype.toBlob",
             "detectSource": "\"toBlob\"in HTMLCanvasElement.prototype\n"
+          },
+          {
+            "name": "TextEncoder",
+            "detectSource": "\"TextEncoder\"in self&&\"TextDecoder\"in self\n"
           }
         ]
       },
@@ -646,7 +658,7 @@ module.exports = {
         "detectors": [
           {
             "name": "smoothscroll",
-            "detectSource": "\"document\"in self&&\"documentElement\"in self.document&&\"style\"in self.document.documentElement&&\"scrollBehavior\"in document.documentElement.style||function(){try{var e=!1,t={top:0,left:0}\nreturn Object.defineProperty(t,\"behavior\",{get:function(){return e=!0,\"smooth\"}}),document.body.scrollTo(t),e}catch(n){return!1}}()\n"
+            "detectSource": "\"document\"in self&&\"documentElement\"in self.document&&\"style\"in self.document.documentElement&&\"scrollBehavior\"in document.documentElement.style||function(){try{var e=!1,t={top:1,left:0}\nObject.defineProperty(t,\"behavior\",{get:function(){return e=!0,\"smooth\"},enumerable:!0})\nvar n=document.createElement(\"DIV\"),o=document.createElement(\"DIV\")\nreturn n.setAttribute(\"style\",\"height: 1px; overflow: scroll;\"),o.setAttribute(\"style\",\"height: 2px; overflow: scroll;\"),n.appendChild(o),n.scrollTo(t),e}catch(l){return!1}}()\n"
           }
         ]
       },
@@ -805,7 +817,12 @@ module.exports = {
         "detectors": []
       },
       "60.0.0": {
-        "detectors": []
+        "detectors": [
+          {
+            "name": "DOMTokenList.prototype.replace",
+            "detectSource": "\"replace\"in(document.createElement(\"div\").classList||{})\n"
+          }
+        ]
       },
       "61.0.0": {
         "detectors": []
@@ -1146,7 +1163,12 @@ module.exports = {
         ]
       },
       "37.0.0": {
-        "detectors": []
+        "detectors": [
+          {
+            "name": "TextEncoder",
+            "detectSource": "\"TextEncoder\"in self&&\"TextDecoder\"in self\n"
+          }
+        ]
       },
       "38.0.0": {
         "detectors": [
@@ -1329,7 +1351,12 @@ module.exports = {
         ]
       },
       "66.0.0": {
-        "detectors": []
+        "detectors": [
+          {
+            "name": "DOMTokenList.prototype.replace",
+            "detectSource": "\"replace\"in(document.createElement(\"div\").classList||{})\n"
+          }
+        ]
       },
       "67.0.0": {
         "detectors": []
@@ -1446,7 +1473,7 @@ module.exports = {
         "detectors": [
           {
             "name": "DocumentFragment",
-            "detectSource": "\"DocumentFragment\"in self&&self.DocumentFragment===document.createDocumentFragment().constructor\n"
+            "detectSource": "\"DocumentFragment\"in self&&function(){try{return new DocumentFragment,!0}catch(n){return!1}}()\n"
           },
           {
             "name": "Element.prototype.nextElementSibling",
@@ -1638,6 +1665,10 @@ module.exports = {
           {
             "name": "DOMRect",
             "detectSource": "\"DOMRect\"in self&&function(e){try{return new e}catch(t){return!1}}(self.DOMRect)\n"
+          },
+          {
+            "name": "TextEncoder",
+            "detectSource": "\"TextEncoder\"in self&&\"TextDecoder\"in self\n"
           }
         ]
       },
@@ -1659,6 +1690,10 @@ module.exports = {
       },
       "11.1.0": {
         "detectors": [
+          {
+            "name": "DOMTokenList.prototype.replace",
+            "detectSource": "\"replace\"in(document.createElement(\"div\").classList||{})\n"
+          },
           {
             "name": "Element.prototype.toggleAttribute",
             "detectSource": "\"document\"in self&&\"toggleAttribute\"in document.documentElement\n"
@@ -1809,7 +1844,7 @@ module.exports = {
         "detectors": [
           {
             "name": "DocumentFragment",
-            "detectSource": "\"DocumentFragment\"in self&&self.DocumentFragment===document.createDocumentFragment().constructor\n"
+            "detectSource": "\"DocumentFragment\"in self&&function(){try{return new DocumentFragment,!0}catch(n){return!1}}()\n"
           }
         ]
       },
@@ -1922,6 +1957,10 @@ module.exports = {
       },
       "24.0.0": {
         "detectors": [
+          {
+            "name": "TextEncoder",
+            "detectSource": "\"TextEncoder\"in self&&\"TextDecoder\"in self\n"
+          },
           {
             "name": "screen.orientation",
             "detectSource": "\"screen\"in self&&\"orientation\"in self.screen&&\"object\"==typeof self.screen.orientation\n"
@@ -2101,7 +2140,12 @@ module.exports = {
         ]
       },
       "53.0.0": {
-        "detectors": []
+        "detectors": [
+          {
+            "name": "DOMTokenList.prototype.replace",
+            "detectSource": "\"replace\"in(document.createElement(\"div\").classList||{})\n"
+          }
+        ]
       },
       "54.0.0": {
         "detectors": []
@@ -2193,7 +2237,7 @@ module.exports = {
         "detectors": [
           {
             "name": "DocumentFragment",
-            "detectSource": "\"DocumentFragment\"in self&&self.DocumentFragment===document.createDocumentFragment().constructor\n"
+            "detectSource": "\"DocumentFragment\"in self&&function(){try{return new DocumentFragment,!0}catch(n){return!1}}()\n"
           }
         ]
       },
@@ -2301,6 +2345,10 @@ module.exports = {
           {
             "name": "DOMRect",
             "detectSource": "\"DOMRect\"in self&&function(e){try{return new e}catch(t){return!1}}(self.DOMRect)\n"
+          },
+          {
+            "name": "TextEncoder",
+            "detectSource": "\"TextEncoder\"in self&&\"TextDecoder\"in self\n"
           }
         ]
       },
@@ -2326,6 +2374,10 @@ module.exports = {
       },
       "11.3.0": {
         "detectors": [
+          {
+            "name": "DOMTokenList.prototype.replace",
+            "detectSource": "\"replace\"in(document.createElement(\"div\").classList||{})\n"
+          },
           {
             "name": "Element.prototype.toggleAttribute",
             "detectSource": "\"document\"in self&&\"toggleAttribute\"in document.documentElement\n"
@@ -2406,7 +2458,7 @@ module.exports = {
         "detectors": [
           {
             "name": "DocumentFragment",
-            "detectSource": "\"DocumentFragment\"in self&&self.DocumentFragment===document.createDocumentFragment().constructor\n"
+            "detectSource": "\"DocumentFragment\"in self&&function(){try{return new DocumentFragment,!0}catch(n){return!1}}()\n"
           },
           {
             "name": "matchMedia",
@@ -2456,6 +2508,10 @@ module.exports = {
           {
             "name": "DOMRect",
             "detectSource": "\"DOMRect\"in self&&function(e){try{return new e}catch(t){return!1}}(self.DOMRect)\n"
+          },
+          {
+            "name": "DOMTokenList.prototype.replace",
+            "detectSource": "\"replace\"in(document.createElement(\"div\").classList||{})\n"
           },
           {
             "name": "Element.prototype.append",
@@ -2606,6 +2662,10 @@ module.exports = {
       },
       "12.1.0": {
         "detectors": [
+          {
+            "name": "DOMTokenList.prototype.replace",
+            "detectSource": "\"replace\"in(document.createElement(\"div\").classList||{})\n"
+          },
           {
             "name": "Element.prototype.closest",
             "detectSource": "\"document\"in self&&\"closest\"in document.documentElement\n"

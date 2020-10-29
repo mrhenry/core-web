@@ -1,19 +1,19 @@
-import IsConstructor from "../helpers/_ESAbstract.IsConstructor";
-import GetMethod from "../helpers/_ESAbstract.GetMethod";
-import GetV from "../helpers/_ESAbstract.GetV";
-import ToObject from "../helpers/_ESAbstract.ToObject";
-import IsCallable from "../helpers/_ESAbstract.IsCallable";
-import Type from "../helpers/_ESAbstract.Type";
-import OrdinaryCreateFromConstructor from "../helpers/_ESAbstract.OrdinaryCreateFromConstructor";
-import GetPrototypeFromConstructor from "../helpers/_ESAbstract.GetPrototypeFromConstructor";
-import Get from "../helpers/_ESAbstract.Get";
-import CreateMethodProperty from "../helpers/_ESAbstract.CreateMethodProperty";
-import HasOwnProperty from "../helpers/_ESAbstract.HasOwnProperty";
-import ToPropertyKey from "../helpers/_ESAbstract.ToPropertyKey";
-import ToPrimitive from "../helpers/_ESAbstract.ToPrimitive";
-import Call from "../helpers/_ESAbstract.Call";
-import OrdinaryToPrimitive from "../helpers/_ESAbstract.OrdinaryToPrimitive";
-import ToString from "../helpers/_ESAbstract.ToString";
+import IsConstructor from "@mrhenry/core-web/helpers/_ESAbstract.IsConstructor";
+import GetMethod from "@mrhenry/core-web/helpers/_ESAbstract.GetMethod";
+import GetV from "@mrhenry/core-web/helpers/_ESAbstract.GetV";
+import ToObject from "@mrhenry/core-web/helpers/_ESAbstract.ToObject";
+import IsCallable from "@mrhenry/core-web/helpers/_ESAbstract.IsCallable";
+import Type from "@mrhenry/core-web/helpers/_ESAbstract.Type";
+import OrdinaryCreateFromConstructor from "@mrhenry/core-web/helpers/_ESAbstract.OrdinaryCreateFromConstructor";
+import GetPrototypeFromConstructor from "@mrhenry/core-web/helpers/_ESAbstract.GetPrototypeFromConstructor";
+import Get from "@mrhenry/core-web/helpers/_ESAbstract.Get";
+import CreateMethodProperty from "@mrhenry/core-web/helpers/_ESAbstract.CreateMethodProperty";
+import HasOwnProperty from "@mrhenry/core-web/helpers/_ESAbstract.HasOwnProperty";
+import ToPropertyKey from "@mrhenry/core-web/helpers/_ESAbstract.ToPropertyKey";
+import ToPrimitive from "@mrhenry/core-web/helpers/_ESAbstract.ToPrimitive";
+import Call from "@mrhenry/core-web/helpers/_ESAbstract.Call";
+import OrdinaryToPrimitive from "@mrhenry/core-web/helpers/_ESAbstract.OrdinaryToPrimitive";
+import ToString from "@mrhenry/core-web/helpers/_ESAbstract.ToString";
 
 // _ESAbstract.Construct
 /* global IsConstructor, OrdinaryCreateFromConstructor, Call */

@@ -1,12 +1,12 @@
-import ToPrimitive from "../helpers/_ESAbstract.ToPrimitive";
-import Call from "../helpers/_ESAbstract.Call";
-import GetMethod from "../helpers/_ESAbstract.GetMethod";
-import GetV from "../helpers/_ESAbstract.GetV";
-import ToObject from "../helpers/_ESAbstract.ToObject";
-import IsCallable from "../helpers/_ESAbstract.IsCallable";
-import OrdinaryToPrimitive from "../helpers/_ESAbstract.OrdinaryToPrimitive";
-import Get from "../helpers/_ESAbstract.Get";
-import Type from "../helpers/_ESAbstract.Type";
+import ToPrimitive from "@mrhenry/core-web/helpers/_ESAbstract.ToPrimitive";
+import Call from "@mrhenry/core-web/helpers/_ESAbstract.Call";
+import GetMethod from "@mrhenry/core-web/helpers/_ESAbstract.GetMethod";
+import GetV from "@mrhenry/core-web/helpers/_ESAbstract.GetV";
+import ToObject from "@mrhenry/core-web/helpers/_ESAbstract.ToObject";
+import IsCallable from "@mrhenry/core-web/helpers/_ESAbstract.IsCallable";
+import OrdinaryToPrimitive from "@mrhenry/core-web/helpers/_ESAbstract.OrdinaryToPrimitive";
+import Get from "@mrhenry/core-web/helpers/_ESAbstract.Get";
+import Type from "@mrhenry/core-web/helpers/_ESAbstract.Type";
 
 // _ESAbstract.ToString
 /* global Type, ToPrimitive */

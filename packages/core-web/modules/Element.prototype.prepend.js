@@ -1,4 +1,4 @@
-import _mutation from "../helpers/_mutation";
+import _mutation from "@mrhenry/core-web/helpers/_mutation";
 (function(undefined) {
 if (!("Element"in self&&"prepend"in Element.prototype
 )) {
