@@ -1,5 +1,5 @@
-import SameValueNonNumber from "../helpers/_ESAbstract.SameValueNonNumber";
-import Type from "../helpers/_ESAbstract.Type";
+import SameValueNonNumber from "@mrhenry/core-web/helpers/_ESAbstract.SameValueNonNumber";
+import Type from "@mrhenry/core-web/helpers/_ESAbstract.Type";
 
 // _ESAbstract.SameValueZero
 /* global Type, SameValueNonNumber */

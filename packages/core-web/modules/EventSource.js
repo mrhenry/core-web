@@ -50,6 +50,12 @@ if (!("EventSource"in self&&"function"==typeof self.EventSource
     };
   }
 
+  if (!Date.now) {
+    Date.now = function now() {
+      return new Date().getTime();
+    };
+  }
+
   // see #118 (Promise#finally with polyfilled Promise)
   // see #123 (data URLs crash Edge)
   // see #125 (CSP violations)
@@ -179,7 +185,7 @@ if (!("EventSource"in self&&"function"==typeof self.EventSource
     try {
       return new TextDecoder().decode(new TextEncoder().encode("test"), {stream: true}) === "test";
     } catch (error) {
-      console.log(error);
+      console.debug("TextDecoder does not support streaming option. Using polyfill instead: " + error);
     }
     return false;
   };
@@ -331,7 +337,10 @@ if (!("EventSource"in self&&"function"==typeof self.EventSource
             onFinish(xhr.responseText === "" ? "error" : "load", event);
           }
         } else if (xhr.readyState === 3) {
-          onProgress();
+          if (!("onprogress" in xhr)) { // testing XMLHttpRequest#responseText too many times is too slow in IE 11
+            // and in Firefox 3.6
+            onProgress();
+          }
         } else if (xhr.readyState === 2) {
           onStart();
         }
@@ -368,11 +377,8 @@ if (!("EventSource"in self&&"function"==typeof self.EventSource
       };
     }
 
-    // https://bugzilla.mozilla.org/show_bug.cgi?id=736723
-    if (!("sendAsBinary" in XMLHttpRequest.prototype) && !("mozAnon" in XMLHttpRequest.prototype)) {
-      if ("onprogress" in xhr) {
-        xhr.onprogress = onProgress;
-      }
+    if ("onprogress" in xhr) {
+      xhr.onprogress = onProgress;
     }
 
     // IE 8 - 9 (XMLHTTPRequest)
@@ -381,9 +387,11 @@ if (!("EventSource"in self&&"function"==typeof self.EventSource
     // Firefox 3.5 - 3.6 - ? < 9.0
     // onprogress is not fired sometimes or delayed
     // see also #64 (significant lag in IE 11)
-    xhr.onreadystatechange = function (event) {
-      onReadyStateChange(event);
-    };
+    if ("onreadystatechange" in xhr) {
+      xhr.onreadystatechange = function (event) {
+        onReadyStateChange(event);
+      };
+    }
 
     if ("contentType" in xhr || !("ontimeout" in XMLHttpRequest.prototype)) {
       url += (url.indexOf("?") === -1 ? "?" : "&") + "padding=true";
@@ -416,7 +424,8 @@ if (!("EventSource"in self&&"function"==typeof self.EventSource
   };
   XHRWrapper.prototype.send = function () {
     // loading indicator in Safari < ? (6), Chrome < 14, Firefox
-    if (!("ontimeout" in XMLHttpRequest.prototype) &&
+    // https://bugzilla.mozilla.org/show_bug.cgi?id=736723
+    if ((!("ontimeout" in XMLHttpRequest.prototype) || (!("sendAsBinary" in XMLHttpRequest.prototype) && !("mozAnon" in XMLHttpRequest.prototype))) &&
         document != undefined &&
         document.readyState != undefined &&
         document.readyState !== "complete") {
@@ -464,7 +473,7 @@ if (!("EventSource"in self&&"function"==typeof self.EventSource
   HeadersPolyfill.prototype.get = function (name) {
     return this._map[toLowerCase(name)];
   };
-  
+
   if (XMLHttpRequest != null && XMLHttpRequest.HEADERS_RECEIVED == null) { // IE < 9, Firefox 3.6
     XMLHttpRequest.HEADERS_RECEIVED = 2;
   }
@@ -639,12 +648,7 @@ if (!("EventSource"in self&&"function"==typeof self.EventSource
   function Event(type) {
     this.type = type;
     this.target = undefined;
-    this.defaultPrevented = false;
   }
-  
-  Event.prototype.preventDefault = function () {
-    this.defaultPrevented = true;
-  };
 
   function MessageEvent(type, options) {
     Event.call(this, type);
@@ -663,6 +667,13 @@ if (!("EventSource"in self&&"function"==typeof self.EventSource
 
   ConnectionEvent.prototype = Object.create(Event.prototype);
 
+  function ErrorEvent(type, options) {
+    Event.call(this, type);
+    this.error = options.error;
+  }
+
+  ErrorEvent.prototype = Object.create(Event.prototype);
+
   var WAITING = -1;
   var CONNECTING = 0;
   var OPEN = 1;
@@ -674,7 +685,7 @@ if (!("EventSource"in self&&"function"==typeof self.EventSource
   var VALUE_START = 2;
   var VALUE = 3;
 
-  var contentTypeRegExp = /^text\/event\-stream;?(\s*charset\=utf\-8)?$/i;
+  var contentTypeRegExp = /^text\/event\-stream(;.*)?$/i;
 
   var MINIMUM_DURATION = 1000;
   var MAXIMUM_DURATION = 18000000;
@@ -720,8 +731,8 @@ if (!("EventSource"in self&&"function"==typeof self.EventSource
 
   function getBestXHRTransport() {
     return (XMLHttpRequest != undefined && ("withCredentials" in XMLHttpRequest.prototype)) || XDomainRequest == undefined
-      ? new XMLHttpRequest()
-      : new XDomainRequest();
+        ? new XMLHttpRequest()
+        : new XDomainRequest();
   }
 
   var isFetchSupported = fetch != undefined && Response != undefined && "body" in Response.prototype;
@@ -736,6 +747,7 @@ if (!("EventSource"in self&&"function"==typeof self.EventSource
     var lastEventId = "";
     var retry = initialRetry;
     var wasActivity = false;
+    var textLength = 0;
     var headers = options.headers || {};
     var TransportOption = options.Transport;
     var xhr = isFetchSupported && TransportOption == undefined ? undefined : new XHRWrapper(TransportOption != undefined ? new TransportOption() : getBestXHRTransport());
@@ -756,7 +768,7 @@ if (!("EventSource"in self&&"function"==typeof self.EventSource
       if (currentState === CONNECTING) {
         if (status === 200 && contentType != undefined && contentTypeRegExp.test(contentType)) {
           currentState = OPEN;
-          wasActivity = true;
+          wasActivity = Date.now();
           retry = initialRetry;
           es.readyState = OPEN;
           var event = new ConnectionEvent("open", {
@@ -784,9 +796,7 @@ if (!("EventSource"in self&&"function"==typeof self.EventSource
           });
           es.dispatchEvent(event);
           fire(es, es.onerror, event);
-          if (!event.defaultPrevented) {
-            throwError(new Error(message));
-          }
+          console.error(message);
         }
       }
     };
@@ -802,8 +812,9 @@ if (!("EventSource"in self&&"function"==typeof self.EventSource
         }
         var chunk = (n !== -1 ? textBuffer : "") + textChunk.slice(0, n + 1);
         textBuffer = (n === -1 ? textBuffer : "") + textChunk.slice(n + 1);
-        if (chunk !== "") {
-          wasActivity = true;
+        if (textChunk !== "") {
+          wasActivity = Date.now();
+          textLength += textChunk.length;
         }
         for (var position = 0; position < chunk.length; position += 1) {
           var c = chunk.charCodeAt(position);
@@ -898,14 +909,9 @@ if (!("EventSource"in self&&"function"==typeof self.EventSource
         retry = clampDuration(Math.min(initialRetry * 16, retry * 2));
 
         es.readyState = CONNECTING;
-        var event = new Event("error");
+        var event = new ErrorEvent("error", {error: error});
         es.dispatchEvent(event);
         fire(es, es.onerror, event);
-        if (error != null) {
-          if (!event.defaultPrevented) {
-            throwError(error);
-          }
-        }
       }
     };
 
@@ -927,19 +933,23 @@ if (!("EventSource"in self&&"function"==typeof self.EventSource
 
       if (currentState !== WAITING) {
         if (!wasActivity && abortController != undefined) {
-          onFinish(new Error("No activity within " + heartbeatTimeout + " milliseconds. Reconnecting."));
-          abortController.abort();
-          abortController = undefined;
+          onFinish(new Error("No activity within " + heartbeatTimeout + " milliseconds." + " " + (currentState === CONNECTING ? "No response received." : textLength + " chars received.") + " " + "Reconnecting."));
+          if (abortController != undefined) {
+            abortController.abort();
+            abortController = undefined;
+          }
         } else {
+          var nextHeartbeat = Math.max((wasActivity || Date.now()) + heartbeatTimeout - Date.now(), 1);
           wasActivity = false;
           timeout = setTimeout(function () {
             onTimeout();
-          }, heartbeatTimeout);
+          }, nextHeartbeat);
         }
         return;
       }
 
       wasActivity = false;
+      textLength = 0;
       timeout = setTimeout(function () {
         onTimeout();
       }, heartbeatTimeout);
@@ -1001,7 +1011,7 @@ if (!("EventSource"in self&&"function"==typeof self.EventSource
   EventSourcePolyfill.OPEN = OPEN;
   EventSourcePolyfill.CLOSED = CLOSED;
   EventSourcePolyfill.prototype.withCredentials = undefined;
-  
+
   var R = NativeEventSource
   if (XMLHttpRequest != undefined && (NativeEventSource == undefined || !("withCredentials" in NativeEventSource.prototype))) {
     // Why replace a native EventSource ?

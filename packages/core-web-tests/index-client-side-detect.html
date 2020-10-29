@@ -45,6 +45,7 @@
 
 	if (
 	("onhashchange"in self&&(null==self.onhashchange||"function"==typeof self.onhashchange)) && 
+	("TextEncoder"in self&&"TextDecoder"in self) && 
 	("performance"in self&&"function"==typeof self.performance.getEntriesByType&&"function"==typeof self.performance.mark) && 
 	((function(e){"use strict"
 try{var a=new e.URL("http://example.com")

@@ -1,5 +1,5 @@
-import ToInteger from "../helpers/_ESAbstract.ToInteger";
-import ToLength from "../helpers/_ESAbstract.ToLength";
+import ToInteger from "@mrhenry/core-web/helpers/_ESAbstract.ToInteger";
+import ToLength from "@mrhenry/core-web/helpers/_ESAbstract.ToLength";
 
 // _ESAbstract.ToIndex
 /* global ToInteger, ToLength, SameValueZero */

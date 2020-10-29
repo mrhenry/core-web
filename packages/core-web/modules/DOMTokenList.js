@@ -1,4 +1,4 @@
-import _DOMTokenList from "../helpers/_DOMTokenList";
+import _DOMTokenList from "@mrhenry/core-web/helpers/_DOMTokenList";
 (function(undefined) {
 if (!("DOMTokenList"in self&&function(e){return!("classList"in e)||!e.classList.toggle("x",!1)&&!e.className}(document.createElement("x"))
 )) {

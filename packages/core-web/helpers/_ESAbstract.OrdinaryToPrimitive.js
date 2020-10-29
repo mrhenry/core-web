@@ -1,7 +1,7 @@
-import Call from "../helpers/_ESAbstract.Call";
-import Get from "../helpers/_ESAbstract.Get";
-import IsCallable from "../helpers/_ESAbstract.IsCallable";
-import Type from "../helpers/_ESAbstract.Type";
+import Call from "@mrhenry/core-web/helpers/_ESAbstract.Call";
+import Get from "@mrhenry/core-web/helpers/_ESAbstract.Get";
+import IsCallable from "@mrhenry/core-web/helpers/_ESAbstract.IsCallable";
+import Type from "@mrhenry/core-web/helpers/_ESAbstract.Type";
 
 // _ESAbstract.OrdinaryToPrimitive
 /* global Get, IsCallable, Call, Type */
