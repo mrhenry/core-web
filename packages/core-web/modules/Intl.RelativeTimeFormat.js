@@ -1,3 +1,38 @@
+import CreateMethodProperty from "@mrhenry/core-web/helpers/_ESAbstract.CreateMethodProperty";
+import IsArray from "@mrhenry/core-web/helpers/_ESAbstract.IsArray";
+import ToObject from "@mrhenry/core-web/helpers/_ESAbstract.ToObject";
+import ToLength from "@mrhenry/core-web/helpers/_ESAbstract.ToLength";
+import ToInteger from "@mrhenry/core-web/helpers/_ESAbstract.ToInteger";
+import Get from "@mrhenry/core-web/helpers/_ESAbstract.Get";
+import IsCallable from "@mrhenry/core-web/helpers/_ESAbstract.IsCallable";
+import ArraySpeciesCreate from "@mrhenry/core-web/helpers/_ESAbstract.ArraySpeciesCreate";
+import ArrayCreate from "@mrhenry/core-web/helpers/_ESAbstract.ArrayCreate";
+import Type from "@mrhenry/core-web/helpers/_ESAbstract.Type";
+import IsConstructor from "@mrhenry/core-web/helpers/_ESAbstract.IsConstructor";
+import GetMethod from "@mrhenry/core-web/helpers/_ESAbstract.GetMethod";
+import GetV from "@mrhenry/core-web/helpers/_ESAbstract.GetV";
+import Construct from "@mrhenry/core-web/helpers/_ESAbstract.Construct";
+import OrdinaryCreateFromConstructor from "@mrhenry/core-web/helpers/_ESAbstract.OrdinaryCreateFromConstructor";
+import GetPrototypeFromConstructor from "@mrhenry/core-web/helpers/_ESAbstract.GetPrototypeFromConstructor";
+import HasOwnProperty from "@mrhenry/core-web/helpers/_ESAbstract.HasOwnProperty";
+import ToPropertyKey from "@mrhenry/core-web/helpers/_ESAbstract.ToPropertyKey";
+import ToPrimitive from "@mrhenry/core-web/helpers/_ESAbstract.ToPrimitive";
+import Call from "@mrhenry/core-web/helpers/_ESAbstract.Call";
+import OrdinaryToPrimitive from "@mrhenry/core-web/helpers/_ESAbstract.OrdinaryToPrimitive";
+import ToString from "@mrhenry/core-web/helpers/_ESAbstract.ToString";
+import HasProperty from "@mrhenry/core-web/helpers/_ESAbstract.HasProperty";
+import ToBoolean from "@mrhenry/core-web/helpers/_ESAbstract.ToBoolean";
+import CreateDataPropertyOrThrow from "@mrhenry/core-web/helpers/_ESAbstract.CreateDataPropertyOrThrow";
+import CreateDataProperty from "@mrhenry/core-web/helpers/_ESAbstract.CreateDataProperty";
+import SameValueZero from "@mrhenry/core-web/helpers/_ESAbstract.SameValueZero";
+import SameValueNonNumber from "@mrhenry/core-web/helpers/_ESAbstract.SameValueNonNumber";
+import GetIterator from "@mrhenry/core-web/helpers/_ESAbstract.GetIterator";
+import IteratorStep from "@mrhenry/core-web/helpers/_ESAbstract.IteratorStep";
+import IteratorNext from "@mrhenry/core-web/helpers/_ESAbstract.IteratorNext";
+import IteratorComplete from "@mrhenry/core-web/helpers/_ESAbstract.IteratorComplete";
+import IteratorValue from "@mrhenry/core-web/helpers/_ESAbstract.IteratorValue";
+import IteratorClose from "@mrhenry/core-web/helpers/_ESAbstract.IteratorClose";
+import SameValue from "@mrhenry/core-web/helpers/_ESAbstract.SameValue";
 (function(undefined) {
 if (!("Intl"in self&&"RelativeTimeFormat"in self.Intl
 )) {
@@ -5,224 +40,95 @@ if (!("Intl"in self&&"RelativeTimeFormat"in self.Intl
 (function (factory) {
     typeof define === 'function' && define.amd ? define(factory) :
     factory();
-}(function () { 'use strict';
+}((function () { 'use strict';
 
-    function fixMeta(RelativeTimeFormat) {
-        if (typeof Intl.RelativeTimeFormat !== 'undefined') {
-            return;
-        }
-        Object.defineProperty(Intl, 'RelativeTimeFormat', {
-            value: RelativeTimeFormat,
-            writable: true,
-            enumerable: false,
-            configurable: true,
-        });
-        Object.defineProperty(RelativeTimeFormat, 'supportedLocalesOf', {
-            writable: true,
-            enumerable: false,
-            configurable: true,
-        });
-        // IE11 does not have Symbol
-        if (typeof Symbol !== 'undefined') {
-            Object.defineProperty(RelativeTimeFormat.prototype, Symbol.toStringTag, {
-                value: 'Intl.RelativeTimeFormat',
-                writable: false,
-                enumerable: false,
-                configurable: true,
-            });
-        }
-        Object.defineProperty(RelativeTimeFormat.prototype, 'format', {
-            writable: true,
-            enumerable: false,
-            configurable: true,
-        });
-        Object.defineProperty(RelativeTimeFormat.prototype, 'formatToParts', {
-            writable: true,
-            enumerable: false,
-            configurable: true,
-        });
-        Object.defineProperty(RelativeTimeFormat.prototype, 'resolvedOptions', {
-            writable: true,
-            enumerable: false,
-            configurable: true,
-        });
-        Object.defineProperty(Intl.RelativeTimeFormat, 'prototype', {
-            writable: false,
-            enumerable: false,
-            configurable: false,
-        });
-        try {
-            // This is bc transpilation process sets class properties to anonymous function
-            Object.defineProperty(RelativeTimeFormat.prototype.resolvedOptions, 'name', {
-                value: 'resolvedOptions',
-            });
-            Object.defineProperty(RelativeTimeFormat.prototype.format, 'name', {
-                value: 'format',
-            });
-            Object.defineProperty(RelativeTimeFormat.prototype.formatToParts, 'name', {
-                value: 'formatToParts',
-            });
-            Object.defineProperty(RelativeTimeFormat.supportedLocalesOf, 'name', {
-                value: 'supportedLocalesOf',
-            });
-        }
-        catch (ex) {
-            // This crashes due to a bug in JSC on iOS 9. We can safely ignore the error.
-            // See https://github.com/formatjs/formatjs/issues/128.
-        }
+    /*! *****************************************************************************
+    Copyright (c) Microsoft Corporation.
+
+    Permission to use, copy, modify, and/or distribute this software for any
+    purpose with or without fee is hereby granted.
+
+    THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES WITH
+    REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF MERCHANTABILITY
+    AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY SPECIAL, DIRECT,
+    INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES WHATSOEVER RESULTING FROM
+    LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR
+    OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR
+    PERFORMANCE OF THIS SOFTWARE.
+    ***************************************************************************** */
+    /* global Reflect, Promise */
+
+    var extendStatics = function(d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    };
+
+    function __extends(d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     }
 
-    var VALID_UNITS = [
-        'second',
-        'minute',
-        'hour',
-        'day',
-        'week',
-        'month',
-        'quarter',
-        'year',
-        'seconds',
-        'minutes',
-        'hours',
-        'days',
-        'weeks',
-        'months',
-        'quarters',
-        'years',
-    ];
-
-    var __assign = (undefined && undefined.__assign) || function () {
-        __assign = Object.assign || function(t) {
+    var __assign = function() {
+        __assign = Object.assign || function __assign(t) {
             for (var s, i = 1, n = arguments.length; i < n; i++) {
                 s = arguments[i];
-                for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
-                    t[p] = s[p];
+                for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p)) t[p] = s[p];
             }
             return t;
         };
         return __assign.apply(this, arguments);
     };
 
-    /* @generated */
-    // prettier-ignore  
-    var aliases = { "aa-SAAHO": "ssy", "aam": "aas", "aar": "aa", "abk": "ab", "adp": "dz", "afr": "af", "aju": "jrb", "aka": "ak", "alb": "sq", "als": "sq", "amh": "am", "ara": "ar", "arb": "ar", "arg": "an", "arm": "hy", "art-lojban": "jbo", "asm": "as", "aue": "ktz", "ava": "av", "ave": "ae", "aym": "ay", "ayr": "ay", "ayx": "nun", "az-AZ": "az-Latn-AZ", "aze": "az", "azj": "az", "bak": "ba", "bam": "bm", "baq": "eu", "bcc": "bal", "bcl": "bik", "bel": "be", "ben": "bn", "bgm": "bcg", "bh": "bho", "bih": "bho", "bis": "bi", "bjd": "drl", "bod": "bo", "bos": "bs", "bre": "br", "bs-BA": "bs-Latn-BA", "bul": "bg", "bur": "my", "bxk": "luy", "bxr": "bua", "cat": "ca", "ccq": "rki", "cel-gaulish": "xtg-x-cel-gaulish", "ces": "cs", "cha": "ch", "che": "ce", "chi": "zh", "chu": "cu", "chv": "cv", "cjr": "mom", "cka": "cmr", "cld": "syr", "cmk": "xch", "cmn": "zh", "cnr": "sr-ME", "cor": "kw", "cos": "co", "coy": "pij", "cqu": "quh", "cre": "cr", "cwd": "cr", "cym": "cy", "cze": "cs", "dan": "da", "deu": "de", "dgo": "doi", "dhd": "mwr", "dik": "din", "diq": "zza", "div": "dv", "drh": "mn", "drw": "fa-af", "dut": "nl", "dzo": "dz", "ekk": "et", "ell": "el", "emk": "man", "eng": "en", "epo": "eo", "esk": "ik", "est": "et", "eus": "eu", "ewe": "ee", "fao": "fo", "fas": "fa", "fat": "ak", "fij": "fj", "fin": "fi", "fra": "fr", "fre": "fr", "fry": "fy", "fuc": "ff", "ful": "ff", "gav": "dev", "gaz": "om", "gbo": "grb", "geo": "ka", "ger": "de", "gfx": "vaj", "ggn": "gvr", "gla": "gd", "gle": "ga", "glg": "gl", "glv": "gv", "gno": "gon", "gre": "el", "grn": "gn", "gti": "nyc", "gug": "gn", "guj": "gu", "guv": "duz", "gya": "gba", "ha-Latn-GH": "ha-GH", "ha-Latn-NE": "ha-NE", "ha-Latn-NG": "ha-NG", "hat": "ht", "hau": "ha", "hbs": "sr-Latn", "hdn": "hai", "hea": "hmn", "heb": "he", "her": "hz", "him": "srx", "hin": "hi", "hmo": "ho", "hrr": "jal", "hrv": "hr", "hun": "hu", "hye": "hy", "i-ami": "ami", "i-bnn": "bnn", "i-hak": "hak", "i-klingon": "tlh", "i-lux": "lb", "i-navajo": "nv", "i-pwn": "pwn", "i-tao": "tao", "i-tay": "tay", "i-tsu": "tsu", "i-default": "en-x-i-default", "i-enochian": "und-x-i-enochian", "i-mingo": "see-x-i-mingo", "ibi": "opa", "ibo": "ig", "ice": "is", "ido": "io", "iii": "ii", "ike": "iu", "iku": "iu", "ile": "ie", "ilw": "gal", "in": "id", "ina": "ia", "ind": "id", "ipk": "ik", "isl": "is", "ita": "it", "iw": "he", "jav": "jv", "jeg": "oyb", "ji": "yi", "jpn": "ja", "jw": "jv", "kal": "kl", "kan": "kn", "kas": "ks", "kat": "ka", "kau": "kr", "kaz": "kk", "kgc": "tdf", "kgh": "kml", "khk": "mn", "khm": "km", "kik": "ki", "kin": "rw", "kir": "ky", "kk-Cyrl-KZ": "kk-KZ", "kmr": "ku", "knc": "kr", "kng": "kg", "knn": "kok", "koj": "kwv", "kom": "kv", "kon": "kg", "kor": "ko", "kpv": "kv", "krm": "bmf", "ks-Arab-IN": "ks-IN", "ktr": "dtp", "kua": "kj", "kur": "ku", "kvs": "gdj", "kwq": "yam", "kxe": "tvd", "ky-Cyrl-KG": "ky-KG", "kzj": "dtp", "kzt": "dtp", "lao": "lo", "lat": "la", "lav": "lv", "lbk": "bnc", "lii": "raq", "lim": "li", "lin": "ln", "lit": "lt", "lmm": "rmx", "ltz": "lb", "lub": "lu", "lug": "lg", "lvs": "lv", "mac": "mk", "mah": "mh", "mal": "ml", "mao": "mi", "mar": "mr", "may": "ms", "meg": "cir", "mhr": "chm", "mkd": "mk", "mlg": "mg", "mlt": "mt", "mn-Cyrl-MN": "mn-MN", "mnk": "man", "mo": "ro", "mol": "ro", "mon": "mn", "mri": "mi", "ms-Latn-BN": "ms-BN", "ms-Latn-MY": "ms-MY", "ms-Latn-SG": "ms-SG", "msa": "ms", "mst": "mry", "mup": "raj", "mwj": "vaj", "mya": "my", "myt": "mry", "nad": "xny", "nau": "na", "nav": "nv", "nbl": "nr", "ncp": "kdz", "nde": "nd", "ndo": "ng", "nep": "ne", "nld": "nl", "nno": "nn", "nnx": "ngv", "no": "nb", "no-bok": "nb", "no-BOKMAL": "nb", "no-nyn": "nn", "no-NYNORSK": "nn", "nob": "nb", "nor": "nb", "npi": "ne", "nts": "pij", "nya": "ny", "oci": "oc", "ojg": "oj", "oji": "oj", "ori": "or", "orm": "om", "ory": "or", "oss": "os", "oun": "vaj", "pa-IN": "pa-Guru-IN", "pa-PK": "pa-Arab-PK", "pan": "pa", "pbu": "ps", "pcr": "adx", "per": "fa", "pes": "fa", "pli": "pi", "plt": "mg", "pmc": "huw", "pmu": "phr", "pnb": "lah", "pol": "pl", "por": "pt", "ppa": "bfy", "ppr": "lcq", "prs": "fa-AF", "pry": "prt", "pus": "ps", "puz": "pub", "que": "qu", "quz": "qu", "rmy": "rom", "roh": "rm", "ron": "ro", "rum": "ro", "run": "rn", "rus": "ru", "sag": "sg", "san": "sa", "sca": "hle", "scc": "sr", "scr": "hr", "sgn-BE-FR": "sfb", "sgn-BE-NL": "vgt", "sgn-CH-DE": "sgg", "sh": "sr-Latn", "shi-MA": "shi-Tfng-MA", "sin": "si", "skk": "oyb", "slk": "sk", "slo": "sk", "slv": "sl", "sme": "se", "smo": "sm", "sna": "sn", "snd": "sd", "som": "so", "sot": "st", "spa": "es", "spy": "kln", "sqi": "sq", "sr-BA": "sr-Cyrl-BA", "sr-ME": "sr-Latn-ME", "sr-RS": "sr-Cyrl-RS", "sr-XK": "sr-Cyrl-XK", "src": "sc", "srd": "sc", "srp": "sr", "ssw": "ss", "sun": "su", "swa": "sw", "swc": "sw-CD", "swe": "sv", "swh": "sw", "tah": "ty", "tam": "ta", "tat": "tt", "tdu": "dtp", "tel": "te", "tgk": "tg", "tgl": "fil", "tha": "th", "thc": "tpo", "thx": "oyb", "tib": "bo", "tie": "ras", "tir": "ti", "tkk": "twm", "tl": "fil", "tlw": "weo", "tmp": "tyj", "tne": "kak", "tnf": "fa-af", "ton": "to", "tsf": "taj", "tsn": "tn", "tso": "ts", "ttq": "tmh", "tuk": "tk", "tur": "tr", "tw": "ak", "twi": "ak", "tzm-Latn-MA": "tzm-MA", "ug-Arab-CN": "ug-CN", "uig": "ug", "ukr": "uk", "umu": "del", "uok": "ema", "urd": "ur", "uz-AF": "uz-Arab-AF", "uz-UZ": "uz-Latn-UZ", "uzb": "uz", "uzn": "uz", "vai-LR": "vai-Vaii-LR", "ven": "ve", "vie": "vi", "vol": "vo", "wel": "cy", "wln": "wa", "wol": "wo", "xba": "cax", "xho": "xh", "xia": "acn", "xkh": "waw", "xpe": "kpe", "xsj": "suj", "xsl": "den", "ybd": "rki", "ydd": "yi", "yid": "yi", "yma": "lrr", "ymt": "mtm", "yor": "yo", "yos": "zom", "yue-CN": "yue-Hans-CN", "yue-HK": "yue-Hant-HK", "yuu": "yug", "zai": "zap", "zh-CN": "zh-Hans-CN", "zh-guoyu": "zh", "zh-hakka": "hak", "zh-HK": "zh-Hant-HK", "zh-min-nan": "nan", "zh-MO": "zh-Hant-MO", "zh-SG": "zh-Hans-SG", "zh-TW": "zh-Hant-TW", "zh-xiang": "hsn", "zh-min": "nan-x-zh-min", "zha": "za", "zho": "zh", "zsm": "ms", "zul": "zu", "zyb": "za" };
-
-    function resolveSupportedLocales(locales, localeData) {
-        var resolvedLocales = (Array.isArray(locales) ? locales : [locales])
-            .filter(function (s) { return typeof s === 'string'; })
-            .map(function (l) { return aliases[l] || l; });
-        var i, len, localeParts, data;
-        var supportedLocales = [];
-        // Using the set of locales + the default locale, we look for the first one
-        // which that has been registered. When data does not exist for a locale, we
-        // traverse its ancestors to find something that's been registered within
-        // its hierarchy of locales. Since we lack the proper `parentLocale` data
-        // here, we must take a naive approach to traversal.
-        for (i = 0, len = resolvedLocales.length; i < len; i += 1) {
-            localeParts = resolvedLocales[i].toLowerCase().split('-');
-            while (localeParts.length) {
-                if (localeData) {
-                    data = localeData[localeParts.join('-')];
-                    if (data) {
-                        // Return the normalized locale string; e.g., we return "en-US",
-                        // instead of "en-us".
-                        supportedLocales.push(data.locale);
-                        break;
-                    }
-                    localeParts.pop();
-                }
-            }
+    /**
+     * Cannot do Math.log(x) / Math.log(10) bc if IEEE floating point issue
+     * @param x number
+     */
+    var UNICODE_EXTENSION_SEQUENCE_REGEX = /-u(?:-[0-9a-z]{2,8})+/gi;
+    function invariant(condition, message, Err) {
+        if (Err === void 0) { Err = Error; }
+        if (!condition) {
+            throw new Err(message);
         }
-        return supportedLocales;
     }
 
+    /**
+     * http://ecma-international.org/ecma-402/7.0/index.html#sec-canonicalizelocalelist
+     * @param locales
+     */
+    function CanonicalizeLocaleList(locales) {
+        // TODO
+        return Intl.getCanonicalLocales(locales);
+    }
+
+    /**
+     * https://tc39.es/ecma262/#sec-tostring
+     */
+    function ToString(o) {
+        // Only symbol is irregular...
+        if (typeof o === 'symbol') {
+            throw TypeError('Cannot convert a Symbol value to a string');
+        }
+        return String(o);
+    }
     /**
      * https://tc39.es/ecma262/#sec-toobject
      * @param arg
      */
-    function toObject(arg) {
+    function ToObject(arg) {
         if (arg == null) {
             throw new TypeError('undefined/null cannot be converted to object');
         }
         return Object(arg);
     }
     /**
-     * https://tc39.es/ecma402/#sec-getoption
-     * @param opts
-     * @param prop
-     * @param type
-     * @param values
-     * @param fallback
+     * https://www.ecma-international.org/ecma-262/11.0/index.html#sec-samevalue
+     * @param x
+     * @param y
      */
-    function getOption(opts, prop, type, values, fallback) {
-        // const descriptor = Object.getOwnPropertyDescriptor(opts, prop);
-        var value = opts[prop];
-        if (value !== undefined) {
-            if (type !== 'boolean' && type !== 'string') {
-                throw new TypeError('invalid type');
-            }
-            if (type === 'boolean') {
-                value = new Boolean(value);
-            }
-            if (type === 'string') {
-                value = new String(value);
-            }
-            if (values !== undefined && !values.filter(function (val) { return val == value; }).length) {
-                throw new RangeError(value + " in not within " + values);
-            }
-            return value;
-        }
-        return fallback;
-    }
-
-    var __assign$1 = (undefined && undefined.__assign) || function () {
-        __assign$1 = Object.assign || function(t) {
-            for (var s, i = 1, n = arguments.length; i < n; i++) {
-                s = arguments[i];
-                for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
-                    t[p] = s[p];
-            }
-            return t;
-        };
-        return __assign$1.apply(this, arguments);
-    };
-    var __spreadArrays = (undefined && undefined.__spreadArrays) || function () {
-        for (var s = 0, i = 0, il = arguments.length; i < il; i++) s += arguments[i].length;
-        for (var r = Array(s), k = 0, i = 0; i < il; i++)
-            for (var a = arguments[i], j = 0, jl = a.length; j < jl; j++, k++)
-                r[k] = a[j];
-        return r;
-    };
-    /**
-     * Find the correct field data in our CLDR data
-     * @param locale locale
-     */
-    function findFields(locale) {
-        var localeData = RelativeTimeFormat.__localeData__;
-        var data = localeData[locale.toLowerCase()];
-        // The locale data is de-duplicated, so we have to traverse the locale's
-        // hierarchy until we find `fields` to return.
-        while (data) {
-            if (data.fields) {
-                return data.fields;
-            }
-            data = data.parentLocale
-                ? localeData[data.parentLocale.toLowerCase()]
-                : undefined;
-        }
-        throw new Error("Locale data added to RelativeTimeFormat is missing 'fields' for \"" + locale + "\"");
-    }
-    function findFieldData(fields, unit, style) {
-        if (style == 'long') {
-            return fields[unit];
-        }
-        if (style == 'narrow') {
-            return (fields[unit + "-narrow"] ||
-                fields[unit + "-short"]);
-        }
-        return fields[unit + "-short"];
-    }
-    function objectIs(x, y) {
+    function SameValue(x, y) {
         if (Object.is) {
             return Object.is(x, y);
         }
@@ -235,212 +141,655 @@ if (!("Intl"in self&&"RelativeTimeFormat"in self.Intl
         // Step 6.a: NaN == NaN
         return x !== x && y !== y;
     }
-    function resolvePastOrFuture(value) {
-        return objectIs(value, -0)
-            ? 'past'
-            : objectIs(value, +0)
-                ? 'future'
-                : value < 0
-                    ? 'past'
-                    : 'future';
-    }
-    function validateInstance(instance, method) {
-        if (!(instance instanceof RelativeTimeFormat)) {
-            throw new TypeError("Method Intl.RelativeTimeFormat.prototype." + method + " called on incompatible receiver " + String(instance));
+    /**
+     * https://www.ecma-international.org/ecma-262/11.0/index.html#sec-type
+     * @param x
+     */
+    function Type(x) {
+        if (x === null) {
+            return 'Null';
+        }
+        if (typeof x === 'undefined') {
+            return 'Undefined';
+        }
+        if (typeof x === 'function' || typeof x === 'object') {
+            return 'Object';
+        }
+        if (typeof x === 'number') {
+            return 'Number';
+        }
+        if (typeof x === 'boolean') {
+            return 'Boolean';
+        }
+        if (typeof x === 'string') {
+            return 'String';
+        }
+        if (typeof x === 'symbol') {
+            return 'Symbol';
+        }
+        if (typeof x === 'bigint') {
+            return 'BigInt';
         }
     }
-    function validateUnit(unit) {
-        // `unit + ''` to guard against `Symbol()`
-        if (!~VALID_UNITS.indexOf(unit + '')) {
-            throw new RangeError("Invalid unit argument for format() '" + String(unit) + "'");
-        }
-        var resolvedUnit = (unit[unit.length - 1] === 's'
-            ? unit.slice(0, unit.length - 1)
-            : unit);
-        return resolvedUnit;
-    }
-    function validateValue(value, method) {
-        if (method === void 0) { method = 'format'; }
-        var parsedValue = typeof value === 'string' ? new Number(value).valueOf() : value;
-        if (!isFinite(parsedValue)) {
-            throw new RangeError("Value need to be finite number for Intl.RelativeTimeFormat.prototype." + method + "()");
-        }
-        return parsedValue;
-    }
-    function isString(s) {
-        return !!s;
-    }
-    var DEFAULT_LOCALE = new Intl.NumberFormat().resolvedOptions().locale;
-    var RelativeTimeFormat = /** @class */ (function () {
-        function RelativeTimeFormat() {
-            var _a = [];
-            for (var _i = 0; _i < arguments.length; _i++) {
-                _a[_i] = arguments[_i];
+
+    /**
+     * https://tc39.es/ecma402/#sec-partitionpattern
+     * @param pattern
+     */
+    function PartitionPattern(pattern) {
+        var result = [];
+        var beginIndex = pattern.indexOf('{');
+        var endIndex = 0;
+        var nextIndex = 0;
+        var length = pattern.length;
+        while (beginIndex < pattern.length && beginIndex > -1) {
+            endIndex = pattern.indexOf('}', beginIndex);
+            invariant(endIndex > beginIndex, "Invalid pattern " + pattern);
+            if (beginIndex > nextIndex) {
+                result.push({
+                    type: 'literal',
+                    value: pattern.substring(nextIndex, beginIndex),
+                });
             }
-            var locales = _a[0], options = _a[1];
+            result.push({
+                type: pattern.substring(beginIndex + 1, endIndex),
+                value: undefined,
+            });
+            nextIndex = endIndex + 1;
+            beginIndex = pattern.indexOf('{', nextIndex);
+        }
+        if (nextIndex < length) {
+            result.push({
+                type: 'literal',
+                value: pattern.substring(nextIndex, length),
+            });
+        }
+        return result;
+    }
+
+    /**
+     * https://tc39.es/ecma402/#sec-getoption
+     * @param opts
+     * @param prop
+     * @param type
+     * @param values
+     * @param fallback
+     */
+    function GetOption(opts, prop, type, values, fallback) {
+        // const descriptor = Object.getOwnPropertyDescriptor(opts, prop);
+        var value = opts[prop];
+        if (value !== undefined) {
+            if (type !== 'boolean' && type !== 'string') {
+                throw new TypeError('invalid type');
+            }
+            if (type === 'boolean') {
+                value = Boolean(value);
+            }
+            if (type === 'string') {
+                value = ToString(value);
+            }
+            if (values !== undefined && !values.filter(function (val) { return val == value; }).length) {
+                throw new RangeError(value + " is not within " + values.join(', '));
+            }
+            return value;
+        }
+        return fallback;
+    }
+
+    /**
+     * https://tc39.es/ecma402/#sec-bestavailablelocale
+     * @param availableLocales
+     * @param locale
+     */
+    function BestAvailableLocale(availableLocales, locale) {
+        var candidate = locale;
+        while (true) {
+            if (~availableLocales.indexOf(candidate)) {
+                return candidate;
+            }
+            var pos = candidate.lastIndexOf('-');
+            if (!~pos) {
+                return undefined;
+            }
+            if (pos >= 2 && candidate[pos - 2] === '-') {
+                pos -= 2;
+            }
+            candidate = candidate.slice(0, pos);
+        }
+    }
+
+    /**
+     * https://tc39.es/ecma402/#sec-lookupmatcher
+     * @param availableLocales
+     * @param requestedLocales
+     * @param getDefaultLocale
+     */
+    function LookupMatcher(availableLocales, requestedLocales, getDefaultLocale) {
+        var result = { locale: '' };
+        for (var _i = 0, requestedLocales_1 = requestedLocales; _i < requestedLocales_1.length; _i++) {
+            var locale = requestedLocales_1[_i];
+            var noExtensionLocale = locale.replace(UNICODE_EXTENSION_SEQUENCE_REGEX, '');
+            var availableLocale = BestAvailableLocale(availableLocales, noExtensionLocale);
+            if (availableLocale) {
+                result.locale = availableLocale;
+                if (locale !== noExtensionLocale) {
+                    result.extension = locale.slice(noExtensionLocale.length + 1, locale.length);
+                }
+                return result;
+            }
+        }
+        result.locale = getDefaultLocale();
+        return result;
+    }
+
+    /**
+     * https://tc39.es/ecma402/#sec-bestfitmatcher
+     * @param availableLocales
+     * @param requestedLocales
+     * @param getDefaultLocale
+     */
+    function BestFitMatcher(availableLocales, requestedLocales, getDefaultLocale) {
+        var result = { locale: '' };
+        for (var _i = 0, requestedLocales_1 = requestedLocales; _i < requestedLocales_1.length; _i++) {
+            var locale = requestedLocales_1[_i];
+            var noExtensionLocale = locale.replace(UNICODE_EXTENSION_SEQUENCE_REGEX, '');
+            var availableLocale = BestAvailableLocale(availableLocales, noExtensionLocale);
+            if (availableLocale) {
+                result.locale = availableLocale;
+                if (locale !== noExtensionLocale) {
+                    result.extension = locale.slice(noExtensionLocale.length + 1, locale.length);
+                }
+                return result;
+            }
+        }
+        result.locale = getDefaultLocale();
+        return result;
+    }
+
+    /**
+     * https://tc39.es/ecma402/#sec-unicodeextensionvalue
+     * @param extension
+     * @param key
+     */
+    function UnicodeExtensionValue(extension, key) {
+        invariant(key.length === 2, 'key must have 2 elements');
+        var size = extension.length;
+        var searchValue = "-" + key + "-";
+        var pos = extension.indexOf(searchValue);
+        if (pos !== -1) {
+            var start = pos + 4;
+            var end = start;
+            var k = start;
+            var done = false;
+            while (!done) {
+                var e = extension.indexOf('-', k);
+                var len = void 0;
+                if (e === -1) {
+                    len = size - k;
+                }
+                else {
+                    len = e - k;
+                }
+                if (len === 2) {
+                    done = true;
+                }
+                else if (e === -1) {
+                    end = size;
+                    done = true;
+                }
+                else {
+                    end = e;
+                    k = e + 1;
+                }
+            }
+            return extension.slice(start, end);
+        }
+        searchValue = "-" + key;
+        pos = extension.indexOf(searchValue);
+        if (pos !== -1 && pos + 3 === size) {
+            return '';
+        }
+        return undefined;
+    }
+
+    /**
+     * https://tc39.es/ecma402/#sec-resolvelocale
+     */
+    function ResolveLocale(availableLocales, requestedLocales, options, relevantExtensionKeys, localeData, getDefaultLocale) {
+        var matcher = options.localeMatcher;
+        var r;
+        if (matcher === 'lookup') {
+            r = LookupMatcher(availableLocales, requestedLocales, getDefaultLocale);
+        }
+        else {
+            r = BestFitMatcher(availableLocales, requestedLocales, getDefaultLocale);
+        }
+        var foundLocale = r.locale;
+        var result = { locale: '', dataLocale: foundLocale };
+        var supportedExtension = '-u';
+        for (var _i = 0, relevantExtensionKeys_1 = relevantExtensionKeys; _i < relevantExtensionKeys_1.length; _i++) {
+            var key = relevantExtensionKeys_1[_i];
+            invariant(foundLocale in localeData, "Missing locale data for " + foundLocale);
+            var foundLocaleData = localeData[foundLocale];
+            invariant(typeof foundLocaleData === 'object' && foundLocaleData !== null, "locale data " + key + " must be an object");
+            var keyLocaleData = foundLocaleData[key];
+            invariant(Array.isArray(keyLocaleData), "keyLocaleData for " + key + " must be an array");
+            var value = keyLocaleData[0];
+            invariant(typeof value === 'string' || value === null, "value must be string or null but got " + typeof value + " in key " + key);
+            var supportedExtensionAddition = '';
+            if (r.extension) {
+                var requestedValue = UnicodeExtensionValue(r.extension, key);
+                if (requestedValue !== undefined) {
+                    if (requestedValue !== '') {
+                        if (~keyLocaleData.indexOf(requestedValue)) {
+                            value = requestedValue;
+                            supportedExtensionAddition = "-" + key + "-" + value;
+                        }
+                    }
+                    else if (~requestedValue.indexOf('true')) {
+                        value = 'true';
+                        supportedExtensionAddition = "-" + key;
+                    }
+                }
+            }
+            if (key in options) {
+                var optionsValue = options[key];
+                invariant(typeof optionsValue === 'string' ||
+                    typeof optionsValue === 'undefined' ||
+                    optionsValue === null, 'optionsValue must be String, Undefined or Null');
+                if (~keyLocaleData.indexOf(optionsValue)) {
+                    if (optionsValue !== value) {
+                        value = optionsValue;
+                        supportedExtensionAddition = '';
+                    }
+                }
+            }
+            result[key] = value;
+            supportedExtension += supportedExtensionAddition;
+        }
+        if (supportedExtension.length > 2) {
+            var privateIndex = foundLocale.indexOf('-x-');
+            if (privateIndex === -1) {
+                foundLocale = foundLocale + supportedExtension;
+            }
+            else {
+                var preExtension = foundLocale.slice(0, privateIndex);
+                var postExtension = foundLocale.slice(privateIndex, foundLocale.length);
+                foundLocale = preExtension + supportedExtension + postExtension;
+            }
+            foundLocale = Intl.getCanonicalLocales(foundLocale)[0];
+        }
+        result.locale = foundLocale;
+        return result;
+    }
+
+    /**
+     * https://tc39.es/proposal-intl-relative-time/#sec-singularrelativetimeunit
+     * @param unit
+     */
+    function SingularRelativeTimeUnit(unit) {
+        invariant(Type(unit) === 'String', 'unit must be a string');
+        if (unit === 'seconds')
+            return 'second';
+        if (unit === 'minutes')
+            return 'minute';
+        if (unit === 'hours')
+            return 'hour';
+        if (unit === 'days')
+            return 'day';
+        if (unit === 'weeks')
+            return 'week';
+        if (unit === 'months')
+            return 'month';
+        if (unit === 'quarters')
+            return 'quarter';
+        if (unit === 'years')
+            return 'year';
+        if (unit !== 'second' &&
+            unit !== 'minute' &&
+            unit !== 'hour' &&
+            unit !== 'day' &&
+            unit !== 'week' &&
+            unit !== 'month' &&
+            unit !== 'quarter' &&
+            unit !== 'year') {
+            throw new RangeError('invalid unit');
+        }
+        return unit;
+    }
+
+    function MakePartsList(pattern, unit, parts) {
+        var patternParts = PartitionPattern(pattern);
+        var result = [];
+        for (var _i = 0, patternParts_1 = patternParts; _i < patternParts_1.length; _i++) {
+            var patternPart = patternParts_1[_i];
+            if (patternPart.type === 'literal') {
+                result.push({
+                    type: 'literal',
+                    value: patternPart.value,
+                });
+            }
+            else {
+                invariant(patternPart.type === '0', "Malformed pattern " + pattern);
+                for (var _a = 0, parts_1 = parts; _a < parts_1.length; _a++) {
+                    var part = parts_1[_a];
+                    result.push({
+                        type: part.type,
+                        value: part.value,
+                        unit: unit,
+                    });
+                }
+            }
+        }
+        return result;
+    }
+
+    function PartitionRelativeTimePattern(rtf, value, unit, _a) {
+        var getInternalSlots = _a.getInternalSlots;
+        invariant(Type(value) === 'Number', "value must be number, instead got " + typeof value, TypeError);
+        invariant(Type(unit) === 'String', "unit must be number, instead got " + typeof value, TypeError);
+        if (isNaN(value) || !isFinite(value)) {
+            throw new RangeError("Invalid value " + value);
+        }
+        var resolvedUnit = SingularRelativeTimeUnit(unit);
+        var _b = getInternalSlots(rtf), fields = _b.fields, style = _b.style, numeric = _b.numeric, pluralRules = _b.pluralRules, numberFormat = _b.numberFormat;
+        var entry = resolvedUnit;
+        if (style === 'short') {
+            entry = resolvedUnit + "-short";
+        }
+        else if (style === 'narrow') {
+            entry = resolvedUnit + "-narrow";
+        }
+        if (!(entry in fields)) {
+            entry = resolvedUnit;
+        }
+        var patterns = fields[entry];
+        if (numeric === 'auto') {
+            if (ToString(value) in patterns) {
+                return [
+                    {
+                        type: 'literal',
+                        value: patterns[ToString(value)],
+                    },
+                ];
+            }
+        }
+        var tl = 'future';
+        if (SameValue(value, -0) || value < 0) {
+            tl = 'past';
+        }
+        var po = patterns[tl];
+        var fv = typeof numberFormat.formatToParts === 'function'
+            ? numberFormat.formatToParts(Math.abs(value))
+            : // TODO: If formatToParts is not supported, we assume the whole formatted
+                // number is a part
+                [
+                    {
+                        type: 'literal',
+                        value: numberFormat.format(Math.abs(value)),
+                        unit: unit,
+                    },
+                ];
+        var pr = pluralRules.select(value);
+        var pattern = po[pr];
+        return MakePartsList(pattern, resolvedUnit, fv);
+    }
+
+    var NUMBERING_SYSTEM_REGEX = /^[a-z0-9]{3,8}(-[a-z0-9]{3,8})*$/i;
+    function InitializeRelativeTimeFormat(rtf, locales, options, _a) {
+        var getInternalSlots = _a.getInternalSlots, availableLocales = _a.availableLocales, relevantExtensionKeys = _a.relevantExtensionKeys, localeData = _a.localeData, getDefaultLocale = _a.getDefaultLocale;
+        var internalSlots = getInternalSlots(rtf);
+        internalSlots.initializedRelativeTimeFormat = true;
+        var requestedLocales = CanonicalizeLocaleList(locales);
+        var opt = Object.create(null);
+        var opts = options === undefined ? Object.create(null) : ToObject(options);
+        var matcher = GetOption(opts, 'localeMatcher', 'string', ['best fit', 'lookup'], 'best fit');
+        opt.localeMatcher = matcher;
+        var numberingSystem = GetOption(opts, 'numberingSystem', 'string', undefined, undefined);
+        if (numberingSystem !== undefined) {
+            if (!NUMBERING_SYSTEM_REGEX.test(numberingSystem)) {
+                throw new RangeError("Invalid numbering system " + numberingSystem);
+            }
+        }
+        opt.nu = numberingSystem;
+        var r = ResolveLocale(availableLocales, requestedLocales, opt, relevantExtensionKeys, localeData, getDefaultLocale);
+        var locale = r.locale, nu = r.nu;
+        internalSlots.locale = locale;
+        internalSlots.style = GetOption(opts, 'style', 'string', ['long', 'narrow', 'short'], 'long');
+        internalSlots.numeric = GetOption(opts, 'numeric', 'string', ['always', 'auto'], 'always');
+        var fields = localeData[locale];
+        invariant(!!fields, "Missing locale data for " + locale);
+        internalSlots.fields = fields;
+        internalSlots.numberFormat = new Intl.NumberFormat(locales);
+        internalSlots.pluralRules = new Intl.PluralRules(locales);
+        internalSlots.numberingSystem = nu;
+        return rtf;
+    }
+
+    /**
+     * https://tc39.es/ecma402/#sec-lookupsupportedlocales
+     * @param availableLocales
+     * @param requestedLocales
+     */
+    function LookupSupportedLocales(availableLocales, requestedLocales) {
+        var subset = [];
+        for (var _i = 0, requestedLocales_1 = requestedLocales; _i < requestedLocales_1.length; _i++) {
+            var locale = requestedLocales_1[_i];
+            var noExtensionLocale = locale.replace(UNICODE_EXTENSION_SEQUENCE_REGEX, '');
+            var availableLocale = BestAvailableLocale(availableLocales, noExtensionLocale);
+            if (availableLocale) {
+                subset.push(availableLocale);
+            }
+        }
+        return subset;
+    }
+
+    /**
+     * https://tc39.es/ecma402/#sec-supportedlocales
+     * @param availableLocales
+     * @param requestedLocales
+     * @param options
+     */
+    function SupportedLocales(availableLocales, requestedLocales, options) {
+        var matcher = 'best fit';
+        if (options !== undefined) {
+            options = ToObject(options);
+            matcher = GetOption(options, 'localeMatcher', 'string', ['lookup', 'best fit'], 'best fit');
+        }
+        if (matcher === 'best fit') {
+            return LookupSupportedLocales(availableLocales, requestedLocales);
+        }
+        return LookupSupportedLocales(availableLocales, requestedLocales);
+    }
+
+    function getLocaleHierarchy(locale) {
+        var results = [locale];
+        var localeParts = locale.split('-');
+        for (var i = localeParts.length; i > 1; i--) {
+            results.push(localeParts.slice(0, i - 1).join('-'));
+        }
+        return results;
+    }
+    var MissingLocaleDataError = /** @class */ (function (_super) {
+        __extends(MissingLocaleDataError, _super);
+        function MissingLocaleDataError() {
+            var _this = _super !== null && _super.apply(this, arguments) || this;
+            _this.type = 'MISSING_LOCALE_DATA';
+            return _this;
+        }
+        return MissingLocaleDataError;
+    }(Error));
+    function isMissingLocaleDataError(e) {
+        return e.type === 'MISSING_LOCALE_DATA';
+    }
+    function unpackData(locale, localeData, 
+    /** By default shallow merge the dictionaries. */
+    reducer) {
+        if (reducer === void 0) { reducer = function (all, d) { return (__assign(__assign({}, all), d)); }; }
+        var localeHierarchy = getLocaleHierarchy(locale);
+        var dataToMerge = localeHierarchy
+            .map(function (l) { return localeData.data[l]; })
+            .filter(Boolean);
+        if (!dataToMerge.length) {
+            throw new MissingLocaleDataError("Missing locale data for \"" + locale + "\", lookup hierarchy: " + localeHierarchy.join(', '));
+        }
+        dataToMerge.reverse();
+        return dataToMerge.reduce(reducer, {});
+    }
+
+    // Type-only circular import
+    // eslint-disable-next-line import/no-cycle
+    var internalSlotMap = new WeakMap();
+    function getInternalSlots(x) {
+        var internalSlots = internalSlotMap.get(x);
+        if (!internalSlots) {
+            internalSlots = Object.create(null);
+            internalSlotMap.set(x, internalSlots);
+        }
+        return internalSlots;
+    }
+
+    var RelativeTimeFormat = /** @class */ (function () {
+        function RelativeTimeFormat(locales, options) {
             // test262/test/intl402/RelativeTimeFormat/constructor/constructor/newtarget-undefined.js
             // Cannot use `new.target` bc of IE11 & TS transpiles it to something else
             var newTarget = this && this instanceof RelativeTimeFormat ? this.constructor : void 0;
             if (!newTarget) {
                 throw new TypeError("Intl.RelativeTimeFormat must be called with 'new'");
             }
-            var opts = options === undefined ? Object.create(null) : toObject(options);
-            if (locales === undefined) {
-                this._locale = DEFAULT_LOCALE;
-            }
-            else {
-                var resolvedLocales = resolveSupportedLocales(__spreadArrays(Intl.NumberFormat.supportedLocalesOf(locales), [DEFAULT_LOCALE]), RelativeTimeFormat.__localeData__);
-                if (resolvedLocales.length < 1) {
-                    throw new Error('No locale data has been added to IntlRelativeTimeFormat for: ' +
-                        resolvedLocales.join(', ') +
-                        ', or the default locale: ' +
-                        DEFAULT_LOCALE);
-                }
-                this._locale = resolvedLocales[0];
-            }
-            this._localeMatcher = getOption(opts, 'localeMatcher', 'string', ['best fit', 'lookup'], 'best fit');
-            this._style = getOption(opts, 'style', 'string', ['long', 'narrow', 'short'], 'long');
-            this._numeric = getOption(opts, 'numeric', 'string', ['always', 'auto'], 'always');
-            this._fields = findFields(this._locale);
-            this._nf = new Intl.NumberFormat(this._locale);
-            this._pl = new Intl.PluralRules(this._locale);
-            this._numberingSystem = this._nf.resolvedOptions().numberingSystem;
+            return InitializeRelativeTimeFormat(this, locales, options, {
+                getInternalSlots: getInternalSlots,
+                availableLocales: RelativeTimeFormat.availableLocales,
+                relevantExtensionKeys: RelativeTimeFormat.relevantExtensionKeys,
+                localeData: RelativeTimeFormat.localeData,
+                getDefaultLocale: RelativeTimeFormat.getDefaultLocale,
+            });
         }
         RelativeTimeFormat.prototype.format = function (value, unit) {
-            validateInstance(this, 'format');
-            var resolvedUnit = validateUnit(unit);
-            var parsedValue = validateValue(value);
-            var _a = this, style = _a._style, numeric = _a._numeric;
-            var fieldData = findFieldData(this._fields, resolvedUnit, style);
-            if (!fieldData) {
-                throw new Error("Unsupported unit " + unit);
+            if (typeof this !== 'object') {
+                throw new TypeError('format was called on a non-object');
             }
-            var relative = fieldData.relative, relativeTime = fieldData.relativeTime;
-            var result = '';
-            // We got a match for things like yesterday
-            if (numeric == 'auto' &&
-                (result = relative[String(parsedValue)] || '')) {
-                return result;
+            var internalSlots = getInternalSlots(this);
+            if (!internalSlots.initializedRelativeTimeFormat) {
+                throw new TypeError('format was called on a invalid context');
             }
-            var selector = this._pl.select(parsedValue);
-            var futureOrPastData = relativeTime[resolvePastOrFuture(parsedValue)];
-            var msg = futureOrPastData[selector] || futureOrPastData.other;
-            return msg.replace(/\{0\}/, this._nf.format(Math.abs(parsedValue)));
+            return PartitionRelativeTimePattern(this, Number(value), ToString(unit), {
+                getInternalSlots: getInternalSlots,
+            })
+                .map(function (el) { return el.value; })
+                .join('');
         };
         RelativeTimeFormat.prototype.formatToParts = function (value, unit) {
-            validateInstance(this, 'format');
-            var resolvedUnit = validateUnit(unit);
-            var parsedValue = validateValue(value, 'formatToParts');
-            var _a = this, style = _a._style, numeric = _a._numeric;
-            var fieldData = findFieldData(this._fields, resolvedUnit, style);
-            if (!fieldData) {
-                throw new Error("Unsupported unit " + unit);
+            if (typeof this !== 'object') {
+                throw new TypeError('formatToParts was called on a non-object');
             }
-            var relative = fieldData.relative, relativeTime = fieldData.relativeTime;
-            var result = '';
-            // We got a match for things like yesterday
-            if (numeric == 'auto' &&
-                (result = relative[String(parsedValue)] || '')) {
-                return [
-                    {
-                        type: 'literal',
-                        value: result,
-                    },
-                ];
+            var internalSlots = getInternalSlots(this);
+            if (!internalSlots.initializedRelativeTimeFormat) {
+                throw new TypeError('formatToParts was called on a invalid context');
             }
-            var selector = this._pl.select(parsedValue);
-            var futureOrPastData = relativeTime[resolvePastOrFuture(parsedValue)];
-            var msg = futureOrPastData[selector] || futureOrPastData.other;
-            var valueParts = this._nf
-                .formatToParts(Math.abs(parsedValue))
-                .map(function (p) { return (__assign$1(__assign$1({}, p), { unit: resolvedUnit })); });
-            return msg
-                .split(/(\{0\})/)
-                .filter(isString)
-                .reduce(function (parts, str) { return __spreadArrays(parts, (str === '{0}'
-                ? valueParts
-                : [{ type: 'literal', value: str }])); }, []);
+            return PartitionRelativeTimePattern(this, Number(value), ToString(unit), { getInternalSlots: getInternalSlots });
         };
         RelativeTimeFormat.prototype.resolvedOptions = function () {
-            validateInstance(this, 'resolvedOptions');
+            if (typeof this !== 'object') {
+                throw new TypeError('resolvedOptions was called on a non-object');
+            }
+            var internalSlots = getInternalSlots(this);
+            if (!internalSlots.initializedRelativeTimeFormat) {
+                throw new TypeError('resolvedOptions was called on a invalid context');
+            }
             // test262/test/intl402/RelativeTimeFormat/prototype/resolvedOptions/type.js
-            var opts = Object.create(Object.prototype);
-            Object.defineProperties(opts, {
-                locale: {
-                    value: this._locale,
-                    writable: true,
-                    enumerable: true,
-                    configurable: true,
-                },
-                style: {
-                    value: this._style.valueOf(),
-                    writable: true,
-                    enumerable: true,
-                    configurable: true,
-                },
-                numeric: {
-                    value: this._numeric.valueOf(),
-                    writable: true,
-                    enumerable: true,
-                    configurable: true,
-                },
-                numberingSystem: {
-                    value: this._numberingSystem.valueOf(),
-                    writable: true,
-                    enumerable: true,
-                    configurable: true,
-                },
-            });
-            return opts;
+            return {
+                locale: internalSlots.locale,
+                style: internalSlots.style,
+                numeric: internalSlots.numeric,
+                numberingSystem: internalSlots.numberingSystem,
+            };
         };
-        RelativeTimeFormat.prototype.toString = function () {
-            return '[object Intl.RelativeTimeFormat]';
+        RelativeTimeFormat.supportedLocalesOf = function (locales, options) {
+            return SupportedLocales(RelativeTimeFormat.availableLocales, CanonicalizeLocaleList(locales), options);
         };
         RelativeTimeFormat.__addLocaleData = function () {
             var data = [];
             for (var _i = 0; _i < arguments.length; _i++) {
                 data[_i] = arguments[_i];
             }
+            var _loop_1 = function (datum) {
+                var availableLocales = datum.availableLocales;
+                availableLocales.forEach(function (locale) {
+                    try {
+                        RelativeTimeFormat.localeData[locale] = unpackData(locale, datum);
+                    }
+                    catch (e) {
+                        if (isMissingLocaleDataError(e)) {
+                            // If we just don't have data for certain locale, that's ok
+                            return;
+                        }
+                        throw e;
+                    }
+                });
+            };
             for (var _a = 0, data_1 = data; _a < data_1.length; _a++) {
                 var datum = data_1[_a];
-                if (!(datum && datum.locale)) {
-                    throw new Error('Locale data provided to RelativeTimeFormat is missing a ' +
-                        '`locale` property value');
-                }
-                RelativeTimeFormat.__localeData__[datum.locale.toLowerCase()] = datum;
+                _loop_1(datum);
+            }
+            RelativeTimeFormat.availableLocales = Object.keys(RelativeTimeFormat.localeData);
+            if (!RelativeTimeFormat.__defaultLocale) {
+                RelativeTimeFormat.__defaultLocale =
+                    RelativeTimeFormat.availableLocales[0];
             }
         };
-        RelativeTimeFormat.supportedLocalesOf = function (locales) {
-            var _a = [];
-            for (var _i = 1; _i < arguments.length; _i++) {
-                _a[_i - 1] = arguments[_i];
-            }
-            var opts = _a[0];
-            // test262/test/intl402/RelativeTimeFormat/constructor/supportedLocalesOf/options-toobject.js
-            var localeMatcher = 'best fit';
-            // test262/test/intl402/RelativeTimeFormat/constructor/supportedLocalesOf/options-null.js
-            if (opts === null) {
-                throw new TypeError('opts cannot be null');
-            }
-            if (opts) {
-                localeMatcher = getOption(opts, 'localeMatcher', 'string', ['best fit', 'lookup'], 'best fit');
-            }
-            // test262/test/intl402/RelativeTimeFormat/constructor/supportedLocalesOf/result-type.js
-            return resolveSupportedLocales(Intl.PluralRules.supportedLocalesOf(locales, { localeMatcher: localeMatcher }), RelativeTimeFormat.__localeData__);
+        RelativeTimeFormat.getDefaultLocale = function () {
+            return RelativeTimeFormat.__defaultLocale;
         };
-        RelativeTimeFormat.__localeData__ = {};
+        RelativeTimeFormat.localeData = {};
+        RelativeTimeFormat.availableLocales = [];
+        RelativeTimeFormat.__defaultLocale = 'en';
+        RelativeTimeFormat.relevantExtensionKeys = ['nu'];
         RelativeTimeFormat.polyfilled = true;
         return RelativeTimeFormat;
     }());
+    try {
+        // IE11 does not have Symbol
+        if (typeof Symbol !== 'undefined') {
+            Object.defineProperty(RelativeTimeFormat.prototype, Symbol.toStringTag, {
+                value: 'Intl.RelativeTimeFormat',
+                writable: false,
+                enumerable: false,
+                configurable: true,
+            });
+        }
+        // https://github.com/tc39/test262/blob/master/test/intl402/RelativeTimeFormat/constructor/length.js
+        Object.defineProperty(RelativeTimeFormat.prototype.constructor, 'length', {
+            value: 0,
+            writable: false,
+            enumerable: false,
+            configurable: true,
+        });
+        // https://github.com/tc39/test262/blob/master/test/intl402/RelativeTimeFormat/constructor/supportedLocalesOf/length.js
+        Object.defineProperty(RelativeTimeFormat.supportedLocalesOf, 'length', {
+            value: 1,
+            writable: false,
+            enumerable: false,
+            configurable: true,
+        });
+    }
+    catch (e) {
+        // Meta fix so we're test262-compliant, not important
+    }
 
-    /* @generated */
-    // prettier-ignore  
-    var defaultLocale = { "locale": "en", "fields": { "year": { "displayName": "year", "relative": { "0": "this year", "1": "next year", "-1": "last year" }, "relativeTime": { "future": { "one": "in {0} year", "other": "in {0} years" }, "past": { "one": "{0} year ago", "other": "{0} years ago" } }, "relativePeriod": undefined }, "year-short": { "displayName": "yr.", "relative": { "0": "this yr.", "1": "next yr.", "-1": "last yr." }, "relativeTime": { "future": { "one": "in {0} yr.", "other": "in {0} yr." }, "past": { "one": "{0} yr. ago", "other": "{0} yr. ago" } }, "relativePeriod": undefined }, "year-narrow": { "displayName": "yr.", "relative": { "0": "this yr.", "1": "next yr.", "-1": "last yr." }, "relativeTime": { "future": { "one": "in {0} yr.", "other": "in {0} yr." }, "past": { "one": "{0} yr. ago", "other": "{0} yr. ago" } }, "relativePeriod": undefined }, "quarter": { "displayName": "quarter", "relative": { "0": "this quarter", "1": "next quarter", "-1": "last quarter" }, "relativeTime": { "future": { "one": "in {0} quarter", "other": "in {0} quarters" }, "past": { "one": "{0} quarter ago", "other": "{0} quarters ago" } }, "relativePeriod": undefined }, "quarter-short": { "displayName": "qtr.", "relative": { "0": "this qtr.", "1": "next qtr.", "-1": "last qtr." }, "relativeTime": { "future": { "one": "in {0} qtr.", "other": "in {0} qtrs." }, "past": { "one": "{0} qtr. ago", "other": "{0} qtrs. ago" } }, "relativePeriod": undefined }, "quarter-narrow": { "displayName": "qtr.", "relative": { "0": "this qtr.", "1": "next qtr.", "-1": "last qtr." }, "relativeTime": { "future": { "one": "in {0} qtr.", "other": "in {0} qtrs." }, "past": { "one": "{0} qtr. ago", "other": "{0} qtrs. ago" } }, "relativePeriod": undefined }, "month": { "displayName": "month", "relative": { "0": "this month", "1": "next month", "-1": "last month" }, "relativeTime": { "future": { "one": "in {0} month", "other": "in {0} months" }, "past": { "one": "{0} month ago", "other": "{0} months ago" } }, "relativePeriod": undefined }, "month-short": { "displayName": "mo.", "relative": { "0": "this mo.", "1": "next mo.", "-1": "last mo." }, "relativeTime": { "future": { "one": "in {0} mo.", "other": "in {0} mo." }, "past": { "one": "{0} mo. ago", "other": "{0} mo. ago" } }, "relativePeriod": undefined }, "month-narrow": { "displayName": "mo.", "relative": { "0": "this mo.", "1": "next mo.", "-1": "last mo." }, "relativeTime": { "future": { "one": "in {0} mo.", "other": "in {0} mo." }, "past": { "one": "{0} mo. ago", "other": "{0} mo. ago" } }, "relativePeriod": undefined }, "week": { "displayName": "week", "relative": { "0": "this week", "1": "next week", "-1": "last week" }, "relativeTime": { "future": { "one": "in {0} week", "other": "in {0} weeks" }, "past": { "one": "{0} week ago", "other": "{0} weeks ago" } }, "relativePeriod": "the week of {0}" }, "week-short": { "displayName": "wk.", "relative": { "0": "this wk.", "1": "next wk.", "-1": "last wk." }, "relativeTime": { "future": { "one": "in {0} wk.", "other": "in {0} wk." }, "past": { "one": "{0} wk. ago", "other": "{0} wk. ago" } }, "relativePeriod": "the week of {0}" }, "week-narrow": { "displayName": "wk.", "relative": { "0": "this wk.", "1": "next wk.", "-1": "last wk." }, "relativeTime": { "future": { "one": "in {0} wk.", "other": "in {0} wk." }, "past": { "one": "{0} wk. ago", "other": "{0} wk. ago" } }, "relativePeriod": "the week of {0}" }, "day": { "displayName": "day", "relative": { "0": "today", "1": "tomorrow", "-1": "yesterday" }, "relativeTime": { "future": { "one": "in {0} day", "other": "in {0} days" }, "past": { "one": "{0} day ago", "other": "{0} days ago" } }, "relativePeriod": undefined }, "day-short": { "displayName": "day", "relative": { "0": "today", "1": "tomorrow", "-1": "yesterday" }, "relativeTime": { "future": { "one": "in {0} day", "other": "in {0} days" }, "past": { "one": "{0} day ago", "other": "{0} days ago" } }, "relativePeriod": undefined }, "day-narrow": { "displayName": "day", "relative": { "0": "today", "1": "tomorrow", "-1": "yesterday" }, "relativeTime": { "future": { "one": "in {0} day", "other": "in {0} days" }, "past": { "one": "{0} day ago", "other": "{0} days ago" } }, "relativePeriod": undefined }, "hour": { "displayName": "hour", "relative": { "0": "this hour" }, "relativeTime": { "future": { "one": "in {0} hour", "other": "in {0} hours" }, "past": { "one": "{0} hour ago", "other": "{0} hours ago" } }, "relativePeriod": undefined }, "hour-short": { "displayName": "hr.", "relative": { "0": "this hour" }, "relativeTime": { "future": { "one": "in {0} hr.", "other": "in {0} hr." }, "past": { "one": "{0} hr. ago", "other": "{0} hr. ago" } }, "relativePeriod": undefined }, "hour-narrow": { "displayName": "hr.", "relative": { "0": "this hour" }, "relativeTime": { "future": { "one": "in {0} hr.", "other": "in {0} hr." }, "past": { "one": "{0} hr. ago", "other": "{0} hr. ago" } }, "relativePeriod": undefined }, "minute": { "displayName": "minute", "relative": { "0": "this minute" }, "relativeTime": { "future": { "one": "in {0} minute", "other": "in {0} minutes" }, "past": { "one": "{0} minute ago", "other": "{0} minutes ago" } }, "relativePeriod": undefined }, "minute-short": { "displayName": "min.", "relative": { "0": "this minute" }, "relativeTime": { "future": { "one": "in {0} min.", "other": "in {0} min." }, "past": { "one": "{0} min. ago", "other": "{0} min. ago" } }, "relativePeriod": undefined }, "minute-narrow": { "displayName": "min.", "relative": { "0": "this minute" }, "relativeTime": { "future": { "one": "in {0} min.", "other": "in {0} min." }, "past": { "one": "{0} min. ago", "other": "{0} min. ago" } }, "relativePeriod": undefined }, "second": { "displayName": "second", "relative": { "0": "now" }, "relativeTime": { "future": { "one": "in {0} second", "other": "in {0} seconds" }, "past": { "one": "{0} second ago", "other": "{0} seconds ago" } }, "relativePeriod": undefined }, "second-short": { "displayName": "sec.", "relative": { "0": "now" }, "relativeTime": { "future": { "one": "in {0} sec.", "other": "in {0} sec." }, "past": { "one": "{0} sec. ago", "other": "{0} sec. ago" } }, "relativePeriod": undefined }, "second-narrow": { "displayName": "sec.", "relative": { "0": "now" }, "relativeTime": { "future": { "one": "in {0} sec.", "other": "in {0} sec." }, "past": { "one": "{0} sec. ago", "other": "{0} sec. ago" } }, "relativePeriod": undefined } } };
+    function shouldPolyfill() {
+        return typeof Intl === 'undefined' || !('RelativeTimeFormat' in Intl);
+    }
 
-    RelativeTimeFormat.__addLocaleData(defaultLocale);
+    if (shouldPolyfill()) {
+        Object.defineProperty(Intl, 'RelativeTimeFormat', {
+            value: RelativeTimeFormat,
+            writable: true,
+            enumerable: false,
+            configurable: true,
+        });
+    }
 
-    fixMeta(RelativeTimeFormat);
-
-}));
+})));
 
 }}).call('object' === typeof window && window || 'object' === typeof self && self || 'object' === typeof global && global || {});

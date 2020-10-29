@@ -120,7 +120,7 @@ function configBuilder(opts) {
 				},
 				{
 					test: /\.js$/,
-					exclude: /(node_modules|core-web\/modules)/,
+					exclude: /(node_modules|core-web\/modules|core-web\/helpers)/,
 					use: {
 						loader: 'babel-loader',
 						options: {
@@ -129,8 +129,7 @@ function configBuilder(opts) {
 								[
 									'@mrhenry/core-web',
 									{
-										browsers: opts.coreWebBrowsers,
-										excludeDeprecated: opts.excludeDeprecated,
+										browsers: opts.coreWebBrowsers
 									}
 								]
 							],

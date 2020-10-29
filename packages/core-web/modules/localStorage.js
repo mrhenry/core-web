@@ -1,17 +1,17 @@
-import CreateMethodProperty from "../helpers/_ESAbstract.CreateMethodProperty";
-import ToObject from "../helpers/_ESAbstract.ToObject";
-import ToLength from "../helpers/_ESAbstract.ToLength";
-import ToInteger from "../helpers/_ESAbstract.ToInteger";
-import Get from "../helpers/_ESAbstract.Get";
-import IsCallable from "../helpers/_ESAbstract.IsCallable";
-import HasProperty from "../helpers/_ESAbstract.HasProperty";
-import Call from "../helpers/_ESAbstract.Call";
-import ToString from "../helpers/_ESAbstract.ToString";
-import ToPrimitive from "../helpers/_ESAbstract.ToPrimitive";
-import GetMethod from "../helpers/_ESAbstract.GetMethod";
-import GetV from "../helpers/_ESAbstract.GetV";
-import OrdinaryToPrimitive from "../helpers/_ESAbstract.OrdinaryToPrimitive";
-import Type from "../helpers/_ESAbstract.Type";
+import CreateMethodProperty from "@mrhenry/core-web/helpers/_ESAbstract.CreateMethodProperty";
+import ToObject from "@mrhenry/core-web/helpers/_ESAbstract.ToObject";
+import ToLength from "@mrhenry/core-web/helpers/_ESAbstract.ToLength";
+import ToInteger from "@mrhenry/core-web/helpers/_ESAbstract.ToInteger";
+import Get from "@mrhenry/core-web/helpers/_ESAbstract.Get";
+import IsCallable from "@mrhenry/core-web/helpers/_ESAbstract.IsCallable";
+import HasProperty from "@mrhenry/core-web/helpers/_ESAbstract.HasProperty";
+import Call from "@mrhenry/core-web/helpers/_ESAbstract.Call";
+import ToString from "@mrhenry/core-web/helpers/_ESAbstract.ToString";
+import ToPrimitive from "@mrhenry/core-web/helpers/_ESAbstract.ToPrimitive";
+import GetMethod from "@mrhenry/core-web/helpers/_ESAbstract.GetMethod";
+import GetV from "@mrhenry/core-web/helpers/_ESAbstract.GetV";
+import OrdinaryToPrimitive from "@mrhenry/core-web/helpers/_ESAbstract.OrdinaryToPrimitive";
+import Type from "@mrhenry/core-web/helpers/_ESAbstract.Type";
 (function(undefined) {
 if (!((function(){try{return self.localStorage.setItem("storage_test",1),self.localStorage.removeItem("storage_test"),!0}catch(t){return!1}})()
 )) {

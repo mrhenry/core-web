@@ -1,5 +1,5 @@
-import Type from "../helpers/_ESAbstract.Type";
-import CreateDataProperty from "../helpers/_ESAbstract.CreateDataProperty";
+import Type from "@mrhenry/core-web/helpers/_ESAbstract.Type";
+import CreateDataProperty from "@mrhenry/core-web/helpers/_ESAbstract.CreateDataProperty";
 
 // _ESAbstract.CreateIterResultObject
 /* global Type, CreateDataProperty */
