@@ -1,6 +1,6 @@
-import Call from "../helpers/_ESAbstract.Call";
-import GetV from "../helpers/_ESAbstract.GetV";
-import ToObject from "../helpers/_ESAbstract.ToObject";
+import Call from "@mrhenry/core-web/helpers/_ESAbstract.Call";
+import GetV from "@mrhenry/core-web/helpers/_ESAbstract.GetV";
+import ToObject from "@mrhenry/core-web/helpers/_ESAbstract.ToObject";
 
 // _ESAbstract.Invoke
 /* global GetV, Call */

@@ -1,4 +1,4 @@
-import _DOMTokenList from "../helpers/_DOMTokenList";
+import _DOMTokenList from "@mrhenry/core-web/helpers/_DOMTokenList";
 (function(undefined) {
 if (!("document"in self&&"classList"in document.documentElement&&"Element"in self&&"classList"in Element.prototype&&function(){var e=document.createElement("span")
 return e.classList.add("a","b"),e.classList.contains("b")}()

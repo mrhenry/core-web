@@ -1,8 +1,8 @@
-import Type from "../helpers/_ESAbstract.Type";
-import HasProperty from "../helpers/_ESAbstract.HasProperty";
-import ToBoolean from "../helpers/_ESAbstract.ToBoolean";
-import Get from "../helpers/_ESAbstract.Get";
-import IsCallable from "../helpers/_ESAbstract.IsCallable";
+import Type from "@mrhenry/core-web/helpers/_ESAbstract.Type";
+import HasProperty from "@mrhenry/core-web/helpers/_ESAbstract.HasProperty";
+import ToBoolean from "@mrhenry/core-web/helpers/_ESAbstract.ToBoolean";
+import Get from "@mrhenry/core-web/helpers/_ESAbstract.Get";
+import IsCallable from "@mrhenry/core-web/helpers/_ESAbstract.IsCallable";
 
 // _ESAbstract.ToPropertyDescriptor
 /* globals Type, HasProperty, ToBoolean, Get, IsCallable */
