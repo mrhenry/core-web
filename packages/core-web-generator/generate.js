@@ -89,6 +89,15 @@ async function genAll() {
 		});
 	}
 
+	let knownBrowsers = [];
+	mapping.forEach((feature) => {
+		for (const browser in feature.browsers) {
+			if (!knownBrowsers.includes(browser)) {
+				knownBrowsers.push(browser);
+			}
+		}
+	});
+
 	await writeFile(
 		path.join(helpersDir, "__mapping.js"),
 		`module.exports = ${JSON.stringify(mapping, undefined, "  ")}`
@@ -97,6 +106,11 @@ async function genAll() {
 	await writeFile(
 		path.join(helpersDir, "__client-side-detectors.js"),
 		`module.exports = ${JSON.stringify(generateClientSideDetectors(mapping), undefined, "  ")}`
+	);
+
+	await writeFile(
+		path.join(helpersDir, "__browsers.js"),
+		`module.exports = ${JSON.stringify(knownBrowsers, undefined, "  ")}`
 	);
 }
 

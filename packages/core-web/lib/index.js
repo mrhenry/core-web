@@ -1,10 +1,16 @@
 const mapping = require("../helpers/__mapping");
+const knownBrowsers = require("../helpers/__browsers");
 const clientSideDetectors = require("../helpers/__client-side-detectors");
-const UA = require("@financial-times/polyfill-useragent-normaliser");
+const semver = require("semver");
 
 const map = new Map();
 for (let spec of mapping) {
 	map.set(spec.name, spec);
+}
+
+const browsers = new Set();
+for (let browser of knownBrowsers) {
+	browsers.add(browser);
 }
 
 exports.names = names;
@@ -30,6 +36,13 @@ exports.required = function (targets, opts = {}) {
 
 	let all = [];
 	for (const browser of Object.keys(targets)) {
+		if (!browsers.has(browser)) {
+			console.log(`@mrhenry/core-web - unknown target: "${browser}"`);
+			console.log(`@mrhenry/core-web - known targets:`);
+			console.log(JSON.stringify(knownBrowsers, null, 2) + '\n');
+			continue
+		}
+
 		all = all.concat(required(browser, targets[browser]));
 	}
 	return Array.from(new Set(all));
@@ -37,7 +50,6 @@ exports.required = function (targets, opts = {}) {
 
 function required(browser, version) {
 	const out = [];
-	const ua = new UA(`${browser}/${version}`);
 
 	for (const feature of names()) {
 		const meta = get(feature);
@@ -52,11 +64,10 @@ function required(browser, version) {
 
 		const isBrowserMatch =
 			meta.browsers &&
-			meta.browsers[ua.getFamily()] &&
-			ua.satisfies(meta.browsers[ua.getFamily()]);
-		const unknownOverride = ua.isUnknown();
+			meta.browsers[browser] &&
+			semver.satisfies(semver.coerce(version), meta.browsers[browser]);
 
-		if (isBrowserMatch || unknownOverride) {
+		if (isBrowserMatch) {
 			out.push(feature);
 			continue;
 		}
@@ -81,25 +92,13 @@ exports.clientSideDetect = function (targets, opts = {}) {
 
 		for (let i = (versionedDetectors.versionList.length - 1); i >= 0 ; i--) {
 			const version = versionedDetectors.versionList[i];
-			const ua = new UA(`${browser}/${version}`);
-
-			if (ua.satisfies(versionRange)) {
+			if (semver.satisfies(semver.coerce(version), versionRange)) {
 				const detectors = versionedDetectors.versions[version].detectors;
 				if (!detectors || !detectors.length) {
 					continue;
 				}
 
 				detectors.sort((a, b) => {
-					// Picking from Intl related polyfills last.
-					// Stupid heuristic to get a wider range of features used in detection.
-					if (a.name.indexOf('Intl') === -1 && b.name.indexOf('Intl') > -1) {
-						return -1
-					}
-
-					if (a.name.indexOf('Intl') > -1 && b.name.indexOf('Intl') === -1) {
-						return 1
-					}
-
 					if (a.detectSource.length < b.detectSource.length) {
 						return -1;
 					}
@@ -128,10 +127,15 @@ exports.clientSideDetect = function (targets, opts = {}) {
 
 	let condition = "(\n";
 
-	condition += crossBrowserDetectors
+	condition += crossBrowserDetectors.map((d) => {
+		return d.detectSource;	
+	})
+		.filter((value, index, self) => {
+			return self.indexOf(value) === index;
+		})
 		.map((d) => {
 			let sub = "\t(";
-			sub += d.detectSource.trim();
+			sub += d.trim();
 			sub += ")";
 
 			return sub;
@@ -144,14 +148,14 @@ exports.clientSideDetect = function (targets, opts = {}) {
 };
 
 function logUsedTargets(targets) {
-	let all = {};
+	let all = [];
 
 	for (const browser of Object.keys(targets)) {
-		const ua = new UA(`${browser}/${targets[browser]}`);
-		all[`${browser}/${targets[browser]}`] = {
-			family: ua.getFamily(),
-			version: ua.isUnknown() ? 'unknown' : ua.getVersion(),
-		};
+		if (!browsers.has(browser)) {
+			continue
+		}
+
+		all.push(`${browser}/${semver.coerce(targets[browser])}`);
 	}
 
 	console.log("@mrhenry/core-web - using targets:");

@@ -49,6 +49,14 @@ module.exports = function generateClientSideDetectors(mapping) {
 				continue;
 			}
 
+			if (meta.name.indexOf('console')  === 0) { // Too many quirks
+				continue;
+			}
+
+			if (meta.name.indexOf('Intl')  === 0) { // Too many quirks
+				continue;
+			}
+
 			if (!meta.browsers || !meta.browsers[browserInfo.family]) {
 				continue;
 			}

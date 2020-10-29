@@ -1,6 +1,6 @@
 {
   "name": "@mrhenry/core-web",
-  "version": "0.3.13",
+  "version": "0.3.16",
   "description": "browser feature polyfills as a babel plugin",
   "main": "lib/index.js",
   "author": "Simon Menke <simon.menke@gmail.com>",
@@ -24,7 +24,7 @@
     "/LICENSE"
   ],
   "dependencies": {
-    "@financial-times/polyfill-useragent-normaliser": "^1.9.0"
+    "semver": "^7.3.2"
   },
   "bugs": {
     "url": "https://github.com/mrhenry/core-web/issues"

@@ -1,26 +1,88 @@
 import CreateMethodProperty from "../helpers/_ESAbstract.CreateMethodProperty";
 import IsCallable from "../helpers/_ESAbstract.IsCallable";
 (function(undefined) {
-if (!("document"in self&&"documentElement"in self.document&&"style"in self.document.documentElement&&"scrollBehavior"in document.documentElement.style||function(){try{var e=!1,t={top:0,left:0}
-return Object.defineProperty(t,"behavior",{get:function(){return e=!0,"smooth"},enumerable:!0}),document.body.scrollTo(t),e}catch(n){return!1}}()
+if (!("document"in self&&"documentElement"in self.document&&"style"in self.document.documentElement&&"scrollBehavior"in document.documentElement.style||function(){try{var e=!1,t={top:1,left:0}
+Object.defineProperty(t,"behavior",{get:function(){return e=!0,"smooth"},enumerable:!0})
+var n=document.createElement("DIV"),o=document.createElement("DIV")
+return n.setAttribute("style","height: 1px; overflow: scroll;"),o.setAttribute("style","height: 2px; overflow: scroll;"),n.appendChild(o),n.scrollTo(t),e}catch(l){return!1}}()
 )) {
 // smoothscroll
-(function () {
-    'use strict';
+(function (global, factory) {
+    var exports = {};
+    factory(exports);
+    exports.polyfill();
+}(this, (function (exports) { 'use strict';
+
+    var ease = function (k) {
+        return 0.5 * (1 - Math.cos(Math.PI * k));
+    };
+    var DURATION = 500;
+    var isScrollBehaviorSupported = function () { return "scrollBehavior" in document.documentElement.style; };
+    var original = {
+        _elementScroll: undefined,
+        get elementScroll() {
+            return (this._elementScroll || (this._elementScroll = HTMLElement.prototype.scroll ||
+                HTMLElement.prototype.scrollTo ||
+                function (x, y) {
+                    this.scrollLeft = x;
+                    this.scrollTop = y;
+                }));
+        },
+        _elementScrollIntoView: undefined,
+        get elementScrollIntoView() {
+            return (this._elementScrollIntoView || (this._elementScrollIntoView = HTMLElement.prototype.scrollIntoView));
+        },
+        _windowScroll: undefined,
+        get windowScroll() {
+            return (this._windowScroll || (this._windowScroll = window.scroll || window.scrollTo));
+        },
+    };
+    var modifyPrototypes = function (modification) {
+        var prototypes = [HTMLElement.prototype, SVGElement.prototype, Element.prototype];
+        prototypes.forEach(function (prototype) { return modification(prototype); });
+    };
+    var now = function () { var _a, _b, _c; return (_c = (_b = (_a = window.performance) === null || _a === void 0 ? void 0 : _a.now) === null || _b === void 0 ? void 0 : _b.call(_a)) !== null && _c !== void 0 ? _c : Date.now(); };
+    var step = function (context) {
+        var currentTime = now();
+        var elapsed = (currentTime - context.timeStamp) / (context.duration || DURATION);
+        if (elapsed > 1) {
+            context.method(context.targetX, context.targetY);
+            context.callback();
+            return;
+        }
+        var value = (context.timingFunc || ease)(elapsed);
+        var currentX = context.startX + (context.targetX - context.startX) * value;
+        var currentY = context.startY + (context.targetY - context.startY) * value;
+        context.method(currentX, currentY);
+        context.rafId = requestAnimationFrame(function () {
+            step(context);
+        });
+    };
+    // https://drafts.csswg.org/cssom-view/#normalize-non-finite-values
+    var nonFinite = function (value) {
+        if (!isFinite(value)) {
+            return 0;
+        }
+        return Number(value);
+    };
+    var isObject = function (value) {
+        var type = typeof value;
+        return value !== null && (type === "object" || type === "function");
+    };
 
     /*! *****************************************************************************
-    Copyright (c) Microsoft Corporation. All rights reserved.
-    Licensed under the Apache License, Version 2.0 (the "License"); you may not use
-    this file except in compliance with the License. You may obtain a copy of the
-    License at http://www.apache.org/licenses/LICENSE-2.0
+    Copyright (c) Microsoft Corporation.
 
-    THIS CODE IS PROVIDED ON AN *AS IS* BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
-    KIND, EITHER EXPRESS OR IMPLIED, INCLUDING WITHOUT LIMITATION ANY IMPLIED
-    WARRANTIES OR CONDITIONS OF TITLE, FITNESS FOR A PARTICULAR PURPOSE,
-    MERCHANTABLITY OR NON-INFRINGEMENT.
+    Permission to use, copy, modify, and/or distribute this software for any
+    purpose with or without fee is hereby granted.
 
-    See the Apache Version 2.0 License for specific language governing permissions
-    and limitations under the License.
+    THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES WITH
+    REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF MERCHANTABILITY
+    AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY SPECIAL, DIRECT,
+    INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES WHATSOEVER RESULTING FROM
+    LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR
+    OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR
+    PERFORMANCE OF THIS SOFTWARE.
     ***************************************************************************** */
 
     var __assign = function() {
@@ -46,66 +108,16 @@ return Object.defineProperty(t,"behavior",{get:function(){return e=!0,"smooth"},
         throw new TypeError(s ? "Object is not iterable." : "Symbol.iterator is not defined.");
     }
 
-    function __read(o, n) {
-        var m = typeof Symbol === "function" && o[Symbol.iterator];
-        if (!m) return o;
-        var i = m.call(o), r, ar = [], e;
-        try {
-            while ((n === void 0 || n-- > 0) && !(r = i.next()).done) ar.push(r.value);
-        }
-        catch (error) { e = { error: error }; }
-        finally {
-            try {
-                if (r && !r.done && (m = i["return"])) m.call(i);
-            }
-            finally { if (e) throw e.error; }
-        }
-        return ar;
-    }
-
-    var ease = function (k) {
-        return 0.5 * (1 - Math.cos(Math.PI * k));
-    };
-    var DURATION = 500;
-    var now = function () { return (performance && performance.now ? performance : Date).now(); };
-    var step = function (context) {
-        var currentTime = now();
-        var elapsed = (currentTime - context.timeStamp) / (context.duration || DURATION);
-        if (elapsed > 1) {
-            context.method(context.targetX, context.targetY);
-            context.callback();
-            return;
-        }
-        var value = (context.timingFunc || ease)(elapsed);
-        var currentX = context.startX + (context.targetX - context.startX) * value;
-        var currentY = context.startY + (context.targetY - context.startY) * value;
-        context.method(currentX, currentY);
-        context.rafId = requestAnimationFrame(function () {
-            step(context);
-        });
-    };
-
-    var $original;
-    var getOriginalFunc = function () {
-        if ($original === undefined) {
-            $original =
-                Element.prototype.scroll ||
-                    Element.prototype.scrollTo ||
-                    function (x, y) {
-                        this.scrollLeft = x;
-                        this.scrollTop = y;
-                    };
-        }
-        return $original;
-    };
     var elementScroll = function (element, options) {
-        var originalBoundFunc = getOriginalFunc().bind(element);
+        var _a, _b;
+        var originalBoundFunc = original.elementScroll.bind(element);
         if (options.left === undefined && options.top === undefined) {
             return;
         }
         var startX = element.scrollLeft;
         var startY = element.scrollTop;
-        var _a = options.left, targetX = _a === void 0 ? startX : _a, _b = options.top, targetY = _b === void 0 ? startY : _b;
+        var targetX = nonFinite((_a = options.left) !== null && _a !== void 0 ? _a : startX);
+        var targetY = nonFinite((_b = options.top) !== null && _b !== void 0 ? _b : startY);
         if (options.behavior !== "smooth") {
             return originalBoundFunc(targetX, targetY);
         }
@@ -139,39 +151,50 @@ return Object.defineProperty(t,"behavior",{get:function(){return e=!0,"smooth"},
         });
         step(context);
     };
-    var polyfill = function (options) {
-        var originalFunc = getOriginalFunc();
-        Element.prototype.scroll = function scroll() {
-            var _a = __read(arguments, 2), _b = _a[0], arg0 = _b === void 0 ? 0 : _b, _c = _a[1], arg1 = _c === void 0 ? 0 : _c;
-            if (typeof arg0 === "number" && typeof arg1 === "number") {
-                return originalFunc.call(this, arg0, arg1);
-            }
-            if (Object(arg0) !== arg0) {
-                throw new TypeError("Failed to execute 'scroll' on 'Element': parameter 1 ('options') is not an object.");
-            }
-            return elementScroll(this, __assign(__assign({}, arg0), options));
-        };
+    var elementScrollPolyfill = function (animationOptions) {
+        if (isScrollBehaviorSupported()) {
+            return;
+        }
+        var originalFunc = original.elementScroll;
+        modifyPrototypes(function (prototype) {
+            return (prototype.scroll = function scroll() {
+                if (arguments.length === 1) {
+                    var scrollOptions = arguments[0];
+                    if (!isObject(scrollOptions)) {
+                        throw new TypeError("Failed to execute 'scroll' on 'Element': parameter 1 ('options') is not an object.");
+                    }
+                    return elementScroll(this, __assign(__assign({}, scrollOptions), animationOptions));
+                }
+                return originalFunc.apply(this, arguments);
+            });
+        });
     };
 
-    var elementScrollBy = function (elememt, options) {
-        var left = (options.left || 0) + elememt.scrollLeft;
-        var top = (options.top || 0) + elememt.scrollTop;
-        return elementScroll(elememt, __assign(__assign({}, options), { left: left, top: top }));
+    var elementScrollBy = function (element, options) {
+        var left = nonFinite(options.left || 0) + element.scrollLeft;
+        var top = nonFinite(options.top || 0) + element.scrollTop;
+        return elementScroll(element, __assign(__assign({}, options), { left: left, top: top }));
     };
-    var polyfill$1 = function (options) {
-        Element.prototype.scrollBy = function scrollBy() {
-            var _a = __read(arguments, 2), _b = _a[0], arg0 = _b === void 0 ? 0 : _b, _c = _a[1], arg1 = _c === void 0 ? 0 : _c;
-            if (typeof arg0 === "number" && typeof arg1 === "number") {
-                return elementScrollBy(this, { left: arg0, top: arg1 });
-            }
-            if (Object(arg0) !== arg0) {
-                throw new TypeError("Failed to execute 'scrollBy' on 'Element': parameter 1 ('options') is not an object.");
-            }
-            return elementScrollBy(this, __assign(__assign({}, arg0), options));
-        };
+    var elementScrollByPolyfill = function (animationOptions) {
+        if (isScrollBehaviorSupported()) {
+            return;
+        }
+        modifyPrototypes(function (prototype) {
+            return (prototype.scrollBy = function scrollBy() {
+                if (arguments.length === 1) {
+                    var scrollByOptions = arguments[0];
+                    if (!isObject(scrollByOptions)) {
+                        throw new TypeError("Failed to execute 'scrollBy' on 'Element': parameter 1 ('options') is not an object.");
+                    }
+                    return elementScrollBy(this, __assign(__assign({}, scrollByOptions), animationOptions));
+                }
+                var left = Number(arguments[0]);
+                var top = Number(arguments[1]);
+                return elementScrollBy(this, { left: left, top: top });
+            });
+        });
     };
 
-    // tslint:disable-next-line: max-line-length
     // https://cs.chromium.org/chromium/src/third_party/blink/renderer/core/dom/element.cc?l=647-681&rcl=02a6466f4efa021e4e198f373eccda3cfc56142b
     var toPhysicalAlignment = function (options, axis, isHorizontalWritingMode, isFlippedBlocksMode) {
         var alignment = (axis === 0 /* HorizontalScroll */ && isHorizontalWritingMode) ||
@@ -219,7 +242,7 @@ return Object.defineProperty(t,"behavior",{get:function(){return e=!0,"smooth"},
      * │ target │   frame
      * └────────┘ ┗ ━ ━ ━ ┛
      */
-    function alignNearest(scrollingEdgeStart, scrollingEdgeEnd, scrollingSize, scrollingBorderStart, scrollingBorderEnd, elementEdgeStart, elementEdgeEnd, elementSize) {
+    var alignNearest = function (scrollingEdgeStart, scrollingEdgeEnd, scrollingSize, scrollingBorderStart, scrollingBorderEnd, elementEdgeStart, elementEdgeEnd, elementSize) {
         /**
          * If element edge A and element edge B are both outside scrolling box edge A and scrolling box edge B
          *
@@ -331,7 +354,7 @@ return Object.defineProperty(t,"behavior",{get:function(){return e=!0,"smooth"},
             return elementEdgeEnd - scrollingEdgeEnd + scrollingBorderEnd;
         }
         return 0;
-    }
+    };
     var canOverflow = function (overflow) {
         return overflow !== "visible" && overflow !== "clip";
     };
@@ -392,7 +415,7 @@ return Object.defineProperty(t,"behavior",{get:function(){return e=!0,"smooth"},
         var _b = element.getBoundingClientRect(), targetHeight = _b.height, targetWidth = _b.width, targetTop = _b.top, targetRight = _b.right, targetBottom = _b.bottom, targetLeft = _b.left;
         var computedStyle = getComputedStyle(element);
         var writingMode = computedStyle.writingMode ||
-            computedStyle.webkitWritingMode ||
+            computedStyle.getPropertyValue("-webkit-writing-mode") ||
             computedStyle.getPropertyValue("-ms-writing-mode") ||
             "horizontal-tb";
         var isHorizontalWritingMode = ["horizontal-tb", "lr", "lr-tb", "rl"].some(function (mode) { return mode === writingMode; });
@@ -547,55 +570,53 @@ return Object.defineProperty(t,"behavior",{get:function(){return e=!0,"smooth"},
         }
         actions.forEach(function (run) { return run(); });
     };
-    var $original$1;
-    var getOriginalFunc$1 = function () {
-        if ($original$1 === undefined) {
-            $original$1 = document.documentElement.scrollIntoView;
+    var elementScrollIntoViewPolyfill = function (animationOptions) {
+        if (isScrollBehaviorSupported()) {
+            return;
         }
-        return $original$1;
-    };
-    var polyfill$2 = function (options) {
-        var originalFunc = getOriginalFunc$1();
-        Element.prototype.scrollIntoView = function scrollIntoView(arg) {
-            if (typeof arg === "boolean" || arg === undefined) {
-                return originalFunc.call(this, arg);
-            }
-            if (Object(arg) !== arg) {
-                throw new TypeError("Failed to execute 'scrollIntoView' on 'Element': parameter 1 ('options') is not an object.");
-            }
-            return elementScrollIntoView(this, __assign(__assign({}, arg), options));
-        };
+        var originalFunc = original.elementScrollIntoView;
+        modifyPrototypes(function (prototype) {
+            return (prototype.scrollIntoView = function scrollIntoView() {
+                var scrollIntoViewOptions = arguments[0];
+                if (arguments.length === 1 && isObject(scrollIntoViewOptions)) {
+                    return elementScrollIntoView(this, __assign(__assign({}, scrollIntoViewOptions), animationOptions));
+                }
+                return originalFunc.apply(this, arguments);
+            });
+        });
     };
 
-    var polyfill$3 = function (options) {
-        var originalFunc = getOriginalFunc();
-        Element.prototype.scrollTo = function scrollTo() {
-            var _a = __read(arguments, 2), _b = _a[0], arg0 = _b === void 0 ? 0 : _b, _c = _a[1], arg1 = _c === void 0 ? 0 : _c;
-            if (typeof arg0 === "number" && typeof arg1 === "number") {
-                return originalFunc.call(this, arg0, arg1);
-            }
-            if (Object(arg0) !== arg0) {
-                throw new TypeError("Failed to execute 'scrollTo' on 'Element': parameter 1 ('options') is not an object.");
-            }
-            return elementScroll(this, __assign(__assign({}, arg0), options));
-        };
+    var elementScrollToPolyfill = function (animationOptions) {
+        if (isScrollBehaviorSupported()) {
+            return;
+        }
+        var originalFunc = original.elementScroll;
+        modifyPrototypes(function (prototype) {
+            return (prototype.scrollTo = function scrollTo() {
+                if (arguments.length === 1) {
+                    var scrollToOptions = arguments[0];
+                    if (!isObject(scrollToOptions)) {
+                        throw new TypeError("Failed to execute 'scrollTo' on 'Element': parameter 1 ('options') is not an object.");
+                    }
+                    var left = Number(scrollToOptions.left);
+                    var top_1 = Number(scrollToOptions.top);
+                    return elementScroll(this, __assign(__assign(__assign({}, scrollToOptions), { left: left, top: top_1 }), animationOptions));
+                }
+                return originalFunc.apply(this, arguments);
+            });
+        });
     };
 
-    var $original$2;
-    var getOriginalFunc$2 = function () {
-        if ($original$2 === undefined) {
-            $original$2 = (window.scroll || window.scrollTo).bind(window);
-        }
-        return $original$2;
-    };
     var windowScroll = function (options) {
-        var originalBoundFunc = getOriginalFunc$2();
+        var _a, _b;
+        var originalBoundFunc = original.windowScroll.bind(window);
         if (options.left === undefined && options.top === undefined) {
             return;
         }
         var startX = window.scrollX || window.pageXOffset;
         var startY = window.scrollY || window.pageYOffset;
-        var _a = options.left, targetX = _a === void 0 ? startX : _a, _b = options.top, targetY = _b === void 0 ? startY : _b;
+        var targetX = nonFinite((_a = options.left) !== null && _a !== void 0 ? _a : startX);
+        var targetY = nonFinite((_b = options.top) !== null && _b !== void 0 ? _b : startY);
         if (options.behavior !== "smooth") {
             return originalBoundFunc(targetX, targetY);
         }
@@ -629,84 +650,100 @@ return Object.defineProperty(t,"behavior",{get:function(){return e=!0,"smooth"},
         });
         step(context);
     };
-    var polyfill$4 = function (options) {
-        var originalFunc = getOriginalFunc$2();
+    var windowScrollPolyfill = function (animationOptions) {
+        if (isScrollBehaviorSupported()) {
+            return;
+        }
+        var originalFunc = original.windowScroll;
         window.scroll = function scroll() {
-            var _a = __read(arguments, 2), _b = _a[0], arg0 = _b === void 0 ? 0 : _b, _c = _a[1], arg1 = _c === void 0 ? 0 : _c;
-            if (typeof arg0 === "number" && typeof arg1 === "number") {
-                return originalFunc.call(this, arg0, arg1);
+            if (arguments.length === 1) {
+                var scrollOptions = arguments[0];
+                if (!isObject(scrollOptions)) {
+                    throw new TypeError("Failed to execute 'scroll' on 'Window': parameter 1 ('options') is not an object.");
+                }
+                return windowScroll(__assign(__assign({}, scrollOptions), animationOptions));
             }
-            if (Object(arg0) !== arg0) {
-                throw new TypeError("Failed to execute 'scroll' on 'Window': parameter 1 ('options') is not an object.");
-            }
-            return windowScroll(__assign(__assign({}, arg0), options));
+            return originalFunc.apply(this, arguments);
         };
     };
 
     var windowScrollBy = function (options) {
-        var left = (options.left || 0) + (window.scrollX || window.pageXOffset);
-        var top = (options.top || 0) + (window.scrollY || window.pageYOffset);
+        var left = nonFinite(options.left || 0) + (window.scrollX || window.pageXOffset);
+        var top = nonFinite(options.top || 0) + (window.scrollY || window.pageYOffset);
         if (options.behavior !== "smooth") {
-            return getOriginalFunc$2()(left, top);
+            return original.windowScroll.call(window, left, top);
         }
         return windowScroll(__assign(__assign({}, options), { left: left, top: top }));
     };
-    var $original$3;
-    var polyfill$5 = function (options) {
-        var originalFunc = (function () {
-            if ($original$3 === undefined) {
-                $original$3 = window.scrollBy.bind(window);
-            }
-            return $original$3;
-        })();
-        window.scrollBy = function scrollBy() {
-            var _a = __read(arguments, 2), _b = _a[0], arg0 = _b === void 0 ? 0 : _b, _c = _a[1], arg1 = _c === void 0 ? 0 : _c;
-            if (typeof arg0 === "number" && typeof arg1 === "number") {
-                return originalFunc.call(this, arg0, arg1);
-            }
-            if (Object(arg0) !== arg0) {
-                throw new TypeError("Failed to execute 'scrollBy' on 'Window': parameter 1 ('options') is not an object.");
-            }
-            return windowScrollBy(__assign(__assign({}, arg0), options));
-        };
-    };
-
-    var $original$4;
-    var getOriginalFunc$3 = function () {
-        if ($original$4 === undefined) {
-            $original$4 = (window.scrollTo || window.scroll).bind(window);
-        }
-        return $original$4;
-    };
-    var polyfill$6 = function (options) {
-        var originalFunc = getOriginalFunc$3();
-        window.scrollTo = function scrollTo() {
-            var _a = __read(arguments, 2), _b = _a[0], arg0 = _b === void 0 ? 0 : _b, _c = _a[1], arg1 = _c === void 0 ? 0 : _c;
-            if (typeof arg0 === "number" && typeof arg1 === "number") {
-                return originalFunc.call(this, arg0, arg1);
-            }
-            if (Object(arg0) !== arg0) {
-                throw new TypeError("Failed to execute 'scrollTo' on 'Window': parameter 1 ('options') is not an object.");
-            }
-            return windowScroll(__assign(__assign({}, arg0), options));
-        };
-    };
-
-    var polyfill$7 = function (options) {
-        if ("scrollBehavior" in document.documentElement.style) {
+    var windowScrollByPolyfill = function (animationOptions) {
+        if (isScrollBehaviorSupported()) {
             return;
         }
-        polyfill$4(options);
-        polyfill$6(options);
-        polyfill$5(options);
-        polyfill(options);
-        polyfill$3(options);
-        polyfill$1(options);
-        polyfill$2(options);
+        window.scrollBy = function scrollBy() {
+            if (arguments.length === 1) {
+                var scrollByOptions = arguments[0];
+                if (!isObject(scrollByOptions)) {
+                    throw new TypeError("Failed to execute 'scrollBy' on 'Window': parameter 1 ('options') is not an object.");
+                }
+                return windowScrollBy(__assign(__assign({}, scrollByOptions), animationOptions));
+            }
+            var left = Number(arguments[0]);
+            var top = Number(arguments[1]);
+            return windowScrollBy({ left: left, top: top });
+        };
     };
 
-    polyfill$7();
+    var windowScrollToPolyfill = function (animationOptions) {
+        if (isScrollBehaviorSupported()) {
+            return;
+        }
+        var originalFunc = original.windowScroll;
+        window.scrollTo = function scrollTo() {
+            if (arguments.length === 1) {
+                var scrollToOptions = arguments[0];
+                if (!isObject(scrollToOptions)) {
+                    throw new TypeError("Failed to execute 'scrollTo' on 'Window': parameter 1 ('options') is not an object.");
+                }
+                var left = Number(scrollToOptions.left);
+                var top_1 = Number(scrollToOptions.top);
+                return windowScroll(__assign(__assign(__assign({}, scrollToOptions), { left: left, top: top_1 }), animationOptions));
+            }
+            return originalFunc.apply(this, arguments);
+        };
+    };
 
-})();
+    var polyfill = function (options) {
+        if (isScrollBehaviorSupported()) {
+            return;
+        }
+        windowScrollPolyfill(options);
+        windowScrollToPolyfill(options);
+        windowScrollByPolyfill(options);
+        elementScrollPolyfill(options);
+        elementScrollToPolyfill(options);
+        elementScrollByPolyfill(options);
+        elementScrollIntoViewPolyfill(options);
+    };
+
+    exports.elementScroll = elementScroll;
+    exports.elementScrollBy = elementScrollBy;
+    exports.elementScrollByPolyfill = elementScrollByPolyfill;
+    exports.elementScrollIntoView = elementScrollIntoView;
+    exports.elementScrollIntoViewPolyfill = elementScrollIntoViewPolyfill;
+    exports.elementScrollPolyfill = elementScrollPolyfill;
+    exports.elementScrollTo = elementScroll;
+    exports.elementScrollToPolyfill = elementScrollToPolyfill;
+    exports.polyfill = polyfill;
+    exports.seamless = polyfill;
+    exports.windowScroll = windowScroll;
+    exports.windowScrollBy = windowScrollBy;
+    exports.windowScrollByPolyfill = windowScrollByPolyfill;
+    exports.windowScrollPolyfill = windowScrollPolyfill;
+    exports.windowScrollTo = windowScroll;
+    exports.windowScrollToPolyfill = windowScrollToPolyfill;
+
+    Object.defineProperty(exports, '__esModule', { value: true });
+
+})));
 
 }}).call('object' === typeof window && window || 'object' === typeof self && self || 'object' === typeof global && global || {});
