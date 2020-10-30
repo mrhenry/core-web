@@ -98,7 +98,7 @@ function configBuilder(opts) {
 			rules: [
 				{
 					test: /\.js$/,
-					include: /core-web\/modules/,
+					include: /(core-web\/modules|core-web\/helpers)/,
 					use: {
 						loader: 'babel-loader',
 						options: {
