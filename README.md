@@ -1,6 +1,6 @@
 # core-web
 
-[![Build Status](https://travis-ci.com/mrhenry/core-web.svg?branch=main)](https://travis-ci.com/mrhenry/core-web) [![BrowserStack Status](https://automate.browserstack.com/badge.svg?badge_key=MkE1NFM0ZkZESGg1VkNVd0htbm1BSTNFNjJHUGRhSjlEcU1PQ0JOMVVLOD0tLUVQMFpFUWIxTCtJWUtKYkFXYnN3OGc9PQ==--e6f705c0dc92b0ed20bd3a64df779e846f1ceeda)](https://automate.browserstack.com/public-build/MkE1NFM0ZkZESGg1VkNVd0htbm1BSTNFNjJHUGRhSjlEcU1PQ0JOMVVLOD0tLUVQMFpFUWIxTCtJWUtKYkFXYnN3OGc9PQ==--e6f705c0dc92b0ed20bd3a64df779e846f1ceeda)
+[![Build Status](https://travis-ci.com/mrhenry/core-web.svg?branch=main)](https://travis-ci.com/mrhenry/core-web) [![BrowserStack Status](https://automate.browserstack.com/badge.svg?badge_key=MkE1NFM0ZkZESGg1VkNVd0htbm1BSTNFNjJHUGRhSjlEcU1PQ0JOMVVLOD0tLUVQMFpFUWIxTCtJWUtKYkFXYnN3OGc9PQ==--e6f705c0dc92b0ed20bd3a64df779e846f1ceeda)](https://automate.browserstack.com/public-build/MkE1NFM0ZkZESGg1VkNVd0htbm1BSTNFNjJHUGRhSjlEcU1PQ0JOMVVLOD0tLUVQMFpFUWIxTCtJWUtKYkFXYnN3OGc9PQ==--e6f705c0dc92b0ed20bd3a64df779e846f1ceeda) ![CodeQL](https://github.com/mrhenry/core-web/workflows/CodeQL/badge.svg)
 
 ## Babel Plugin
 
