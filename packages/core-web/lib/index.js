@@ -84,6 +84,7 @@ exports.clientSideDetect = function (targets, opts = {}) {
 	let crossBrowserDetectors = [];
 
 	for (const browser of Object.keys(targets)) {
+		let browserDetectors = [];
 		const versionRangeUp = '>=' + targets[browser];
 		const matrix = clientsMatrix[browser];
 		if (!matrix) {
@@ -121,14 +122,13 @@ exports.clientSideDetect = function (targets, opts = {}) {
 					return 0;
 				});
 
-				crossBrowserDetectors = crossBrowserDetectors.concat(features.slice(0, 3));
+				browserDetectors = browserDetectors.concat(features.slice(0, 3));
 				
 				break;
 			}
 		}
 
-		if (crossBrowserDetectors.length < 3) {
-
+		if (browserDetectors.length < 3) {
 			const versionRangeDown = '<=' + targets[browser];
 
 			for (let i = (matrix.versionList.length - 1); i >= 0; i--) {
@@ -162,12 +162,14 @@ exports.clientSideDetect = function (targets, opts = {}) {
 						return 0;
 					});
 
-					crossBrowserDetectors = crossBrowserDetectors.concat(features.slice(0, 3));
+					browserDetectors = browserDetectors.concat(features.slice(0, 3));
 				
 					break;
 				}
 			}
 		}
+
+		crossBrowserDetectors = crossBrowserDetectors.concat(browserDetectors);
 	}
 
 	let condition = "(\n";
@@ -185,7 +187,7 @@ exports.clientSideDetect = function (targets, opts = {}) {
 
 			return sub;
 		})
-		.join(" && \n");
+		.join(" &&\n");
 
 	condition += "\n)\n";
 

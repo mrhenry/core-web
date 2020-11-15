@@ -23,7 +23,9 @@
 	if (
 	("queueMicrotask"in self) && 
 	("object"==typeof globalThis) && 
-	("ResizeObserver"in self)
+	("ResizeObserver"in self) && 
+	("AbortController"in self&&"function"==typeof self.AbortController) && 
+	("IntersectionObserver"in window&&"IntersectionObserverEntry"in window&&"intersectionRatio"in window.IntersectionObserverEntry.prototype)
 )
  {
 		var ref = window.document.getElementsByTagName( 'script' )[ 0 ];
@@ -50,7 +52,9 @@ if(r.search="a=1&b=2","http://example.com/?a=1&b=2"===r.href&&(r.search="","http
 if("a=1"===String(c))return!0}}return!1}catch(h){return!1}})(self)) && 
 	("onhashchange"in self&&(null==self.onhashchange||"function"==typeof self.onhashchange)) && 
 	("TextEncoder"in self&&"TextDecoder"in self) && 
-	("performance"in self&&"function"==typeof self.performance.getEntriesByType&&"function"==typeof self.performance.mark)
+	("performance"in self&&"function"==typeof self.performance.getEntriesByType&&"function"==typeof self.performance.mark) && 
+	("HTMLPictureElement"in self||"picturefill"in self) && 
+	("toBlob"in HTMLCanvasElement.prototype)
 )
  {
 		var ref = window.document.getElementsByTagName( 'script' )[ 0 ];
@@ -77,8 +81,11 @@ n.type="radio",n.checked=!0,e.appendChild(n)
 var c,t=n.cloneNode(!1)
 try{c=e.cloneNode()}catch(d){return!1}return t.checked&&void 0!==c&&0===c.childNodes.length}()) && 
 	("HTMLTemplateElement"in self) && 
+	("requestAnimationFrame"in self) && 
 	("document"in self&&"closest"in document.documentElement) && 
+	("navigator"in self&&"sendBeacon"in navigator) && 
 	("DOMTokenList"in self&&function(e){return!("classList"in e)||!e.classList.toggle("x",!1)&&!e.className}(document.createElement("x"))) && 
+	("EventSource"in self&&"function"==typeof self.EventSource) && 
 	("toBlob"in HTMLCanvasElement.prototype) && 
 	((function(n){if(!("Event"in n))return!1
 try{return new Event("click"),!0}catch(t){return!1}})(self))
