@@ -2724,10 +2724,10 @@ module.exports = {
   "and_chr": {
     "family": "and_chr",
     "versionList": [
-      "85.0.0"
+      "86.0.0"
     ],
     "versions": {
-      "85.0.0": {
+      "86.0.0": {
         "detectors": []
       }
     }
@@ -2735,10 +2735,10 @@ module.exports = {
   "and_ff": {
     "family": "and_ff",
     "versionList": [
-      "79.0.0"
+      "82.0.0"
     ],
     "versions": {
-      "79.0.0": {
+      "82.0.0": {
         "detectors": []
       }
     }

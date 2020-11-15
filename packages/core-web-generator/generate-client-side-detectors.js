@@ -1,28 +1,32 @@
-const lite = require('caniuse-lite');
+const caniuse = require('caniuse-db/fulldata-json/data-2.0.json');
 const semver = require("semver");
 
 module.exports = function generateClientSideDetectors(mapping) {
 	const out = {};
-	for (const browser of Object.keys(lite.agents)) {
+	for (const browser of Object.keys(caniuse.agents)) {
 
-		const uaAgent = lite.agents[browser];
+		const uaAgent = caniuse.agents[browser];
 		if (!uaAgent) {
 			continue;
 		}
 
-		if (!uaAgent.versions) {
+		if (browser === 'and_ff') {
+			console.log(uaAgent);
+		}
+
+		if (!uaAgent.version_list) {
 			continue;
 		}
 
-		const cleanVersionList = uaAgent.versions.map((v) => {
-			if (!v) {
+		const cleanVersionList = uaAgent.version_list.map((v) => {
+			if (!v || !v.version) {
 				return false;
 			}
 
-			if (semver.validRange(v)) {
-				return semver.minVersion(v).version;
-			} else if (semver.coerce(v)) {
-				return semver.coerce(v).version;
+			if (semver.validRange(v.version)) {
+				return semver.minVersion(v.version).version;
+			} else if (semver.coerce(v.version)) {
+				return semver.coerce(v.version).version;
 			}
 
 			return false;
