@@ -21,10 +21,10 @@
 		<script src="qunit-2.9.2.js"></script>
 		<script>(function(){
 	if (
-	("queueMicrotask"in self) && 
-	("object"==typeof globalThis) && 
-	("ResizeObserver"in self) && 
-	("AbortController"in self&&"function"==typeof self.AbortController) && 
+	("queueMicrotask"in self) &&
+	("object"==typeof globalThis) &&
+	("ResizeObserver"in self) &&
+	("AbortController"in self&&"function"==typeof self.AbortController) &&
 	("IntersectionObserver"in window&&"IntersectionObserverEntry"in window&&"intersectionRatio"in window.IntersectionObserverEntry.prototype)
 )
  {
@@ -44,16 +44,16 @@
 
 
 	if (
-	("DOMRect"in self&&function(e){try{return new e}catch(t){return!1}}(self.DOMRect)) && 
+	("DOMRect"in self&&function(e){try{return new e}catch(t){return!1}}(self.DOMRect)) &&
 	((function(e){"use strict"
 try{var a=new e.URL("http://example.com")
 if("href"in a&&"searchParams"in a){var r=new URL("http://example.com")
 if(r.search="a=1&b=2","http://example.com/?a=1&b=2"===r.href&&(r.search="","http://example.com/"===r.href)){var t=new e.URLSearchParams("a=1"),c=new e.URLSearchParams(t)
-if("a=1"===String(c))return!0}}return!1}catch(h){return!1}})(self)) && 
-	("onhashchange"in self&&(null==self.onhashchange||"function"==typeof self.onhashchange)) && 
-	("TextEncoder"in self&&"TextDecoder"in self) && 
-	("performance"in self&&"function"==typeof self.performance.getEntriesByType&&"function"==typeof self.performance.mark) && 
-	("HTMLPictureElement"in self||"picturefill"in self) && 
+if("a=1"===String(c))return!0}}return!1}catch(h){return!1}})(self)) &&
+	("onhashchange"in self&&(null==self.onhashchange||"function"==typeof self.onhashchange)) &&
+	("TextEncoder"in self&&"TextDecoder"in self) &&
+	("performance"in self&&"function"==typeof self.performance.getEntriesByType&&"function"==typeof self.performance.mark) &&
+	("HTMLPictureElement"in self||"picturefill"in self) &&
 	("toBlob"in HTMLCanvasElement.prototype)
 )
  {
@@ -73,20 +73,20 @@ if("a=1"===String(c))return!0}}return!1}catch(h){return!1}})(self)) &&
 
 
 	if (
-	("document"in self&&"hidden"in document&&"visibilityState"in document) && 
-	("location"in self&&"origin"in self.location) && 
-	("screen"in self&&"orientation"in self.screen&&"object"==typeof self.screen.orientation) && 
+	("document"in self&&"hidden"in document&&"visibilityState"in document) &&
+	("location"in self&&"origin"in self.location) &&
+	("screen"in self&&"orientation"in self.screen&&"object"==typeof self.screen.orientation) &&
 	("document"in self&&"cloneNode"in document.documentElement&&function(){var e=document.createElement("div"),n=document.createElement("input")
 n.type="radio",n.checked=!0,e.appendChild(n)
 var c,t=n.cloneNode(!1)
-try{c=e.cloneNode()}catch(d){return!1}return t.checked&&void 0!==c&&0===c.childNodes.length}()) && 
-	("HTMLTemplateElement"in self) && 
-	("requestAnimationFrame"in self) && 
-	("document"in self&&"closest"in document.documentElement) && 
-	("navigator"in self&&"sendBeacon"in navigator) && 
-	("DOMTokenList"in self&&function(e){return!("classList"in e)||!e.classList.toggle("x",!1)&&!e.className}(document.createElement("x"))) && 
-	("EventSource"in self&&"function"==typeof self.EventSource) && 
-	("toBlob"in HTMLCanvasElement.prototype) && 
+try{c=e.cloneNode()}catch(d){return!1}return t.checked&&void 0!==c&&0===c.childNodes.length}()) &&
+	("HTMLTemplateElement"in self) &&
+	("requestAnimationFrame"in self) &&
+	("document"in self&&"closest"in document.documentElement) &&
+	("navigator"in self&&"sendBeacon"in navigator) &&
+	("DOMTokenList"in self&&function(e){return!("classList"in e)||!e.classList.toggle("x",!1)&&!e.className}(document.createElement("x"))) &&
+	("EventSource"in self&&"function"==typeof self.EventSource) &&
+	("toBlob"in HTMLCanvasElement.prototype) &&
 	((function(n){if(!("Event"in n))return!1
 try{return new Event("click"),!0}catch(t){return!1}})(self))
 )
@@ -107,8 +107,8 @@ try{return new Event("click"),!0}catch(t){return!1}})(self))
 
 
 	if (
-	("document"in self) && 
-	("getComputedStyle"in self) && 
+	("document"in self) &&
+	("getComputedStyle"in self) &&
 	("Element"in self&&"HTMLElement"in self)
 )
  {
