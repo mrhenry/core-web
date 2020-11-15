@@ -9,9 +9,9 @@
   "browsers": [
     "ie_11",
     "safari_8",
-    "safari_9",
-    "safari_12",
-    "safari_13",
+    "safari_9.1",
+    "safari_12.1",
+    "safari_13.1",
     "chrome_41",
     "chrome_43",
     "chrome_44",
