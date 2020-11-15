@@ -1,6 +1,6 @@
 const mapping = require("../helpers/__mapping");
 const knownBrowsers = require("../helpers/__browsers");
-const clientSideDetectors = require("../helpers/__client-side-detectors");
+const clientsMatrix = require("../helpers/__clients-matrix");
 const semver = require("semver");
 
 const map = new Map();
@@ -84,21 +84,24 @@ exports.clientSideDetect = function (targets, opts = {}) {
 	let crossBrowserDetectors = [];
 
 	for (const browser of Object.keys(targets)) {
-		const versionRange = '<=' + targets[browser];
-		const versionedDetectors = clientSideDetectors[browser];
-		if (!versionedDetectors) {
+		const versionRangeUp = '>=' + targets[browser];
+		const matrix = clientsMatrix[browser];
+		if (!matrix) {
 			continue;
 		}
 
-		for (let i = (versionedDetectors.versionList.length - 1); i >= 0 ; i--) {
-			const version = versionedDetectors.versionList[i];
-			if (semver.satisfies(semver.coerce(version), versionRange)) {
-				const detectors = versionedDetectors.versions[version].detectors;
-				if (!detectors || !detectors.length) {
+		for (let i = 0; i < matrix.versionList.length ; i++) {
+			const version = matrix.versionList[i];
+			if (semver.satisfies(semver.coerce(version), versionRangeUp)) {
+				const features = matrix.versions[version].features.filter((feature) => {
+					return !!feature.detectSource;
+				});
+				
+				if (!features || !features.length) {
 					continue;
 				}
 
-				detectors.sort((a, b) => {
+				features.sort((a, b) => {
 					if (a.detectSource.length < b.detectSource.length) {
 						return -1;
 					}
@@ -118,9 +121,51 @@ exports.clientSideDetect = function (targets, opts = {}) {
 					return 0;
 				});
 
-				crossBrowserDetectors = crossBrowserDetectors.concat(detectors.slice(0, 3));
+				crossBrowserDetectors = crossBrowserDetectors.concat(features.slice(0, 3));
 				
 				break;
+			}
+		}
+
+		if (crossBrowserDetectors.length < 3) {
+
+			const versionRangeDown = '<=' + targets[browser];
+
+			for (let i = (matrix.versionList.length - 1); i >= 0; i--) {
+				const version = matrix.versionList[i];
+				if (semver.satisfies(semver.coerce(version), versionRangeDown)) {
+					const features = matrix.versions[version].features.filter((feature) => {
+						return !!feature.detectSource;
+					});
+				
+					if (!features || !features.length) {
+						continue;
+					}
+
+					features.sort((a, b) => {
+						if (a.detectSource.length < b.detectSource.length) {
+							return -1;
+						}
+
+						if (a.detectSource.length > b.detectSource.length) {
+							return 1;
+						}
+
+						if (a.name < b.name) {
+							return -1;
+						}
+
+						if (a.name > b.name) {
+							return 1;
+						}
+					
+						return 0;
+					});
+
+					crossBrowserDetectors = crossBrowserDetectors.concat(features.slice(0, 3));
+				
+					break;
+				}
 			}
 		}
 	}

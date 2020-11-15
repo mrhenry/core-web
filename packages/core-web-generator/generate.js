@@ -19,7 +19,7 @@ const detectorsDir = path.resolve(
 );
 
 const generateWebComponents = require("./generate-webcomponents");
-const generateClientSideDetectors = require("./generate-client-side-detectors");
+const generateClientsMatrix = require("./generate-clients-matrix");
 
 genAll();
 
@@ -104,8 +104,8 @@ async function genAll() {
 	);
 
 	await writeFile(
-		path.join(helpersDir, "__client-side-detectors.js"),
-		`module.exports = ${JSON.stringify(generateClientSideDetectors(mapping), undefined, "  ")}`
+		path.join(helpersDir, "__clients-matrix.js"),
+		`module.exports = ${JSON.stringify(generateClientsMatrix(mapping), undefined, "  ")}`
 	);
 
 	await writeFile(
@@ -125,7 +125,8 @@ async function gen(feature, mapping, aliases) {
 			name: feature,
 			deps: Array.from(dependencies).filter(n => !providedByBabel(n)),
 			browsers: meta.browsers,
-			detectSource: meta.detectSource
+			detectSource: meta.detectSource,
+			size: meta.size
 		});
 	}
 

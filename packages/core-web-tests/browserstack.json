@@ -9,11 +9,26 @@
   "browsers": [
     "ie_11",
     "safari_8",
+    "safari_9",
+    "safari_12",
+    "safari_13",
     "chrome_41",
+    "chrome_43",
+    "chrome_44",
+    "chrome_55",
+    "chrome_56",
+    "chrome_57",
+    "chrome_63",
+    "chrome_64",
+    "chrome_65",
+    "chrome_71",
+    "chrome_73",
+    "chrome_79",
     "safari_latest",
     "chrome_latest",
     "opera_latest",
     "firefox_latest",
+    "edge_18",
     "edge_18"
   ]
 }

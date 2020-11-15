@@ -136,11 +136,14 @@ function logImportedPolyfills(list) {
 		return;
 	}
 
-	console.log("@mrhenry/core-web - importing:");
+	let cost = 0;
 
 	list.sort().forEach((imported) => {
-		console.log('  ' + imported);
+		const spec = get(imported);
+		if (spec && spec.size) {
+			cost += spec.size;
+		}
 	});
 
-	console.log('\n');
+	console.log(`@mrhenry/core-web - importing: ${Math.ceil(cost / 1000)}KB -`, list.sort().join(', '));
 }
