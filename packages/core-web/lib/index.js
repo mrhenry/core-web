@@ -122,7 +122,7 @@ exports.clientSideDetect = function (targets, opts = {}) {
 					return 0;
 				});
 
-				browserDetectors = browserDetectors.concat(features.slice(0, 3));
+				browserDetectors = browserDetectors.concat(features);
 				
 				break;
 			}
@@ -162,14 +162,34 @@ exports.clientSideDetect = function (targets, opts = {}) {
 						return 0;
 					});
 
-					browserDetectors = browserDetectors.concat(features.slice(0, 3));
+					browserDetectors = browserDetectors.concat(features);
 				
 					break;
 				}
 			}
 		}
 
-		crossBrowserDetectors = crossBrowserDetectors.concat(browserDetectors);
+		browserDetectors.sort((a, b) => {
+			if (a.detectSource.length < b.detectSource.length) {
+				return -1;
+			}
+
+			if (a.detectSource.length > b.detectSource.length) {
+				return 1;
+			}
+
+			if (a.name < b.name) {
+				return -1;
+			}
+
+			if (a.name > b.name) {
+				return 1;
+			}
+		
+			return 0;
+		});
+
+		crossBrowserDetectors = crossBrowserDetectors.concat(browserDetectors.slice(0, 3));
 	}
 
 	let condition = "(\n";
