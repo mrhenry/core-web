@@ -7,7 +7,7 @@
     "lint": "eslint --fix ./src/*.js"
   },
   "devDependencies": {
-    "@babel/core": "^7.12.3",
+    "@babel/core": "^7.12.7",
     "@babel/preset-env": "^7.12.7",
     "@mrhenry/babel-plugin-core-web": "^0.3.17",
     "@types/qunit": "2.9.x",
