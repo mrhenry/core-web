@@ -46,7 +46,8 @@ async function generateTemplate(mapping) {
 			ie: "*",
 			opera: "<22"
 		},
-		detector: true
+		detector: true,
+		size: src.byteLength
 	});
 }
 
@@ -87,7 +88,8 @@ async function generateShadyDOM(mapping) {
 			ie: "*",
 			opera: "<40"
 		},
-		detector: true
+		detector: true,
+		size: src.byteLength
 	});
 }
 
@@ -154,7 +156,8 @@ async function generateShadyCSS(mapping) {
 			ie: "*",
 			opera: "<40"
 		},
-		detector: true
+		detector: true,
+		size: scopingShim.byteLength
 	});
 
 	mapping.push({
@@ -193,7 +196,8 @@ async function generateShadyCSS(mapping) {
 			ie: "*",
 			opera: "<40"
 		},
-		detector: true
+		detector: true,
+		size: applyShim.byteLength
 	});
 
 	mapping.push({
@@ -236,7 +240,8 @@ async function generateShadyCSS(mapping) {
 			ie: "*",
 			opera: "<40"
 		},
-		detector: true
+		detector: true,
+		size: customStyleInterface.byteLength
 	});
 }
 
@@ -289,6 +294,7 @@ async function generateCustomElements(mapping) {
 			op_mini: "*",
 			samsung_mob: '<8'
 		},
-		detector: true
+		detector: true,
+		size: src.byteLength
 	});
 }

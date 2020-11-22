@@ -21,10 +21,10 @@
 		<script src="qunit-2.9.2.js"></script>
 		<script>(function(){
 	if (
-	("queueMicrotask"in self) && 
-	("object"==typeof globalThis) && 
-	("ResizeObserver"in self) && 
-	("AbortController"in self&&"function"==typeof self.AbortController) && 
+	("queueMicrotask"in self) &&
+	("object"==typeof globalThis) &&
+	("ResizeObserver"in self) &&
+	("AbortController"in self&&"function"==typeof self.AbortController) &&
 	("IntersectionObserver"in window&&"IntersectionObserverEntry"in window&&"intersectionRatio"in window.IntersectionObserverEntry.prototype)
 )
  {
@@ -44,15 +44,16 @@
 
 
 	if (
-	("onhashchange"in self&&(null==self.onhashchange||"function"==typeof self.onhashchange)) && 
-	("TextEncoder"in self&&"TextDecoder"in self) && 
-	("performance"in self&&"function"==typeof self.performance.getEntriesByType&&"function"==typeof self.performance.mark) && 
+	("DOMRect"in self&&function(e){try{return new e}catch(t){return!1}}(self.DOMRect)) &&
+	("onhashchange"in self&&(null==self.onhashchange||"function"==typeof self.onhashchange)) &&
 	((function(e){"use strict"
 try{var a=new e.URL("http://example.com")
 if("href"in a&&"searchParams"in a){var r=new URL("http://example.com")
 if(r.search="a=1&b=2","http://example.com/?a=1&b=2"===r.href&&(r.search="","http://example.com/"===r.href)){var t=new e.URLSearchParams("a=1"),c=new e.URLSearchParams(t)
-if("a=1"===String(c))return!0}}return!1}catch(h){return!1}})(self)) && 
-	("HTMLPictureElement"in self||"picturefill"in self) && 
+if("a=1"===String(c))return!0}}return!1}catch(h){return!1}})(self)) &&
+	("TextEncoder"in self&&"TextDecoder"in self) &&
+	("performance"in self&&"function"==typeof self.performance.getEntriesByType&&"function"==typeof self.performance.mark) &&
+	("HTMLPictureElement"in self||"picturefill"in self) &&
 	("toBlob"in HTMLCanvasElement.prototype)
 )
  {
@@ -72,12 +73,15 @@ if("a=1"===String(c))return!0}}return!1}catch(h){return!1}})(self)) &&
 
 
 	if (
-	("location"in self&&"origin"in self.location) && 
-	("HTMLTemplateElement"in self) && 
-	("requestAnimationFrame"in self) && 
-	("navigator"in self&&"sendBeacon"in navigator) && 
-	("EventSource"in self&&"function"==typeof self.EventSource) && 
-	("toBlob"in HTMLCanvasElement.prototype) && 
+	("location"in self&&"origin"in self.location) &&
+	("document"in self&&"hidden"in document&&"visibilityState"in document) &&
+	("HTMLTemplateElement"in self) &&
+	("requestAnimationFrame"in self) &&
+	("screen"in self&&"orientation"in self.screen&&"object"==typeof self.screen.orientation) &&
+	("navigator"in self&&"sendBeacon"in navigator) &&
+	("document"in self&&"closest"in document.documentElement) &&
+	("EventSource"in self&&"function"==typeof self.EventSource) &&
+	("toBlob"in HTMLCanvasElement.prototype) &&
 	((function(n){if(!("Event"in n))return!1
 try{return new Event("click"),!0}catch(t){return!1}})(self))
 )
@@ -98,8 +102,8 @@ try{return new Event("click"),!0}catch(t){return!1}})(self))
 
 
 	if (
-	("document"in self) && 
-	("getComputedStyle"in self) && 
+	("document"in self) &&
+	("getComputedStyle"in self) &&
 	("Element"in self&&"HTMLElement"in self)
 )
  {
