@@ -7,8 +7,8 @@
     "example-detect": "node ./src/detectors.js"
   },
   "devDependencies": {
-    "@babel/cli": "^7.12.7",
-    "@babel/core": "^7.12.7",
+    "@babel/cli": "^7.12.8",
+    "@babel/core": "^7.12.9",
     "@mrhenry/babel-plugin-core-web": "^0.3.17",
     "@mrhenry/core-web": "^0.3.17"
   }
