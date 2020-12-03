@@ -16,7 +16,7 @@
     "from2-string": "^1.1.0",
     "merge2": "^1.4.1",
     "polyfill-library": "^3.98.0",
-    "semver": "^7.3.2",
+    "semver": "^7.3.4",
     "stream-to-string": "^1.2.0"
   }
 }
