@@ -10,7 +10,7 @@
     "@babel/core": "^7.12.9",
     "@babel/preset-env": "^7.12.7",
     "@mrhenry/babel-plugin-core-web": "^0.3.18",
-    "@types/qunit": "2.9.x",
+    "@types/qunit": "2.11.x",
     "babel-loader": "^8.2.2",
     "browserstack-runner": "^0.9.3",
     "core-js": "^3.8.0",
