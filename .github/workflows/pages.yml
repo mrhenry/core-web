@@ -45,6 +45,7 @@ jobs:
         find . -name "node_modules" -type d -prune -exec rm -rf '{}' +
         git ls-files -z | xargs -0 rm -f || true
         git ls-tree --name-only -d -r -z HEAD | sort -rz | xargs -0 rmdir || true
+        rm -rf ./packages
         # Copy contents
         mkdir -p ./docs/browsercompat
         cp $browsercompatindex ./docs/browsercompat/index.html
