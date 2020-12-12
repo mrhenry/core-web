@@ -38,10 +38,12 @@ jobs:
         # Move contents to temp files
         browsercompatindex=$(mktemp /tmp/browser-compat-index.XXXXXXXXXX)
         echo "$(cat packages/core-web-browser-compat/lib/index.html)" >> $browsercompatindex
+        rm packages/core-web-browser-compat/lib/index.html
         # Checkout pages branches
         git checkout pages 2>/dev/null || git checkout -b pages
         # Clean pages branch
-        git ls-files -z | xargs -0 rm -f
+        find . -name "node_modules" -type d -prune -exec rm -rf '{}' +
+        git ls-files -z | xargs -0 rm -f || true
         git ls-tree --name-only -d -r -z HEAD | sort -rz | xargs -0 rmdir || true
         # Copy contents
         mkdir ./docs
