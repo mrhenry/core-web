@@ -43,6 +43,10 @@ async function genAll() {
 			continue;
 		}
 
+		if (providedByCoreWeb(feature)) {
+			continue;
+		}
+
 		let filename = path.join(modulesDir, feature + ".js");
 		if (feature.startsWith("_")) {
 			filename = path.join(helpersDir, feature + ".js");
@@ -200,6 +204,11 @@ async function allDependencies(feature) {
 
 function providedByBabel(f) {
 	const p = /^(_(String|Array)?Iterator|_TypedArray|Function|Date|Math|Object|String|Number|(Weak)?(Map|Set)|Symbol|Array|RegExp|Promise|Reflect)($|\.)/;
+	return p.test(f) || f.endsWith(".@@iterator");
+}
+
+function providedByCoreWeb(f) {
+	const p = /^(HTMLTemplateElement)($|\.)/;
 	return p.test(f) || f.endsWith(".@@iterator");
 }
 

@@ -47,7 +47,8 @@ async function generateTemplate(mapping) {
 			opera: "<22"
 		},
 		detector: true,
-		size: src.byteLength
+		size: src.byteLength,
+		providedByCoreWeb: true,
 	});
 }
 
@@ -89,7 +90,8 @@ async function generateShadyDOM(mapping) {
 			opera: "<40"
 		},
 		detector: true,
-		size: src.byteLength
+		size: src.byteLength,
+		providedByCoreWeb: true,
 	});
 }
 
@@ -157,7 +159,8 @@ async function generateShadyCSS(mapping) {
 			opera: "<40"
 		},
 		detector: true,
-		size: scopingShim.byteLength
+		size: scopingShim.byteLength,
+		providedByCoreWeb: true,
 	});
 
 	mapping.push({
@@ -197,7 +200,8 @@ async function generateShadyCSS(mapping) {
 			opera: "<40"
 		},
 		detector: true,
-		size: applyShim.byteLength
+		size: applyShim.byteLength,
+		providedByCoreWeb: true,
 	});
 
 	mapping.push({
@@ -241,7 +245,8 @@ async function generateShadyCSS(mapping) {
 			opera: "<40"
 		},
 		detector: true,
-		size: customStyleInterface.byteLength
+		size: customStyleInterface.byteLength,
+		providedByCoreWeb: true,
 	});
 }
 
@@ -295,6 +300,7 @@ async function generateCustomElements(mapping) {
 			samsung_mob: '<8'
 		},
 		detector: true,
-		size: src.byteLength
+		size: src.byteLength,
+		providedByCoreWeb: true,
 	});
 }

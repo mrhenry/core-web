@@ -1698,6 +1698,13 @@
     npmlog "^4.1.2"
     write-file-atomic "^2.3.0"
 
+"@mdn/browser-compat-data@^3.0.0":
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/@mdn/browser-compat-data/-/browser-compat-data-3.0.0.tgz#023f7057e75ac26adb3546a4f43450caadcf5ccc"
+  integrity sha512-J2kn2zBbgAvOoHRiPikMnZWJ8qWKrpdlHepoozYbTbwwUGrFXP4opIitH8Dn68e36nUrhUu/NL4lGq7ZOqh+xg==
+  dependencies:
+    extend "3.0.2"
+
 "@mrmlnc/readdir-enhanced@^2.2.1":
   version "2.2.1"
   resolved "https://registry.yarnpkg.com/@mrmlnc/readdir-enhanced/-/readdir-enhanced-2.2.1.tgz#524af240d1a360527b730475ecfa1344aa540dde"
@@ -3702,7 +3709,7 @@ extend-shallow@^3.0.0, extend-shallow@^3.0.2:
     assign-symbols "^1.0.0"
     is-extendable "^1.0.1"
 
-extend@~3.0.2:
+extend@3.0.2, extend@~3.0.2:
   version "3.0.2"
   resolved "https://registry.yarnpkg.com/extend/-/extend-3.0.2.tgz#f8b1136b4071fbd8eb140aff858b1019ec2915fa"
   integrity sha512-fjquC59cD7CyW6urNXK0FBufkZcoiGG80wTuPujX590cB5Ttln20E2UB4S/WARVqhXffZl2LNgS+gQdPIIim/g==
