@@ -1,0 +1,1416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Compat Data</title>
+	<style>
+		html {
+			font-size: 16px;
+		}
+
+		* {
+			font-family: monospace;
+		}
+
+		table {
+			border-spacing: 5px;
+			margin-bottom: 70px;
+			margin-top: 30px;
+		}
+
+		th {
+			padding: 12px;
+			text-align: center;
+		}
+
+		td {
+			font-size: 0.875rem;
+			min-width: 90px;
+			padding: 12px 5px;
+			text-align: left;
+		}
+
+		td+td {
+			background-color: #ddfff7;
+			border: 1px solid #ddd;
+			text-align: center;
+		}
+
+		tr+tr > td+td {
+			background-color: #dde4ff;
+		}
+
+		.wrapper {
+			margin: 100px auto;
+			max-width: 900px;
+		}
+	</style>
+</head>
+<body>
+	<div class="wrapper">
+		<h2>AbortController</h2>
+		
+		<table>
+			<thead>
+				<tr><th><a href="https://developer.mozilla.org/docs/Web/API/AbortController" title="AbortController" target="_blank">MDN</a></th><th>android</th><th>chrome</th><th>edge</th><th>firefox</th><th>ie</th><th>opera</th><th>safari</th><th>ios_saf</th></tr>
+			</thead>
+			<tbody>
+				<tr><td><span title="AbortController">polyfill-library</span></td><td><67</td><td>4 - 65</td><td>12 - 15</td><td>2 - 56</td><td>10 - *</td><td>10 - 52</td><td>3.1 - 12</td><td>3.2 - 11.2</td></tr>
+				<tr><td><span title="AbortController">native</span></td><td>66</td><td>66</td><td>16</td><td>57</td><td>-</td><td>53</td><td><span >12.1</span><br><span title="Even though <code>window.AbortController</code> is defined, it doesn't really abort <code>fetch</code> requests. See <a href='https://webkit.org/b/174980'>bug 174980</a>."><span >11.1</span> ⓘ</span></td><td><span >12.2</span><br><span title="Even though <code>window.AbortController</code> is defined, it doesn't really abort <code>fetch</code> requests. See <a href='https://webkit.org/b/174980'>bug 174980</a>."><span >11.3</span> ⓘ</span></td></tr>
+			</tbody>
+		</table>
+		
+	
+		<h2>atob</h2>
+		
+		<table>
+			<thead>
+				<tr><th><a href="https://developer.mozilla.org/docs/Web/API/WindowOrWorkerGlobalScope/atob" title="atob" target="_blank">MDN</a></th><th>android</th><th>chrome</th><th>edge</th><th>firefox</th><th>ie</th><th>opera</th><th>safari</th><th>ios_saf</th></tr>
+			</thead>
+			<tbody>
+				<tr><td><span title="atob">polyfill-library</span></td><td>-</td><td>-</td><td>-</td><td>-</td><td><10</td><td>-</td><td>-</td><td>-</td></tr>
+				<tr><td><span title="atob">native</span></td><td>18</td><td>4</td><td>12</td><td><span >1</span><br><span title="<code>atob()</code> ignores all space characters in the argument to comply with the latest HTML5 spec (see <a href='https://bugzil.la/711180'>bug 711180</a>)."><span >27</span> ⓘ</span><br><span title="<code>atob()</code> now defined on <code><A href='https://developer.mozilla.org/docs/Web/API/WindowOrWorkerGlobalScope'>WindowOrWorkerGlobalScope</a></code> mixin."><span >57</span> ⓘ</span></td><td>10</td><td>10.5</td><td>3</td><td>1</td></tr>
+			</tbody>
+		</table>
+		
+	
+		<h2>AudioContext</h2>
+		
+		<table>
+			<thead>
+				<tr><th><a href="https://developer.mozilla.org/docs/Web/API/AudioContext" title="AudioContext" target="_blank">MDN</a></th><th>android</th><th>chrome</th><th>edge</th><th>firefox</th><th>ie</th><th>opera</th><th>safari</th><th>ios_saf</th></tr>
+			</thead>
+			<tbody>
+				<tr><td><span title="AudioContext">polyfill-library</span></td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td></tr>
+				<tr><td><span title="AudioContext">native</span></td><td><span >35</span><br><span >18</span>-<span style="color:red;" >57</span></td><td><span >35</span><br><span >14</span>-<span style="color:red;" >57</span></td><td>12</td><td>25</td><td>-</td><td><span >22</span><br><span >15</span>-<span style="color:red;" >44</span></td><td>6</td><td>6</td></tr>
+			</tbody>
+		</table>
+		
+	
+		<h2>Blob</h2>
+		
+		<table>
+			<thead>
+				<tr><th><a href="https://developer.mozilla.org/docs/Web/API/Blob" title="Blob" target="_blank">MDN</a></th><th>android</th><th>chrome</th><th>edge</th><th>firefox</th><th>ie</th><th>opera</th><th>safari</th><th>ios_saf</th></tr>
+			</thead>
+			<tbody>
+				<tr><td><span title="Blob">polyfill-library</span></td><td>-</td><td><20</td><td>*</td><td><13</td><td><10</td><td><12</td><td><6</td><td>-</td></tr>
+				<tr><td><span title="Blob">native</span></td><td>18</td><td>5</td><td>12</td><td>4</td><td>10</td><td>11</td><td>5.1</td><td>6</td></tr>
+			</tbody>
+		</table>
+		
+	
+		<h2>Console.assert</h2>
+		
+		<table>
+			<thead>
+				<tr><th><a href="https://developer.mozilla.org/docs/Web/API/Console/assert" title="Console.assert" target="_blank">MDN</a></th><th>android</th><th>chrome</th><th>edge</th><th>firefox</th><th>ie</th><th>opera</th><th>safari</th><th>ios_saf</th></tr>
+			</thead>
+			<tbody>
+				<tr><td><span title="console.assert">polyfill-library</span></td><td>-</td><td>-</td><td>-</td><td>1 - 4</td><td>*</td><td>-</td><td>-</td><td>-</td></tr>
+				<tr><td><span title="Console.assert">native</span></td><td>18</td><td>1</td><td>12</td><td>28</td><td>8</td><td>11</td><td>4</td><td>3.2</td></tr>
+			</tbody>
+		</table>
+		
+	
+		<h2>Console.clear</h2>
+		
+		<table>
+			<thead>
+				<tr><th><a href="https://developer.mozilla.org/docs/Web/API/Console/clear" title="Console.clear" target="_blank">MDN</a></th><th>android</th><th>chrome</th><th>edge</th><th>firefox</th><th>ie</th><th>opera</th><th>safari</th><th>ios_saf</th></tr>
+			</thead>
+			<tbody>
+				<tr><td><span title="console.clear">polyfill-library</span></td><td>-</td><td>-</td><td>-</td><td><39</td><td>*</td><td>-</td><td>-</td><td>-</td></tr>
+				<tr><td><span title="Console.clear">native</span></td><td>25</td><td>25</td><td>12</td><td>39</td><td>8</td><td>12</td><td>6.1</td><td>7</td></tr>
+			</tbody>
+		</table>
+		
+	
+		<h2>Console.count</h2>
+		
+		<table>
+			<thead>
+				<tr><th><a href="https://developer.mozilla.org/docs/Web/API/Console/count" title="Console.count" target="_blank">MDN</a></th><th>android</th><th>chrome</th><th>edge</th><th>firefox</th><th>ie</th><th>opera</th><th>safari</th><th>ios_saf</th></tr>
+			</thead>
+			<tbody>
+				<tr><td><span title="console.count">polyfill-library</span></td><td>-</td><td>-</td><td>-</td><td>1 - 4</td><td>*</td><td>-</td><td>-</td><td>-</td></tr>
+				<tr><td><span title="Console.count">native</span></td><td>18</td><td>1</td><td>12</td><td>30</td><td>11</td><td>11</td><td>4</td><td>3.2</td></tr>
+			</tbody>
+		</table>
+		
+	
+		<h2>Console.debug</h2>
+		
+		<table>
+			<thead>
+				<tr><th><a href="https://developer.mozilla.org/docs/Web/API/Console/debug" title="Console.debug" target="_blank">MDN</a></th><th>android</th><th>chrome</th><th>edge</th><th>firefox</th><th>ie</th><th>opera</th><th>safari</th><th>ios_saf</th></tr>
+			</thead>
+			<tbody>
+				<tr><td><span title="console.debug">polyfill-library</span></td><td>-</td><td>-</td><td>-</td><td>1 - 4</td><td>*</td><td>-</td><td>-</td><td>-</td></tr>
+				<tr><td><span title="Console.debug">native</span></td><td>18</td><td>1</td><td>12</td><td>4</td><td>10</td><td>11</td><td>4</td><td>3.2</td></tr>
+			</tbody>
+		</table>
+		
+	
+		<h2>Console.dir</h2>
+		
+		<table>
+			<thead>
+				<tr><th><a href="https://developer.mozilla.org/docs/Web/API/Console/dir" title="Console.dir" target="_blank">MDN</a></th><th>android</th><th>chrome</th><th>edge</th><th>firefox</th><th>ie</th><th>opera</th><th>safari</th><th>ios_saf</th></tr>
+			</thead>
+			<tbody>
+				<tr><td><span title="console.dir">polyfill-library</span></td><td>-</td><td>-</td><td>-</td><td>1 - 4</td><td>*</td><td>-</td><td>-</td><td>-</td></tr>
+				<tr><td><span title="Console.dir">native</span></td><td>18</td><td>1</td><td>12</td><td>8</td><td>9</td><td>11</td><td>4</td><td>3.2</td></tr>
+			</tbody>
+		</table>
+		
+	
+		<h2>Console.dirxml</h2>
+		
+		<table>
+			<thead>
+				<tr><th><a href="https://developer.mozilla.org/docs/Web/API/Console/dirxml" title="Console.dirxml" target="_blank">MDN</a></th><th>android</th><th>chrome</th><th>edge</th><th>firefox</th><th>ie</th><th>opera</th><th>safari</th><th>ios_saf</th></tr>
+			</thead>
+			<tbody>
+				<tr><td><span title="console.dirxml">polyfill-library</span></td><td>-</td><td>-</td><td>-</td><td><39</td><td>*</td><td>-</td><td>-</td><td>-</td></tr>
+				<tr><td><span title="Console.dirxml">native</span></td><td>18</td><td>1</td><td>12</td><td>39</td><td>11</td><td>11</td><td>4</td><td>3.2</td></tr>
+			</tbody>
+		</table>
+		
+	
+		<h2>Console.error</h2>
+		
+		<table>
+			<thead>
+				<tr><th><a href="https://developer.mozilla.org/docs/Web/API/Console/error" title="Console.error" target="_blank">MDN</a></th><th>android</th><th>chrome</th><th>edge</th><th>firefox</th><th>ie</th><th>opera</th><th>safari</th><th>ios_saf</th></tr>
+			</thead>
+			<tbody>
+				<tr><td><span title="console.error">polyfill-library</span></td><td>-</td><td>-</td><td>-</td><td>1 - 4</td><td>*</td><td>-</td><td>-</td><td>-</td></tr>
+				<tr><td><span title="Console.error">native</span></td><td>18</td><td>1</td><td>12</td><td>4</td><td>8</td><td>10.5</td><td>3</td><td>1</td></tr>
+			</tbody>
+		</table>
+		
+	
+		<h2>Console.exception</h2>
+		
+		<table>
+			<thead>
+				<tr><th><a href="https://developer.mozilla.org/docs/Web/API/Console/exception" title="Console.exception" target="_blank">MDN</a></th><th>android</th><th>chrome</th><th>edge</th><th>firefox</th><th>ie</th><th>opera</th><th>safari</th><th>ios_saf</th></tr>
+			</thead>
+			<tbody>
+				<tr><td><span title="console.exception">polyfill-library</span></td><td>-</td><td>*</td><td>-</td><td>1 - 4</td><td>*</td><td>-</td><td>-</td><td>-</td></tr>
+				<tr><td><span title="Console.exception">native</span></td><td>-</td><td>-</td><td>13</td><td>28</td><td>-</td><td>-</td><td>-</td><td>-</td></tr>
+			</tbody>
+		</table>
+		
+	
+		<h2>Console.group</h2>
+		
+		<table>
+			<thead>
+				<tr><th><a href="https://developer.mozilla.org/docs/Web/API/Console/group" title="Console.group" target="_blank">MDN</a></th><th>android</th><th>chrome</th><th>edge</th><th>firefox</th><th>ie</th><th>opera</th><th>safari</th><th>ios_saf</th></tr>
+			</thead>
+			<tbody>
+				<tr><td><span title="console.group">polyfill-library</span></td><td>-</td><td>-</td><td>-</td><td>1 - 4</td><td>*</td><td>-</td><td>-</td><td>-</td></tr>
+				<tr><td><span title="Console.group">native</span></td><td>18</td><td>1</td><td>12</td><td>4</td><td>11</td><td>11</td><td>4</td><td>3.2</td></tr>
+			</tbody>
+		</table>
+		
+	
+		<h2>Console.groupCollapsed</h2>
+		
+		<table>
+			<thead>
+				<tr><th><a href="https://developer.mozilla.org/docs/Web/API/Console/groupCollapsed" title="Console.groupCollapsed" target="_blank">MDN</a></th><th>android</th><th>chrome</th><th>edge</th><th>firefox</th><th>ie</th><th>opera</th><th>safari</th><th>ios_saf</th></tr>
+			</thead>
+			<tbody>
+				<tr><td><span title="console.groupCollapsed">polyfill-library</span></td><td>-</td><td>-</td><td>-</td><td>1 - 4</td><td>*</td><td>-</td><td>-</td><td>-</td></tr>
+				<tr><td><span title="Console.groupCollapsed">native</span></td><td>18</td><td>6</td><td>12</td><td>9</td><td>11</td><td>11</td><td>5.1</td><td>5.1</td></tr>
+			</tbody>
+		</table>
+		
+	
+		<h2>Console.groupEnd</h2>
+		
+		<table>
+			<thead>
+				<tr><th><a href="https://developer.mozilla.org/docs/Web/API/Console/groupEnd" title="Console.groupEnd" target="_blank">MDN</a></th><th>android</th><th>chrome</th><th>edge</th><th>firefox</th><th>ie</th><th>opera</th><th>safari</th><th>ios_saf</th></tr>
+			</thead>
+			<tbody>
+				<tr><td><span title="console.groupEnd">polyfill-library</span></td><td>-</td><td>-</td><td>-</td><td>1 - 4</td><td>*</td><td>-</td><td>-</td><td>-</td></tr>
+				<tr><td><span title="Console.groupEnd">native</span></td><td>18</td><td>1</td><td>12</td><td>9</td><td>11</td><td>11</td><td>4</td><td>3.2</td></tr>
+			</tbody>
+		</table>
+		
+	
+		<h2>Console.info</h2>
+		
+		<table>
+			<thead>
+				<tr><th><a href="https://developer.mozilla.org/docs/Web/API/Console/info" title="Console.info" target="_blank">MDN</a></th><th>android</th><th>chrome</th><th>edge</th><th>firefox</th><th>ie</th><th>opera</th><th>safari</th><th>ios_saf</th></tr>
+			</thead>
+			<tbody>
+				<tr><td><span title="console.info">polyfill-library</span></td><td>-</td><td>-</td><td>-</td><td>1 - 4</td><td>*</td><td>-</td><td>-</td><td>-</td></tr>
+				<tr><td><span title="Console.info">native</span></td><td>18</td><td>1</td><td>12</td><td>4</td><td>8</td><td>10.5</td><td>3</td><td>1</td></tr>
+			</tbody>
+		</table>
+		
+	
+		<h2>Console.log</h2>
+		
+		<table>
+			<thead>
+				<tr><th><a href="https://developer.mozilla.org/docs/Web/API/Console/log" title="Console.log" target="_blank">MDN</a></th><th>android</th><th>chrome</th><th>edge</th><th>firefox</th><th>ie</th><th>opera</th><th>safari</th><th>ios_saf</th></tr>
+			</thead>
+			<tbody>
+				<tr><td><span title="console.log">polyfill-library</span></td><td>-</td><td>-</td><td>-</td><td>1 - 4</td><td>*</td><td>-</td><td>-</td><td>-</td></tr>
+				<tr><td><span title="Console.log">native</span></td><td>18</td><td>1</td><td>12</td><td>4</td><td>8</td><td>10.5</td><td>3</td><td>1</td></tr>
+			</tbody>
+		</table>
+		
+	
+		<h2>Console.profile</h2>
+		
+		<table>
+			<thead>
+				<tr><th><a href="https://developer.mozilla.org/docs/Web/API/Console/profile" title="Console.profile" target="_blank">MDN</a></th><th>android</th><th>chrome</th><th>edge</th><th>firefox</th><th>ie</th><th>opera</th><th>safari</th><th>ios_saf</th></tr>
+			</thead>
+			<tbody>
+				<tr><td><span title="console.profile">polyfill-library</span></td><td>-</td><td>-</td><td>-</td><td>1 - 4</td><td>*</td><td>-</td><td>-</td><td>-</td></tr>
+				<tr><td><span title="Console.profile">native</span></td><td>18</td><td>4</td><td>12</td><td>16</td><td>9</td><td>11</td><td>4</td><td>3.2</td></tr>
+			</tbody>
+		</table>
+		
+	
+		<h2>Console.profileEnd</h2>
+		
+		<table>
+			<thead>
+				<tr><th><a href="https://developer.mozilla.org/docs/Web/API/Console/profileEnd" title="Console.profileEnd" target="_blank">MDN</a></th><th>android</th><th>chrome</th><th>edge</th><th>firefox</th><th>ie</th><th>opera</th><th>safari</th><th>ios_saf</th></tr>
+			</thead>
+			<tbody>
+				<tr><td><span title="console.profileEnd">polyfill-library</span></td><td>-</td><td>-</td><td>-</td><td>1 - 4</td><td>*</td><td>-</td><td>-</td><td>-</td></tr>
+				<tr><td><span title="Console.profileEnd">native</span></td><td>18</td><td>4</td><td>12</td><td>16</td><td>9</td><td>11</td><td>4</td><td>3.2</td></tr>
+			</tbody>
+		</table>
+		
+	
+		<h2>Console.table</h2>
+		
+		<table>
+			<thead>
+				<tr><th><a href="https://developer.mozilla.org/docs/Web/API/Console/table" title="Console.table" target="_blank">MDN</a></th><th>android</th><th>chrome</th><th>edge</th><th>firefox</th><th>ie</th><th>opera</th><th>safari</th><th>ios_saf</th></tr>
+			</thead>
+			<tbody>
+				<tr><td><span title="console.table">polyfill-library</span></td><td>-</td><td>-</td><td>-</td><td>1 - 4</td><td>*</td><td>-</td><td>-</td><td>-</td></tr>
+				<tr><td><span title="Console.table">native</span></td><td>27</td><td>27</td><td>13</td><td>34</td><td>-</td><td>11</td><td>6.1</td><td>7</td></tr>
+			</tbody>
+		</table>
+		
+	
+		<h2>Console.time</h2>
+		
+		<table>
+			<thead>
+				<tr><th><a href="https://developer.mozilla.org/docs/Web/API/Console/time" title="Console.time" target="_blank">MDN</a></th><th>android</th><th>chrome</th><th>edge</th><th>firefox</th><th>ie</th><th>opera</th><th>safari</th><th>ios_saf</th></tr>
+			</thead>
+			<tbody>
+				<tr><td><span title="console.time">polyfill-library</span></td><td>-</td><td><31</td><td>-</td><td>1 - 4</td><td>*</td><td>-</td><td>-</td><td>-</td></tr>
+				<tr><td><span title="Console.time">native</span></td><td>18</td><td>1</td><td>12</td><td>10</td><td>11</td><td>11</td><td>4</td><td>3.2</td></tr>
+			</tbody>
+		</table>
+		
+	
+		<h2>Console.timeEnd</h2>
+		
+		<table>
+			<thead>
+				<tr><th><a href="https://developer.mozilla.org/docs/Web/API/Console/timeEnd" title="Console.timeEnd" target="_blank">MDN</a></th><th>android</th><th>chrome</th><th>edge</th><th>firefox</th><th>ie</th><th>opera</th><th>safari</th><th>ios_saf</th></tr>
+			</thead>
+			<tbody>
+				<tr><td><span title="console.timeEnd">polyfill-library</span></td><td>-</td><td>-</td><td>-</td><td>1 - 4</td><td>*</td><td>-</td><td>-</td><td>-</td></tr>
+				<tr><td><span title="Console.timeEnd">native</span></td><td>18</td><td>1</td><td>12</td><td>10</td><td>11</td><td>11</td><td>4</td><td>3.2</td></tr>
+			</tbody>
+		</table>
+		
+	
+		<h2>Console.timeStamp</h2>
+		
+		<table>
+			<thead>
+				<tr><th><a href="https://developer.mozilla.org/docs/Web/API/Console/timeStamp" title="Console.timeStamp" target="_blank">MDN</a></th><th>android</th><th>chrome</th><th>edge</th><th>firefox</th><th>ie</th><th>opera</th><th>safari</th><th>ios_saf</th></tr>
+			</thead>
+			<tbody>
+				<tr><td><span title="console.timeStamp">polyfill-library</span></td><td>-</td><td>-</td><td><16.15063</td><td><39</td><td><11</td><td>-</td><td>-</td><td>-</td></tr>
+				<tr><td><span title="Console.timeStamp">native</span></td><td>18</td><td>14</td><td>12</td><td>39</td><td>11</td><td>15</td><td>6</td><td>6</td></tr>
+			</tbody>
+		</table>
+		
+	
+		<h2>Console.trace</h2>
+		
+		<table>
+			<thead>
+				<tr><th><a href="https://developer.mozilla.org/docs/Web/API/Console/trace" title="Console.trace" target="_blank">MDN</a></th><th>android</th><th>chrome</th><th>edge</th><th>firefox</th><th>ie</th><th>opera</th><th>safari</th><th>ios_saf</th></tr>
+			</thead>
+			<tbody>
+				<tr><td><span title="console.trace">polyfill-library</span></td><td>-</td><td>-</td><td>-</td><td>1 - 4</td><td>*</td><td>-</td><td>-</td><td>-</td></tr>
+				<tr><td><span title="Console.trace">native</span></td><td>18</td><td>1</td><td>12</td><td>10</td><td>11</td><td>11</td><td>4</td><td>3.2</td></tr>
+			</tbody>
+		</table>
+		
+	
+		<h2>Console.warn</h2>
+		
+		<table>
+			<thead>
+				<tr><th><a href="https://developer.mozilla.org/docs/Web/API/Console/warn" title="Console.warn" target="_blank">MDN</a></th><th>android</th><th>chrome</th><th>edge</th><th>firefox</th><th>ie</th><th>opera</th><th>safari</th><th>ios_saf</th></tr>
+			</thead>
+			<tbody>
+				<tr><td><span title="console.warn">polyfill-library</span></td><td>-</td><td>-</td><td>-</td><td>1 - 4</td><td>*</td><td>-</td><td>-</td><td>-</td></tr>
+				<tr><td><span title="Console.warn">native</span></td><td>18</td><td>1</td><td>12</td><td>4</td><td>8</td><td>10.5</td><td>3</td><td>1</td></tr>
+			</tbody>
+		</table>
+		
+	
+		<h2>CSS.supports</h2>
+		
+		<table>
+			<thead>
+				<tr><th><a href="https://developer.mozilla.org/docs/Web/API/CSS/supports" title="CSS.supports" target="_blank">MDN</a></th><th>android</th><th>chrome</th><th>edge</th><th>firefox</th><th>ie</th><th>opera</th><th>safari</th><th>ios_saf</th></tr>
+			</thead>
+			<tbody>
+				<tr><td><span title="CSS.supports">polyfill-library</span></td><td><4.4</td><td><=27</td><td>-</td><td><=21</td><td>*</td><td><15</td><td><9</td><td><9.0</td></tr>
+				<tr><td><span title="CSS.supports">native</span></td><td><span >61</span><br><span title="Version 60 or older didn't support parentheses-less one-argument version."><span >28</span> ⓘ</span></td><td><span >61</span><br><span title="Version 60 or older didn't support parentheses-less one-argument version."><span >28</span> ⓘ</span></td><td>12</td><td><span >55</span><br><span title="Version 54 or older didn't support parentheses-less one-argument version."><span >22</span> ⓘ</span><br><span >20</span></td><td>-</td><td>12.1</td><td>10</td><td>true</td></tr>
+			</tbody>
+		</table>
+		
+	
+		<h2>CustomEvent</h2>
+		
+		<table>
+			<thead>
+				<tr><th><a href="https://developer.mozilla.org/docs/Web/API/CustomEvent" title="CustomEvent" target="_blank">MDN</a></th><th>android</th><th>chrome</th><th>edge</th><th>firefox</th><th>ie</th><th>opera</th><th>safari</th><th>ios_saf</th></tr>
+			</thead>
+			<tbody>
+				<tr><td><span title="CustomEvent">polyfill-library</span></td><td><=4.3</td><td>1 - 14</td><td><14</td><td>6 - 10</td><td>*</td><td>10 - 11.5</td><td>4 - 7</td><td>-</td></tr>
+				<tr><td><span title="CustomEvent">native</span></td><td>18</td><td>15</td><td>12</td><td>6</td><td>9</td><td>11</td><td>5.1</td><td>6</td></tr>
+			</tbody>
+		</table>
+		
+	
+		<h2>Document</h2>
+		
+		<table>
+			<thead>
+				<tr><th><a href="https://developer.mozilla.org/docs/Web/API/Document" title="Document" target="_blank">MDN</a></th><th>android</th><th>chrome</th><th>edge</th><th>firefox</th><th>ie</th><th>opera</th><th>safari</th><th>ios_saf</th></tr>
+			</thead>
+			<tbody>
+				<tr><td><span title="document">polyfill-library</span></td><td>-</td><td>-</td><td>-</td><td>-</td><td>6 - 8</td><td>-</td><td>-</td><td>-</td></tr>
+				<tr><td><span title="Document">native</span></td><td>18</td><td>1</td><td>12</td><td>1</td><td>4</td><td>3</td><td>1</td><td>1</td></tr>
+			</tbody>
+		</table>
+		
+	
+		<h2>Document.currentScript</h2>
+		
+		<table>
+			<thead>
+				<tr><th><a href="https://developer.mozilla.org/docs/Web/API/Document/currentScript" title="Document.currentScript" target="_blank">MDN</a></th><th>android</th><th>chrome</th><th>edge</th><th>firefox</th><th>ie</th><th>opera</th><th>safari</th><th>ios_saf</th></tr>
+			</thead>
+			<tbody>
+				<tr><td><span title="document.currentScript">polyfill-library</span></td><td>-</td><td>-</td><td>-</td><td>-</td><td>*</td><td>-</td><td>-</td><td>-</td></tr>
+				<tr><td><span title="Document.currentScript">native</span></td><td>29</td><td>29</td><td>12</td><td>4</td><td>-</td><td>16</td><td>6.1</td><td>8</td></tr>
+			</tbody>
+		</table>
+		
+	
+		<h2>Document.getElementsByClassName</h2>
+		
+		<table>
+			<thead>
+				<tr><th><a href="https://developer.mozilla.org/docs/Web/API/Document/getElementsByClassName" title="Document.getElementsByClassName" target="_blank">MDN</a></th><th>android</th><th>chrome</th><th>edge</th><th>firefox</th><th>ie</th><th>opera</th><th>safari</th><th>ios_saf</th></tr>
+			</thead>
+			<tbody>
+				<tr><td><span title="document.getElementsByClassName">polyfill-library</span></td><td>-</td><td>-</td><td>-</td><td>-</td><td><9</td><td>-</td><td>-</td><td>-</td></tr>
+				<tr><td><span title="Document.getElementsByClassName">native</span></td><td>18</td><td>1</td><td>12</td><td>3</td><td>9</td><td>9.5</td><td>3.1</td><td>2</td></tr>
+			</tbody>
+		</table>
+		
+	
+		<h2>Document.head</h2>
+		
+		<table>
+			<thead>
+				<tr><th><a href="https://developer.mozilla.org/docs/Web/API/Document/head" title="Document.head" target="_blank">MDN</a></th><th>android</th><th>chrome</th><th>edge</th><th>firefox</th><th>ie</th><th>opera</th><th>safari</th><th>ios_saf</th></tr>
+			</thead>
+			<tbody>
+				<tr><td><span title="document.head">polyfill-library</span></td><td>-</td><td>-</td><td>-</td><td>-</td><td>6 - 8</td><td>-</td><td>4</td><td>-</td></tr>
+				<tr><td><span title="Document.head">native</span></td><td>true</td><td>4</td><td>12</td><td>4</td><td>9</td><td>11</td><td>5</td><td>4</td></tr>
+			</tbody>
+		</table>
+		
+	
+		<h2>Document.querySelector</h2>
+		
+		<table>
+			<thead>
+				<tr><th><a href="https://developer.mozilla.org/docs/Web/API/Document/querySelector" title="Document.querySelector" target="_blank">MDN</a></th><th>android</th><th>chrome</th><th>edge</th><th>firefox</th><th>ie</th><th>opera</th><th>safari</th><th>ios_saf</th></tr>
+			</thead>
+			<tbody>
+				<tr><td><span title="document.querySelector">polyfill-library</span></td><td>-</td><td>-</td><td>-</td><td>-</td><td>6 - 8</td><td>-</td><td>-</td><td>-</td></tr>
+				<tr><td><span title="Document.querySelector">native</span></td><td>18</td><td>1</td><td>12</td><td>3.5</td><td>8</td><td>10</td><td>3.2</td><td>3</td></tr>
+			</tbody>
+		</table>
+		
+	
+		<h2>Document.visibilityState</h2>
+		
+		<table>
+			<thead>
+				<tr><th><a href="https://developer.mozilla.org/docs/Web/API/Document/visibilityState" title="Document.visibilityState" target="_blank">MDN</a></th><th>android</th><th>chrome</th><th>edge</th><th>firefox</th><th>ie</th><th>opera</th><th>safari</th><th>ios_saf</th></tr>
+			</thead>
+			<tbody>
+				<tr><td><span title="document.visibilityState">polyfill-library</span></td><td>4.4 - *</td><td>14 - 32</td><td>-</td><td>10 - 17</td><td>-</td><td>15 - 19</td><td>4</td><td>-</td></tr>
+				<tr><td><span title="Document.visibilityState">native</span></td><td><span >33</span><br><span >true</span></td><td><span >33</span><br><span >13</span></td><td>12</td><td><span >18</span><br><span >10</span>-<span style="color:red;" >52</span></td><td>10</td><td>12.1</td><td>6.1</td><td>7</td></tr>
+			</tbody>
+		</table>
+		
+	
+		<h2>DocumentFragment</h2>
+		
+		<table>
+			<thead>
+				<tr><th><a href="https://developer.mozilla.org/docs/Web/API/DocumentFragment" title="DocumentFragment" target="_blank">MDN</a></th><th>android</th><th>chrome</th><th>edge</th><th>firefox</th><th>ie</th><th>opera</th><th>safari</th><th>ios_saf</th></tr>
+			</thead>
+			<tbody>
+				<tr><td><span title="DocumentFragment">polyfill-library</span></td><td><3</td><td>-</td><td>-</td><td><4</td><td>8 - 9</td><td><11</td><td><4</td><td><4</td></tr>
+				<tr><td><span title="DocumentFragment">native</span></td><td>18</td><td>1</td><td>12</td><td>1</td><td>9</td><td>8</td><td>3</td><td>1</td></tr>
+			</tbody>
+		</table>
+		
+	
+		<h2>DOMRect</h2>
+		
+		<table>
+			<thead>
+				<tr><th><a href="https://developer.mozilla.org/docs/Web/API/DOMRect" title="DOMRect" target="_blank">MDN</a></th><th>android</th><th>chrome</th><th>edge</th><th>firefox</th><th>ie</th><th>opera</th><th>safari</th><th>ios_saf</th></tr>
+			</thead>
+			<tbody>
+				<tr><td><span title="DOMRect">polyfill-library</span></td><td><6</td><td><60</td><td><79</td><td><=30</td><td>9 - *</td><td>-</td><td><10.1</td><td><10.1</td></tr>
+				<tr><td><span title="DOMRect">native</span></td><td>61</td><td>61</td><td><span >79</span><br><span title="Alternate name : ClientRect"><span >12</span> ⓘ</span></td><td>true</td><td><br><span title="Alternate name : ClientRect"><span >true</span> ⓘ</span></td><td>48</td><td>10.1</td><td>10.3</td></tr>
+			</tbody>
+		</table>
+		
+	
+		<h2>DOMTokenList</h2>
+		
+		<table>
+			<thead>
+				<tr><th><a href="https://developer.mozilla.org/docs/Web/API/DOMTokenList" title="DOMTokenList" target="_blank">MDN</a></th><th>android</th><th>chrome</th><th>edge</th><th>firefox</th><th>ie</th><th>opera</th><th>safari</th><th>ios_saf</th></tr>
+			</thead>
+			<tbody>
+				<tr><td><span title="DOMTokenList">polyfill-library</span></td><td>-</td><td>-</td><td><14</td><td>-</td><td>*</td><td>-</td><td>4 - 6.0</td><td>-</td></tr>
+				<tr><td><span title="DOMTokenList">native</span></td><td>18</td><td>8</td><td>12</td><td>3.6</td><td>10</td><td>11.5</td><td>5.1</td><td>5.1</td></tr>
+			</tbody>
+		</table>
+		
+	
+		<h2>DOMTokenList.prototype.forEach</h2>
+		
+		<table>
+			<thead>
+				<tr><th><a href="https://developer.mozilla.org/docs/Web/API/DOMTokenList/forEach" title="DOMTokenList.prototype.forEach" target="_blank">MDN</a></th><th>android</th><th>chrome</th><th>edge</th><th>firefox</th><th>ie</th><th>opera</th><th>safari</th><th>ios_saf</th></tr>
+			</thead>
+			<tbody>
+				<tr><td><span title="DOMTokenList.prototype.forEach">polyfill-library</span></td><td><45</td><td><42</td><td><16</td><td><50</td><td>*</td><td><32</td><td><10.1</td><td><10.3</td></tr>
+				<tr><td><span title="DOMTokenList.prototype.forEach">native</span></td><td>45</td><td>42</td><td>16</td><td>50</td><td>-</td><td>32</td><td>10.1</td><td>10.3</td></tr>
+			</tbody>
+		</table>
+		
+	
+		<h2>DOMTokenList.prototype.replace</h2>
+		
+		<table>
+			<thead>
+				<tr><th><a href="https://developer.mozilla.org/docs/Web/API/DOMTokenList/replace" title="DOMTokenList.prototype.replace" target="_blank">MDN</a></th><th>android</th><th>chrome</th><th>edge</th><th>firefox</th><th>ie</th><th>opera</th><th>safari</th><th>ios_saf</th></tr>
+			</thead>
+			<tbody>
+				<tr><td><span title="DOMTokenList.prototype.replace">polyfill-library</span></td><td><67</td><td><67</td><td><18</td><td><61</td><td>*</td><td><54</td><td><12</td><td><12</td></tr>
+				<tr><td><span title="DOMTokenList.prototype.replace">native</span></td><td>61</td><td>61</td><td>17</td><td>49</td><td>-</td><td>48</td><td>10.1</td><td>10.3</td></tr>
+			</tbody>
+		</table>
+		
+	
+		<h2>Element</h2>
+		
+		<table>
+			<thead>
+				<tr><th><a href="https://developer.mozilla.org/docs/Web/API/Element" title="Element" target="_blank">MDN</a></th><th>android</th><th>chrome</th><th>edge</th><th>firefox</th><th>ie</th><th>opera</th><th>safari</th><th>ios_saf</th></tr>
+			</thead>
+			<tbody>
+				<tr><td><span title="Element">polyfill-library</span></td><td>-</td><td>-</td><td>-</td><td>-</td><td>6 - 8</td><td>-</td><td>-</td><td>-</td></tr>
+				<tr><td><span title="Element">native</span></td><td>18</td><td>1</td><td>12</td><td>1</td><td>4</td><td>8</td><td>1.3</td><td>1</td></tr>
+			</tbody>
+		</table>
+		
+	
+		<h2>Element.prototype.classList</h2>
+		
+		<table>
+			<thead>
+				<tr><th><a href="https://developer.mozilla.org/docs/Web/API/Element/classList" title="Element.prototype.classList" target="_blank">MDN</a></th><th>android</th><th>chrome</th><th>edge</th><th>firefox</th><th>ie</th><th>opera</th><th>safari</th><th>ios_saf</th></tr>
+			</thead>
+			<tbody>
+				<tr><td><span title="Element.prototype.classList">polyfill-library</span></td><td>-</td><td>-</td><td>-</td><td>-</td><td>8 - 11</td><td>-</td><td>4 - 4.1</td><td>-</td></tr>
+				<tr><td><span title="Element.prototype.classList">native</span></td><td><span >25</span><br><span title="Not supported for SVG elements."><span >18</span>-<span style="color:red;" >25</span> ⓘ</span></td><td><span >22</span><br><span title="Not supported for SVG elements."><span >8</span>-<span style="color:red;" >22</span> ⓘ</span></td><td><span >16</span><br><span title="Not supported for SVG elements."><span >12</span>-<span style="color:red;" >16</span> ⓘ</span></td><td>3.6</td><td>10</td><td>11.5</td><td><span >6.1</span><br><span title="Not supported for SVG elements."><span >6</span>-<span style="color:red;" >6.1</span> ⓘ</span></td><td><span >7</span><br><span title="Not supported for SVG elements."><span >5</span>-<span style="color:red;" >7</span> ⓘ</span></td></tr>
+			</tbody>
+		</table>
+		
+	
+		<h2>Element.prototype.closest</h2>
+		
+		<table>
+			<thead>
+				<tr><th><a href="https://developer.mozilla.org/docs/Web/API/Element/closest" title="Element.prototype.closest" target="_blank">MDN</a></th><th>android</th><th>chrome</th><th>edge</th><th>firefox</th><th>ie</th><th>opera</th><th>safari</th><th>ios_saf</th></tr>
+			</thead>
+			<tbody>
+				<tr><td><span title="Element.prototype.closest">polyfill-library</span></td><td><5</td><td><41</td><td><15</td><td><35</td><td>*</td><td><28</td><td><9</td><td><9</td></tr>
+				<tr><td><span title="Element.prototype.closest">native</span></td><td>41</td><td>41</td><td>15</td><td>35</td><td>-</td><td>28</td><td>6</td><td>9</td></tr>
+			</tbody>
+		</table>
+		
+	
+		<h2>Element.prototype.matches</h2>
+		
+		<table>
+			<thead>
+				<tr><th><a href="https://developer.mozilla.org/docs/Web/API/Element/matches" title="Element.prototype.matches" target="_blank">MDN</a></th><th>android</th><th>chrome</th><th>edge</th><th>firefox</th><th>ie</th><th>opera</th><th>safari</th><th>ios_saf</th></tr>
+			</thead>
+			<tbody>
+				<tr><td><span title="Element.prototype.matches">polyfill-library</span></td><td>* - 4.4.4</td><td>* - 33</td><td><18</td><td>* - 33</td><td>6 - *</td><td>* - 20</td><td>4 - 7.0</td><td>* - 7</td></tr>
+				<tr><td><span title="Element.prototype.matches">native</span></td><td><span >33</span><br><span title="Alternate name : webkitMatchesSelector"><span >18</span> ⓘ</span></td><td><span >33</span><br><span title="Alternate name : webkitMatchesSelector"><span >4</span> ⓘ</span></td><td><span >15</span><br><span title="Alternate name : webkitMatchesSelector"><span >12</span> ⓘ</span><br><span title="Alternate name : msMatchesSelector"><span >12</span> ⓘ</span></td><td><span >34</span><br><span title="Alternate name : webkitMatchesSelector"><span >44</span> ⓘ</span><br><span title="Prior to Firefox 4, invalid selector strings caused false to be returned instead of throwing an exception.
+See <a href='https://bugzil.la/1119718'>bug 1119718</a> for removal.
+Alternate name : mozMatchesSelector"><span >3.6</span> ⓘ</span></td><td>9</td><td><span >21</span><br><span title="Alternate name : webkitMatchesSelector"><span >15</span> ⓘ</span><br><span title="Alternate name : oMatchesSelector"><span >11.5</span>-<span style="color:red;" >15</span> ⓘ</span></td><td><span >7</span><br><span title="Alternate name : webkitMatchesSelector"><span >5</span> ⓘ</span></td><td><span >8</span><br><span title="Alternate name : webkitMatchesSelector"><span >4.2</span> ⓘ</span></td></tr>
+			</tbody>
+		</table>
+		
+	
+		<h2>Element.prototype.scroll</h2>
+		
+		<table>
+			<thead>
+				<tr><th><a href="https://developer.mozilla.org/docs/Web/API/Element/scroll" title="Element.prototype.scroll" target="_blank">MDN</a></th><th>android</th><th>chrome</th><th>edge</th><th>firefox</th><th>ie</th><th>opera</th><th>safari</th><th>ios_saf</th></tr>
+			</thead>
+			<tbody>
+				<tr><td><span title="smoothscroll">polyfill-library</span></td><td>*</td><td>* - 60</td><td>* - 76</td><td>4 - 36</td><td>9 - *</td><td>*</td><td>*</td><td>*</td></tr>
+				<tr><td><span title="Element.prototype.scroll">native</span></td><td>61</td><td>61</td><td>79</td><td>36</td><td>-</td><td>48</td><td>10.1</td><td>10.3</td></tr>
+			</tbody>
+		</table>
+		
+	
+		<h2>Element.prototype.scrollBy</h2>
+		
+		<table>
+			<thead>
+				<tr><th><a href="https://developer.mozilla.org/docs/Web/API/Element/scrollBy" title="Element.prototype.scrollBy" target="_blank">MDN</a></th><th>android</th><th>chrome</th><th>edge</th><th>firefox</th><th>ie</th><th>opera</th><th>safari</th><th>ios_saf</th></tr>
+			</thead>
+			<tbody>
+				<tr><td><span title="smoothscroll">polyfill-library</span></td><td>*</td><td>* - 60</td><td>* - 76</td><td>4 - 36</td><td>9 - *</td><td>*</td><td>*</td><td>*</td></tr>
+				<tr><td><span title="Element.prototype.scrollBy">native</span></td><td>61</td><td>61</td><td>79</td><td>36</td><td>-</td><td>48</td><td>10.1</td><td>10.3</td></tr>
+			</tbody>
+		</table>
+		
+	
+		<h2>Element.prototype.scrollIntoView</h2>
+		
+		<table>
+			<thead>
+				<tr><th><a href="https://developer.mozilla.org/docs/Web/API/Element/scrollIntoView" title="Element.prototype.scrollIntoView" target="_blank">MDN</a></th><th>android</th><th>chrome</th><th>edge</th><th>firefox</th><th>ie</th><th>opera</th><th>safari</th><th>ios_saf</th></tr>
+			</thead>
+			<tbody>
+				<tr><td><span title="smoothscroll">polyfill-library</span></td><td>*</td><td>* - 60</td><td>* - 76</td><td>4 - 36</td><td>9 - *</td><td>*</td><td>*</td><td>*</td></tr>
+				<tr><td><span title="Element.prototype.scrollIntoView">native</span></td><td>18</td><td>1</td><td><span >79</span><br><span title="The only parameter supported is <code>alignToTop</code>."><span >17</span>-<span style="color:red;" >79</span> ⓘ</span><br><span title="Only supported for <a href='https://developer.mozilla.org/docs/Web/API/HTMLElement'><code>HTMLElement</code></a>, not all <code>Element</code> objects, such as <a href='https://developer.mozilla.org/docs/Web/API/SVGElement'><code>SVGElement</code></a>.
+No support for <code>smooth</code> behavior."><span >12</span>-<span style="color:red;" >17</span> ⓘ</span></td><td>1</td><td>5</td><td>≤12.1</td><td>3</td><td>1</td></tr>
+			</tbody>
+		</table>
+		
+	
+		<h2>Element.prototype.toggleAttribute</h2>
+		
+		<table>
+			<thead>
+				<tr><th><a href="https://developer.mozilla.org/docs/Web/API/Element/toggleAttribute" title="Element.prototype.toggleAttribute" target="_blank">MDN</a></th><th>android</th><th>chrome</th><th>edge</th><th>firefox</th><th>ie</th><th>opera</th><th>safari</th><th>ios_saf</th></tr>
+			</thead>
+			<tbody>
+				<tr><td><span title="Element.prototype.toggleAttribute">polyfill-library</span></td><td><69</td><td><69</td><td><18</td><td><63</td><td>*</td><td><56</td><td><12</td><td><12</td></tr>
+				<tr><td><span title="Element.prototype.toggleAttribute">native</span></td><td>69</td><td>69</td><td>18</td><td>63</td><td>-</td><td>56</td><td>12</td><td>true</td></tr>
+			</tbody>
+		</table>
+		
+	
+		<h2>Event</h2>
+		
+		<table>
+			<thead>
+				<tr><th><a href="https://developer.mozilla.org/docs/Web/API/Event" title="Event" target="_blank">MDN</a></th><th>android</th><th>chrome</th><th>edge</th><th>firefox</th><th>ie</th><th>opera</th><th>safari</th><th>ios_saf</th></tr>
+			</thead>
+			<tbody>
+				<tr><td><span title="Event">polyfill-library</span></td><td>-</td><td>-</td><td>-</td><td>6 - 10</td><td>6 - 11</td><td>10 - 11.5</td><td>4 - 7</td><td>-</td></tr>
+				<tr><td><span title="Event">native</span></td><td>18</td><td>1</td><td>12</td><td>1</td><td>6</td><td>4</td><td>1</td><td>1</td></tr>
+			</tbody>
+		</table>
+		
+	
+		<h2>EventSource</h2>
+		
+		<table>
+			<thead>
+				<tr><th><a href="https://developer.mozilla.org/docs/Web/API/EventSource" title="EventSource" target="_blank">MDN</a></th><th>android</th><th>chrome</th><th>edge</th><th>firefox</th><th>ie</th><th>opera</th><th>safari</th><th>ios_saf</th></tr>
+			</thead>
+			<tbody>
+				<tr><td><span title="EventSource">polyfill-library</span></td><td><4.4</td><td><26</td><td>*</td><td><36</td><td>*</td><td><12</td><td><7</td><td>-</td></tr>
+				<tr><td><span title="EventSource">native</span></td><td>18</td><td>6</td><td>79</td><td>6</td><td>-</td><td>11</td><td>5</td><td>5</td></tr>
+			</tbody>
+		</table>
+		
+	
+		<h2>fetch</h2>
+		
+		<table>
+			<thead>
+				<tr><th><a href="https://developer.mozilla.org/docs/Web/API/WindowOrWorkerGlobalScope/fetch" title="fetch" target="_blank">MDN</a></th><th>android</th><th>chrome</th><th>edge</th><th>firefox</th><th>ie</th><th>opera</th><th>safari</th><th>ios_saf</th></tr>
+			</thead>
+			<tbody>
+				<tr><td><span title="fetch">polyfill-library</span></td><td><67</td><td><66</td><td><16</td><td><57</td><td>*</td><td><53</td><td><12</td><td><12</td></tr>
+				<tr><td><span title="fetch">native</span></td><td>42</td><td>42</td><td>14</td><td><span >39</span><br><span >34</span><br><span title="<code>fetch()</code> now defined on <code><a href='https://developer.mozilla.org/docs/Web/API/WindowOrWorkerGlobalScope'>WindowOrWorkerGlobalScope</a></code> mixin."><span >52</span> ⓘ</span></td><td>-</td><td><span >29</span><br><span >28</span></td><td>10.1</td><td>10.3</td></tr>
+			</tbody>
+		</table>
+		
+	
+		<h2>globalThis</h2>
+		
+		<table>
+			<thead>
+				<tr><th><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/globalThis" title="globalThis" target="_blank">MDN</a></th><th>android</th><th>chrome</th><th>edge</th><th>firefox</th><th>ie</th><th>opera</th><th>safari</th><th>ios_saf</th></tr>
+			</thead>
+			<tbody>
+				<tr><td><span title="globalThis">polyfill-library</span></td><td><71</td><td><71</td><td>*</td><td><65</td><td>*</td><td>*</td><td><12.1</td><td><12.1</td></tr>
+				<tr><td><span title="globalThis">native</span></td><td>71</td><td>71</td><td>79</td><td>65</td><td>-</td><td>58</td><td>12.1</td><td>12.2</td></tr>
+			</tbody>
+		</table>
+		
+	
+		<h2>HTMLCanvasElement.prototype.toBlob</h2>
+		
+		<table>
+			<thead>
+				<tr><th><a href="https://developer.mozilla.org/docs/Web/API/HTMLCanvasElement/toBlob" title="HTMLCanvasElement.prototype.toBlob" target="_blank">MDN</a></th><th>android</th><th>chrome</th><th>edge</th><th>firefox</th><th>ie</th><th>opera</th><th>safari</th><th>ios_saf</th></tr>
+			</thead>
+			<tbody>
+				<tr><td><span title="HTMLCanvasElement.prototype.toBlob">polyfill-library</span></td><td>-</td><td><50</td><td>*</td><td><19</td><td>>=10</td><td><37</td><td><11</td><td><11</td></tr>
+				<tr><td><span title="HTMLCanvasElement.prototype.toBlob">native</span></td><td>50</td><td>50</td><td><span >79</span><br><span >12</span>-<span style="color:red;" >79</span></td><td>18</td><td>10</td><td>37</td><td>11</td><td>11</td></tr>
+			</tbody>
+		</table>
+		
+	
+		<h2>HTMLDocument</h2>
+		
+		<table>
+			<thead>
+				<tr><th><a href="https://developer.mozilla.org/docs/Web/API/HTMLDocument" title="HTMLDocument" target="_blank">MDN</a></th><th>android</th><th>chrome</th><th>edge</th><th>firefox</th><th>ie</th><th>opera</th><th>safari</th><th>ios_saf</th></tr>
+			</thead>
+			<tbody>
+				<tr><td><span title="HTMLDocument">polyfill-library</span></td><td>-</td><td>-</td><td>-</td><td>-</td><td>9</td><td>-</td><td>-</td><td>-</td></tr>
+				<tr><td><span title="HTMLDocument">native</span></td><td>true</td><td>true</td><td>12</td><td>true</td><td>true</td><td>true</td><td>true</td><td>true</td></tr>
+			</tbody>
+		</table>
+		
+	
+		<h2>HTMLPictureElement</h2>
+		
+		<table>
+			<thead>
+				<tr><th><a href="https://developer.mozilla.org/docs/Web/API/HTMLPictureElement" title="HTMLPictureElement" target="_blank">MDN</a></th><th>android</th><th>chrome</th><th>edge</th><th>firefox</th><th>ie</th><th>opera</th><th>safari</th><th>ios_saf</th></tr>
+			</thead>
+			<tbody>
+				<tr><td><span title="HTMLPictureElement">polyfill-library</span></td><td><52</td><td>* - 38</td><td><12</td><td>4 - 37</td><td>*</td><td>11.6 - 29</td><td>6 - 9</td><td>* - 9.2</td></tr>
+				<tr><td><span title="HTMLPictureElement">native</span></td><td>38</td><td>38</td><td>13</td><td><span >38</span><br><span >32</span>-<span style="color:red;" >52</span></td><td>-</td><td>25</td><td>9.1</td><td>9.3</td></tr>
+			</tbody>
+		</table>
+		
+	
+		<h2>HTMLTemplateElement</h2>
+		
+		<table>
+			<thead>
+				<tr><th><a href="https://developer.mozilla.org/docs/Web/API/HTMLTemplateElement" title="HTMLTemplateElement" target="_blank">MDN</a></th><th>android</th><th>chrome</th><th>edge</th><th>firefox</th><th>ie</th><th>opera</th><th>safari</th><th>ios_saf</th></tr>
+			</thead>
+			<tbody>
+				<tr><td><span title="HTMLTemplateElement">core-web</span></td><td>-</td><td><35</td><td><15</td><td><22</td><td>*</td><td><22</td><td><9</td><td>-</td></tr>
+				<tr><td><span title="HTMLTemplateElement">native</span></td><td>26</td><td>26</td><td>13</td><td>22</td><td>-</td><td>15</td><td>6.1</td><td>6.1</td></tr>
+			</tbody>
+		</table>
+		
+	
+		<h2>IntersectionObserver</h2>
+		
+		<table>
+			<thead>
+				<tr><th><a href="https://developer.mozilla.org/docs/Web/API/IntersectionObserver" title="IntersectionObserver" target="_blank">MDN</a></th><th>android</th><th>chrome</th><th>edge</th><th>firefox</th><th>ie</th><th>opera</th><th>safari</th><th>ios_saf</th></tr>
+			</thead>
+			<tbody>
+				<tr><td><span title="IntersectionObserver">polyfill-library</span></td><td>*</td><td>< 51</td><td>< 16</td><td>< 55</td><td>*</td><td>< 45</td><td>< 12.2</td><td>< 12.2</td></tr>
+				<tr><td><span title="IntersectionObserver">native</span></td><td>51</td><td>51</td><td>15</td><td><span >55</span><br><span >53</span>-<span style="color:red;" >55</span></td><td>-</td><td>38</td><td>12.1</td><td>12.2</td></tr>
+			</tbody>
+		</table>
+		
+	
+		<h2>IntersectionObserverEntry</h2>
+		
+		<table>
+			<thead>
+				<tr><th><a href="https://developer.mozilla.org/docs/Web/API/IntersectionObserverEntry" title="IntersectionObserverEntry" target="_blank">MDN</a></th><th>android</th><th>chrome</th><th>edge</th><th>firefox</th><th>ie</th><th>opera</th><th>safari</th><th>ios_saf</th></tr>
+			</thead>
+			<tbody>
+				<tr><td><span title="IntersectionObserverEntry">polyfill-library</span></td><td>-</td><td>-</td><td>15</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td></tr>
+				<tr><td><span title="IntersectionObserverEntry">native</span></td><td>51</td><td>51</td><td>15</td><td><span >55</span><br><span >53</span>-<span style="color:red;" >55</span></td><td>-</td><td>true</td><td>12.1</td><td>-</td></tr>
+			</tbody>
+		</table>
+		
+	
+		<h2>Intl</h2>
+		
+		<table>
+			<thead>
+				<tr><th><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Intl" title="Intl" target="_blank">MDN</a></th><th>android</th><th>chrome</th><th>edge</th><th>firefox</th><th>ie</th><th>opera</th><th>safari</th><th>ios_saf</th></tr>
+			</thead>
+			<tbody>
+				<tr><td><span title="Intl.DateTimeFormat">polyfill-library</span></td><td>*</td><td><71</td><td><71</td><td><51</td><td>9 - *</td><td>*</td><td><11</td><td><11</td></tr>
+				<tr><td><span title="Intl">native</span></td><td>25</td><td>24</td><td>12</td><td>29</td><td>11</td><td>15</td><td>10</td><td>10</td></tr>
+			</tbody>
+		</table>
+		
+		<table>
+			<thead>
+				<tr><th><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Intl" title="Intl" target="_blank">MDN</a></th><th>android</th><th>chrome</th><th>edge</th><th>firefox</th><th>ie</th><th>opera</th><th>safari</th><th>ios_saf</th></tr>
+			</thead>
+			<tbody>
+				<tr><td><span title="Intl.Locale">polyfill-library</span></td><td>*</td><td><74</td><td><79</td><td><75</td><td>9 - *</td><td>*</td><td><14</td><td><14</td></tr>
+				<tr><td><span title="Intl">native</span></td><td>25</td><td>24</td><td>12</td><td>29</td><td>11</td><td>15</td><td>10</td><td>10</td></tr>
+			</tbody>
+		</table>
+		
+		<table>
+			<thead>
+				<tr><th><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Intl" title="Intl" target="_blank">MDN</a></th><th>android</th><th>chrome</th><th>edge</th><th>firefox</th><th>ie</th><th>opera</th><th>safari</th><th>ios_saf</th></tr>
+			</thead>
+			<tbody>
+				<tr><td><span title="Intl.NumberFormat">polyfill-library</span></td><td>*</td><td><77</td><td><77</td><td>*</td><td>9 - *</td><td>*</td><td>*</td><td>*</td></tr>
+				<tr><td><span title="Intl">native</span></td><td>25</td><td>24</td><td>12</td><td>29</td><td>11</td><td>15</td><td>10</td><td>10</td></tr>
+			</tbody>
+		</table>
+		
+		<table>
+			<thead>
+				<tr><th><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Intl" title="Intl" target="_blank">MDN</a></th><th>android</th><th>chrome</th><th>edge</th><th>firefox</th><th>ie</th><th>opera</th><th>safari</th><th>ios_saf</th></tr>
+			</thead>
+			<tbody>
+				<tr><td><span title="Intl.PluralRules">polyfill-library</span></td><td><63</td><td><63</td><td><18</td><td><58</td><td>9 - *</td><td><50</td><td>*</td><td>*</td></tr>
+				<tr><td><span title="Intl">native</span></td><td>25</td><td>24</td><td>12</td><td>29</td><td>11</td><td>15</td><td>10</td><td>10</td></tr>
+			</tbody>
+		</table>
+		
+		<table>
+			<thead>
+				<tr><th><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Intl" title="Intl" target="_blank">MDN</a></th><th>android</th><th>chrome</th><th>edge</th><th>firefox</th><th>ie</th><th>opera</th><th>safari</th><th>ios_saf</th></tr>
+			</thead>
+			<tbody>
+				<tr><td><span title="Intl.getCanonicalLocales">polyfill-library</span></td><td>*</td><td><54</td><td><16</td><td><48</td><td>9 - *</td><td>*</td><td><11</td><td><11</td></tr>
+				<tr><td><span title="Intl">native</span></td><td>25</td><td>24</td><td>12</td><td>29</td><td>11</td><td>15</td><td>10</td><td>10</td></tr>
+			</tbody>
+		</table>
+		
+	
+		<h2>Intl.DateTimeFormat</h2>
+		
+		<table>
+			<thead>
+				<tr><th><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat" title="Intl.DateTimeFormat" target="_blank">MDN</a></th><th>android</th><th>chrome</th><th>edge</th><th>firefox</th><th>ie</th><th>opera</th><th>safari</th><th>ios_saf</th></tr>
+			</thead>
+			<tbody>
+				<tr><td><span title="Intl.DateTimeFormat">polyfill-library</span></td><td>*</td><td><71</td><td><71</td><td><51</td><td>9 - *</td><td>*</td><td><11</td><td><11</td></tr>
+				<tr><td><span title="Intl.DateTimeFormat">native</span></td><td>25</td><td>24</td><td>12</td><td>29</td><td>11</td><td>15</td><td>10</td><td>10</td></tr>
+			</tbody>
+		</table>
+		
+	
+		<h2>Intl.DisplayNames</h2>
+		
+		<table>
+			<thead>
+				<tr><th><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Intl/DisplayNames" title="Intl.DisplayNames" target="_blank">MDN</a></th><th>android</th><th>chrome</th><th>edge</th><th>firefox</th><th>ie</th><th>opera</th><th>safari</th><th>ios_saf</th></tr>
+			</thead>
+			<tbody>
+				<tr><td><span title="Intl.DisplayNames">polyfill-library</span></td><td>*</td><td><72</td><td><81</td><td>*</td><td>9 - *</td><td>*</td><td>*</td><td>*</td></tr>
+				<tr><td><span title="Intl.DisplayNames">native</span></td><td>81</td><td>81</td><td>81</td><td>-</td><td>-</td><td>68</td><td>-</td><td>-</td></tr>
+			</tbody>
+		</table>
+		
+	
+		<h2>Intl.getCanonicalLocales</h2>
+		
+		<table>
+			<thead>
+				<tr><th><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Intl/getCanonicalLocales" title="Intl.getCanonicalLocales" target="_blank">MDN</a></th><th>android</th><th>chrome</th><th>edge</th><th>firefox</th><th>ie</th><th>opera</th><th>safari</th><th>ios_saf</th></tr>
+			</thead>
+			<tbody>
+				<tr><td><span title="Intl.getCanonicalLocales">polyfill-library</span></td><td>*</td><td><54</td><td><16</td><td><48</td><td>9 - *</td><td>*</td><td><11</td><td><11</td></tr>
+				<tr><td><span title="Intl.getCanonicalLocales">native</span></td><td>-</td><td>54</td><td>16</td><td>48</td><td>-</td><td>-</td><td>11</td><td>11</td></tr>
+			</tbody>
+		</table>
+		
+	
+		<h2>Intl.ListFormat</h2>
+		
+		<table>
+			<thead>
+				<tr><th><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Intl/ListFormat" title="Intl.ListFormat" target="_blank">MDN</a></th><th>android</th><th>chrome</th><th>edge</th><th>firefox</th><th>ie</th><th>opera</th><th>safari</th><th>ios_saf</th></tr>
+			</thead>
+			<tbody>
+				<tr><td><span title="Intl.ListFormat">polyfill-library</span></td><td>*</td><td><72</td><td>*</td><td>*</td><td>9 - *</td><td>*</td><td>*</td><td>*</td></tr>
+				<tr><td><span title="Intl.ListFormat">native</span></td><td>72</td><td>72</td><td>79</td><td>78</td><td>-</td><td>60</td><td>-</td><td>-</td></tr>
+			</tbody>
+		</table>
+		
+	
+		<h2>Intl.Locale</h2>
+		
+		<table>
+			<thead>
+				<tr><th><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale" title="Intl.Locale" target="_blank">MDN</a></th><th>android</th><th>chrome</th><th>edge</th><th>firefox</th><th>ie</th><th>opera</th><th>safari</th><th>ios_saf</th></tr>
+			</thead>
+			<tbody>
+				<tr><td><span title="Intl.Locale">polyfill-library</span></td><td>*</td><td><74</td><td><79</td><td><75</td><td>9 - *</td><td>*</td><td><14</td><td><14</td></tr>
+				<tr><td><span title="Intl.Locale">native</span></td><td>74</td><td>74</td><td>79</td><td>75</td><td>-</td><td>62</td><td>14</td><td>14</td></tr>
+			</tbody>
+		</table>
+		
+	
+		<h2>Intl.NumberFormat</h2>
+		
+		<table>
+			<thead>
+				<tr><th><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat" title="Intl.NumberFormat" target="_blank">MDN</a></th><th>android</th><th>chrome</th><th>edge</th><th>firefox</th><th>ie</th><th>opera</th><th>safari</th><th>ios_saf</th></tr>
+			</thead>
+			<tbody>
+				<tr><td><span title="Intl.NumberFormat">polyfill-library</span></td><td>*</td><td><77</td><td><77</td><td>*</td><td>9 - *</td><td>*</td><td>*</td><td>*</td></tr>
+				<tr><td><span title="Intl.NumberFormat">native</span></td><td>25</td><td>24</td><td>12</td><td>29</td><td>11</td><td>15</td><td>10</td><td>10</td></tr>
+			</tbody>
+		</table>
+		
+	
+		<h2>Intl.PluralRules</h2>
+		
+		<table>
+			<thead>
+				<tr><th><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Intl/PluralRules" title="Intl.PluralRules" target="_blank">MDN</a></th><th>android</th><th>chrome</th><th>edge</th><th>firefox</th><th>ie</th><th>opera</th><th>safari</th><th>ios_saf</th></tr>
+			</thead>
+			<tbody>
+				<tr><td><span title="Intl.PluralRules">polyfill-library</span></td><td><63</td><td><63</td><td><18</td><td><58</td><td>9 - *</td><td><50</td><td>*</td><td>*</td></tr>
+				<tr><td><span title="Intl.PluralRules">native</span></td><td>63</td><td>63</td><td>18</td><td>58</td><td>-</td><td>50</td><td>13</td><td>13</td></tr>
+			</tbody>
+		</table>
+		
+	
+		<h2>Intl.RelativeTimeFormat</h2>
+		
+		<table>
+			<thead>
+				<tr><th><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat" title="Intl.RelativeTimeFormat" target="_blank">MDN</a></th><th>android</th><th>chrome</th><th>edge</th><th>firefox</th><th>ie</th><th>opera</th><th>safari</th><th>ios_saf</th></tr>
+			</thead>
+			<tbody>
+				<tr><td><span title="Intl.RelativeTimeFormat">polyfill-library</span></td><td><63</td><td><71</td><td><79</td><td><65</td><td>9 - *</td><td><50</td><td>*</td><td>*</td></tr>
+				<tr><td><span title="Intl.RelativeTimeFormat">native</span></td><td>71</td><td>71</td><td>79</td><td>65</td><td>-</td><td>58</td><td>14</td><td>14</td></tr>
+			</tbody>
+		</table>
+		
+	
+		<h2>JSON</h2>
+		
+		<table>
+			<thead>
+				<tr><th><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/JSON" title="JSON" target="_blank">MDN</a></th><th>android</th><th>chrome</th><th>edge</th><th>firefox</th><th>ie</th><th>opera</th><th>safari</th><th>ios_saf</th></tr>
+			</thead>
+			<tbody>
+				<tr><td><span title="JSON">polyfill-library</span></td><td>-</td><td>-</td><td>-</td><td>< 3.5</td><td>6 - 7</td><td>8.54 - 10.4</td><td>< 4</td><td>-</td></tr>
+				<tr><td><span title="JSON">native</span></td><td>18</td><td>3</td><td>12</td><td>3.5</td><td>8</td><td>10.5</td><td>4</td><td>4</td></tr>
+			</tbody>
+		</table>
+		
+	
+		<h2>Location.origin</h2>
+		
+		<table>
+			<thead>
+				<tr><th><a href="https://developer.mozilla.org/docs/Web/API/Location/origin" title="Location.origin" target="_blank">MDN</a></th><th>android</th><th>chrome</th><th>edge</th><th>firefox</th><th>ie</th><th>opera</th><th>safari</th><th>ios_saf</th></tr>
+			</thead>
+			<tbody>
+				<tr><td><span title="location.origin">polyfill-library</span></td><td>-</td><td><29.0.0</td><td>-</td><td><=20</td><td>6 - 10</td><td>-</td><td><=6</td><td><=6</td></tr>
+				<tr><td><span title="Location.origin">native</span></td><td>18</td><td>8</td><td>12</td><td>21</td><td>11</td><td>15</td><td>5.1</td><td>5</td></tr>
+			</tbody>
+		</table>
+		
+	
+		<h2>MutationObserver</h2>
+		
+		<table>
+			<thead>
+				<tr><th><a href="https://developer.mozilla.org/docs/Web/API/MutationObserver" title="MutationObserver" target="_blank">MDN</a></th><th>android</th><th>chrome</th><th>edge</th><th>firefox</th><th>ie</th><th>opera</th><th>safari</th><th>ios_saf</th></tr>
+			</thead>
+			<tbody>
+				<tr><td><span title="MutationObserver">polyfill-library</span></td><td><4.4</td><td><26</td><td><12</td><td><14</td><td><11</td><td><15</td><td><6</td><td><7</td></tr>
+				<tr><td><span title="MutationObserver">native</span></td><td><span >26</span><br><span >18</span>-<span style="color:red;" >26</span></td><td><span >26</span><br><span >18</span>-<span style="color:red;" >26</span></td><td>12</td><td>14</td><td>11</td><td>15</td><td><span >7</span><br><span >6</span>-<span style="color:red;" >7</span></td><td><span >7</span><br><span >6</span>-<span style="color:red;" >7</span></td></tr>
+			</tbody>
+		</table>
+		
+	
+		<h2>Navigator.geolocation</h2>
+		
+		<table>
+			<thead>
+				<tr><th><a href="https://developer.mozilla.org/docs/Web/API/Navigator/geolocation" title="Navigator.geolocation" target="_blank">MDN</a></th><th>android</th><th>chrome</th><th>edge</th><th>firefox</th><th>ie</th><th>opera</th><th>safari</th><th>ios_saf</th></tr>
+			</thead>
+			<tbody>
+				<tr><td><span title="navigator.geolocation">polyfill-library</span></td><td>-</td><td>-</td><td>-</td><td>-</td><td><9</td><td>15</td><td>4</td><td>-</td></tr>
+				<tr><td><span title="Navigator.geolocation">native</span></td><td>18</td><td>5</td><td>12</td><td>3.5</td><td>9</td><td>10.6</td><td>5</td><td>4.2</td></tr>
+			</tbody>
+		</table>
+		
+	
+		<h2>Navigator.prototype.geolocation</h2>
+		
+		<table>
+			<thead>
+				<tr><th><a href="https://developer.mozilla.org/docs/Web/API/Navigator/geolocation" title="Navigator.prototype.geolocation" target="_blank">MDN</a></th><th>android</th><th>chrome</th><th>edge</th><th>firefox</th><th>ie</th><th>opera</th><th>safari</th><th>ios_saf</th></tr>
+			</thead>
+			<tbody>
+				<tr><td><span title="navigator.geolocation">polyfill-library</span></td><td>-</td><td>-</td><td>-</td><td>-</td><td><9</td><td>15</td><td>4</td><td>-</td></tr>
+				<tr><td><span title="Navigator.prototype.geolocation">native</span></td><td>18</td><td>5</td><td>12</td><td>3.5</td><td>9</td><td>10.6</td><td>5</td><td>4.2</td></tr>
+			</tbody>
+		</table>
+		
+	
+		<h2>Navigator.sendBeacon</h2>
+		
+		<table>
+			<thead>
+				<tr><th><a href="https://developer.mozilla.org/docs/Web/API/Navigator/sendBeacon" title="Navigator.sendBeacon" target="_blank">MDN</a></th><th>android</th><th>chrome</th><th>edge</th><th>firefox</th><th>ie</th><th>opera</th><th>safari</th><th>ios_saf</th></tr>
+			</thead>
+			<tbody>
+				<tr><td><span title="navigator.sendBeacon">polyfill-library</span></td><td><5</td><td><39</td><td><14</td><td><31</td><td>*</td><td><26</td><td><11.1</td><td><11.3</td></tr>
+				<tr><td><span title="Navigator.sendBeacon">native</span></td><td>42</td><td>39</td><td>14</td><td>31</td><td>-</td><td>26</td><td>11.1</td><td>11.3</td></tr>
+			</tbody>
+		</table>
+		
+	
+		<h2>Node.prototype.contains</h2>
+		
+		<table>
+			<thead>
+				<tr><th><a href="https://developer.mozilla.org/docs/Web/API/Node/contains" title="Node.prototype.contains" target="_blank">MDN</a></th><th>android</th><th>chrome</th><th>edge</th><th>firefox</th><th>ie</th><th>opera</th><th>safari</th><th>ios_saf</th></tr>
+			</thead>
+			<tbody>
+				<tr><td><span title="Node.prototype.contains">polyfill-library</span></td><td>-</td><td>-</td><td><14</td><td>* - 8</td><td>*</td><td>-</td><td>* - 2</td><td>-</td></tr>
+				<tr><td><span title="Node.prototype.contains">native</span></td><td>18</td><td>16</td><td>12</td><td>9</td><td>9</td><td>7</td><td>1.1</td><td>1</td></tr>
+			</tbody>
+		</table>
+		
+	
+		<h2>NodeList.prototype.forEach</h2>
+		
+		<table>
+			<thead>
+				<tr><th><a href="https://developer.mozilla.org/docs/Web/API/NodeList/forEach" title="NodeList.prototype.forEach" target="_blank">MDN</a></th><th>android</th><th>chrome</th><th>edge</th><th>firefox</th><th>ie</th><th>opera</th><th>safari</th><th>ios_saf</th></tr>
+			</thead>
+			<tbody>
+				<tr><td><span title="NodeList.prototype.forEach">polyfill-library</span></td><td><51</td><td><51</td><td><16</td><td><50</td><td>*</td><td><38</td><td><10</td><td><10</td></tr>
+				<tr><td><span title="NodeList.prototype.forEach">native</span></td><td>51</td><td>51</td><td>16</td><td>50</td><td>-</td><td>38</td><td>10</td><td>10</td></tr>
+			</tbody>
+		</table>
+		
+	
+		<h2>Performance.now</h2>
+		
+		<table>
+			<thead>
+				<tr><th><a href="https://developer.mozilla.org/docs/Web/API/Performance/now" title="Performance.now" target="_blank">MDN</a></th><th>android</th><th>chrome</th><th>edge</th><th>firefox</th><th>ie</th><th>opera</th><th>safari</th><th>ios_saf</th></tr>
+			</thead>
+			<tbody>
+				<tr><td><span title="performance.now">polyfill-library</span></td><td><=4.3</td><td><24</td><td>-</td><td><15</td><td><10</td><td><15</td><td><8</td><td><9</td></tr>
+				<tr><td><span title="Performance.now">native</span></td><td>25</td><td><span >24</span><br><span >21</span>-<span style="color:red;" >24</span></td><td>12</td><td>15</td><td>10</td><td>15</td><td>8</td><td>9</td></tr>
+			</tbody>
+		</table>
+		
+	
+		<h2>queueMicrotask</h2>
+		
+		<table>
+			<thead>
+				<tr><th><a href="https://developer.mozilla.org/docs/Web/API/WindowOrWorkerGlobalScope/queueMicrotask" title="queueMicrotask" target="_blank">MDN</a></th><th>android</th><th>chrome</th><th>edge</th><th>firefox</th><th>ie</th><th>opera</th><th>safari</th><th>ios_saf</th></tr>
+			</thead>
+			<tbody>
+				<tr><td><span title="queueMicrotask">polyfill-library</span></td><td><71</td><td><71</td><td>*</td><td><69</td><td>*</td><td><58</td><td><12.1</td><td><12.2</td></tr>
+				<tr><td><span title="queueMicrotask">native</span></td><td>71</td><td>71</td><td>79</td><td>69</td><td>-</td><td>58</td><td>12.1</td><td>12.2</td></tr>
+			</tbody>
+		</table>
+		
+	
+		<h2>ResizeObserver</h2>
+		
+		<table>
+			<thead>
+				<tr><th><a href="https://developer.mozilla.org/docs/Web/API/ResizeObserver" title="ResizeObserver" target="_blank">MDN</a></th><th>android</th><th>chrome</th><th>edge</th><th>firefox</th><th>ie</th><th>opera</th><th>safari</th><th>ios_saf</th></tr>
+			</thead>
+			<tbody>
+				<tr><td><span title="ResizeObserver">polyfill-library</span></td><td><5</td><td><64</td><td>*</td><td><69</td><td>9 - *</td><td><51</td><td>*</td><td>*</td></tr>
+				<tr><td><span title="ResizeObserver">native</span></td><td>64</td><td>64</td><td>79</td><td>69</td><td>-</td><td>51</td><td>13.1</td><td>13.4</td></tr>
+			</tbody>
+		</table>
+		
+	
+		<h2>Screen.orientation</h2>
+		
+		<table>
+			<thead>
+				<tr><th><a href="https://developer.mozilla.org/docs/Web/API/Screen/orientation" title="Screen.orientation" target="_blank">MDN</a></th><th>android</th><th>chrome</th><th>edge</th><th>firefox</th><th>ie</th><th>opera</th><th>safari</th><th>ios_saf</th></tr>
+			</thead>
+			<tbody>
+				<tr><td><span title="screen.orientation">polyfill-library</span></td><td><5</td><td><49</td><td>*</td><td><30</td><td>9 - *</td><td><25</td><td>*</td><td>*</td></tr>
+				<tr><td><span title="Screen.orientation">native</span></td><td>39</td><td>38</td><td>12</td><td><span >true</span><br><span >true</span></td><td>11</td><td>25</td><td>-</td><td>-</td></tr>
+			</tbody>
+		</table>
+		
+	
+		<h2>TextDecoder</h2>
+		
+		<table>
+			<thead>
+				<tr><th><a href="https://developer.mozilla.org/docs/Web/API/TextDecoder" title="TextDecoder" target="_blank">MDN</a></th><th>android</th><th>chrome</th><th>edge</th><th>firefox</th><th>ie</th><th>opera</th><th>safari</th><th>ios_saf</th></tr>
+			</thead>
+			<tbody>
+				<tr><td><span title="TextEncoder">polyfill-library</span></td><td>38</td><td><38</td><td><79</td><td><19</td><td>*</td><td><25</td><td><10.1</td><td><10.3</td></tr>
+				<tr><td><span title="TextDecoder">native</span></td><td>38</td><td>38</td><td>≤79</td><td><span >19</span><br><span title="Implemented a slightly different version of the spec."><span >18</span> ⓘ</span></td><td>-</td><td>25</td><td>10.1</td><td>10.3</td></tr>
+			</tbody>
+		</table>
+		
+	
+		<h2>TextEncoder</h2>
+		
+		<table>
+			<thead>
+				<tr><th><a href="https://developer.mozilla.org/docs/Web/API/TextEncoder" title="TextEncoder" target="_blank">MDN</a></th><th>android</th><th>chrome</th><th>edge</th><th>firefox</th><th>ie</th><th>opera</th><th>safari</th><th>ios_saf</th></tr>
+			</thead>
+			<tbody>
+				<tr><td><span title="TextEncoder">polyfill-library</span></td><td>38</td><td><38</td><td><79</td><td><19</td><td>*</td><td><25</td><td><10.1</td><td><10.3</td></tr>
+				<tr><td><span title="TextEncoder">native</span></td><td>38</td><td>38</td><td>79</td><td><span >19</span><br><span title="Firefox 18 implemented an earlier and slightly different version of the specification."><span >18</span> ⓘ</span></td><td>-</td><td>25</td><td>10.1</td><td>10.3</td></tr>
+			</tbody>
+		</table>
+		
+	
+		<h2>URL</h2>
+		
+		<table>
+			<thead>
+				<tr><th><a href="https://developer.mozilla.org/docs/Web/API/URL" title="URL" target="_blank">MDN</a></th><th>android</th><th>chrome</th><th>edge</th><th>firefox</th><th>ie</th><th>opera</th><th>safari</th><th>ios_saf</th></tr>
+			</thead>
+			<tbody>
+				<tr><td><span title="URL">polyfill-library</span></td><td>*</td><td><60</td><td><18.17134</td><td><44</td><td>9 - *</td><td><36</td><td><12</td><td><12</td></tr>
+				<tr><td><span title="URL">native</span></td><td><span >32</span><br><span >25</span></td><td><span >32</span><br><span >19</span></td><td>12</td><td>19</td><td>10</td><td><span >19</span><br><span >15</span></td><td><span >7</span><br><span >6</span></td><td><span >7</span><br><span >6</span></td></tr>
+			</tbody>
+		</table>
+		
+	
+		<h2>URLSearchParams</h2>
+		
+		<table>
+			<thead>
+				<tr><th><a href="https://developer.mozilla.org/docs/Web/API/URLSearchParams" title="URLSearchParams" target="_blank">MDN</a></th><th>android</th><th>chrome</th><th>edge</th><th>firefox</th><th>ie</th><th>opera</th><th>safari</th><th>ios_saf</th></tr>
+			</thead>
+			<tbody>
+				<tr><td><span title="URL">polyfill-library</span></td><td>*</td><td><60</td><td><18.17134</td><td><44</td><td>9 - *</td><td><36</td><td><12</td><td><12</td></tr>
+				<tr><td><span title="URLSearchParams">native</span></td><td>49</td><td>49</td><td>17</td><td>29</td><td>-</td><td>36</td><td>10.1</td><td>10.3</td></tr>
+			</tbody>
+		</table>
+		
+	
+		<h2>Window</h2>
+		
+		<table>
+			<thead>
+				<tr><th><a href="https://developer.mozilla.org/docs/Web/API/Window" title="Window" target="_blank">MDN</a></th><th>android</th><th>chrome</th><th>edge</th><th>firefox</th><th>ie</th><th>opera</th><th>safari</th><th>ios_saf</th></tr>
+			</thead>
+			<tbody>
+				<tr><td><span title="Window">polyfill-library</span></td><td>-</td><td>14 - 18</td><td>-</td><td>-</td><td>6 - 7</td><td>10 - 11.6</td><td>4 - 5.1</td><td>-</td></tr>
+				<tr><td><span title="Window">native</span></td><td>18</td><td>1</td><td>12</td><td>1</td><td>4</td><td>3</td><td>1</td><td>1</td></tr>
+			</tbody>
+		</table>
+		
+	
+		<h2>Window.customElements</h2>
+		
+		<table>
+			<thead>
+				<tr><th><a href="https://developer.mozilla.org/docs/Web/API/Window/customElements" title="Window.customElements" target="_blank">MDN</a></th><th>android</th><th>chrome</th><th>edge</th><th>firefox</th><th>ie</th><th>opera</th><th>safari</th><th>ios_saf</th></tr>
+			</thead>
+			<tbody>
+				<tr><td><span title="~custom-elements">core-web</span></td><td>-</td><td><67</td><td><79</td><td><63</td><td>*</td><td><64</td><td><11</td><td>-</td></tr>
+				<tr><td><span title="Window.customElements">native</span></td><td>54</td><td>54</td><td>79</td><td><span >63</span><br><span >59</span>-<span style="color:red;" >63</span><br><span >true</span>-<span style="color:red;" >59</span></td><td>-</td><td>41</td><td>10.1</td><td>10.3</td></tr>
+			</tbody>
+		</table>
+		
+	
+		<h2>Window.devicePixelRatio</h2>
+		
+		<table>
+			<thead>
+				<tr><th><a href="https://developer.mozilla.org/docs/Web/API/Window/devicePixelRatio" title="Window.devicePixelRatio" target="_blank">MDN</a></th><th>android</th><th>chrome</th><th>edge</th><th>firefox</th><th>ie</th><th>opera</th><th>safari</th><th>ios_saf</th></tr>
+			</thead>
+			<tbody>
+				<tr><td><span title="devicePixelRatio">polyfill-library</span></td><td>-</td><td>-</td><td>-</td><td><=17</td><td>6 - 10</td><td>-</td><td>4 - 9.1</td><td><9.3</td></tr>
+				<tr><td><span title="Window.devicePixelRatio">native</span></td><td>18</td><td>1</td><td>12</td><td>18</td><td>11</td><td>11.1</td><td>3</td><td>1</td></tr>
+			</tbody>
+		</table>
+		
+	
+		<h2>Window.document</h2>
+		
+		<table>
+			<thead>
+				<tr><th><a href="https://developer.mozilla.org/docs/Web/API/Window/document" title="Window.document" target="_blank">MDN</a></th><th>android</th><th>chrome</th><th>edge</th><th>firefox</th><th>ie</th><th>opera</th><th>safari</th><th>ios_saf</th></tr>
+			</thead>
+			<tbody>
+				<tr><td><span title="document">polyfill-library</span></td><td>-</td><td>-</td><td>-</td><td>-</td><td>6 - 8</td><td>-</td><td>-</td><td>-</td></tr>
+				<tr><td><span title="Window.document">native</span></td><td>18</td><td>1</td><td>12</td><td>1</td><td>4</td><td>≤12.1</td><td>1</td><td>1</td></tr>
+			</tbody>
+		</table>
+		
+	
+		<h2>Window.getComputedStyle</h2>
+		
+		<table>
+			<thead>
+				<tr><th><a href="https://developer.mozilla.org/docs/Web/API/Window/getComputedStyle" title="Window.getComputedStyle" target="_blank">MDN</a></th><th>android</th><th>chrome</th><th>edge</th><th>firefox</th><th>ie</th><th>opera</th><th>safari</th><th>ios_saf</th></tr>
+			</thead>
+			<tbody>
+				<tr><td><span title="getComputedStyle">polyfill-library</span></td><td>-</td><td>-</td><td>-</td><td>-</td><td>6 - 8</td><td>-</td><td>-</td><td>-</td></tr>
+				<tr><td><span title="Window.getComputedStyle">native</span></td><td>18</td><td>1</td><td>12</td><td>1</td><td>9</td><td>7.2</td><td>3</td><td>1</td></tr>
+			</tbody>
+		</table>
+		
+	
+		<h2>Window.innerHeight</h2>
+		
+		<table>
+			<thead>
+				<tr><th><a href="https://developer.mozilla.org/docs/Web/API/Window/innerHeight" title="Window.innerHeight" target="_blank">MDN</a></th><th>android</th><th>chrome</th><th>edge</th><th>firefox</th><th>ie</th><th>opera</th><th>safari</th><th>ios_saf</th></tr>
+			</thead>
+			<tbody>
+				<tr><td><span title="~viewport">polyfill-library</span></td><td>-</td><td>-</td><td>-</td><td>-</td><td>6 - 8</td><td>-</td><td>-</td><td>-</td></tr>
+				<tr><td><span title="Window.innerHeight">native</span></td><td>18</td><td>1</td><td>12</td><td><span >1</span><br><span title="This property was buggy and could give a wrong value before page load in certain circumstances, see <a href='https://bugzil.la/641188'>bug 641188</a>."><span >4</span>-<span style="color:red;" >24</span> ⓘ</span></td><td>9</td><td>9</td><td>3</td><td>1</td></tr>
+			</tbody>
+		</table>
+		
+	
+		<h2>Window.innerWidth</h2>
+		
+		<table>
+			<thead>
+				<tr><th><a href="https://developer.mozilla.org/docs/Web/API/Window/innerWidth" title="Window.innerWidth" target="_blank">MDN</a></th><th>android</th><th>chrome</th><th>edge</th><th>firefox</th><th>ie</th><th>opera</th><th>safari</th><th>ios_saf</th></tr>
+			</thead>
+			<tbody>
+				<tr><td><span title="~viewport">polyfill-library</span></td><td>-</td><td>-</td><td>-</td><td>-</td><td>6 - 8</td><td>-</td><td>-</td><td>-</td></tr>
+				<tr><td><span title="Window.innerWidth">native</span></td><td>18</td><td>1</td><td>12</td><td><span >1</span><br><span title="This property was buggy and could give a wrong value before page load in certain circumstances, see <a href='https://bugzil.la/641188'>bug 641188</a>."><span >4</span>-<span style="color:red;" >24</span> ⓘ</span></td><td>9</td><td>9</td><td>3</td><td>1</td></tr>
+			</tbody>
+		</table>
+		
+	
+		<h2>Window.localStorage</h2>
+		
+		<table>
+			<thead>
+				<tr><th><a href="https://developer.mozilla.org/docs/Web/API/Window/localStorage" title="Window.localStorage" target="_blank">MDN</a></th><th>android</th><th>chrome</th><th>edge</th><th>firefox</th><th>ie</th><th>opera</th><th>safari</th><th>ios_saf</th></tr>
+			</thead>
+			<tbody>
+				<tr><td><span title="localStorage">polyfill-library</span></td><td>-</td><td>-</td><td>-</td><td>-</td><td>6 - 7</td><td>-</td><td>-</td><td>-</td></tr>
+				<tr><td><span title="Window.localStorage">native</span></td><td>18</td><td>4</td><td>12</td><td>3.5</td><td>8</td><td>10.5</td><td>4</td><td>3.2</td></tr>
+			</tbody>
+		</table>
+		
+	
+		<h2>Window.matchMedia</h2>
+		
+		<table>
+			<thead>
+				<tr><th><a href="https://developer.mozilla.org/docs/Web/API/Window/matchMedia" title="Window.matchMedia" target="_blank">MDN</a></th><th>android</th><th>chrome</th><th>edge</th><th>firefox</th><th>ie</th><th>opera</th><th>safari</th><th>ios_saf</th></tr>
+			</thead>
+			<tbody>
+				<tr><td><span title="matchMedia">polyfill-library</span></td><td>2.1 - 2.3</td><td><37</td><td>-</td><td>-</td><td><10</td><td>11.5 - 12.1</td><td>4 - 5</td><td>-</td></tr>
+				<tr><td><span title="Window.matchMedia">native</span></td><td>18</td><td>9</td><td>12</td><td>6</td><td>10</td><td>12.1</td><td>5.1</td><td>5</td></tr>
+			</tbody>
+		</table>
+		
+	
+		<h2>Window.pageXOffset</h2>
+		
+		<table>
+			<thead>
+				<tr><th><a href="https://developer.mozilla.org/docs/Web/API/Window/pageXOffset" title="Window.pageXOffset" target="_blank">MDN</a></th><th>android</th><th>chrome</th><th>edge</th><th>firefox</th><th>ie</th><th>opera</th><th>safari</th><th>ios_saf</th></tr>
+			</thead>
+			<tbody>
+				<tr><td><span title="~viewport">polyfill-library</span></td><td>-</td><td>-</td><td>-</td><td>-</td><td>6 - 8</td><td>-</td><td>-</td><td>-</td></tr>
+				<tr><td><span title="Window.pageXOffset">native</span></td><td>18</td><td>1</td><td>12</td><td>1</td><td>9</td><td>3</td><td>1</td><td>1</td></tr>
+			</tbody>
+		</table>
+		
+	
+		<h2>Window.pageYOffset</h2>
+		
+		<table>
+			<thead>
+				<tr><th><a href="https://developer.mozilla.org/docs/Web/API/Window/pageYOffset" title="Window.pageYOffset" target="_blank">MDN</a></th><th>android</th><th>chrome</th><th>edge</th><th>firefox</th><th>ie</th><th>opera</th><th>safari</th><th>ios_saf</th></tr>
+			</thead>
+			<tbody>
+				<tr><td><span title="~viewport">polyfill-library</span></td><td>-</td><td>-</td><td>-</td><td>-</td><td>6 - 8</td><td>-</td><td>-</td><td>-</td></tr>
+				<tr><td><span title="Window.pageYOffset">native</span></td><td>18</td><td>1</td><td>12</td><td>1</td><td>9</td><td>3</td><td>1</td><td>1</td></tr>
+			</tbody>
+		</table>
+		
+	
+		<h2>Window.requestAnimationFrame</h2>
+		
+		<table>
+			<thead>
+				<tr><th><a href="https://developer.mozilla.org/docs/Web/API/Window/requestAnimationFrame" title="Window.requestAnimationFrame" target="_blank">MDN</a></th><th>android</th><th>chrome</th><th>edge</th><th>firefox</th><th>ie</th><th>opera</th><th>safari</th><th>ios_saf</th></tr>
+			</thead>
+			<tbody>
+				<tr><td><span title="requestAnimationFrame">polyfill-library</span></td><td>*</td><td><46</td><td>-</td><td>3.6 - 22</td><td>6 - 9</td><td><15</td><td>3.1 - 6</td><td>3.2 - 6</td></tr>
+				<tr><td><span title="Window.requestAnimationFrame">native</span></td><td><span >25</span><br><span >18</span></td><td><span >24</span><br><span >10</span></td><td>12</td><td><span title="Callback parameter is a <code>DOMHighResTimestamp</code>. This means ten microsecond precision and zero time as <code>performance.now()</code>."><span >23</span> ⓘ</span><br><span title="Callback parameter is a <code>DOMTimestamp</code>. This means millisecond precision and zero time as <code>Date.now()</code>."><span >11</span>-<span style="color:red;" >42</span> ⓘ</span><br><span title="Could be called with no input parameters."><span >4</span>-<span style="color:red;" >11</span> ⓘ</span></td><td>10</td><td><span >15</span><br><span >15</span></td><td><span >6.1</span><br><span >6</span></td><td><span >7</span><br><span >6.1</span></td></tr>
+			</tbody>
+		</table>
+		
+	
+		<h2>Window.requestIdleCallback</h2>
+		
+		<table>
+			<thead>
+				<tr><th><a href="https://developer.mozilla.org/docs/Web/API/Window/requestIdleCallback" title="Window.requestIdleCallback" target="_blank">MDN</a></th><th>android</th><th>chrome</th><th>edge</th><th>firefox</th><th>ie</th><th>opera</th><th>safari</th><th>ios_saf</th></tr>
+			</thead>
+			<tbody>
+				<tr><td><span title="requestIdleCallback">polyfill-library</span></td><td>*</td><td><47</td><td>*</td><td><55</td><td>*</td><td><34</td><td>9 - *</td><td>*</td></tr>
+				<tr><td><span title="Window.requestIdleCallback">native</span></td><td>47</td><td>47</td><td>79</td><td><span title="Enabled by default."><span >55</span> ⓘ</span><br><span title="Implemented but disabled by default."><span >53</span>-<span style="color:red;" >55</span> ⓘ</span></td><td>-</td><td>34</td><td>-</td><td>-</td></tr>
+			</tbody>
+		</table>
+		
+	
+		<h2>Window.scroll</h2>
+		
+		<table>
+			<thead>
+				<tr><th><a href="https://developer.mozilla.org/docs/Web/API/Window/scroll" title="Window.scroll" target="_blank">MDN</a></th><th>android</th><th>chrome</th><th>edge</th><th>firefox</th><th>ie</th><th>opera</th><th>safari</th><th>ios_saf</th></tr>
+			</thead>
+			<tbody>
+				<tr><td><span title="smoothscroll">polyfill-library</span></td><td>*</td><td>* - 60</td><td>* - 76</td><td>4 - 36</td><td>9 - *</td><td>*</td><td>*</td><td>*</td></tr>
+				<tr><td><span title="Window.scroll">native</span></td><td>18</td><td>1</td><td>12</td><td>1</td><td>4</td><td>3</td><td>1</td><td>1</td></tr>
+			</tbody>
+		</table>
+		
+		<table>
+			<thead>
+				<tr><th><a href="https://developer.mozilla.org/docs/Web/API/Window/scroll" title="Window.scroll" target="_blank">MDN</a></th><th>android</th><th>chrome</th><th>edge</th><th>firefox</th><th>ie</th><th>opera</th><th>safari</th><th>ios_saf</th></tr>
+			</thead>
+			<tbody>
+				<tr><td><span title="smoothscroll">polyfill-library</span></td><td>*</td><td>* - 60</td><td>* - 76</td><td>4 - 36</td><td>9 - *</td><td>*</td><td>*</td><td>*</td></tr>
+				<tr><td><span title="Window.scroll">native</span></td><td>18</td><td>1</td><td>12</td><td>1</td><td>4</td><td>3</td><td>1</td><td>1</td></tr>
+			</tbody>
+		</table>
+		
+	
+		<h2>Window.scrollBy</h2>
+		
+		<table>
+			<thead>
+				<tr><th><a href="https://developer.mozilla.org/docs/Web/API/Window/scrollBy" title="Window.scrollBy" target="_blank">MDN</a></th><th>android</th><th>chrome</th><th>edge</th><th>firefox</th><th>ie</th><th>opera</th><th>safari</th><th>ios_saf</th></tr>
+			</thead>
+			<tbody>
+				<tr><td><span title="smoothscroll">polyfill-library</span></td><td>*</td><td>* - 60</td><td>* - 76</td><td>4 - 36</td><td>9 - *</td><td>*</td><td>*</td><td>*</td></tr>
+				<tr><td><span title="Window.scrollBy">native</span></td><td>18</td><td>1</td><td><span >79</span><br><span title="Only <code>scrollBy(x-coord, y-coord)</code> is supported."><span >12</span>-<span style="color:red;" >79</span> ⓘ</span></td><td>1</td><td>11</td><td>3</td><td>1</td><td>1</td></tr>
+			</tbody>
+		</table>
+		
+		<table>
+			<thead>
+				<tr><th><a href="https://developer.mozilla.org/docs/Web/API/Window/scrollBy" title="Window.scrollBy" target="_blank">MDN</a></th><th>android</th><th>chrome</th><th>edge</th><th>firefox</th><th>ie</th><th>opera</th><th>safari</th><th>ios_saf</th></tr>
+			</thead>
+			<tbody>
+				<tr><td><span title="smoothscroll">polyfill-library</span></td><td>*</td><td>* - 60</td><td>* - 76</td><td>4 - 36</td><td>9 - *</td><td>*</td><td>*</td><td>*</td></tr>
+				<tr><td><span title="Window.scrollBy">native</span></td><td>18</td><td>1</td><td><span >79</span><br><span title="Only <code>scrollBy(x-coord, y-coord)</code> is supported."><span >12</span>-<span style="color:red;" >79</span> ⓘ</span></td><td>1</td><td>11</td><td>3</td><td>1</td><td>1</td></tr>
+			</tbody>
+		</table>
+		
+	
+		<h2>Window.scrollX</h2>
+		
+		<table>
+			<thead>
+				<tr><th><a href="https://developer.mozilla.org/docs/Web/API/Window/scrollX" title="Window.scrollX" target="_blank">MDN</a></th><th>android</th><th>chrome</th><th>edge</th><th>firefox</th><th>ie</th><th>opera</th><th>safari</th><th>ios_saf</th></tr>
+			</thead>
+			<tbody>
+				<tr><td><span title="~viewport">polyfill-library</span></td><td>-</td><td>-</td><td>-</td><td>-</td><td>6 - 8</td><td>-</td><td>-</td><td>-</td></tr>
+				<tr><td><span title="Window.scrollX">native</span></td><td><span >18</span><br><span title="Alternate name : pageXOffset"><span >18</span> ⓘ</span></td><td><span >1</span><br><span title="Alternate name : pageXOffset"><span >1</span> ⓘ</span></td><td><span >12</span><br><span title="Alternate name : pageXOffset"><span >12</span> ⓘ</span></td><td><span >1</span><br><span title="Alternate name : pageXOffset"><span >1</span> ⓘ</span></td><td>9</td><td><span >9.6</span><br><span title="Alternate name : pageXOffset"><span >4</span> ⓘ</span></td><td><span >1</span><br><span title="Alternate name : pageXOffset"><span >1</span> ⓘ</span></td><td><span >1</span><br><span title="Alternate name : pageXOffset"><span >1</span> ⓘ</span></td></tr>
+			</tbody>
+		</table>
+		
+	
+		<h2>Window.scrollY</h2>
+		
+		<table>
+			<thead>
+				<tr><th><a href="https://developer.mozilla.org/docs/Web/API/Window/scrollY" title="Window.scrollY" target="_blank">MDN</a></th><th>android</th><th>chrome</th><th>edge</th><th>firefox</th><th>ie</th><th>opera</th><th>safari</th><th>ios_saf</th></tr>
+			</thead>
+			<tbody>
+				<tr><td><span title="~viewport">polyfill-library</span></td><td>-</td><td>-</td><td>-</td><td>-</td><td>6 - 8</td><td>-</td><td>-</td><td>-</td></tr>
+				<tr><td><span title="Window.scrollY">native</span></td><td><span >18</span><br><span title="Alternate name : pageYOffset"><span >18</span> ⓘ</span></td><td><span >1</span><br><span title="Alternate name : pageYOffset"><span >1</span> ⓘ</span></td><td><span >12</span><br><span title="Alternate name : pageYOffset"><span >12</span> ⓘ</span></td><td><span >1</span><br><span title="Alternate name : pageYOffset"><span >1</span> ⓘ</span></td><td>9</td><td><span >9.6</span><br><span title="Alternate name : pageYOffset"><span >4</span> ⓘ</span></td><td><span >1</span><br><span title="Alternate name : pageYOffset"><span >1</span> ⓘ</span></td><td><span >1</span><br><span title="Alternate name : pageYOffset"><span >1</span> ⓘ</span></td></tr>
+			</tbody>
+		</table>
+		
+	
+		<h2>Window.setImmediate</h2>
+		
+		<table>
+			<thead>
+				<tr><th><a href="https://developer.mozilla.org/docs/Web/API/Window/setImmediate" title="Window.setImmediate" target="_blank">MDN</a></th><th>android</th><th>chrome</th><th>edge</th><th>firefox</th><th>ie</th><th>opera</th><th>safari</th><th>ios_saf</th></tr>
+			</thead>
+			<tbody>
+				<tr><td><span title="setImmediate">polyfill-library</span></td><td>*</td><td>*</td><td>-</td><td>*</td><td>* - 9</td><td>*</td><td>*</td><td>*</td></tr>
+				<tr><td><span title="Window.setImmediate">native</span></td><td>-</td><td>-</td><td>12</td><td>-</td><td>10</td><td>-</td><td>-</td><td>-</td></tr>
+			</tbody>
+		</table>
+		
+	
+		<h2>XMLHttpRequest</h2>
+		
+		<table>
+			<thead>
+				<tr><th><a href="https://developer.mozilla.org/docs/Web/API/XMLHttpRequest" title="XMLHttpRequest" target="_blank">MDN</a></th><th>android</th><th>chrome</th><th>edge</th><th>firefox</th><th>ie</th><th>opera</th><th>safari</th><th>ios_saf</th></tr>
+			</thead>
+			<tbody>
+				<tr><td><span title="XMLHttpRequest">polyfill-library</span></td><td>-</td><td>-</td><td>-</td><td>-</td><td>6 - 8</td><td>-</td><td>-</td><td>-</td></tr>
+				<tr><td><span title="XMLHttpRequest">native</span></td><td>18</td><td>1</td><td>12</td><td>1</td><td><span >7</span><br><span title="Implemented via <code>ActiveXObject('Microsoft.XMLHTTP')</code>"><span >5</span> ⓘ</span></td><td>8</td><td>1.2</td><td>1</td></tr>
+			</tbody>
+		</table>
+		
+	</div>
+</body>
+</html>
