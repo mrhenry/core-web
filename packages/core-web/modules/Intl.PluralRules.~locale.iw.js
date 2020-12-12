@@ -24,29 +24,30 @@ import HasProperty from "@mrhenry/core-web/helpers/_ESAbstract.HasProperty";
 import ToBoolean from "@mrhenry/core-web/helpers/_ESAbstract.ToBoolean";
 import CreateDataPropertyOrThrow from "@mrhenry/core-web/helpers/_ESAbstract.CreateDataPropertyOrThrow";
 import CreateDataProperty from "@mrhenry/core-web/helpers/_ESAbstract.CreateDataProperty";
+import CreateIterResultObject from "@mrhenry/core-web/helpers/_ESAbstract.CreateIterResultObject";
+import GetIterator from "@mrhenry/core-web/helpers/_ESAbstract.GetIterator";
 import SameValueZero from "@mrhenry/core-web/helpers/_ESAbstract.SameValueZero";
 import SameValueNonNumber from "@mrhenry/core-web/helpers/_ESAbstract.SameValueNonNumber";
-import GetIterator from "@mrhenry/core-web/helpers/_ESAbstract.GetIterator";
-import IteratorStep from "@mrhenry/core-web/helpers/_ESAbstract.IteratorStep";
-import IteratorNext from "@mrhenry/core-web/helpers/_ESAbstract.IteratorNext";
-import IteratorComplete from "@mrhenry/core-web/helpers/_ESAbstract.IteratorComplete";
-import IteratorValue from "@mrhenry/core-web/helpers/_ESAbstract.IteratorValue";
 import IteratorClose from "@mrhenry/core-web/helpers/_ESAbstract.IteratorClose";
+import IteratorComplete from "@mrhenry/core-web/helpers/_ESAbstract.IteratorComplete";
+import IteratorNext from "@mrhenry/core-web/helpers/_ESAbstract.IteratorNext";
+import IteratorStep from "@mrhenry/core-web/helpers/_ESAbstract.IteratorStep";
+import IteratorValue from "@mrhenry/core-web/helpers/_ESAbstract.IteratorValue";
 import SameValue from "@mrhenry/core-web/helpers/_ESAbstract.SameValue";
 (function(undefined) {
-if (!("Intl"in this&&Intl.PluralRules&&Intl.PluralRules.supportedLocalesOf&&function(){try{return 1===Intl.PluralRules.supportedLocalesOf("iw").length}catch(l){return!1}}()
+if (!("Intl"in self&&Intl.PluralRules&&Intl.PluralRules.supportedLocalesOf&&function(){try{return 1===Intl.PluralRules.supportedLocalesOf("iw").length}catch(l){return!1}}()
 )) {
 // Intl.PluralRules.~locale.iw
 /* @generated */
 // prettier-ignore
 if (Intl.PluralRules && typeof Intl.PluralRules.__addLocaleData === 'function') {
-  Intl.PluralRules.__addLocaleData({"data":{"iw":{"categories":{"cardinal":["one","two","many","other"],"ordinal":["other"]},"fn":function(n, ord) {
+  Intl.PluralRules.__addLocaleData({"data":{"categories":{"cardinal":["one","two","many","other"],"ordinal":["other"]},"fn":function(n, ord) {
   var s = String(n).split('.'), i = s[0], v0 = !s[1], t0 = Number(s[0]) == n, n10 = t0 && s[0].slice(-1);
   if (ord) return 'other';
   return n == 1 && v0 ? 'one'
     : i == 2 && v0 ? 'two'
     : v0 && (n < 0 || n > 10) && t0 && n10 == 0 ? 'many'
     : 'other';
-}}},"availableLocales":["iw"]})
+}},"locale":"iw"})
 }
 }}).call('object' === typeof window && window || 'object' === typeof self && self || 'object' === typeof global && global || {});

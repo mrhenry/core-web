@@ -13,7 +13,7 @@ module.exports = [
   "android",
   "op_mini",
   "ios_chr",
-  "bb",
   "op_mob",
+  "bb",
   "blackberry"
 ]

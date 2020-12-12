@@ -53,7 +53,7 @@ function FlattenIntoArray(target, source, sourceLen, start, depth /* , mapperFun
                 // 1. Let elementLen be ? ToLength(? Get(element, "length")).
                 var elementLen = ToLength(Get(element, "length"));
                 // 2. Set targetIndex to ? FlattenIntoArray(target, element, elementLen, targetIndex, depth - 1).
-                targetIndex = FlattenIntoArray(target, element, elementLen, targetIndex, depth - 1);
+                targetIndex = FlattenIntoArray(target, element, elementLen, targetIndex, depth - 1); // eslint-disable-line no-unused-vars
                 // vi. Else,
             } else {
                 // 1. If targetIndex ≥ 253-1, throw a TypeError exception.
@@ -71,4 +71,5 @@ function FlattenIntoArray(target, source, sourceLen, start, depth /* , mapperFun
     }
     // 4. Return targetIndex.
     return targetIndex;
-}export default FlattenIntoArray;
+}
+export default FlattenIntoArray;

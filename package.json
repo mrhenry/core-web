@@ -16,5 +16,6 @@
   "resolutions": {
     "**/elliptic": "^6.5.3",
     "**/dot-prop": "^5.1.1"
-  }
+  },
+  "dependencies": {}
 }
