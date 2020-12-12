@@ -24,14 +24,15 @@ import HasProperty from "@mrhenry/core-web/helpers/_ESAbstract.HasProperty";
 import ToBoolean from "@mrhenry/core-web/helpers/_ESAbstract.ToBoolean";
 import CreateDataPropertyOrThrow from "@mrhenry/core-web/helpers/_ESAbstract.CreateDataPropertyOrThrow";
 import CreateDataProperty from "@mrhenry/core-web/helpers/_ESAbstract.CreateDataProperty";
+import CreateIterResultObject from "@mrhenry/core-web/helpers/_ESAbstract.CreateIterResultObject";
+import GetIterator from "@mrhenry/core-web/helpers/_ESAbstract.GetIterator";
 import SameValueZero from "@mrhenry/core-web/helpers/_ESAbstract.SameValueZero";
 import SameValueNonNumber from "@mrhenry/core-web/helpers/_ESAbstract.SameValueNonNumber";
-import GetIterator from "@mrhenry/core-web/helpers/_ESAbstract.GetIterator";
-import IteratorStep from "@mrhenry/core-web/helpers/_ESAbstract.IteratorStep";
-import IteratorNext from "@mrhenry/core-web/helpers/_ESAbstract.IteratorNext";
-import IteratorComplete from "@mrhenry/core-web/helpers/_ESAbstract.IteratorComplete";
-import IteratorValue from "@mrhenry/core-web/helpers/_ESAbstract.IteratorValue";
 import IteratorClose from "@mrhenry/core-web/helpers/_ESAbstract.IteratorClose";
+import IteratorComplete from "@mrhenry/core-web/helpers/_ESAbstract.IteratorComplete";
+import IteratorNext from "@mrhenry/core-web/helpers/_ESAbstract.IteratorNext";
+import IteratorStep from "@mrhenry/core-web/helpers/_ESAbstract.IteratorStep";
+import IteratorValue from "@mrhenry/core-web/helpers/_ESAbstract.IteratorValue";
 import SameValue from "@mrhenry/core-web/helpers/_ESAbstract.SameValue";
 (function(undefined) {
 if (!("Intl"in self&&Intl.ListFormat&&Intl.ListFormat.supportedLocalesOf&&1===Intl.ListFormat.supportedLocalesOf("en-SG").length
@@ -40,6 +41,6 @@ if (!("Intl"in self&&Intl.ListFormat&&Intl.ListFormat.supportedLocalesOf&&1===In
 /* @generated */	
 // prettier-ignore
 if (Intl.ListFormat && typeof Intl.ListFormat.__addLocaleData === 'function') {
-  Intl.ListFormat.__addLocaleData({"data":{"en-SG":{"conjunction":{"long":{"start":"{0}, {1}","middle":"{0}, {1}","end":"{0} and {1}","pair":"{0} and {1}"},"short":{"start":"{0}, {1}","middle":"{0}, {1}","end":"{0} and {1}","pair":"{0} and {1}"},"narrow":{"start":"{0}, {1}","middle":"{0}, {1}","end":"{0}, {1}","pair":"{0}, {1}"}},"disjunction":{"long":{"start":"{0}, {1}","middle":"{0}, {1}","end":"{0} or {1}","pair":"{0} or {1}"},"short":{"start":"{0}, {1}","middle":"{0}, {1}","end":"{0} or {1}","pair":"{0} or {1}"},"narrow":{"start":"{0}, {1}","middle":"{0}, {1}","end":"{0} or {1}","pair":"{0} or {1}"}},"unit":{"long":{"start":"{0}, {1}","middle":"{0}, {1}","end":"{0}, {1}","pair":"{0}, {1}"},"short":{"start":"{0}, {1}","middle":"{0}, {1}","end":"{0}, {1}","pair":"{0}, {1}"},"narrow":{"start":"{0} {1}","middle":"{0} {1}","end":"{0} {1}","pair":"{0} {1}"}}}},"availableLocales":["en-SG"]}
+  Intl.ListFormat.__addLocaleData({"data":{"conjunction":{"long":{"start":"{0}, {1}","middle":"{0}, {1}","end":"{0} and {1}","pair":"{0} and {1}"},"short":{"start":"{0}, {1}","middle":"{0}, {1}","end":"{0} and {1}","pair":"{0} and {1}"},"narrow":{"start":"{0}, {1}","middle":"{0}, {1}","end":"{0}, {1}","pair":"{0}, {1}"}},"disjunction":{"long":{"start":"{0}, {1}","middle":"{0}, {1}","end":"{0} or {1}","pair":"{0} or {1}"},"short":{"start":"{0}, {1}","middle":"{0}, {1}","end":"{0} or {1}","pair":"{0} or {1}"},"narrow":{"start":"{0}, {1}","middle":"{0}, {1}","end":"{0} or {1}","pair":"{0} or {1}"}},"unit":{"long":{"start":"{0}, {1}","middle":"{0}, {1}","end":"{0}, {1}","pair":"{0}, {1}"},"short":{"start":"{0}, {1}","middle":"{0}, {1}","end":"{0}, {1}","pair":"{0}, {1}"},"narrow":{"start":"{0} {1}","middle":"{0} {1}","end":"{0} {1}","pair":"{0} {1}"}}},"locale":"en-SG"}
 )
 }}}).call('object' === typeof window && window || 'object' === typeof self && self || 'object' === typeof global && global || {});

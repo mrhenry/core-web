@@ -5,6 +5,9 @@ install:
 generate: yarn
 	(cd packages/core-web-generator && yarn build)
 
+build-browser-compat: yarn
+	(cd packages/core-web-browser-compat && yarn build)
+
 build-example: yarn
 	(cd packages/core-web-example && yarn build)
 

@@ -166,10 +166,6 @@ module.exports = {
           {
             "name": "HTMLCanvasElement.prototype.toBlob",
             "detectSource": "\"toBlob\"in HTMLCanvasElement.prototype\n"
-          },
-          {
-            "name": "HTMLTemplateElement",
-            "detectSource": "\"HTMLTemplateElement\"in self\n"
           }
         ]
       }
@@ -197,12 +193,7 @@ module.exports = {
     ],
     "versions": {
       "12.0.0": {
-        "features": [
-          {
-            "name": "HTMLTemplateElement",
-            "detectSource": "\"HTMLTemplateElement\"in self\n"
-          }
-        ]
+        "features": []
       },
       "13.0.0": {
         "features": [
@@ -244,6 +235,10 @@ module.exports = {
           {
             "name": "AbortController",
             "detectSource": "\"AbortController\"in self&&\"function\"==typeof self.AbortController\n"
+          },
+          {
+            "name": "DOMTokenList.prototype.forEach",
+            "detectSource": "\"DOMTokenList\"in self&&\"forEach\"in self.DOMTokenList.prototype\n"
           },
           {
             "name": "IntersectionObserver",
@@ -313,6 +308,10 @@ module.exports = {
       },
       "18.0.0": {
         "features": [
+          {
+            "name": "DOMRect",
+            "detectSource": "\"DOMRect\"in self&&function(e){try{return new e}catch(t){return!1}}(self.DOMRect)\n"
+          },
           {
             "name": "TextEncoder",
             "detectSource": "\"TextEncoder\"in self&&\"TextDecoder\"in self\n"
@@ -626,10 +625,6 @@ module.exports = {
       "22.0.0": {
         "features": [
           {
-            "name": "HTMLTemplateElement",
-            "detectSource": "\"HTMLTemplateElement\"in self\n"
-          },
-          {
             "name": "requestAnimationFrame",
             "detectSource": "\"requestAnimationFrame\"in self\n"
           }
@@ -796,6 +791,10 @@ module.exports = {
       },
       "49.0.0": {
         "features": [
+          {
+            "name": "DOMTokenList.prototype.forEach",
+            "detectSource": "\"DOMTokenList\"in self&&\"forEach\"in self.DOMTokenList.prototype\n"
+          },
           {
             "name": "NodeList.prototype.forEach",
             "detectSource": "\"forEach\"in NodeList.prototype\n"
@@ -1265,7 +1264,12 @@ module.exports = {
         ]
       },
       "41.0.0": {
-        "features": []
+        "features": [
+          {
+            "name": "DOMTokenList.prototype.forEach",
+            "detectSource": "\"DOMTokenList\"in self&&\"forEach\"in self.DOMTokenList.prototype\n"
+          }
+        ]
       },
       "42.0.0": {
         "features": []
@@ -1709,10 +1713,6 @@ module.exports = {
             "detectSource": "\"document\"in self&&\"closest\"in document.documentElement\n"
           },
           {
-            "name": "HTMLTemplateElement",
-            "detectSource": "\"HTMLTemplateElement\"in self\n"
-          },
-          {
             "name": "HTMLTemplateElement"
           }
         ]
@@ -1774,6 +1774,10 @@ module.exports = {
           {
             "name": "DOMRect",
             "detectSource": "\"DOMRect\"in self&&function(e){try{return new e}catch(t){return!1}}(self.DOMRect)\n"
+          },
+          {
+            "name": "DOMTokenList.prototype.forEach",
+            "detectSource": "\"DOMTokenList\"in self&&\"forEach\"in self.DOMTokenList.prototype\n"
           },
           {
             "name": "TextEncoder",
@@ -2062,12 +2066,7 @@ module.exports = {
         ]
       },
       "22.0.0": {
-        "features": [
-          {
-            "name": "HTMLTemplateElement",
-            "detectSource": "\"HTMLTemplateElement\"in self\n"
-          }
-        ]
+        "features": []
       },
       "23.0.0": {
         "features": []
@@ -2118,7 +2117,12 @@ module.exports = {
         "features": []
       },
       "31.0.0": {
-        "features": []
+        "features": [
+          {
+            "name": "DOMTokenList.prototype.forEach",
+            "detectSource": "\"DOMTokenList\"in self&&\"forEach\"in self.DOMTokenList.prototype\n"
+          }
+        ]
       },
       "32.0.0": {
         "features": []
@@ -2484,6 +2488,10 @@ module.exports = {
             "detectSource": "\"DOMRect\"in self&&function(e){try{return new e}catch(t){return!1}}(self.DOMRect)\n"
           },
           {
+            "name": "DOMTokenList.prototype.forEach",
+            "detectSource": "\"DOMTokenList\"in self&&\"forEach\"in self.DOMTokenList.prototype\n"
+          },
+          {
             "name": "TextEncoder",
             "detectSource": "\"TextEncoder\"in self&&\"TextDecoder\"in self\n"
           }
@@ -2662,6 +2670,10 @@ module.exports = {
             "detectSource": "\"DOMRect\"in self&&function(e){try{return new e}catch(t){return!1}}(self.DOMRect)\n"
           },
           {
+            "name": "DOMTokenList.prototype.forEach",
+            "detectSource": "\"DOMTokenList\"in self&&\"forEach\"in self.DOMTokenList.prototype\n"
+          },
+          {
             "name": "DOMTokenList.prototype.replace",
             "detectSource": "\"replace\"in(document.createElement(\"div\").classList||{})\n"
           },
@@ -2692,10 +2704,6 @@ module.exports = {
           {
             "name": "HTMLPictureElement",
             "detectSource": "\"HTMLPictureElement\"in self||\"picturefill\"in self\n"
-          },
-          {
-            "name": "HTMLTemplateElement",
-            "detectSource": "\"HTMLTemplateElement\"in self\n"
           },
           {
             "name": "NodeList.prototype.forEach",
@@ -2772,10 +2780,6 @@ module.exports = {
           {
             "name": "HTMLPictureElement",
             "detectSource": "\"HTMLPictureElement\"in self||\"picturefill\"in self\n"
-          },
-          {
-            "name": "HTMLTemplateElement",
-            "detectSource": "\"HTMLTemplateElement\"in self\n"
           }
         ]
       }
@@ -2819,6 +2823,10 @@ module.exports = {
       },
       "12.1.0": {
         "features": [
+          {
+            "name": "DOMTokenList.prototype.forEach",
+            "detectSource": "\"DOMTokenList\"in self&&\"forEach\"in self.DOMTokenList.prototype\n"
+          },
           {
             "name": "DOMTokenList.prototype.replace",
             "detectSource": "\"replace\"in(document.createElement(\"div\").classList||{})\n"
@@ -2876,10 +2884,10 @@ module.exports = {
   "and_chr": {
     "family": "and_chr",
     "versionList": [
-      "86.0.0"
+      "87.0.0"
     ],
     "versions": {
-      "86.0.0": {
+      "87.0.0": {
         "features": []
       }
     }
@@ -2887,10 +2895,10 @@ module.exports = {
   "and_ff": {
     "family": "and_ff",
     "versionList": [
-      "82.0.0"
+      "83.0.0"
     ],
     "versions": {
-      "82.0.0": {
+      "83.0.0": {
         "features": []
       }
     }
@@ -2924,10 +2932,6 @@ module.exports = {
           {
             "name": "Element.prototype.matches",
             "detectSource": "\"document\"in self&&\"matches\"in document.documentElement\n"
-          },
-          {
-            "name": "HTMLTemplateElement",
-            "detectSource": "\"HTMLTemplateElement\"in self\n"
           }
         ]
       },
@@ -2971,7 +2975,8 @@ module.exports = {
       "9.2.0",
       "10.1.0",
       "11.1.0",
-      "12.0.0"
+      "12.0.0",
+      "13.0.0"
     ],
     "versions": {
       "4.0.0": {
@@ -2999,6 +3004,9 @@ module.exports = {
         "features": []
       },
       "12.0.0": {
+        "features": []
+      },
+      "13.0.0": {
         "features": []
       }
     }

@@ -24,14 +24,15 @@ import HasProperty from "@mrhenry/core-web/helpers/_ESAbstract.HasProperty";
 import ToBoolean from "@mrhenry/core-web/helpers/_ESAbstract.ToBoolean";
 import CreateDataPropertyOrThrow from "@mrhenry/core-web/helpers/_ESAbstract.CreateDataPropertyOrThrow";
 import CreateDataProperty from "@mrhenry/core-web/helpers/_ESAbstract.CreateDataProperty";
+import CreateIterResultObject from "@mrhenry/core-web/helpers/_ESAbstract.CreateIterResultObject";
 import GetIterator from "@mrhenry/core-web/helpers/_ESAbstract.GetIterator";
 import SameValueZero from "@mrhenry/core-web/helpers/_ESAbstract.SameValueZero";
 import SameValueNonNumber from "@mrhenry/core-web/helpers/_ESAbstract.SameValueNonNumber";
-import IteratorStep from "@mrhenry/core-web/helpers/_ESAbstract.IteratorStep";
-import IteratorNext from "@mrhenry/core-web/helpers/_ESAbstract.IteratorNext";
-import IteratorComplete from "@mrhenry/core-web/helpers/_ESAbstract.IteratorComplete";
-import IteratorValue from "@mrhenry/core-web/helpers/_ESAbstract.IteratorValue";
 import IteratorClose from "@mrhenry/core-web/helpers/_ESAbstract.IteratorClose";
+import IteratorComplete from "@mrhenry/core-web/helpers/_ESAbstract.IteratorComplete";
+import IteratorNext from "@mrhenry/core-web/helpers/_ESAbstract.IteratorNext";
+import IteratorStep from "@mrhenry/core-web/helpers/_ESAbstract.IteratorStep";
+import IteratorValue from "@mrhenry/core-web/helpers/_ESAbstract.IteratorValue";
 import SameValue from "@mrhenry/core-web/helpers/_ESAbstract.SameValue";
 (function(undefined) {
 if (!("Intl"in self&&"DisplayNames"in self.Intl
@@ -56,20 +57,6 @@ if (!("Intl"in self&&"DisplayNames"in self.Intl
     OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR
     PERFORMANCE OF THIS SOFTWARE.
     ***************************************************************************** */
-    /* global Reflect, Promise */
-
-    var extendStatics = function(d, b) {
-        extendStatics = Object.setPrototypeOf ||
-            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-            function (d, b) { for (var p in b) if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p]; };
-        return extendStatics(d, b);
-    };
-
-    function __extends(d, b) {
-        extendStatics(d, b);
-        function __() { this.constructor = d; }
-        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-    }
 
     var __assign = function() {
         __assign = Object.assign || function __assign(t) {
@@ -185,7 +172,7 @@ if (!("Intl"in self&&"DisplayNames"in self.Intl
     function BestAvailableLocale(availableLocales, locale) {
         var candidate = locale;
         while (true) {
-            if (~availableLocales.indexOf(candidate)) {
+            if (availableLocales.has(candidate)) {
                 return candidate;
             }
             var pos = candidate.lastIndexOf('-');
@@ -230,21 +217,44 @@ if (!("Intl"in self&&"DisplayNames"in self.Intl
      * @param getDefaultLocale
      */
     function BestFitMatcher(availableLocales, requestedLocales, getDefaultLocale) {
-        var result = { locale: '' };
+        var minimizedAvailableLocaleMap = {};
+        var minimizedAvailableLocales = new Set();
+        availableLocales.forEach(function (locale) {
+            var minimizedLocale = new Intl.Locale(locale)
+                .minimize()
+                .toString();
+            minimizedAvailableLocaleMap[minimizedLocale] = locale;
+            minimizedAvailableLocales.add(minimizedLocale);
+        });
+        var foundLocale;
         for (var _i = 0, requestedLocales_1 = requestedLocales; _i < requestedLocales_1.length; _i++) {
-            var locale = requestedLocales_1[_i];
-            var noExtensionLocale = locale.replace(UNICODE_EXTENSION_SEQUENCE_REGEX, '');
-            var availableLocale = BestAvailableLocale(availableLocales, noExtensionLocale);
-            if (availableLocale) {
-                result.locale = availableLocale;
-                if (locale !== noExtensionLocale) {
-                    result.extension = locale.slice(noExtensionLocale.length + 1, locale.length);
-                }
-                return result;
+            var l = requestedLocales_1[_i];
+            if (foundLocale) {
+                break;
             }
+            var noExtensionLocale = l.replace(UNICODE_EXTENSION_SEQUENCE_REGEX, '');
+            if (availableLocales.has(noExtensionLocale)) {
+                foundLocale = noExtensionLocale;
+                break;
+            }
+            if (minimizedAvailableLocales.has(noExtensionLocale)) {
+                foundLocale = minimizedAvailableLocaleMap[noExtensionLocale];
+                break;
+            }
+            var locale = new Intl.Locale(noExtensionLocale);
+            var maximizedRequestedLocale = locale.maximize().toString();
+            var minimizedRequestedLocale = locale.minimize().toString();
+            // Check minimized locale
+            if (minimizedAvailableLocales.has(minimizedRequestedLocale)) {
+                foundLocale = minimizedAvailableLocaleMap[minimizedRequestedLocale];
+                break;
+            }
+            // Lookup algo on maximized locale
+            foundLocale = BestAvailableLocale(minimizedAvailableLocales, maximizedRequestedLocale);
         }
-        result.locale = getDefaultLocale();
-        return result;
+        return {
+            locale: foundLocale || getDefaultLocale(),
+        };
     }
 
     /**
@@ -422,38 +432,6 @@ if (!("Intl"in self&&"DisplayNames"in self.Intl
         return LookupSupportedLocales(availableLocales, requestedLocales);
     }
 
-    function getLocaleHierarchy(locale) {
-        var results = [locale];
-        var localeParts = locale.split('-');
-        for (var i = localeParts.length; i > 1; i--) {
-            results.push(localeParts.slice(0, i - 1).join('-'));
-        }
-        return results;
-    }
-    var MissingLocaleDataError = /** @class */ (function (_super) {
-        __extends(MissingLocaleDataError, _super);
-        function MissingLocaleDataError() {
-            var _this = _super !== null && _super.apply(this, arguments) || this;
-            _this.type = 'MISSING_LOCALE_DATA';
-            return _this;
-        }
-        return MissingLocaleDataError;
-    }(Error));
-    function unpackData(locale, localeData, 
-    /** By default shallow merge the dictionaries. */
-    reducer) {
-        if (reducer === void 0) { reducer = function (all, d) { return (__assign(__assign({}, all), d)); }; }
-        var localeHierarchy = getLocaleHierarchy(locale);
-        var dataToMerge = localeHierarchy
-            .map(function (l) { return localeData.data[l]; })
-            .filter(Boolean);
-        if (!dataToMerge.length) {
-            throw new MissingLocaleDataError("Missing locale data for \"" + locale + "\", lookup hierarchy: " + localeHierarchy.join(', '));
-        }
-        dataToMerge.reverse();
-        return dataToMerge.reduce(reducer, {});
-    }
-
     var DisplayNames = /** @class */ (function () {
         function DisplayNames(locales, options) {
             var _newTarget = this.constructor;
@@ -500,21 +478,16 @@ if (!("Intl"in self&&"DisplayNames"in self.Intl
                 data[_i] = arguments[_i];
             }
             for (var _a = 0, data_1 = data; _a < data_1.length; _a++) {
-                var datum = data_1[_a];
-                var availableLocales = datum.availableLocales;
-                for (var _b = 0, availableLocales_1 = availableLocales; _b < availableLocales_1.length; _b++) {
-                    var locale = availableLocales_1[_b];
-                    try {
-                        DisplayNames.localeData[locale] = unpackData(locale, datum);
-                    }
-                    catch (e) {
-                        // If we can't unpack this data, ignore the locale
-                    }
+                var _b = data_1[_a], d = _b.data, locale = _b.locale;
+                var minimizedLocale = new Intl.Locale(locale)
+                    .minimize()
+                    .toString();
+                DisplayNames.localeData[locale] = DisplayNames.localeData[minimizedLocale] = d;
+                DisplayNames.availableLocales.add(minimizedLocale);
+                DisplayNames.availableLocales.add(locale);
+                if (!DisplayNames.__defaultLocale) {
+                    DisplayNames.__defaultLocale = minimizedLocale;
                 }
-            }
-            DisplayNames.availableLocales = Object.keys(DisplayNames.localeData);
-            if (!DisplayNames.__defaultLocale) {
-                DisplayNames.__defaultLocale = DisplayNames.availableLocales[0];
             }
         };
         DisplayNames.prototype.of = function (code) {
@@ -590,8 +563,8 @@ if (!("Intl"in self&&"DisplayNames"in self.Intl
             return DisplayNames.__defaultLocale;
         };
         DisplayNames.localeData = {};
-        DisplayNames.availableLocales = [];
-        DisplayNames.__defaultLocale = 'en';
+        DisplayNames.availableLocales = new Set();
+        DisplayNames.__defaultLocale = '';
         DisplayNames.polyfilled = true;
         return DisplayNames;
     }());

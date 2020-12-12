@@ -24,16 +24,16 @@ import HasProperty from "@mrhenry/core-web/helpers/_ESAbstract.HasProperty";
 import ToBoolean from "@mrhenry/core-web/helpers/_ESAbstract.ToBoolean";
 import CreateDataPropertyOrThrow from "@mrhenry/core-web/helpers/_ESAbstract.CreateDataPropertyOrThrow";
 import CreateDataProperty from "@mrhenry/core-web/helpers/_ESAbstract.CreateDataProperty";
+import CreateIterResultObject from "@mrhenry/core-web/helpers/_ESAbstract.CreateIterResultObject";
+import GetIterator from "@mrhenry/core-web/helpers/_ESAbstract.GetIterator";
 import SameValueZero from "@mrhenry/core-web/helpers/_ESAbstract.SameValueZero";
 import SameValueNonNumber from "@mrhenry/core-web/helpers/_ESAbstract.SameValueNonNumber";
-import GetIterator from "@mrhenry/core-web/helpers/_ESAbstract.GetIterator";
-import IteratorStep from "@mrhenry/core-web/helpers/_ESAbstract.IteratorStep";
-import IteratorNext from "@mrhenry/core-web/helpers/_ESAbstract.IteratorNext";
-import IteratorComplete from "@mrhenry/core-web/helpers/_ESAbstract.IteratorComplete";
-import IteratorValue from "@mrhenry/core-web/helpers/_ESAbstract.IteratorValue";
 import IteratorClose from "@mrhenry/core-web/helpers/_ESAbstract.IteratorClose";
+import IteratorComplete from "@mrhenry/core-web/helpers/_ESAbstract.IteratorComplete";
+import IteratorNext from "@mrhenry/core-web/helpers/_ESAbstract.IteratorNext";
+import IteratorStep from "@mrhenry/core-web/helpers/_ESAbstract.IteratorStep";
+import IteratorValue from "@mrhenry/core-web/helpers/_ESAbstract.IteratorValue";
 import SameValue from "@mrhenry/core-web/helpers/_ESAbstract.SameValue";
-import CreateIterResultObject from "@mrhenry/core-web/helpers/_ESAbstract.CreateIterResultObject";
 (function(undefined) {
 if (!("Intl"in self&&"DateTimeFormat"in self.Intl&&"formatToParts"in self.Intl.DateTimeFormat.prototype&&"dayPeriod"===new self.Intl.DateTimeFormat("en",{hourCycle:"h11",hour:"numeric"}).formatToParts(0)[2].type
 )) {
@@ -57,20 +57,6 @@ if (!("Intl"in self&&"DateTimeFormat"in self.Intl&&"formatToParts"in self.Intl.D
     OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR
     PERFORMANCE OF THIS SOFTWARE.
     ***************************************************************************** */
-    /* global Reflect, Promise */
-
-    var extendStatics = function(d, b) {
-        extendStatics = Object.setPrototypeOf ||
-            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-            function (d, b) { for (var p in b) if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p]; };
-        return extendStatics(d, b);
-    };
-
-    function __extends(d, b) {
-        extendStatics(d, b);
-        function __() { this.constructor = d; }
-        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-    }
 
     var __assign = function() {
         __assign = Object.assign || function __assign(t) {
@@ -154,12 +140,6 @@ if (!("Intl"in self&&"DateTimeFormat"in self.Intl&&"formatToParts"in self.Intl.D
     // trim patterns after transformations
     var expPatternTrimmer = /^[\s\uFEFF\xA0]+|[\s\uFEFF\xA0]+$/g;
     function matchSkeletonPattern(match, result) {
-        if (result === void 0) { result = {
-            pattern: '',
-            pattern12: '',
-            skeleton: '',
-            rawPattern: '',
-        }; }
         var len = match.length;
         switch (match[0]) {
             // Era
@@ -269,23 +249,55 @@ if (!("Intl"in self&&"DateTimeFormat"in self.Intl&&"formatToParts"in self.Intl.D
         }
         return '';
     }
-    /**
-     * Parse Date time skeleton into Intl.DateTimeFormatOptions
-     * Ref: https://unicode.org/reports/tr35/tr35-dates.html#Date_Field_Symbol_Table
-     * @public
-     * @param skeleton skeleton string
-     */
-    function parseDateTimeSkeleton(skeleton, pattern) {
-        if (pattern === void 0) { pattern = skeleton; }
-        var result = {
-            pattern: '',
-            pattern12: '',
-            skeleton: skeleton,
-            rawPattern: pattern,
-        };
+    function skeletonTokenToTable2(c) {
+        switch (c) {
+            // Era
+            case 'G':
+                return 'era';
+            // Year
+            case 'y':
+            case 'Y':
+            case 'u':
+            case 'U':
+            case 'r':
+                return 'year';
+            // Month
+            case 'M':
+            case 'L':
+                return 'month';
+            // Day
+            case 'd':
+            case 'D':
+            case 'F':
+            case 'g':
+                return 'day';
+            // Period
+            case 'a': // AM, PM
+            case 'b': // am, pm, noon, midnight
+            case 'B': // flexible day periods
+                return 'ampm';
+            // Hour
+            case 'h':
+            case 'H':
+            case 'K':
+            case 'k':
+                return 'hour';
+            // Minute
+            case 'm':
+                return 'minute';
+            // Second
+            case 's':
+            case 'S':
+            case 'A':
+                return 'second';
+            default:
+                throw new RangeError('Invalid range pattern token');
+        }
+    }
+    function processDateTimePattern(pattern, result) {
         var literals = [];
         // Use skeleton to populate result, but use mapped pattern to populate pattern
-        result.pattern12 = pattern
+        var pattern12 = pattern
             // Double apostrophe
             .replace(/'{2}/g, '{apostrophe}')
             // Apostrophe-escaped
@@ -293,22 +305,123 @@ if (!("Intl"in self&&"DateTimeFormat"in self.Intl&&"formatToParts"in self.Intl.D
             literals.push(literal);
             return "$$" + (literals.length - 1) + "$$";
         })
-            .replace(DATE_TIME_REGEX, matchSkeletonPattern);
-        skeleton.replace(DATE_TIME_REGEX, function (m) { return matchSkeletonPattern(m, result); });
+            .replace(DATE_TIME_REGEX, function (m) { return matchSkeletonPattern(m, result || {}); });
         //Restore literals
         if (literals.length) {
-            result.pattern12 = result.pattern12
+            pattern12 = pattern12
                 .replace(/\$\$(\d+)\$\$/g, function (_, i) {
                 return literals[+i];
             })
                 .replace(/\{apostrophe\}/g, "'");
         }
         // Handle apostrophe-escaped things
-        result.pattern = result.pattern12
-            .replace(/([\s\uFEFF\xA0])\{ampm\}([\s\uFEFF\xA0])/, '$1')
-            .replace('{ampm}', '')
-            .replace(expPatternTrimmer, '');
+        return [
+            pattern12
+                .replace(/([\s\uFEFF\xA0])\{ampm\}([\s\uFEFF\xA0])/, '$1')
+                .replace('{ampm}', '')
+                .replace(expPatternTrimmer, ''),
+            pattern12,
+        ];
+    }
+    /**
+     * Parse Date time skeleton into Intl.DateTimeFormatOptions
+     * Ref: https://unicode.org/reports/tr35/tr35-dates.html#Date_Field_Symbol_Table
+     * @public
+     * @param skeleton skeleton string
+     */
+    function parseDateTimeSkeleton(skeleton, rawPattern, rangePatterns, intervalFormatFallback) {
+        if (rawPattern === void 0) { rawPattern = skeleton; }
+        var result = {
+            pattern: '',
+            pattern12: '',
+            skeleton: skeleton,
+            rawPattern: rawPattern,
+            rangePatterns: {},
+            rangePatterns12: {},
+        };
+        if (rangePatterns) {
+            for (var k in rangePatterns) {
+                var key = skeletonTokenToTable2(k);
+                var rawPattern_1 = rangePatterns[k];
+                var intervalResult = {
+                    patternParts: [],
+                };
+                var _a = processDateTimePattern(rawPattern_1, intervalResult), pattern_1 = _a[0], pattern12_1 = _a[1];
+                result.rangePatterns[key] = __assign(__assign({}, intervalResult), { patternParts: splitRangePattern(pattern_1) });
+                result.rangePatterns12[key] = __assign(__assign({}, intervalResult), { patternParts: splitRangePattern(pattern12_1) });
+            }
+        }
+        else if (intervalFormatFallback) {
+            var patternParts = splitFallbackRangePattern(intervalFormatFallback);
+            result.rangePatterns.default = {
+                patternParts: patternParts,
+            };
+            result.rangePatterns12.default = {
+                patternParts: patternParts,
+            };
+        }
+        // Process skeleton
+        skeleton.replace(DATE_TIME_REGEX, function (m) { return matchSkeletonPattern(m, result); });
+        var _b = processDateTimePattern(rawPattern), pattern = _b[0], pattern12 = _b[1];
+        result.pattern = pattern;
+        result.pattern12 = pattern12;
         return result;
+    }
+    function splitFallbackRangePattern(pattern) {
+        var parts = pattern.split(/(\{[0|1]\})/g).filter(Boolean);
+        return parts.map(function (pattern) {
+            switch (pattern) {
+                case '{0}':
+                    return {
+                        source: "startRange" /* startRange */,
+                        pattern: pattern,
+                    };
+                case '{1}':
+                    return {
+                        source: "endRange" /* endRange */,
+                        pattern: pattern,
+                    };
+                default:
+                    return {
+                        source: "shared" /* shared */,
+                        pattern: pattern,
+                    };
+            }
+        });
+    }
+    function splitRangePattern(pattern) {
+        var PART_REGEX = /\{(.*?)\}/g;
+        // Map of part and index within the string
+        var parts = {};
+        var match;
+        var splitIndex = 0;
+        while ((match = PART_REGEX.exec(pattern))) {
+            if (!(match[0] in parts)) {
+                parts[match[0]] = match.index;
+            }
+            else {
+                splitIndex = match.index;
+                break;
+            }
+        }
+        if (!splitIndex) {
+            return [
+                {
+                    source: "startRange" /* startRange */,
+                    pattern: pattern,
+                },
+            ];
+        }
+        return [
+            {
+                source: "startRange" /* startRange */,
+                pattern: pattern.slice(0, splitIndex),
+            },
+            {
+                source: "endRange" /* endRange */,
+                pattern: pattern.slice(splitIndex),
+            },
+        ];
     }
 
     function isNumericType(t) {
@@ -386,10 +499,11 @@ if (!("Intl"in self&&"DateTimeFormat"in self.Intl&&"formatToParts"in self.Intl.D
             }
         }
         var skeletonFormat = __assign({}, bestFormat);
-        var patternFormat = parseDateTimeSkeleton(bestFormat.rawPattern);
+        var patternFormat = { rawPattern: bestFormat.rawPattern };
+        processDateTimePattern(bestFormat.rawPattern, patternFormat);
         // Kinda following https://github.com/unicode-org/icu/blob/dd50e38f459d84e9bf1b0c618be8483d318458ad/icu4j/main/classes/core/src/com/ibm/icu/text/DateTimePatternGenerator.java
         // Method adjustFieldTypes
-        for (var prop in patternFormat) {
+        for (var prop in skeletonFormat) {
             var skeletonValue = skeletonFormat[prop];
             var patternValue = patternFormat[prop];
             var requestedValue = options[prop];
@@ -414,6 +528,12 @@ if (!("Intl"in self&&"DateTimeFormat"in self.Intl&&"formatToParts"in self.Intl.D
             }
             patternFormat[prop] = requestedValue;
         }
+        // Copy those over
+        patternFormat.pattern = skeletonFormat.pattern;
+        patternFormat.pattern12 = skeletonFormat.pattern12;
+        patternFormat.skeleton = skeletonFormat.skeleton;
+        patternFormat.rangePatterns = skeletonFormat.rangePatterns;
+        patternFormat.rangePatterns12 = skeletonFormat.rangePatterns12;
         return patternFormat;
     }
 
@@ -848,41 +968,6 @@ if (!("Intl"in self&&"DateTimeFormat"in self.Intl&&"formatToParts"in self.Intl.D
         return mod(Math.floor(t / MS_PER_SECOND), SECONDS_PER_MINUTE);
     }
 
-    /**
-     * https://tc39.es/ecma402/#sec-partitionpattern
-     * @param pattern
-     */
-    function PartitionPattern(pattern) {
-        var result = [];
-        var beginIndex = pattern.indexOf('{');
-        var endIndex = 0;
-        var nextIndex = 0;
-        var length = pattern.length;
-        while (beginIndex < pattern.length && beginIndex > -1) {
-            endIndex = pattern.indexOf('}', beginIndex);
-            invariant(endIndex > beginIndex, "Invalid pattern " + pattern);
-            if (beginIndex > nextIndex) {
-                result.push({
-                    type: 'literal',
-                    value: pattern.substring(nextIndex, beginIndex),
-                });
-            }
-            result.push({
-                type: pattern.substring(beginIndex + 1, endIndex),
-                value: undefined,
-            });
-            nextIndex = endIndex + 1;
-            beginIndex = pattern.indexOf('{', nextIndex);
-        }
-        if (nextIndex < length) {
-            result.push({
-                type: 'literal',
-                value: pattern.substring(nextIndex, length),
-            });
-        }
-        return result;
-    }
-
     function getApplicableZoneData(t, timeZone, tzData) {
         var _a;
         var zoneData = tzData[timeZone];
@@ -966,12 +1051,9 @@ if (!("Intl"in self&&"DateTimeFormat"in self.Intl&&"formatToParts"in self.Intl.D
      * @param dtf
      * @param x
      */
-    function PartitionDateTimePattern(dtf, x, _a) {
+    function FormatDateTimePattern(dtf, patternParts, x, _a) {
         var getInternalSlots = _a.getInternalSlots, localeData = _a.localeData, getDefaultTimeZone = _a.getDefaultTimeZone, tzData = _a.tzData;
         x = TimeClip(x);
-        if (isNaN(x)) {
-            throw new RangeError('invalid time');
-        }
         /** IMPL START */
         var internalSlots = getInternalSlots(dtf);
         var dataLocale = internalSlots.dataLocale;
@@ -989,7 +1071,6 @@ if (!("Intl"in self&&"DateTimeFormat"in self.Intl&&"formatToParts"in self.Intl.D
         // @ts-ignore
         internalSlots.calendar, internalSlots.timeZone, { tzData: tzData });
         var result = [];
-        var patternParts = PartitionPattern(internalSlots.pattern);
         for (var _i = 0, patternParts_1 = patternParts; _i < patternParts_1.length; _i++) {
             var patternPart = patternParts_1[_i];
             var p = patternPart.type;
@@ -1093,15 +1174,61 @@ if (!("Intl"in self&&"DateTimeFormat"in self.Intl&&"formatToParts"in self.Intl.D
                     value: fv,
                 });
             }
-            else {
-                result.push({
-                    // @ts-ignore TODO: Fix TS type
-                    type: 'unknown',
-                    value: String(x),
-                });
-            }
         }
         return result;
+    }
+
+    /**
+     * https://tc39.es/ecma402/#sec-partitionpattern
+     * @param pattern
+     */
+    function PartitionPattern(pattern) {
+        var result = [];
+        var beginIndex = pattern.indexOf('{');
+        var endIndex = 0;
+        var nextIndex = 0;
+        var length = pattern.length;
+        while (beginIndex < pattern.length && beginIndex > -1) {
+            endIndex = pattern.indexOf('}', beginIndex);
+            invariant(endIndex > beginIndex, "Invalid pattern " + pattern);
+            if (beginIndex > nextIndex) {
+                result.push({
+                    type: 'literal',
+                    value: pattern.substring(nextIndex, beginIndex),
+                });
+            }
+            result.push({
+                type: pattern.substring(beginIndex + 1, endIndex),
+                value: undefined,
+            });
+            nextIndex = endIndex + 1;
+            beginIndex = pattern.indexOf('{', nextIndex);
+        }
+        if (nextIndex < length) {
+            result.push({
+                type: 'literal',
+                value: pattern.substring(nextIndex, length),
+            });
+        }
+        return result;
+    }
+
+    /**
+     * https://tc39.es/ecma402/#sec-partitiondatetimepattern
+     * @param dtf
+     * @param x
+     */
+    function PartitionDateTimePattern(dtf, x, implDetails) {
+        x = TimeClip(x);
+        if (isNaN(x)) {
+            throw new RangeError('invalid time');
+        }
+        /** IMPL START */
+        var getInternalSlots = implDetails.getInternalSlots;
+        var internalSlots = getInternalSlots(dtf);
+        /** IMPL END */
+        var pattern = internalSlots.pattern;
+        return FormatDateTimePattern(dtf, PartitionPattern(pattern), x, implDetails);
     }
 
     /**
@@ -1115,6 +1242,126 @@ if (!("Intl"in self&&"DateTimeFormat"in self.Intl&&"formatToParts"in self.Intl.D
         for (var _i = 0, parts_1 = parts; _i < parts_1.length; _i++) {
             var part = parts_1[_i];
             result += part.value;
+        }
+        return result;
+    }
+
+    var TABLE_2_FIELDS = [
+        'era',
+        'year',
+        'month',
+        'day',
+        'ampm',
+        'hour',
+        'minute',
+        'second',
+    ];
+    function PartitionDateTimeRangePattern(dtf, x, y, implDetails) {
+        x = TimeClip(x);
+        if (isNaN(x)) {
+            throw new RangeError('Invalid start time');
+        }
+        y = TimeClip(y);
+        if (isNaN(y)) {
+            throw new RangeError('Invalid end time');
+        }
+        /** IMPL START */
+        var getInternalSlots = implDetails.getInternalSlots, tzData = implDetails.tzData;
+        var internalSlots = getInternalSlots(dtf);
+        /** IMPL END */
+        var tm1 = ToLocalTime(x, 
+        // @ts-ignore
+        internalSlots.calendar, internalSlots.timeZone, { tzData: tzData });
+        var tm2 = ToLocalTime(y, 
+        // @ts-ignore
+        internalSlots.calendar, internalSlots.timeZone, { tzData: tzData });
+        var pattern = internalSlots.pattern, rangePatterns = internalSlots.rangePatterns;
+        var rangePattern;
+        var dateFieldsPracticallyEqual = true;
+        var patternContainsLargerDateField = false;
+        for (var _i = 0, TABLE_2_FIELDS_1 = TABLE_2_FIELDS; _i < TABLE_2_FIELDS_1.length; _i++) {
+            var fieldName = TABLE_2_FIELDS_1[_i];
+            if (dateFieldsPracticallyEqual && !patternContainsLargerDateField) {
+                if (fieldName === 'ampm') {
+                    var v1 = tm1.hour;
+                    var v2 = tm2.hour;
+                    var rp = rangePatterns.ampm;
+                    if ((v1 > 11 && v2 < 11) || (v1 < 11 && v2 > 11)) {
+                        dateFieldsPracticallyEqual = false;
+                    }
+                    if (rangePattern !== undefined && rp === undefined) {
+                        patternContainsLargerDateField = true;
+                    }
+                    rangePattern = rp;
+                }
+                else {
+                    var v1 = tm1[fieldName];
+                    var v2 = tm2[fieldName];
+                    var rp = rangePatterns[fieldName];
+                    if (!SameValue(v1, v2)) {
+                        dateFieldsPracticallyEqual = false;
+                    }
+                    if (rangePattern !== undefined && rp === undefined) {
+                        patternContainsLargerDateField = true;
+                    }
+                    rangePattern = rp;
+                }
+            }
+        }
+        if (dateFieldsPracticallyEqual) {
+            var result_2 = FormatDateTimePattern(dtf, PartitionPattern(pattern), x, implDetails);
+            for (var _a = 0, result_1 = result_2; _a < result_1.length; _a++) {
+                var r = result_1[_a];
+                r.source = "shared" /* shared */;
+            }
+            return result_2;
+        }
+        var result = [];
+        if (rangePattern === undefined) {
+            rangePattern = rangePatterns.default;
+        }
+        for (var _b = 0, _c = rangePattern.patternParts; _b < _c.length; _b++) {
+            var rangePatternPart = _c[_b];
+            var source = rangePatternPart.source, pattern_1 = rangePatternPart.pattern;
+            var z = void 0;
+            if (source === "startRange" /* startRange */ ||
+                source === "shared" /* shared */) {
+                z = x;
+            }
+            else {
+                z = y;
+            }
+            var patternParts = PartitionPattern(pattern_1);
+            var partResult = FormatDateTimePattern(dtf, patternParts, z, implDetails);
+            for (var _d = 0, partResult_1 = partResult; _d < partResult_1.length; _d++) {
+                var r = partResult_1[_d];
+                r.source = source;
+            }
+            result = result.concat(partResult);
+        }
+        return result;
+    }
+
+    function FormatDateTimeRange(dtf, x, y, implDetails) {
+        var parts = PartitionDateTimeRangePattern(dtf, x, y, implDetails);
+        var result = '';
+        for (var _i = 0, parts_1 = parts; _i < parts_1.length; _i++) {
+            var part = parts_1[_i];
+            result += part.value;
+        }
+        return result;
+    }
+
+    function FormatDateTimeRangeToParts(dtf, x, y, implDetails) {
+        var parts = PartitionDateTimeRangePattern(dtf, x, y, implDetails);
+        var result = new Array(0);
+        for (var _i = 0, parts_1 = parts; _i < parts_1.length; _i++) {
+            var part = parts_1[_i];
+            result.push({
+                type: part.type,
+                value: part.value,
+                source: part.source,
+            });
         }
         return result;
     }
@@ -1233,7 +1480,7 @@ if (!("Intl"in self&&"DateTimeFormat"in self.Intl&&"formatToParts"in self.Intl.D
     function BestAvailableLocale(availableLocales, locale) {
         var candidate = locale;
         while (true) {
-            if (~availableLocales.indexOf(candidate)) {
+            if (availableLocales.has(candidate)) {
                 return candidate;
             }
             var pos = candidate.lastIndexOf('-');
@@ -1278,21 +1525,44 @@ if (!("Intl"in self&&"DateTimeFormat"in self.Intl&&"formatToParts"in self.Intl.D
      * @param getDefaultLocale
      */
     function BestFitMatcher(availableLocales, requestedLocales, getDefaultLocale) {
-        var result = { locale: '' };
+        var minimizedAvailableLocaleMap = {};
+        var minimizedAvailableLocales = new Set();
+        availableLocales.forEach(function (locale) {
+            var minimizedLocale = new Intl.Locale(locale)
+                .minimize()
+                .toString();
+            minimizedAvailableLocaleMap[minimizedLocale] = locale;
+            minimizedAvailableLocales.add(minimizedLocale);
+        });
+        var foundLocale;
         for (var _i = 0, requestedLocales_1 = requestedLocales; _i < requestedLocales_1.length; _i++) {
-            var locale = requestedLocales_1[_i];
-            var noExtensionLocale = locale.replace(UNICODE_EXTENSION_SEQUENCE_REGEX, '');
-            var availableLocale = BestAvailableLocale(availableLocales, noExtensionLocale);
-            if (availableLocale) {
-                result.locale = availableLocale;
-                if (locale !== noExtensionLocale) {
-                    result.extension = locale.slice(noExtensionLocale.length + 1, locale.length);
-                }
-                return result;
+            var l = requestedLocales_1[_i];
+            if (foundLocale) {
+                break;
             }
+            var noExtensionLocale = l.replace(UNICODE_EXTENSION_SEQUENCE_REGEX, '');
+            if (availableLocales.has(noExtensionLocale)) {
+                foundLocale = noExtensionLocale;
+                break;
+            }
+            if (minimizedAvailableLocales.has(noExtensionLocale)) {
+                foundLocale = minimizedAvailableLocaleMap[noExtensionLocale];
+                break;
+            }
+            var locale = new Intl.Locale(noExtensionLocale);
+            var maximizedRequestedLocale = locale.maximize().toString();
+            var minimizedRequestedLocale = locale.minimize().toString();
+            // Check minimized locale
+            if (minimizedAvailableLocales.has(minimizedRequestedLocale)) {
+                foundLocale = minimizedAvailableLocaleMap[minimizedRequestedLocale];
+                break;
+            }
+            // Lookup algo on maximized locale
+            foundLocale = BestAvailableLocale(minimizedAvailableLocales, maximizedRequestedLocale);
         }
-        result.locale = getDefaultLocale();
-        return result;
+        return {
+            locale: foundLocale || getDefaultLocale(),
+        };
     }
 
     /**
@@ -1434,6 +1704,31 @@ if (!("Intl"in self&&"DateTimeFormat"in self.Intl&&"formatToParts"in self.Intl.D
         }
         return false;
     }
+    function resolveHourCycle(hc, hcDefault, hour12) {
+        if (hc == null) {
+            hc = hcDefault;
+        }
+        if (hour12 !== undefined) {
+            if (hour12) {
+                if (hcDefault === 'h11' || hcDefault === 'h23') {
+                    hc = 'h11';
+                }
+                else {
+                    hc = 'h12';
+                }
+            }
+            else {
+                invariant(!hour12, 'hour12 must not be set');
+                if (hcDefault === 'h11' || hcDefault === 'h23') {
+                    hc = 'h23';
+                }
+                else {
+                    hc = 'h24';
+                }
+            }
+        }
+        return hc;
+    }
     var TYPE_REGEX = /^[a-z0-9]{3,8}$/i;
     /**
      * https://tc39.es/ecma402/#sec-initializedatetimeformat
@@ -1515,11 +1810,12 @@ if (!("Intl"in self&&"DateTimeFormat"in self.Intl&&"formatToParts"in self.Intl.D
                 bestFormat = BasicFormatMatcher(opt, formats);
             }
             else {
+                // IMPL DETAILS START
                 if (isTimeRelated(opt)) {
-                    opt.hour12 =
-                        internalSlots.hourCycle === 'h11' ||
-                            internalSlots.hourCycle === 'h12';
+                    var hc = resolveHourCycle(internalSlots.hourCycle, dataLocaleData.hourCycle, hour12);
+                    opt.hour12 = hc === 'h11' || hc === 'h12';
                 }
+                // IMPL DETAILS END
                 bestFormat = BestFitFormatMatcher(opt, formats);
             }
         }
@@ -1533,6 +1829,10 @@ if (!("Intl"in self&&"DateTimeFormat"in self.Intl&&"formatToParts"in self.Intl.D
             }
             bestFormat = DateTimeStyleFormat(dateStyle, timeStyle, dataLocaleData);
         }
+        // IMPL DETAIL START
+        // For debugging
+        internalSlots.format = bestFormat;
+        // IMPL DETAIL END
         for (var prop in opt) {
             var p = bestFormat[prop];
             if (p !== undefined) {
@@ -1540,45 +1840,27 @@ if (!("Intl"in self&&"DateTimeFormat"in self.Intl&&"formatToParts"in self.Intl.D
             }
         }
         var pattern;
+        var rangePatterns;
         if (internalSlots.hour !== undefined) {
-            var hcDefault = dataLocaleData.hourCycle;
-            var hc = internalSlots.hourCycle;
-            if (hc == null) {
-                hc = hcDefault;
-            }
-            if (hour12 !== undefined) {
-                if (hour12) {
-                    if (hcDefault === 'h11' || hcDefault === 'h23') {
-                        hc = 'h11';
-                    }
-                    else {
-                        hc = 'h12';
-                    }
-                }
-                else {
-                    invariant(!hour12, 'hour12 must not be set');
-                    if (hcDefault === 'h11' || hcDefault === 'h23') {
-                        hc = 'h23';
-                    }
-                    else {
-                        hc = 'h24';
-                    }
-                }
-            }
+            var hc = resolveHourCycle(internalSlots.hourCycle, dataLocaleData.hourCycle, hour12);
             internalSlots.hourCycle = hc;
             if (hc === 'h11' || hc === 'h12') {
                 pattern = bestFormat.pattern12;
+                rangePatterns = bestFormat.rangePatterns12;
             }
             else {
                 pattern = bestFormat.pattern;
+                rangePatterns = bestFormat.rangePatterns;
             }
         }
         else {
             // @ts-ignore
             internalSlots.hourCycle = undefined;
             pattern = bestFormat.pattern;
+            rangePatterns = bestFormat.rangePatterns;
         }
         internalSlots.pattern = pattern;
+        internalSlots.rangePatterns = rangePatterns;
         return dtf;
     }
 
@@ -1616,38 +1898,6 @@ if (!("Intl"in self&&"DateTimeFormat"in self.Intl&&"formatToParts"in self.Intl.D
             return LookupSupportedLocales(availableLocales, requestedLocales);
         }
         return LookupSupportedLocales(availableLocales, requestedLocales);
-    }
-
-    function getLocaleHierarchy(locale) {
-        var results = [locale];
-        var localeParts = locale.split('-');
-        for (var i = localeParts.length; i > 1; i--) {
-            results.push(localeParts.slice(0, i - 1).join('-'));
-        }
-        return results;
-    }
-    var MissingLocaleDataError = /** @class */ (function (_super) {
-        __extends(MissingLocaleDataError, _super);
-        function MissingLocaleDataError() {
-            var _this = _super !== null && _super.apply(this, arguments) || this;
-            _this.type = 'MISSING_LOCALE_DATA';
-            return _this;
-        }
-        return MissingLocaleDataError;
-    }(Error));
-    function unpackData(locale, localeData, 
-    /** By default shallow merge the dictionaries. */
-    reducer) {
-        if (reducer === void 0) { reducer = function (all, d) { return (__assign(__assign({}, all), d)); }; }
-        var localeHierarchy = getLocaleHierarchy(locale);
-        var dataToMerge = localeHierarchy
-            .map(function (l) { return localeData.data[l]; })
-            .filter(Boolean);
-        if (!dataToMerge.length) {
-            throw new MissingLocaleDataError("Missing locale data for \"" + locale + "\", lookup hierarchy: " + localeHierarchy.join(', '));
-        }
-        dataToMerge.reverse();
-        return dataToMerge.reduce(reducer, {});
     }
 
     // Type-only circular import
@@ -1968,6 +2218,44 @@ if (!("Intl"in self&&"DateTimeFormat"in self.Intl&&"formatToParts"in self.Intl.D
             });
         },
     });
+    defineProperty(DateTimeFormat.prototype, 'formatRangeToParts', {
+        value: function formatRangeToParts(startDate, endDate) {
+            var dtf = this;
+            if (typeof dtf !== 'object') {
+                throw new TypeError();
+            }
+            if (startDate === undefined || endDate === undefined) {
+                throw new TypeError('startDate/endDate cannot be undefined');
+            }
+            var x = ToNumber(startDate);
+            var y = ToNumber(endDate);
+            return FormatDateTimeRangeToParts(dtf, x, y, {
+                getInternalSlots: getInternalSlots,
+                localeData: DateTimeFormat.localeData,
+                tzData: DateTimeFormat.tzData,
+                getDefaultTimeZone: DateTimeFormat.getDefaultTimeZone,
+            });
+        },
+    });
+    defineProperty(DateTimeFormat.prototype, 'formatRange', {
+        value: function formatRange(startDate, endDate) {
+            var dtf = this;
+            if (typeof dtf !== 'object') {
+                throw new TypeError();
+            }
+            if (startDate === undefined || endDate === undefined) {
+                throw new TypeError('startDate/endDate cannot be undefined');
+            }
+            var x = ToNumber(startDate);
+            var y = ToNumber(endDate);
+            return FormatDateTimeRange(dtf, x, y, {
+                getInternalSlots: getInternalSlots,
+                localeData: DateTimeFormat.localeData,
+                tzData: DateTimeFormat.tzData,
+                getDefaultTimeZone: DateTimeFormat.getDefaultTimeZone,
+            });
+        },
+    });
     var DEFAULT_TIMEZONE = 'UTC';
     DateTimeFormat.__setDefaultTimeZone = function (timeZone) {
         if (timeZone !== undefined) {
@@ -1996,56 +2284,51 @@ if (!("Intl"in self&&"DateTimeFormat"in self.Intl&&"formatToParts"in self.Intl.D
         for (var _i = 0; _i < arguments.length; _i++) {
             data[_i] = arguments[_i];
         }
-        for (var _a = 0, data_1 = data; _a < data_1.length; _a++) {
-            var datum = data_1[_a];
-            var availableLocales = datum.availableLocales;
-            var _loop_1 = function (locale) {
-                try {
-                    var _a = unpackData(locale, datum), dateFormat = _a.dateFormat, timeFormat = _a.timeFormat, dateTimeFormat = _a.dateTimeFormat, formats_1 = _a.formats, rawData = __rest(_a, ["dateFormat", "timeFormat", "dateTimeFormat", "formats"]);
-                    var processedData = __assign(__assign({}, rawData), { dateFormat: {
-                            full: parseDateTimeSkeleton(dateFormat.full),
-                            long: parseDateTimeSkeleton(dateFormat.long),
-                            medium: parseDateTimeSkeleton(dateFormat.medium),
-                            short: parseDateTimeSkeleton(dateFormat.short),
-                        }, timeFormat: {
-                            full: parseDateTimeSkeleton(timeFormat.full),
-                            long: parseDateTimeSkeleton(timeFormat.long),
-                            medium: parseDateTimeSkeleton(timeFormat.medium),
-                            short: parseDateTimeSkeleton(timeFormat.short),
-                        }, dateTimeFormat: {
-                            full: parseDateTimeSkeleton(dateTimeFormat.full).pattern,
-                            long: parseDateTimeSkeleton(dateTimeFormat.long).pattern,
-                            medium: parseDateTimeSkeleton(dateTimeFormat.medium).pattern,
-                            short: parseDateTimeSkeleton(dateTimeFormat.short).pattern,
-                        }, formats: {} });
-                    var _loop_2 = function (calendar) {
-                        processedData.formats[calendar] = Object.keys(formats_1[calendar]).map(function (skeleton) {
-                            return parseDateTimeSkeleton(skeleton, formats_1[calendar][skeleton]);
-                        });
-                    };
-                    for (var calendar in formats_1) {
-                        _loop_2(calendar);
-                    }
-                    DateTimeFormat.localeData[locale] = processedData;
-                }
-                catch (e) {
-                    // Ignore if we got no data
-                }
+        var _loop_1 = function (d, locale) {
+            var dateFormat = d.dateFormat, timeFormat = d.timeFormat, dateTimeFormat = d.dateTimeFormat, formats = d.formats, intervalFormats = d.intervalFormats, rawData = __rest(d, ["dateFormat", "timeFormat", "dateTimeFormat", "formats", "intervalFormats"]);
+            var processedData = __assign(__assign({}, rawData), { dateFormat: {
+                    full: parseDateTimeSkeleton(dateFormat.full),
+                    long: parseDateTimeSkeleton(dateFormat.long),
+                    medium: parseDateTimeSkeleton(dateFormat.medium),
+                    short: parseDateTimeSkeleton(dateFormat.short),
+                }, timeFormat: {
+                    full: parseDateTimeSkeleton(timeFormat.full),
+                    long: parseDateTimeSkeleton(timeFormat.long),
+                    medium: parseDateTimeSkeleton(timeFormat.medium),
+                    short: parseDateTimeSkeleton(timeFormat.short),
+                }, dateTimeFormat: {
+                    full: parseDateTimeSkeleton(dateTimeFormat.full).pattern,
+                    long: parseDateTimeSkeleton(dateTimeFormat.long).pattern,
+                    medium: parseDateTimeSkeleton(dateTimeFormat.medium).pattern,
+                    short: parseDateTimeSkeleton(dateTimeFormat.short).pattern,
+                }, formats: {} });
+            var _loop_2 = function (calendar) {
+                processedData.formats[calendar] = Object.keys(formats[calendar]).map(function (skeleton) {
+                    return parseDateTimeSkeleton(skeleton, formats[calendar][skeleton], intervalFormats[skeleton], intervalFormats.intervalFormatFallback);
+                });
             };
-            for (var _b = 0, availableLocales_1 = availableLocales; _b < availableLocales_1.length; _b++) {
-                var locale = availableLocales_1[_b];
-                _loop_1(locale);
+            for (var calendar in formats) {
+                _loop_2(calendar);
             }
-        }
-        DateTimeFormat.availableLocales = Object.keys(DateTimeFormat.localeData);
-        if (!DateTimeFormat.__defaultLocale) {
-            DateTimeFormat.__defaultLocale = DateTimeFormat.availableLocales[0];
+            var minimizedLocale = new Intl.Locale(locale)
+                .minimize()
+                .toString();
+            DateTimeFormat.localeData[locale] = DateTimeFormat.localeData[minimizedLocale] = processedData;
+            DateTimeFormat.availableLocales.add(locale);
+            DateTimeFormat.availableLocales.add(minimizedLocale);
+            if (!DateTimeFormat.__defaultLocale) {
+                DateTimeFormat.__defaultLocale = minimizedLocale;
+            }
+        };
+        for (var _a = 0, data_1 = data; _a < data_1.length; _a++) {
+            var _b = data_1[_a], d = _b.data, locale = _b.locale;
+            _loop_1(d, locale);
         }
     };
     Object.defineProperty(DateTimeFormat.prototype, 'format', formatDescriptor);
     DateTimeFormat.__defaultLocale = '';
     DateTimeFormat.localeData = {};
-    DateTimeFormat.availableLocales = [];
+    DateTimeFormat.availableLocales = new Set();
     DateTimeFormat.getDefaultLocale = function () {
         return DateTimeFormat.__defaultLocale;
     };
