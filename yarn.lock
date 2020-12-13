@@ -1899,9 +1899,9 @@
   integrity sha512-f5j5b/Gf71L+dbqxIpQ4Z2WlmI/mPJ0fOkGGmFgtb6sAu97EPczzbS3/tJKxmcYDj55OX6ssqwDAWOHIYDRDGA==
 
 "@types/qunit@2.11.x":
-  version "2.11.0"
-  resolved "https://registry.yarnpkg.com/@types/qunit/-/qunit-2.11.0.tgz#e0fb93240fa0ad3fb2842848496061eaac5738f3"
-  integrity sha512-ljSVL9D+/EHcduZe3KTNm+Fmoy/DcB+BtBFe0FGt2KrWWIyTQZIV8NTLdYdMjheY9L/+mWKM6Rph2m8pSdhHBA==
+  version "2.11.1"
+  resolved "https://registry.yarnpkg.com/@types/qunit/-/qunit-2.11.1.tgz#3496d430d2bb0fa4761f00a27511f46020c6b410"
+  integrity sha512-vcM5+9O8LZuu5DYseaV4J7ehkYrhkv+aMIuxnF/OqMYlVEdv+odpCH1/5OVztiqxbCqTpQKWuELkMvG7OPycUQ==
 
 "@webassemblyjs/ast@1.9.0":
   version "1.9.0"
