@@ -4,6 +4,7 @@ const mapping = require('@mrhenry/core-web/helpers/__mapping');
 const bcd = require('@mdn/browser-compat-data');
 const fs = require('fs');
 const path = require('path');
+const polyfillLibrary = require("polyfill-library");
 
 const coreWebBrowsers = [
 	'android',
@@ -15,6 +16,37 @@ const coreWebBrowsers = [
 	'safari',
 	'ios_saf',
 ];
+
+const polyfillNotes = {};
+
+main();
+
+async function main() {
+	await gatherPolyfillNotes();
+	generate();
+}
+
+async function gatherPolyfillNotes() {
+	const features = await polyfillLibrary.listAllPolyfills();
+	for (const feature of features) {
+		const meta = await polyfillLibrary.describePolyfill(feature);
+		if (!meta.notes) {
+			continue;
+		}
+
+		const notes = Array.isArray(meta.notes) ? meta.notes : [meta.notes];
+
+		polyfillNotes[feature] = polyfillNotes[feature] || [];
+		polyfillNotes[feature].push(...notes);
+
+		if (meta.aliases && Array.isArray(meta.aliases)) {
+			meta.aliases.forEach((alias) => {
+				polyfillNotes[alias] = polyfillNotes[alias] || [];
+				polyfillNotes[alias].push(...notes);
+			});
+		}
+	}
+}
 
 function generate() {
 	const compat = {};
@@ -107,25 +139,30 @@ function pageHTML(tables) {
 
 		table {
 			border-spacing: 5px;
-			margin-bottom: 70px;
+			margin-bottom: 30px;
 			margin-top: 30px;
 		}
 
 		th {
 			padding: 12px;
+			text-align: right;
+		}
+
+		th+th {
 			text-align: center;
 		}
 
 		td {
 			font-size: 0.875rem;
-			min-width: 90px;
+			min-width: 150px;
 			padding: 12px 5px;
-			text-align: left;
+			text-align: right;
 		}
 
 		td+td {
 			background-color: #ddfff7;
 			border: 1px solid #ddd;
+			min-width: 90px;
 			text-align: center;
 		}
 
@@ -135,12 +172,32 @@ function pageHTML(tables) {
 
 		.wrapper {
 			margin: 100px auto;
-			max-width: 900px;
+			max-width: 1000px;
+		}
+
+		.notes {
+			margin-bottom: 70px;
+			margin-left: 170px;
+			max-width: 650px;
+		}
+
+		.notes h3 {
+			font-size: 0.875rem;
+		}
+
+		.notes p {
+			font-size: 0.75rem;
 		}
 	</style>
 </head>
 <body>
-	<div class="wrapper">${tables}</div>
+	<div class="wrapper">
+		<h1>Core Web : Browser compat data</h1>
+
+		${tables}
+
+		<pre><code style="font-size:10px;">${ (new Date()).toString() }</code></pre>
+	</div>
 </body>
 </html>
 `;
@@ -158,6 +215,11 @@ function tableHTML(feature) {
 				<tr><td><span title="${compat.name}">native</span></td>${nativeRowHTML(compat)}</tr>
 			</tbody>
 		</table>
+
+		<div class="notes">
+			${ nativeTableNotes(compat) }
+			${ polyfillTableNotes(compat) }
+		</div>
 		`;
 	}).join('');
 
@@ -185,24 +247,28 @@ function nativeRowHTML(feature) {
 				let out = [];
 				if (versionInfo.version_added) {
 					out.push(
-						html`<span >${versionInfo.version_added}</span>`
+						html`<span>${versionInfo.version_added}</span>`
 					);
 				}
 
 				if (versionInfo.version_removed) {
 					out.push(
-						html`<span style="color:red;" >${versionInfo.version_removed}</span>`
+						html`<span style="color:red;">${versionInfo.version_removed}</span>`
 					);
 				}
 
 				if (versionInfo.notes || versionInfo.alternative_name) {
-					return html`<span ${nativeRowNotes(versionInfo)}>${out.join('-')} ⓘ</span>`
+					return html`<span title="${nativeNotesToArray(versionInfo).join('\n')}">${out.join(' - ')} ⓘ</span>`
 				}
 
-				return out.join('-');
-			}).join('<br>');
+				return out.join(' - ');
+			}).filter((x) => { return !!x }).join('<br>');
 		} else if (feature.native[browser] && feature.native[browser].version_added) {
 			native = feature.native[browser].version_added;
+
+			if (feature.native[browser].notes || feature.native[browser].alternative_name) {
+				native = html`<span title="${nativeNotesToArray(feature.native[browser]).join('\n')}">${native} ⓘ</span>`;
+			}
 		}
 
 		row = row + html`<td>${ native }</td>`;
@@ -211,7 +277,7 @@ function nativeRowHTML(feature) {
 	return row;
 }
 
-function nativeRowNotes(versionInfo) {
+function nativeNotesToArray(versionInfo) {
 	const allNotes = [];
 	if (Array.isArray(versionInfo.notes)) {
 		allNotes.push(...versionInfo.notes);
@@ -222,11 +288,63 @@ function nativeRowNotes(versionInfo) {
 	if (versionInfo.alternative_name) {
 		allNotes.push('Alternate name : ' + versionInfo.alternative_name);
 	}
-	if (allNotes.length > 0) {
-		return `title="${allNotes.join('\n')}"`;
-	} else {
+
+	return allNotes;
+}
+
+function nativeTableNotes(feature) {
+	let notes = '';
+	for (const browser of coreWebBrowsers) {
+		if (Array.isArray(feature.native[browser])) {
+			notes = notes + feature.native[browser].map((versionInfo) => {
+				if (versionInfo.notes || versionInfo.alternative_name) {
+					const allNotes = nativeNotesToArray(versionInfo);
+					return allNotes.map((note) => {
+						let version = versionInfo.version_added || versionInfo.version_removed || '';
+						if (`${version}` === 'true') {
+							version = '';
+						}
+						return html`<p>${ browser } ${ version } : ${ note }</p>`
+					}).join('');
+				}
+
+				return '';
+			}).join('');
+		} else if (feature.native[browser] && feature.native[browser].version_added) {
+			if (feature.native[browser].notes || feature.native[browser].alternative_name) {
+				const allNotes = nativeNotesToArray(feature.native[browser]);
+				notes = notes + allNotes.map((note) => {
+					let version = feature.native[browser].version_added || '';
+					if (`${version}` === 'true') {
+						version = '';
+					}
+					return html`<p>${ browser } ${ version } : ${ note }</p>`
+				}).join('');
+			}
+		}
+	}
+
+	if (!notes) {
 		return '';
 	}
+
+	return html`<h3>mdn notes : </h3>${notes}`;
+}
+
+function polyfillTableNotes(feature) {
+	if (!polyfillNotes[feature.polyfillName]) {
+		return '';
+	}
+
+	const notes = polyfillNotes[feature.polyfillName].map((note) => {
+		return html`<p>${ note }</p>`
+	}).join('');
+
+	if (!notes) {
+		return '';
+	}
+
+	return html`<h3>polyfill-library notes : </h3>${notes}`;
 }
 
 function polyfillRowHTML(feature) {
@@ -237,8 +355,6 @@ function polyfillRowHTML(feature) {
 
 	return row;
 }
-
-generate();
 
 function mapGlobalScopeFeatureAPI(compat, featureName, polyfillName, feature) {
 	let polyfilled = {};
