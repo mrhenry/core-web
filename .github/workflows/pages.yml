@@ -41,7 +41,7 @@ jobs:
         rm packages/core-web-browser-compat/lib/index.html
         # Checkout pages branches
         git checkout pages 2>/dev/null || git checkout -b pages
-        git pull origin pages || true
+        git reset --hard origin/pages
         # Clean pages branch
         find . -name "node_modules" -type d -prune -exec rm -rf '{}' +
         git ls-files -z | xargs -0 rm -f || true
