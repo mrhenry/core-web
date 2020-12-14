@@ -1,7 +1,13 @@
+import Type from "@mrhenry/core-web/helpers/_ESAbstract.Type";
 
 // _ESAbstract.ToInteger
+/* global Type */
 // 7.1.4. ToInteger ( argument )
 function ToInteger(argument) { // eslint-disable-line no-unused-vars
+	if (Type(argument) === 'symbol') {
+		throw new TypeError('Cannot convert a Symbol value to a number');
+	}
+	
 	// 1. Let number be ? ToNumber(argument).
 	var number = Number(argument);
 	// 2. If number is NaN, return +0.

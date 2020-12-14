@@ -82,7 +82,7 @@ if (!("Blob"in self&&function(){try{return new Blob,!0}catch(n){return!1}}()&&fu
 			FileException.prototype[file_ex_codes[file_ex_code]] = file_ex_code + 1;
 		}
 		// Polyfill URL
-		if (!real_URL.createObjectURL) {
+		if (!view.URL) {
 			URL = view.URL = function (uri) {
 				var
 					uri_info = document.createElementNS("http://www.w3.org/1999/xhtml", "a"),
@@ -99,6 +99,7 @@ if (!("Blob"in self&&function(){try{return new Blob,!0}catch(n){return!1}}()&&fu
 				return uri_info;
 			};
 		}
+
 		URL.createObjectURL = function (blob) {
 			var
 				type = blob.type,

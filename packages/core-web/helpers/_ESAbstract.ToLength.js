@@ -1,4 +1,5 @@
 import ToInteger from "@mrhenry/core-web/helpers/_ESAbstract.ToInteger";
+import Type from "@mrhenry/core-web/helpers/_ESAbstract.Type";
 
 // _ESAbstract.ToLength
 /* global ToInteger */

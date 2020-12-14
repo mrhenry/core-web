@@ -3,7 +3,7 @@ import Type from "@mrhenry/core-web/helpers/_ESAbstract.Type";
 // _ESAbstract.GetSubstitution
 /* global Type */
 // 21.1.3.17.1 GetSubstitution ( matched, str, position, captures, namedCaptures, replacement )
-(function() {
+var GetSubstitution = (function() { // eslint-disable-line no-unused-vars
 	function isDigit(string) {
 		return /^[0-9]$/.test(string);
 	}
@@ -73,5 +73,5 @@ import Type from "@mrhenry/core-web/helpers/_ESAbstract.Type";
 		// 12. Return result.
 		return result;
 	};
-}())
+}());
 export default GetSubstitution;
