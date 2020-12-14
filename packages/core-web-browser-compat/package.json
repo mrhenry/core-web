@@ -1,9 +1,7 @@
 {
   "name": "core-web-browser-compat",
   "version": "0.3.19",
-  "description": "> TODO: description",
   "author": "romainmenke <romainmenke@gmail.com>",
-  "homepage": "https://github.com/mrhenry/core-web#readme",
   "license": "MIT",
   "main": "lib/core-web-browser-compat.js",
   "private": true,
@@ -14,9 +12,6 @@
   "files": [
     "lib"
   ],
-  "publishConfig": {
-    "registry": "https://registry.yarnpkg.com"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/mrhenry/core-web.git"
