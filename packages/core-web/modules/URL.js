@@ -416,6 +416,10 @@ if("a=1"===String(c))return!0}}return!1}catch(h){return!1}})(self)
         },
         origin: {
           get: function () {
+            if (this.protocol.toLowerCase() === "data:") {
+              return null
+            }
+
             if ('origin' in instance) return instance.origin;
             return this.protocol + '//' + this.host;
           },
