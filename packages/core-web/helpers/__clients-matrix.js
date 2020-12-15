@@ -193,7 +193,12 @@ module.exports = {
     ],
     "versions": {
       "12.0.0": {
-        "features": []
+        "features": [
+          {
+            "name": "HTMLPictureElement",
+            "detectSource": "\"HTMLPictureElement\"in self||\"picturefill\"in self\n"
+          }
+        ]
       },
       "13.0.0": {
         "features": [
@@ -224,6 +229,10 @@ module.exports = {
           {
             "name": "Element.prototype.closest",
             "detectSource": "\"document\"in self&&\"closest\"in document.documentElement\n"
+          },
+          {
+            "name": "Element.prototype.matches",
+            "detectSource": "\"document\"in self&&\"matches\"in document.documentElement\n"
           },
           {
             "name": "HTMLTemplateElement"
@@ -297,10 +306,6 @@ module.exports = {
             "detectSource": "\"replace\"in(document.createElement(\"div\").classList||{})\n"
           },
           {
-            "name": "Element.prototype.matches",
-            "detectSource": "\"document\"in self&&\"matches\"in document.documentElement\n"
-          },
-          {
             "name": "Element.prototype.toggleAttribute",
             "detectSource": "\"document\"in self&&\"toggleAttribute\"in document.documentElement\n"
           }
@@ -309,8 +314,24 @@ module.exports = {
       "18.0.0": {
         "features": [
           {
+            "name": "Blob",
+            "detectSource": "\"Blob\"in self&&function(){try{return new Blob,!0}catch(n){return!1}}()&&function(){try{return Blob(),!1}catch(n){return!0}}()\n"
+          },
+          {
             "name": "DOMRect",
             "detectSource": "\"DOMRect\"in self&&function(e){try{return new e}catch(t){return!1}}(self.DOMRect)\n"
+          },
+          {
+            "name": "EventSource",
+            "detectSource": "\"EventSource\"in self&&\"function\"==typeof self.EventSource\n"
+          },
+          {
+            "name": "HTMLCanvasElement.prototype.toBlob",
+            "detectSource": "\"toBlob\"in HTMLCanvasElement.prototype\n"
+          },
+          {
+            "name": "ResizeObserver",
+            "detectSource": "\"ResizeObserver\"in self\n"
           },
           {
             "name": "TextEncoder",
@@ -323,6 +344,30 @@ module.exports = {
           {
             "name": "UserTiming",
             "detectSource": "\"performance\"in self&&\"function\"==typeof self.performance.getEntriesByType&&\"function\"==typeof self.performance.mark\n"
+          },
+          {
+            "name": "WebAnimations",
+            "detectSource": "\"function\"==typeof document.head.animate\n"
+          },
+          {
+            "name": "globalThis",
+            "detectSource": "\"object\"==typeof globalThis\n"
+          },
+          {
+            "name": "queueMicrotask",
+            "detectSource": "\"queueMicrotask\"in self\n"
+          },
+          {
+            "name": "requestIdleCallback",
+            "detectSource": "\"requestIdleCallback\"in self\n"
+          },
+          {
+            "name": "screen.orientation",
+            "detectSource": "\"screen\"in self&&\"orientation\"in self.screen&&\"object\"==typeof self.screen.orientation\n"
+          },
+          {
+            "name": "smoothscroll",
+            "detectSource": "\"document\"in self&&\"documentElement\"in self.document&&\"style\"in self.document.documentElement&&\"scrollBehavior\"in document.documentElement.style||function(){try{var e=!1,t={top:1,left:0}\nObject.defineProperty(t,\"behavior\",{get:function(){return e=!0,\"smooth\"},enumerable:!0})\nvar n=document.createElement(\"DIV\"),o=document.createElement(\"DIV\")\nreturn n.setAttribute(\"style\",\"height: 1px; overflow: scroll;\"),o.setAttribute(\"style\",\"height: 2px; overflow: scroll;\"),n.appendChild(o),n.scrollTo(t),e}catch(l){return!1}}()\n"
           },
           {
             "name": "~shadydom"
@@ -374,10 +419,6 @@ module.exports = {
           {
             "name": "Element.prototype.previousElementSibling",
             "detectSource": "\"document\"in self&&\"previousElementSibling\"in document.documentElement\n"
-          },
-          {
-            "name": "HTMLPictureElement",
-            "detectSource": "\"HTMLPictureElement\"in self||\"picturefill\"in self\n"
           },
           {
             "name": "MutationObserver",
