@@ -1,9 +1,8 @@
 name: 'Build'
 on:
   push:
-    branches:
-    - '*'
-    - '!pages'
+    branches-ignore:
+    - 'pages'
 
 jobs:
   ubuntu-job:

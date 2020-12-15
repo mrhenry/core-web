@@ -24,6 +24,6 @@
   },
   "dependencies": {
     "@mdn/browser-compat-data": "^3.0.0",
-    "polyfill-library": "^3.99.0"
+    "polyfill-library": "^3.100.0"
   }
 }
