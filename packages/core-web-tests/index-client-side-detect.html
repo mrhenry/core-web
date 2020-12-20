@@ -51,10 +51,13 @@ try{var a=new e.URL("http://example.com")
 if("href"in a&&"searchParams"in a){var r=new URL("http://example.com")
 if(r.search="a=1&b=2","http://example.com/?a=1&b=2"===r.href&&(r.search="","http://example.com/"===r.href)){var t=new e.URLSearchParams("a=1"),c=new e.URLSearchParams(t)
 if("a=1"===String(c))return!0}}return!1}catch(h){return!1}})(self)) &&
-	("TextEncoder"in self&&"TextDecoder"in self) &&
-	("performance"in self&&"function"==typeof self.performance.getEntriesByType&&"function"==typeof self.performance.mark) &&
+	("ResizeObserver"in self) &&
+	("queueMicrotask"in self) &&
+	("object"==typeof globalThis) &&
 	("HTMLPictureElement"in self||"picturefill"in self) &&
-	("toBlob"in HTMLCanvasElement.prototype)
+	("performance"in self&&"function"==typeof self.performance.getEntriesByType&&"function"==typeof self.performance.mark) &&
+	("TextEncoder"in self&&"TextDecoder"in self) &&
+	("DOMTokenList"in self&&"forEach"in self.DOMTokenList.prototype)
 )
  {
 		var ref = window.document.getElementsByTagName( 'script' )[ 0 ];
@@ -75,15 +78,21 @@ if("a=1"===String(c))return!0}}return!1}catch(h){return!1}})(self)) &&
 	if (
 	("location"in self&&"origin"in self.location) &&
 	("document"in self&&"hidden"in document&&"visibilityState"in document) &&
-	("HTMLTemplateElement"in self) &&
 	("requestAnimationFrame"in self) &&
 	("screen"in self&&"orientation"in self.screen&&"object"==typeof self.screen.orientation) &&
+	("document"in self&&"cloneNode"in document.documentElement&&function(){var e=document.createElement("div"),n=document.createElement("input")
+n.type="radio",n.checked=!0,e.appendChild(n)
+var c,t=n.cloneNode(!1)
+try{c=e.cloneNode()}catch(d){return!1}return t.checked&&void 0!==c&&0===c.childNodes.length}()) &&
+	("HTMLPictureElement"in self||"picturefill"in self) &&
 	("navigator"in self&&"sendBeacon"in navigator) &&
 	("document"in self&&"closest"in document.documentElement) &&
 	("EventSource"in self&&"function"==typeof self.EventSource) &&
 	("toBlob"in HTMLCanvasElement.prototype) &&
 	((function(n){if(!("Event"in n))return!1
-try{return new Event("click"),!0}catch(t){return!1}})(self))
+try{return new Event("click"),!0}catch(t){return!1}})(self)) &&
+	("document"in self&&"classList"in document.documentElement&&"Element"in self&&"classList"in Element.prototype&&function(){var e=document.createElement("span")
+return e.classList.add("a","b"),e.classList.contains("b")}())
 )
  {
 		var ref = window.document.getElementsByTagName( 'script' )[ 0 ];
