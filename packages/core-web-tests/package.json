@@ -12,7 +12,7 @@
     "@mrhenry/babel-plugin-core-web": "^0.3.20",
     "@types/qunit": "2.11.x",
     "babel-loader": "^8.2.2",
-    "browserstack-runner": "^0.9.3",
+    "browserstack-runner": "^0.9.4",
     "core-js": "^3.8.1",
     "eslint": "^7.15.0",
     "regenerator-runtime": "0.13.x",
