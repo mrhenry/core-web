@@ -23,7 +23,7 @@
     "url": "https://github.com/mrhenry/core-web/issues"
   },
   "dependencies": {
-    "@mdn/browser-compat-data": "^3.0.0",
+    "@mdn/browser-compat-data": "^3.0.1",
     "polyfill-library": "^3.100.0"
   }
 }
