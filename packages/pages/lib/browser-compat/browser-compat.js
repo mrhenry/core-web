@@ -46,7 +46,7 @@ function generate() {
 		tables = tables + tableHTML(feature);
 	});
 
-	fs.writeFileSync(path.join(__dirname, 'index.html'), pageHTML(tables));
+	fs.writeFileSync(path.join(__dirname, '../../dist/browser-compat/index.html'), pageHTML(tables));
 }
 
 function handleFeature(compat, name, feature) {
