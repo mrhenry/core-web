@@ -12,7 +12,7 @@
 	}
 }
 
-@media (min-width: 1280) {
+@media (min-width: 1280px) {
 	.wrapper {
 		padding-left: calc((100% - 1184px) / 2);
 		padding-right: calc((100% - 1184px) / 2);
