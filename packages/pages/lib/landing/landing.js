@@ -21,6 +21,9 @@ function generate() {
 </head>
 <body>
 	hello
+
+	<p ua-target="2020">No polyfills!</p>
+	<p ua-target="2014">IntersectionObserver Polyfilled!</p>
 </body>
 </html>
 `);
@@ -28,14 +31,11 @@ function generate() {
 
 function indexJs() {
 	if (process.env.GITHUB_ACTIONS) {
-		return html`<meta name="ua-targets" content="2020 2019 2018 2014 legacy">
+		return html`<meta name="ua-targets" content="2020 2014">
 <script src="./index.2020.js" ua-target="2020"></script>
-<script src="./index.2019.js" ua-target="2019"></script>
-<script src="./index.2018.js" ua-target="2018"></script>
 <script src="./index.2014.js" ua-target="2014"></script>
-<script src="./index.legacy.js" ua-target="legacy"></script>
 `;
 	}
 
-	return html`<script src="./index.js"></script>`;
+	return html`<script src="../lib/js/index.js"></script>`;
 }

@@ -17,7 +17,7 @@
     "url": "git+https://github.com/mrhenry/core-web.git"
   },
   "scripts": {
-    "build": "node lib/landing/landing.js && node lib/browser-compat/browser-compat.js"
+    "build": "node lib/landing/landing.js && node lib/browser-compat/browser-compat.js && webpack"
   },
   "bugs": {
     "url": "https://github.com/mrhenry/core-web/issues"
