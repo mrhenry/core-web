@@ -20,7 +20,7 @@ function generate() {
 	${indexJs()}
 </head>
 <body>
-	
+	hello!
 </body>
 </html>
 `);
