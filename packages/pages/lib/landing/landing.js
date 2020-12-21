@@ -31,7 +31,11 @@ function generate() {
 	<!-- site header here -->
 
 	<main id="main-content">
-		<h1>HELLO WORLD 💰</h1>
+		<div class="section">
+			<div class="wrapper">
+				<h1>HELLO WORLD 💰</h1>
+			</div>
+		</div>
 	</main>
 
 	<!-- site footer here -->

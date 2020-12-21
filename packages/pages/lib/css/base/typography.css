@@ -5,5 +5,33 @@
 
 body {
 	font-family: sans-serif;
-	font-size: 1rem
+	font-size: 1rem;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: var(--font-sans);
+	margin-bottom: 0.875rem;
+	margin-top: 0.875rem;
+
+	
+}
+
+@media (--mq-from-small) {
+	h1, h2, h3, h4, h5, h6 {
+		margin-bottom: 1.5rem;
+		margin-top: 1.5rem;
+	}
+}
+
+h1:first-child, h2:first-child, h3:first-child, h4:first-child, h5:first-child, h6:first-child {
+	margin-top: 0;
+}
+
+h1:last-child, h2:last-child, h3:last-child, h4:last-child, h5:last-child, h6:last-child {
+	margin-bottom: 0;
+}
+
+h1:only-child, h2:only-child, h3:only-child, h4:only-child, h5:only-child, h6:only-child {
+	margin-bottom: 0;
+	margin-top: 0;
 }
