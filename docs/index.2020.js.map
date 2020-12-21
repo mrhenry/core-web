@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack:///./js/index.js"],"names":["console","log","IntersectionObserver"],"mappings":"AAAAA,QAAQC,IAAI,UACZ,IAAIC,sBAAqB","file":"index.2020.js","sourcesContent":["console.log('hello!');\nnew IntersectionObserver(() => { });\n"],"sourceRoot":""}

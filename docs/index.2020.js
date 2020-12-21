@@ -1,1 +1,2 @@
-console.log('2020')
+console.log("hello!"),new IntersectionObserver((()=>{}));
+//# sourceMappingURL=index.2020.js.map
