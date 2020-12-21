@@ -47,6 +47,7 @@ jobs:
         rm -rf ./packages
         # Copy contents
         cp -r $GITHUB_WORKSPACE/pages/ ./docs/
+        rm -rf $GITHUB_WORKSPACE/pages/
         # Submit
         git add .
         git commit -m "update pages"
