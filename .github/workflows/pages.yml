@@ -36,9 +36,7 @@ jobs:
         git config user.name github-actions
         git config user.email github-actions@github.com
         # Move contents to temp files
-        browsercompatindex=$(mktemp /tmp/browser-compat-index.XXXXXXXXXX)
-        echo "$(cat packages/core-web-browser-compat/lib/index.html)" >> $browsercompatindex
-        rm packages/core-web-browser-compat/lib/index.html
+        cp -r packages/pages/ $GITHUB_WORKSPACE/pages/
         # Checkout pages branches
         git checkout pages 2>/dev/null || git checkout -b pages
         git reset --hard origin/pages
@@ -48,8 +46,7 @@ jobs:
         git ls-tree --name-only -d -r -z HEAD | sort -rz | xargs -0 rmdir || true
         rm -rf ./packages
         # Copy contents
-        mkdir -p ./docs/browsercompat
-        cp $browsercompatindex ./docs/browsercompat/index.html
+        cp -r $GITHUB_WORKSPACE/pages/ ./docs/
         # Submit
         git add .
         git commit -m "update pages"

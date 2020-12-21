@@ -5,8 +5,14 @@ install:
 generate: yarn
 	(cd packages/core-web-generator && yarn build)
 
-build-browser-compat: yarn
-	(cd packages/core-web-browser-compat && yarn build)
+build-pages: yarn
+	mkdir -p packages/pages/dist/browser-compat
+	echo "console.log('2020')" > packages/pages/dist/index.2020.js
+	echo "console.log('2019')" > packages/pages/dist/index.2019.js
+	echo "console.log('2018')" > packages/pages/dist/index.2018.js
+	echo "console.log('2014')" > packages/pages/dist/index.2014.js
+	echo "console.log('legacy')" > packages/pages/dist/index.legacy.js
+	(cd packages/pages && yarn build)
 
 build-example: yarn
 	(cd packages/core-web-example && yarn build)
