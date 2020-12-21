@@ -34,7 +34,7 @@ function generate() {
 
 function indexJs() {
 	if (process.env.GITHUB_ACTIONS) {
-		return html`<meta name="ua-targets" content="2020 2014">
+		return html`<meta name="ua-targets" content="2020 2018 2014 2013 legacy">
 <script src="./index.2020.js" ua-target="2020"></script>
 <script src="./index.2018.js" ua-target="2018"></script>
 <script src="./index.2014.js" ua-target="2014"></script>
