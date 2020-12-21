@@ -88,7 +88,6 @@ const targets = [
 			opera: '72',
 			safari: '14',
 			samsung: '13.0',
-			android: '81',
 		},
 	},
 	{
