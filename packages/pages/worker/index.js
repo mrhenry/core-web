@@ -13,12 +13,12 @@ async function handleRequest(request) {
 	const resp = await fetch('https://mrhenry.github.io/core-web' + new URL(request.url).pathname);
 
 	if (!request.headers.get('User-Agent')) {
-		return cleanupIfNoMatch(resp);
+		return cleanupIfNoUA(resp);
 	}
 
 	const ua = parser(request.headers.get('User-Agent'));
 	if (!ua || !ua.browser) {
-		return cleanupIfNoMatch(resp);
+		return cleanupIfNoUA(resp);
 	}
 
 	let uaBrowserName = ua.browser.name.toLowerCase();
@@ -33,10 +33,6 @@ async function handleRequest(request) {
 
 		return false;
 	});
-
-	if (!possibleTargets.length) {
-		return cleanupIfNoMatch(resp);
-	}
 
 	let pageTarget;
 
@@ -54,7 +50,7 @@ async function handleRequest(request) {
 		.on('[ua-target]', {
 			element(element) {
 				const target = element.getAttribute('ua-target');
-				if (!pageTarget && target == 'fallback') {
+				if (!pageTarget && target === 'fallback') {
 					// keep fallbacks even when there isn't a matching target
 					return;
 				}
@@ -73,7 +69,7 @@ async function handleRequest(request) {
 		.transform(resp);
 }
 
-function cleanupIfNoMatch(resp) {
+function cleanupIfNoUA(resp) {
 	return new HTMLRewriter()
 		.on('[ua-target]', {
 			element(element) {
