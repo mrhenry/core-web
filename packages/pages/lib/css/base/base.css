@@ -1,0 +1,51 @@
+body {
+	background-color: azure;
+	box-sizing: border-box;
+	color: navy;
+	min-height: 100vh;
+	position: relative;
+}
+
+@media (prefers-color-scheme: dark) {
+	body {
+		background-color: darkslateblue;
+		color: coral;
+	}
+}
+
+textarea {
+	resize: none;
+}
+
+hr {
+	background-color: currentColor;
+	border: none;
+	height: 1px;
+}
+
+img,
+video {
+	display: block;
+	max-width: 100%;
+}
+
+table,
+th,
+td {
+	border: 1px solid currentColor;
+}
+
+table {
+	border-collapse: collapse;
+	box-sizing: border-box;
+	margin: 2rem 0;
+	max-width: 100%;
+	width: 100%;
+}
+
+th,
+td {
+	box-sizing: border-box;
+	padding: 2rem;
+	text-align: left;
+}

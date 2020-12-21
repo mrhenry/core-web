@@ -18,9 +18,23 @@ function generate() {
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Document</title>
 	${indexJs()}
+	<link rel="stylesheet" href="./style.css">
 </head>
 <body>
-	hello
+	<a
+		class="skip-to-main-content-link"
+		href="#main-content"
+	>
+		Skip to main content
+	</a>
+
+	<!-- site header here -->
+
+	<main id="main-content">
+		<h1>HELLO WORLD 💰</h1>
+	</main>
+
+	<!-- site footer here -->
 </body>
 </html>
 `);
