@@ -39,12 +39,11 @@ async function handleRequest(request) {
 	}
 
 	let pageTarget;
-	let buildTargets;
 
 	return new HTMLRewriter()
-		.on('[name="ua-targets"]', {
+		.on('meta[name="ua-targets"]', {
 			element(element) {
-				buildTargets = (element.getAttribute('content') || '').split(' ');
+				const buildTargets = (element.getAttribute('content') || '').split(' ');
 				for (const target of possibleTargets) {
 					if (buildTargets.indexOf(target.name) > -1 && !pageTarget) {
 						pageTarget = target;
@@ -55,13 +54,19 @@ async function handleRequest(request) {
 		.on('[ua-target]', {
 			element(element) {
 				const target = element.getAttribute('ua-target');
+				if (!pageTarget && target == 'fallback') {
+					// keep fallbacks even when there isn't a matching target
+					return;
+				}
+
 				if (!pageTarget) {
 					element.remove();
 					return;
 				}
 
-				if (pageTarget && target !== pageTarget.name) {
+				if (target !== pageTarget.name) {
 					element.remove();
+					return;
 				}
 			},
 		})
@@ -165,7 +170,7 @@ const targets = [
 		},
 	},
 	{
-		name: 'legacy',
+		name: 'fallback',
 		browsers: {
 			chrome: '17',
 			firefox: '10',
