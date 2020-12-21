@@ -1,0 +1,9 @@
+{
+  "name": "twilight-silence-3730",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "semver": "^7.3.4",
+    "ua-parser-js": "^0.7.23"
+  }
+}
