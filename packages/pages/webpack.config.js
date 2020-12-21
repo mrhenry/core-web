@@ -96,7 +96,7 @@ module.exports = [
 	}),
 
 	configBuilder({
-		name: 'legacy',
+		name: 'fallback',
 		target: [
 			'web',
 			'browserslist:Chrome 17 or Firefox 10 or IE 9 or Opera 12 or Safari 5.1 or Android 4'
