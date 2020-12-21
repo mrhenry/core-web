@@ -61,5 +61,5 @@ function indexJs() {
 `;
 	}
 
-	return html`<script src="../lib/js/index.js"></script>`;
+	return html`<script src="./index.2020.js"></script>`;
 }
