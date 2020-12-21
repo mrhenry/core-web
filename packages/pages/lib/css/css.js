@@ -10,6 +10,8 @@ async function main() {
 }
 
 function generate() {
+	fs.writeFileSync(path.join(__dirname, '../../dist/style.css'), '');
+	
 	fs.truncateSync(path.join(__dirname, '../../dist/style.css'));
 	fs.readdirSync(path.join(__dirname, './base/')).forEach((file) => {
 		const filePath = path.join(__dirname, './base/' + file);
