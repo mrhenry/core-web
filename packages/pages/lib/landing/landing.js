@@ -4,6 +4,8 @@ const fs = require('fs');
 const path = require('path');
 const html = require('../html/html');
 
+const siteHeader = require('./templates/site-header');
+
 main();
 
 async function main() {
@@ -28,7 +30,24 @@ function generate() {
 		Skip to main content
 	</a>
 
-	<!-- site header here -->
+	${siteHeader([
+		{
+			title: 'what',
+			url: '/#what'
+		},
+		{
+			title: 'why',
+			url: '/#why'
+		},
+		{
+			title: 'roadmap',
+			url: '/#roadmap'
+		},
+		{
+			title: 'contact',
+			url: '/#contact'
+		},
+	])}
 
 	<main id="main-content">
 		<div class="section">
