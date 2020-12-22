@@ -1,0 +1,21 @@
+.site-footer {
+	background-color: #e8aebd;
+	color: black;
+}
+
+@media (max-width: 767px) {
+	.site-footer {
+		align-items: flex-start;
+		display: flex;
+	}
+
+	.site-footer__logo-container {
+		flex-basis: 100px;
+		flex-shrink: 0;
+	}
+
+	.site-footer__content-container {
+		flex-basis: auto;
+		flex-grow: 1;
+	}
+}

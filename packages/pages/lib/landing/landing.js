@@ -63,7 +63,7 @@ function generate() {
 		</div>
 	</main>
 
-	<!-- site footer here -->
+	${siteFooter()}
 </body>
 </html>
 `);
