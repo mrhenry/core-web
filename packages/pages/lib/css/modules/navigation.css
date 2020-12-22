@@ -1,0 +1,23 @@
+.navigation {
+    margin-left: auto;
+}
+
+.navigation__list {
+    align-items: center;
+    display: flex;
+    list-style: none;
+    margin: 0;
+}
+
+.navigation__list-item {
+    padding-left: 0;
+}
+
+.navigation__list-item + .navigation__list-item {
+    margin-left: 1.5rem;
+}
+
+.navigation__link {
+    color: currentColor;
+    font-family: sans-serif;
+}

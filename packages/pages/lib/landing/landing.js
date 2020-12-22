@@ -53,17 +53,17 @@ function generate() {
 		<div class="section">
 			<div class="wrapper">
 				<h1>HELLO WORLD 💰</h1>
+
+				<p ua-target="2020">No polyfills!</p>
+				<p ua-target="2018">7KB - IntersectionObserver</p>
+				<p ua-target="2014">7KB - IntersectionObserver</p>
+				<p ua-target="2013">11KB - Event, IntersectionObserver, console, console.log, performance.now</p>
+				<p ua-target="legacy">11KB - Event, IntersectionObserver, Window, console, console.log, performance.now</p>
 			</div>
 		</div>
 	</main>
 
 	<!-- site footer here -->
-
-	<p ua-target="2020">No polyfills!</p>
-	<p ua-target="2018">7KB - IntersectionObserver</p>
-	<p ua-target="2014">7KB - IntersectionObserver</p>
-	<p ua-target="2013">11KB - Event, IntersectionObserver, console, console.log, performance.now</p>
-	<p ua-target="legacy">11KB - Event, IntersectionObserver, Window, console, console.log, performance.now</p>
 </body>
 </html>
 `);
