@@ -12,7 +12,7 @@ module.exports = function hero() {
 			<div class="hero__content">
 				<div class="hero__text">
 					<p>
-						Must go faster. Must go faster. Remind me to thank John for a lovely weekend. Did he just throw my cat out of the window? So you two dig up, dig up dinosaurs?
+						core-web is a set of tools to bundle polyfills together with your javascript code. Just define a set of browsers and automatically receive everything you need.
 					</p>
 				</div>
 
