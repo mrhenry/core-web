@@ -5,6 +5,7 @@ const path = require('path');
 const html = require('../html/html');
 
 const siteHeader = require('./templates/site-header');
+const siteFooter = require('./templates/site-footer');
 
 main();
 
