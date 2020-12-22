@@ -7,7 +7,6 @@ module.exports = {
 			title: 'One less blocking http request',
 			content: html`
 Most visitors use a modern browser which doesn't need any polyfills.
-When using ${polyfillIoLink()} you might have unnecessary requests.
 Your site can be faster for most visitors by bundling polyfills.
 `.trim()
 		},
@@ -21,7 +20,7 @@ Converting this to a build depedency reduces this.
 		{
 			title: 'Reproducible builds',
 			content: html`
-...
+Your code at any given commit will have the exact same output.
 `.trim()
 		},
 		{
