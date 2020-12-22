@@ -7,7 +7,8 @@ module.exports = {
 			title: 'One less blocking http request',
 			content: html`
 Most visitors use a modern browser which doesn't need any polyfills.
-When using ${polyfillIoLink()} you will always do one unnecessary request.
+When using ${polyfillIoLink()} you might have unnecessary requests.
+Your site can be faster for most visitors by bundling polyfills.
 `.trim()
 		},
 		{
