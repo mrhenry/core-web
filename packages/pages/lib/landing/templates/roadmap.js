@@ -1,14 +1,22 @@
 const html = require('../../html/html');
 
 function renderMilestones(milestones) {
+	let hasCurrent = false;
+	let hasFuture = false;
 	let output = "";
 	milestones.forEach((milestone, index) => {
-		if (index > 0 && milestones[index-1].type !== milestone.type) {
-			output += '<h4 class="roadmap__future">Future Milestones</h4>';
+		if ('current' === milestone.type && !hasCurrent) {
+			hasCurrent = true;
+			output += '<h4 class="roadmap__future">Where we are</h4>';
 		}
 
+		// if ('future' === milestone.type && !hasFuture) {
+		// 	hasFuture = true;
+		// 	output += '<h4 class="roadmap__future">Future Milestones</h4>';
+		// }
+
 		output += `
-			<article class="milestone" data-emoji="${milestone.emoji}" aria-description="${milestone.type} milestone">
+			<article class="milestone milestone--${milestone.type}" data-emoji="${milestone.emoji}" aria-description="${milestone.type} milestone">
 				<h3 class="milestone__title">${milestone.title}</h3>
 				<div class="milestone__description">${milestone.description}</div>
 			</article>

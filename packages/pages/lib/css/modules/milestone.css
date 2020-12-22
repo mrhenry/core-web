@@ -13,8 +13,8 @@
 	}
 }
 
-.milestone:after,
-.milestone:before {
+.milestone::after,
+.milestone::before {
 	border-radius: 50%;
 	left: -1.5rem;
 	overflow: hidden;
@@ -23,14 +23,14 @@
 	transform: translateX(-50%);
 }
 
-.milestone:before {
+.milestone::before {
 	background-color: azure;
 	content: '';
 	height: 3rem;
 	width: 3rem;
 }
 
-.milestone:after {
+.milestone::after {
 	border: 3px dotted currentColor;
 	content: attr(data-emoji);
 	font-size: 1.125rem;
@@ -40,8 +40,12 @@
 	width: 2.625rem;
 }
 
+.milestone.milestone--past::after {
+	border-style: solid;
+}
+
 @media (prefers-color-scheme: dark) {
-	.milestone:before {
+	.milestone::before {
 		background-color: darkslateblue;
 	}
 }
@@ -54,7 +58,7 @@
 	margin-top: 1.5rem;
 }
 
-.milestone__description:before {
+.milestone__description::before {
 	background-color: currentColor;
 	content: '';
 	height: 100%;

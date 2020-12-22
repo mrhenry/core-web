@@ -69,10 +69,24 @@ function generate() {
 			<div class="wrapper">
 				${roadmap([
 					{
+						emoji: '🔨',
+						type: 'past',
+						title: 'Build it',
+						description: html`<p>Yes, Yes, without the oops! Yes, Yes, without the oops! Do you have any idea how long it takes those cups to decompose.
+						Must go faster. Remind me to thank John for a lovely weekend. You really think you can fly that thing? My dad once told
+						me, laugh and the world laughs with you, Cry, and I'll give you something to cry about you little bastard!</p>`
+					},
+					{
+						emoji: '🐛',
+						type: 'past',
+						title: 'Test it',
+						description: html`<p>Test in production and use our unique insights to fix issues upstream.</p>`
+					},
+					{
 						emoji: '🚀',
 						type: 'current',
 						title: '1Y in production',
-						description: `<p>Yes, Yes, without the oops! Yes, Yes, without the oops! Do you have any idea how long it takes those cups to decompose.
+						description: html`<p>Yes, Yes, without the oops! Yes, Yes, without the oops! Do you have any idea how long it takes those cups to decompose.
 						Must go faster. Remind me to thank John for a lovely weekend. You really think you can fly that thing? My dad once told
 						me, laugh and the world laughs with you, Cry, and I'll give you something to cry about you little bastard!</p>`
 					},
@@ -80,7 +94,7 @@ function generate() {
 						emoji: '🔧',
 						type: 'future',
 						title: 'Stable API',
-						description: `<p>Remind me to thank John for a lovely weekend. Eventually, you do plan to have dinosaurs on your dinosaur tour, right?
+						description: html`<p>Remind me to thank John for a lovely weekend. Eventually, you do plan to have dinosaurs on your dinosaur tour, right?
 						Checkmate... Yes, Yes, without the oops! Did he just throw my cat out of the window? What do they got in there? King
 						Kong? Yes, Yes, without the oops!</p>`
 					},
@@ -88,7 +102,7 @@ function generate() {
 						emoji: '🔮',
 						type: 'future',
 						title: 'V1 release',
-						description: `<p>Eventually, you do plan to have dinosaurs on your dinosaur tour, right? God creates dinosaurs. God destroys dinosaurs.
+						description: html`<p>Eventually, you do plan to have dinosaurs on your dinosaur tour, right? God creates dinosaurs. God destroys dinosaurs.
 						God creates Man. Man destroys God. Man creates Dinosaurs. Do you have any idea how long it takes those cups to
 						decompose. Must go faster... go, go, go, go, go!</p>`
 					},
