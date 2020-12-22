@@ -31,10 +31,10 @@
 	}
 
 	.hero__text {
-		flex-basis: 420px;
+		flex-basis: 50%;
 		flex-grow: 0;
 		flex-shrink: 0;
-		max-width: none;
+		max-width: 420px;
 	}
 
 	.hero__picture {
