@@ -21,7 +21,7 @@ Converting this to a build depedency reduces this.
 		{
 			title: 'Reproducible builds',
 			content: html`
-Your code at any given commit will have the exact same output.
+When an external polyfill provider changes or updates there code they potentially introduce bugs impacting your code. Packaging polyfills with your code prevents this from hapening.
 `.trim()
 		},
 		{
