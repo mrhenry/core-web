@@ -7,7 +7,8 @@ module.exports = {
 			title: 'One less blocking http request',
 			content: html`
 Most visitors use a modern browser which doesn't need any polyfills.
-Your site can be faster for most visitors by bundling polyfills.
+When polyfills are bundled there is no need for an extra http request.
+For most visitors your pages will render faster.
 `.trim()
 		},
 		{
