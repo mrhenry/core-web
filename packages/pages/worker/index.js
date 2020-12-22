@@ -10,63 +10,67 @@ addEventListener('fetch', event => {
  * @param {Request} request
  */
 async function handleRequest(request) {
-	const resp = await fetch('https://mrhenry.github.io/core-web' + new URL(request.url).pathname);
+	try {
+		const resp = await fetch('https://mrhenry.github.io/core-web' + new URL(request.url).pathname);
 
-	if (!request.headers.get('User-Agent')) {
-		return cleanupIfNoUA(resp);
-	}
-
-	const ua = parser(request.headers.get('User-Agent'));
-	if (!ua || !ua.browser) {
-		return cleanupIfNoUA(resp);
-	}
-
-	let uaBrowserName = ua.browser.name.toLowerCase();
-	if (uaBrowserName === 'mobile safari') {
-		uaBrowserName = 'safari';
-	}
-
-	let possibleTargets = targets.filter((target) => {
-		if (target.browsers[uaBrowserName] && semver.satisfies(semver.coerce(ua.browser.major), '>= ' + target.browsers[uaBrowserName])) {
-			return true;
+		if (!request.headers.get('User-Agent')) {
+			return cleanupIfNoUA(resp);
 		}
 
-		return false;
-	});
+		const ua = parser(request.headers.get('User-Agent'));
+		if (!ua || !ua.browser || !ua.browser.name) {
+			return cleanupIfNoUA(resp);
+		}
 
-	let pageTarget;
+		let uaBrowserName = ua.browser.name.toLowerCase();
+		if (uaBrowserName === 'mobile safari') {
+			uaBrowserName = 'safari';
+		}
 
-	return new HTMLRewriter()
-		.on('meta[name="ua-targets"]', {
-			element(element) {
-				const buildTargets = (element.getAttribute('content') || '').split(' ');
-				for (const target of possibleTargets) {
-					if (buildTargets.indexOf(target.name) > -1 && !pageTarget) {
-						pageTarget = target;
+		let possibleTargets = targets.filter((target) => {
+			if (target.browsers[uaBrowserName] && semver.satisfies(semver.coerce(ua.browser.major), '>= ' + target.browsers[uaBrowserName])) {
+				return true;
+			}
+
+			return false;
+		});
+
+		let pageTarget;
+
+		return new HTMLRewriter()
+			.on('meta[name="ua-targets"]', {
+				element(element) {
+					const buildTargets = (element.getAttribute('content') || '').split(' ');
+					for (const target of possibleTargets) {
+						if (buildTargets.indexOf(target.name) > -1 && !pageTarget) {
+							pageTarget = target;
+						}
 					}
-				}
-			},
-		})
-		.on('[ua-target]', {
-			element(element) {
-				const target = element.getAttribute('ua-target');
-				if (!pageTarget && target === 'fallback') {
-					// keep fallbacks even when there isn't a matching target
-					return;
-				}
+				},
+			})
+			.on('[ua-target]', {
+				element(element) {
+					const target = element.getAttribute('ua-target');
+					if (!pageTarget && target === 'fallback') {
+						// keep fallbacks even when there isn't a matching target
+						return;
+					}
 
-				if (!pageTarget) {
-					element.remove();
-					return;
-				}
+					if (!pageTarget) {
+						element.remove();
+						return;
+					}
 
-				if (target !== pageTarget.name) {
-					element.remove();
-					return;
-				}
-			},
-		})
-		.transform(resp);
+					if (target !== pageTarget.name) {
+						element.remove();
+						return;
+					}
+				},
+			})
+			.transform(resp);
+	} catch (error) {
+		return new Response(error.message);
+	}
 }
 
 function cleanupIfNoUA(resp) {
