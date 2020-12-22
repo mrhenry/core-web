@@ -7,7 +7,7 @@ const { nativeTableNotes, polyfillTableNotes } = require('./notes');
 module.exports = function tableHTML(feature) {
 	const tables = feature.data.map((compat) => {
 		return html`
-		<table>
+		<table class="compat-table">
 			<thead>
 				<tr>${headRowHTML(compat)}</tr>
 			</thead>
@@ -17,7 +17,7 @@ module.exports = function tableHTML(feature) {
 			</tbody>
 		</table>
 
-		<div class="notes">
+		<div class="compat-table-notes">
 			${ nativeTableNotes(compat) }
 			${ polyfillTableNotes(compat) }
 		</div>
@@ -25,7 +25,7 @@ module.exports = function tableHTML(feature) {
 	}).join('');
 
 	return html`
-		<h2>${feature.key}</h2>
+		<h3 id="${feature.key}" class="compat-table-header"><a href="#${feature.key}">${feature.key}</a></h3>
 		${tables}
 	`;
 }

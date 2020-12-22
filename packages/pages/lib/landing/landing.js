@@ -24,7 +24,7 @@ function generate() {
 		href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🕸</text></svg>">
 	<title>core-web</title>
 	${indexJs()}
-	<link rel="stylesheet" href="./style.css">
+	<link rel="stylesheet" href="/style.css">
 </head>
 <body>
 	<a
@@ -84,13 +84,13 @@ function generate() {
 function indexJs() {
 	if (process.env.GITHUB_ACTIONS) {
 		return html`<meta name="ua-targets" content="2020 2018 2014 2013 legacy">
-<script src="./index.2020.js" ua-target="2020"></script>
-<script src="./index.2018.js" ua-target="2018"></script>
-<script src="./index.2014.js" ua-target="2014"></script>
-<script src="./index.2013.js" ua-target="2013"></script>
-<script src="./index.legacy.js" ua-target="legacy"></script>
+<script src="/index.2020.js" ua-target="2020"></script>
+<script src="/index.2018.js" ua-target="2018"></script>
+<script src="/index.2014.js" ua-target="2014"></script>
+<script src="/index.2013.js" ua-target="2013"></script>
+<script src="/index.legacy.js" ua-target="legacy"></script>
 `;
 	}
 
-	return html`<script src="./index.2020.js"></script>`;
+	return html`<script src="/index.2020.js"></script>`;
 }
