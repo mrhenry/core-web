@@ -8,7 +8,9 @@ module.exports = function siteHeader(menu) {
 					<a
 						class="logo"
 						href="/"
-						>core-web</a>
+					>
+						core-web
+					</a>
 
 					<nav class="navigation" aria-label="page sections">
 						<ul class="navigation__list">

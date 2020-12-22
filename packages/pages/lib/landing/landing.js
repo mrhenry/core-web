@@ -32,13 +32,17 @@ function generate() {
 		Skip to main content
 	</a>
 
+	<h1 class="u-visually-hidden">
+		core-web
+	</h1>
+
 	${siteHeader([
 		{
-			title: 'what',
+			title: 'what is core-web?',
 			url: '/#what'
 		},
 		{
-			title: 'why',
+			title: 'why use core-web?',
 			url: '/#why'
 		},
 		{
@@ -60,8 +64,6 @@ function generate() {
 
 		<div class="section">
 			<div class="wrapper">
-				<h1>HELLO WORLD 💰</h1>
-
 				<p ua-target="2020">No polyfills!</p>
 				<p ua-target="2018">7KB - IntersectionObserver</p>
 				<p ua-target="2014">7KB - IntersectionObserver</p>

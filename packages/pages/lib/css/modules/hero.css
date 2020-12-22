@@ -1,7 +1,11 @@
-.hero {
+.hero__content {
 	align-items: flex-start;
 	display: flex;
 	flex-direction: column;
+}
+
+.hero__header {
+	margin-bottom: 1.25rem;
 }
 
 .hero__text {
@@ -18,11 +22,15 @@
 }
 
 @media (min-width: 768px) {
-	.hero {
+	.hero__header {
+		margin-bottom: 2rem;
+	}
+
+	.hero__content {
 		align-items: center;
 		flex-direction: row;
 	}
-	
+
 	.hero__text {
 		flex-basis: 420px;
 		flex-grow: 0;
