@@ -5,6 +5,7 @@ const path = require('path');
 const html = require('../html/html');
 
 const siteHeader = require('./templates/site-header');
+const hero = require('./templates/hero');
 
 main();
 
@@ -50,6 +51,12 @@ function generate() {
 	])}
 
 	<main id="main-content">
+		<div class="section">
+			<div class="wrapper">
+				${hero()}
+			</div>
+		</div>
+		
 		<div class="section">
 			<div class="wrapper">
 				<h1>HELLO WORLD 💰</h1>
