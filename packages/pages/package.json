@@ -21,7 +21,8 @@
     "build-css": "node lib/css/css.js",
     "build-js": "webpack",
     "build-fonts": "cp -r ./lib/fonts/ ./dist/fonts/",
-    "build": "yarn build-html && yarn build-css && yarn build-js && yarn build-fonts",
+    "build-images": "cp -r ./lib/images/ ./dist/images/",
+    "build": "yarn build-html && yarn build-css && yarn build-js && yarn build-fonts && yarn build-images",
     "dev-server": "cd ./dist && npx http-server"
   },
   "bugs": {
