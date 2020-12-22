@@ -94,9 +94,7 @@ function generate() {
 						emoji: '🔧',
 						type: 'future',
 						title: 'Stable API',
-						description: html`<p>Remind me to thank John for a lovely weekend. Eventually, you do plan to have dinosaurs on your dinosaur tour, right?
-						Checkmate... Yes, Yes, without the oops! Did he just throw my cat out of the window? What do they got in there? King
-						Kong? Yes, Yes, without the oops!</p>`
+						description: html`<p>We value your time and want to avoid costly migrations. When we ship v1 we want to make sure it sticks.</p>`
 					},
 					{
 						emoji: '🔮',
