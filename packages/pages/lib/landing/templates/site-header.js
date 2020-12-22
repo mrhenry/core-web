@@ -1,5 +1,13 @@
 const html = require('../../html/html');
 
+function navigationListItems(menu) {
+    let output = '';
+    menu.forEach(item => {
+        output += `<li class="navigation__list-item"><a href="${item.url}" class="navigation__link">${item.title}</a></li>`;
+    });
+    return output;
+}
+
 module.exports = function siteHeader(menu) {
     return html`
         <div class="section">
@@ -14,7 +22,7 @@ module.exports = function siteHeader(menu) {
 
                     <nav class="navigation" aria-label="page sections">
                         <ul class="navigation__list">
-                            ${menu.map((item) => `<li class="navigation__list-item"><a href="${item.url}" class="navigation__link">${item.title}</a></li>`).reduce((accumulator,item) => accumulator + item)}
+                            ${navigationListItems(menu)}
                         </ul>
                     </nav>
                 </div>
