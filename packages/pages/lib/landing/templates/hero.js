@@ -5,7 +5,7 @@ module.exports = function hero() {
 		<section id="what" class="hero">
 			<header class="hero__header">
 				<h2>
-					What is <code>core-web</code>?
+					What is <em>core-web</em>?
 				</h2>
 			</header>
 
