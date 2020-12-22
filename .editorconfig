@@ -1,0 +1,19 @@
+[*.php]
+indent_style = tab
+indent_size = 4
+
+[*.twig]
+indent_style = tab
+indent_size = 4
+
+[*.json]
+indent_style = tab
+indent_size = 4
+
+[*.css]
+indent_style = tab
+indent_size = 4
+
+[*.yaml]
+indent_style = space
+indent_size = 2

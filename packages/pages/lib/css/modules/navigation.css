@@ -1,28 +1,28 @@
 @media (max-width: 767px) {
-    .navigation {
-        margin-top: 1.25rem;
-    }
+	.navigation {
+		margin-top: 1.25rem;
+	}
 }
 
 @media (min-width: 768px) {
-    .navigation {
-        margin-left: auto;
-    }
+	.navigation {
+		margin-left: auto;
+	}
 }
 
 .navigation__list {
-    align-items: center;
-    display: flex;
-    list-style: none;
-    margin: 0;
-    padding-left: 0;
+	align-items: center;
+	display: flex;
+	list-style: none;
+	margin: 0;
+	padding-left: 0;
 }
 
 .navigation__list-item + .navigation__list-item {
-    margin-left: 1.5rem;
+	margin-left: 1.5rem;
 }
 
 .navigation__link {
-    color: currentColor;
-    font-family: sans-serif;
+	color: currentColor;
+	font-family: sans-serif;
 }

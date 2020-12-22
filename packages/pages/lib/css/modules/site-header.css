@@ -1,11 +1,11 @@
 .site-header {
-    align-items: center;
-    display: flex;
+	align-items: center;
+	display: flex;
 }
 
 @media (max-width: 767px) {
-    .site-header {
-        align-items: flex-start;
-        flex-direction: column;
-    }
+	.site-header {
+		align-items: flex-start;
+		flex-direction: column;
+	}
 }

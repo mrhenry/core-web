@@ -4,12 +4,11 @@
 }
 
 body {
-	font-family: sans-serif;
+	font-family: 'Atkinson Hyperlegible', monospace;
 	font-size: 1rem;
 }
 
 h1, h2, h3, h4, h5, h6 {
-	font-family: var(--font-sans);
 	margin-bottom: 0.875rem;
 	margin-top: 0.875rem;
 }
