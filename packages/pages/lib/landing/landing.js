@@ -58,6 +58,12 @@ function generate() {
 	</main>
 
 	<!-- site footer here -->
+
+	<p ua-target="2020">No polyfills!</p>
+	<p ua-target="2018">7KB - IntersectionObserver</p>
+	<p ua-target="2014">7KB - IntersectionObserver</p>
+	<p ua-target="2013">11KB - Event, IntersectionObserver, console, console.log, performance.now</p>
+	<p ua-target="legacy">11KB - Event, IntersectionObserver, Window, console, console.log, performance.now</p>
 </body>
 </html>
 `);
@@ -65,14 +71,14 @@ function generate() {
 
 function indexJs() {
 	if (process.env.GITHUB_ACTIONS) {
-		return html`<meta name="ua-targets" content="2020 2019 2018 2014 legacy">
+		return html`<meta name="ua-targets" content="2020 2018 2014 2013 legacy">
 <script src="./index.2020.js" ua-target="2020"></script>
-<script src="./index.2019.js" ua-target="2019"></script>
 <script src="./index.2018.js" ua-target="2018"></script>
 <script src="./index.2014.js" ua-target="2014"></script>
+<script src="./index.2013.js" ua-target="2013"></script>
 <script src="./index.legacy.js" ua-target="legacy"></script>
 `;
 	}
 
-	return html`<script src="./index.js"></script>`;
+	return html`<script src="./index.2020.js"></script>`;
 }
