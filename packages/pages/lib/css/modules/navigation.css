@@ -1,5 +1,13 @@
-.navigation {
-    margin-left: auto;
+@media (max-width: 767px) {
+    .navigation {
+        margin-top: 1.25rem;
+    }
+}
+
+@media (min-width: 768px) {
+    .navigation {
+        margin-left: auto;
+    }
 }
 
 .navigation__list {
@@ -7,9 +15,6 @@
     display: flex;
     list-style: none;
     margin: 0;
-}
-
-.navigation__list-item {
     padding-left: 0;
 }
 
