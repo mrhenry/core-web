@@ -13,7 +13,7 @@ When using ${polyfillIoLink()} you will always do one unnecessary request.
 		{
 			title: 'One less point of failure',
 			content: html`
-Any external client side dependency has some inherit risk.
+Any external client side dependency has some inherent risk.
 Converting this to a build depedency reduces this.
 `.trim()
 		},
