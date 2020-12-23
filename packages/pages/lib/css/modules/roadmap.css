@@ -20,14 +20,14 @@
 }
 
 .roadmap__future {
-	color: azure;
+	color: var(--color-background);
 	padding: 1rem 0;
 	position: relative;
 	text-align: right;
 }
 
 .roadmap__future:before {
-	background-color: navy;
+	background-color: var(--color-foreground);
 	bottom: 0;
 	content: '';
 	height: 100%;
@@ -35,16 +35,6 @@
 	position: absolute;
 	width: 100vw;
 	z-index: -1;
-}
-
-@media (prefers-color-scheme: dark) {
-	.roadmap__future {
-		color: darkslateblue;
-	}
-
-	.roadmap__future:before {
-		background-color: coral;
-	}
 }
 
 @media (min-width: 768px) {

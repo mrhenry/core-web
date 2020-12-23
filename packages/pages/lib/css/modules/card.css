@@ -1,13 +1,19 @@
 .card {
-	background-color: rgba(0, 0, 128, 0.3);
 	border-radius: 4px;
-	color: currentColor;
 	box-sizing: border-box;
-	padding: 1.26rem;
+	color: currentColor;
+	overflow: hidden;
+	padding: 1.25rem;
+	position: relative;
 }
 
-@media (prefers-color-scheme: dark) {
-	.card {
-		background-color: rgba(255, 127, 80, 0.3);
-	}
+.card::before {
+	background-color: currentColor;
+	content: '';
+	height: 100%;
+	left: 0;
+	opacity: 0.3;
+	position: absolute;
+	top: 0;
+	width: 100%;
 }

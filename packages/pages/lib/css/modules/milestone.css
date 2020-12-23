@@ -24,7 +24,7 @@
 }
 
 .milestone:before {
-	background-color: azure;
+	background-color: var(--color-background);
 	content: '';
 	height: 3rem;
 	width: 3rem;
@@ -42,12 +42,6 @@
 
 .milestone.milestone--past::after {
 	border-style: solid;
-}
-
-@media (prefers-color-scheme: dark) {
-	.milestone:before {
-		background-color: darkslateblue;
-	}
 }
 
 .milestone__description {
