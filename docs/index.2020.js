@@ -1,2 +1,2 @@
-console.log("hello!"),new IntersectionObserver((()=>{}));
+(()=>{const e=new IntersectionObserver((e=>{!e||e.length<1||e.forEach((e=>{e.intersectionRatio>.6&&e.target&&!e.target.hasAttribute("milestone-visible")?e.target.setAttribute("milestone-visible","true"):e.target.removeAttribute("milestone-visible")}))}),{threshold:.6});function t(){const t=document.querySelectorAll("[milestone-observer]");!t||t.length<1||t.forEach((t=>{e.observe(t)}))}t(),requestAnimationFrame(t),document.addEventListener("DOMContentLoaded",t)})();
 //# sourceMappingURL=index.2020.js.map
