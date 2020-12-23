@@ -13,7 +13,7 @@ module.exports = function siteHeader(menu) {
 
 				<nav class="navigation" aria-label="page sections">
 					<ul class="navigation__list">
-						${menu.map((item) => `<li class="navigation__list-item"><a href="${item.url}" class="navigation__link">${item.title}</a></li>`).join('')}
+						${menu.map((item) => html`<li class="navigation__list-item"><a href="${item.url}" class="navigation__link">${item.title}</a></li>`).join('')}
 					</ul>
 				</nav>
 			</div>

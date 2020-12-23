@@ -4,7 +4,7 @@ function renderWhyItems(items) {
 	let output = '';
 
 	items.forEach((item) => {
-		output += `
+		output += html`
 			<article class="why__item">
 				<div class="card">
 					<h3 class="why__item__title">
