@@ -47,6 +47,7 @@
 .milestone__description {
 	border-radius: 4px;
 	margin-top: 1.5rem;
+	max-width: 500px;
 	opacity: 0.3;
 	overflow: hidden;
 	padding: 1.25rem;
