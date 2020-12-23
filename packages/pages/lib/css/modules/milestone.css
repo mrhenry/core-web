@@ -13,7 +13,7 @@
 	}
 }
 
-.milestone:after,
+.milestone::after,
 .milestone:before {
 	border-radius: 50%;
 	left: -1.5rem;
@@ -30,7 +30,7 @@
 	width: 3rem;
 }
 
-.milestone:after {
+.milestone::after {
 	border: 3px dotted currentColor;
 	content: attr(data-emoji);
 	font-size: 1.125rem;
@@ -38,6 +38,10 @@
 	line-height: 2.5;
 	text-align: center;
 	width: 2.625rem;
+}
+
+.milestone.milestone--past::after {
+	border-style: solid;
 }
 
 @media (prefers-color-scheme: dark) {
