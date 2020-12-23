@@ -126,15 +126,84 @@ function generate() {
 
 			<label
 				aria-hidden="true"
-				class="polyfill-notification__toggle"
+				class="polyfill-notification__label"
 				for="show-polyfill-content"
 			>
-				<span>6 polyfills</span>
+				<span ua-target="2020">0 polyfills</span>
+				<span ua-target="2018">1 polyfill</span>
+				<span ua-target="2014">1 polyfill</span>
+				<span ua-target="2013">5 polyfills</span>
+				<span ua-target="fallback">6 polyfills</span>
 			</label>
 
+			<label
+				aria-hidden="true"
+				class="polyfill-notification__toggle"
+				for="show-polyfill-content"
+				data-closed="🐵"
+				data-open="🙈"
+			></label>
+
 			<div class="polyfill-notification__content">
-				<p>
-					11KB - Event, IntersectionObserver, Window, console, console.log, performance.now
+				<p ua-target="2020">
+					0 polyfills loaded
+				</p>
+
+				<p ua-target="2018">
+					<span class="u-visually-hidden">
+						1 polyfill loaded:
+					</span>
+
+					7KB:<br>
+
+					<ul>
+						<li>IntersectionObserver</li>
+					</ul>
+				</p>
+
+				<p ua-target="2014">
+					<span class="u-visually-hidden">
+						1 polyfill loaded:
+					</span>
+
+					7KB:<br>
+
+					<ul>
+						<li>IntersectionObserver</li>
+					</ul>
+				</p>
+
+				<p ua-target="2013">
+					<span class="u-visually-hidden">
+						5 polyfills loaded:
+					</span>
+
+					11KB:<br>
+
+					<ul>
+						<li>Event</li>
+						<li>IntersectionObserver</li>
+						<li>console</li>
+						<li>console.log</li>
+						<li>performance.now</li>
+					</ul>
+				</p>
+
+				<p ua-target="fallback">
+					<span class="u-visually-hidden">
+						6 polyfills loaded:
+					</span>
+
+					11KB:<br>
+
+					<ul>
+						<li>Event</li>
+						<li>IntersectionObserver</li>
+						<li>Window</li>
+						<li>console</li>
+						<li>console.log</li>
+						<li>performance.now</li>
+					</ul>
 				</p>
 			</div>
 		</div>
@@ -142,7 +211,13 @@ function generate() {
 		<div class="section">
 			<div class="wrapper">
 				<p ua-target="2020">No polyfills!</p>
-				<p ua-target="2018">7KB - IntersectionObserver</p>
+				<p ua-target="2018">
+					<span class="u-visually-hidden">
+						1 polyfill loaded:
+					</span>
+
+					7KB - IntersectionObserver
+				</p>
 				<p ua-target="2014">7KB - IntersectionObserver</p>
 				<p ua-target="2013">11KB - Event, IntersectionObserver, console, console.log, performance.now</p>
 				<p ua-target="fallback">11KB - Event, IntersectionObserver, Window, console, console.log, performance.now</p>
