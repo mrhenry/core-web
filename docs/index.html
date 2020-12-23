@@ -43,7 +43,7 @@
 
 				<nav class="navigation" aria-label="page sections">
 					<ul class="navigation__list">
-						<li class="navigation__list-item"><a href="/#what" class="navigation__link">what?</a></li><li class="navigation__list-item"><a href="/#why" class="navigation__link">why?</a></li><li class="navigation__list-item"><a href="/#roadmap" class="navigation__link">roadmap to v1</a></li><li class="navigation__list-item"><a href="/#contact" class="navigation__link">contact</a></li>
+						<li class="navigation__list-item"><a href="/#what" class="navigation__link">what</a></li><li class="navigation__list-item"><a href="/#why" class="navigation__link">why</a></li><li class="navigation__list-item"><a href="/#roadmap" class="navigation__link">roadmap to v1</a></li>
 					</ul>
 				</nav>
 			</div>
@@ -136,7 +136,7 @@ Converting this to a build depedency reduces this.
 					</h3>
 
 					<p class="why__item__content">
-						When an external polyfill provider changes or updates there code they potentially introduce bugs impacting your code. Packaging polyfills with your code prevents this from hapening.
+						When an external polyfill provider changes or updates their code they potentially introduce bugs impacting your code. Packaging polyfills with your code adds an extra level of checks to prevent bugs from landing in production.
 					</p>
 				</div>
 			</article>
@@ -174,6 +174,31 @@ This makes it easier to report and debug issues.
 
 		<div class="section">
 			<div class="wrapper">
+			
+		<section class="why">
+			<header class="why__header">
+				<h2>
+					Requirements
+				</h2>
+			</header>
+
+			<div class="why__content">
+				<ul>
+					<li>
+						Babel
+					</li>
+					<li>
+						User Agent based content negotiation
+					</li>
+				</ul>
+			</div>
+		</section>
+	
+			</div>
+		</div>
+
+		<div class="section">
+			<div class="wrapper">
 				
 		<section id="roadmap" class="roadmap">
 			<header class="roadmap__header">
@@ -189,9 +214,7 @@ This makes it easier to report and debug issues.
 				milestone-observer=""
 			>
 				<h3 class="milestone__title">Build it</h3>
-				<div class="milestone__description"><p>Yes, Yes, without the oops! Yes, Yes, without the oops! Do you have any idea how long it takes those cups to decompose.
-						Must go faster. Remind me to thank John for a lovely weekend. You really think you can fly that thing? My dad once told
-						me, laugh and the world laughs with you, Cry, and I'll give you something to cry about you little bastard!</p></div>
+				
 			</article>
 		
 			<article
@@ -200,8 +223,8 @@ This makes it easier to report and debug issues.
 				data-emoji="🐛"
 				milestone-observer=""
 			>
-				<h3 class="milestone__title">Test it</h3>
-				<div class="milestone__description"><p>Test in production and use our unique insights to fix issues upstream.</p></div>
+				<h3 class="milestone__title">Test extensively</h3>
+				<div class="milestone__description"><p>We have been testing core-web in production.<br>Using our unique insights we have reporting and fixed a large amount of bugs <a href="https://github.com/Financial-Times/polyfill-library/pulls?q=is%3Apr+is%3Amerged+author%3Aromainmenke" target="_blank" rel="noopener">upstream</a>.</p></div>
 			</article>
 		<h4 class="roadmap__future">Where we are</h4>
 			<article
@@ -211,9 +234,7 @@ This makes it easier to report and debug issues.
 				milestone-observer=""
 			>
 				<h3 class="milestone__title">1Y in production</h3>
-				<div class="milestone__description"><p>Yes, Yes, without the oops! Yes, Yes, without the oops! Do you have any idea how long it takes those cups to decompose.
-						Must go faster. Remind me to thank John for a lovely weekend. You really think you can fly that thing? My dad once told
-						me, laugh and the world laughs with you, Cry, and I'll give you something to cry about you little bastard!</p></div>
+				
 			</article>
 		
 			<article
@@ -223,7 +244,7 @@ This makes it easier to report and debug issues.
 				milestone-observer=""
 			>
 				<h3 class="milestone__title">Stable API</h3>
-				<div class="milestone__description"><p>We value your time and want to avoid costly migrations. When we ship v1 we want to make sure it sticks.</p></div>
+				<div class="milestone__description"><p>We value your time and want to avoid costly migrations.<br>When we ship v1 we want to make sure it sticks.</p></div>
 			</article>
 		
 			<article
@@ -233,9 +254,7 @@ This makes it easier to report and debug issues.
 				milestone-observer=""
 			>
 				<h3 class="milestone__title">V1 release</h3>
-				<div class="milestone__description"><p>Eventually, you do plan to have dinosaurs on your dinosaur tour, right? God creates dinosaurs. God destroys dinosaurs.
-						God creates Man. Man destroys God. Man creates Dinosaurs. Do you have any idea how long it takes those cups to
-						decompose. Must go faster... go, go, go, go, go!</p></div>
+				
 			</article>
 		
 			</div>
@@ -276,17 +295,11 @@ This makes it easier to report and debug issues.
 
 					<div class="site-footer__content-container">
 						<p>
-							We gotta burn the rain forest, dump toxic waste, pollute the air, and rip up the OZONE! 'Cause maybe if we screw up this planet enough, they won't want it anymore! Must go faster. Did he just throw my cat out of the window? Jaguar shark! So tell me - does it really exist?
+							This page is rendered for your browser by a <a href="https://workers.cloudflare.com" target="_blank" rel="noopener">Cloudflare Worker</a>.
 						</p>
 
 						<p>
-							<a href="">
-								A link
-							</a>,
-
-							<a href="">
-								Another link
-							</a>
+							Most polyfills are sourced from <a href="polyfill.io" target="_blank" rel="noopener">Polyfill.io</a>.<br>Without their library and service this project would not be possible.
 						</p>
 					</div>
 				</div>
