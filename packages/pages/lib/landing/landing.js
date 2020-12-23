@@ -109,7 +109,7 @@ function generate() {
 				<p ua-target="2018">7KB - IntersectionObserver</p>
 				<p ua-target="2014">7KB - IntersectionObserver</p>
 				<p ua-target="2013">11KB - Event, IntersectionObserver, console, console.log, performance.now</p>
-				<p ua-target="legacy">11KB - Event, IntersectionObserver, Window, console, console.log, performance.now</p>
+				<p ua-target="fallback">11KB - Event, IntersectionObserver, Window, console, console.log, performance.now</p>
 			</div>
 		</div>
 	</main>
@@ -122,17 +122,17 @@ function generate() {
 
 function indexJsAndCss() {
 	if (process.env.GITHUB_ACTIONS) {
-		return html`<meta name="ua-targets" content="2020 2018 2014 2013 legacy">
+		return html`<meta name="ua-targets" content="2020 2018 2014 2013 fallback">
 <link rel="stylesheet" href="/index.2020.css" ua-target="2020">
 <link rel="stylesheet" href="/index.2018.css" ua-target="2018">
 <link rel="stylesheet" href="/index.2014.css" ua-target="2014">
 <link rel="stylesheet" href="/index.2013.css" ua-target="2013">
-<link rel="stylesheet" href="/index.legacy.css" ua-target="legacy">
+<link rel="stylesheet" href="/index.fallback.css" ua-target="fallback">
 <script src="/index.2020.js" ua-target="2020" async></script>
 <script src="/index.2018.js" ua-target="2018" async></script>
 <script src="/index.2014.js" ua-target="2014" async></script>
 <script src="/index.2013.js" ua-target="2013" async></script>
-<script src="/index.legacy.js" ua-target="legacy" async></script>
+<script src="/index.fallback.js" ua-target="fallback" async></script>
 `;
 	}
 
