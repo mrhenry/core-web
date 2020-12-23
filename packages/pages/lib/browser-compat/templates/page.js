@@ -29,21 +29,17 @@ module.exports = function pageHTML(tables) {
 
 	${siteHeader([
 		{
-			title: 'what is core-web?',
+			title: 'what',
 			url: '/#what'
 		},
 		{
-			title: 'why use core-web?',
+			title: 'why',
 			url: '/#why'
 		},
 		{
-			title: 'roadmap',
+			title: 'roadmap to v1',
 			url: '/#roadmap'
-		},
-		{
-			title: 'contact',
-			url: '/#contact'
-		},
+		}
 	])}
 
 	<main id="main-content">

@@ -22,17 +22,11 @@ module.exports = function siteFooter() {
 
 					<div class="site-footer__content-container">
 						<p>
-							We gotta burn the rain forest, dump toxic waste, pollute the air, and rip up the OZONE! 'Cause maybe if we screw up this planet enough, they won't want it anymore! Must go faster. Did he just throw my cat out of the window? Jaguar shark! So tell me - does it really exist?
+							This page is rendered for your browser by a <a href="https://workers.cloudflare.com" target="_blank" rel="noopener">Cloudflare Worker</a>.
 						</p>
 
 						<p>
-							<a href="">
-								A link
-							</a>,
-
-							<a href="">
-								Another link
-							</a>
+							Most polyfills are sourced from <a href="polyfill.io" target="_blank" rel="noopener">Polyfill.io</a>.<br>Without their library and service this project would not be possible.
 						</p>
 					</div>
 				</div>
