@@ -10,6 +10,7 @@
 @import './layouts/wrapper.css';
 
 /* Modules */
+@import './modules/card.css';
 @import './modules/compat-table.css';
 @import './modules/hero.css';
 @import './modules/logo.css';
@@ -19,3 +20,4 @@
 @import './modules/site-footer.css';
 @import './modules/site-header.css';
 @import './modules/skip-to-main-content-link.css';
+@import './modules/why.css';
