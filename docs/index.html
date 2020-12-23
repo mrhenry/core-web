@@ -68,15 +68,22 @@
 					</p>
 				</div>
 
-				<picture class="hero__picture">
-					<source srcset="/images/hero-mobile.gif"
-							media="(max-width: 767px)">
-					<img
-						alt="overview of this website in other browsers to show off how cool this tool is."
-						class="hero__picture__image"
-						src="/images/hero-desktop.gif"
-					>
-				</picture>
+				<div class="hero__picture-wrapper">
+					<div class="hero__picture-placer">
+						<picture class="hero__picture">
+							<source
+								srcset="/images/hero-mobile.gif"
+								media="(max-width: 767px)"
+							>
+							<img
+								alt="overview of this website in other browsers to show off how cool this tool is."
+								class="hero__picture__image"
+								src="/images/hero-desktop.gif"
+								loading="lazy"
+							>
+						</picture>
+					</div>
+				</div>
 			</div>
 		</section>
 	
