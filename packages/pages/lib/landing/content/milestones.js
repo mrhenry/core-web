@@ -16,7 +16,6 @@ module.exports = [
 		emoji: '🚀',
 		type: 'current',
 		title: '1Y in production',
-		description: html``
 	},
 	{
 		emoji: '🔧',
