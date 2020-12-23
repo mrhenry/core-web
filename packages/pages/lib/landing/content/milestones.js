@@ -27,6 +27,5 @@ module.exports = [
 		emoji: '🔮',
 		type: 'future',
 		title: 'V1 release',
-		description: html``
 	},
 ];
