@@ -17,11 +17,11 @@
 	padding-left: 15px;
 	padding-right: 15px;
 	position: absolute;
-	right: 30px;
+	right: 40px;
 	text-align: center;
 	transition:
-		background-color 96ms linear
-		opacity 96ms 160ms linear;
+		background-color 96ms linear,
+		opacity 96ms linear 400ms;
 	width: 110px;
 	z-index: 2;
 }
@@ -58,6 +58,7 @@
 #show-polyfill-content:checked ~ .polyfill-notification__label {
 	opacity: 0;
 	pointer-events: none;
+	transition: opacity 96ms linear;
 }
 
 #show-polyfill-content:checked ~ .polyfill-notification__toggle::after {
@@ -76,12 +77,12 @@
 	padding: 15px;
 	position: absolute;
 	height: 30px;
-	right: 30px;
+	right: 40px;
 	width: 110px;
 	transition:
-		height 640ms 128ms cubic-bezier(0.65, 0, 0.165, 1),
-		padding-bottom 16ms 96ms linear,
-		width 640ms 128ms cubic-bezier(0.65, 0, 0.165, 1);
+		height 640ms cubic-bezier(0.65, 0, 0.165, 1) 128ms,
+		padding-bottom 16ms linear 96ms,
+		width 640ms cubic-bezier(0.65, 0, 0.165, 1) 128ms;
 	z-index: 1;
 }
 
@@ -99,9 +100,9 @@
 	padding-bottom: 30px;
 	transition:
 		height 640ms cubic-bezier(0.65, 0, 0.165, 1),
-		padding-bottom 16ms 640ms linear,
+		padding-bottom 16ms linear 640ms,
 		width 640ms cubic-bezier(0.65, 0, 0.165, 1);
-	width: 190px;
+	width: 200px;
 }
 
 .polyfill-notification__content > * {
@@ -111,19 +112,5 @@
 
 #show-polyfill-content:checked ~ .polyfill-notification__content > * {
 	opacity: 1;
-	transition: opacity 96ms 672ms linear;
-}
-
-@media (min-width: 768px) {
-	.polyfill-notification__label {
-		right: 40px;
-	}
-
-	.polyfill-notification__content {
-		right: 40px;
-	}
-
-	#show-polyfill-content:checked ~ .polyfill-notification__content {
-		width: 200px;
-	}
+	transition: opacity 96ms linear 672ms;
 }
