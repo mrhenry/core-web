@@ -13,7 +13,7 @@ module.exports = function pageHTML(tables) {
 	<link rel="icon"
 		href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🕸</text></svg>">
 	<title>browser compat | core-web</title>
-	<link rel="stylesheet" href="/style.css">
+	${indexCss()}
 </head>
 <body>
 	<a
@@ -65,5 +65,21 @@ module.exports = function pageHTML(tables) {
 	${siteFooter()}
 </body>
 </html>
+`;
+}
+
+function indexCss() {
+	if (process.env.GITHUB_ACTIONS) {
+		return html`<meta name="ua-targets" content="2020 2018 2014 2013 legacy">
+<link rel="stylesheet" href="/index.2020.css" ua-target="2020">
+<link rel="stylesheet" href="/index.2018.css" ua-target="2018">
+<link rel="stylesheet" href="/index.2014.css" ua-target="2014">
+<link rel="stylesheet" href="/index.2013.css" ua-target="2013">
+<link rel="stylesheet" href="/index.legacy.css" ua-target="legacy">
+`;
+	}
+
+	return html`
+<link rel="stylesheet" href="/index.2020.css">
 `;
 }
