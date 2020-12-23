@@ -26,7 +26,7 @@ module.exports = function siteFooter() {
 						</p>
 
 						<p>
-							Most polyfills are sourced from <a href="polyfill.io" target="_blank" rel="noopener">Polyfill.io</a>.<br>Without their library and service this project would not be possible.
+							Most polyfills are sourced from <a href="https://polyfill.io/v3/" target="_blank" rel="noopener">Polyfill.io</a>.<br>Without their library and service this project would not be possible.
 						</p>
 					</div>
 				</div>
