@@ -14,7 +14,7 @@
 }
 
 .milestone::after,
-.milestone::before {
+.milestone:before {
 	border-radius: 50%;
 	left: -1.5rem;
 	overflow: hidden;
@@ -23,7 +23,7 @@
 	transform: translateX(-50%);
 }
 
-.milestone::before {
+.milestone:before {
 	background-color: azure;
 	content: '';
 	height: 3rem;
@@ -45,7 +45,7 @@
 }
 
 @media (prefers-color-scheme: dark) {
-	.milestone::before {
+	.milestone:before {
 		background-color: darkslateblue;
 	}
 }
@@ -58,7 +58,7 @@
 	margin-top: 1.5rem;
 }
 
-.milestone__description::before {
+.milestone__description:before {
 	background-color: currentColor;
 	content: '';
 	height: 100%;
