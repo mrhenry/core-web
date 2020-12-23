@@ -115,6 +115,30 @@ function generate() {
 			</div>
 		</div>
 
+		<div class="polyfill-notification">
+			<input
+				aria-hidden="true"
+				class="u-visually-hidden"
+				hidden
+				id="show-polyfill-content"
+				type="checkbox"
+			>
+
+			<label
+				aria-hidden="true"
+				class="polyfill-notification__toggle"
+				for="show-polyfill-content"
+			>
+				<span>6 polyfills</span>
+			</label>
+
+			<div class="polyfill-notification__content">
+				<p>
+					11KB - Event, IntersectionObserver, Window, console, console.log, performance.now
+				</p>
+			</div>
+		</div>
+
 		<div class="section">
 			<div class="wrapper">
 				<p ua-target="2020">No polyfills!</p>

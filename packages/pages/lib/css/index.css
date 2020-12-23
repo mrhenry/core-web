@@ -16,6 +16,7 @@
 @import './modules/logo.css';
 @import './modules/milestone.css';
 @import './modules/navigation.css';
+@import './modules/polyfill-notification.css';
 @import './modules/roadmap.css';
 @import './modules/site-footer.css';
 @import './modules/site-header.css';
