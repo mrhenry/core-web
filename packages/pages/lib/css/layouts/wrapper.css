@@ -1,0 +1,20 @@
+.wrapper {
+	box-sizing: border-box;
+	padding-left: 1.25rem;
+	padding-right: 1.25rem;
+	width: 100%;
+}
+
+@media (min-width: 768px) {
+	.wrapper {
+		padding-left: 3rem;
+		padding-right: 3rem;
+	}
+}
+
+@media (min-width: 1280px) {
+	.wrapper {
+		padding-left: calc((100% - 1184px) / 2);
+		padding-right: calc((100% - 1184px) / 2);
+	}
+}

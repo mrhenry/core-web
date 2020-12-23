@@ -1,0 +1,28 @@
+.compat-table td+td {
+	background-color: #ddfff7;
+	border: 1px solid #ddd;
+}
+
+.compat-table tr+tr>td+td {
+	background-color: #dde4ff;
+}
+
+.compat-table-header a {
+	text-decoration: none;
+	color: currentColor;
+	/* TODO : more css */
+}
+
+.compat-table-notes {
+	margin-bottom: 70px;
+	margin-left: 160px;
+	max-width: 650px;
+}
+
+.compat-table-notes h3 {
+	font-size: 0.875rem;
+}
+
+.compat-table-notes p {
+	font-size: 0.75rem;
+}

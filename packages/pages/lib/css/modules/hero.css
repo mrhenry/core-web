@@ -1,0 +1,46 @@
+.hero__content {
+	align-items: flex-start;
+	display: flex;
+	flex-direction: column;
+}
+
+.hero__header {
+	margin-bottom: 1.25rem;
+}
+
+.hero__text {
+	max-width: 300px;
+}
+
+.hero__picture {
+	background-color: currentColor;
+	flex-grow: 0;
+	flex-shrink: 1;
+	margin-top: 1.5rem;
+	max-width: 200px;
+	padding: 0.75rem;
+}
+
+@media (min-width: 768px) {
+	.hero__header {
+		margin-bottom: 2rem;
+	}
+
+	.hero__content {
+		flex-direction: row;
+	}
+
+	.hero__text {
+		flex-basis: 50%;
+		flex-grow: 0;
+		flex-shrink: 0;
+		max-width: 420px;
+	}
+
+	.hero__picture {
+		margin-left: 3.5rem;
+		margin-top: 0;
+		max-width: none;
+		padding: 1.5rem;
+	}
+}

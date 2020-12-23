@@ -1,0 +1,19 @@
+.card {
+	border-radius: 4px;
+	box-sizing: border-box;
+	color: currentColor;
+	overflow: hidden;
+	padding: 1.25rem;
+	position: relative;
+}
+
+.card::before {
+	background-color: currentColor;
+	content: '';
+	height: 100%;
+	left: 0;
+	opacity: 0.3;
+	position: absolute;
+	top: 0;
+	width: 100%;
+}

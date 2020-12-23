@@ -1,0 +1,17 @@
+.skip-to-main-content-link {
+	background-color: #f5f5f5;
+	border: 1px solid #cccccc;
+	box-sizing: border-box;
+	color: blue;
+	font-family: monospace;
+	font-size: 1.1875rem;
+	left: 1.25rem;
+	padding: 1.25rem;
+	position: absolute;
+	top: -9999px; /* Can't be invisible */
+	z-index: 9999999999; /* Absolutely has to be highest */
+}
+
+.skip-to-main-content-link:focus {
+	top: 1.25rem;
+}

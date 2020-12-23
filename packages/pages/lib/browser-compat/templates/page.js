@@ -1,4 +1,8 @@
 const  html = require('../../html/html');
+const siteHeader = require('../../landing/templates/site-header');
+const hero = require('./hero');
+const siteFooter = require('../../landing/templates/site-footer');
+
 
 module.exports = function pageHTML(tables) {
 	return html`<!DOCTYPE html>
@@ -6,78 +10,76 @@ module.exports = function pageHTML(tables) {
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Compat Data</title>
-	<style>
-		html {
-			font-size: 16px;
-		}
-
-		* {
-			font-family: monospace;
-		}
-
-		table {
-			border-spacing: 5px;
-			margin-bottom: 30px;
-			margin-top: 30px;
-		}
-
-		th {
-			padding: 12px;
-			text-align: right;
-		}
-
-		th+th {
-			text-align: center;
-		}
-
-		td {
-			font-size: 0.875rem;
-			min-width: 150px;
-			padding: 12px 5px;
-			text-align: right;
-		}
-
-		td+td {
-			background-color: #ddfff7;
-			border: 1px solid #ddd;
-			min-width: 90px;
-			text-align: center;
-		}
-
-		tr+tr > td+td {
-			background-color: #dde4ff;
-		}
-
-		.wrapper {
-			margin: 100px auto;
-			max-width: 1000px;
-		}
-
-		.notes {
-			margin-bottom: 70px;
-			margin-left: 170px;
-			max-width: 650px;
-		}
-
-		.notes h3 {
-			font-size: 0.875rem;
-		}
-
-		.notes p {
-			font-size: 0.75rem;
-		}
-	</style>
+	<link rel="icon"
+		href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🕸</text></svg>">
+	<title>browser compat | core-web</title>
+	${indexCss()}
 </head>
 <body>
-	<div class="wrapper">
-		<h1>Core Web : Browser compat data</h1>
+	<a
+		class="skip-to-main-content-link"
+		href="#main-content"
+	>
+		Skip to main content
+	</a>
 
-		${tables}
+	<h1 class="u-visually-hidden">
+		browser compatibility
+	</h1>
 
-		<pre><code style="font-size:10px;">${ (new Date()).toString() }</code></pre>
-	</div>
+	${siteHeader([
+		{
+			title: 'what is core-web?',
+			url: '/#what'
+		},
+		{
+			title: 'why use core-web?',
+			url: '/#why'
+		},
+		{
+			title: 'roadmap',
+			url: '/#roadmap'
+		},
+		{
+			title: 'contact',
+			url: '/#contact'
+		},
+	])}
+
+	<main id="main-content">
+		<div class="section">
+			<div class="wrapper">
+				${hero()}
+			</div>
+		</div>
+
+		<div class="section">
+			<div class="wrapper">
+				${tables}
+
+				<pre><code style="font-size:10px;">Last updated : ${ (new Date()).toString() }</code></pre>
+			</div>
+		</div>
+	</main>
+
+	${siteFooter()}
 </body>
 </html>
+`;
+}
+
+function indexCss() {
+	if (process.env.GITHUB_ACTIONS) {
+		return html`<meta name="ua-targets" content="2020 2018 2014 2013 fallback">
+<link rel="stylesheet" href="/index.2020.css" ua-target="2020">
+<link rel="stylesheet" href="/index.2018.css" ua-target="2018">
+<link rel="stylesheet" href="/index.2014.css" ua-target="2014">
+<link rel="stylesheet" href="/index.2013.css" ua-target="2013">
+<link rel="stylesheet" href="/index.fallback.css" ua-target="fallback">
+`;
+	}
+
+	return html`
+<link rel="stylesheet" href="/index.2020.css">
 `;
 }

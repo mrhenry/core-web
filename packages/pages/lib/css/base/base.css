@@ -1,0 +1,60 @@
+body {
+	background-color: var(--color-background);
+	box-sizing: border-box;
+	color: var(--color-foreground);
+	margin: 0;
+	min-height: 100vh;
+	position: relative;
+}
+
+textarea {
+	resize: none;
+}
+
+hr {
+	background-color: currentColor;
+	border: none;
+	height: 1px;
+}
+
+img,
+video {
+	display: block;
+	max-width: 100%;
+}
+
+table {
+	border-spacing: 0.3125rem;
+	box-sizing: border-box;
+	margin: 2rem 0;
+	max-width: 100%;
+	width: 100%;
+}
+
+th,
+td {
+	box-sizing: border-box;
+	text-align: right;
+}
+
+th {
+	padding: 0.75rem;
+	text-align: right;
+}
+
+th+th {
+	text-align: center;
+}
+
+td {
+	font-size: 0.875rem;
+	min-width: 150px; /* needs to be px */
+	padding: 0.75rem 0.3125rem;
+	text-align: right;
+}
+
+td+td {
+	border: 1px solid currentColor;
+	min-width: 90px; /* needs to be px */
+	text-align: center;
+}
