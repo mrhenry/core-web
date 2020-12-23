@@ -1,0 +1,11 @@
+:root {
+	--color-background: azure;
+	--color-foreground: navy;
+}
+
+@media (prefers-color-scheme: dark) {
+	:root {
+		--color-background: darkslateblue;
+		--color-foreground: coral;
+	}
+}
