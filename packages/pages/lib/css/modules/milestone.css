@@ -53,9 +53,9 @@
 	padding: 1.25rem;
 	position: relative;
 	transform: translate3d(4rem, 0, 0);
-	transition: 
+	transition:
 		opacity 96ms linear 160ms,
-		transform 320ms cubic-bezier(0.550, 0.085, 0.680, 0.530) 160ms;
+		transform 720ms cubic-bezier(0.5, 0.115, 0, 1) 160ms;
 }
 
 .milestone[milestone-visible] .milestone__description {
