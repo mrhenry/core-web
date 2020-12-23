@@ -111,82 +111,42 @@ function generate() {
 			></label>
 
 			<div class="polyfill-notification__content">
-				<p ua-target="2020">
-					0 polyfills loaded
-				</p>
+				${polyfillNotificationContent('2020', '0', [])}
 
-				<p ua-target="2018">
-					<span class="u-visually-hidden">
-						1 polyfill loaded:
-					</span>
+				${polyfillNotificationContent('2018', '7', [
+					'IntersectionObserver'
+				])}
 
-					7KB:<br>
+				${polyfillNotificationContent('2014', '8', [
+					'DOMTokenList.prototype.forEach',
+					'IntersectionObserver',
+					'NodeList.prototype.forEach',
+					'requestAnimationFrame'
+				])}
+				
+				${polyfillNotificationContent('2013', '13', [
+					'DOMTokenList',
+					'DOMTokenList.prototype.forEach',
+					'Element.prototype.classList',
+					'Event',
+					'IntersectionObserver',
+					'NodeList.prototype.forEach',
+					'performance.now',
+					'requestAnimationFrame'
+				])}
 
-					<ul>
-						<li>IntersectionObserver</li>
-					</ul>
-				</p>
-
-				<p ua-target="2014">
-					<span class="u-visually-hidden">
-						1 polyfill loaded:
-					</span>
-
-					7KB:<br>
-
-					<ul>
-						<li>IntersectionObserver</li>
-					</ul>
-				</p>
-
-				<p ua-target="2013">
-					<span class="u-visually-hidden">
-						5 polyfills loaded:
-					</span>
-
-					11KB:<br>
-
-					<ul>
-						<li>Event</li>
-						<li>IntersectionObserver</li>
-						<li>console</li>
-						<li>console.log</li>
-						<li>performance.now</li>
-					</ul>
-				</p>
-
-				<p ua-target="fallback">
-					<span class="u-visually-hidden">
-						6 polyfills loaded:
-					</span>
-
-					11KB:<br>
-
-					<ul>
-						<li>Event</li>
-						<li>IntersectionObserver</li>
-						<li>Window</li>
-						<li>console</li>
-						<li>console.log</li>
-						<li>performance.now</li>
-					</ul>
-				</p>
-			</div>
-		</div>
-
-		<div class="section">
-			<div class="wrapper">
-				<p ua-target="2020">No polyfills!</p>
-				<p ua-target="2018">
-					<span class="u-visually-hidden">
-						1 polyfill loaded:
-					</span>
-
-					7KB - IntersectionObserver
-				</p>
-				<p ua-target="2014">7KB - IntersectionObserver</p>
-				<p ua-target="2013">11KB - Event, IntersectionObserver, console, console.log, performance.now</p>
-				<p ua-target="fallback">11KB - Event, IntersectionObserver, Window, console, console.log, performance.now</p>
+				${polyfillNotificationContent('fallback', '13', [
+					'DOMTokenList',
+					'DOMTokenList.prototype.forEach',
+					'Element.prototype.classList',
+					'Event',
+					'IntersectionObserver',
+					'NodeList.prototype.forEach',
+					'Window',
+					'performance.now',
+					'requestAnimationFrame'
+				])}
+				
 			</div>
 		</div>
 	</main>
@@ -217,4 +177,24 @@ function indexJsAndCss() {
 <link rel="stylesheet" href="/index.2020.css">
 <script src="/index.2020.js" async></script>
 `;
+}
+
+function polyfillNotificationContent(target, size, polyfills) {
+	if (!polyfills.length) {
+		return html`<p ua-target="${target}">0 polyfills loaded</p>`;
+	}
+
+	return html`
+<p ua-target="${target}">
+	<span class="u-visually-hidden">
+		${polyfills.length} polyfills loaded:
+	</span>
+
+	${size}KB:<br>
+
+	<ul>
+		${ polyfills.map((polyfill) => { return html`<li>${polyfill}</li>` }).join('') }
+	</ul>
+</p>
+`
 }
