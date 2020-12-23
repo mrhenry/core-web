@@ -16,7 +16,12 @@ function renderMilestones(milestones) {
 		// }
 
 		output += html`
-			<article class="milestone milestone--${milestone.type}" data-emoji="${milestone.emoji}" aria-description="${milestone.type} milestone">
+			<article
+				aria-description="${milestone.type} milestone"
+				class="milestone milestone--${milestone.type}"
+				data-emoji="${milestone.emoji}"
+				milestone-observer=""
+			>
 				<h3 class="milestone__title">${milestone.title}</h3>
 				<div class="milestone__description">${milestone.description}</div>
 			</article>
