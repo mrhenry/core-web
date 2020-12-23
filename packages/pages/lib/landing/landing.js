@@ -86,8 +86,8 @@ function generate() {
 					{
 						emoji: '🐛',
 						type: 'past',
-						title: 'Test it',
-						description: html`<p>Test in production and use our unique insights to fix issues upstream.</p>`
+						title: 'Test extensively',
+						description: html`<p>We have been testing core-web in production. Using our unique insights we have reporting and fixed a large amount of bugs upstream.</p>`
 					},
 					{
 						emoji: '🚀',
