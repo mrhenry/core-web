@@ -6,6 +6,8 @@ const html = require('../html/html');
 
 const siteHeader = require('./templates/site-header');
 const hero = require('./templates/hero');
+const why = require('./templates/why');
+const whys = require('./content/whys');
 const roadmap = require('./templates/roadmap');
 const siteFooter = require('./templates/site-footer');
 
@@ -41,15 +43,15 @@ function generate() {
 
 	${siteHeader([
 		{
-			title: 'what is core-web?',
+			title: 'what?',
 			url: '/#what'
 		},
 		{
-			title: 'why use core-web?',
+			title: 'why?',
 			url: '/#why'
 		},
 		{
-			title: 'roadmap',
+			title: 'roadmap to v1',
 			url: '/#roadmap'
 		},
 		{
@@ -64,7 +66,13 @@ function generate() {
 				${hero()}
 			</div>
 		</div>
-		
+
+		<div class="section">
+			<div class="wrapper">
+			${why(whys)}
+			</div>
+		</div>
+
 		<div class="section">
 			<div class="wrapper">
 				${roadmap([
