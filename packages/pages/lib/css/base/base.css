@@ -58,3 +58,7 @@ td+td {
 	min-width: 90px; /* needs to be px */
 	text-align: center;
 }
+
+a:not([class]) {
+	color: currentColor;
+}
