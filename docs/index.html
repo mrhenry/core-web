@@ -263,13 +263,94 @@ This makes it easier to report and debug issues.
 			</div>
 		</div>
 
-		<div class="section">
-			<div class="wrapper">
-				<p ua-target="2020">No polyfills!</p>
-				<p ua-target="2018">7KB - IntersectionObserver</p>
-				<p ua-target="2014">7KB - IntersectionObserver</p>
-				<p ua-target="2013">11KB - Event, IntersectionObserver, console, console.log, performance.now</p>
-				<p ua-target="fallback">11KB - Event, IntersectionObserver, Window, console, console.log, performance.now</p>
+		<div class="polyfill-notification">
+			<input
+				aria-hidden="true"
+				class="u-visually-hidden"
+				hidden
+				id="show-polyfill-content"
+				type="checkbox"
+			>
+
+			<label
+				aria-hidden="true"
+				class="polyfill-notification__label"
+				for="show-polyfill-content"
+			>
+				<span ua-target="2020">0 polyfills</span>
+				<span ua-target="2018">1 polyfill</span>
+				<span ua-target="2014">1 polyfill</span>
+				<span ua-target="2013">5 polyfills</span>
+				<span ua-target="fallback">6 polyfills</span>
+			</label>
+
+			<label
+				aria-hidden="true"
+				class="polyfill-notification__toggle"
+				for="show-polyfill-content"
+				data-closed="🐵"
+				data-open="🙈"
+			></label>
+
+			<div class="polyfill-notification__content">
+				<p ua-target="2020">0 polyfills loaded</p>
+
+				
+<p ua-target="2018">
+	<span class="u-visually-hidden">
+		1 polyfills loaded:
+	</span>
+
+	7KB:<br>
+
+	<ul>
+		<li>IntersectionObserver</li>
+	</ul>
+</p>
+
+
+				
+<p ua-target="2014">
+	<span class="u-visually-hidden">
+		4 polyfills loaded:
+	</span>
+
+	8KB:<br>
+
+	<ul>
+		<li>DOMTokenList.prototype.forEach</li><li>IntersectionObserver</li><li>NodeList.prototype.forEach</li><li>requestAnimationFrame</li>
+	</ul>
+</p>
+
+				
+				
+<p ua-target="2013">
+	<span class="u-visually-hidden">
+		8 polyfills loaded:
+	</span>
+
+	13KB:<br>
+
+	<ul>
+		<li>DOMTokenList</li><li>DOMTokenList.prototype.forEach</li><li>Element.prototype.classList</li><li>Event</li><li>IntersectionObserver</li><li>NodeList.prototype.forEach</li><li>performance.now</li><li>requestAnimationFrame</li>
+	</ul>
+</p>
+
+
+				
+<p ua-target="fallback">
+	<span class="u-visually-hidden">
+		9 polyfills loaded:
+	</span>
+
+	13KB:<br>
+
+	<ul>
+		<li>DOMTokenList</li><li>DOMTokenList.prototype.forEach</li><li>Element.prototype.classList</li><li>Event</li><li>IntersectionObserver</li><li>NodeList.prototype.forEach</li><li>Window</li><li>performance.now</li><li>requestAnimationFrame</li>
+	</ul>
+</p>
+
+				
 			</div>
 		</div>
 	</main>
