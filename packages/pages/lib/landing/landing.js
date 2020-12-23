@@ -97,9 +97,9 @@ function generate() {
 			>
 				<span ua-target="2020">0 polyfills</span>
 				<span ua-target="2018">1 polyfill</span>
-				<span ua-target="2014">1 polyfill</span>
-				<span ua-target="2013">5 polyfills</span>
-				<span ua-target="fallback">6 polyfills</span>
+				<span ua-target="2014">4 polyfill</span>
+				<span ua-target="2013">8 polyfills</span>
+				<span ua-target="fallback">9 polyfills</span>
 			</label>
 
 			<label
