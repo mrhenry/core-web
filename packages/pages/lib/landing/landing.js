@@ -10,6 +10,7 @@ const why = require('./templates/why');
 const whys = require('./content/whys');
 const roadmap = require('./templates/roadmap');
 const siteFooter = require('./templates/site-footer');
+const requirements = require('./templates/requirements');
 
 main();
 
@@ -42,21 +43,17 @@ function generate() {
 
 	${siteHeader([
 		{
-			title: 'what?',
+			title: 'what',
 			url: '/#what'
 		},
 		{
-			title: 'why?',
+			title: 'why',
 			url: '/#why'
 		},
 		{
 			title: 'roadmap to v1',
 			url: '/#roadmap'
-		},
-		{
-			title: 'contact',
-			url: '/#contact'
-		},
+		}
 	])}
 
 	<main id="main-content">
@@ -74,44 +71,13 @@ function generate() {
 
 		<div class="section">
 			<div class="wrapper">
-				${roadmap([
-					{
-						emoji: '🔨',
-						type: 'past',
-						title: 'Build it',
-						description: html`<p>Yes, Yes, without the oops! Yes, Yes, without the oops! Do you have any idea how long it takes those cups to decompose.
-						Must go faster. Remind me to thank John for a lovely weekend. You really think you can fly that thing? My dad once told
-						me, laugh and the world laughs with you, Cry, and I'll give you something to cry about you little bastard!</p>`
-					},
-					{
-						emoji: '🐛',
-						type: 'past',
-						title: 'Test it',
-						description: html`<p>Test in production and use our unique insights to fix issues upstream.</p>`
-					},
-					{
-						emoji: '🚀',
-						type: 'current',
-						title: '1Y in production',
-						description: html`<p>Yes, Yes, without the oops! Yes, Yes, without the oops! Do you have any idea how long it takes those cups to decompose.
-						Must go faster. Remind me to thank John for a lovely weekend. You really think you can fly that thing? My dad once told
-						me, laugh and the world laughs with you, Cry, and I'll give you something to cry about you little bastard!</p>`
-					},
-					{
-						emoji: '🔧',
-						type: 'future',
-						title: 'Stable API',
-						description: html`<p>We value your time and want to avoid costly migrations. When we ship v1 we want to make sure it sticks.</p>`
-					},
-					{
-						emoji: '🔮',
-						type: 'future',
-						title: 'V1 release',
-						description: html`<p>Eventually, you do plan to have dinosaurs on your dinosaur tour, right? God creates dinosaurs. God destroys dinosaurs.
-						God creates Man. Man destroys God. Man creates Dinosaurs. Do you have any idea how long it takes those cups to
-						decompose. Must go faster... go, go, go, go, go!</p>`
-					},
-				])}
+			${requirements()}
+			</div>
+		</div>
+
+		<div class="section">
+			<div class="wrapper">
+				${roadmap()}
 			</div>
 		</div>
 

@@ -1,4 +1,3 @@
-const polyfillIoLink = require("../snippets/polyfill-io-link");
 const html = require('../../html/html');
 
 module.exports = {
@@ -21,7 +20,7 @@ Converting this to a build depedency reduces this.
 		{
 			title: 'Reproducible builds',
 			content: html`
-When an external polyfill provider changes or updates there code they potentially introduce bugs impacting your code. Packaging polyfills with your code prevents this from hapening.
+When an external polyfill provider changes or updates their code they potentially introduce bugs impacting your code. Packaging polyfills with your code adds an extra level of checks to prevent bugs from landing in production.
 `.trim()
 		},
 		{
