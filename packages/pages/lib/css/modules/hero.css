@@ -12,13 +12,27 @@
 	max-width: 300px;
 }
 
-.hero__picture {
+.hero__picture-wrapper {
 	background-color: currentColor;
 	flex-grow: 0;
 	flex-shrink: 1;
 	margin-top: 1.5rem;
 	max-width: 200px;
 	padding: 0.75rem;
+	width: 100%;
+}
+
+.hero__picture-placer {
+	display: block;
+	padding-top: calc(100% / 412 * 845);
+	position: relative;
+}
+
+.hero__picture {
+	left: 0;
+	position: absolute;
+	top: 0;
+	width: 100%;
 }
 
 @media (min-width: 768px) {
@@ -37,10 +51,14 @@
 		max-width: 420px;
 	}
 
-	.hero__picture {
+	.hero__picture-wrapper {
 		margin-left: 3.5rem;
 		margin-top: 0;
 		max-width: none;
 		padding: 1.5rem;
+	}
+
+	.hero__picture-placer {
+		padding-top: calc(100% / 1024 * 741);
 	}
 }
