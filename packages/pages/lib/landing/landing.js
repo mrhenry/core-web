@@ -81,13 +81,72 @@ function generate() {
 			</div>
 		</div>
 
-		<div class="section">
-			<div class="wrapper">
-				<p ua-target="2020">No polyfills!</p>
-				<p ua-target="2018">7KB - IntersectionObserver</p>
-				<p ua-target="2014">7KB - IntersectionObserver</p>
-				<p ua-target="2013">11KB - Event, IntersectionObserver, console, console.log, performance.now</p>
-				<p ua-target="fallback">11KB - Event, IntersectionObserver, Window, console, console.log, performance.now</p>
+		<div class="polyfill-notification">
+			<input
+				aria-hidden="true"
+				class="u-visually-hidden"
+				hidden
+				id="show-polyfill-content"
+				type="checkbox"
+			>
+
+			<label
+				aria-hidden="true"
+				class="polyfill-notification__label"
+				for="show-polyfill-content"
+			>
+				<span ua-target="2020">0 polyfills</span>
+				<span ua-target="2018">1 polyfill</span>
+				<span ua-target="2014">1 polyfill</span>
+				<span ua-target="2013">5 polyfills</span>
+				<span ua-target="fallback">6 polyfills</span>
+			</label>
+
+			<label
+				aria-hidden="true"
+				class="polyfill-notification__toggle"
+				for="show-polyfill-content"
+				data-closed="🐵"
+				data-open="🙈"
+			></label>
+
+			<div class="polyfill-notification__content">
+				${polyfillNotificationContent('2020', '0', [])}
+
+				${polyfillNotificationContent('2018', '7', [
+					'IntersectionObserver'
+				])}
+
+				${polyfillNotificationContent('2014', '8', [
+					'DOMTokenList.prototype.forEach',
+					'IntersectionObserver',
+					'NodeList.prototype.forEach',
+					'requestAnimationFrame'
+				])}
+				
+				${polyfillNotificationContent('2013', '13', [
+					'DOMTokenList',
+					'DOMTokenList.prototype.forEach',
+					'Element.prototype.classList',
+					'Event',
+					'IntersectionObserver',
+					'NodeList.prototype.forEach',
+					'performance.now',
+					'requestAnimationFrame'
+				])}
+
+				${polyfillNotificationContent('fallback', '13', [
+					'DOMTokenList',
+					'DOMTokenList.prototype.forEach',
+					'Element.prototype.classList',
+					'Event',
+					'IntersectionObserver',
+					'NodeList.prototype.forEach',
+					'Window',
+					'performance.now',
+					'requestAnimationFrame'
+				])}
+				
 			</div>
 		</div>
 	</main>
@@ -118,4 +177,24 @@ function indexJsAndCss() {
 <link rel="stylesheet" href="/index.2020.css">
 <script src="/index.2020.js" async></script>
 `;
+}
+
+function polyfillNotificationContent(target, size, polyfills) {
+	if (!polyfills.length) {
+		return html`<p ua-target="${target}">0 polyfills loaded</p>`;
+	}
+
+	return html`
+<p ua-target="${target}">
+	<span class="u-visually-hidden">
+		${polyfills.length} polyfills loaded:
+	</span>
+
+	${size}KB:<br>
+
+	<ul>
+		${ polyfills.map((polyfill) => { return html`<li>${polyfill}</li>` }).join('') }
+	</ul>
+</p>
+`
 }
