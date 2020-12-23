@@ -1,4 +1,5 @@
 const html = require('../../html/html');
+const milestones = require('../content/milestones');
 
 function renderMilestones(milestones) {
 	let hasCurrent = false;
@@ -16,16 +17,27 @@ function renderMilestones(milestones) {
 		// }
 
 		output += html`
-			<article class="milestone milestone--${milestone.type}" data-emoji="${milestone.emoji}" aria-description="${milestone.type} milestone">
+			<article
+				aria-description="${milestone.type} milestone"
+				class="milestone milestone--${milestone.type}"
+				data-emoji="${milestone.emoji}"
+				milestone-observer=""
+			>
 				<h3 class="milestone__title">${milestone.title}</h3>
-				<div class="milestone__description">${milestone.description}</div>
+				${ (() => {
+					if (milestone.description) {
+						return html`<div class="milestone__description">${milestone.description}</div>`;
+					} else {
+						return html``;
+					}
+				})() }
 			</article>
 		`;
 	});
 	return output;
 }
 
-module.exports = function roadmap(milestones) {
+module.exports = function roadmap() {
 	return html`
 		<section id="roadmap" class="roadmap">
 			<header class="roadmap__header">
