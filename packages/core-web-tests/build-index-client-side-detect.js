@@ -50,7 +50,7 @@ function main() {
 
 function detectorTemplate(opts) {
 	return `
-	if ${clientSideDetect(opts.browsers)} {
+	if ${clientSideDetect({browsers: opts.browsers})} {
 		var ref = window.document.getElementsByTagName( 'script' )[ 0 ];
 		var script = window.document.createElement( 'script' );
 		script.src = '/dist/non-interactive.bundle-${opts.name}.js';
