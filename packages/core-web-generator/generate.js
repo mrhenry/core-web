@@ -21,7 +21,7 @@ const detectorsDir = path.resolve(
 
 const generateWebComponents = require("./generate-webcomponents");
 const generateClientsMatrix = require("./generate-clients-matrix");
-const browsersToEngines = require("./browsers-to-engines/browsers-to-engines");
+const { browsersToEngines } = require("./browsers-to-engines/browsers-to-engines");
 
 genAll();
 
