@@ -1,6 +1,6 @@
 {
   "name": "@mrhenry/core-web-tests",
-  "version": "0.3.21",
+  "version": "0.4.0",
   "private": true,
   "scripts": {
     "build": "node ./build-index-client-side-detect.js && webpack",
@@ -9,7 +9,8 @@
   "devDependencies": {
     "@babel/core": "^7.12.10",
     "@babel/preset-env": "^7.12.11",
-    "@mrhenry/babel-plugin-core-web": "^0.3.21",
+    "@mrhenry/babel-plugin-core-web": "^0.4.0",
+    "@mrhenry/core-web": "^0.4.0",
     "@types/qunit": "2.11.x",
     "babel-loader": "^8.2.2",
     "browserstack-runner": "^0.9.4",

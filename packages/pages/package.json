@@ -1,6 +1,6 @@
 {
-  "name": "pages",
-  "version": "0.3.21",
+  "name": "@mrhenry/pages",
+  "version": "0.4.0",
   "description": "generator for GitHub pages.",
   "license": "MIT",
   "main": "lib/pages.js",
@@ -22,7 +22,8 @@
     "build-js": "webpack",
     "build-fonts": "cp -r ./lib/fonts/ ./dist/fonts/",
     "build-images": "cp -r ./lib/images/ ./dist/images/",
-    "build": "yarn build-html && yarn build-css && yarn build-js && yarn build-fonts && yarn build-images",
+    "build-worker-browsers-list": "node ./build-bcd-browsers",
+    "build": "yarn build-html && yarn build-css && yarn build-js && yarn build-fonts && yarn build-images && yarn build-worker-browsers-list",
     "dev-server": "cd ./dist && npx http-server"
   },
   "bugs": {
@@ -32,7 +33,8 @@
     "@babel/core": "^7.12.10",
     "@babel/preset-env": "^7.12.11",
     "@mdn/browser-compat-data": "^3.0.1",
-    "@mrhenry/babel-plugin-core-web": "^0.3.21",
+    "@mrhenry/babel-plugin-core-web": "^0.4.0",
+    "@mrhenry/core-web": "^0.4.0",
     "babel-loader": "^8.2.2",
     "browserstack-runner": "^0.9.4",
     "core-js": "^3.8.1",
