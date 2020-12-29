@@ -1,5 +1,6 @@
 const mapping = require("../helpers/__mapping");
 const knownBrowsers = require("../helpers/__browsers");
+const knownEngines = require("../helpers/__engines");
 const clientsMatrix = require("../helpers/__clients-matrix");
 const semver = require("semver");
 
@@ -13,29 +14,38 @@ for (let browser of knownBrowsers) {
 	browsers.add(browser);
 }
 
-exports.names = names;
+const engines = new Set();
+for (let engine of knownEngines) {
+	engines.add(engine);
+}
+
+module.exports = {
+	names: names,
+	get: get,
+	has: has,
+	required: required,
+	clientSideDetect: clientSideDetect,
+}
 
 function names() {
 	return Array.from(map.keys());
 }
 
-exports.get = get;
-
 function get(name) {
 	return map.get(name);
 }
 
-exports.has = function(name) {
+function has(name) {
 	return map.has(name);
 };
 
-exports.required = function (targets, opts = {}) {
+function required(targets, opts = {}) {
 	if (opts && opts.debug) {
 		logUsedTargets(targets);
 	}
 
 	let all = [];
-	for (const browser of Object.keys(targets)) {
+	for (const browser of Object.keys(targets.browsers)) {
 		if (!browsers.has(browser)) {
 			console.log(`@mrhenry/core-web - unknown target: "${browser}"`);
 			console.log(`@mrhenry/core-web - known targets:`);
@@ -43,12 +53,24 @@ exports.required = function (targets, opts = {}) {
 			continue
 		}
 
-		all = all.concat(required(browser, targets[browser]));
+		all = all.concat(requiredForBrowser(browser, targets.browsers[browser]));
 	}
+
+	for (const engine of Object.keys(targets.engines)) {
+		if (!engines.has(engine)) {
+			console.log(`@mrhenry/core-web - unknown target: "${engine}"`);
+			console.log(`@mrhenry/core-web - known targets:`);
+			console.log(JSON.stringify(knownEngines, null, 2) + '\n');
+			continue
+		}
+
+		all = all.concat(requiredForEngine(engine, targets.engines[engine]));
+	}
+
 	return Array.from(new Set(all));
 };
 
-function required(browser, version) {
+function requiredForBrowser(browser, version) {
 	const out = [];
 
 	for (const feature of names()) {
@@ -76,16 +98,44 @@ function required(browser, version) {
 	return out;
 }
 
-exports.clientSideDetect = function (targets, opts = {}) {
+function requiredForEngine(engine, version) {
+	const out = [];
+
+	for (const feature of names()) {
+		const meta = get(feature);
+		if (!meta) {
+			continue;
+		}
+
+		if (meta.isAlias) {
+			out.push(feature);
+			continue;
+		}
+
+		const isEngineMatch =
+			meta.engines &&
+			meta.engines[engine] &&
+			semver.satisfies(semver.coerce(version), meta.engines[engine]);
+
+		if (isEngineMatch) {
+			out.push(feature);
+			continue;
+		}
+	}
+
+	return out;
+}
+
+function clientSideDetect(targets, opts = {}) {
 	if (opts && opts.debug) {
 		logUsedTargets(targets);
 	}
 
 	let crossBrowserDetectors = [];
 
-	for (const browser of Object.keys(targets)) {
+	for (const browser of Object.keys(targets.browsers)) {
 		let browserDetectors = [];
-		const versionRangeUp = '>=' + targets[browser];
+		const versionRangeUp = '>=' + targets.browsers[browser];
 		const matrix = clientsMatrix[browser];
 		if (!matrix) {
 			continue;
@@ -129,7 +179,7 @@ exports.clientSideDetect = function (targets, opts = {}) {
 		}
 
 		if (browserDetectors.length < 3) {
-			const versionRangeDown = '<=' + targets[browser];
+			const versionRangeDown = '<=' + targets.browsers[browser];
 
 			for (let i = (matrix.versionList.length - 1); i >= 0; i--) {
 				const version = matrix.versionList[i];
@@ -217,12 +267,20 @@ exports.clientSideDetect = function (targets, opts = {}) {
 function logUsedTargets(targets) {
 	let all = [];
 
-	for (const browser of Object.keys(targets)) {
+	for (const browser of Object.keys(targets.browsers)) {
 		if (!browsers.has(browser)) {
 			continue
 		}
 
-		all.push(`${browser}/${semver.coerce(targets[browser])}`);
+		all.push(`${browser}/${semver.coerce(targets.browsers[browser])}`);
+	}
+
+	for (const engine of Object.keys(targets.engines)) {
+		if (!engines.has(engine)) {
+			continue
+		}
+
+		all.push(`${engine}/${semver.coerce(targets.engines[engine])}`);
 	}
 
 	console.log("@mrhenry/core-web - using targets:");

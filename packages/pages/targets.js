@@ -102,18 +102,16 @@ module.exports = [
 		presetEnvBrowsers: [
 			'chrome >= 17',
 			'firefox >= 10',
-			'ie >= 8',
+			'ie >= 9',
 			'opera >= 12',
 			'safari >= 5.1',
 			'android >= 4',
 		],
-		coreWebBrowsers: {
-			chrome: '17',
-			firefox: '10',
-			ie: '9',
-			opera: '12',
-			safari: '5.1',
-			android: '4',
+		coreWebEngines: {
+			"Trident" : "5.0",
+			"Gecko": "10",
+			"Presto": "2.10",
+			"WebKit": "534.30",
 		},
 	}
 ]

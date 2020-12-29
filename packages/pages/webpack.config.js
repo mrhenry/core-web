@@ -54,6 +54,7 @@ module.exports = [
 										'@mrhenry/core-web',
 										{
 											browsers: target.coreWebBrowsers,
+											engines: target.coreWebEngines,
 											debug: true
 										}
 									]
