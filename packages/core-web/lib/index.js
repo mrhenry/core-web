@@ -45,26 +45,30 @@ function required(targets, opts = {}) {
 	}
 
 	let all = [];
-	for (const browser of Object.keys(targets.browsers)) {
-		if (!browsers.has(browser)) {
-			console.log(`@mrhenry/core-web - unknown target: "${browser}"`);
-			console.log(`@mrhenry/core-web - known targets:`);
-			console.log(JSON.stringify(knownBrowsers, null, 2) + '\n');
-			continue
-		}
+	if (targets.browsers) {
+		for (const browser of Object.keys(targets.browsers)) {
+			if (!browsers.has(browser)) {
+				console.log(`@mrhenry/core-web - unknown target: "${browser}"`);
+				console.log(`@mrhenry/core-web - known targets:`);
+				console.log(JSON.stringify(knownBrowsers, null, 2) + '\n');
+				continue
+			}
 
-		all = all.concat(requiredForBrowser(browser, targets.browsers[browser]));
+			all = all.concat(requiredForBrowser(browser, targets.browsers[browser]));
+		}
 	}
 
-	for (const engine of Object.keys(targets.engines)) {
-		if (!engines.has(engine)) {
-			console.log(`@mrhenry/core-web - unknown target: "${engine}"`);
-			console.log(`@mrhenry/core-web - known targets:`);
-			console.log(JSON.stringify(knownEngines, null, 2) + '\n');
-			continue
-		}
+	if (targets.engines) {
+		for (const engine of Object.keys(targets.engines)) {
+			if (!engines.has(engine)) {
+				console.log(`@mrhenry/core-web - unknown target: "${engine}"`);
+				console.log(`@mrhenry/core-web - known targets:`);
+				console.log(JSON.stringify(knownEngines, null, 2) + '\n');
+				continue
+			}
 
-		all = all.concat(requiredForEngine(engine, targets.engines[engine]));
+			all = all.concat(requiredForEngine(engine, targets.engines[engine]));
+		}
 	}
 
 	return Array.from(new Set(all));
@@ -131,7 +135,12 @@ function clientSideDetect(targets, opts = {}) {
 		logUsedTargets(targets);
 	}
 
-	let crossBrowserDetectors = [];
+	if (!targets.browsers) {
+		// Todo : support engines as input
+		return;
+	}
+
+	let detectors = [];
 
 	for (const browser of Object.keys(targets.browsers)) {
 		let browserDetectors = [];
@@ -239,14 +248,15 @@ function clientSideDetect(targets, opts = {}) {
 			return 0;
 		});
 
-		crossBrowserDetectors = crossBrowserDetectors.concat(browserDetectors.slice(0, 3));
+		detectors = detectors.concat(browserDetectors.slice(0, 3));
 	}
 
 	let condition = "(\n";
 
-	condition += crossBrowserDetectors.map((d) => {
-		return d.detectSource;	
-	})
+	condition += detectors
+		.map((d) => {
+			return d.detectSource;	
+		})
 		.filter((value, index, self) => {
 			return self.indexOf(value) === index;
 		})

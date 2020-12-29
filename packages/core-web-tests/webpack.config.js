@@ -46,13 +46,12 @@ module.exports = [
 			'safari >= 6',
 			'ie >= 11'
 		],
-		coreWebBrowsers: {
-			chrome: '31',
-			firefox: '26',
-			edge: '12',
-			opera: '26',
-			safari: '6',
-			ie: '11'
+		coreWebEngines: {
+			Blink: '31',
+			Gecko: '26',
+			EdgeHTML: '12',
+			WebKit: '536.25',
+			Trident: '7'
 		},
 	}),
 
@@ -129,7 +128,8 @@ function configBuilder(opts) {
 								[
 									'@mrhenry/core-web',
 									{
-										browsers: opts.coreWebBrowsers
+										browsers: opts.coreWebBrowsers,
+										engines: opts.coreWebEngines
 									}
 								]
 							],

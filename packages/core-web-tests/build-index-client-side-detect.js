@@ -25,7 +25,7 @@ function main() {
 		}),
 		detectorTemplate({
 			name: 'old',
-			browsers: {
+			browsers: { // TODO : set config as engines
 				chrome: '31',
 				firefox: '26',
 				edge: '12',
