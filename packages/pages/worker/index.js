@@ -74,7 +74,7 @@ async function handleRequest(request) {
 			})
 			.onDocument({
 				end(end) {
-					end.append(`<!-- target: ${pageTarget.name} - engine: ${engine.name}/${engine.version} -->`);
+					end.append(`<!-- target: ${pageTarget.name} - engine: ${engine.name}/${engine.version} -->`, {html: true});
 				}
 			})
 			.transform(resp);
