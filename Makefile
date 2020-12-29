@@ -16,6 +16,7 @@ build-tests: yarn
 	(cd packages/core-web-tests && yarn build)
 
 run-tests: yarn
+	(cd packages/core-web-generator && yarn test)
 	(cd packages/core-web-tests && yarn browserstack-runner)
 
 build-watch-tests: yarn
