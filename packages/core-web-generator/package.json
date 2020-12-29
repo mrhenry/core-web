@@ -6,6 +6,7 @@
     "build": "node ./generate.js"
   },
   "dependencies": {
+    "@mdn/browser-compat-data": "^3.0.1",
     "@webcomponents/custom-elements": "^1.4.3",
     "@webcomponents/shadycss": "^1.10.2",
     "@webcomponents/shadydom": "^1.8.0",

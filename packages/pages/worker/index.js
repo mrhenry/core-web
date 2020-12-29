@@ -1,5 +1,6 @@
 const parser = require('ua-parser-js');
 const semver = require('semver');
+const bcdBrowsers = require('./bcd-browsers.json');
 
 addEventListener('fetch', event => {
 	event.respondWith(handleRequest(event.request))
@@ -22,13 +23,17 @@ async function handleRequest(request) {
 			return cleanupIfNoUA(resp);
 		}
 
-		let uaBrowserName = ua.browser.name.toLowerCase();
-		if (uaBrowserName === 'mobile safari') {
-			uaBrowserName = 'safari';
+		if (!ua || !ua.engine || !ua.engine.name) {
+			return cleanupIfNoUA(resp);
+		}
+
+		let engine = ua.engine;
+		if (engine.name === "WebKit") {
+			engine = webkitVersion(ua);
 		}
 
 		let possibleTargets = targets.filter((target) => {
-			if (target.browsers[uaBrowserName] && semver.satisfies(semver.coerce(ua.browser.major), '>= ' + target.browsers[uaBrowserName])) {
+			if (target.engines[engine.name] && semver.satisfies(semver.coerce(engine.version), '>= ' + target.engines[engine.name])) {
 				return true;
 			}
 
@@ -67,6 +72,11 @@ async function handleRequest(request) {
 					}
 				},
 			})
+			.onDocument({
+				end(end) {
+					end.append(`<!-- target: ${pageTarget.name} - engine: ${engine.name}/${engine.version} -->`);
+				}
+			})
 			.transform(resp);
 	} catch (error) {
 		return new Response(error.message);
@@ -86,98 +96,126 @@ function cleanupIfNoUA(resp) {
 const targets = [
 	{
 		name: '2020',
-		browsers: {
-			chrome: '87',
-			edge: '87',
-			firefox: '83',
-			opera: '72',
-			safari: '14',
-			samsung: '13.0',
-		},
-	},
-	{
-		name: '2019',
-		browsers: {
-			chrome: '79',
-			firefox: '71',
-			opera: '65',
-			safari: '13',
-			samsung: '10.1',
+		engines: {
+			"Blink": "87",
+			"Gecko": "83",
+			"WebKit": "610.1.28",
 		},
 	},
 	{
 		name: '2018',
-		browsers: {
-			chrome: '71',
-			edge: '18',
-			firefox: '64',
-			opera: '57',
-			safari: '12',
-			samsung: '8.2',
-		},
-	},
-	{
-		name: '2017',
-		browsers: {
-			chrome: '63',
-			edge: '16',
-			firefox: '57',
-			opera: '49',
-			safari: '11',
-			samsung: '6.4',
+		engines: {
+			"Blink": "71",
+			"Gecko": "64",
+			"EdgeHTML": "18",
+			"WebKit": "606.1.36",
 		},
 	},
 	{
 		name: '2016',
-		browsers: {
-			chrome: '55',
-			edge: '14',
-			firefox: '50',
-			opera: '42',
-			safari: '10',
-			samsung: '5.4',
-		},
-	},
-	{
-		name: '2015',
-		browsers: {
-			chrome: '47',
-			edge: '13',
-			firefox: '43',
-			opera: '34',
-			safari: '9',
+		engines: {
+			"Blink": "51",
+			"Gecko": "54",
+			"EdgeHTML": "14",
+			"WebKit": "602.1.50",
 		},
 	},
 	{
 		name: '2014',
-		browsers: {
-			chrome: '39',
-			firefox: '34',
-			opera: '26',
-			safari: '8',
-			android: '4.4.4',
+		engines: {
+			"Blink": "39",
+			"Gecko": "34",
+			"EdgeHTML": "12",
+			"WebKit": "538.35",
 		},
 	},
 	{
 		name: '2013',
-		browsers: {
-			chrome: '31',
-			firefox: '26',
-			ie: '11',
-			opera: '18',
-			safari: '7',
-			android: '4.4',
+		engines: {
+			"Blink": "30",
+			"Gecko": "26",
+			"Trident" : "7.0",
+			"WebKit": "537.51",
 		},
 	},
 	{
 		name: 'fallback',
-		browsers: {
-			chrome: '17',
-			firefox: '10',
-			ie: '9',
-			opera: '12',
-			safari: '5.1',
-			android: '4',
+		engines: {
+			"Blink": "26",
+			"Gecko": "10",
+			"Presto": "2.10",
+			"Trident" : "5.0",
+			"WebKit": "534.30",
 		},
 	},
 ];
+
+function webkitVersion(ua) {
+	if (!ua || !ua.browser || !ua.browser.major) {
+		return ua.engine;
+	}
+
+	if (!ua.engine || ua.engine.name !== "WebKit") {
+		return ua.engine;
+	}
+
+	const bcdSafariReleases = Object.keys(bcdBrowsers.safari.releases);
+	bcdSafariReleases.sort((a, b) => {
+		const av = semver.coerce(a);
+		const bv = semver.coerce(b);
+		if (semver.lt(av, bv)) {
+			return -1;
+		}
+
+		if (semver.gt(av, bv)) {
+			return 1;
+		}
+
+		return 0;
+	});
+
+	const bcdSafariReleaseVersion = bcdSafariReleases.find((x) => {
+		const bcdVersion = semver.coerce(x);
+		const uaVersion = semver.coerce(`${ua.browser.major}.${ua.browser.minor || 0}`);
+		return semver.lte(uaVersion, bcdVersion);
+	});
+
+	if (bcdSafariReleaseVersion) {
+		const release = bcdBrowsers.safari.releases[bcdSafariReleaseVersion];
+		return {
+			name: "WebKit",
+			version: release.engine_version,
+		};
+	}
+
+	const bcdSafariIOSReleases = Object.keys(bcdBrowsers.safari_ios.releases);
+	bcdSafariIOSReleases.sort((a, b) => {
+		const av = semver.coerce(a);
+		const bv = semver.coerce(b);
+		if (semver.lt(av, bv)) {
+			return -1;
+		}
+
+		if (semver.gt(av, bv)) {
+			return 1;
+		}
+
+		return 0;
+	});
+
+	const bcdSafariIOSReleaseVersion = bcdSafariIOSReleases.find((x) => {
+		const bcdVersion = semver.coerce(x);
+		const uaVersion = semver.coerce(`${ua.browser.major}.${ua.browser.minor || 0}`);
+		return semver.lte(uaVersion, bcdVersion);
+	});
+
+	if (bcdSafariIOSReleaseVersion) {
+		const release = bcdBrowsers.safari_ios.releases[bcdSafariIOSReleaseVersion];
+		return {
+			name: "WebKit",
+			version: release.engine_version,
+		};
+	}
+
+	return ua.engine;
+}
