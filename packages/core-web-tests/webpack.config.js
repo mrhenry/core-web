@@ -17,7 +17,7 @@ module.exports = [
 			EdgeHTML: '12',
 			Blink: '31',
 			WebKit: '536.25',
-			Trident: '8'
+			Trident: '4.0'
 		}
 	}),
 

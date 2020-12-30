@@ -1,6 +1,7 @@
 const denodeify = require("denodeify");
 const path = require("path");
 const fs = require("fs");
+const { browsersToEngines } = require("./browsers-to-engines/browsers-to-engines");
 const writeFile = denodeify(fs.writeFile);
 const readFile = denodeify(fs.readFile);
 
@@ -19,6 +20,17 @@ async function generateTemplate(mapping) {
 		"utf-8"
 	);
 	await writeFile(path.join(modulesDir, "HTMLTemplateElement.js"), src);
+
+	const browsers = {
+		chrome: "<35",
+		edge: "<15",
+		edge_mob: "<15",
+		firefox: "<22",
+		safari: "<9",
+		ie: "*",
+		opera: "<22"
+	};
+
 	mapping.push({
 		name: "HTMLTemplateElement",
 		deps: [
@@ -33,15 +45,8 @@ async function generateTemplate(mapping) {
 			"HTMLDocument",
 			"Window"
 		],
-		browsers: {
-			chrome: "<35",
-			edge: "<15",
-			edge_mob: "<15",
-			firefox: "<22",
-			safari: "<9",
-			ie: "*",
-			opera: "<22"
-		},
+		browsers: browsers,
+		engines: browsersToEngines(browsers),
 		detector: true,
 		size: src.byteLength,
 		providedByCoreWeb: true,
@@ -54,6 +59,17 @@ async function generateShadyDOM(mapping) {
 		"utf-8"
 	);
 	await writeFile(path.join(modulesDir, "~shadydom.js"), src);
+
+	const browsers = {
+		chrome: "<53",
+		edge: "<79",
+		edge_mob: "*",
+		firefox: "<63",
+		safari: "*",
+		ie: "*",
+		opera: "<40"
+	};
+
 	mapping.push({
 		name: "~shadydom",
 		deps: [
@@ -76,15 +92,8 @@ async function generateShadyDOM(mapping) {
 			"NodeList.prototype.forEach",
 			"Window"
 		],
-		browsers: {
-			chrome: "<53",
-			edge: "<79",
-			edge_mob: "*",
-			firefox: "<63",
-			safari: "*",
-			ie: "*",
-			opera: "<40"
-		},
+		browsers: browsers,
+		engines: browsersToEngines(browsers),
 		detector: true,
 		size: src.byteLength,
 		providedByCoreWeb: true,
@@ -116,6 +125,16 @@ async function generateShadyCSS(mapping) {
 		customStyleInterface
 	);
 
+	const scopingShimBrowsers = {
+		chrome: "<53",
+		edge: "<79",
+		edge_mob: "*",
+		firefox: "<63",
+		safari: "*",
+		ie: "*",
+		opera: "<40"
+	};
+
 	mapping.push({
 		name: "~shadycss-scoping-shim",
 		deps: [
@@ -145,19 +164,22 @@ async function generateShadyCSS(mapping) {
 			"requestAnimationFrame",
 			"Window"
 		],
-		browsers: {
-			chrome: "<53",
-			edge: "<79",
-			edge_mob: "*",
-			firefox: "<63",
-			safari: "*",
-			ie: "*",
-			opera: "<40"
-		},
+		browsers: scopingShimBrowsers,
+		engines: browsersToEngines(scopingShimBrowsers),
 		detector: true,
 		size: scopingShim.byteLength,
 		providedByCoreWeb: true,
 	});
+
+	const applyShimBrowsers = {
+		chrome: "<53",
+		edge: "<79",
+		edge_mob: "*",
+		firefox: "<63",
+		safari: "*",
+		ie: "*",
+		opera: "<40"
+	};
 
 	mapping.push({
 		name: "~shadycss-apply-shim",
@@ -186,19 +208,22 @@ async function generateShadyCSS(mapping) {
 			"requestAnimationFrame",
 			"Window"
 		],
-		browsers: {
-			chrome: "<53",
-			edge: "<79",
-			edge_mob: "*",
-			firefox: "<63",
-			safari: "*",
-			ie: "*",
-			opera: "<40"
-		},
+		browsers: applyShimBrowsers,
+		engines: browsersToEngines(applyShimBrowsers),
 		detector: true,
 		size: applyShim.byteLength,
 		providedByCoreWeb: true,
 	});
+
+	const customStyleInterfaceBrowsers = {
+		chrome: "<53",
+		edge: "<79",
+		edge_mob: "*",
+		firefox: "<63",
+		safari: "*",
+		ie: "*",
+		opera: "<40"
+	};
 
 	mapping.push({
 		name: "~shadycss-custom-style-interface",
@@ -231,15 +256,8 @@ async function generateShadyCSS(mapping) {
 			"requestAnimationFrame",
 			"Window"
 		],
-		browsers: {
-			chrome: "<53",
-			edge: "<79",
-			edge_mob: "*",
-			firefox: "<63",
-			safari: "*",
-			ie: "*",
-			opera: "<40"
-		},
+		browsers: customStyleInterfaceBrowsers,
+		engines: browsersToEngines(customStyleInterfaceBrowsers),
 		detector: true,
 		size: customStyleInterface.byteLength,
 		providedByCoreWeb: true,
@@ -252,6 +270,20 @@ async function generateCustomElements(mapping) {
 		"utf-8"
 	);
 	await writeFile(path.join(modulesDir, "~custom-elements.js"), src);
+
+	const browsers = {
+		chrome: "<67",
+		edge: "<79",
+		edge_mob: "*",
+		firefox: "<63",
+		safari: "<11",
+		ie: "*",
+		opera: "<64",
+		op_mob: "<46",
+		op_mini: "*",
+		samsung_mob: '<8'
+	};
+
 	mapping.push({
 		name: "~custom-elements",
 		deps: [
@@ -283,18 +315,8 @@ async function generateCustomElements(mapping) {
 			"NodeList.prototype.forEach",
 			"Window"
 		],
-		browsers: {
-			chrome: "<67",
-			edge: "<79",
-			edge_mob: "*",
-			firefox: "<63",
-			safari: "<11",
-			ie: "*",
-			opera: "<64",
-			op_mob: "<46",
-			op_mini: "*",
-			samsung_mob: '<8'
-		},
+		browsers: browsers,
+		engines: browsersToEngines(browsers),
 		detector: true,
 		size: src.byteLength,
 		providedByCoreWeb: true,
