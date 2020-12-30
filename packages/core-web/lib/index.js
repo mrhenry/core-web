@@ -1,7 +1,6 @@
 const mapping = require("../helpers/__mapping");
 const knownBrowsers = require("../helpers/__browsers");
 const knownEngines = require("../helpers/__engines");
-const clientsMatrix = require("../helpers/__clients-matrix");
 const semver = require("semver");
 
 const map = new Map();
@@ -24,7 +23,6 @@ module.exports = {
 	get: get,
 	has: has,
 	required: required,
-	clientSideDetect: clientSideDetect,
 }
 
 function names() {
@@ -129,150 +127,6 @@ function requiredForEngine(engine, version) {
 
 	return out;
 }
-
-function clientSideDetect(targets, opts = {}) {
-	if (opts && opts.debug) {
-		logUsedTargets(targets);
-	}
-
-	if (!targets.browsers) {
-		// Todo : support engines as input
-		return;
-	}
-
-	let detectors = [];
-
-	for (const browser of Object.keys(targets.browsers)) {
-		let browserDetectors = [];
-		const versionRangeUp = '>=' + targets.browsers[browser];
-		const matrix = clientsMatrix[browser];
-		if (!matrix) {
-			continue;
-		}
-
-		for (let i = 0; i < matrix.versionList.length ; i++) {
-			const version = matrix.versionList[i];
-			if (semver.satisfies(semver.coerce(version), versionRangeUp)) {
-				const features = matrix.versions[version].features.filter((feature) => {
-					return !!feature.detectSource;
-				});
-				
-				if (!features || !features.length) {
-					continue;
-				}
-
-				features.sort((a, b) => {
-					if (a.detectSource.length < b.detectSource.length) {
-						return -1;
-					}
-
-					if (a.detectSource.length > b.detectSource.length) {
-						return 1;
-					}
-
-					if (a.name < b.name) {
-						return -1;
-					}
-
-					if (a.name > b.name) {
-						return 1;
-					}
-					
-					return 0;
-				});
-
-				browserDetectors = browserDetectors.concat(features);
-				
-				break;
-			}
-		}
-
-		if (browserDetectors.length < 3) {
-			const versionRangeDown = '<=' + targets.browsers[browser];
-
-			for (let i = (matrix.versionList.length - 1); i >= 0; i--) {
-				const version = matrix.versionList[i];
-				if (semver.satisfies(semver.coerce(version), versionRangeDown)) {
-					const features = matrix.versions[version].features.filter((feature) => {
-						return !!feature.detectSource;
-					});
-				
-					if (!features || !features.length) {
-						continue;
-					}
-
-					features.sort((a, b) => {
-						if (a.detectSource.length < b.detectSource.length) {
-							return -1;
-						}
-
-						if (a.detectSource.length > b.detectSource.length) {
-							return 1;
-						}
-
-						if (a.name < b.name) {
-							return -1;
-						}
-
-						if (a.name > b.name) {
-							return 1;
-						}
-					
-						return 0;
-					});
-
-					browserDetectors = browserDetectors.concat(features);
-				
-					break;
-				}
-			}
-		}
-
-		browserDetectors.sort((a, b) => {
-			if (a.detectSource.length < b.detectSource.length) {
-				return -1;
-			}
-
-			if (a.detectSource.length > b.detectSource.length) {
-				return 1;
-			}
-
-			if (a.name < b.name) {
-				return -1;
-			}
-
-			if (a.name > b.name) {
-				return 1;
-			}
-		
-			return 0;
-		});
-
-		detectors = detectors.concat(browserDetectors.slice(0, 3));
-	}
-
-	let condition = "(\n";
-
-	condition += detectors
-		.map((d) => {
-			return d.detectSource;	
-		})
-		.filter((value, index, self) => {
-			return self.indexOf(value) === index;
-		})
-		.map((d) => {
-			let sub = "\t(";
-			sub += d.trim();
-			sub += ")";
-
-			return sub;
-		})
-		.join(" &&\n");
-
-	condition += "\n)\n";
-
-	return condition;
-};
 
 function logUsedTargets(targets) {
 	let all = [];

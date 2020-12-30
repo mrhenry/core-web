@@ -10,7 +10,6 @@ const writeFile = denodeify(fs.writeFile);
 const mkdir = denodeify(fs.mkdir);
 const rmdir = denodeify(fs.rmdir);
 const readdir = denodeify(fs.readdir);
-const bcd = require('@mdn/browser-compat-data');
 
 const modulesDir = path.resolve(__dirname, "../core-web/modules");
 const helpersDir = path.resolve(__dirname, "../core-web/helpers");
@@ -20,7 +19,6 @@ const detectorsDir = path.resolve(
 );
 
 const generateWebComponents = require("./generate-webcomponents");
-const generateClientsMatrix = require("./generate-clients-matrix");
 const { browsersToEngines } = require("./browsers-to-engines/browsers-to-engines");
 
 genAll();
@@ -119,11 +117,6 @@ async function genAll() {
 	);
 
 	await writeFile(
-		path.join(helpersDir, "__clients-matrix.js"),
-		`module.exports = ${JSON.stringify(generateClientsMatrix(mapping), undefined, "  ")}`
-	);
-
-	await writeFile(
 		path.join(helpersDir, "__browsers.js"),
 		`module.exports = ${JSON.stringify(knownBrowsers, undefined, "  ")}`
 	);
@@ -146,7 +139,6 @@ async function gen(feature, mapping, aliases) {
 			deps: Array.from(dependencies).filter(n => !providedByBabel(n)),
 			browsers: meta.browsers,
 			engines: browsersToEngines(meta.browsers),
-			detectSource: meta.detectSource,
 			size: meta.size
 		});
 	}

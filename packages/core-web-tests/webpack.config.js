@@ -2,61 +2,27 @@ const path = require('path');
 
 module.exports = [
 	configBuilder({
-		name: 'modern',
-		target: ['web', 'browserslist:last 2 versions and > 2%'],
+		name: 'engines',
+		target: ['web', 'browserslist:IE 8'],
 		coreJsBrowsers: [
-			'chrome >= 80',
-			'firefox >= 76',
-			'opera >= 70',
-			'safari >= 13',
-		],
-		coreWebBrowsers: {
-			chrome: '80',
-			firefox: '76',
-			opera: '70',
-			safari: '13',
-		},
-	}),
-
-	configBuilder({
-		name: 'main',
-		target: ['web', 'browserslist:Edge 18 or Safari 10 or Firefox 40'],
-		coreJsBrowsers: [
-			'chrome >= 56',
-			'edge >= 18',
-			'firefox >= 40',
-			'safari >= 10',
-		],
-		coreWebBrowsers: {
-			chrome: '56',
-			edge: '18',
-			firefox: '40',
-			safari: '10',
-		},
-	}),
-
-	configBuilder({
-		name: 'old',
-		target: ['web', 'es5'],
-		coreJsBrowsers: [
-			'chrome >= 31',
+			'chrome >= 26',
 			'edge >= 12',
 			'firefox >= 26',
 			'opera >= 26',
 			'safari >= 6',
-			'ie >= 11'
+			'ie >= 8'
 		],
 		coreWebEngines: {
-			Blink: '31',
 			Gecko: '26',
 			EdgeHTML: '12',
+			Blink: '31',
 			WebKit: '536.25',
-			Trident: '7'
-		},
+			Trident: '8'
+		}
 	}),
 
 	configBuilder({
-		name: 'ancient',
+		name: 'browsers',
 		target: ['web', 'browserslist:IE 8'],
 		coreJsBrowsers: [
 			'chrome >= 26',
@@ -129,7 +95,7 @@ function configBuilder(opts) {
 									'@mrhenry/core-web',
 									{
 										browsers: opts.coreWebBrowsers,
-										engines: opts.coreWebEngines
+										engines: opts.coreWebEngines,
 									}
 								]
 							],

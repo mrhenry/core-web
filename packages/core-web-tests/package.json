@@ -3,7 +3,7 @@
   "version": "0.4.0",
   "private": true,
   "scripts": {
-    "build": "node ./build-index-client-side-detect.js && webpack",
+    "build": "webpack",
     "lint": "eslint --fix ./src/*.js"
   },
   "devDependencies": {

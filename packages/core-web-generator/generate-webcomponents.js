@@ -5,10 +5,6 @@ const writeFile = denodeify(fs.writeFile);
 const readFile = denodeify(fs.readFile);
 
 const modulesDir = path.resolve(__dirname, "../core-web/modules");
-const detectorsDir = path.resolve(
-	__dirname,
-	"../babel-plugin-core-web/detectors"
-);
 
 module.exports = async function generateWebComponents(mapping) {
 	await generateTemplate(mapping);
