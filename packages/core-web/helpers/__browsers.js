@@ -1,4 +1,4 @@
-module.exports = [
+export const browsers = [
   "edge",
   "edge_mob",
   "ie",

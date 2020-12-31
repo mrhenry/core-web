@@ -4,6 +4,7 @@ install:
 
 generate: yarn
 	(cd packages/core-web-generator && yarn build)
+	(cd packages/core-web && yarn build)
 
 build-pages: yarn
 	mkdir -p packages/pages/dist/browser-compat

@@ -4,14 +4,14 @@ import { browsersToEngines } from "./browsers-to-engines/browsers-to-engines";
 
 const modulesDir = path.resolve(__dirname, "../../core-web/modules");
 
-export async function generateWebComponents(mapping: Array<MappingItem>) {
+export async function generateWebComponents(mapping: Array<Feature>) {
 	await generateTemplate(mapping);
 	await generateShadyDOM(mapping);
 	await generateShadyCSS(mapping);
 	await generateCustomElements(mapping);
 };
 
-async function generateTemplate(mapping: Array<MappingItem>) {
+async function generateTemplate(mapping: Array<Feature>) {
 	const src = fs.readFileSync(
 		require.resolve("@webcomponents/template"),
 		"utf-8"
@@ -51,7 +51,7 @@ async function generateTemplate(mapping: Array<MappingItem>) {
 	});
 }
 
-async function generateShadyDOM(mapping: Array<MappingItem>) {
+async function generateShadyDOM(mapping: Array<Feature>) {
 	const src = fs.readFileSync(
 		require.resolve("@webcomponents/shadydom/shadydom.min.js"),
 		"utf-8"
@@ -99,7 +99,7 @@ async function generateShadyDOM(mapping: Array<MappingItem>) {
 	});
 }
 
-async function generateShadyCSS(mapping: Array<MappingItem>) {
+async function generateShadyCSS(mapping: Array<Feature>) {
 	const scopingShim = fs.readFileSync(
 		require.resolve("@webcomponents/shadycss/scoping-shim.min.js"),
 		"utf-8"
@@ -266,7 +266,7 @@ async function generateShadyCSS(mapping: Array<MappingItem>) {
 	});
 }
 
-async function generateCustomElements(mapping: Array<MappingItem>) {
+async function generateCustomElements(mapping: Array<Feature>) {
 	const src = fs.readFileSync(
 		require.resolve("@webcomponents/custom-elements"),
 		"utf-8"

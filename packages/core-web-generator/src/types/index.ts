@@ -1,4 +1,4 @@
-type MappingItem = {
+type Feature = {
 	// Feature name.
 	name: string
 
@@ -19,7 +19,7 @@ type MappingItem = {
 	providedByCoreWeb: boolean
 }
 
-type AliasItem = {
+type FeatureAlias = {
 	// Feature name.
 	name: string
 	// Aliases for the feature.

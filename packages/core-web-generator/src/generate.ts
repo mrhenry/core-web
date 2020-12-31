@@ -28,8 +28,8 @@ async function genAll() {
 
 	fs.mkdirSync(helpersDir);
 
-	const mapping: Array<MappingItem> = [];
-	const aliases: Array<AliasItem> = [];
+	const mapping: Array<Feature> = [];
+	const aliases: Array<FeatureAlias> = [];
 
 	const features = await polyfillLibrary.listAllPolyfills();
 	for (const feature of features) {
@@ -95,7 +95,7 @@ async function genAll() {
 
 	fs.writeFileSync(
 		path.join(helpersDir, "__mapping.js"),
-		`module.exports = ${JSON.stringify(mapping, undefined, "  ")}`
+		`export const mapping = ${JSON.stringify(mapping, undefined, "  ")}`
 	);
 
 	let knownBrowsers: Array<string> = [];
@@ -109,7 +109,7 @@ async function genAll() {
 
 	fs.writeFileSync(
 		path.join(helpersDir, "__browsers.js"),
-		`module.exports = ${JSON.stringify(knownBrowsers, undefined, "  ")}`
+		`export const browsers = ${JSON.stringify(knownBrowsers, undefined, "  ")}`
 	);
 
 	let knownEngines: Array<string> = [];
@@ -123,11 +123,11 @@ async function genAll() {
 
 	fs.writeFileSync(
 		path.join(helpersDir, "__engines.js"),
-		`module.exports = ${JSON.stringify(knownEngines, undefined, "  ")}`
+		`export const engines = ${JSON.stringify(knownEngines, undefined, "  ")}`
 	);
 }
 
-async function gen(feature: string, mapping: Array<MappingItem>, aliases: Array<AliasItem>) {
+async function gen(feature: string, mapping: Array<Feature>, aliases: Array<FeatureAlias>) {
 	const meta = await polyfillLibrary.describePolyfill(feature);
 	let output = '';
 	const helperName = normalizeHelperName(feature);
