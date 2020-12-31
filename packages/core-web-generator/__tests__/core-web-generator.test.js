@@ -1,6 +1,6 @@
 'use strict';
 const assert = require('assert');
-const { browsersToEngines } = require('..//browsers-to-engines/browsers-to-engines');
+const { browsersToEngines } = require('../dist/browsers-to-engines/browsers-to-engines');
 
 function testBrowsersToEngines(message, browsers, engines) {
 	console.log(`browsersToEngines: ${message}`);
