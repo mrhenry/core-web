@@ -1,0 +1,25 @@
+{
+	"compileOnSave": true,
+	"compilerOptions": {
+		"allowUnusedLabels": false,
+		"lib": [
+			"ES2020",
+		],
+		"module": "commonjs",
+		"moduleResolution": "node",
+		"outDir": "./dist/",
+		"rootDir": "./src/",
+		"sourceMap": true,
+		"strict": true,
+		"target": "ES2020"
+	},
+	"exclude": [
+		"node_modules"
+	],
+	"include": [
+		"src/**/*.ts"
+	],
+	"files": [
+		"src/generate.ts"
+	]
+}
