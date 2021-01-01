@@ -1,3 +1,5 @@
+packages := ./ ./packages/babel-plugin-core-web ./packages/core-web ./packages/core-web-example ./packages/core-web-generator ./packages/core-web-tests ./packages/pages
+
 install:
 	npm install
 
@@ -22,8 +24,10 @@ run-tests: install
 watch-tests: install
 	(cd packages/core-web-tests && npm run watch)
 
-version: install
-	yarn lerna version --no-git-tag-version --no-push
+version-patch: $(packages)
+
+$(packages): install
+	(cd $@ && npm version patch)
 
 publish: install
 	yarn lerna publish from-package --yes
