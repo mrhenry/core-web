@@ -1,1 +1,1 @@
-export declare function generateWebComponents(mapping: Array<MappingItem>): Promise<void>;
+export declare function generateWebComponents(mapping: Array<Feature>): Promise<void>;

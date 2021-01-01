@@ -1,4 +1,4 @@
-declare type MappingItem = {
+declare type Feature = {
     name: string;
     browsers: Record<string, string>;
     engines: Record<string, string>;
@@ -8,7 +8,7 @@ declare type MappingItem = {
     hasCustomMatcher: boolean;
     providedByCoreWeb: boolean;
 };
-declare type AliasItem = {
+declare type FeatureAlias = {
     name: string;
     entries: Array<string>;
 };
