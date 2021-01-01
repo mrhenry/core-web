@@ -25,7 +25,7 @@
   ],
   "scripts": {
     "clean": "rm -rf ./lib/",
-    "build": "yarn clean && tsc",
+    "build": "npm run clean && tsc",
     "tsc": "tsc"
   },
   "dependencies": {

@@ -1,32 +1,31 @@
 install:
-	yarn
-	yarn bootstrap
+	npm install
 
-generate: yarn
-	(cd packages/core-web-generator && yarn build)
-	(cd packages/core-web && yarn build)
+generate: install
+	(cd packages/core-web-generator && npm run build)
+	(cd packages/core-web && npm run build)
 
-build-pages: yarn
+build-pages: install
 	mkdir -p packages/pages/dist/browser-compat
-	(cd packages/pages && yarn build)
+	(cd packages/pages && npm run build)
 
-build-example: yarn
-	(cd packages/core-web-example && yarn build)
+build-example: install
+	(cd packages/core-web-example && npm run build)
 
-build-tests: yarn
-	(cd packages/core-web-tests && yarn build)
+build-tests: install
+	(cd packages/core-web-tests && npm run build)
 
-run-tests: yarn
-	(cd packages/core-web-generator && yarn test)
-	(cd packages/core-web-tests && yarn browserstack-runner)
+run-tests: install
+	(cd packages/core-web-generator && npm run test)
+	(cd packages/core-web-tests && npm run browserstack-runner)
 
-build-watch-tests: yarn
-	yarn --cwd packages/core-web-tests webpack -w
+watch-tests: install
+	(cd packages/core-web-tests && npm run watch)
 
-version: yarn
+version: install
 	yarn lerna version --no-git-tag-version --no-push
 
-publish: yarn
+publish: install
 	yarn lerna publish from-package --yes
 
-.PHONY: yarn $(MAKECMDGOALS)
+.PHONY: $(MAKECMDGOALS)

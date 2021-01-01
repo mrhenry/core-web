@@ -21,9 +21,7 @@ jobs:
       with:
         node-version: 14
 
-    - run: yarn install
-    - run: yarn lerna clean -y
-    - run: yarn lerna bootstrap
+    - run: make install
     - run: make generate
     - run: make build-pages
 

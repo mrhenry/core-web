@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "clean": "rm -rf ./lib/",
-    "build": "yarn clean && tsc && node ./lib/generate.js",
+    "build": "npm run clean && tsc && node ./lib/generate.js",
     "tsc": "tsc",
     "test": "node ./__tests__/core-web-generator.test.js"
   },
