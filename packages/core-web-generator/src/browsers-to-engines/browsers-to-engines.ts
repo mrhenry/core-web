@@ -2,8 +2,8 @@ import * as bcd from '@mdn/browser-compat-data';
 import * as semver from "semver";
 
 export function browsersToEngines(browsers: Record<string, string>) {
-	const engineFeatureMapping: Record<string, { engine: string, versions: Array<semver.SemVer> }> = {};
-	const lastVersionForEngine: Record<string, semver.SemVer> = {};
+	const engineFeatureMapping: Record<string, { engine: string, versions: Array<string> }> = {};
+	const lastVersionForEngine: Record<string, string> = {};
 
 	const browserNameMapping: Record<string, string> = {
 	"chrome": "chrome",
@@ -46,7 +46,7 @@ export function browsersToEngines(browsers: Record<string, string>) {
 
 					const engineVersionSemver = semver.coerce(releaseInfo.engine_version);
 					if (engineVersionSemver) {
-						engineFeatureMapping[browserName + ':' + releaseInfo.engine].versions.push(engineVersionSemver);
+						engineFeatureMapping[browserName + ':' + releaseInfo.engine].versions.push(releaseInfo.engine_version);
 					}
 				}
 
@@ -54,15 +54,16 @@ export function browsersToEngines(browsers: Record<string, string>) {
 
 				if (
 					releaseInfo.engine &&
-					engineVersionSemver && (
+					engineVersionSemver &&
+					releaseInfo.engine_version && (
 						!lastVersionForEngine[releaseInfo.engine] ||
 						semver.lt(
-							lastVersionForEngine[releaseInfo.engine],
+							semver.coerce(lastVersionForEngine[releaseInfo.engine])!,
 							engineVersionSemver
 						)
 					)
 				) {
-					lastVersionForEngine[releaseInfo.engine] = engineVersionSemver;
+					lastVersionForEngine[releaseInfo.engine] = releaseInfo.engine_version;
 				}
 			}
 		}
@@ -107,9 +108,9 @@ export function browsersToEngines(browsers: Record<string, string>) {
 				let min = parts[0].trim();
 				let max = parts[1].trim();
 				// smallest lower end version
-				min = semver.lt(semver.coerce(min)!, semver.coerce(engineVersions[0])!) ? min : engineVersions[0].format();
+				min = semver.lt(semver.coerce(min)!, semver.coerce(engineVersions[0])!) ? min : engineVersions[0];
 				// greatest upper end version
-				max = semver.gt(semver.coerce(max)!, semver.coerce(engineVersions[engineVersions.length - 1])!) ? max : engineVersions[engineVersions.length - 1].format();
+				max = semver.gt(semver.coerce(max)!, semver.coerce(engineVersions[engineVersions.length - 1])!) ? max : engineVersions[engineVersions.length - 1];
 
 				out[engine] = `${min} - ${max}`;
 			} else {
@@ -125,7 +126,7 @@ export function browsersToEngines(browsers: Record<string, string>) {
 		let min = parts[0].trim();
 		let max = parts[1].trim();
 
-		if (semver.eq(semver.coerce(max)!, lastVersionForEngine[engine])) {
+		if (semver.eq(semver.coerce(max)!, semver.coerce(lastVersionForEngine[engine])!)) {
 			out[engine] = `>= ${min}`;
 		}
 	}

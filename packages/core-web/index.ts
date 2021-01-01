@@ -83,10 +83,15 @@ function requiredForBrowser(browser: string, version: string): Array<string> {
 			continue;
 		}
 
+		const versionSemVer = semver.coerce(version);
+		if (!versionSemVer) {
+			continue;
+		}
+
 		const isBrowserMatch =
 			meta.browsers &&
 			meta.browsers[browser] &&
-			semver.satisfies(semver.coerce(version), meta.browsers[browser]);
+			semver.satisfies(versionSemVer, meta.browsers[browser]);
 
 		if (isBrowserMatch) {
 			out.push(feature);
@@ -111,10 +116,15 @@ function requiredForEngine(engine: string, version: string): Array<string> {
 			continue;
 		}
 
+		const versionSemVer = semver.coerce(version);
+		if (!versionSemVer) {
+			continue;
+		}
+
 		const isEngineMatch =
 			meta.engines &&
 			meta.engines[engine] &&
-			semver.satisfies(semver.coerce(version), meta.engines[engine]);
+			semver.satisfies(versionSemVer, meta.engines[engine]);
 
 		if (isEngineMatch) {
 			out.push(feature);

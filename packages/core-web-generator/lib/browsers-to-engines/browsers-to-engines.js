@@ -39,14 +39,15 @@ function browsersToEngines(browsers) {
                     }
                     const engineVersionSemver = semver.coerce(releaseInfo.engine_version);
                     if (engineVersionSemver) {
-                        engineFeatureMapping[browserName + ':' + releaseInfo.engine].versions.push(engineVersionSemver);
+                        engineFeatureMapping[browserName + ':' + releaseInfo.engine].versions.push(releaseInfo.engine_version);
                     }
                 }
                 const engineVersionSemver = semver.coerce(releaseInfo.engine_version || '');
                 if (releaseInfo.engine &&
-                    engineVersionSemver && (!lastVersionForEngine[releaseInfo.engine] ||
-                    semver.lt(lastVersionForEngine[releaseInfo.engine], engineVersionSemver))) {
-                    lastVersionForEngine[releaseInfo.engine] = engineVersionSemver;
+                    engineVersionSemver &&
+                    releaseInfo.engine_version && (!lastVersionForEngine[releaseInfo.engine] ||
+                    semver.lt(semver.coerce(lastVersionForEngine[releaseInfo.engine]), engineVersionSemver))) {
+                    lastVersionForEngine[releaseInfo.engine] = releaseInfo.engine_version;
                 }
             }
         }
@@ -82,9 +83,9 @@ function browsersToEngines(browsers) {
                 let min = parts[0].trim();
                 let max = parts[1].trim();
                 // smallest lower end version
-                min = semver.lt(semver.coerce(min), semver.coerce(engineVersions[0])) ? min : engineVersions[0].format();
+                min = semver.lt(semver.coerce(min), semver.coerce(engineVersions[0])) ? min : engineVersions[0];
                 // greatest upper end version
-                max = semver.gt(semver.coerce(max), semver.coerce(engineVersions[engineVersions.length - 1])) ? max : engineVersions[engineVersions.length - 1].format();
+                max = semver.gt(semver.coerce(max), semver.coerce(engineVersions[engineVersions.length - 1])) ? max : engineVersions[engineVersions.length - 1];
                 out[engine] = `${min} - ${max}`;
             }
             else {
@@ -98,7 +99,7 @@ function browsersToEngines(browsers) {
         const parts = versionRange.split('-');
         let min = parts[0].trim();
         let max = parts[1].trim();
-        if (semver.eq(semver.coerce(max), lastVersionForEngine[engine])) {
+        if (semver.eq(semver.coerce(max), semver.coerce(lastVersionForEngine[engine]))) {
             out[engine] = `>= ${min}`;
         }
     }

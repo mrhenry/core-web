@@ -21,7 +21,6 @@
 	"include": [
 		"types/**/*.ts",
 		"index.ts",
-		"global.d.ts",
 		"./helpers/__browsers.js",
 		"./helpers/__engines.js",
 		"./helpers/__mapping.js",
