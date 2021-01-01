@@ -30,6 +30,6 @@ $(packages): install
 	(cd $@ && npm version patch --no-git-tag-version)
 
 publish: install
-	yarn lerna publish from-package --yes
+	@echo TODO
 
 .PHONY: $(MAKECMDGOALS)
