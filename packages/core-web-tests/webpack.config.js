@@ -96,6 +96,7 @@ function configBuilder(opts) {
 									{
 										browsers: opts.coreWebBrowsers,
 										engines: opts.coreWebEngines,
+										debug: false,
 									}
 								]
 							],

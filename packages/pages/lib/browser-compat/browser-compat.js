@@ -1,6 +1,6 @@
 'use strict';
 
-const mapping = require('@mrhenry/core-web/helpers/__mapping');
+const { mapping } = require('@mrhenry/core-web/lib/helpers/__mapping.js');
 const bcd = require('@mdn/browser-compat-data');
 const fs = require('fs');
 const path = require('path');

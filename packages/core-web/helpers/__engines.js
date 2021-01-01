@@ -1,4 +1,4 @@
-module.exports = [
+export const engines = [
   "EdgeHTML",
   "Trident",
   "Gecko",

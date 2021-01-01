@@ -4,7 +4,9 @@
   "private": true,
   "scripts": {
     "build": "webpack",
-    "lint": "eslint --fix ./src/*.js"
+    "watch": "webpack -w",
+    "lint": "eslint --fix ./src/*.js",
+    "browserstack-runner": "browserstack-runner"
   },
   "devDependencies": {
     "@babel/core": "^7.12.10",

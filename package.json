@@ -1,21 +1,11 @@
 {
-  "name": "root",
+  "name": "@mrhenry/core-web-root",
   "private": true,
   "workspaces": [
     "packages/*"
   ],
-  "scripts": {
-    "bootstrap": "lerna bootstrap"
-  },
   "prettier": {
     "useTabs": true
   },
-  "devDependencies": {
-    "lerna": "^3.22.1"
-  },
-  "resolutions": {
-    "**/elliptic": "^6.5.3",
-    "**/dot-prop": "^5.1.1"
-  },
-  "dependencies": {}
+  "version": "0.4.0"
 }

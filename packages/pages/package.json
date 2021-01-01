@@ -23,7 +23,7 @@
     "build-fonts": "cp -r ./lib/fonts/ ./dist/fonts/",
     "build-images": "cp -r ./lib/images/ ./dist/images/",
     "build-worker-browsers-list": "node ./build-bcd-browsers",
-    "build": "yarn build-html && yarn build-css && yarn build-js && yarn build-fonts && yarn build-images && yarn build-worker-browsers-list",
+    "build": "npm run build-html && npm run build-css && npm run build-js && npm run build-fonts && npm run build-images && npm run build-worker-browsers-list",
     "dev-server": "cd ./dist && npx http-server"
   },
   "bugs": {
