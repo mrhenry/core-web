@@ -28,7 +28,6 @@ version-patch: $(packages)
 
 $(packages): install
 	(cd $@ && npm version patch --no-git-tag-version)
-	npm install
 
 publish: install
 	yarn lerna publish from-package --yes
