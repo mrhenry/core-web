@@ -27,7 +27,7 @@ watch-tests: install
 version-patch: $(packages)
 
 $(packages): install
-	(cd $@ && npm version patch)
+	(cd $@ && npm version patch --no-git-tag-version)
 
 publish: install
 	yarn lerna publish from-package --yes
