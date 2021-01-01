@@ -6,7 +6,7 @@ export function browsersToEngines(browsers: Record<string, string>) {
 	const lastVersionForEngine: Record<string, string> = {};
 
 	const browserNameMapping: Record<string, string> = {
-	"chrome": "chrome",
+		"chrome": "chrome",
 		// "android": "chrome_android",
 		"edge": "edge",
 		"firefox": "firefox",

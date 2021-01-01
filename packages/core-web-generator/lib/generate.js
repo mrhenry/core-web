@@ -82,6 +82,7 @@ async function genAll() {
             }
         }
     });
+    knownBrowsers.sort();
     fs.writeFileSync(path.join(helpersDir, "__browsers.js"), `export const browsers = ${JSON.stringify(knownBrowsers, undefined, "  ")}`);
     let knownEngines = [];
     mapping.forEach((feature) => {
@@ -91,6 +92,7 @@ async function genAll() {
             }
         }
     });
+    knownEngines.sort();
     fs.writeFileSync(path.join(helpersDir, "__engines.js"), `export const engines = ${JSON.stringify(knownEngines, undefined, "  ")}`);
 }
 async function gen(feature, mapping, aliases) {

@@ -2,11 +2,11 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.engines = void 0;
 exports.engines = [
+    "Blink",
     "EdgeHTML",
-    "Trident",
     "Gecko",
     "Presto",
-    "WebKit",
-    "Blink"
+    "Trident",
+    "WebKit"
 ];
 //# sourceMappingURL=__engines.js.map

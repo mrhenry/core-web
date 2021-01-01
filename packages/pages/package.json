@@ -17,7 +17,7 @@
     "url": "git+https://github.com/mrhenry/core-web.git"
   },
   "scripts": {
-    "build-html": "node lib/landing/landing.js && node lib/browser-compat/browser-compat.js",
+    "build-html": "node lib/pages.js",
     "build-css": "node ./build-css.js",
     "build-js": "webpack",
     "build-fonts": "cp -r ./lib/fonts/ ./dist/fonts/",

@@ -40,7 +40,7 @@ function browsersCoreWebToMDN(browser) {
 	// webview_android: [Object]
 		
 	if (browser === 'android') {
-		return 'chrome_android';
+		return 'webview_android';
 	}
 
 	if (browser === 'edge_mob') {

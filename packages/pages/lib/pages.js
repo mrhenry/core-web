@@ -1,7 +1,7 @@
 'use strict';
 
-module.exports = pages;
+const generateLanding = require('./landing/landing');
+const generateBrowserCompat = require('./browser-compat/browser-compat');
 
-function pages() {
-    // TODO
-}
+generateLanding();
+generateBrowserCompat();

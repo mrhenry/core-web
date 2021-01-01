@@ -12,11 +12,7 @@ const roadmap = require('./templates/roadmap');
 const siteFooter = require('./templates/site-footer');
 const requirements = require('./templates/requirements');
 
-main();
-
-async function main() {
-	generate();
-}
+module.exports = generate;
 
 function generate() {
 	fs.writeFileSync(path.join(__dirname, '../../dist/index.html'), html`<!DOCTYPE html>

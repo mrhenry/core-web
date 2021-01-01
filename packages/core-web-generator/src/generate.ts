@@ -107,6 +107,8 @@ async function genAll() {
 		}
 	});
 
+	knownBrowsers.sort();
+
 	fs.writeFileSync(
 		path.join(helpersDir, "__browsers.js"),
 		`export const browsers = ${JSON.stringify(knownBrowsers, undefined, "  ")}`
@@ -120,6 +122,8 @@ async function genAll() {
 			}
 		}
 	});
+
+	knownEngines.sort();
 
 	fs.writeFileSync(
 		path.join(helpersDir, "__engines.js"),

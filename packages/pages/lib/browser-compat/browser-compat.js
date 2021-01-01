@@ -6,16 +6,9 @@ const fs = require('fs');
 const path = require('path');
 const tableHTML = require('./templates/table');
 const pageHTML = require('./templates/page');
-const { gatherPolyfillNotes } = require('./templates/notes');
 const { browsersCoreWebToMDN, coreWebBrowsers } = require('./browsers');
 
-
-main();
-
-async function main() {
-	await gatherPolyfillNotes();
-	generate();
-}
+module.exports = generate;
 
 function generate() {
 	const compat = {};
