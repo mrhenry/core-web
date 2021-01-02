@@ -20,11 +20,11 @@ build-pages: install
 build-pages-worker: install
 	(cd packages/pages-worker && npm run build)
 
+build: install generate build-example build-tests build-pages build-pages-worker
+
 run-tests: install
 	(cd packages/core-web-generator && npm run test)
 	(cd packages/core-web-tests && npm run browserstack-runner)
-
-build: install generate build-example build-tests build-pages
 
 watch-tests: install
 	(cd packages/core-web-tests && npm run watch)

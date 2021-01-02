@@ -22,8 +22,7 @@ jobs:
           node-version: 15
 
       - run: make install
-      - run: make generate
-      - run: make build-tests
+      - run: make build
 
       - name: 'BrowserStack Env Setup'
         uses: 'browserstack/github-actions/setup-env@master'
