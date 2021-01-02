@@ -25,9 +25,7 @@ jobs:
 
     - run: |
        make install
-       make generate
-       make build-tests
-       make build-example
+       make build
 
     - name: Perform CodeQL Analysis
       uses: github/codeql-action/analyze@v1

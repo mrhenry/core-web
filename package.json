@@ -1,5 +1,8 @@
 {
   "name": "@mrhenry/core-web-root",
+  "engines": {
+    "node": ">=15"
+  },
   "private": true,
   "workspaces": [
     "packages/*"
