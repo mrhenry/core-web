@@ -39,6 +39,10 @@ function generate() {
 		tables = tables + tableHTML(feature);
 	});
 
+	if (!fs.existsSync(path.join(__dirname, '../../dist/browser-compat'))) {
+		fs.mkdirSync(path.join(__dirname, '../../dist/browser-compat'), {recursive: true});
+	}
+
 	fs.writeFileSync(path.join(__dirname, '../../dist/browser-compat/index.html'), pageHTML(tables));
 }
 

@@ -4,6 +4,7 @@ const postcssImport = require('postcss-import');
 const cssnano = require('cssnano');
 const targets = require('./targets');
 const fs = require('fs');
+const path = require('path');
 
 fs.readFile('./lib/css/index.css', async (err, css) => {
 	if (err) {
@@ -36,11 +37,15 @@ fs.readFile('./lib/css/index.css', async (err, css) => {
 				inline: false,
 			},
 			from: './lib/css/index.css',
-			to: `./dist/index.${target.name}.css`
-		}).then(async (result) => {
-			await fs.writeFile(`./dist/index.${target.name}.css`, result.css, () => true)
+			to: `./dist/css/index.${target.name}.css`
+		}).then((result) => {
+			if (!fs.existsSync(path.join(__dirname, './dist/css'))) {
+				fs.mkdirSync(path.join(__dirname, './dist/css'), {recursive: true});
+			}
+			
+			fs.writeFileSync(`./dist/css/index.${target.name}.css`, result.css);
 			if (result.map) {
-				await fs.writeFile(`./dist/index.${target.name}.css.map`, result.map.toString(), () => true)
+				fs.writeFileSync(`./dist/css/index.${target.name}.css.map`, result.map.toString());
 			}
 		});
 	}

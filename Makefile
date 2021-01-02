@@ -14,7 +14,6 @@ build-tests: install
 	(cd packages/core-web-tests && npm run build)
 
 build-pages: install
-	mkdir -p packages/pages/dist/browser-compat
 	(cd packages/pages && npm run build)
 
 build-pages-worker: install
