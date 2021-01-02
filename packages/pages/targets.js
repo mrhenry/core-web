@@ -99,7 +99,7 @@ module.exports = [
 	},
 	
 	{
-		name: 'fallback',
+		name: '2011',
 		webpackTarget: [
 			'web',
 			'browserslist:Chrome 17 or Firefox 10 or IE 9 or Opera 12 or Safari 5.1 or Android 4'

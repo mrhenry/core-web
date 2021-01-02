@@ -14,11 +14,9 @@ async function handleRequest(request) {
 	try {
 		const resp = await fetch('https://mrhenry.github.io/core-web' + new URL(request.url).pathname);
 
-		// fallback;
-		let engine = {
-			name: "Blink",
-			version: "26"
-		};
+		let engine;
+		let possibleTargets = [];
+		let pageTarget;
 
 		const ua = parser(request.headers.get('User-Agent'));
 		if (
@@ -31,19 +29,17 @@ async function handleRequest(request) {
 			engine = ua.engine;
 		}
 
-		if (engine.name === "WebKit") {
+		if (engine && engine.name === "WebKit") {
 			engine = webkitVersion(ua);
+
+			possibleTargets = targets.filter((target) => {
+				if (target.engines[engine.name] && semver.satisfies(semver.coerce(engine.version), '>= ' + target.engines[engine.name])) {
+					return true;
+				}
+
+				return false;
+			});
 		}
-
-		let possibleTargets = targets.filter((target) => {
-			if (target.engines[engine.name] && semver.satisfies(semver.coerce(engine.version), '>= ' + target.engines[engine.name])) {
-				return true;
-			}
-
-			return false;
-		});
-
-		let pageTarget;
 
 		return new HTMLRewriter()
 			.on('meta[name="ua-targets"]', {
@@ -77,23 +73,15 @@ async function handleRequest(request) {
 			})
 			.onDocument({
 				end(end) {
-					end.append(`<!-- target: ${pageTarget.name} - engine: ${engine.name}/${engine.version} -->`, {html: true});
+					if (pageTarget && pageTarget.name && engine && engine.name) {
+						end.append(`<!-- target: ${pageTarget.name} - engine: ${engine.name}/${engine.version || 'unknown'} -->`, { html: true });
+					}
 				}
 			})
 			.transform(resp);
 	} catch (error) {
 		return new Response(error.message);
 	}
-}
-
-function cleanupIfNoUA(resp) {
-	return new HTMLRewriter()
-		.on('[ua-target]', {
-			element(element) {
-				element.remove();
-			},
-		})
-		.transform(resp);
 }
 
 const targets = [
@@ -142,7 +130,7 @@ const targets = [
 		},
 	},
 	{
-		name: 'fallback',
+		name: '2011',
 		engines: {
 			"Blink": "26",
 			"Gecko": "10",
