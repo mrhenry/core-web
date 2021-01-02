@@ -39,6 +39,10 @@ fs.readFile('./lib/css/index.css', async (err, css) => {
 			from: './lib/css/index.css',
 			to: `./dist/css/index.${target.name}.css`
 		}).then((result) => {
+			if (!fs.existsSync(path.join(__dirname, './dist/css'))) {
+				fs.mkdirSync(path.join(__dirname, './dist/css'), {recursive: true});
+			}
+			
 			fs.writeFileSync(`./dist/css/index.${target.name}.css`, result.css);
 			if (result.map) {
 				fs.writeFileSync(`./dist/css/index.${target.name}.css.map`, result.map.toString());

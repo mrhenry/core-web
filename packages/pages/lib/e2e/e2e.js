@@ -8,9 +8,9 @@ module.exports = generate;
 
 function generate() {
 	if (!fs.existsSync(path.join(__dirname, '../../dist/e2e'))) {
-		fs.mkdirSync(path.join(__dirname, '../../dist/e2e'));
+		fs.mkdirSync(path.join(__dirname, '../../dist/e2e'), {recursive: true});
 	}
-	
+
 	fs.writeFileSync(path.join(__dirname, '../../dist/e2e/index.html'), html`<!DOCTYPE html>
 <html>
 <head>
