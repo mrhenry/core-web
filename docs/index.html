@@ -6,14 +6,16 @@
 	<link rel="icon"
 		href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🕸</text></svg>">
 	<title>core-web</title>
-	<meta name="ua-targets" content="2020 2018 2014 2013 fallback">
+	<meta name="ua-targets" content="2020 2018 2016 2014 2013 fallback">
 <link rel="stylesheet" href="/index.2020.css" ua-target="2020">
 <link rel="stylesheet" href="/index.2018.css" ua-target="2018">
+<link rel="stylesheet" href="/index.2016.css" ua-target="2016">
 <link rel="stylesheet" href="/index.2014.css" ua-target="2014">
 <link rel="stylesheet" href="/index.2013.css" ua-target="2013">
 <link rel="stylesheet" href="/index.fallback.css" ua-target="fallback">
 <script src="/index.2020.js" ua-target="2020" async></script>
 <script src="/index.2018.js" ua-target="2018" async></script>
+<script src="/index.2016.js" ua-target="2016" async></script>
 <script src="/index.2014.js" ua-target="2014" async></script>
 <script src="/index.2013.js" ua-target="2013" async></script>
 <script src="/index.fallback.js" ua-target="fallback" async></script>
@@ -310,15 +312,29 @@ This makes it easier to report and debug issues.
 
 
 				
-<p ua-target="2014">
+<p ua-target="2016">
 	<span class="u-visually-hidden">
-		4 polyfills loaded:
+		3 polyfills loaded:
 	</span>
 
-	8KB:<br>
+	7KB:<br>
 
 	<ul>
-		<li>DOMTokenList.prototype.forEach</li><li>IntersectionObserver</li><li>NodeList.prototype.forEach</li><li>requestAnimationFrame</li>
+		<li>DOMTokenList.prototype.forEach</li><li>IntersectionObserver</li><li>NodeList.prototype.forEach</li>
+	</ul>
+</p>
+
+
+				
+<p ua-target="2014">
+	<span class="u-visually-hidden">
+		6 polyfills loaded:
+	</span>
+
+	9KB:<br>
+
+	<ul>
+		<li>DOMTokenList</li><li>DOMTokenList.prototype.forEach</li><li>IntersectionObserver</li><li>NodeList.prototype.forEach</li><li>performance.now</li><li>requestAnimationFrame</li>
 	</ul>
 </p>
 

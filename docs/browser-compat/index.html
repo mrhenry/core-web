@@ -6,9 +6,10 @@
 	<link rel="icon"
 		href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🕸</text></svg>">
 	<title>browser compat | core-web</title>
-	<meta name="ua-targets" content="2020 2018 2014 2013 fallback">
+	<meta name="ua-targets" content="2020 2018 2016 2014 2013 fallback">
 <link rel="stylesheet" href="/index.2020.css" ua-target="2020">
 <link rel="stylesheet" href="/index.2018.css" ua-target="2018">
+<link rel="stylesheet" href="/index.2016.css" ua-target="2016">
 <link rel="stylesheet" href="/index.2014.css" ua-target="2014">
 <link rel="stylesheet" href="/index.2013.css" ua-target="2013">
 <link rel="stylesheet" href="/index.fallback.css" ua-target="fallback">
@@ -79,6 +80,16 @@
 			<h3>mdn notes : </h3><p>safari 11.1 : Even though <code>window.AbortController</code> is defined, it doesn't really abort <code>fetch</code> requests. See <a href='https://webkit.org/b/174980'>bug 174980</a>.</p><p>ios_saf 11.3 : Even though <code>window.AbortController</code> is defined, it doesn't really abort <code>fetch</code> requests. See <a href='https://webkit.org/b/174980'>bug 174980</a>.</p>
 			
 		</div>
+
+		<table class="compat-table">
+			<thead>
+				<tr><th></th><th>Blink</th><th>EdgeHTML</th><th>Gecko</th><th>Presto</th><th>Trident</th><th>WebKit</th></tr>
+			</thead>
+			<tbody>
+				<tr><td>polyfill-library</td><td>28 - 65</td><td>12 - 15</td><td>1.8.1 - 56</td><td>>= 2.2</td><td>>= 6.0</td><td>525.13 - 607.1.40</td></tr>
+				<tr><td>native</td><td>66</td><td>16</td><td>57</td><td>-</td><td>-</td><td>605.1.33</td></tr>
+			</tbody>
+		</table>
 		
 	
 		<h3 id="atob" class="compat-table-header"><a href="#atob">atob</a></h3>
@@ -89,7 +100,7 @@
 			</thead>
 			<tbody>
 				<tr><td><span title="atob">polyfill-library</span></td><td>-</td><td>-</td><td>-</td><td>-</td><td><10</td><td>-</td><td>-</td><td>-</td></tr>
-				<tr><td><span title="atob">native</span></td><td>18</td><td>4</td><td>12</td><td><span>1</span><br><span title="<code>atob()</code> ignores all space characters in the argument to comply with the latest HTML5 spec (see <a href='https://bugzil.la/711180'>bug 711180</a>)."><span>27</span> ⓘ</span><br><span title="<code>atob()</code> now defined on <code><A href='https://developer.mozilla.org/docs/Web/API/WindowOrWorkerGlobalScope'>WindowOrWorkerGlobalScope</a></code> mixin."><span>57</span> ⓘ</span></td><td>10</td><td>10.5</td><td>3</td><td>1</td></tr>
+				<tr><td><span title="atob">native</span></td><td>≤37</td><td>4</td><td>12</td><td><span>1</span><br><span title="<code>atob()</code> ignores all space characters in the argument to comply with the latest HTML5 spec (see <a href='https://bugzil.la/711180'>bug 711180</a>)."><span>27</span> ⓘ</span><br><span title="<code>atob()</code> now defined on <code><A href='https://developer.mozilla.org/docs/Web/API/WindowOrWorkerGlobalScope'>WindowOrWorkerGlobalScope</a></code> mixin."><span>57</span> ⓘ</span></td><td>10</td><td>10.5</td><td>3</td><td>1</td></tr>
 			</tbody>
 		</table>
 
@@ -97,6 +108,16 @@
 			<h3>mdn notes : </h3><p>firefox 27 : <code>atob()</code> ignores all space characters in the argument to comply with the latest HTML5 spec (see <a href='https://bugzil.la/711180'>bug 711180</a>).</p><p>firefox 57 : <code>atob()</code> now defined on <code><A href='https://developer.mozilla.org/docs/Web/API/WindowOrWorkerGlobalScope'>WindowOrWorkerGlobalScope</a></code> mixin.</p>
 			
 		</div>
+
+		<table class="compat-table">
+			<thead>
+				<tr><th></th><th>Blink</th><th>EdgeHTML</th><th>Gecko</th><th>Presto</th><th>Trident</th><th>WebKit</th></tr>
+			</thead>
+			<tbody>
+				<tr><td>polyfill-library</td><td>-</td><td>-</td><td>-</td><td>-</td><td>4.0 - 5.0</td><td>-</td></tr>
+				<tr><td>native</td><td>-</td><td>12</td><td>57</td><td>2.5</td><td>6.0</td><td>525.26</td></tr>
+			</tbody>
+		</table>
 		
 	
 		<h3 id="AudioContext" class="compat-table-header"><a href="#AudioContext">AudioContext</a></h3>
@@ -107,7 +128,7 @@
 			</thead>
 			<tbody>
 				<tr><td><span title="AudioContext">polyfill-library</span></td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td></tr>
-				<tr><td><span title="AudioContext">native</span></td><td><span>35</span><br><span>18</span> - <span style="color:red;">57</span></td><td><span>35</span><br><span>14</span> - <span style="color:red;">57</span></td><td>12</td><td>25</td><td>-</td><td><span>22</span><br><span>15</span> - <span style="color:red;">44</span></td><td>6</td><td>6</td></tr>
+				<tr><td><span title="AudioContext">native</span></td><td>true</td><td><span>35</span><br><span>14</span> - <span style="color:red;">57</span></td><td>12</td><td>25</td><td>-</td><td><span>22</span><br><span>15</span> - <span style="color:red;">44</span></td><td>6</td><td>6</td></tr>
 			</tbody>
 		</table>
 
@@ -115,6 +136,16 @@
 			
 			
 		</div>
+
+		<table class="compat-table">
+			<thead>
+				<tr><th></th><th>Blink</th><th>EdgeHTML</th><th>Gecko</th><th>Presto</th><th>Trident</th><th>WebKit</th></tr>
+			</thead>
+			<tbody>
+				<tr><td>polyfill-library</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td></tr>
+				<tr><td>native</td><td>-</td><td>12</td><td>25</td><td>-</td><td>-</td><td>537.43</td></tr>
+			</tbody>
+		</table>
 		
 	
 		<h3 id="Blob" class="compat-table-header"><a href="#Blob">Blob</a></h3>
@@ -125,7 +156,7 @@
 			</thead>
 			<tbody>
 				<tr><td><span title="Blob">polyfill-library</span></td><td>-</td><td><20</td><td><79</td><td><13</td><td><10</td><td><12</td><td><6</td><td>-</td></tr>
-				<tr><td><span title="Blob">native</span></td><td>18</td><td>5</td><td>12</td><td>4</td><td>10</td><td>11</td><td>5.1</td><td>6</td></tr>
+				<tr><td><span title="Blob">native</span></td><td>≤37</td><td>5</td><td>12</td><td>4</td><td>10</td><td>11</td><td>5.1</td><td>6</td></tr>
 			</tbody>
 		</table>
 
@@ -133,6 +164,16 @@
 			
 			
 		</div>
+
+		<table class="compat-table">
+			<thead>
+				<tr><th></th><th>Blink</th><th>EdgeHTML</th><th>Gecko</th><th>Presto</th><th>Trident</th><th>WebKit</th></tr>
+			</thead>
+			<tbody>
+				<tr><td>polyfill-library</td><td>-</td><td>>= 12</td><td>1.7 - 12</td><td>1 - 2.10</td><td>4.0 - 5.0</td><td>85 - 534.48</td></tr>
+				<tr><td>native</td><td>-</td><td>12</td><td>2</td><td>2.10</td><td>6.0</td><td>536.26</td></tr>
+			</tbody>
+		</table>
 		
 	
 		<h3 id="Console.assert" class="compat-table-header"><a href="#Console.assert">Console.assert</a></h3>
@@ -143,7 +184,7 @@
 			</thead>
 			<tbody>
 				<tr><td><span title="console.assert">polyfill-library</span></td><td>-</td><td>-</td><td>-</td><td>1 - 4</td><td>*</td><td>-</td><td>-</td><td>-</td></tr>
-				<tr><td><span title="Console.assert">native</span></td><td>18</td><td>1</td><td>12</td><td>28</td><td>8</td><td>11</td><td>4</td><td>3.2</td></tr>
+				<tr><td><span title="Console.assert">native</span></td><td>1</td><td>1</td><td>12</td><td>28</td><td>8</td><td>11</td><td>4</td><td>3.2</td></tr>
 			</tbody>
 		</table>
 
@@ -151,6 +192,16 @@
 			
 			
 		</div>
+
+		<table class="compat-table">
+			<thead>
+				<tr><th></th><th>Blink</th><th>EdgeHTML</th><th>Gecko</th><th>Presto</th><th>Trident</th><th>WebKit</th></tr>
+			</thead>
+			<tbody>
+				<tr><td>polyfill-library</td><td>-</td><td>-</td><td>1.7 - 2</td><td>-</td><td>>= 4.0</td><td>-</td></tr>
+				<tr><td>native</td><td>-</td><td>12</td><td>28</td><td>2.10</td><td>4.0</td><td>531.21</td></tr>
+			</tbody>
+		</table>
 		
 	
 		<h3 id="Console.clear" class="compat-table-header"><a href="#Console.clear">Console.clear</a></h3>
@@ -161,7 +212,7 @@
 			</thead>
 			<tbody>
 				<tr><td><span title="console.clear">polyfill-library</span></td><td>-</td><td>-</td><td>-</td><td><39</td><td>*</td><td>-</td><td>-</td><td>-</td></tr>
-				<tr><td><span title="Console.clear">native</span></td><td>25</td><td>25</td><td>12</td><td>39</td><td>8</td><td>12</td><td>6.1</td><td>7</td></tr>
+				<tr><td><span title="Console.clear">native</span></td><td>≤37</td><td>25</td><td>12</td><td>39</td><td>8</td><td>12</td><td>6.1</td><td>7</td></tr>
 			</tbody>
 		</table>
 
@@ -169,6 +220,16 @@
 			
 			
 		</div>
+
+		<table class="compat-table">
+			<thead>
+				<tr><th></th><th>Blink</th><th>EdgeHTML</th><th>Gecko</th><th>Presto</th><th>Trident</th><th>WebKit</th></tr>
+			</thead>
+			<tbody>
+				<tr><td>polyfill-library</td><td>-</td><td>-</td><td>1.7 - 38</td><td>-</td><td>>= 4.0</td><td>-</td></tr>
+				<tr><td>native</td><td>-</td><td>12</td><td>39</td><td>2.10</td><td>4.0</td><td>537.51</td></tr>
+			</tbody>
+		</table>
 		
 	
 		<h3 id="Console.count" class="compat-table-header"><a href="#Console.count">Console.count</a></h3>
@@ -179,7 +240,7 @@
 			</thead>
 			<tbody>
 				<tr><td><span title="console.count">polyfill-library</span></td><td>-</td><td>-</td><td>-</td><td>1 - 4</td><td>*</td><td>-</td><td>-</td><td>-</td></tr>
-				<tr><td><span title="Console.count">native</span></td><td>18</td><td>1</td><td>12</td><td>30</td><td>11</td><td>11</td><td>4</td><td>3.2</td></tr>
+				<tr><td><span title="Console.count">native</span></td><td>1</td><td>1</td><td>12</td><td>30</td><td>11</td><td>11</td><td>4</td><td>3.2</td></tr>
 			</tbody>
 		</table>
 
@@ -187,6 +248,16 @@
 			
 			
 		</div>
+
+		<table class="compat-table">
+			<thead>
+				<tr><th></th><th>Blink</th><th>EdgeHTML</th><th>Gecko</th><th>Presto</th><th>Trident</th><th>WebKit</th></tr>
+			</thead>
+			<tbody>
+				<tr><td>polyfill-library</td><td>-</td><td>-</td><td>1.7 - 2</td><td>-</td><td>>= 4.0</td><td>-</td></tr>
+				<tr><td>native</td><td>-</td><td>12</td><td>30</td><td>2.10</td><td>7.0</td><td>531.21</td></tr>
+			</tbody>
+		</table>
 		
 	
 		<h3 id="Console.debug" class="compat-table-header"><a href="#Console.debug">Console.debug</a></h3>
@@ -197,7 +268,7 @@
 			</thead>
 			<tbody>
 				<tr><td><span title="console.debug">polyfill-library</span></td><td>-</td><td>-</td><td>-</td><td>1 - 4</td><td>*</td><td>-</td><td>-</td><td>-</td></tr>
-				<tr><td><span title="Console.debug">native</span></td><td>18</td><td>1</td><td>12</td><td>4</td><td>10</td><td>11</td><td>4</td><td>3.2</td></tr>
+				<tr><td><span title="Console.debug">native</span></td><td>1</td><td>1</td><td>12</td><td>4</td><td>10</td><td>11</td><td>4</td><td>3.2</td></tr>
 			</tbody>
 		</table>
 
@@ -205,6 +276,16 @@
 			
 			
 		</div>
+
+		<table class="compat-table">
+			<thead>
+				<tr><th></th><th>Blink</th><th>EdgeHTML</th><th>Gecko</th><th>Presto</th><th>Trident</th><th>WebKit</th></tr>
+			</thead>
+			<tbody>
+				<tr><td>polyfill-library</td><td>-</td><td>-</td><td>1.7 - 2</td><td>-</td><td>>= 4.0</td><td>-</td></tr>
+				<tr><td>native</td><td>-</td><td>12</td><td>2</td><td>2.10</td><td>6.0</td><td>531.21</td></tr>
+			</tbody>
+		</table>
 		
 	
 		<h3 id="Console.dir" class="compat-table-header"><a href="#Console.dir">Console.dir</a></h3>
@@ -215,7 +296,7 @@
 			</thead>
 			<tbody>
 				<tr><td><span title="console.dir">polyfill-library</span></td><td>-</td><td>-</td><td>-</td><td>1 - 4</td><td>*</td><td>-</td><td>-</td><td>-</td></tr>
-				<tr><td><span title="Console.dir">native</span></td><td>18</td><td>1</td><td>12</td><td>8</td><td>9</td><td>11</td><td>4</td><td>3.2</td></tr>
+				<tr><td><span title="Console.dir">native</span></td><td>1</td><td>1</td><td>12</td><td>8</td><td>9</td><td>11</td><td>4</td><td>3.2</td></tr>
 			</tbody>
 		</table>
 
@@ -223,6 +304,16 @@
 			
 			
 		</div>
+
+		<table class="compat-table">
+			<thead>
+				<tr><th></th><th>Blink</th><th>EdgeHTML</th><th>Gecko</th><th>Presto</th><th>Trident</th><th>WebKit</th></tr>
+			</thead>
+			<tbody>
+				<tr><td>polyfill-library</td><td>-</td><td>-</td><td>1.7 - 2</td><td>-</td><td>>= 4.0</td><td>-</td></tr>
+				<tr><td>native</td><td>-</td><td>12</td><td>8</td><td>2.10</td><td>5.0</td><td>531.21</td></tr>
+			</tbody>
+		</table>
 		
 	
 		<h3 id="Console.dirxml" class="compat-table-header"><a href="#Console.dirxml">Console.dirxml</a></h3>
@@ -233,7 +324,7 @@
 			</thead>
 			<tbody>
 				<tr><td><span title="console.dirxml">polyfill-library</span></td><td>-</td><td>-</td><td>-</td><td><39</td><td>*</td><td>-</td><td>-</td><td>-</td></tr>
-				<tr><td><span title="Console.dirxml">native</span></td><td>18</td><td>1</td><td>12</td><td>39</td><td>11</td><td>11</td><td>4</td><td>3.2</td></tr>
+				<tr><td><span title="Console.dirxml">native</span></td><td>1</td><td>1</td><td>12</td><td>39</td><td>11</td><td>11</td><td>4</td><td>3.2</td></tr>
 			</tbody>
 		</table>
 
@@ -241,6 +332,16 @@
 			
 			
 		</div>
+
+		<table class="compat-table">
+			<thead>
+				<tr><th></th><th>Blink</th><th>EdgeHTML</th><th>Gecko</th><th>Presto</th><th>Trident</th><th>WebKit</th></tr>
+			</thead>
+			<tbody>
+				<tr><td>polyfill-library</td><td>-</td><td>-</td><td>1.7 - 38</td><td>-</td><td>>= 4.0</td><td>-</td></tr>
+				<tr><td>native</td><td>-</td><td>12</td><td>39</td><td>2.10</td><td>7.0</td><td>531.21</td></tr>
+			</tbody>
+		</table>
 		
 	
 		<h3 id="Console.error" class="compat-table-header"><a href="#Console.error">Console.error</a></h3>
@@ -251,7 +352,7 @@
 			</thead>
 			<tbody>
 				<tr><td><span title="console.error">polyfill-library</span></td><td>-</td><td>-</td><td>-</td><td>1 - 4</td><td>*</td><td>-</td><td>-</td><td>-</td></tr>
-				<tr><td><span title="Console.error">native</span></td><td>18</td><td>1</td><td>12</td><td>4</td><td>8</td><td>10.5</td><td>3</td><td>1</td></tr>
+				<tr><td><span title="Console.error">native</span></td><td>1</td><td>1</td><td>12</td><td>4</td><td>8</td><td>10.5</td><td>3</td><td>1</td></tr>
 			</tbody>
 		</table>
 
@@ -259,6 +360,16 @@
 			
 			
 		</div>
+
+		<table class="compat-table">
+			<thead>
+				<tr><th></th><th>Blink</th><th>EdgeHTML</th><th>Gecko</th><th>Presto</th><th>Trident</th><th>WebKit</th></tr>
+			</thead>
+			<tbody>
+				<tr><td>polyfill-library</td><td>-</td><td>-</td><td>1.7 - 2</td><td>-</td><td>>= 4.0</td><td>-</td></tr>
+				<tr><td>native</td><td>-</td><td>12</td><td>2</td><td>2.5</td><td>4.0</td><td>525.26</td></tr>
+			</tbody>
+		</table>
 		
 	
 		<h3 id="Console.exception" class="compat-table-header"><a href="#Console.exception">Console.exception</a></h3>
@@ -277,6 +388,16 @@
 			
 			
 		</div>
+
+		<table class="compat-table">
+			<thead>
+				<tr><th></th><th>Blink</th><th>EdgeHTML</th><th>Gecko</th><th>Presto</th><th>Trident</th><th>WebKit</th></tr>
+			</thead>
+			<tbody>
+				<tr><td>polyfill-library</td><td>>= 28</td><td>-</td><td>1.7 - 2</td><td>-</td><td>>= 4.0</td><td>-</td></tr>
+				<tr><td>native</td><td>-</td><td>13</td><td>28</td><td>-</td><td>-</td><td>-</td></tr>
+			</tbody>
+		</table>
 		
 	
 		<h3 id="Console.group" class="compat-table-header"><a href="#Console.group">Console.group</a></h3>
@@ -287,7 +408,7 @@
 			</thead>
 			<tbody>
 				<tr><td><span title="console.group">polyfill-library</span></td><td>-</td><td>-</td><td>-</td><td>1 - 4</td><td>*</td><td>-</td><td>-</td><td>-</td></tr>
-				<tr><td><span title="Console.group">native</span></td><td>18</td><td>1</td><td>12</td><td>4</td><td>11</td><td>11</td><td>4</td><td>3.2</td></tr>
+				<tr><td><span title="Console.group">native</span></td><td>37</td><td>1</td><td>12</td><td>4</td><td>11</td><td>11</td><td>4</td><td>3.2</td></tr>
 			</tbody>
 		</table>
 
@@ -295,6 +416,16 @@
 			
 			
 		</div>
+
+		<table class="compat-table">
+			<thead>
+				<tr><th></th><th>Blink</th><th>EdgeHTML</th><th>Gecko</th><th>Presto</th><th>Trident</th><th>WebKit</th></tr>
+			</thead>
+			<tbody>
+				<tr><td>polyfill-library</td><td>-</td><td>-</td><td>1.7 - 2</td><td>-</td><td>>= 4.0</td><td>-</td></tr>
+				<tr><td>native</td><td>-</td><td>12</td><td>2</td><td>2.10</td><td>7.0</td><td>531.21</td></tr>
+			</tbody>
+		</table>
 		
 	
 		<h3 id="Console.groupCollapsed" class="compat-table-header"><a href="#Console.groupCollapsed">Console.groupCollapsed</a></h3>
@@ -305,7 +436,7 @@
 			</thead>
 			<tbody>
 				<tr><td><span title="console.groupCollapsed">polyfill-library</span></td><td>-</td><td>-</td><td>-</td><td>1 - 4</td><td>*</td><td>-</td><td>-</td><td>-</td></tr>
-				<tr><td><span title="Console.groupCollapsed">native</span></td><td>18</td><td>6</td><td>12</td><td>9</td><td>11</td><td>11</td><td>5.1</td><td>5.1</td></tr>
+				<tr><td><span title="Console.groupCollapsed">native</span></td><td>37</td><td>6</td><td>12</td><td>9</td><td>11</td><td>11</td><td>5.1</td><td>5.1</td></tr>
 			</tbody>
 		</table>
 
@@ -313,6 +444,16 @@
 			
 			
 		</div>
+
+		<table class="compat-table">
+			<thead>
+				<tr><th></th><th>Blink</th><th>EdgeHTML</th><th>Gecko</th><th>Presto</th><th>Trident</th><th>WebKit</th></tr>
+			</thead>
+			<tbody>
+				<tr><td>polyfill-library</td><td>-</td><td>-</td><td>1.7 - 2</td><td>-</td><td>>= 4.0</td><td>-</td></tr>
+				<tr><td>native</td><td>-</td><td>12</td><td>9</td><td>2.10</td><td>7.0</td><td>534.48</td></tr>
+			</tbody>
+		</table>
 		
 	
 		<h3 id="Console.groupEnd" class="compat-table-header"><a href="#Console.groupEnd">Console.groupEnd</a></h3>
@@ -323,7 +464,7 @@
 			</thead>
 			<tbody>
 				<tr><td><span title="console.groupEnd">polyfill-library</span></td><td>-</td><td>-</td><td>-</td><td>1 - 4</td><td>*</td><td>-</td><td>-</td><td>-</td></tr>
-				<tr><td><span title="Console.groupEnd">native</span></td><td>18</td><td>1</td><td>12</td><td>9</td><td>11</td><td>11</td><td>4</td><td>3.2</td></tr>
+				<tr><td><span title="Console.groupEnd">native</span></td><td>37</td><td>1</td><td>12</td><td>9</td><td>11</td><td>11</td><td>4</td><td>3.2</td></tr>
 			</tbody>
 		</table>
 
@@ -331,6 +472,16 @@
 			
 			
 		</div>
+
+		<table class="compat-table">
+			<thead>
+				<tr><th></th><th>Blink</th><th>EdgeHTML</th><th>Gecko</th><th>Presto</th><th>Trident</th><th>WebKit</th></tr>
+			</thead>
+			<tbody>
+				<tr><td>polyfill-library</td><td>-</td><td>-</td><td>1.7 - 2</td><td>-</td><td>>= 4.0</td><td>-</td></tr>
+				<tr><td>native</td><td>-</td><td>12</td><td>9</td><td>2.10</td><td>7.0</td><td>531.21</td></tr>
+			</tbody>
+		</table>
 		
 	
 		<h3 id="Console.info" class="compat-table-header"><a href="#Console.info">Console.info</a></h3>
@@ -341,7 +492,7 @@
 			</thead>
 			<tbody>
 				<tr><td><span title="console.info">polyfill-library</span></td><td>-</td><td>-</td><td>-</td><td>1 - 4</td><td>*</td><td>-</td><td>-</td><td>-</td></tr>
-				<tr><td><span title="Console.info">native</span></td><td>18</td><td>1</td><td>12</td><td>4</td><td>8</td><td>10.5</td><td>3</td><td>1</td></tr>
+				<tr><td><span title="Console.info">native</span></td><td>1</td><td>1</td><td>12</td><td>4</td><td>8</td><td>10.5</td><td>3</td><td>1</td></tr>
 			</tbody>
 		</table>
 
@@ -349,6 +500,16 @@
 			
 			
 		</div>
+
+		<table class="compat-table">
+			<thead>
+				<tr><th></th><th>Blink</th><th>EdgeHTML</th><th>Gecko</th><th>Presto</th><th>Trident</th><th>WebKit</th></tr>
+			</thead>
+			<tbody>
+				<tr><td>polyfill-library</td><td>-</td><td>-</td><td>1.7 - 2</td><td>-</td><td>>= 4.0</td><td>-</td></tr>
+				<tr><td>native</td><td>-</td><td>12</td><td>2</td><td>2.5</td><td>4.0</td><td>525.26</td></tr>
+			</tbody>
+		</table>
 		
 	
 		<h3 id="Console.log" class="compat-table-header"><a href="#Console.log">Console.log</a></h3>
@@ -359,7 +520,7 @@
 			</thead>
 			<tbody>
 				<tr><td><span title="console.log">polyfill-library</span></td><td>-</td><td>-</td><td>-</td><td>1 - 4</td><td>*</td><td>-</td><td>-</td><td>-</td></tr>
-				<tr><td><span title="Console.log">native</span></td><td>18</td><td>1</td><td>12</td><td>4</td><td>8</td><td>10.5</td><td>3</td><td>1</td></tr>
+				<tr><td><span title="Console.log">native</span></td><td>1</td><td>1</td><td>12</td><td>4</td><td>8</td><td>10.5</td><td>3</td><td>1</td></tr>
 			</tbody>
 		</table>
 
@@ -367,6 +528,16 @@
 			
 			
 		</div>
+
+		<table class="compat-table">
+			<thead>
+				<tr><th></th><th>Blink</th><th>EdgeHTML</th><th>Gecko</th><th>Presto</th><th>Trident</th><th>WebKit</th></tr>
+			</thead>
+			<tbody>
+				<tr><td>polyfill-library</td><td>-</td><td>-</td><td>1.7 - 2</td><td>-</td><td>>= 4.0</td><td>-</td></tr>
+				<tr><td>native</td><td>-</td><td>12</td><td>2</td><td>2.5</td><td>4.0</td><td>525.26</td></tr>
+			</tbody>
+		</table>
 		
 	
 		<h3 id="Console.profile" class="compat-table-header"><a href="#Console.profile">Console.profile</a></h3>
@@ -377,7 +548,7 @@
 			</thead>
 			<tbody>
 				<tr><td><span title="console.profile">polyfill-library</span></td><td>-</td><td>-</td><td>-</td><td>1 - 4</td><td>*</td><td>-</td><td>-</td><td>-</td></tr>
-				<tr><td><span title="Console.profile">native</span></td><td>18</td><td>4</td><td>12</td><td>16</td><td>9</td><td>11</td><td>4</td><td>3.2</td></tr>
+				<tr><td><span title="Console.profile">native</span></td><td>≤37</td><td>4</td><td>12</td><td>16</td><td>9</td><td>11</td><td>4</td><td>3.2</td></tr>
 			</tbody>
 		</table>
 
@@ -385,6 +556,16 @@
 			
 			
 		</div>
+
+		<table class="compat-table">
+			<thead>
+				<tr><th></th><th>Blink</th><th>EdgeHTML</th><th>Gecko</th><th>Presto</th><th>Trident</th><th>WebKit</th></tr>
+			</thead>
+			<tbody>
+				<tr><td>polyfill-library</td><td>-</td><td>-</td><td>1.7 - 2</td><td>-</td><td>>= 4.0</td><td>-</td></tr>
+				<tr><td>native</td><td>-</td><td>12</td><td>16</td><td>2.10</td><td>5.0</td><td>531.21</td></tr>
+			</tbody>
+		</table>
 		
 	
 		<h3 id="Console.profileEnd" class="compat-table-header"><a href="#Console.profileEnd">Console.profileEnd</a></h3>
@@ -395,7 +576,7 @@
 			</thead>
 			<tbody>
 				<tr><td><span title="console.profileEnd">polyfill-library</span></td><td>-</td><td>-</td><td>-</td><td>1 - 4</td><td>*</td><td>-</td><td>-</td><td>-</td></tr>
-				<tr><td><span title="Console.profileEnd">native</span></td><td>18</td><td>4</td><td>12</td><td>16</td><td>9</td><td>11</td><td>4</td><td>3.2</td></tr>
+				<tr><td><span title="Console.profileEnd">native</span></td><td>≤37</td><td>4</td><td>12</td><td>16</td><td>9</td><td>11</td><td>4</td><td>3.2</td></tr>
 			</tbody>
 		</table>
 
@@ -403,6 +584,16 @@
 			
 			
 		</div>
+
+		<table class="compat-table">
+			<thead>
+				<tr><th></th><th>Blink</th><th>EdgeHTML</th><th>Gecko</th><th>Presto</th><th>Trident</th><th>WebKit</th></tr>
+			</thead>
+			<tbody>
+				<tr><td>polyfill-library</td><td>-</td><td>-</td><td>1.7 - 2</td><td>-</td><td>>= 4.0</td><td>-</td></tr>
+				<tr><td>native</td><td>-</td><td>12</td><td>16</td><td>2.10</td><td>5.0</td><td>531.21</td></tr>
+			</tbody>
+		</table>
 		
 	
 		<h3 id="Console.table" class="compat-table-header"><a href="#Console.table">Console.table</a></h3>
@@ -413,7 +604,7 @@
 			</thead>
 			<tbody>
 				<tr><td><span title="console.table">polyfill-library</span></td><td>-</td><td>-</td><td>-</td><td>1 - 4</td><td>*</td><td>-</td><td>-</td><td>-</td></tr>
-				<tr><td><span title="Console.table">native</span></td><td>27</td><td>27</td><td>13</td><td>34</td><td>-</td><td>11</td><td>6.1</td><td>7</td></tr>
+				<tr><td><span title="Console.table">native</span></td><td>≤37</td><td>27</td><td>13</td><td>34</td><td>-</td><td>11</td><td>6.1</td><td>7</td></tr>
 			</tbody>
 		</table>
 
@@ -421,6 +612,16 @@
 			
 			
 		</div>
+
+		<table class="compat-table">
+			<thead>
+				<tr><th></th><th>Blink</th><th>EdgeHTML</th><th>Gecko</th><th>Presto</th><th>Trident</th><th>WebKit</th></tr>
+			</thead>
+			<tbody>
+				<tr><td>polyfill-library</td><td>-</td><td>-</td><td>1.7 - 2</td><td>-</td><td>>= 4.0</td><td>-</td></tr>
+				<tr><td>native</td><td>-</td><td>13</td><td>34</td><td>2.10</td><td>-</td><td>537.51</td></tr>
+			</tbody>
+		</table>
 		
 	
 		<h3 id="Console.time" class="compat-table-header"><a href="#Console.time">Console.time</a></h3>
@@ -431,7 +632,7 @@
 			</thead>
 			<tbody>
 				<tr><td><span title="console.time">polyfill-library</span></td><td>-</td><td><31</td><td>-</td><td>1 - 4</td><td>*</td><td>-</td><td>-</td><td>-</td></tr>
-				<tr><td><span title="Console.time">native</span></td><td>18</td><td>1</td><td>12</td><td>10</td><td>11</td><td>11</td><td>4</td><td>3.2</td></tr>
+				<tr><td><span title="Console.time">native</span></td><td>1</td><td>1</td><td>12</td><td>10</td><td>11</td><td>11</td><td>4</td><td>3.2</td></tr>
 			</tbody>
 		</table>
 
@@ -439,6 +640,16 @@
 			
 			
 		</div>
+
+		<table class="compat-table">
+			<thead>
+				<tr><th></th><th>Blink</th><th>EdgeHTML</th><th>Gecko</th><th>Presto</th><th>Trident</th><th>WebKit</th></tr>
+			</thead>
+			<tbody>
+				<tr><td>polyfill-library</td><td>28 - 30</td><td>-</td><td>1.7 - 2</td><td>-</td><td>>= 4.0</td><td>-</td></tr>
+				<tr><td>native</td><td>-</td><td>12</td><td>10</td><td>2.10</td><td>7.0</td><td>531.21</td></tr>
+			</tbody>
+		</table>
 		
 	
 		<h3 id="Console.timeEnd" class="compat-table-header"><a href="#Console.timeEnd">Console.timeEnd</a></h3>
@@ -449,7 +660,7 @@
 			</thead>
 			<tbody>
 				<tr><td><span title="console.timeEnd">polyfill-library</span></td><td>-</td><td>-</td><td>-</td><td>1 - 4</td><td>*</td><td>-</td><td>-</td><td>-</td></tr>
-				<tr><td><span title="Console.timeEnd">native</span></td><td>18</td><td>1</td><td>12</td><td>10</td><td>11</td><td>11</td><td>4</td><td>3.2</td></tr>
+				<tr><td><span title="Console.timeEnd">native</span></td><td>1</td><td>1</td><td>12</td><td>10</td><td>11</td><td>11</td><td>4</td><td>3.2</td></tr>
 			</tbody>
 		</table>
 
@@ -457,6 +668,16 @@
 			
 			
 		</div>
+
+		<table class="compat-table">
+			<thead>
+				<tr><th></th><th>Blink</th><th>EdgeHTML</th><th>Gecko</th><th>Presto</th><th>Trident</th><th>WebKit</th></tr>
+			</thead>
+			<tbody>
+				<tr><td>polyfill-library</td><td>-</td><td>-</td><td>1.7 - 2</td><td>-</td><td>>= 4.0</td><td>-</td></tr>
+				<tr><td>native</td><td>-</td><td>12</td><td>10</td><td>2.10</td><td>7.0</td><td>531.21</td></tr>
+			</tbody>
+		</table>
 		
 	
 		<h3 id="Console.timeStamp" class="compat-table-header"><a href="#Console.timeStamp">Console.timeStamp</a></h3>
@@ -467,7 +688,7 @@
 			</thead>
 			<tbody>
 				<tr><td><span title="console.timeStamp">polyfill-library</span></td><td>-</td><td>-</td><td><16.15063</td><td><39</td><td><11</td><td>-</td><td>-</td><td>-</td></tr>
-				<tr><td><span title="Console.timeStamp">native</span></td><td>18</td><td>14</td><td>12</td><td>39</td><td>11</td><td>15</td><td>6</td><td>6</td></tr>
+				<tr><td><span title="Console.timeStamp">native</span></td><td>≤37</td><td>14</td><td>12</td><td>39</td><td>11</td><td>15</td><td>6</td><td>6</td></tr>
 			</tbody>
 		</table>
 
@@ -475,6 +696,16 @@
 			
 			
 		</div>
+
+		<table class="compat-table">
+			<thead>
+				<tr><th></th><th>Blink</th><th>EdgeHTML</th><th>Gecko</th><th>Presto</th><th>Trident</th><th>WebKit</th></tr>
+			</thead>
+			<tbody>
+				<tr><td>polyfill-library</td><td>-</td><td>12 - 16</td><td>1.7 - 38</td><td>-</td><td>4.0 - 6.0</td><td>-</td></tr>
+				<tr><td>native</td><td>-</td><td>12</td><td>39</td><td>-</td><td>7.0</td><td>537.43</td></tr>
+			</tbody>
+		</table>
 		
 	
 		<h3 id="Console.trace" class="compat-table-header"><a href="#Console.trace">Console.trace</a></h3>
@@ -485,7 +716,7 @@
 			</thead>
 			<tbody>
 				<tr><td><span title="console.trace">polyfill-library</span></td><td>-</td><td>-</td><td>-</td><td>1 - 4</td><td>*</td><td>-</td><td>-</td><td>-</td></tr>
-				<tr><td><span title="Console.trace">native</span></td><td>18</td><td>1</td><td>12</td><td>10</td><td>11</td><td>11</td><td>4</td><td>3.2</td></tr>
+				<tr><td><span title="Console.trace">native</span></td><td>1</td><td>1</td><td>12</td><td>10</td><td>11</td><td>11</td><td>4</td><td>3.2</td></tr>
 			</tbody>
 		</table>
 
@@ -493,6 +724,16 @@
 			
 			
 		</div>
+
+		<table class="compat-table">
+			<thead>
+				<tr><th></th><th>Blink</th><th>EdgeHTML</th><th>Gecko</th><th>Presto</th><th>Trident</th><th>WebKit</th></tr>
+			</thead>
+			<tbody>
+				<tr><td>polyfill-library</td><td>-</td><td>-</td><td>1.7 - 2</td><td>-</td><td>>= 4.0</td><td>-</td></tr>
+				<tr><td>native</td><td>-</td><td>12</td><td>10</td><td>2.10</td><td>7.0</td><td>531.21</td></tr>
+			</tbody>
+		</table>
 		
 	
 		<h3 id="Console.warn" class="compat-table-header"><a href="#Console.warn">Console.warn</a></h3>
@@ -503,7 +744,7 @@
 			</thead>
 			<tbody>
 				<tr><td><span title="console.warn">polyfill-library</span></td><td>-</td><td>-</td><td>-</td><td>1 - 4</td><td>*</td><td>-</td><td>-</td><td>-</td></tr>
-				<tr><td><span title="Console.warn">native</span></td><td>18</td><td>1</td><td>12</td><td>4</td><td>8</td><td>10.5</td><td>3</td><td>1</td></tr>
+				<tr><td><span title="Console.warn">native</span></td><td>1</td><td>1</td><td>12</td><td>4</td><td>8</td><td>10.5</td><td>3</td><td>1</td></tr>
 			</tbody>
 		</table>
 
@@ -511,6 +752,16 @@
 			
 			
 		</div>
+
+		<table class="compat-table">
+			<thead>
+				<tr><th></th><th>Blink</th><th>EdgeHTML</th><th>Gecko</th><th>Presto</th><th>Trident</th><th>WebKit</th></tr>
+			</thead>
+			<tbody>
+				<tr><td>polyfill-library</td><td>-</td><td>-</td><td>1.7 - 2</td><td>-</td><td>>= 4.0</td><td>-</td></tr>
+				<tr><td>native</td><td>-</td><td>12</td><td>2</td><td>2.5</td><td>4.0</td><td>525.26</td></tr>
+			</tbody>
+		</table>
 		
 	
 		<h3 id="CSS.supports" class="compat-table-header"><a href="#CSS.supports">CSS.supports</a></h3>
@@ -521,14 +772,24 @@
 			</thead>
 			<tbody>
 				<tr><td><span title="CSS.supports">polyfill-library</span></td><td><4.4</td><td><=27</td><td>-</td><td><=21</td><td>*</td><td><15</td><td><9</td><td><9.0</td></tr>
-				<tr><td><span title="CSS.supports">native</span></td><td><span>61</span><br><span title="Version 60 or older didn't support parentheses-less one-argument version."><span>28</span> ⓘ</span></td><td><span>61</span><br><span title="Version 60 or older didn't support parentheses-less one-argument version."><span>28</span> ⓘ</span></td><td><span title="Edge doesn't support parentheses-less one-argument version.">12 ⓘ</span></td><td><span>55</span><br><span title="Version 54 or older didn't support parentheses-less one-argument version."><span>22</span> ⓘ</span><br><span>20</span></td><td>-</td><td>12.1</td><td>10</td><td>true</td></tr>
+				<tr><td><span title="CSS.supports">native</span></td><td><span>61</span><br><span title="Version 60 or older didn't support parentheses-less one-argument version."><span>37</span> ⓘ</span></td><td><span>61</span><br><span title="Version 60 or older didn't support parentheses-less one-argument version."><span>28</span> ⓘ</span></td><td><span title="Edge doesn't support parentheses-less one-argument version.">12 ⓘ</span></td><td><span>55</span><br><span title="Version 54 or older didn't support parentheses-less one-argument version."><span>22</span> ⓘ</span><br><span>20</span></td><td>-</td><td>12.1</td><td>10</td><td>true</td></tr>
 			</tbody>
 		</table>
 
 		<div class="compat-table-notes">
-			<h3>mdn notes : </h3><p>android 28 : Version 60 or older didn't support parentheses-less one-argument version.</p><p>chrome 28 : Version 60 or older didn't support parentheses-less one-argument version.</p><p>edge 12 : Edge doesn't support parentheses-less one-argument version.</p><p>firefox 22 : Version 54 or older didn't support parentheses-less one-argument version.</p>
+			<h3>mdn notes : </h3><p>android 37 : Version 60 or older didn't support parentheses-less one-argument version.</p><p>chrome 28 : Version 60 or older didn't support parentheses-less one-argument version.</p><p>edge 12 : Edge doesn't support parentheses-less one-argument version.</p><p>firefox 22 : Version 54 or older didn't support parentheses-less one-argument version.</p>
 			
 		</div>
+
+		<table class="compat-table">
+			<thead>
+				<tr><th></th><th>Blink</th><th>EdgeHTML</th><th>Gecko</th><th>Presto</th><th>Trident</th><th>WebKit</th></tr>
+			</thead>
+			<tbody>
+				<tr><td>polyfill-library</td><td>-</td><td>-</td><td>1.7 - 21</td><td>>= 1</td><td>>= 4.0</td><td>85 - 600.1.4</td></tr>
+				<tr><td>native</td><td>28</td><td>12</td><td>20</td><td>2.12</td><td>-</td><td>603.2.1</td></tr>
+			</tbody>
+		</table>
 		
 	
 		<h3 id="CustomEvent" class="compat-table-header"><a href="#CustomEvent">CustomEvent</a></h3>
@@ -539,7 +800,7 @@
 			</thead>
 			<tbody>
 				<tr><td><span title="CustomEvent">polyfill-library</span></td><td><=4.3</td><td>1 - 14</td><td><14</td><td>6 - 10</td><td>*</td><td>10 - 11.5</td><td>4 - 7</td><td>-</td></tr>
-				<tr><td><span title="CustomEvent">native</span></td><td>18</td><td>15</td><td>12</td><td>6</td><td>9</td><td>11</td><td>5.1</td><td>6</td></tr>
+				<tr><td><span title="CustomEvent">native</span></td><td>≤37</td><td>15</td><td>12</td><td>6</td><td>9</td><td>11</td><td>5.1</td><td>6</td></tr>
 			</tbody>
 		</table>
 
@@ -547,6 +808,16 @@
 			
 			
 		</div>
+
+		<table class="compat-table">
+			<thead>
+				<tr><th></th><th>Blink</th><th>EdgeHTML</th><th>Gecko</th><th>Presto</th><th>Trident</th><th>WebKit</th></tr>
+			</thead>
+			<tbody>
+				<tr><td>polyfill-library</td><td>-</td><td>12 - 13</td><td>6 - 10</td><td>2.2 - 2.9</td><td>>= 4.0</td><td>530.17 - 537.71</td></tr>
+				<tr><td>native</td><td>-</td><td>12</td><td>6</td><td>2.10</td><td>5.0</td><td>536.26</td></tr>
+			</tbody>
+		</table>
 		
 	
 		<h3 id="Document" class="compat-table-header"><a href="#Document">Document</a></h3>
@@ -557,7 +828,7 @@
 			</thead>
 			<tbody>
 				<tr><td><span title="document">polyfill-library</span></td><td>-</td><td>-</td><td>-</td><td>-</td><td>6 - 8</td><td>-</td><td>-</td><td>-</td></tr>
-				<tr><td><span title="Document">native</span></td><td>18</td><td>1</td><td>12</td><td>1</td><td>4</td><td>3</td><td>1</td><td>1</td></tr>
+				<tr><td><span title="Document">native</span></td><td>1</td><td>1</td><td>12</td><td>1</td><td>4</td><td>3</td><td>1</td><td>1</td></tr>
 			</tbody>
 		</table>
 
@@ -565,6 +836,16 @@
 			
 			
 		</div>
+
+		<table class="compat-table">
+			<thead>
+				<tr><th></th><th>Blink</th><th>EdgeHTML</th><th>Gecko</th><th>Presto</th><th>Trident</th><th>WebKit</th></tr>
+			</thead>
+			<tbody>
+				<tr><td>polyfill-library</td><td>-</td><td>-</td><td>-</td><td>-</td><td>4.0 - 4.0</td><td>-</td></tr>
+				<tr><td>native</td><td>-</td><td>12</td><td>1.8</td><td>-</td><td>-</td><td>522.11</td></tr>
+			</tbody>
+		</table>
 		
 	
 		<h3 id="Document.currentScript" class="compat-table-header"><a href="#Document.currentScript">Document.currentScript</a></h3>
@@ -575,7 +856,7 @@
 			</thead>
 			<tbody>
 				<tr><td><span title="document.currentScript">polyfill-library</span></td><td>-</td><td>-</td><td>-</td><td>-</td><td>*</td><td>-</td><td>-</td><td>-</td></tr>
-				<tr><td><span title="Document.currentScript">native</span></td><td>29</td><td>29</td><td>12</td><td>4</td><td>-</td><td>16</td><td>6.1</td><td>8</td></tr>
+				<tr><td><span title="Document.currentScript">native</span></td><td>≤37</td><td>29</td><td>12</td><td>4</td><td>-</td><td>16</td><td>6.1</td><td>8</td></tr>
 			</tbody>
 		</table>
 
@@ -583,6 +864,16 @@
 			
 			
 		</div>
+
+		<table class="compat-table">
+			<thead>
+				<tr><th></th><th>Blink</th><th>EdgeHTML</th><th>Gecko</th><th>Presto</th><th>Trident</th><th>WebKit</th></tr>
+			</thead>
+			<tbody>
+				<tr><td>polyfill-library</td><td>-</td><td>-</td><td>-</td><td>-</td><td>>= 4.0</td><td>-</td></tr>
+				<tr><td>native</td><td>29</td><td>12</td><td>2</td><td>-</td><td>-</td><td>600.1.4</td></tr>
+			</tbody>
+		</table>
 		
 	
 		<h3 id="Document.getElementsByClassName" class="compat-table-header"><a href="#Document.getElementsByClassName">Document.getElementsByClassName</a></h3>
@@ -593,7 +884,7 @@
 			</thead>
 			<tbody>
 				<tr><td><span title="document.getElementsByClassName">polyfill-library</span></td><td>-</td><td>-</td><td>-</td><td>-</td><td><9</td><td>-</td><td>-</td><td>-</td></tr>
-				<tr><td><span title="Document.getElementsByClassName">native</span></td><td>18</td><td>1</td><td>12</td><td>3</td><td>9</td><td>9.5</td><td>3.1</td><td>2</td></tr>
+				<tr><td><span title="Document.getElementsByClassName">native</span></td><td>1</td><td>1</td><td>12</td><td>3</td><td>9</td><td>9.5</td><td>3.1</td><td>2</td></tr>
 			</tbody>
 		</table>
 
@@ -601,6 +892,16 @@
 			
 			
 		</div>
+
+		<table class="compat-table">
+			<thead>
+				<tr><th></th><th>Blink</th><th>EdgeHTML</th><th>Gecko</th><th>Presto</th><th>Trident</th><th>WebKit</th></tr>
+			</thead>
+			<tbody>
+				<tr><td>polyfill-library</td><td>-</td><td>-</td><td>-</td><td>-</td><td>4.0 - 4.0</td><td>-</td></tr>
+				<tr><td>native</td><td>-</td><td>12</td><td>1.9.2</td><td>2.1</td><td>5.0</td><td>525.18</td></tr>
+			</tbody>
+		</table>
 		
 	
 		<h3 id="Document.head" class="compat-table-header"><a href="#Document.head">Document.head</a></h3>
@@ -619,6 +920,16 @@
 			
 			
 		</div>
+
+		<table class="compat-table">
+			<thead>
+				<tr><th></th><th>Blink</th><th>EdgeHTML</th><th>Gecko</th><th>Presto</th><th>Trident</th><th>WebKit</th></tr>
+			</thead>
+			<tbody>
+				<tr><td>polyfill-library</td><td>-</td><td>-</td><td>-</td><td>-</td><td>4.0 - 4.0</td><td>530.17 - 530.17</td></tr>
+				<tr><td>native</td><td>-</td><td>12</td><td>2</td><td>2.10</td><td>5.0</td><td>534.48</td></tr>
+			</tbody>
+		</table>
 		
 	
 		<h3 id="Document.querySelector" class="compat-table-header"><a href="#Document.querySelector">Document.querySelector</a></h3>
@@ -629,7 +940,7 @@
 			</thead>
 			<tbody>
 				<tr><td><span title="document.querySelector">polyfill-library</span></td><td>-</td><td>-</td><td>-</td><td>-</td><td>6 - 8</td><td>-</td><td>-</td><td>-</td></tr>
-				<tr><td><span title="Document.querySelector">native</span></td><td>18</td><td>1</td><td>12</td><td>3.5</td><td>8</td><td>10</td><td>3.2</td><td>3</td></tr>
+				<tr><td><span title="Document.querySelector">native</span></td><td>1</td><td>1</td><td>12</td><td>3.5</td><td>8</td><td>10</td><td>3.2</td><td>3</td></tr>
 			</tbody>
 		</table>
 
@@ -637,6 +948,16 @@
 			
 			
 		</div>
+
+		<table class="compat-table">
+			<thead>
+				<tr><th></th><th>Blink</th><th>EdgeHTML</th><th>Gecko</th><th>Presto</th><th>Trident</th><th>WebKit</th></tr>
+			</thead>
+			<tbody>
+				<tr><td>polyfill-library</td><td>-</td><td>-</td><td>-</td><td>-</td><td>4.0 - 4.0</td><td>-</td></tr>
+				<tr><td>native</td><td>-</td><td>12</td><td>1.9.1</td><td>2.6</td><td>4.0</td><td>531.21</td></tr>
+			</tbody>
+		</table>
 		
 	
 		<h3 id="Document.visibilityState" class="compat-table-header"><a href="#Document.visibilityState">Document.visibilityState</a></h3>
@@ -647,14 +968,24 @@
 			</thead>
 			<tbody>
 				<tr><td><span title="document.visibilityState">polyfill-library</span></td><td>4.4 - *</td><td>14 - 32</td><td>-</td><td>10 - 17</td><td>-</td><td>15 - 19</td><td>4</td><td>-</td></tr>
-				<tr><td><span title="Document.visibilityState">native</span></td><td><span>33</span><br><span>true</span></td><td><span>33</span><br><span>13</span></td><td>12</td><td><span>18</span><br><span>10</span> - <span style="color:red;">52</span></td><td>10</td><td><span title="Doesn't fire the <code>visibilitychange</code> event when the browser window is minimized, nor when <code>hidden</code> is set to true.">12.1 ⓘ</span></td><td>6.1</td><td>7</td></tr>
+				<tr><td><span title="Document.visibilityState">native</span></td><td>4.4.3</td><td><span>33</span><br><span>13</span></td><td>12</td><td><span>18</span><br><span>10</span> - <span style="color:red;">52</span></td><td>10</td><td><span title="Doesn't fire the <code>visibilitychange</code> event when the browser window is minimized, nor when <code>hidden</code> is set to true.">12.1 ⓘ</span></td><td>6.1</td><td>7</td></tr>
 			</tbody>
 		</table>
 
 		<div class="compat-table-notes">
 			<h3>mdn notes : </h3><p>opera 12.1 : Doesn't fire the <code>visibilitychange</code> event when the browser window is minimized, nor when <code>hidden</code> is set to true.</p>
-			<h3>polyfill-library notes : </h3><p>The alias `PageVisibility` works for this feature for backwards compatibility with the name under which it was previously (erroneously) available</p>
+			
 		</div>
+
+		<table class="compat-table">
+			<thead>
+				<tr><th></th><th>Blink</th><th>EdgeHTML</th><th>Gecko</th><th>Presto</th><th>Trident</th><th>WebKit</th></tr>
+			</thead>
+			<tbody>
+				<tr><td>polyfill-library</td><td>28 - 32</td><td>-</td><td>10 - 17</td><td>-</td><td>-</td><td>530.17 - 530.17</td></tr>
+				<tr><td>native</td><td>-</td><td>12</td><td>10</td><td>2.12</td><td>6.0</td><td>537.51</td></tr>
+			</tbody>
+		</table>
 		
 	
 		<h3 id="DocumentFragment" class="compat-table-header"><a href="#DocumentFragment">DocumentFragment</a></h3>
@@ -665,7 +996,7 @@
 			</thead>
 			<tbody>
 				<tr><td><span title="DocumentFragment">polyfill-library</span></td><td><3</td><td>-</td><td>-</td><td><4</td><td>8 - 9</td><td><11</td><td><4</td><td><4</td></tr>
-				<tr><td><span title="DocumentFragment">native</span></td><td>18</td><td>1</td><td>12</td><td>1</td><td>9</td><td>8</td><td>3</td><td>1</td></tr>
+				<tr><td><span title="DocumentFragment">native</span></td><td>1</td><td>1</td><td>12</td><td>1</td><td>9</td><td>8</td><td>3</td><td>1</td></tr>
 			</tbody>
 		</table>
 
@@ -673,6 +1004,16 @@
 			
 			
 		</div>
+
+		<table class="compat-table">
+			<thead>
+				<tr><th></th><th>Blink</th><th>EdgeHTML</th><th>Gecko</th><th>Presto</th><th>Trident</th><th>WebKit</th></tr>
+			</thead>
+			<tbody>
+				<tr><td>polyfill-library</td><td>-</td><td>-</td><td>1.7 - 1.9.2</td><td>1 - 2.6</td><td>4.0 - 5.0</td><td>85 - 531.21</td></tr>
+				<tr><td>native</td><td>-</td><td>12</td><td>1.8</td><td>1</td><td>5.0</td><td>525.26</td></tr>
+			</tbody>
+		</table>
 		
 	
 		<h3 id="DOMRect" class="compat-table-header"><a href="#DOMRect">DOMRect</a></h3>
@@ -691,6 +1032,16 @@
 			<h3>mdn notes : </h3><p>edge 12 : Alternate name : ClientRect</p><p>ie  : Alternate name : ClientRect</p>
 			
 		</div>
+
+		<table class="compat-table">
+			<thead>
+				<tr><th></th><th>Blink</th><th>EdgeHTML</th><th>Gecko</th><th>Presto</th><th>Trident</th><th>WebKit</th></tr>
+			</thead>
+			<tbody>
+				<tr><td>polyfill-library</td><td>28 - 59</td><td>>= 12</td><td>1.7 - 30</td><td>-</td><td>>= 5.0</td><td>85 - 602.1.50</td></tr>
+				<tr><td>native</td><td>61</td><td>12</td><td>-</td><td>-</td><td>-</td><td>603.2.1</td></tr>
+			</tbody>
+		</table>
 		
 	
 		<h3 id="DOMTokenList" class="compat-table-header"><a href="#DOMTokenList">DOMTokenList</a></h3>
@@ -701,7 +1052,7 @@
 			</thead>
 			<tbody>
 				<tr><td><span title="DOMTokenList">polyfill-library</span></td><td>-</td><td>-</td><td><14</td><td>-</td><td>*</td><td>-</td><td>4 - 6.0</td><td>-</td></tr>
-				<tr><td><span title="DOMTokenList">native</span></td><td>18</td><td>8</td><td>12</td><td>3.6</td><td>10</td><td>11.5</td><td>5.1</td><td>5.1</td></tr>
+				<tr><td><span title="DOMTokenList">native</span></td><td>3</td><td>8</td><td>12</td><td>3.6</td><td>10</td><td>11.5</td><td>5.1</td><td>5.1</td></tr>
 			</tbody>
 		</table>
 
@@ -709,6 +1060,16 @@
 			
 			
 		</div>
+
+		<table class="compat-table">
+			<thead>
+				<tr><th></th><th>Blink</th><th>EdgeHTML</th><th>Gecko</th><th>Presto</th><th>Trident</th><th>WebKit</th></tr>
+			</thead>
+			<tbody>
+				<tr><td>polyfill-library</td><td>-</td><td>12 - 13</td><td>-</td><td>-</td><td>>= 4.0</td><td>530.17 - 536.25</td></tr>
+				<tr><td>native</td><td>-</td><td>12</td><td>1.9.2</td><td>2.9</td><td>6.0</td><td>534.48</td></tr>
+			</tbody>
+		</table>
 		
 	
 		<h3 id="DOMTokenList.prototype.forEach" class="compat-table-header"><a href="#DOMTokenList.prototype.forEach">DOMTokenList.prototype.forEach</a></h3>
@@ -727,6 +1088,16 @@
 			
 			
 		</div>
+
+		<table class="compat-table">
+			<thead>
+				<tr><th></th><th>Blink</th><th>EdgeHTML</th><th>Gecko</th><th>Presto</th><th>Trident</th><th>WebKit</th></tr>
+			</thead>
+			<tbody>
+				<tr><td>polyfill-library</td><td>28 - 41</td><td>12 - 15</td><td>1.7 - 49</td><td>>= 1</td><td>>= 4.0</td><td>85 - 602.1.50</td></tr>
+				<tr><td>native</td><td>42</td><td>16</td><td>50</td><td>-</td><td>-</td><td>603.2.1</td></tr>
+			</tbody>
+		</table>
 		
 	
 		<h3 id="DOMTokenList.prototype.replace" class="compat-table-header"><a href="#DOMTokenList.prototype.replace">DOMTokenList.prototype.replace</a></h3>
@@ -745,6 +1116,16 @@
 			
 			
 		</div>
+
+		<table class="compat-table">
+			<thead>
+				<tr><th></th><th>Blink</th><th>EdgeHTML</th><th>Gecko</th><th>Presto</th><th>Trident</th><th>WebKit</th></tr>
+			</thead>
+			<tbody>
+				<tr><td>polyfill-library</td><td>28 - 66</td><td>12 - 17</td><td>1.7 - 60</td><td>>= 1</td><td>>= 4.0</td><td>85 - 605.1.33</td></tr>
+				<tr><td>native</td><td>61</td><td>17</td><td>49</td><td>-</td><td>-</td><td>603.2.1</td></tr>
+			</tbody>
+		</table>
 		
 	
 		<h3 id="Element" class="compat-table-header"><a href="#Element">Element</a></h3>
@@ -755,7 +1136,7 @@
 			</thead>
 			<tbody>
 				<tr><td><span title="Element">polyfill-library</span></td><td>-</td><td>-</td><td>-</td><td>-</td><td>6 - 8</td><td>-</td><td>-</td><td>-</td></tr>
-				<tr><td><span title="Element">native</span></td><td>18</td><td>1</td><td>12</td><td>1</td><td>4</td><td>8</td><td>1.3</td><td>1</td></tr>
+				<tr><td><span title="Element">native</span></td><td>1</td><td>1</td><td>12</td><td>1</td><td>4</td><td>8</td><td>1.3</td><td>1</td></tr>
 			</tbody>
 		</table>
 
@@ -763,6 +1144,16 @@
 			
 			
 		</div>
+
+		<table class="compat-table">
+			<thead>
+				<tr><th></th><th>Blink</th><th>EdgeHTML</th><th>Gecko</th><th>Presto</th><th>Trident</th><th>WebKit</th></tr>
+			</thead>
+			<tbody>
+				<tr><td>polyfill-library</td><td>-</td><td>-</td><td>-</td><td>-</td><td>4.0 - 4.0</td><td>-</td></tr>
+				<tr><td>native</td><td>-</td><td>12</td><td>1.8</td><td>1</td><td>-</td><td>522.11</td></tr>
+			</tbody>
+		</table>
 		
 	
 		<h3 id="Element.prototype.classList" class="compat-table-header"><a href="#Element.prototype.classList">Element.prototype.classList</a></h3>
@@ -773,14 +1164,24 @@
 			</thead>
 			<tbody>
 				<tr><td><span title="Element.prototype.classList">polyfill-library</span></td><td>-</td><td>-</td><td>-</td><td>-</td><td>8 - 11</td><td>-</td><td>4 - 4.1</td><td>-</td></tr>
-				<tr><td><span title="Element.prototype.classList">native</span></td><td><span>25</span><br><span title="Not supported for SVG elements."><span>18</span> - <span style="color:red;">25</span> ⓘ</span></td><td><span>22</span><br><span title="Not supported for SVG elements."><span>8</span> - <span style="color:red;">22</span> ⓘ</span></td><td><span>16</span><br><span title="Not supported for SVG elements."><span>12</span> - <span style="color:red;">16</span> ⓘ</span></td><td>3.6</td><td><span title="Not supported for SVG elements.">10 ⓘ</span></td><td>11.5</td><td><span>6.1</span><br><span title="Not supported for SVG elements."><span>6</span> - <span style="color:red;">6.1</span> ⓘ</span></td><td><span>7</span><br><span title="Not supported for SVG elements."><span>5</span> - <span style="color:red;">7</span> ⓘ</span></td></tr>
+				<tr><td><span title="Element.prototype.classList">native</span></td><td><span>4.4</span><br><span title="Not supported for SVG elements."><span>3</span> - <span style="color:red;">4.4</span> ⓘ</span></td><td><span>22</span><br><span title="Not supported for SVG elements."><span>8</span> - <span style="color:red;">22</span> ⓘ</span></td><td><span>16</span><br><span title="Not supported for SVG elements."><span>12</span> - <span style="color:red;">16</span> ⓘ</span></td><td>3.6</td><td><span title="Not supported for SVG elements.">10 ⓘ</span></td><td>11.5</td><td><span>6.1</span><br><span title="Not supported for SVG elements."><span>6</span> - <span style="color:red;">6.1</span> ⓘ</span></td><td><span>7</span><br><span title="Not supported for SVG elements."><span>5</span> - <span style="color:red;">7</span> ⓘ</span></td></tr>
 			</tbody>
 		</table>
 
 		<div class="compat-table-notes">
-			<h3>mdn notes : </h3><p>android 18 : Not supported for SVG elements.</p><p>chrome 8 : Not supported for SVG elements.</p><p>edge 12 : Not supported for SVG elements.</p><p>ie 10 : Not supported for SVG elements.</p><p>safari 6 : Not supported for SVG elements.</p><p>ios_saf 5 : Not supported for SVG elements.</p>
+			<h3>mdn notes : </h3><p>android 3 : Not supported for SVG elements.</p><p>chrome 8 : Not supported for SVG elements.</p><p>edge 12 : Not supported for SVG elements.</p><p>ie 10 : Not supported for SVG elements.</p><p>safari 6 : Not supported for SVG elements.</p><p>ios_saf 5 : Not supported for SVG elements.</p>
 			
 		</div>
+
+		<table class="compat-table">
+			<thead>
+				<tr><th></th><th>Blink</th><th>EdgeHTML</th><th>Gecko</th><th>Presto</th><th>Trident</th><th>WebKit</th></tr>
+			</thead>
+			<tbody>
+				<tr><td>polyfill-library</td><td>-</td><td>-</td><td>-</td><td>-</td><td>>= 4.0</td><td>530.17 - 530.17</td></tr>
+				<tr><td>native</td><td>-</td><td>12</td><td>1.9.2</td><td>2.9</td><td>6.0</td><td>537.43</td></tr>
+			</tbody>
+		</table>
 		
 	
 		<h3 id="Element.prototype.closest" class="compat-table-header"><a href="#Element.prototype.closest">Element.prototype.closest</a></h3>
@@ -799,6 +1200,16 @@
 			
 			
 		</div>
+
+		<table class="compat-table">
+			<thead>
+				<tr><th></th><th>Blink</th><th>EdgeHTML</th><th>Gecko</th><th>Presto</th><th>Trident</th><th>WebKit</th></tr>
+			</thead>
+			<tbody>
+				<tr><td>polyfill-library</td><td>28 - 40</td><td>12 - 14</td><td>1.7 - 34</td><td>>= 1</td><td>>= 4.0</td><td>85 - 600.1.4</td></tr>
+				<tr><td>native</td><td>41</td><td>15</td><td>35</td><td>-</td><td>-</td><td>601.5.17</td></tr>
+			</tbody>
+		</table>
 		
 	
 		<h3 id="Element.prototype.matches" class="compat-table-header"><a href="#Element.prototype.matches">Element.prototype.matches</a></h3>
@@ -809,16 +1220,26 @@
 			</thead>
 			<tbody>
 				<tr><td><span title="Element.prototype.matches">polyfill-library</span></td><td>* - 4.4.4</td><td>* - 33</td><td><15</td><td>* - 33</td><td>6 - *</td><td>* - 20</td><td>4 - 7.0</td><td>* - 7</td></tr>
-				<tr><td><span title="Element.prototype.matches">native</span></td><td><span>33</span><br><span title="Alternate name : webkitMatchesSelector"><span>18</span> ⓘ</span></td><td><span>33</span><br><span title="Alternate name : webkitMatchesSelector"><span>4</span> ⓘ</span></td><td><span>15</span><br><span title="Alternate name : webkitMatchesSelector"><span>12</span> ⓘ</span><br><span title="Alternate name : msMatchesSelector"><span>12</span> ⓘ</span></td><td><span>34</span><br><span title="Alternate name : webkitMatchesSelector"><span>44</span> ⓘ</span><br><span title="Prior to Firefox 4, invalid selector strings caused false to be returned instead of throwing an exception.
+				<tr><td><span title="Element.prototype.matches">native</span></td><td><span>4.4</span><br><span title="Alternate name : webkitMatchesSelector"><span>≤37</span> ⓘ</span></td><td><span>33</span><br><span title="Alternate name : webkitMatchesSelector"><span>4</span> ⓘ</span></td><td><span>15</span><br><span title="Alternate name : webkitMatchesSelector"><span>12</span> ⓘ</span><br><span title="Alternate name : msMatchesSelector"><span>12</span> ⓘ</span></td><td><span>34</span><br><span title="Alternate name : webkitMatchesSelector"><span>44</span> ⓘ</span><br><span title="Prior to Firefox 4, invalid selector strings caused false to be returned instead of throwing an exception.
 See <a href='https://bugzil.la/1119718'>bug 1119718</a> for removal.
 Alternate name : mozMatchesSelector"><span>3.6</span> ⓘ</span></td><td><span title="Alternate name : msMatchesSelector">9 ⓘ</span></td><td><span>21</span><br><span title="Alternate name : webkitMatchesSelector"><span>15</span> ⓘ</span><br><span title="Alternate name : oMatchesSelector"><span>11.5</span> - <span style="color:red;">15</span> ⓘ</span></td><td><span>7</span><br><span title="Alternate name : webkitMatchesSelector"><span>5</span> ⓘ</span></td><td><span>8</span><br><span title="Alternate name : webkitMatchesSelector"><span>4.2</span> ⓘ</span></td></tr>
 			</tbody>
 		</table>
 
 		<div class="compat-table-notes">
-			<h3>mdn notes : </h3><p>android 18 : Alternate name : webkitMatchesSelector</p><p>chrome 4 : Alternate name : webkitMatchesSelector</p><p>edge 12 : Alternate name : webkitMatchesSelector</p><p>edge 12 : Alternate name : msMatchesSelector</p><p>firefox 44 : Alternate name : webkitMatchesSelector</p><p>firefox 3.6 : Prior to Firefox 4, invalid selector strings caused false to be returned instead of throwing an exception.</p><p>firefox 3.6 : See <a href='https://bugzil.la/1119718'>bug 1119718</a> for removal.</p><p>firefox 3.6 : Alternate name : mozMatchesSelector</p><p>ie 9 : Alternate name : msMatchesSelector</p><p>opera 15 : Alternate name : webkitMatchesSelector</p><p>opera 11.5 : Alternate name : oMatchesSelector</p><p>safari 5 : Alternate name : webkitMatchesSelector</p><p>ios_saf 4.2 : Alternate name : webkitMatchesSelector</p>
+			<h3>mdn notes : </h3><p>android ≤37 : Alternate name : webkitMatchesSelector</p><p>chrome 4 : Alternate name : webkitMatchesSelector</p><p>edge 12 : Alternate name : webkitMatchesSelector</p><p>edge 12 : Alternate name : msMatchesSelector</p><p>firefox 44 : Alternate name : webkitMatchesSelector</p><p>firefox 3.6 : Prior to Firefox 4, invalid selector strings caused false to be returned instead of throwing an exception.</p><p>firefox 3.6 : See <a href='https://bugzil.la/1119718'>bug 1119718</a> for removal.</p><p>firefox 3.6 : Alternate name : mozMatchesSelector</p><p>ie 9 : Alternate name : msMatchesSelector</p><p>opera 15 : Alternate name : webkitMatchesSelector</p><p>opera 11.5 : Alternate name : oMatchesSelector</p><p>safari 5 : Alternate name : webkitMatchesSelector</p><p>ios_saf 4.2 : Alternate name : webkitMatchesSelector</p>
 			
 		</div>
+
+		<table class="compat-table">
+			<thead>
+				<tr><th></th><th>Blink</th><th>EdgeHTML</th><th>Gecko</th><th>Presto</th><th>Trident</th><th>WebKit</th></tr>
+			</thead>
+			<tbody>
+				<tr><td>polyfill-library</td><td>28 - 33</td><td>12 - 14</td><td>1.7 - 33</td><td>>= 1</td><td>>= 4.0</td><td>522.11 - 537.71</td></tr>
+				<tr><td>native</td><td>-</td><td>12</td><td>1.9.2</td><td>2.9</td><td>5.0</td><td>534.48</td></tr>
+			</tbody>
+		</table>
 		
 	
 		<h3 id="Element.prototype.scroll" class="compat-table-header"><a href="#Element.prototype.scroll">Element.prototype.scroll</a></h3>
@@ -837,6 +1258,16 @@ Alternate name : mozMatchesSelector"><span>3.6</span> ⓘ</span></td><td><span t
 			
 			
 		</div>
+
+		<table class="compat-table">
+			<thead>
+				<tr><th></th><th>Blink</th><th>EdgeHTML</th><th>Gecko</th><th>Presto</th><th>Trident</th><th>WebKit</th></tr>
+			</thead>
+			<tbody>
+				<tr><td>polyfill-library</td><td>28 - 60</td><td>>= 12</td><td>2 - 36</td><td>>= 1</td><td>>= 5.0</td><td>>= 85</td></tr>
+				<tr><td>native</td><td>61</td><td>-</td><td>36</td><td>-</td><td>-</td><td>603.2.1</td></tr>
+			</tbody>
+		</table>
 		
 	
 		<h3 id="Element.prototype.scrollBy" class="compat-table-header"><a href="#Element.prototype.scrollBy">Element.prototype.scrollBy</a></h3>
@@ -855,6 +1286,16 @@ Alternate name : mozMatchesSelector"><span>3.6</span> ⓘ</span></td><td><span t
 			
 			
 		</div>
+
+		<table class="compat-table">
+			<thead>
+				<tr><th></th><th>Blink</th><th>EdgeHTML</th><th>Gecko</th><th>Presto</th><th>Trident</th><th>WebKit</th></tr>
+			</thead>
+			<tbody>
+				<tr><td>polyfill-library</td><td>28 - 60</td><td>>= 12</td><td>2 - 36</td><td>>= 1</td><td>>= 5.0</td><td>>= 85</td></tr>
+				<tr><td>native</td><td>61</td><td>-</td><td>36</td><td>-</td><td>-</td><td>603.2.1</td></tr>
+			</tbody>
+		</table>
 		
 	
 		<h3 id="Element.prototype.scrollIntoView" class="compat-table-header"><a href="#Element.prototype.scrollIntoView">Element.prototype.scrollIntoView</a></h3>
@@ -865,7 +1306,7 @@ Alternate name : mozMatchesSelector"><span>3.6</span> ⓘ</span></td><td><span t
 			</thead>
 			<tbody>
 				<tr><td><span title="smoothscroll">polyfill-library</span></td><td>*</td><td>* - 60</td><td><79</td><td>4 - 36</td><td>9 - *</td><td>*</td><td>*</td><td>*</td></tr>
-				<tr><td><span title="Element.prototype.scrollIntoView">native</span></td><td>18</td><td>1</td><td><span>79</span><br><span title="The only parameter supported is <code>alignToTop</code>."><span>17</span> - <span style="color:red;">79</span> ⓘ</span><br><span title="Only supported for <a href='https://developer.mozilla.org/docs/Web/API/HTMLElement'><code>HTMLElement</code></a>, not all <code>Element</code> objects, such as <a href='https://developer.mozilla.org/docs/Web/API/SVGElement'><code>SVGElement</code></a>.
+				<tr><td><span title="Element.prototype.scrollIntoView">native</span></td><td>1</td><td>1</td><td><span>79</span><br><span title="The only parameter supported is <code>alignToTop</code>."><span>17</span> - <span style="color:red;">79</span> ⓘ</span><br><span title="Only supported for <a href='https://developer.mozilla.org/docs/Web/API/HTMLElement'><code>HTMLElement</code></a>, not all <code>Element</code> objects, such as <a href='https://developer.mozilla.org/docs/Web/API/SVGElement'><code>SVGElement</code></a>.
 No support for <code>smooth</code> behavior."><span>12</span> - <span style="color:red;">17</span> ⓘ</span></td><td>1</td><td><span title="Only supported for <a href='https://developer.mozilla.org/docs/Web/API/HTMLElement'><code>HTMLElement</code></a>, not all <code>Element</code> objects, such as <a href='https://developer.mozilla.org/docs/Web/API/SVGElement'><code>SVGElement</code></a>.
 No support for <code>smooth</code> behavior or <code>center</code> options.">5 ⓘ</span></td><td>≤12.1</td><td><span title="No support for <code>smooth</code> behavior or <code>center</code> options.">3 ⓘ</span></td><td><span title="No support for <code>smooth</code> behavior or <code>center</code> options.">1 ⓘ</span></td></tr>
 			</tbody>
@@ -875,6 +1316,16 @@ No support for <code>smooth</code> behavior or <code>center</code> options.">5 �
 			<h3>mdn notes : </h3><p>edge 17 : The only parameter supported is <code>alignToTop</code>.</p><p>edge 12 : Only supported for <a href='https://developer.mozilla.org/docs/Web/API/HTMLElement'><code>HTMLElement</code></a>, not all <code>Element</code> objects, such as <a href='https://developer.mozilla.org/docs/Web/API/SVGElement'><code>SVGElement</code></a>.</p><p>edge 12 : No support for <code>smooth</code> behavior.</p><p>ie 5 : Only supported for <a href='https://developer.mozilla.org/docs/Web/API/HTMLElement'><code>HTMLElement</code></a>, not all <code>Element</code> objects, such as <a href='https://developer.mozilla.org/docs/Web/API/SVGElement'><code>SVGElement</code></a>.</p><p>ie 5 : No support for <code>smooth</code> behavior or <code>center</code> options.</p><p>safari 3 : No support for <code>smooth</code> behavior or <code>center</code> options.</p><p>ios_saf 1 : No support for <code>smooth</code> behavior or <code>center</code> options.</p>
 			
 		</div>
+
+		<table class="compat-table">
+			<thead>
+				<tr><th></th><th>Blink</th><th>EdgeHTML</th><th>Gecko</th><th>Presto</th><th>Trident</th><th>WebKit</th></tr>
+			</thead>
+			<tbody>
+				<tr><td>polyfill-library</td><td>28 - 60</td><td>>= 12</td><td>2 - 36</td><td>>= 1</td><td>>= 5.0</td><td>>= 85</td></tr>
+				<tr><td>native</td><td>-</td><td>12</td><td>1.8</td><td>-</td><td>-</td><td>525.26</td></tr>
+			</tbody>
+		</table>
 		
 	
 		<h3 id="Element.prototype.toggleAttribute" class="compat-table-header"><a href="#Element.prototype.toggleAttribute">Element.prototype.toggleAttribute</a></h3>
@@ -893,6 +1344,16 @@ No support for <code>smooth</code> behavior or <code>center</code> options.">5 �
 			
 			
 		</div>
+
+		<table class="compat-table">
+			<thead>
+				<tr><th></th><th>Blink</th><th>EdgeHTML</th><th>Gecko</th><th>Presto</th><th>Trident</th><th>WebKit</th></tr>
+			</thead>
+			<tbody>
+				<tr><td>polyfill-library</td><td>28 - 68</td><td>12 - 17</td><td>1.7 - 62</td><td>>= 1</td><td>>= 4.0</td><td>85 - 605.1.33</td></tr>
+				<tr><td>native</td><td>69</td><td>18</td><td>63</td><td>-</td><td>-</td><td>607.1.40</td></tr>
+			</tbody>
+		</table>
 		
 	
 		<h3 id="Event" class="compat-table-header"><a href="#Event">Event</a></h3>
@@ -903,14 +1364,24 @@ No support for <code>smooth</code> behavior or <code>center</code> options.">5 �
 			</thead>
 			<tbody>
 				<tr><td><span title="Event">polyfill-library</span></td><td>-</td><td>-</td><td>-</td><td>6 - 10</td><td>6 - 11</td><td>10 - 11.5</td><td>4 - 7</td><td>-</td></tr>
-				<tr><td><span title="Event">native</span></td><td>18</td><td>1</td><td>12</td><td>1</td><td>6</td><td>4</td><td>1</td><td>1</td></tr>
+				<tr><td><span title="Event">native</span></td><td>1</td><td>1</td><td>12</td><td>1</td><td>6</td><td>4</td><td>1</td><td>1</td></tr>
 			</tbody>
 		</table>
 
 		<div class="compat-table-notes">
 			
-			<h3>polyfill-library notes : </h3><p>Where necessary, also adds the [EventTarget](https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener) methods `addEventListener`, `removeEventListener` and `dispatchEvent`.</p>
+			
 		</div>
+
+		<table class="compat-table">
+			<thead>
+				<tr><th></th><th>Blink</th><th>EdgeHTML</th><th>Gecko</th><th>Presto</th><th>Trident</th><th>WebKit</th></tr>
+			</thead>
+			<tbody>
+				<tr><td>polyfill-library</td><td>-</td><td>-</td><td>6 - 10</td><td>2.2 - 2.9</td><td>>= 4.0</td><td>530.17 - 537.71</td></tr>
+				<tr><td>native</td><td>-</td><td>12</td><td>1.8</td><td>-</td><td>-</td><td>522.11</td></tr>
+			</tbody>
+		</table>
 		
 	
 		<h3 id="EventSource" class="compat-table-header"><a href="#EventSource">EventSource</a></h3>
@@ -921,7 +1392,7 @@ No support for <code>smooth</code> behavior or <code>center</code> options.">5 �
 			</thead>
 			<tbody>
 				<tr><td><span title="EventSource">polyfill-library</span></td><td><4.4</td><td><26</td><td><79</td><td><36</td><td>*</td><td><12</td><td><7</td><td>-</td></tr>
-				<tr><td><span title="EventSource">native</span></td><td>18</td><td>6</td><td>79</td><td>6</td><td>-</td><td>11</td><td>5</td><td>5</td></tr>
+				<tr><td><span title="EventSource">native</span></td><td>≤37</td><td>6</td><td>79</td><td>6</td><td>-</td><td>11</td><td>5</td><td>5</td></tr>
 			</tbody>
 		</table>
 
@@ -929,6 +1400,16 @@ No support for <code>smooth</code> behavior or <code>center</code> options.">5 �
 			
 			
 		</div>
+
+		<table class="compat-table">
+			<thead>
+				<tr><th></th><th>Blink</th><th>EdgeHTML</th><th>Gecko</th><th>Presto</th><th>Trident</th><th>WebKit</th></tr>
+			</thead>
+			<tbody>
+				<tr><td>polyfill-library</td><td>-</td><td>>= 12</td><td>1.7 - 35</td><td>1 - 2.10</td><td>>= 4.0</td><td>85 - 537.43</td></tr>
+				<tr><td>native</td><td>-</td><td>-</td><td>6</td><td>2.10</td><td>-</td><td>534.48</td></tr>
+			</tbody>
+		</table>
 		
 	
 		<h3 id="fetch" class="compat-table-header"><a href="#fetch">fetch</a></h3>
@@ -945,8 +1426,18 @@ No support for <code>smooth</code> behavior or <code>center</code> options.">5 �
 
 		<div class="compat-table-notes">
 			<h3>mdn notes : </h3><p>firefox 52 : <code>fetch()</code> now defined on <code><a href='https://developer.mozilla.org/docs/Web/API/WindowOrWorkerGlobalScope'>WindowOrWorkerGlobalScope</a></code> mixin.</p>
-			<h3>polyfill-library notes : </h3><p>Makes use of FormData, FileReader and Blob if they exist. Readable streams not supported. CORS (Cross Origin Resource Sharing) requests do not work in IE 9 or lower.</p>
+			
 		</div>
+
+		<table class="compat-table">
+			<thead>
+				<tr><th></th><th>Blink</th><th>EdgeHTML</th><th>Gecko</th><th>Presto</th><th>Trident</th><th>WebKit</th></tr>
+			</thead>
+			<tbody>
+				<tr><td>polyfill-library</td><td>28 - 65</td><td>12 - 15</td><td>1.7 - 56</td><td>>= 1</td><td>>= 4.0</td><td>85 - 605.1.33</td></tr>
+				<tr><td>native</td><td>42</td><td>14</td><td>52</td><td>-</td><td>-</td><td>603.2.1</td></tr>
+			</tbody>
+		</table>
 		
 	
 		<h3 id="globalThis" class="compat-table-header"><a href="#globalThis">globalThis</a></h3>
@@ -965,6 +1456,16 @@ No support for <code>smooth</code> behavior or <code>center</code> options.">5 �
 			
 			
 		</div>
+
+		<table class="compat-table">
+			<thead>
+				<tr><th></th><th>Blink</th><th>EdgeHTML</th><th>Gecko</th><th>Presto</th><th>Trident</th><th>WebKit</th></tr>
+			</thead>
+			<tbody>
+				<tr><td>polyfill-library</td><td>28 - 70</td><td>>= 12</td><td>1.7 - 64</td><td>>= 1</td><td>>= 4.0</td><td>85 - 606.1.36</td></tr>
+				<tr><td>native</td><td>71</td><td>-</td><td>65</td><td>-</td><td>-</td><td>607.1.40</td></tr>
+			</tbody>
+		</table>
 		
 	
 		<h3 id="HTMLCanvasElement.prototype.toBlob" class="compat-table-header"><a href="#HTMLCanvasElement.prototype.toBlob">HTMLCanvasElement.prototype.toBlob</a></h3>
@@ -983,6 +1484,16 @@ No support for <code>smooth</code> behavior or <code>center</code> options.">5 �
 			
 			
 		</div>
+
+		<table class="compat-table">
+			<thead>
+				<tr><th></th><th>Blink</th><th>EdgeHTML</th><th>Gecko</th><th>Presto</th><th>Trident</th><th>WebKit</th></tr>
+			</thead>
+			<tbody>
+				<tr><td>polyfill-library</td><td>28 - 49</td><td>>= 12</td><td>1.7 - 18</td><td>>= 1</td><td>>= 6.0</td><td>85 - 603.2.1</td></tr>
+				<tr><td>native</td><td>50</td><td>12</td><td>18</td><td>-</td><td>6.0</td><td>605.1.33</td></tr>
+			</tbody>
+		</table>
 		
 	
 		<h3 id="HTMLDocument" class="compat-table-header"><a href="#HTMLDocument">HTMLDocument</a></h3>
@@ -993,7 +1504,7 @@ No support for <code>smooth</code> behavior or <code>center</code> options.">5 �
 			</thead>
 			<tbody>
 				<tr><td><span title="HTMLDocument">polyfill-library</span></td><td>-</td><td>-</td><td>-</td><td>-</td><td>9</td><td>-</td><td>-</td><td>-</td></tr>
-				<tr><td><span title="HTMLDocument">native</span></td><td>18</td><td>1</td><td>12</td><td>1</td><td>≤6</td><td>≤12.1</td><td>≤4</td><td>≤3</td></tr>
+				<tr><td><span title="HTMLDocument">native</span></td><td>1</td><td>1</td><td>12</td><td>1</td><td>≤6</td><td>≤12.1</td><td>≤4</td><td>≤3</td></tr>
 			</tbody>
 		</table>
 
@@ -1001,6 +1512,16 @@ No support for <code>smooth</code> behavior or <code>center</code> options.">5 �
 			
 			
 		</div>
+
+		<table class="compat-table">
+			<thead>
+				<tr><th></th><th>Blink</th><th>EdgeHTML</th><th>Gecko</th><th>Presto</th><th>Trident</th><th>WebKit</th></tr>
+			</thead>
+			<tbody>
+				<tr><td>polyfill-library</td><td>-</td><td>-</td><td>-</td><td>-</td><td>5.0 - 5.0</td><td>-</td></tr>
+				<tr><td>native</td><td>-</td><td>12</td><td>1.8</td><td>-</td><td>-</td><td>-</td></tr>
+			</tbody>
+		</table>
 		
 	
 		<h3 id="HTMLPictureElement" class="compat-table-header"><a href="#HTMLPictureElement">HTMLPictureElement</a></h3>
@@ -1019,6 +1540,16 @@ No support for <code>smooth</code> behavior or <code>center</code> options.">5 �
 			
 			
 		</div>
+
+		<table class="compat-table">
+			<thead>
+				<tr><th></th><th>Blink</th><th>EdgeHTML</th><th>Gecko</th><th>Presto</th><th>Trident</th><th>WebKit</th></tr>
+			</thead>
+			<tbody>
+				<tr><td>polyfill-library</td><td>28 - 38</td><td>12 - 12</td><td>2 - 37</td><td>>= 2.10</td><td>>= 4.0</td><td>522.11 - 601.5.17</td></tr>
+				<tr><td>native</td><td>38</td><td>13</td><td>32</td><td>-</td><td>-</td><td>601.5.17</td></tr>
+			</tbody>
+		</table>
 		
 	
 		<h3 id="HTMLTemplateElement" class="compat-table-header"><a href="#HTMLTemplateElement">HTMLTemplateElement</a></h3>
@@ -1029,7 +1560,7 @@ No support for <code>smooth</code> behavior or <code>center</code> options.">5 �
 			</thead>
 			<tbody>
 				<tr><td><span title="HTMLTemplateElement">core-web</span></td><td>-</td><td><35</td><td><15</td><td><22</td><td>*</td><td><22</td><td><9</td><td>-</td></tr>
-				<tr><td><span title="HTMLTemplateElement">native</span></td><td>26</td><td>26</td><td>13</td><td>22</td><td>-</td><td>15</td><td>6.1</td><td>6.1</td></tr>
+				<tr><td><span title="HTMLTemplateElement">native</span></td><td>true</td><td>26</td><td>13</td><td>22</td><td>-</td><td>15</td><td>6.1</td><td>6.1</td></tr>
 			</tbody>
 		</table>
 
@@ -1037,6 +1568,16 @@ No support for <code>smooth</code> behavior or <code>center</code> options.">5 �
 			
 			
 		</div>
+
+		<table class="compat-table">
+			<thead>
+				<tr><th></th><th>Blink</th><th>EdgeHTML</th><th>Gecko</th><th>Presto</th><th>Trident</th><th>WebKit</th></tr>
+			</thead>
+			<tbody>
+				<tr><td>polyfill-library</td><td>28 - 34</td><td>12 - 14</td><td>1.7 - 21</td><td>>= 1</td><td>>= 4.0</td><td>85 - 538.35</td></tr>
+				<tr><td>native</td><td>-</td><td>13</td><td>22</td><td>-</td><td>-</td><td>537.43</td></tr>
+			</tbody>
+		</table>
 		
 	
 		<h3 id="IntersectionObserver" class="compat-table-header"><a href="#IntersectionObserver">IntersectionObserver</a></h3>
@@ -1055,6 +1596,16 @@ No support for <code>smooth</code> behavior or <code>center</code> options.">5 �
 			
 			
 		</div>
+
+		<table class="compat-table">
+			<thead>
+				<tr><th></th><th>Blink</th><th>EdgeHTML</th><th>Gecko</th><th>Presto</th><th>Trident</th><th>WebKit</th></tr>
+			</thead>
+			<tbody>
+				<tr><td>polyfill-library</td><td>28 - 50</td><td>12 - 15</td><td>1.7 - 54</td><td>>= 1</td><td>>= 4.0</td><td>85 - 607.1.40</td></tr>
+				<tr><td>native</td><td>51</td><td>15</td><td>53</td><td>-</td><td>-</td><td>607.1.40</td></tr>
+			</tbody>
+		</table>
 		
 	
 		<h3 id="IntersectionObserverEntry" class="compat-table-header"><a href="#IntersectionObserverEntry">IntersectionObserverEntry</a></h3>
@@ -1073,6 +1624,16 @@ No support for <code>smooth</code> behavior or <code>center</code> options.">5 �
 			
 			
 		</div>
+
+		<table class="compat-table">
+			<thead>
+				<tr><th></th><th>Blink</th><th>EdgeHTML</th><th>Gecko</th><th>Presto</th><th>Trident</th><th>WebKit</th></tr>
+			</thead>
+			<tbody>
+				<tr><td>polyfill-library</td><td>-</td><td>15 - 15</td><td>-</td><td>-</td><td>-</td><td>-</td></tr>
+				<tr><td>native</td><td>51</td><td>15</td><td>53</td><td>-</td><td>-</td><td>607.1.40</td></tr>
+			</tbody>
+		</table>
 		
 	
 		<h3 id="Intl" class="compat-table-header"><a href="#Intl">Intl</a></h3>
@@ -1083,14 +1644,24 @@ No support for <code>smooth</code> behavior or <code>center</code> options.">5 �
 			</thead>
 			<tbody>
 				<tr><td><span title="Intl.DateTimeFormat">polyfill-library</span></td><td>*</td><td><71</td><td><71</td><td><51</td><td>9 - *</td><td>*</td><td><11</td><td><11</td></tr>
-				<tr><td><span title="Intl">native</span></td><td>25</td><td>24</td><td>12</td><td>29</td><td>11</td><td>15</td><td>10</td><td>10</td></tr>
+				<tr><td><span title="Intl">native</span></td><td>4.4</td><td>24</td><td>12</td><td>29</td><td>11</td><td>15</td><td>10</td><td>10</td></tr>
 			</tbody>
 		</table>
 
 		<div class="compat-table-notes">
 			
-			<h3>polyfill-library notes : </h3><p>Locales must be specified separately by prefixing the locale name with `Intl.DateTimeFormat.~locale`, eg `Intl.DateTimeFormat.~locale.en-GB`.</p>
+			
 		</div>
+
+		<table class="compat-table">
+			<thead>
+				<tr><th></th><th>Blink</th><th>EdgeHTML</th><th>Gecko</th><th>Presto</th><th>Trident</th><th>WebKit</th></tr>
+			</thead>
+			<tbody>
+				<tr><td>polyfill-library</td><td>28 - 70</td><td>>= 12</td><td>1.7 - 50</td><td>>= 1</td><td>>= 5.0</td><td>85 - 603.2.1</td></tr>
+				<tr><td>native</td><td>-</td><td>12</td><td>29</td><td>-</td><td>7.0</td><td>603.2.1</td></tr>
+			</tbody>
+		</table>
 		
 		<table class="compat-table">
 			<thead>
@@ -1098,7 +1669,7 @@ No support for <code>smooth</code> behavior or <code>center</code> options.">5 �
 			</thead>
 			<tbody>
 				<tr><td><span title="Intl.Locale">polyfill-library</span></td><td>*</td><td><74</td><td><79</td><td><75</td><td>9 - *</td><td>*</td><td><14</td><td><14</td></tr>
-				<tr><td><span title="Intl">native</span></td><td>25</td><td>24</td><td>12</td><td>29</td><td>11</td><td>15</td><td>10</td><td>10</td></tr>
+				<tr><td><span title="Intl">native</span></td><td>4.4</td><td>24</td><td>12</td><td>29</td><td>11</td><td>15</td><td>10</td><td>10</td></tr>
 			</tbody>
 		</table>
 
@@ -1106,6 +1677,16 @@ No support for <code>smooth</code> behavior or <code>center</code> options.">5 �
 			
 			
 		</div>
+
+		<table class="compat-table">
+			<thead>
+				<tr><th></th><th>Blink</th><th>EdgeHTML</th><th>Gecko</th><th>Presto</th><th>Trident</th><th>WebKit</th></tr>
+			</thead>
+			<tbody>
+				<tr><td>polyfill-library</td><td>28 - 73</td><td>>= 12</td><td>1.7 - 74</td><td>>= 1</td><td>>= 5.0</td><td>85 - 609.1.20</td></tr>
+				<tr><td>native</td><td>-</td><td>12</td><td>29</td><td>-</td><td>7.0</td><td>603.2.1</td></tr>
+			</tbody>
+		</table>
 		
 		<table class="compat-table">
 			<thead>
@@ -1113,14 +1694,24 @@ No support for <code>smooth</code> behavior or <code>center</code> options.">5 �
 			</thead>
 			<tbody>
 				<tr><td><span title="Intl.NumberFormat">polyfill-library</span></td><td>*</td><td><77</td><td><77</td><td>*</td><td>9 - *</td><td>*</td><td>*</td><td>*</td></tr>
-				<tr><td><span title="Intl">native</span></td><td>25</td><td>24</td><td>12</td><td>29</td><td>11</td><td>15</td><td>10</td><td>10</td></tr>
+				<tr><td><span title="Intl">native</span></td><td>4.4</td><td>24</td><td>12</td><td>29</td><td>11</td><td>15</td><td>10</td><td>10</td></tr>
 			</tbody>
 		</table>
 
 		<div class="compat-table-notes">
 			
-			<h3>polyfill-library notes : </h3><p>Locales must be specified separately by prefixing the locale name with `Intl.NumberFormat.~locale`, eg `Intl.NumberFormat.~locale.en-GB`.</p>
+			
 		</div>
+
+		<table class="compat-table">
+			<thead>
+				<tr><th></th><th>Blink</th><th>EdgeHTML</th><th>Gecko</th><th>Presto</th><th>Trident</th><th>WebKit</th></tr>
+			</thead>
+			<tbody>
+				<tr><td>polyfill-library</td><td>28 - 76</td><td>>= 12</td><td>>= 1.7</td><td>>= 1</td><td>>= 5.0</td><td>>= 85</td></tr>
+				<tr><td>native</td><td>-</td><td>12</td><td>29</td><td>-</td><td>7.0</td><td>603.2.1</td></tr>
+			</tbody>
+		</table>
 		
 		<table class="compat-table">
 			<thead>
@@ -1128,14 +1719,24 @@ No support for <code>smooth</code> behavior or <code>center</code> options.">5 �
 			</thead>
 			<tbody>
 				<tr><td><span title="Intl.PluralRules">polyfill-library</span></td><td><63</td><td><63</td><td><18</td><td><58</td><td>9 - *</td><td><50</td><td>*</td><td>*</td></tr>
-				<tr><td><span title="Intl">native</span></td><td>25</td><td>24</td><td>12</td><td>29</td><td>11</td><td>15</td><td>10</td><td>10</td></tr>
+				<tr><td><span title="Intl">native</span></td><td>4.4</td><td>24</td><td>12</td><td>29</td><td>11</td><td>15</td><td>10</td><td>10</td></tr>
 			</tbody>
 		</table>
 
 		<div class="compat-table-notes">
 			
-			<h3>polyfill-library notes : </h3><p>Locales must be specified separately by prefixing the locale name with `Intl.PluralRules.~locale`, eg `Intl.PluralRules.~locale.en-GB`.</p>
+			
 		</div>
+
+		<table class="compat-table">
+			<thead>
+				<tr><th></th><th>Blink</th><th>EdgeHTML</th><th>Gecko</th><th>Presto</th><th>Trident</th><th>WebKit</th></tr>
+			</thead>
+			<tbody>
+				<tr><td>polyfill-library</td><td>28 - 62</td><td>12 - 17</td><td>1.7 - 57</td><td>>= 1</td><td>>= 5.0</td><td>>= 85</td></tr>
+				<tr><td>native</td><td>-</td><td>12</td><td>29</td><td>-</td><td>7.0</td><td>603.2.1</td></tr>
+			</tbody>
+		</table>
 		
 		<table class="compat-table">
 			<thead>
@@ -1143,7 +1744,7 @@ No support for <code>smooth</code> behavior or <code>center</code> options.">5 �
 			</thead>
 			<tbody>
 				<tr><td><span title="Intl.getCanonicalLocales">polyfill-library</span></td><td>*</td><td><54</td><td><16</td><td><48</td><td>9 - *</td><td>*</td><td><11</td><td><11</td></tr>
-				<tr><td><span title="Intl">native</span></td><td>25</td><td>24</td><td>12</td><td>29</td><td>11</td><td>15</td><td>10</td><td>10</td></tr>
+				<tr><td><span title="Intl">native</span></td><td>4.4</td><td>24</td><td>12</td><td>29</td><td>11</td><td>15</td><td>10</td><td>10</td></tr>
 			</tbody>
 		</table>
 
@@ -1151,6 +1752,16 @@ No support for <code>smooth</code> behavior or <code>center</code> options.">5 �
 			
 			
 		</div>
+
+		<table class="compat-table">
+			<thead>
+				<tr><th></th><th>Blink</th><th>EdgeHTML</th><th>Gecko</th><th>Presto</th><th>Trident</th><th>WebKit</th></tr>
+			</thead>
+			<tbody>
+				<tr><td>polyfill-library</td><td>28 - 53</td><td>12 - 15</td><td>1.7 - 47</td><td>>= 1</td><td>>= 5.0</td><td>85 - 603.2.1</td></tr>
+				<tr><td>native</td><td>-</td><td>12</td><td>29</td><td>-</td><td>7.0</td><td>603.2.1</td></tr>
+			</tbody>
+		</table>
 		
 	
 		<h3 id="Intl.DateTimeFormat" class="compat-table-header"><a href="#Intl.DateTimeFormat">Intl.DateTimeFormat</a></h3>
@@ -1161,14 +1772,24 @@ No support for <code>smooth</code> behavior or <code>center</code> options.">5 �
 			</thead>
 			<tbody>
 				<tr><td><span title="Intl.DateTimeFormat">polyfill-library</span></td><td>*</td><td><71</td><td><71</td><td><51</td><td>9 - *</td><td>*</td><td><11</td><td><11</td></tr>
-				<tr><td><span title="Intl.DateTimeFormat">native</span></td><td>25</td><td>24</td><td>12</td><td>29</td><td>11</td><td>15</td><td>10</td><td>10</td></tr>
+				<tr><td><span title="Intl.DateTimeFormat">native</span></td><td>4.4</td><td>24</td><td>12</td><td>29</td><td>11</td><td>15</td><td>10</td><td>10</td></tr>
 			</tbody>
 		</table>
 
 		<div class="compat-table-notes">
 			
-			<h3>polyfill-library notes : </h3><p>Locales must be specified separately by prefixing the locale name with `Intl.DateTimeFormat.~locale`, eg `Intl.DateTimeFormat.~locale.en-GB`.</p>
+			
 		</div>
+
+		<table class="compat-table">
+			<thead>
+				<tr><th></th><th>Blink</th><th>EdgeHTML</th><th>Gecko</th><th>Presto</th><th>Trident</th><th>WebKit</th></tr>
+			</thead>
+			<tbody>
+				<tr><td>polyfill-library</td><td>28 - 70</td><td>>= 12</td><td>1.7 - 50</td><td>>= 1</td><td>>= 5.0</td><td>85 - 603.2.1</td></tr>
+				<tr><td>native</td><td>-</td><td>12</td><td>29</td><td>-</td><td>7.0</td><td>603.2.1</td></tr>
+			</tbody>
+		</table>
 		
 	
 		<h3 id="Intl.DisplayNames" class="compat-table-header"><a href="#Intl.DisplayNames">Intl.DisplayNames</a></h3>
@@ -1185,8 +1806,18 @@ No support for <code>smooth</code> behavior or <code>center</code> options.">5 �
 
 		<div class="compat-table-notes">
 			
-			<h3>polyfill-library notes : </h3><p>Locales must be specified separately by prefixing the locale name with `Intl.DisplayNames.~locale`, eg `Intl.DisplayNames.~locale.en-GB`.</p>
+			
 		</div>
+
+		<table class="compat-table">
+			<thead>
+				<tr><th></th><th>Blink</th><th>EdgeHTML</th><th>Gecko</th><th>Presto</th><th>Trident</th><th>WebKit</th></tr>
+			</thead>
+			<tbody>
+				<tr><td>polyfill-library</td><td>28 - 71</td><td>>= 12</td><td>>= 1.7</td><td>>= 1</td><td>>= 5.0</td><td>>= 85</td></tr>
+				<tr><td>native</td><td>81</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td></tr>
+			</tbody>
+		</table>
 		
 	
 		<h3 id="Intl.getCanonicalLocales" class="compat-table-header"><a href="#Intl.getCanonicalLocales">Intl.getCanonicalLocales</a></h3>
@@ -1205,6 +1836,16 @@ No support for <code>smooth</code> behavior or <code>center</code> options.">5 �
 			
 			
 		</div>
+
+		<table class="compat-table">
+			<thead>
+				<tr><th></th><th>Blink</th><th>EdgeHTML</th><th>Gecko</th><th>Presto</th><th>Trident</th><th>WebKit</th></tr>
+			</thead>
+			<tbody>
+				<tr><td>polyfill-library</td><td>28 - 53</td><td>12 - 15</td><td>1.7 - 47</td><td>>= 1</td><td>>= 5.0</td><td>85 - 603.2.1</td></tr>
+				<tr><td>native</td><td>54</td><td>16</td><td>48</td><td>-</td><td>-</td><td>605.1.33</td></tr>
+			</tbody>
+		</table>
 		
 	
 		<h3 id="Intl.ListFormat" class="compat-table-header"><a href="#Intl.ListFormat">Intl.ListFormat</a></h3>
@@ -1221,8 +1862,18 @@ No support for <code>smooth</code> behavior or <code>center</code> options.">5 �
 
 		<div class="compat-table-notes">
 			
-			<h3>polyfill-library notes : </h3><p>Locales must be specified separately by prefixing the locale name with `Intl.ListFormat.~locale`, eg `Intl.ListFormat.~locale.en-GB`.</p>
+			
 		</div>
+
+		<table class="compat-table">
+			<thead>
+				<tr><th></th><th>Blink</th><th>EdgeHTML</th><th>Gecko</th><th>Presto</th><th>Trident</th><th>WebKit</th></tr>
+			</thead>
+			<tbody>
+				<tr><td>polyfill-library</td><td>28 - 71</td><td>>= 12</td><td>>= 1.7</td><td>>= 1</td><td>>= 5.0</td><td>>= 85</td></tr>
+				<tr><td>native</td><td>72</td><td>-</td><td>78</td><td>-</td><td>-</td><td>-</td></tr>
+			</tbody>
+		</table>
 		
 	
 		<h3 id="Intl.Locale" class="compat-table-header"><a href="#Intl.Locale">Intl.Locale</a></h3>
@@ -1241,6 +1892,16 @@ No support for <code>smooth</code> behavior or <code>center</code> options.">5 �
 			
 			
 		</div>
+
+		<table class="compat-table">
+			<thead>
+				<tr><th></th><th>Blink</th><th>EdgeHTML</th><th>Gecko</th><th>Presto</th><th>Trident</th><th>WebKit</th></tr>
+			</thead>
+			<tbody>
+				<tr><td>polyfill-library</td><td>28 - 73</td><td>>= 12</td><td>1.7 - 74</td><td>>= 1</td><td>>= 5.0</td><td>85 - 609.1.20</td></tr>
+				<tr><td>native</td><td>74</td><td>-</td><td>75</td><td>-</td><td>-</td><td>610.1.28</td></tr>
+			</tbody>
+		</table>
 		
 	
 		<h3 id="Intl.NumberFormat" class="compat-table-header"><a href="#Intl.NumberFormat">Intl.NumberFormat</a></h3>
@@ -1251,14 +1912,24 @@ No support for <code>smooth</code> behavior or <code>center</code> options.">5 �
 			</thead>
 			<tbody>
 				<tr><td><span title="Intl.NumberFormat">polyfill-library</span></td><td>*</td><td><77</td><td><77</td><td>*</td><td>9 - *</td><td>*</td><td>*</td><td>*</td></tr>
-				<tr><td><span title="Intl.NumberFormat">native</span></td><td>25</td><td>24</td><td>12</td><td>29</td><td>11</td><td>15</td><td>10</td><td>10</td></tr>
+				<tr><td><span title="Intl.NumberFormat">native</span></td><td>4.4</td><td>24</td><td>12</td><td>29</td><td>11</td><td>15</td><td>10</td><td>10</td></tr>
 			</tbody>
 		</table>
 
 		<div class="compat-table-notes">
 			
-			<h3>polyfill-library notes : </h3><p>Locales must be specified separately by prefixing the locale name with `Intl.NumberFormat.~locale`, eg `Intl.NumberFormat.~locale.en-GB`.</p>
+			
 		</div>
+
+		<table class="compat-table">
+			<thead>
+				<tr><th></th><th>Blink</th><th>EdgeHTML</th><th>Gecko</th><th>Presto</th><th>Trident</th><th>WebKit</th></tr>
+			</thead>
+			<tbody>
+				<tr><td>polyfill-library</td><td>28 - 76</td><td>>= 12</td><td>>= 1.7</td><td>>= 1</td><td>>= 5.0</td><td>>= 85</td></tr>
+				<tr><td>native</td><td>-</td><td>12</td><td>29</td><td>-</td><td>7.0</td><td>603.2.1</td></tr>
+			</tbody>
+		</table>
 		
 	
 		<h3 id="Intl.PluralRules" class="compat-table-header"><a href="#Intl.PluralRules">Intl.PluralRules</a></h3>
@@ -1275,8 +1946,18 @@ No support for <code>smooth</code> behavior or <code>center</code> options.">5 �
 
 		<div class="compat-table-notes">
 			
-			<h3>polyfill-library notes : </h3><p>Locales must be specified separately by prefixing the locale name with `Intl.PluralRules.~locale`, eg `Intl.PluralRules.~locale.en-GB`.</p>
+			
 		</div>
+
+		<table class="compat-table">
+			<thead>
+				<tr><th></th><th>Blink</th><th>EdgeHTML</th><th>Gecko</th><th>Presto</th><th>Trident</th><th>WebKit</th></tr>
+			</thead>
+			<tbody>
+				<tr><td>polyfill-library</td><td>28 - 62</td><td>12 - 17</td><td>1.7 - 57</td><td>>= 1</td><td>>= 5.0</td><td>>= 85</td></tr>
+				<tr><td>native</td><td>63</td><td>18</td><td>58</td><td>-</td><td>-</td><td>609.1.20</td></tr>
+			</tbody>
+		</table>
 		
 	
 		<h3 id="Intl.RelativeTimeFormat" class="compat-table-header"><a href="#Intl.RelativeTimeFormat">Intl.RelativeTimeFormat</a></h3>
@@ -1293,8 +1974,18 @@ No support for <code>smooth</code> behavior or <code>center</code> options.">5 �
 
 		<div class="compat-table-notes">
 			
-			<h3>polyfill-library notes : </h3><p>Locales must be specified separately by prefixing the locale name with `Intl.RelativeTimeFormat.~locale`, eg `Intl.RelativeTimeFormat.~locale.en-GB`.</p>
+			
 		</div>
+
+		<table class="compat-table">
+			<thead>
+				<tr><th></th><th>Blink</th><th>EdgeHTML</th><th>Gecko</th><th>Presto</th><th>Trident</th><th>WebKit</th></tr>
+			</thead>
+			<tbody>
+				<tr><td>polyfill-library</td><td>28 - 70</td><td>>= 12</td><td>1.7 - 64</td><td>>= 1</td><td>>= 5.0</td><td>>= 85</td></tr>
+				<tr><td>native</td><td>71</td><td>-</td><td>65</td><td>-</td><td>-</td><td>610.1.28</td></tr>
+			</tbody>
+		</table>
 		
 	
 		<h3 id="JSON" class="compat-table-header"><a href="#JSON">JSON</a></h3>
@@ -1305,7 +1996,7 @@ No support for <code>smooth</code> behavior or <code>center</code> options.">5 �
 			</thead>
 			<tbody>
 				<tr><td><span title="JSON">polyfill-library</span></td><td>-</td><td>-</td><td>-</td><td>< 3.5</td><td>6 - 7</td><td>8.54 - 10.4</td><td>< 4</td><td>-</td></tr>
-				<tr><td><span title="JSON">native</span></td><td>18</td><td>3</td><td>12</td><td>3.5</td><td>8</td><td>10.5</td><td>4</td><td>4</td></tr>
+				<tr><td><span title="JSON">native</span></td><td>≤37</td><td>3</td><td>12</td><td>3.5</td><td>8</td><td>10.5</td><td>4</td><td>4</td></tr>
 			</tbody>
 		</table>
 
@@ -1313,6 +2004,16 @@ No support for <code>smooth</code> behavior or <code>center</code> options.">5 �
 			
 			
 		</div>
+
+		<table class="compat-table">
+			<thead>
+				<tr><th></th><th>Blink</th><th>EdgeHTML</th><th>Gecko</th><th>Presto</th><th>Trident</th><th>WebKit</th></tr>
+			</thead>
+			<tbody>
+				<tr><td>polyfill-library</td><td>-</td><td>-</td><td>1.7 - 1.9</td><td>2 - 2.2</td><td>-</td><td>85 - 525.26</td></tr>
+				<tr><td>native</td><td>-</td><td>12</td><td>1.9.1</td><td>2.5</td><td>4.0</td><td>533.17</td></tr>
+			</tbody>
+		</table>
 		
 	
 		<h3 id="Location.origin" class="compat-table-header"><a href="#Location.origin">Location.origin</a></h3>
@@ -1323,7 +2024,7 @@ No support for <code>smooth</code> behavior or <code>center</code> options.">5 �
 			</thead>
 			<tbody>
 				<tr><td><span title="location.origin">polyfill-library</span></td><td>-</td><td><29.0.0</td><td>-</td><td><=20</td><td>6 - 10</td><td>-</td><td><=6</td><td><=6</td></tr>
-				<tr><td><span title="Location.origin">native</span></td><td>18</td><td>8</td><td>12</td><td><span title="Before Firefox 49, results for URL using the blob scheme incorrectly returned null.">21 ⓘ</span></td><td><span title="Intranet sites are set to Compatibility View, which will emulate IE7 and omit <code>window.location.origin</code>.">11 ⓘ</span></td><td>15</td><td>5.1</td><td>5</td></tr>
+				<tr><td><span title="Location.origin">native</span></td><td>≤37</td><td>8</td><td>12</td><td><span title="Before Firefox 49, results for URL using the blob scheme incorrectly returned null.">21 ⓘ</span></td><td><span title="Intranet sites are set to Compatibility View, which will emulate IE7 and omit <code>window.location.origin</code>.">11 ⓘ</span></td><td>15</td><td>5.1</td><td>5</td></tr>
 			</tbody>
 		</table>
 
@@ -1331,6 +2032,16 @@ No support for <code>smooth</code> behavior or <code>center</code> options.">5 �
 			<h3>mdn notes : </h3><p>firefox 21 : Before Firefox 49, results for URL using the blob scheme incorrectly returned null.</p><p>ie 11 : Intranet sites are set to Compatibility View, which will emulate IE7 and omit <code>window.location.origin</code>.</p>
 			
 		</div>
+
+		<table class="compat-table">
+			<thead>
+				<tr><th></th><th>Blink</th><th>EdgeHTML</th><th>Gecko</th><th>Presto</th><th>Trident</th><th>WebKit</th></tr>
+			</thead>
+			<tbody>
+				<tr><td>polyfill-library</td><td>28 - 28</td><td>-</td><td>1.7 - 20</td><td>-</td><td>4.0 - 6.0</td><td>85 - 537.43</td></tr>
+				<tr><td>native</td><td>-</td><td>12</td><td>21</td><td>-</td><td>7.0</td><td>534.48</td></tr>
+			</tbody>
+		</table>
 		
 	
 		<h3 id="MutationObserver" class="compat-table-header"><a href="#MutationObserver">MutationObserver</a></h3>
@@ -1341,7 +2052,7 @@ No support for <code>smooth</code> behavior or <code>center</code> options.">5 �
 			</thead>
 			<tbody>
 				<tr><td><span title="MutationObserver">polyfill-library</span></td><td><4.4</td><td><26</td><td><12</td><td><14</td><td><11</td><td><15</td><td><6</td><td><7</td></tr>
-				<tr><td><span title="MutationObserver">native</span></td><td><span>26</span><br><span>18</span> - <span style="color:red;">26</span></td><td><span>26</span><br><span>18</span> - <span style="color:red;">26</span></td><td>12</td><td>14</td><td>11</td><td>15</td><td><span>7</span><br><span>6</span> - <span style="color:red;">7</span></td><td><span>7</span><br><span>6</span> - <span style="color:red;">7</span></td></tr>
+				<tr><td><span title="MutationObserver">native</span></td><td><span>≤37</span><br><span>≤37</span> - <span style="color:red;">≤37</span></td><td><span>26</span><br><span>18</span> - <span style="color:red;">26</span></td><td>12</td><td>14</td><td>11</td><td>15</td><td><span>7</span><br><span>6</span> - <span style="color:red;">7</span></td><td><span>7</span><br><span>6</span> - <span style="color:red;">7</span></td></tr>
 			</tbody>
 		</table>
 
@@ -1349,6 +2060,16 @@ No support for <code>smooth</code> behavior or <code>center</code> options.">5 �
 			
 			
 		</div>
+
+		<table class="compat-table">
+			<thead>
+				<tr><th></th><th>Blink</th><th>EdgeHTML</th><th>Gecko</th><th>Presto</th><th>Trident</th><th>WebKit</th></tr>
+			</thead>
+			<tbody>
+				<tr><td>polyfill-library</td><td>-</td><td>-</td><td>1.7 - 13</td><td>>= 1</td><td>4.0 - 6.0</td><td>85 - 536.26</td></tr>
+				<tr><td>native</td><td>-</td><td>12</td><td>14</td><td>-</td><td>7.0</td><td>537.43</td></tr>
+			</tbody>
+		</table>
 		
 	
 		<h3 id="Navigator.geolocation" class="compat-table-header"><a href="#Navigator.geolocation">Navigator.geolocation</a></h3>
@@ -1359,7 +2080,7 @@ No support for <code>smooth</code> behavior or <code>center</code> options.">5 �
 			</thead>
 			<tbody>
 				<tr><td><span title="navigator.geolocation">polyfill-library</span></td><td>-</td><td>-</td><td>-</td><td>-</td><td><9</td><td>15</td><td>4</td><td>-</td></tr>
-				<tr><td><span title="Navigator.geolocation">native</span></td><td>18</td><td>5</td><td>12</td><td>3.5</td><td>9</td><td>10.6</td><td>5</td><td>4.2</td></tr>
+				<tr><td><span title="Navigator.geolocation">native</span></td><td>≤37</td><td>5</td><td>12</td><td>3.5</td><td>9</td><td>10.6</td><td>5</td><td>4.2</td></tr>
 			</tbody>
 		</table>
 
@@ -1367,6 +2088,16 @@ No support for <code>smooth</code> behavior or <code>center</code> options.">5 �
 			
 			
 		</div>
+
+		<table class="compat-table">
+			<thead>
+				<tr><th></th><th>Blink</th><th>EdgeHTML</th><th>Gecko</th><th>Presto</th><th>Trident</th><th>WebKit</th></tr>
+			</thead>
+			<tbody>
+				<tr><td>polyfill-library</td><td>-</td><td>-</td><td>-</td><td>-</td><td>4.0 - 4.0</td><td>530.17 - 530.17</td></tr>
+				<tr><td>native</td><td>-</td><td>12</td><td>1.9.1</td><td>2.6</td><td>5.0</td><td>534.48</td></tr>
+			</tbody>
+		</table>
 		
 	
 		<h3 id="Navigator.prototype.geolocation" class="compat-table-header"><a href="#Navigator.prototype.geolocation">Navigator.prototype.geolocation</a></h3>
@@ -1377,7 +2108,7 @@ No support for <code>smooth</code> behavior or <code>center</code> options.">5 �
 			</thead>
 			<tbody>
 				<tr><td><span title="navigator.geolocation">polyfill-library</span></td><td>-</td><td>-</td><td>-</td><td>-</td><td><9</td><td>15</td><td>4</td><td>-</td></tr>
-				<tr><td><span title="Navigator.prototype.geolocation">native</span></td><td>18</td><td>5</td><td>12</td><td>3.5</td><td>9</td><td>10.6</td><td>5</td><td>4.2</td></tr>
+				<tr><td><span title="Navigator.prototype.geolocation">native</span></td><td>≤37</td><td>5</td><td>12</td><td>3.5</td><td>9</td><td>10.6</td><td>5</td><td>4.2</td></tr>
 			</tbody>
 		</table>
 
@@ -1385,6 +2116,16 @@ No support for <code>smooth</code> behavior or <code>center</code> options.">5 �
 			
 			
 		</div>
+
+		<table class="compat-table">
+			<thead>
+				<tr><th></th><th>Blink</th><th>EdgeHTML</th><th>Gecko</th><th>Presto</th><th>Trident</th><th>WebKit</th></tr>
+			</thead>
+			<tbody>
+				<tr><td>polyfill-library</td><td>-</td><td>-</td><td>-</td><td>-</td><td>4.0 - 4.0</td><td>530.17 - 530.17</td></tr>
+				<tr><td>native</td><td>-</td><td>12</td><td>1.9.1</td><td>2.6</td><td>5.0</td><td>534.48</td></tr>
+			</tbody>
+		</table>
 		
 	
 		<h3 id="Navigator.sendBeacon" class="compat-table-header"><a href="#Navigator.sendBeacon">Navigator.sendBeacon</a></h3>
@@ -1395,14 +2136,24 @@ No support for <code>smooth</code> behavior or <code>center</code> options.">5 �
 			</thead>
 			<tbody>
 				<tr><td><span title="navigator.sendBeacon">polyfill-library</span></td><td><5</td><td><39</td><td><14</td><td><31</td><td>*</td><td><26</td><td><11.1</td><td><11.3</td></tr>
-				<tr><td><span title="Navigator.sendBeacon">native</span></td><td><span title="Starting in Chrome 59, this method cannot send a <code>Blob</code> whose type is not CORS safelisted. This is a temporary change until a mitigation can be found for the security issues that this creates. For more information see <a href='https://crbug.com/720283'>Chrome bug 720283</a>.">42 ⓘ</span></td><td><span title="Starting in Chrome 59, this method cannot send a <code>Blob</code> whose type is not CORS safelisted. This is a temporary change until a mitigation can be found for the security issues that this creates. For more information see <a href='https://crbug.com/720283'>Chrome bug 720283</a>.">39 ⓘ</span></td><td>14</td><td>31</td><td>-</td><td><span title="Starting in Opera 46, this method cannot send a <code>Blob</code> whose type is not CORS safelisted. This is a temporary change until a mitigation can be found for the security issues that this creates. For more information see <a href='https://crbug.com/720283'>Chrome bug 720283</a>.">26 ⓘ</span></td><td>11.1</td><td>11.3</td></tr>
+				<tr><td><span title="Navigator.sendBeacon">native</span></td><td><span title="Starting in Chrome 59, this method cannot send a <code>Blob</code> whose type is not CORS safelisted. This is a temporary change until a mitigation can be found for the security issues that this creates. For more information see <a href='https://crbug.com/720283'>Chrome bug 720283</a>.">40 ⓘ</span></td><td><span title="Starting in Chrome 59, this method cannot send a <code>Blob</code> whose type is not CORS safelisted. This is a temporary change until a mitigation can be found for the security issues that this creates. For more information see <a href='https://crbug.com/720283'>Chrome bug 720283</a>.">39 ⓘ</span></td><td>14</td><td>31</td><td>-</td><td><span title="Starting in Opera 46, this method cannot send a <code>Blob</code> whose type is not CORS safelisted. This is a temporary change until a mitigation can be found for the security issues that this creates. For more information see <a href='https://crbug.com/720283'>Chrome bug 720283</a>.">26 ⓘ</span></td><td>11.1</td><td>11.3</td></tr>
 			</tbody>
 		</table>
 
 		<div class="compat-table-notes">
-			<h3>mdn notes : </h3><p>android 42 : Starting in Chrome 59, this method cannot send a <code>Blob</code> whose type is not CORS safelisted. This is a temporary change until a mitigation can be found for the security issues that this creates. For more information see <a href='https://crbug.com/720283'>Chrome bug 720283</a>.</p><p>chrome 39 : Starting in Chrome 59, this method cannot send a <code>Blob</code> whose type is not CORS safelisted. This is a temporary change until a mitigation can be found for the security issues that this creates. For more information see <a href='https://crbug.com/720283'>Chrome bug 720283</a>.</p><p>opera 26 : Starting in Opera 46, this method cannot send a <code>Blob</code> whose type is not CORS safelisted. This is a temporary change until a mitigation can be found for the security issues that this creates. For more information see <a href='https://crbug.com/720283'>Chrome bug 720283</a>.</p>
+			<h3>mdn notes : </h3><p>android 40 : Starting in Chrome 59, this method cannot send a <code>Blob</code> whose type is not CORS safelisted. This is a temporary change until a mitigation can be found for the security issues that this creates. For more information see <a href='https://crbug.com/720283'>Chrome bug 720283</a>.</p><p>chrome 39 : Starting in Chrome 59, this method cannot send a <code>Blob</code> whose type is not CORS safelisted. This is a temporary change until a mitigation can be found for the security issues that this creates. For more information see <a href='https://crbug.com/720283'>Chrome bug 720283</a>.</p><p>opera 26 : Starting in Opera 46, this method cannot send a <code>Blob</code> whose type is not CORS safelisted. This is a temporary change until a mitigation can be found for the security issues that this creates. For more information see <a href='https://crbug.com/720283'>Chrome bug 720283</a>.</p>
 			
 		</div>
+
+		<table class="compat-table">
+			<thead>
+				<tr><th></th><th>Blink</th><th>EdgeHTML</th><th>Gecko</th><th>Presto</th><th>Trident</th><th>WebKit</th></tr>
+			</thead>
+			<tbody>
+				<tr><td>polyfill-library</td><td>28 - 38</td><td>12 - 13</td><td>1.7 - 30</td><td>>= 1</td><td>>= 4.0</td><td>85 - 604.2.4</td></tr>
+				<tr><td>native</td><td>39</td><td>14</td><td>31</td><td>-</td><td>-</td><td>605.1.33</td></tr>
+			</tbody>
+		</table>
 		
 	
 		<h3 id="Node.prototype.contains" class="compat-table-header"><a href="#Node.prototype.contains">Node.prototype.contains</a></h3>
@@ -1413,7 +2164,7 @@ No support for <code>smooth</code> behavior or <code>center</code> options.">5 �
 			</thead>
 			<tbody>
 				<tr><td><span title="Node.prototype.contains">polyfill-library</span></td><td>-</td><td>-</td><td><14</td><td>* - 8</td><td>*</td><td>-</td><td>* - 2</td><td>-</td></tr>
-				<tr><td><span title="Node.prototype.contains">native</span></td><td>18</td><td>16</td><td>12</td><td>9</td><td><span title="Only supported for <a href='https://developer.mozilla.org/docs/Web/API/HTMLElement'><code>HTMLElement</code></a>, not all <code>Node</code> objects.">9 ⓘ</span></td><td>7</td><td>1.1</td><td>1</td></tr>
+				<tr><td><span title="Node.prototype.contains">native</span></td><td>≤37</td><td>16</td><td>12</td><td>9</td><td><span title="Only supported for <a href='https://developer.mozilla.org/docs/Web/API/HTMLElement'><code>HTMLElement</code></a>, not all <code>Node</code> objects.">9 ⓘ</span></td><td>7</td><td>1.1</td><td>1</td></tr>
 			</tbody>
 		</table>
 
@@ -1421,6 +2172,16 @@ No support for <code>smooth</code> behavior or <code>center</code> options.">5 �
 			<h3>mdn notes : </h3><p>ie 9 : Only supported for <a href='https://developer.mozilla.org/docs/Web/API/HTMLElement'><code>HTMLElement</code></a>, not all <code>Node</code> objects.</p>
 			
 		</div>
+
+		<table class="compat-table">
+			<thead>
+				<tr><th></th><th>Blink</th><th>EdgeHTML</th><th>Gecko</th><th>Presto</th><th>Trident</th><th>WebKit</th></tr>
+			</thead>
+			<tbody>
+				<tr><td>polyfill-library</td><td>-</td><td>12 - 13</td><td>1.7 - 8</td><td>-</td><td>>= 4.0</td><td>85 - 412</td></tr>
+				<tr><td>native</td><td>-</td><td>12</td><td>9</td><td>1</td><td>5.0</td><td>522.11</td></tr>
+			</tbody>
+		</table>
 		
 	
 		<h3 id="NodeList.prototype.forEach" class="compat-table-header"><a href="#NodeList.prototype.forEach">NodeList.prototype.forEach</a></h3>
@@ -1439,6 +2200,16 @@ No support for <code>smooth</code> behavior or <code>center</code> options.">5 �
 			
 			
 		</div>
+
+		<table class="compat-table">
+			<thead>
+				<tr><th></th><th>Blink</th><th>EdgeHTML</th><th>Gecko</th><th>Presto</th><th>Trident</th><th>WebKit</th></tr>
+			</thead>
+			<tbody>
+				<tr><td>polyfill-library</td><td>28 - 50</td><td>12 - 15</td><td>1.7 - 49</td><td>>= 1</td><td>>= 4.0</td><td>85 - 601.5.17</td></tr>
+				<tr><td>native</td><td>51</td><td>16</td><td>50</td><td>-</td><td>-</td><td>603.2.1</td></tr>
+			</tbody>
+		</table>
 		
 	
 		<h3 id="Performance.now" class="compat-table-header"><a href="#Performance.now">Performance.now</a></h3>
@@ -1449,7 +2220,7 @@ No support for <code>smooth</code> behavior or <code>center</code> options.">5 �
 			</thead>
 			<tbody>
 				<tr><td><span title="performance.now">polyfill-library</span></td><td><=4.3</td><td><24</td><td>-</td><td><15</td><td><10</td><td><15</td><td><8</td><td><9</td></tr>
-				<tr><td><span title="Performance.now">native</span></td><td>25</td><td><span>24</span><br><span>21</span> - <span style="color:red;">24</span></td><td>12</td><td><span title="In Firefox 57.0.4 the accuracy was reduced to 20 microseconds.
+				<tr><td><span title="Performance.now">native</span></td><td>true</td><td><span>24</span><br><span>21</span> - <span style="color:red;">24</span></td><td>12</td><td><span title="In Firefox 57.0.4 the accuracy was reduced to 20 microseconds.
 In Firefox 59 the accuracy was reduced to 2 milliseconds.
 In Firefox 60 the accuracy was increased to 1 millisecond.">15 ⓘ</span></td><td>10</td><td>15</td><td>8</td><td>9</td></tr>
 			</tbody>
@@ -1459,6 +2230,16 @@ In Firefox 60 the accuracy was increased to 1 millisecond.">15 ⓘ</span></td><t
 			<h3>mdn notes : </h3><p>firefox 15 : In Firefox 57.0.4 the accuracy was reduced to 20 microseconds.</p><p>firefox 15 : In Firefox 59 the accuracy was reduced to 2 milliseconds.</p><p>firefox 15 : In Firefox 60 the accuracy was increased to 1 millisecond.</p>
 			
 		</div>
+
+		<table class="compat-table">
+			<thead>
+				<tr><th></th><th>Blink</th><th>EdgeHTML</th><th>Gecko</th><th>Presto</th><th>Trident</th><th>WebKit</th></tr>
+			</thead>
+			<tbody>
+				<tr><td>polyfill-library</td><td>-</td><td>-</td><td>1.7 - 14</td><td>>= 1</td><td>4.0 - 5.0</td><td>85 - 600.1.4</td></tr>
+				<tr><td>native</td><td>-</td><td>12</td><td>15</td><td>-</td><td>6.0</td><td>601.5.17</td></tr>
+			</tbody>
+		</table>
 		
 	
 		<h3 id="queueMicrotask" class="compat-table-header"><a href="#queueMicrotask">queueMicrotask</a></h3>
@@ -1477,6 +2258,16 @@ In Firefox 60 the accuracy was increased to 1 millisecond.">15 ⓘ</span></td><t
 			
 			
 		</div>
+
+		<table class="compat-table">
+			<thead>
+				<tr><th></th><th>Blink</th><th>EdgeHTML</th><th>Gecko</th><th>Presto</th><th>Trident</th><th>WebKit</th></tr>
+			</thead>
+			<tbody>
+				<tr><td>polyfill-library</td><td>28 - 70</td><td>>= 12</td><td>1.7 - 68</td><td>>= 1</td><td>>= 4.0</td><td>85 - 606.1.36</td></tr>
+				<tr><td>native</td><td>71</td><td>-</td><td>69</td><td>-</td><td>-</td><td>607.1.40</td></tr>
+			</tbody>
+		</table>
 		
 	
 		<h3 id="ResizeObserver" class="compat-table-header"><a href="#ResizeObserver">ResizeObserver</a></h3>
@@ -1495,6 +2286,16 @@ In Firefox 60 the accuracy was increased to 1 millisecond.">15 ⓘ</span></td><t
 			
 			
 		</div>
+
+		<table class="compat-table">
+			<thead>
+				<tr><th></th><th>Blink</th><th>EdgeHTML</th><th>Gecko</th><th>Presto</th><th>Trident</th><th>WebKit</th></tr>
+			</thead>
+			<tbody>
+				<tr><td>polyfill-library</td><td>28 - 63</td><td>>= 12</td><td>1.7 - 68</td><td>>= 1</td><td>>= 5.0</td><td>>= 85</td></tr>
+				<tr><td>native</td><td>64</td><td>-</td><td>69</td><td>-</td><td>-</td><td>609.1.20</td></tr>
+			</tbody>
+		</table>
 		
 	
 		<h3 id="Screen.orientation" class="compat-table-header"><a href="#Screen.orientation">Screen.orientation</a></h3>
@@ -1505,14 +2306,24 @@ In Firefox 60 the accuracy was increased to 1 millisecond.">15 ⓘ</span></td><t
 			</thead>
 			<tbody>
 				<tr><td><span title="screen.orientation">polyfill-library</span></td><td><5</td><td><49</td><td><79</td><td><30</td><td>9 - *</td><td><25</td><td>*</td><td>*</td></tr>
-				<tr><td><span title="Screen.orientation">native</span></td><td>39</td><td>38</td><td><span title="Edge does not return an <code>Orientation</code> object; instead, it returns the orientation type as a string.">12 ⓘ</span></td><td><span>43</span><br><span>true</span></td><td><span title="Not supported on Windows 7.">11 ⓘ</span></td><td>25</td><td>-</td><td>-</td></tr>
+				<tr><td><span title="Screen.orientation">native</span></td><td>-</td><td>38</td><td><span title="Edge does not return an <code>Orientation</code> object; instead, it returns the orientation type as a string.">12 ⓘ</span></td><td><span>43</span><br><span>true</span></td><td><span title="Not supported on Windows 7.">11 ⓘ</span></td><td>25</td><td>-</td><td>-</td></tr>
 			</tbody>
 		</table>
 
 		<div class="compat-table-notes">
 			<h3>mdn notes : </h3><p>edge 12 : Edge does not return an <code>Orientation</code> object; instead, it returns the orientation type as a string.</p><p>ie 11 : Not supported on Windows 7.</p>
-			<h3>polyfill-library notes : </h3><p>In IE <= 8 window.screen is read-only, so the orientation property is not definable</p>
+			
 		</div>
+
+		<table class="compat-table">
+			<thead>
+				<tr><th></th><th>Blink</th><th>EdgeHTML</th><th>Gecko</th><th>Presto</th><th>Trident</th><th>WebKit</th></tr>
+			</thead>
+			<tbody>
+				<tr><td>polyfill-library</td><td>28 - 48</td><td>>= 12</td><td>1.7 - 29</td><td>>= 1</td><td>>= 5.0</td><td>>= 85</td></tr>
+				<tr><td>native</td><td>38</td><td>12</td><td>-</td><td>-</td><td>7.0</td><td>-</td></tr>
+			</tbody>
+		</table>
 		
 	
 		<h3 id="TextDecoder" class="compat-table-header"><a href="#TextDecoder">TextDecoder</a></h3>
@@ -1531,6 +2342,16 @@ In Firefox 60 the accuracy was increased to 1 millisecond.">15 ⓘ</span></td><t
 			<h3>mdn notes : </h3><p>firefox 18 : Implemented a slightly different version of the spec.</p>
 			
 		</div>
+
+		<table class="compat-table">
+			<thead>
+				<tr><th></th><th>Blink</th><th>EdgeHTML</th><th>Gecko</th><th>Presto</th><th>Trident</th><th>WebKit</th></tr>
+			</thead>
+			<tbody>
+				<tr><td>polyfill-library</td><td>28 - 37</td><td>>= 12</td><td>1.7 - 18</td><td>>= 1</td><td>>= 4.0</td><td>85 - 602.1.50</td></tr>
+				<tr><td>native</td><td>38</td><td>-</td><td>18</td><td>-</td><td>-</td><td>603.2.1</td></tr>
+			</tbody>
+		</table>
 		
 	
 		<h3 id="TextEncoder" class="compat-table-header"><a href="#TextEncoder">TextEncoder</a></h3>
@@ -1549,6 +2370,16 @@ In Firefox 60 the accuracy was increased to 1 millisecond.">15 ⓘ</span></td><t
 			<h3>mdn notes : </h3><p>firefox 18 : Firefox 18 implemented an earlier and slightly different version of the specification.</p>
 			
 		</div>
+
+		<table class="compat-table">
+			<thead>
+				<tr><th></th><th>Blink</th><th>EdgeHTML</th><th>Gecko</th><th>Presto</th><th>Trident</th><th>WebKit</th></tr>
+			</thead>
+			<tbody>
+				<tr><td>polyfill-library</td><td>28 - 37</td><td>>= 12</td><td>1.7 - 18</td><td>>= 1</td><td>>= 4.0</td><td>85 - 602.1.50</td></tr>
+				<tr><td>native</td><td>38</td><td>-</td><td>18</td><td>-</td><td>-</td><td>603.2.1</td></tr>
+			</tbody>
+		</table>
 		
 	
 		<h3 id="URL" class="compat-table-header"><a href="#URL">URL</a></h3>
@@ -1559,15 +2390,25 @@ In Firefox 60 the accuracy was increased to 1 millisecond.">15 ⓘ</span></td><t
 			</thead>
 			<tbody>
 				<tr><td><span title="URL">polyfill-library</span></td><td>*</td><td><60</td><td><18.17134</td><td><44</td><td>9 - *</td><td><36</td><td><12</td><td><12</td></tr>
-				<tr><td><span title="URL">native</span></td><td><span>32</span><br><span>25</span></td><td><span>32</span><br><span>19</span></td><td>12</td><td><span title="Before version 57, Firefox had a bug whereby single quotes contained in URLs are escaped when accessed via URL APIs (see <a href='https://bugzil.la/1386683'>bug 1386683</a>).
+				<tr><td><span title="URL">native</span></td><td><span>4.4</span><br><span>4</span></td><td><span>32</span><br><span>19</span></td><td>12</td><td><span title="Before version 57, Firefox had a bug whereby single quotes contained in URLs are escaped when accessed via URL APIs (see <a href='https://bugzil.la/1386683'>bug 1386683</a>).
 To use it from chrome code, JSM and Bootstrap scope, you have to import it with <code>Cu.importGlobalProperties(['URL']);</code>.">19 ⓘ</span></td><td>10</td><td><span>19</span><br><span>15</span></td><td><span>7</span><br><span>6</span></td><td><span>7</span><br><span>6</span></td></tr>
 			</tbody>
 		</table>
 
 		<div class="compat-table-notes">
 			<h3>mdn notes : </h3><p>firefox 19 : Before version 57, Firefox had a bug whereby single quotes contained in URLs are escaped when accessed via URL APIs (see <a href='https://bugzil.la/1386683'>bug 1386683</a>).</p><p>firefox 19 : To use it from chrome code, JSM and Bootstrap scope, you have to import it with <code>Cu.importGlobalProperties(['URL']);</code>.</p>
-			<h3>polyfill-library notes : </h3><p>Polyfill requires Object getters so fails in IE < 8</p>
+			
 		</div>
+
+		<table class="compat-table">
+			<thead>
+				<tr><th></th><th>Blink</th><th>EdgeHTML</th><th>Gecko</th><th>Presto</th><th>Trident</th><th>WebKit</th></tr>
+			</thead>
+			<tbody>
+				<tr><td>polyfill-library</td><td>28 - 59</td><td>>= 12</td><td>1.7 - 43</td><td>>= 1</td><td>>= 5.0</td><td>85 - 605.1.33</td></tr>
+				<tr><td>native</td><td>-</td><td>12</td><td>19</td><td>-</td><td>6.0</td><td>537.43</td></tr>
+			</tbody>
+		</table>
 		
 	
 		<h3 id="URLSearchParams" class="compat-table-header"><a href="#URLSearchParams">URLSearchParams</a></h3>
@@ -1584,8 +2425,18 @@ To use it from chrome code, JSM and Bootstrap scope, you have to import it with 
 
 		<div class="compat-table-notes">
 			<h3>mdn notes : </h3><p>firefox 29 : Prior to version 57 single quotes in URLs were escaped (see <a href='https://bugzil.la/1386683'>bug 1386683</a>).</p>
-			<h3>polyfill-library notes : </h3><p>Polyfill requires Object getters so fails in IE < 8</p>
+			
 		</div>
+
+		<table class="compat-table">
+			<thead>
+				<tr><th></th><th>Blink</th><th>EdgeHTML</th><th>Gecko</th><th>Presto</th><th>Trident</th><th>WebKit</th></tr>
+			</thead>
+			<tbody>
+				<tr><td>polyfill-library</td><td>28 - 59</td><td>>= 12</td><td>1.7 - 43</td><td>>= 1</td><td>>= 5.0</td><td>85 - 605.1.33</td></tr>
+				<tr><td>native</td><td>49</td><td>17</td><td>29</td><td>-</td><td>-</td><td>603.2.1</td></tr>
+			</tbody>
+		</table>
 		
 	
 		<h3 id="Window" class="compat-table-header"><a href="#Window">Window</a></h3>
@@ -1596,7 +2447,7 @@ To use it from chrome code, JSM and Bootstrap scope, you have to import it with 
 			</thead>
 			<tbody>
 				<tr><td><span title="Window">polyfill-library</span></td><td>-</td><td>14 - 18</td><td>-</td><td>-</td><td>6 - 7</td><td>10 - 11.6</td><td>4 - 5.1</td><td>-</td></tr>
-				<tr><td><span title="Window">native</span></td><td>18</td><td>1</td><td>12</td><td>1</td><td>4</td><td>3</td><td>1</td><td>1</td></tr>
+				<tr><td><span title="Window">native</span></td><td>1</td><td>1</td><td>12</td><td>1</td><td>4</td><td>3</td><td>1</td><td>1</td></tr>
 			</tbody>
 		</table>
 
@@ -1604,6 +2455,16 @@ To use it from chrome code, JSM and Bootstrap scope, you have to import it with 
 			
 			
 		</div>
+
+		<table class="compat-table">
+			<thead>
+				<tr><th></th><th>Blink</th><th>EdgeHTML</th><th>Gecko</th><th>Presto</th><th>Trident</th><th>WebKit</th></tr>
+			</thead>
+			<tbody>
+				<tr><td>polyfill-library</td><td>-</td><td>-</td><td>-</td><td>2.2 - 2.10</td><td>-</td><td>530.17 - 534.48</td></tr>
+				<tr><td>native</td><td>-</td><td>12</td><td>1.8</td><td>-</td><td>-</td><td>522.11</td></tr>
+			</tbody>
+		</table>
 		
 	
 		<h3 id="Window.customElements" class="compat-table-header"><a href="#Window.customElements">Window.customElements</a></h3>
@@ -1622,6 +2483,16 @@ To use it from chrome code, JSM and Bootstrap scope, you have to import it with 
 			
 			
 		</div>
+
+		<table class="compat-table">
+			<thead>
+				<tr><th></th><th>Blink</th><th>EdgeHTML</th><th>Gecko</th><th>Presto</th><th>Trident</th><th>WebKit</th></tr>
+			</thead>
+			<tbody>
+				<tr><td>polyfill-library</td><td>28 - 66</td><td>>= 12</td><td>1.7 - 62</td><td>>= 1</td><td>>= 4.0</td><td>85 - 603.2.1</td></tr>
+				<tr><td>native</td><td>54</td><td>-</td><td>-</td><td>-</td><td>-</td><td>603.2.1</td></tr>
+			</tbody>
+		</table>
 		
 	
 		<h3 id="Window.devicePixelRatio" class="compat-table-header"><a href="#Window.devicePixelRatio">Window.devicePixelRatio</a></h3>
@@ -1632,14 +2503,24 @@ To use it from chrome code, JSM and Bootstrap scope, you have to import it with 
 			</thead>
 			<tbody>
 				<tr><td><span title="devicePixelRatio">polyfill-library</span></td><td>-</td><td>-</td><td>-</td><td><=17</td><td>6 - 10</td><td>-</td><td>4 - 9.1</td><td><9.3</td></tr>
-				<tr><td><span title="Window.devicePixelRatio">native</span></td><td>18</td><td>1</td><td>12</td><td>18</td><td>11</td><td>11.1</td><td>3</td><td>1</td></tr>
+				<tr><td><span title="Window.devicePixelRatio">native</span></td><td>1</td><td>1</td><td>12</td><td>18</td><td>11</td><td>11.1</td><td>3</td><td>1</td></tr>
 			</tbody>
 		</table>
 
 		<div class="compat-table-notes">
 			
-			<h3>polyfill-library notes : </h3><p>This polyfill just sets `devicePixelRatio` to 1 without attempting to measure it.</p><p>Older versions of Firefox are known to incorrectly alter the DPR on user zoom, but we don't (currently) correct for this</p>
+			
 		</div>
+
+		<table class="compat-table">
+			<thead>
+				<tr><th></th><th>Blink</th><th>EdgeHTML</th><th>Gecko</th><th>Presto</th><th>Trident</th><th>WebKit</th></tr>
+			</thead>
+			<tbody>
+				<tr><td>polyfill-library</td><td>-</td><td>-</td><td>1.7 - 17</td><td>-</td><td>4.0 - 6.0</td><td>522.11 - 601.5.17</td></tr>
+				<tr><td>native</td><td>-</td><td>12</td><td>18</td><td>2.8</td><td>7.0</td><td>525.26</td></tr>
+			</tbody>
+		</table>
 		
 	
 		<h3 id="Window.document" class="compat-table-header"><a href="#Window.document">Window.document</a></h3>
@@ -1650,7 +2531,7 @@ To use it from chrome code, JSM and Bootstrap scope, you have to import it with 
 			</thead>
 			<tbody>
 				<tr><td><span title="document">polyfill-library</span></td><td>-</td><td>-</td><td>-</td><td>-</td><td>6 - 8</td><td>-</td><td>-</td><td>-</td></tr>
-				<tr><td><span title="Window.document">native</span></td><td>18</td><td>1</td><td>12</td><td>1</td><td>4</td><td>≤12.1</td><td>1</td><td>1</td></tr>
+				<tr><td><span title="Window.document">native</span></td><td>1</td><td>1</td><td>12</td><td>1</td><td>4</td><td>≤12.1</td><td>1</td><td>1</td></tr>
 			</tbody>
 		</table>
 
@@ -1658,6 +2539,16 @@ To use it from chrome code, JSM and Bootstrap scope, you have to import it with 
 			
 			
 		</div>
+
+		<table class="compat-table">
+			<thead>
+				<tr><th></th><th>Blink</th><th>EdgeHTML</th><th>Gecko</th><th>Presto</th><th>Trident</th><th>WebKit</th></tr>
+			</thead>
+			<tbody>
+				<tr><td>polyfill-library</td><td>-</td><td>-</td><td>-</td><td>-</td><td>4.0 - 4.0</td><td>-</td></tr>
+				<tr><td>native</td><td>-</td><td>12</td><td>1.8</td><td>-</td><td>-</td><td>522.11</td></tr>
+			</tbody>
+		</table>
 		
 	
 		<h3 id="Window.getComputedStyle" class="compat-table-header"><a href="#Window.getComputedStyle">Window.getComputedStyle</a></h3>
@@ -1668,7 +2559,7 @@ To use it from chrome code, JSM and Bootstrap scope, you have to import it with 
 			</thead>
 			<tbody>
 				<tr><td><span title="getComputedStyle">polyfill-library</span></td><td>-</td><td>-</td><td>-</td><td>-</td><td>6 - 8</td><td>-</td><td>-</td><td>-</td></tr>
-				<tr><td><span title="Window.getComputedStyle">native</span></td><td>18</td><td>1</td><td>12</td><td><span title="Before version 62 this function returned <code>null</code> when called on a Window with no presentation (e.g. an iframe with <code>display: none;</code> set). Since 62 it returns a <code>CSSStyleDeclaration</code> object with <code>length</code> 0, containing empty strings (<a href='https://bugzil.la/1467722'>bug 1467722</a>; also see <a href='https://bugzil.la/1471231'>bug 1471231</a> for further work).">1 ⓘ</span></td><td>9</td><td>7.2</td><td>3</td><td>1</td></tr>
+				<tr><td><span title="Window.getComputedStyle">native</span></td><td>1</td><td>1</td><td>12</td><td><span title="Before version 62 this function returned <code>null</code> when called on a Window with no presentation (e.g. an iframe with <code>display: none;</code> set). Since 62 it returns a <code>CSSStyleDeclaration</code> object with <code>length</code> 0, containing empty strings (<a href='https://bugzil.la/1467722'>bug 1467722</a>; also see <a href='https://bugzil.la/1471231'>bug 1471231</a> for further work).">1 ⓘ</span></td><td>9</td><td>7.2</td><td>3</td><td>1</td></tr>
 			</tbody>
 		</table>
 
@@ -1676,6 +2567,16 @@ To use it from chrome code, JSM and Bootstrap scope, you have to import it with 
 			<h3>mdn notes : </h3><p>firefox 1 : Before version 62 this function returned <code>null</code> when called on a Window with no presentation (e.g. an iframe with <code>display: none;</code> set). Since 62 it returns a <code>CSSStyleDeclaration</code> object with <code>length</code> 0, containing empty strings (<a href='https://bugzil.la/1467722'>bug 1467722</a>; also see <a href='https://bugzil.la/1471231'>bug 1471231</a> for further work).</p>
 			
 		</div>
+
+		<table class="compat-table">
+			<thead>
+				<tr><th></th><th>Blink</th><th>EdgeHTML</th><th>Gecko</th><th>Presto</th><th>Trident</th><th>WebKit</th></tr>
+			</thead>
+			<tbody>
+				<tr><td>polyfill-library</td><td>-</td><td>-</td><td>-</td><td>-</td><td>4.0 - 4.0</td><td>-</td></tr>
+				<tr><td>native</td><td>-</td><td>12</td><td>1.8</td><td>1</td><td>5.0</td><td>525.26</td></tr>
+			</tbody>
+		</table>
 		
 	
 		<h3 id="Window.innerHeight" class="compat-table-header"><a href="#Window.innerHeight">Window.innerHeight</a></h3>
@@ -1686,7 +2587,7 @@ To use it from chrome code, JSM and Bootstrap scope, you have to import it with 
 			</thead>
 			<tbody>
 				<tr><td><span title="~viewport">polyfill-library</span></td><td>-</td><td>-</td><td>-</td><td>-</td><td>6 - 8</td><td>-</td><td>-</td><td>-</td></tr>
-				<tr><td><span title="Window.innerHeight">native</span></td><td>18</td><td>1</td><td>12</td><td><span>1</span><br><span title="This property was buggy and could give a wrong value before page load in certain circumstances, see <a href='https://bugzil.la/641188'>bug 641188</a>."><span>4</span> - <span style="color:red;">24</span> ⓘ</span></td><td>9</td><td>9</td><td>3</td><td><span title="This property returns the height of the <a href='https://developer.mozilla.org/docs/Glossary/visual_viewport'>visual viewport</a> instead of the layout viewport. See <a href='https://webkit.org/b/174362'>this bug</a> for details.">1 ⓘ</span></td></tr>
+				<tr><td><span title="Window.innerHeight">native</span></td><td>1</td><td>1</td><td>12</td><td><span>1</span><br><span title="This property was buggy and could give a wrong value before page load in certain circumstances, see <a href='https://bugzil.la/641188'>bug 641188</a>."><span>4</span> - <span style="color:red;">24</span> ⓘ</span></td><td>9</td><td>9</td><td>3</td><td><span title="This property returns the height of the <a href='https://developer.mozilla.org/docs/Glossary/visual_viewport'>visual viewport</a> instead of the layout viewport. See <a href='https://webkit.org/b/174362'>this bug</a> for details.">1 ⓘ</span></td></tr>
 			</tbody>
 		</table>
 
@@ -1694,6 +2595,16 @@ To use it from chrome code, JSM and Bootstrap scope, you have to import it with 
 			<h3>mdn notes : </h3><p>firefox 4 : This property was buggy and could give a wrong value before page load in certain circumstances, see <a href='https://bugzil.la/641188'>bug 641188</a>.</p><p>ios_saf 1 : This property returns the height of the <a href='https://developer.mozilla.org/docs/Glossary/visual_viewport'>visual viewport</a> instead of the layout viewport. See <a href='https://webkit.org/b/174362'>this bug</a> for details.</p>
 			
 		</div>
+
+		<table class="compat-table">
+			<thead>
+				<tr><th></th><th>Blink</th><th>EdgeHTML</th><th>Gecko</th><th>Presto</th><th>Trident</th><th>WebKit</th></tr>
+			</thead>
+			<tbody>
+				<tr><td>polyfill-library</td><td>-</td><td>-</td><td>-</td><td>-</td><td>4.0 - 4.0</td><td>-</td></tr>
+				<tr><td>native</td><td>-</td><td>12</td><td>2</td><td>2.1</td><td>5.0</td><td>525.26</td></tr>
+			</tbody>
+		</table>
 		
 	
 		<h3 id="Window.innerWidth" class="compat-table-header"><a href="#Window.innerWidth">Window.innerWidth</a></h3>
@@ -1704,7 +2615,7 @@ To use it from chrome code, JSM and Bootstrap scope, you have to import it with 
 			</thead>
 			<tbody>
 				<tr><td><span title="~viewport">polyfill-library</span></td><td>-</td><td>-</td><td>-</td><td>-</td><td>6 - 8</td><td>-</td><td>-</td><td>-</td></tr>
-				<tr><td><span title="Window.innerWidth">native</span></td><td>18</td><td>1</td><td>12</td><td><span>1</span><br><span title="This property was buggy and could give a wrong value before page load in certain circumstances, see <a href='https://bugzil.la/641188'>bug 641188</a>."><span>4</span> - <span style="color:red;">24</span> ⓘ</span></td><td>9</td><td>9</td><td>3</td><td><span title="This property returns the width of the <a href='https://developer.mozilla.org/docs/Glossary/visual_viewport'>visual viewport</a> instead of the layout viewport. See <a href='https://webkit.org/b/174362'>this bug</a> for details.">1 ⓘ</span></td></tr>
+				<tr><td><span title="Window.innerWidth">native</span></td><td>1</td><td>1</td><td>12</td><td><span>1</span><br><span title="This property was buggy and could give a wrong value before page load in certain circumstances, see <a href='https://bugzil.la/641188'>bug 641188</a>."><span>4</span> - <span style="color:red;">24</span> ⓘ</span></td><td>9</td><td>9</td><td>3</td><td><span title="This property returns the width of the <a href='https://developer.mozilla.org/docs/Glossary/visual_viewport'>visual viewport</a> instead of the layout viewport. See <a href='https://webkit.org/b/174362'>this bug</a> for details.">1 ⓘ</span></td></tr>
 			</tbody>
 		</table>
 
@@ -1712,6 +2623,16 @@ To use it from chrome code, JSM and Bootstrap scope, you have to import it with 
 			<h3>mdn notes : </h3><p>firefox 4 : This property was buggy and could give a wrong value before page load in certain circumstances, see <a href='https://bugzil.la/641188'>bug 641188</a>.</p><p>ios_saf 1 : This property returns the width of the <a href='https://developer.mozilla.org/docs/Glossary/visual_viewport'>visual viewport</a> instead of the layout viewport. See <a href='https://webkit.org/b/174362'>this bug</a> for details.</p>
 			
 		</div>
+
+		<table class="compat-table">
+			<thead>
+				<tr><th></th><th>Blink</th><th>EdgeHTML</th><th>Gecko</th><th>Presto</th><th>Trident</th><th>WebKit</th></tr>
+			</thead>
+			<tbody>
+				<tr><td>polyfill-library</td><td>-</td><td>-</td><td>-</td><td>-</td><td>4.0 - 4.0</td><td>-</td></tr>
+				<tr><td>native</td><td>-</td><td>12</td><td>2</td><td>2.1</td><td>5.0</td><td>525.26</td></tr>
+			</tbody>
+		</table>
 		
 	
 		<h3 id="Window.localStorage" class="compat-table-header"><a href="#Window.localStorage">Window.localStorage</a></h3>
@@ -1722,7 +2643,7 @@ To use it from chrome code, JSM and Bootstrap scope, you have to import it with 
 			</thead>
 			<tbody>
 				<tr><td><span title="localStorage">polyfill-library</span></td><td>-</td><td>-</td><td>-</td><td>-</td><td>6 - 7</td><td>-</td><td>-</td><td>-</td></tr>
-				<tr><td><span title="Window.localStorage">native</span></td><td>18</td><td>4</td><td>12</td><td>3.5</td><td>8</td><td>10.5</td><td>4</td><td>3.2</td></tr>
+				<tr><td><span title="Window.localStorage">native</span></td><td>≤37</td><td>4</td><td>12</td><td>3.5</td><td>8</td><td>10.5</td><td>4</td><td>3.2</td></tr>
 			</tbody>
 		</table>
 
@@ -1730,6 +2651,16 @@ To use it from chrome code, JSM and Bootstrap scope, you have to import it with 
 			
 			
 		</div>
+
+		<table class="compat-table">
+			<thead>
+				<tr><th></th><th>Blink</th><th>EdgeHTML</th><th>Gecko</th><th>Presto</th><th>Trident</th><th>WebKit</th></tr>
+			</thead>
+			<tbody>
+				<tr><td>polyfill-library</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td></tr>
+				<tr><td>native</td><td>-</td><td>12</td><td>1.9.1</td><td>2.5</td><td>4.0</td><td>531.21</td></tr>
+			</tbody>
+		</table>
 		
 	
 		<h3 id="Window.matchMedia" class="compat-table-header"><a href="#Window.matchMedia">Window.matchMedia</a></h3>
@@ -1740,7 +2671,7 @@ To use it from chrome code, JSM and Bootstrap scope, you have to import it with 
 			</thead>
 			<tbody>
 				<tr><td><span title="matchMedia">polyfill-library</span></td><td>2.1 - 2.3</td><td><37</td><td>-</td><td>-</td><td><10</td><td>11.5 - 12.1</td><td>4 - 5</td><td>-</td></tr>
-				<tr><td><span title="Window.matchMedia">native</span></td><td>18</td><td>9</td><td>12</td><td>6</td><td>10</td><td>12.1</td><td>5.1</td><td>5</td></tr>
+				<tr><td><span title="Window.matchMedia">native</span></td><td>≤37</td><td>9</td><td>12</td><td>6</td><td>10</td><td>12.1</td><td>5.1</td><td>5</td></tr>
 			</tbody>
 		</table>
 
@@ -1748,6 +2679,16 @@ To use it from chrome code, JSM and Bootstrap scope, you have to import it with 
 			
 			
 		</div>
+
+		<table class="compat-table">
+			<thead>
+				<tr><th></th><th>Blink</th><th>EdgeHTML</th><th>Gecko</th><th>Presto</th><th>Trident</th><th>WebKit</th></tr>
+			</thead>
+			<tbody>
+				<tr><td>polyfill-library</td><td>28 - 36</td><td>-</td><td>-</td><td>>= 2.9</td><td>4.0 - 5.0</td><td>530.17 - 534.48</td></tr>
+				<tr><td>native</td><td>-</td><td>12</td><td>6</td><td>2.12</td><td>6.0</td><td>534.48</td></tr>
+			</tbody>
+		</table>
 		
 	
 		<h3 id="Window.pageXOffset" class="compat-table-header"><a href="#Window.pageXOffset">Window.pageXOffset</a></h3>
@@ -1758,7 +2699,7 @@ To use it from chrome code, JSM and Bootstrap scope, you have to import it with 
 			</thead>
 			<tbody>
 				<tr><td><span title="~viewport">polyfill-library</span></td><td>-</td><td>-</td><td>-</td><td>-</td><td>6 - 8</td><td>-</td><td>-</td><td>-</td></tr>
-				<tr><td><span title="Window.pageXOffset">native</span></td><td>18</td><td>1</td><td>12</td><td>1</td><td>9</td><td>3</td><td>1</td><td>1</td></tr>
+				<tr><td><span title="Window.pageXOffset">native</span></td><td>1</td><td>1</td><td>12</td><td>1</td><td>9</td><td>3</td><td>1</td><td>1</td></tr>
 			</tbody>
 		</table>
 
@@ -1766,6 +2707,16 @@ To use it from chrome code, JSM and Bootstrap scope, you have to import it with 
 			
 			
 		</div>
+
+		<table class="compat-table">
+			<thead>
+				<tr><th></th><th>Blink</th><th>EdgeHTML</th><th>Gecko</th><th>Presto</th><th>Trident</th><th>WebKit</th></tr>
+			</thead>
+			<tbody>
+				<tr><td>polyfill-library</td><td>-</td><td>-</td><td>-</td><td>-</td><td>4.0 - 4.0</td><td>-</td></tr>
+				<tr><td>native</td><td>-</td><td>12</td><td>1.8</td><td>-</td><td>5.0</td><td>522.11</td></tr>
+			</tbody>
+		</table>
 		
 	
 		<h3 id="Window.pageYOffset" class="compat-table-header"><a href="#Window.pageYOffset">Window.pageYOffset</a></h3>
@@ -1776,7 +2727,7 @@ To use it from chrome code, JSM and Bootstrap scope, you have to import it with 
 			</thead>
 			<tbody>
 				<tr><td><span title="~viewport">polyfill-library</span></td><td>-</td><td>-</td><td>-</td><td>-</td><td>6 - 8</td><td>-</td><td>-</td><td>-</td></tr>
-				<tr><td><span title="Window.pageYOffset">native</span></td><td>18</td><td>1</td><td>12</td><td>1</td><td>9</td><td>3</td><td>1</td><td>1</td></tr>
+				<tr><td><span title="Window.pageYOffset">native</span></td><td>1</td><td>1</td><td>12</td><td>1</td><td>9</td><td>3</td><td>1</td><td>1</td></tr>
 			</tbody>
 		</table>
 
@@ -1784,6 +2735,16 @@ To use it from chrome code, JSM and Bootstrap scope, you have to import it with 
 			
 			
 		</div>
+
+		<table class="compat-table">
+			<thead>
+				<tr><th></th><th>Blink</th><th>EdgeHTML</th><th>Gecko</th><th>Presto</th><th>Trident</th><th>WebKit</th></tr>
+			</thead>
+			<tbody>
+				<tr><td>polyfill-library</td><td>-</td><td>-</td><td>-</td><td>-</td><td>4.0 - 4.0</td><td>-</td></tr>
+				<tr><td>native</td><td>-</td><td>12</td><td>1.8</td><td>-</td><td>5.0</td><td>522.11</td></tr>
+			</tbody>
+		</table>
 		
 	
 		<h3 id="Window.requestAnimationFrame" class="compat-table-header"><a href="#Window.requestAnimationFrame">Window.requestAnimationFrame</a></h3>
@@ -1794,7 +2755,7 @@ To use it from chrome code, JSM and Bootstrap scope, you have to import it with 
 			</thead>
 			<tbody>
 				<tr><td><span title="requestAnimationFrame">polyfill-library</span></td><td>*</td><td><46</td><td>-</td><td>3.6 - 22</td><td>6 - 9</td><td><15</td><td>3.1 - 6</td><td>3.2 - 6</td></tr>
-				<tr><td><span title="Window.requestAnimationFrame">native</span></td><td><span>25</span><br><span>18</span></td><td><span>24</span><br><span>10</span></td><td>12</td><td><span title="Callback parameter is a <code>DOMHighResTimestamp</code>. This means ten microsecond precision and zero time as <code>performance.now()</code>."><span>23</span> ⓘ</span><br><span title="Callback parameter is a <code>DOMTimestamp</code>. This means millisecond precision and zero time as <code>Date.now()</code>."><span>11</span> - <span style="color:red;">42</span> ⓘ</span><br><span title="Could be called with no input parameters."><span>4</span> - <span style="color:red;">11</span> ⓘ</span></td><td>10</td><td><span>15</span><br><span>15</span></td><td><span>6.1</span><br><span>6</span></td><td><span>7</span><br><span>6.1</span></td></tr>
+				<tr><td><span title="Window.requestAnimationFrame">native</span></td><td><span>≤37</span><br><span>≤37</span></td><td><span>24</span><br><span>10</span></td><td>12</td><td><span title="Callback parameter is a <code>DOMHighResTimestamp</code>. This means ten microsecond precision and zero time as <code>performance.now()</code>."><span>23</span> ⓘ</span><br><span title="Callback parameter is a <code>DOMTimestamp</code>. This means millisecond precision and zero time as <code>Date.now()</code>."><span>11</span> - <span style="color:red;">42</span> ⓘ</span><br><span title="Could be called with no input parameters."><span>4</span> - <span style="color:red;">11</span> ⓘ</span></td><td>10</td><td><span>15</span><br><span>15</span></td><td><span>6.1</span><br><span>6</span></td><td><span>7</span><br><span>6.1</span></td></tr>
 			</tbody>
 		</table>
 
@@ -1802,6 +2763,16 @@ To use it from chrome code, JSM and Bootstrap scope, you have to import it with 
 			<h3>mdn notes : </h3><p>firefox 23 : Callback parameter is a <code>DOMHighResTimestamp</code>. This means ten microsecond precision and zero time as <code>performance.now()</code>.</p><p>firefox 11 : Callback parameter is a <code>DOMTimestamp</code>. This means millisecond precision and zero time as <code>Date.now()</code>.</p><p>firefox 4 : Could be called with no input parameters.</p>
 			
 		</div>
+
+		<table class="compat-table">
+			<thead>
+				<tr><th></th><th>Blink</th><th>EdgeHTML</th><th>Gecko</th><th>Presto</th><th>Trident</th><th>WebKit</th></tr>
+			</thead>
+			<tbody>
+				<tr><td>polyfill-library</td><td>28 - 45</td><td>-</td><td>1.9.2 - 22</td><td>>= 1</td><td>4.0 - 5.0</td><td>525.13 - 537.43</td></tr>
+				<tr><td>native</td><td>-</td><td>12</td><td>2</td><td>-</td><td>6.0</td><td>537.43</td></tr>
+			</tbody>
+		</table>
 		
 	
 		<h3 id="Window.requestIdleCallback" class="compat-table-header"><a href="#Window.requestIdleCallback">Window.requestIdleCallback</a></h3>
@@ -1820,6 +2791,16 @@ To use it from chrome code, JSM and Bootstrap scope, you have to import it with 
 			<h3>mdn notes : </h3><p>firefox 55 : Enabled by default.</p><p>firefox 53 : Implemented but disabled by default.</p>
 			
 		</div>
+
+		<table class="compat-table">
+			<thead>
+				<tr><th></th><th>Blink</th><th>EdgeHTML</th><th>Gecko</th><th>Presto</th><th>Trident</th><th>WebKit</th></tr>
+			</thead>
+			<tbody>
+				<tr><td>polyfill-library</td><td>28 - 46</td><td>>= 12</td><td>1.7 - 54</td><td>>= 1</td><td>>= 4.0</td><td>>= 522.11</td></tr>
+				<tr><td>native</td><td>47</td><td>-</td><td>53</td><td>-</td><td>-</td><td>-</td></tr>
+			</tbody>
+		</table>
 		
 	
 		<h3 id="Window.scroll" class="compat-table-header"><a href="#Window.scroll">Window.scroll</a></h3>
@@ -1830,7 +2811,7 @@ To use it from chrome code, JSM and Bootstrap scope, you have to import it with 
 			</thead>
 			<tbody>
 				<tr><td><span title="smoothscroll">polyfill-library</span></td><td>*</td><td>* - 60</td><td><79</td><td>4 - 36</td><td>9 - *</td><td>*</td><td>*</td><td>*</td></tr>
-				<tr><td><span title="Window.scroll">native</span></td><td>18</td><td>1</td><td>12</td><td>1</td><td>4</td><td>3</td><td>1</td><td>1</td></tr>
+				<tr><td><span title="Window.scroll">native</span></td><td>1</td><td>1</td><td>12</td><td>1</td><td>4</td><td>3</td><td>1</td><td>1</td></tr>
 			</tbody>
 		</table>
 
@@ -1838,6 +2819,16 @@ To use it from chrome code, JSM and Bootstrap scope, you have to import it with 
 			
 			
 		</div>
+
+		<table class="compat-table">
+			<thead>
+				<tr><th></th><th>Blink</th><th>EdgeHTML</th><th>Gecko</th><th>Presto</th><th>Trident</th><th>WebKit</th></tr>
+			</thead>
+			<tbody>
+				<tr><td>polyfill-library</td><td>28 - 60</td><td>>= 12</td><td>2 - 36</td><td>>= 1</td><td>>= 5.0</td><td>>= 85</td></tr>
+				<tr><td>native</td><td>-</td><td>12</td><td>1.8</td><td>-</td><td>-</td><td>522.11</td></tr>
+			</tbody>
+		</table>
 		
 		<table class="compat-table">
 			<thead>
@@ -1845,7 +2836,7 @@ To use it from chrome code, JSM and Bootstrap scope, you have to import it with 
 			</thead>
 			<tbody>
 				<tr><td><span title="smoothscroll">polyfill-library</span></td><td>*</td><td>* - 60</td><td><79</td><td>4 - 36</td><td>9 - *</td><td>*</td><td>*</td><td>*</td></tr>
-				<tr><td><span title="Window.scroll">native</span></td><td>18</td><td>1</td><td>12</td><td>1</td><td>4</td><td>3</td><td>1</td><td>1</td></tr>
+				<tr><td><span title="Window.scroll">native</span></td><td>1</td><td>1</td><td>12</td><td>1</td><td>4</td><td>3</td><td>1</td><td>1</td></tr>
 			</tbody>
 		</table>
 
@@ -1853,6 +2844,16 @@ To use it from chrome code, JSM and Bootstrap scope, you have to import it with 
 			
 			
 		</div>
+
+		<table class="compat-table">
+			<thead>
+				<tr><th></th><th>Blink</th><th>EdgeHTML</th><th>Gecko</th><th>Presto</th><th>Trident</th><th>WebKit</th></tr>
+			</thead>
+			<tbody>
+				<tr><td>polyfill-library</td><td>28 - 60</td><td>>= 12</td><td>2 - 36</td><td>>= 1</td><td>>= 5.0</td><td>>= 85</td></tr>
+				<tr><td>native</td><td>-</td><td>12</td><td>1.8</td><td>-</td><td>-</td><td>522.11</td></tr>
+			</tbody>
+		</table>
 		
 	
 		<h3 id="Window.scrollBy" class="compat-table-header"><a href="#Window.scrollBy">Window.scrollBy</a></h3>
@@ -1863,7 +2864,7 @@ To use it from chrome code, JSM and Bootstrap scope, you have to import it with 
 			</thead>
 			<tbody>
 				<tr><td><span title="smoothscroll">polyfill-library</span></td><td>*</td><td>* - 60</td><td><79</td><td>4 - 36</td><td>9 - *</td><td>*</td><td>*</td><td>*</td></tr>
-				<tr><td><span title="Window.scrollBy">native</span></td><td>18</td><td>1</td><td><span>79</span><br><span title="Only <code>scrollBy(x-coord, y-coord)</code> is supported."><span>12</span> - <span style="color:red;">79</span> ⓘ</span></td><td>1</td><td><span title="Only <code>scrollBy(x-coord, y-coord)</code> is supported.">11 ⓘ</span></td><td>3</td><td>1</td><td>1</td></tr>
+				<tr><td><span title="Window.scrollBy">native</span></td><td>1</td><td>1</td><td><span>79</span><br><span title="Only <code>scrollBy(x-coord, y-coord)</code> is supported."><span>12</span> - <span style="color:red;">79</span> ⓘ</span></td><td>1</td><td><span title="Only <code>scrollBy(x-coord, y-coord)</code> is supported.">11 ⓘ</span></td><td>3</td><td>1</td><td>1</td></tr>
 			</tbody>
 		</table>
 
@@ -1871,6 +2872,16 @@ To use it from chrome code, JSM and Bootstrap scope, you have to import it with 
 			<h3>mdn notes : </h3><p>edge 12 : Only <code>scrollBy(x-coord, y-coord)</code> is supported.</p><p>ie 11 : Only <code>scrollBy(x-coord, y-coord)</code> is supported.</p>
 			
 		</div>
+
+		<table class="compat-table">
+			<thead>
+				<tr><th></th><th>Blink</th><th>EdgeHTML</th><th>Gecko</th><th>Presto</th><th>Trident</th><th>WebKit</th></tr>
+			</thead>
+			<tbody>
+				<tr><td>polyfill-library</td><td>28 - 60</td><td>>= 12</td><td>2 - 36</td><td>>= 1</td><td>>= 5.0</td><td>>= 85</td></tr>
+				<tr><td>native</td><td>-</td><td>12</td><td>1.8</td><td>-</td><td>7.0</td><td>522.11</td></tr>
+			</tbody>
+		</table>
 		
 		<table class="compat-table">
 			<thead>
@@ -1878,7 +2889,7 @@ To use it from chrome code, JSM and Bootstrap scope, you have to import it with 
 			</thead>
 			<tbody>
 				<tr><td><span title="smoothscroll">polyfill-library</span></td><td>*</td><td>* - 60</td><td><79</td><td>4 - 36</td><td>9 - *</td><td>*</td><td>*</td><td>*</td></tr>
-				<tr><td><span title="Window.scrollBy">native</span></td><td>18</td><td>1</td><td><span>79</span><br><span title="Only <code>scrollBy(x-coord, y-coord)</code> is supported."><span>12</span> - <span style="color:red;">79</span> ⓘ</span></td><td>1</td><td><span title="Only <code>scrollBy(x-coord, y-coord)</code> is supported.">11 ⓘ</span></td><td>3</td><td>1</td><td>1</td></tr>
+				<tr><td><span title="Window.scrollBy">native</span></td><td>1</td><td>1</td><td><span>79</span><br><span title="Only <code>scrollBy(x-coord, y-coord)</code> is supported."><span>12</span> - <span style="color:red;">79</span> ⓘ</span></td><td>1</td><td><span title="Only <code>scrollBy(x-coord, y-coord)</code> is supported.">11 ⓘ</span></td><td>3</td><td>1</td><td>1</td></tr>
 			</tbody>
 		</table>
 
@@ -1886,6 +2897,16 @@ To use it from chrome code, JSM and Bootstrap scope, you have to import it with 
 			<h3>mdn notes : </h3><p>edge 12 : Only <code>scrollBy(x-coord, y-coord)</code> is supported.</p><p>ie 11 : Only <code>scrollBy(x-coord, y-coord)</code> is supported.</p>
 			
 		</div>
+
+		<table class="compat-table">
+			<thead>
+				<tr><th></th><th>Blink</th><th>EdgeHTML</th><th>Gecko</th><th>Presto</th><th>Trident</th><th>WebKit</th></tr>
+			</thead>
+			<tbody>
+				<tr><td>polyfill-library</td><td>28 - 60</td><td>>= 12</td><td>2 - 36</td><td>>= 1</td><td>>= 5.0</td><td>>= 85</td></tr>
+				<tr><td>native</td><td>-</td><td>12</td><td>1.8</td><td>-</td><td>7.0</td><td>522.11</td></tr>
+			</tbody>
+		</table>
 		
 	
 		<h3 id="Window.scrollX" class="compat-table-header"><a href="#Window.scrollX">Window.scrollX</a></h3>
@@ -1896,14 +2917,24 @@ To use it from chrome code, JSM and Bootstrap scope, you have to import it with 
 			</thead>
 			<tbody>
 				<tr><td><span title="~viewport">polyfill-library</span></td><td>-</td><td>-</td><td>-</td><td>-</td><td>6 - 8</td><td>-</td><td>-</td><td>-</td></tr>
-				<tr><td><span title="Window.scrollX">native</span></td><td><span>18</span><br><span title="Alternate name : pageXOffset"><span>18</span> ⓘ</span></td><td><span>1</span><br><span title="Alternate name : pageXOffset"><span>1</span> ⓘ</span></td><td><span>12</span><br><span title="Alternate name : pageXOffset"><span>12</span> ⓘ</span></td><td><span>1</span><br><span title="Alternate name : pageXOffset"><span>1</span> ⓘ</span></td><td><span title="Alternate name : pageXOffset">9 ⓘ</span></td><td><span>9.6</span><br><span title="Alternate name : pageXOffset"><span>4</span> ⓘ</span></td><td><span>1</span><br><span title="Alternate name : pageXOffset"><span>1</span> ⓘ</span></td><td><span>1</span><br><span title="Alternate name : pageXOffset"><span>1</span> ⓘ</span></td></tr>
+				<tr><td><span title="Window.scrollX">native</span></td><td><span>1</span><br><span title="Alternate name : pageXOffset"><span>1</span> ⓘ</span></td><td><span>1</span><br><span title="Alternate name : pageXOffset"><span>1</span> ⓘ</span></td><td><span>12</span><br><span title="Alternate name : pageXOffset"><span>12</span> ⓘ</span></td><td><span>1</span><br><span title="Alternate name : pageXOffset"><span>1</span> ⓘ</span></td><td><span title="Alternate name : pageXOffset">9 ⓘ</span></td><td><span>9.6</span><br><span title="Alternate name : pageXOffset"><span>4</span> ⓘ</span></td><td><span>1</span><br><span title="Alternate name : pageXOffset"><span>1</span> ⓘ</span></td><td><span>1</span><br><span title="Alternate name : pageXOffset"><span>1</span> ⓘ</span></td></tr>
 			</tbody>
 		</table>
 
 		<div class="compat-table-notes">
-			<h3>mdn notes : </h3><p>android 18 : Alternate name : pageXOffset</p><p>chrome 1 : Alternate name : pageXOffset</p><p>edge 12 : Alternate name : pageXOffset</p><p>firefox 1 : Alternate name : pageXOffset</p><p>ie 9 : Alternate name : pageXOffset</p><p>opera 4 : Alternate name : pageXOffset</p><p>safari 1 : Alternate name : pageXOffset</p><p>ios_saf 1 : Alternate name : pageXOffset</p>
+			<h3>mdn notes : </h3><p>android 1 : Alternate name : pageXOffset</p><p>chrome 1 : Alternate name : pageXOffset</p><p>edge 12 : Alternate name : pageXOffset</p><p>firefox 1 : Alternate name : pageXOffset</p><p>ie 9 : Alternate name : pageXOffset</p><p>opera 4 : Alternate name : pageXOffset</p><p>safari 1 : Alternate name : pageXOffset</p><p>ios_saf 1 : Alternate name : pageXOffset</p>
 			
 		</div>
+
+		<table class="compat-table">
+			<thead>
+				<tr><th></th><th>Blink</th><th>EdgeHTML</th><th>Gecko</th><th>Presto</th><th>Trident</th><th>WebKit</th></tr>
+			</thead>
+			<tbody>
+				<tr><td>polyfill-library</td><td>-</td><td>-</td><td>-</td><td>-</td><td>4.0 - 4.0</td><td>-</td></tr>
+				<tr><td>native</td><td>-</td><td>12</td><td>1.8</td><td>-</td><td>5.0</td><td>522.11</td></tr>
+			</tbody>
+		</table>
 		
 	
 		<h3 id="Window.scrollY" class="compat-table-header"><a href="#Window.scrollY">Window.scrollY</a></h3>
@@ -1914,14 +2945,24 @@ To use it from chrome code, JSM and Bootstrap scope, you have to import it with 
 			</thead>
 			<tbody>
 				<tr><td><span title="~viewport">polyfill-library</span></td><td>-</td><td>-</td><td>-</td><td>-</td><td>6 - 8</td><td>-</td><td>-</td><td>-</td></tr>
-				<tr><td><span title="Window.scrollY">native</span></td><td><span>18</span><br><span title="Alternate name : pageYOffset"><span>18</span> ⓘ</span></td><td><span>1</span><br><span title="Alternate name : pageYOffset"><span>1</span> ⓘ</span></td><td><span>12</span><br><span title="Alternate name : pageYOffset"><span>12</span> ⓘ</span></td><td><span>1</span><br><span title="Alternate name : pageYOffset"><span>1</span> ⓘ</span></td><td><span title="Alternate name : pageYOffset">9 ⓘ</span></td><td><span>9.6</span><br><span title="Alternate name : pageYOffset"><span>4</span> ⓘ</span></td><td><span>1</span><br><span title="Alternate name : pageYOffset"><span>1</span> ⓘ</span></td><td><span>1</span><br><span title="Alternate name : pageYOffset"><span>1</span> ⓘ</span></td></tr>
+				<tr><td><span title="Window.scrollY">native</span></td><td><span>1</span><br><span title="Alternate name : pageYOffset"><span>1</span> ⓘ</span></td><td><span>1</span><br><span title="Alternate name : pageYOffset"><span>1</span> ⓘ</span></td><td><span>12</span><br><span title="Alternate name : pageYOffset"><span>12</span> ⓘ</span></td><td><span>1</span><br><span title="Alternate name : pageYOffset"><span>1</span> ⓘ</span></td><td><span title="Alternate name : pageYOffset">9 ⓘ</span></td><td><span>9.6</span><br><span title="Alternate name : pageYOffset"><span>4</span> ⓘ</span></td><td><span>1</span><br><span title="Alternate name : pageYOffset"><span>1</span> ⓘ</span></td><td><span>1</span><br><span title="Alternate name : pageYOffset"><span>1</span> ⓘ</span></td></tr>
 			</tbody>
 		</table>
 
 		<div class="compat-table-notes">
-			<h3>mdn notes : </h3><p>android 18 : Alternate name : pageYOffset</p><p>chrome 1 : Alternate name : pageYOffset</p><p>edge 12 : Alternate name : pageYOffset</p><p>firefox 1 : Alternate name : pageYOffset</p><p>ie 9 : Alternate name : pageYOffset</p><p>opera 4 : Alternate name : pageYOffset</p><p>safari 1 : Alternate name : pageYOffset</p><p>ios_saf 1 : Alternate name : pageYOffset</p>
+			<h3>mdn notes : </h3><p>android 1 : Alternate name : pageYOffset</p><p>chrome 1 : Alternate name : pageYOffset</p><p>edge 12 : Alternate name : pageYOffset</p><p>firefox 1 : Alternate name : pageYOffset</p><p>ie 9 : Alternate name : pageYOffset</p><p>opera 4 : Alternate name : pageYOffset</p><p>safari 1 : Alternate name : pageYOffset</p><p>ios_saf 1 : Alternate name : pageYOffset</p>
 			
 		</div>
+
+		<table class="compat-table">
+			<thead>
+				<tr><th></th><th>Blink</th><th>EdgeHTML</th><th>Gecko</th><th>Presto</th><th>Trident</th><th>WebKit</th></tr>
+			</thead>
+			<tbody>
+				<tr><td>polyfill-library</td><td>-</td><td>-</td><td>-</td><td>-</td><td>4.0 - 4.0</td><td>-</td></tr>
+				<tr><td>native</td><td>-</td><td>12</td><td>1.8</td><td>-</td><td>5.0</td><td>522.11</td></tr>
+			</tbody>
+		</table>
 		
 	
 		<h3 id="Window.setImmediate" class="compat-table-header"><a href="#Window.setImmediate">Window.setImmediate</a></h3>
@@ -1940,6 +2981,16 @@ To use it from chrome code, JSM and Bootstrap scope, you have to import it with 
 			
 			
 		</div>
+
+		<table class="compat-table">
+			<thead>
+				<tr><th></th><th>Blink</th><th>EdgeHTML</th><th>Gecko</th><th>Presto</th><th>Trident</th><th>WebKit</th></tr>
+			</thead>
+			<tbody>
+				<tr><td>polyfill-library</td><td>>= 28</td><td>-</td><td>>= 1.7</td><td>>= 1</td><td>4.0 - 5.0</td><td>>= 85</td></tr>
+				<tr><td>native</td><td>-</td><td>12</td><td>-</td><td>-</td><td>6.0</td><td>-</td></tr>
+			</tbody>
+		</table>
 		
 	
 		<h3 id="XMLHttpRequest" class="compat-table-header"><a href="#XMLHttpRequest">XMLHttpRequest</a></h3>
@@ -1950,7 +3001,7 @@ To use it from chrome code, JSM and Bootstrap scope, you have to import it with 
 			</thead>
 			<tbody>
 				<tr><td><span title="XMLHttpRequest">polyfill-library</span></td><td>-</td><td>-</td><td>-</td><td>-</td><td>6 - 8</td><td>-</td><td>-</td><td>-</td></tr>
-				<tr><td><span title="XMLHttpRequest">native</span></td><td>18</td><td>1</td><td>12</td><td>1</td><td><span>7</span><br><span title="Implemented via <code>ActiveXObject('Microsoft.XMLHTTP')</code>"><span>5</span> ⓘ</span></td><td>8</td><td>1.2</td><td>1</td></tr>
+				<tr><td><span title="XMLHttpRequest">native</span></td><td>1</td><td>1</td><td>12</td><td>1</td><td><span>7</span><br><span title="Implemented via <code>ActiveXObject('Microsoft.XMLHTTP')</code>"><span>5</span> ⓘ</span></td><td>8</td><td>1.2</td><td>1</td></tr>
 			</tbody>
 		</table>
 
@@ -1958,10 +3009,20 @@ To use it from chrome code, JSM and Bootstrap scope, you have to import it with 
 			<h3>mdn notes : </h3><p>ie 5 : Implemented via <code>ActiveXObject('Microsoft.XMLHTTP')</code></p>
 			
 		</div>
+
+		<table class="compat-table">
+			<thead>
+				<tr><th></th><th>Blink</th><th>EdgeHTML</th><th>Gecko</th><th>Presto</th><th>Trident</th><th>WebKit</th></tr>
+			</thead>
+			<tbody>
+				<tr><td>polyfill-library</td><td>-</td><td>-</td><td>-</td><td>-</td><td>4.0 - 4.0</td><td>-</td></tr>
+				<tr><td>native</td><td>-</td><td>12</td><td>1.8</td><td>1</td><td>-</td><td>522.11</td></tr>
+			</tbody>
+		</table>
 		
 	
 
-				<pre><code style="font-size:10px;">Last updated : Sun Dec 27 2020 11:53:23 GMT+0000 (Coordinated Universal Time)</code></pre>
+				<pre><code style="font-size:10px;">Last updated : Sat Jan 02 2021 09:28:58 GMT+0000 (Coordinated Universal Time)</code></pre>
 			</div>
 		</div>
 	</main>
