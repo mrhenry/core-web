@@ -7,11 +7,12 @@ module.exports = [
 			mode: 'production',
 			context: path.resolve(__dirname, 'lib'),
 			output: {
-				path: path.resolve(__dirname, 'dist'),
+				path: path.resolve(__dirname, 'dist/js'),
 				filename: `[name].${target.name}.js`
 			},
 			entry: {
-				'index': './js/index.js'
+				'index': './js/index.js',
+				'e2e': './js/e2e.js'
 			},
 			devtool: 'source-map',
 			target: target.webpackTarget,
