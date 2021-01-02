@@ -14,20 +14,23 @@ async function handleRequest(request) {
 	try {
 		const resp = await fetch('https://mrhenry.github.io/core-web' + new URL(request.url).pathname);
 
-		if (!request.headers.get('User-Agent')) {
-			return cleanupIfNoUA(resp);
-		}
+		// fallback;
+		let engine = {
+			name: "Blink",
+			version: "26"
+		};
 
 		const ua = parser(request.headers.get('User-Agent'));
-		if (!ua || !ua.browser || !ua.browser.name) {
-			return cleanupIfNoUA(resp);
+		if (
+			ua &&
+			ua.browser &&
+			ua.browser.name &&
+			ua.engine &&
+			ua.engine.name
+		) {
+			engine = ua.engine;
 		}
 
-		if (!ua || !ua.engine || !ua.engine.name) {
-			return cleanupIfNoUA(resp);
-		}
-
-		let engine = ua.engine;
 		if (engine.name === "WebKit") {
 			engine = webkitVersion(ua);
 		}
@@ -155,7 +158,11 @@ function webkitVersion(ua) {
 		return ua.engine;
 	}
 
-	if (!ua.engine || ua.engine.name !== "WebKit") {
+	if (!ua.engine || !ua.engine.version || ua.engine.name !== "WebKit") {
+		return ua.engine;
+	}
+
+	if (semver.lt(semver.coerce(ua.engine.version), semver.coerce("605.1.15"))) {
 		return ua.engine;
 	}
 
