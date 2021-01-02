@@ -13,6 +13,7 @@
     "ua-parser-js": "^0.7.23"
   },
   "devDependencies": {
+    "@cloudflare/wrangler": "^1.12.3",
     "@mdn/browser-compat-data": "^3.0.1"
   }
 }
