@@ -7,7 +7,7 @@ on:
     - 'packages/pages/**'
 
 jobs:
-  ubuntu-job:
+  build-and-test:
     name: 'Build & Test'
     runs-on: ubuntu-latest
     steps:

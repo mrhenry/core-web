@@ -6,28 +6,19 @@
   "main": "lib/pages.js",
   "private": true,
   "directories": {
-    "lib": "lib",
-    "test": "__tests__"
+    "lib": "lib"
   },
   "files": [
     "lib"
   ],
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/mrhenry/core-web.git"
-  },
   "scripts": {
     "build-html": "node lib/pages.js",
     "build-css": "node ./build-css.js",
     "build-js": "webpack",
     "build-fonts": "cp -r ./lib/fonts/ ./dist/fonts/",
     "build-images": "cp -r ./lib/images/ ./dist/images/",
-    "build-worker-browsers-list": "node ./build-bcd-browsers",
-    "build": "npm run build-html && npm run build-css && npm run build-js && npm run build-fonts && npm run build-images && npm run build-worker-browsers-list",
+    "build": "npm run build-html && npm run build-css && npm run build-js && npm run build-fonts && npm run build-images",
     "dev-server": "cd ./dist && npx http-server"
-  },
-  "bugs": {
-    "url": "https://github.com/mrhenry/core-web/issues"
   },
   "dependencies": {
     "@babel/core": "^7.12.10",

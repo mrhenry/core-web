@@ -1,0 +1,18 @@
+{
+  "name": "@mrhenry/pages-worker",
+  "main": "index.js",
+  "version": "0.4.0",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "build": "node ./build-bcd-browsers",
+    "watch": "wrangler dev"
+  },
+  "dependencies": {
+    "semver": "^7.3.4",
+    "ua-parser-js": "^0.7.23"
+  },
+  "devDependencies": {
+    "@mdn/browser-compat-data": "^3.0.1"
+  }
+}

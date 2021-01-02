@@ -6,8 +6,8 @@ on:
 
 jobs:
 
-  fmt:
-    name: pages
+  pages:
+    name: Pages
     runs-on: ubuntu-latest
     steps:
 
@@ -50,3 +50,14 @@ jobs:
         git add .
         git commit -m "update pages"
         git push --set-upstream origin pages
+
+  deploy-pages-worker:
+    name: Deploy Pages Worker
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Publish
+        uses: cloudflare/wrangler-action@1.3.0
+        with:
+          apiToken: ${{ secrets.CF_API_TOKEN }}
+          workingDirectory: 'packages/pages-worker'
