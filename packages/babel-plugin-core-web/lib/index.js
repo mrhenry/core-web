@@ -2,9 +2,9 @@ const Injector = require("./injector");
 const { required } = require("@mrhenry/core-web");
 
 module.exports = function (_, opts) {
-	const featureSet = required(
-		opts.browsers || {
-			chrome: "41"
+	const featureSet = required({
+		browsers: opts.browsers || {},
+		engines: opts.engines || {},
 		},
 		{
 			debug: opts.debug || false,

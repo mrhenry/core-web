@@ -2,7 +2,7 @@ const path = require("path");
 const { addSideEffect } = require("@babel/helper-module-imports");
 const { get, has } = require("@mrhenry/core-web");
 const m = require("./ast-matcher");
-const detectorsDir = path.join(path.dirname(__dirname), "detectors");
+const matchersDir = path.join(path.dirname(__dirname), "matchers");
 
 class Injector {
 	constructor(features, opts = {}) {
@@ -16,10 +16,10 @@ class Injector {
 		this.matchers = this.features.map(name => {
 			const spec = get(name);
 
-			if (spec.detector) {
+			if (spec.hasCustomMatcher) {
 				return this._cachingMatcher(
 					name,
-					require(path.join(detectorsDir, name + ".js")),
+					require(path.join(matchersDir, name + ".js")),
 					() => {
 						this._addPolyfill(name)
 					}

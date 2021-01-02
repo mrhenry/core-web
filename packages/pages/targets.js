@@ -3,23 +3,17 @@ module.exports = [
 		name: '2020',
 		webpackTarget: [
 			'web',
-			'browserslist:Chrome 87 or Edge 87 or Firefox 83 or Opera 72 or Safari 14 or Samsung 13'
+			'browserslist:Chrome 87 or Firefox 83 or Safari 14'
 		],
 		presetEnvBrowsers: [
 			'chrome >= 87',
-			'edge >= 87',
 			'firefox >= 83',
-			'opera >= 72',
 			'safari >= 14',
-			'samsung >= 13.0',
 		],
-		coreWebBrowsers: {
-			chrome: '87',
-			edge: '87',
-			firefox: '83',
-			opera: '72',
-			safari: '14',
-			samsung_mob: '13.0',
+		coreWebEngines: {
+			"Blink": "87",
+			"Gecko": "83",
+			"WebKit": "610.1.28",
 		},
 	},
 	
@@ -27,23 +21,39 @@ module.exports = [
 		name: '2018',
 		webpackTarget: [
 			'web',
-			'browserslist:Chrome 71 or Edge 18 or Firefox 64 or Opera 57 or Safari 12 or Samsung 8.2'
+			'browserslist:Chrome 71 or Edge 18 or Firefox 64 or Safari 12'
 		],
 		presetEnvBrowsers: [
 			'chrome >= 71',
 			'edge >= 18',
 			'firefox >= 64',
-			'opera >= 57',
 			'safari >= 12',
-			'samsung >= 8.2',
 		],
-		coreWebBrowsers: {
-			chrome: '71',
-			edge: '18',
-			firefox: '64',
-			opera: '57',
-			safari: '12',
-			samsung_mob: '8.2',
+		coreWebEngines: {
+			"Blink": "71",
+			"Gecko": "64",
+			"EdgeHTML": "18",
+			"WebKit": "606.1.36",
+		},
+	},
+
+	{
+		name: '2016',
+		webpackTarget: [
+			'web',
+			'browserslist:Chrome 51 or Edge 14 or Firefox 54 or Safari 10'
+		],
+		presetEnvBrowsers: [
+			'chrome >= 51',
+			'edge >= 14',
+			'firefox >= 54',
+			'safari >= 10',
+		],
+		coreWebEngines: {
+			"Blink": "51",
+			"Gecko": "54",
+			"EdgeHTML": "14",
+			"WebKit": "602.1.50",
 		},
 	},
 	
@@ -51,21 +61,19 @@ module.exports = [
 		name: '2014',
 		webpackTarget: [
 			'web',
-			'browserslist:Chrome 39 or Firefox 34 or Opera 26 or Safari 8 or Samsung 13 or Android 4.4.4'
+			'browserslist:Chrome 39 or Edge 12 or Firefox 34 or Safari 8'
 		],
 		presetEnvBrowsers: [
 			'chrome >= 39',
+			'edge >= 12',
 			'firefox >= 34',
-			'opera >= 26',
 			'safari >= 8',
-			'android >= 4.4.4',
 		],
-		coreWebBrowsers: {
-			chrome: '39',
-			firefox: '34',
-			opera: '26',
-			safari: '8',
-			android: '4.4.4',
+		coreWebEngines: {
+			"Blink": "39",
+			"Gecko": "34",
+			"EdgeHTML": "12",
+			"WebKit": "538.35",
 		},
 	},
 	
@@ -73,23 +81,20 @@ module.exports = [
 		name: '2013',
 		webpackTarget: [
 			'web',
-			'browserslist:Chrome 31 or Firefox 26 or IE 11 or Opera 18 or Safari 7 or Android 4.4'
+			'browserslist:Chrome 31 or Firefox 26 or IE 11 or Safari 7 or Android 4.4'
 		],
 		presetEnvBrowsers: [
 			'chrome >= 31',
 			'firefox >= 26',
 			'ie >= 11',
-			'opera >= 18',
 			'safari >= 7',
 			'android >= 4.4',
 		],
-		coreWebBrowsers: {
-			chrome: '31',
-			firefox: '26',
-			ie: '11',
-			opera: '18',
-			safari: '7',
-			android: '4.4',
+		coreWebEngines: {
+			"Blink": "30",
+			"Gecko": "26",
+			"Trident" : "7.0",
+			"WebKit": "537.51",
 		},
 	},
 	
@@ -102,18 +107,17 @@ module.exports = [
 		presetEnvBrowsers: [
 			'chrome >= 17',
 			'firefox >= 10',
-			'ie >= 8',
+			'ie >= 9',
 			'opera >= 12',
 			'safari >= 5.1',
 			'android >= 4',
 		],
-		coreWebBrowsers: {
-			chrome: '17',
-			firefox: '10',
-			ie: '9',
-			opera: '12',
-			safari: '5.1',
-			android: '4',
+		coreWebEngines: {
+			"Blink": "26",
+			"Gecko": "10",
+			"Presto": "2.10",
+			"Trident" : "5.0",
+			"WebKit": "534.30",
 		},
 	}
 ]

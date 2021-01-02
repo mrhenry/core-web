@@ -1,38 +1,31 @@
 {
-  "name": "pages",
-  "version": "0.3.21",
+  "name": "@mrhenry/pages",
+  "version": "0.4.0",
   "description": "generator for GitHub pages.",
   "license": "MIT",
   "main": "lib/pages.js",
   "private": true,
   "directories": {
-    "lib": "lib",
-    "test": "__tests__"
+    "lib": "lib"
   },
   "files": [
     "lib"
   ],
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/mrhenry/core-web.git"
-  },
   "scripts": {
-    "build-html": "node lib/landing/landing.js && node lib/browser-compat/browser-compat.js",
+    "build-html": "node lib/pages.js",
     "build-css": "node ./build-css.js",
     "build-js": "webpack",
     "build-fonts": "cp -r ./lib/fonts/ ./dist/fonts/",
     "build-images": "cp -r ./lib/images/ ./dist/images/",
-    "build": "yarn build-html && yarn build-css && yarn build-js && yarn build-fonts && yarn build-images",
+    "build": "npm run build-html && npm run build-css && npm run build-js && npm run build-fonts && npm run build-images",
     "dev-server": "cd ./dist && npx http-server"
-  },
-  "bugs": {
-    "url": "https://github.com/mrhenry/core-web/issues"
   },
   "dependencies": {
     "@babel/core": "^7.12.10",
     "@babel/preset-env": "^7.12.11",
     "@mdn/browser-compat-data": "^3.0.1",
-    "@mrhenry/babel-plugin-core-web": "^0.3.21",
+    "@mrhenry/babel-plugin-core-web": "^0.4.0",
+    "@mrhenry/core-web": "^0.4.0",
     "babel-loader": "^8.2.2",
     "browserstack-runner": "^0.9.4",
     "core-js": "^3.8.1",

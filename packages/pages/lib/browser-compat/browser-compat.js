@@ -1,21 +1,14 @@
 'use strict';
 
-const mapping = require('@mrhenry/core-web/helpers/__mapping');
+const { mapping } = require('@mrhenry/core-web/lib/helpers/__mapping.js');
 const bcd = require('@mdn/browser-compat-data');
 const fs = require('fs');
 const path = require('path');
 const tableHTML = require('./templates/table');
 const pageHTML = require('./templates/page');
-const { gatherPolyfillNotes } = require('./templates/notes');
 const { browsersCoreWebToMDN, coreWebBrowsers } = require('./browsers');
 
-
-main();
-
-async function main() {
-	await gatherPolyfillNotes();
-	generate();
-}
+module.exports = generate;
 
 function generate() {
 	const compat = {};

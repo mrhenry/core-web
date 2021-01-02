@@ -12,11 +12,7 @@ const roadmap = require('./templates/roadmap');
 const siteFooter = require('./templates/site-footer');
 const requirements = require('./templates/requirements');
 
-main();
-
-async function main() {
-	generate();
-}
+module.exports = generate;
 
 function generate() {
 	fs.writeFileSync(path.join(__dirname, '../../dist/index.html'), html`<!DOCTYPE html>
@@ -117,34 +113,42 @@ function generate() {
 					'IntersectionObserver'
 				])}
 
-				${polyfillNotificationContent('2014', '8', [
-					'DOMTokenList.prototype.forEach',
-					'IntersectionObserver',
-					'NodeList.prototype.forEach',
-					'requestAnimationFrame'
+				${polyfillNotificationContent('2016', '7', [
+					"DOMTokenList.prototype.forEach",
+					"IntersectionObserver",
+					"NodeList.prototype.forEach",
+				])}
+
+				${polyfillNotificationContent('2014', '9', [
+					"DOMTokenList",
+					"DOMTokenList.prototype.forEach",
+					"IntersectionObserver",
+					"NodeList.prototype.forEach",
+					"performance.now",
+					"requestAnimationFrame",
 				])}
 				
 				${polyfillNotificationContent('2013', '13', [
-					'DOMTokenList',
-					'DOMTokenList.prototype.forEach',
-					'Element.prototype.classList',
-					'Event',
-					'IntersectionObserver',
-					'NodeList.prototype.forEach',
-					'performance.now',
-					'requestAnimationFrame'
+					"DOMTokenList",
+					"DOMTokenList.prototype.forEach",
+					"Element.prototype.classList",
+					"Event",
+					"IntersectionObserver",
+					"NodeList.prototype.forEach",
+					"performance.now",
+					"requestAnimationFrame",
 				])}
 
 				${polyfillNotificationContent('fallback', '13', [
-					'DOMTokenList',
-					'DOMTokenList.prototype.forEach',
-					'Element.prototype.classList',
-					'Event',
-					'IntersectionObserver',
-					'NodeList.prototype.forEach',
-					'Window',
-					'performance.now',
-					'requestAnimationFrame'
+					"DOMTokenList",
+					"DOMTokenList.prototype.forEach",
+					"Element.prototype.classList",
+					"Event",
+					"IntersectionObserver",
+					"NodeList.prototype.forEach",
+					"Window",
+					"performance.now",
+					"requestAnimationFrame",
 				])}
 				
 			</div>
@@ -159,14 +163,16 @@ function generate() {
 
 function indexJsAndCss() {
 	if (process.env.GITHUB_ACTIONS) {
-		return html`<meta name="ua-targets" content="2020 2018 2014 2013 fallback">
+		return html`<meta name="ua-targets" content="2020 2018 2016 2014 2013 fallback">
 <link rel="stylesheet" href="/index.2020.css" ua-target="2020">
 <link rel="stylesheet" href="/index.2018.css" ua-target="2018">
+<link rel="stylesheet" href="/index.2016.css" ua-target="2016">
 <link rel="stylesheet" href="/index.2014.css" ua-target="2014">
 <link rel="stylesheet" href="/index.2013.css" ua-target="2013">
 <link rel="stylesheet" href="/index.fallback.css" ua-target="fallback">
 <script src="/index.2020.js" ua-target="2020" async></script>
 <script src="/index.2018.js" ua-target="2018" async></script>
+<script src="/index.2016.js" ua-target="2016" async></script>
 <script src="/index.2014.js" ua-target="2014" async></script>
 <script src="/index.2013.js" ua-target="2013" async></script>
 <script src="/index.fallback.js" ua-target="fallback" async></script>

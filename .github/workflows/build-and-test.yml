@@ -7,7 +7,7 @@ on:
     - 'packages/pages/**'
 
 jobs:
-  ubuntu-job:
+  build-and-test:
     name: 'Build & Test'
     runs-on: ubuntu-latest
     steps:
@@ -19,11 +19,10 @@ jobs:
       - name: setup node
         uses: actions/setup-node@v2.1.3
         with:
-          node-version: 14
+          node-version: 15
 
       - run: make install
-      - run: make generate
-      - run: make build-tests
+      - run: make build
 
       - name: 'BrowserStack Env Setup'
         uses: 'browserstack/github-actions/setup-env@master'
