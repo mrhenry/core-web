@@ -18,6 +18,8 @@ async function handleRequest(request) {
 		let possibleTargets = [];
 		let pageTarget;
 
+		let knownOldEngine = false;
+
 		const ua = parser(request.headers.get('User-Agent'));
 		if (
 			ua &&
@@ -31,7 +33,9 @@ async function handleRequest(request) {
 
 		if (engine && engine.name === "WebKit") {
 			engine = webkitVersion(ua);
+		}
 
+		if (engine && engine.name && engine.version) {
 			possibleTargets = targets.filter((target) => {
 				if (target.engines[engine.name] && semver.satisfies(semver.coerce(engine.version), '>= ' + target.engines[engine.name])) {
 					return true;
@@ -39,6 +43,17 @@ async function handleRequest(request) {
 
 				return false;
 			});
+
+			if (possibleTargets.length === 0) {
+				const target = targets[targets.length - 1];
+				if (target.engines[engine.name] && semver.lt(semver.coerce(engine.version), semver.coerce(target.engines[engine.name]))) {
+					knownOldEngine = true;
+				}
+			}
+		}
+
+		if (possibleTargets.length === 0 && !knownOldEngine) {
+			possibleTargets = targets.filter((target) => { return target.name === '2016' });
 		}
 
 		return new HTMLRewriter()
