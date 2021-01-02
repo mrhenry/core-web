@@ -96,7 +96,8 @@ function generate() {
 				<span ua-target="2016">3 polyfill</span>
 				<span ua-target="2014">6 polyfill</span>
 				<span ua-target="2013">8 polyfills</span>
-				<span ua-target="fallback">9 polyfills</span>
+				<span ua-target="2011">9 polyfills</span>
+				<span ua-target="fallback">no javascript</span>
 			</label>
 
 			<label
@@ -140,7 +141,7 @@ function generate() {
 					"requestAnimationFrame",
 				])}
 
-				${polyfillNotificationContent('fallback', '13', [
+				${polyfillNotificationContent('2011', '13', [
 					"DOMTokenList",
 					"DOMTokenList.prototype.forEach",
 					"Element.prototype.classList",
@@ -151,6 +152,8 @@ function generate() {
 					"performance.now",
 					"requestAnimationFrame",
 				])}
+
+				${polyfillNotificationContent('fallback', '0', [])}
 				
 			</div>
 		</div>
@@ -164,19 +167,20 @@ function generate() {
 
 function indexJsAndCss() {
 	if (process.env.GITHUB_ACTIONS) {
-		return html`<meta name="ua-targets" content="2020 2018 2016 2014 2013 fallback">
+		return html`<meta name="ua-targets" content="2020 2018 2016 2014 2013 2011">
 <link rel="stylesheet" href="/css/index.2020.css" ua-target="2020">
 <link rel="stylesheet" href="/css/index.2018.css" ua-target="2018">
 <link rel="stylesheet" href="/css/index.2016.css" ua-target="2016">
 <link rel="stylesheet" href="/css/index.2014.css" ua-target="2014">
 <link rel="stylesheet" href="/css/index.2013.css" ua-target="2013">
-<link rel="stylesheet" href="/css/index.fallback.css" ua-target="fallback">
+<link rel="stylesheet" href="/css/index.2011.css" ua-target="2011">
+<link rel="stylesheet" href="/css/index.2011.css" ua-target="fallback">
 <script src="/js/index.2020.js" ua-target="2020" async></script>
 <script src="/js/index.2018.js" ua-target="2018" async></script>
 <script src="/js/index.2016.js" ua-target="2016" async></script>
 <script src="/js/index.2014.js" ua-target="2014" async></script>
 <script src="/js/index.2013.js" ua-target="2013" async></script>
-<script src="/js/index.fallback.js" ua-target="fallback" async></script>
+<script src="/js/index.2011.js" ua-target="2011" async></script>
 `;
 	}
 

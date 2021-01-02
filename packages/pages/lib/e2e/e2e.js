@@ -16,7 +16,7 @@ function generate() {
 <head>
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width" />
-	<meta name="ua-targets" content="2020 2018 2016 2014 2013 fallback">
+	<meta name="ua-targets" content="2020 2018 2016 2014 2013">
 	<title>QUnit</title>
 	<link rel="stylesheet" href="/css/qunit-2.9.2.css" />
 </head>
@@ -38,7 +38,6 @@ function e2eJS() {
 <script src="/js/e2e.2016.js" ua-target="2016"></script>
 <script src="/js/e2e.2014.js" ua-target="2014"></script>
 <script src="/js/e2e.2013.js" ua-target="2013"></script>
-<script src="/js/e2e.fallback.js" ua-target="fallback"></script>
 `;
 	}
 

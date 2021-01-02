@@ -66,13 +66,14 @@ module.exports = function pageHTML(tables) {
 
 function indexCss() {
 	if (process.env.GITHUB_ACTIONS) {
-		return html`<meta name="ua-targets" content="2020 2018 2016 2014 2013 fallback">
+		return html`<meta name="ua-targets" content="2020 2018 2016 2014 2013 2011">
 <link rel="stylesheet" href="/css/index.2020.css" ua-target="2020">
 <link rel="stylesheet" href="/css/index.2018.css" ua-target="2018">
 <link rel="stylesheet" href="/css/index.2016.css" ua-target="2016">
 <link rel="stylesheet" href="/css/index.2014.css" ua-target="2014">
 <link rel="stylesheet" href="/css/index.2013.css" ua-target="2013">
-<link rel="stylesheet" href="/css/index.fallback.css" ua-target="fallback">
+<link rel="stylesheet" href="/css/index.2011.css" ua-target="2011">
+<link rel="stylesheet" href="/css/index.2011.css" ua-target="fallback">
 `;
 	}
 
