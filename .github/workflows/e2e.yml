@@ -4,6 +4,10 @@ on:
     branches-ignore:
     - 'pages'
 
+# on:
+#   schedule:
+#     - cron: '0 22 * * *'
+
 jobs:
  e2e:
     name: 'E2E'
