@@ -1,12 +1,14 @@
 package main
 
 import (
+	"log"
 	"net/http"
 	"net/http/httputil"
 	"net/url"
 )
 
 func main() {
+	log.Println("proxy started")
 	http.ListenAndServe("localhost:8090", http.HandlerFunc(serveReverseProxy))
 }
 
@@ -33,7 +35,6 @@ func serveReverseProxy(res http.ResponseWriter, req *http.Request) {
 		return nil
 	}
 
-	// Update the headers to allow for SSL redirection
 	req.URL.Host = url.Host
 	req.URL.Scheme = url.Scheme
 	req.Host = url.Host
@@ -41,6 +42,7 @@ func serveReverseProxy(res http.ResponseWriter, req *http.Request) {
 	req.Header.Set("Host", url.Host)
 	req.Header.Del("Accept-Encoding")
 
-	// Note that ServeHttp is non blocking and uses a go routine under the hood
 	proxy.ServeHTTP(res, req)
+
+	log.Println("proxied", req.URL)
 }
