@@ -25,6 +25,9 @@ run-tests: install
 	(cd packages/core-web-generator && npm run test)
 	(cd packages/core-web-tests && npm run browserstack-runner)
 
+run-tests-e2e: build-pages
+	(cd ./.github/bin/browserstack-proxy && sh ./run-e2e.sh)
+
 watch-tests: install
 	(cd packages/core-web-tests && npm run watch)
 

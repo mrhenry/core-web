@@ -12,6 +12,7 @@
     "lib"
   ],
   "scripts": {
+    "browserstack-runner": "browserstack-runner",
     "build-html": "node lib/pages.js",
     "build-css": "node ./build-css.js",
     "build-js": "webpack",
