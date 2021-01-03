@@ -1,4 +1,4 @@
-name: pages
+name: Pages
 on:
   push:
     branches:
@@ -21,7 +21,6 @@ jobs:
       with:
         node-version: 15
 
-    - run: make install
     - run: make generate
     - run: make build-pages
 
@@ -65,7 +64,6 @@ jobs:
       with:
         node-version: 15
 
-    - run: make install
     - run: make build-pages-worker
 
     - name: publish
