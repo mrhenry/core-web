@@ -4,6 +4,7 @@ const fs = require("fs");
 const polyfillLibrary = require("polyfill-library");
 const sources = require("polyfill-library/lib/sources.js");
 const path = require("path");
+const coreWebDir = path.resolve(__dirname, "../../core-web");
 const modulesDir = path.resolve(__dirname, "../../core-web/modules");
 const helpersDir = path.resolve(__dirname, "../../core-web/helpers");
 const matchersDir = path.resolve(__dirname, "../../babel-plugin-core-web/matchers");
@@ -73,7 +74,7 @@ async function genAll() {
             providedByCoreWeb: false,
         });
     }
-    fs.writeFileSync(path.join(helpersDir, "__mapping.js"), `export const mapping = ${JSON.stringify(mapping, undefined, "  ")}`);
+    fs.writeFileSync(path.join(coreWebDir, "__mapping.js"), `export const mapping = ${JSON.stringify(mapping, undefined, "  ")}`);
     let knownBrowsers = [];
     mapping.forEach((feature) => {
         for (const browser in feature.browsers) {
@@ -83,7 +84,7 @@ async function genAll() {
         }
     });
     knownBrowsers.sort();
-    fs.writeFileSync(path.join(helpersDir, "__browsers.js"), `export const browsers = ${JSON.stringify(knownBrowsers, undefined, "  ")}`);
+    fs.writeFileSync(path.join(coreWebDir, "__browsers.js"), `export const browsers = ${JSON.stringify(knownBrowsers, undefined, "  ")}`);
     let knownEngines = [];
     mapping.forEach((feature) => {
         for (const engine in feature.engines) {
@@ -93,7 +94,7 @@ async function genAll() {
         }
     });
     knownEngines.sort();
-    fs.writeFileSync(path.join(helpersDir, "__engines.js"), `export const engines = ${JSON.stringify(knownEngines, undefined, "  ")}`);
+    fs.writeFileSync(path.join(coreWebDir, "__engines.js"), `export const engines = ${JSON.stringify(knownEngines, undefined, "  ")}`);
 }
 async function gen(feature, mapping, aliases) {
     const meta = await polyfillLibrary.describePolyfill(feature);

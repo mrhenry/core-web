@@ -37,6 +37,7 @@ $(packages): install
 	(cd $@ && npm version patch --no-git-tag-version)
 
 publish: install
-	@echo TODO
+	(cd ./packages/core-web && npm publish)
+	(cd ./packages/babel-plugin-core-web && npm publish)
 
 .PHONY: $(MAKECMDGOALS)

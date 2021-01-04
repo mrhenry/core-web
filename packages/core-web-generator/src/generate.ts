@@ -3,6 +3,7 @@ import * as polyfillLibrary from "polyfill-library";
 import * as sources from "polyfill-library/lib/sources.js";
 import * as path from "path";
 
+const coreWebDir = path.resolve(__dirname, "../../core-web");
 const modulesDir = path.resolve(__dirname, "../../core-web/modules");
 const helpersDir = path.resolve(__dirname, "../../core-web/helpers");
 const matchersDir = path.resolve(
@@ -94,7 +95,7 @@ async function genAll() {
 	}
 
 	fs.writeFileSync(
-		path.join(helpersDir, "__mapping.js"),
+		path.join(coreWebDir, "__mapping.js"),
 		`export const mapping = ${JSON.stringify(mapping, undefined, "  ")}`
 	);
 
@@ -110,7 +111,7 @@ async function genAll() {
 	knownBrowsers.sort();
 
 	fs.writeFileSync(
-		path.join(helpersDir, "__browsers.js"),
+		path.join(coreWebDir, "__browsers.js"),
 		`export const browsers = ${JSON.stringify(knownBrowsers, undefined, "  ")}`
 	);
 
@@ -126,7 +127,7 @@ async function genAll() {
 	knownEngines.sort();
 
 	fs.writeFileSync(
-		path.join(helpersDir, "__engines.js"),
+		path.join(coreWebDir, "__engines.js"),
 		`export const engines = ${JSON.stringify(knownEngines, undefined, "  ")}`
 	);
 }

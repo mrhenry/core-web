@@ -1,9 +1,9 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.required = exports.has = exports.get = exports.names = void 0;
-const __mapping_js_1 = require("./helpers/__mapping.js");
-const __browsers_js_1 = require("./helpers/__browsers.js");
-const __engines_js_1 = require("./helpers/__engines.js");
+const __mapping_js_1 = require("./__mapping.js");
+const __browsers_js_1 = require("./__browsers.js");
+const __engines_js_1 = require("./__engines.js");
 const semver = require("semver");
 const mapping = __mapping_js_1.mapping;
 const knownBrowsers = __browsers_js_1.browsers;

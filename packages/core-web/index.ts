@@ -1,6 +1,6 @@
-import { mapping as mappingJS } from "./helpers/__mapping.js";
-import { browsers as knownBrowsersJS } from "./helpers/__browsers.js";
-import { engines as knownEnginesJS } from "./helpers/__engines.js";
+import { mapping as mappingJS } from "./__mapping.js";
+import { browsers as knownBrowsersJS } from "./__browsers.js";
+import { engines as knownEnginesJS } from "./__engines.js";
 import * as semver from "semver";
 
 const mapping = mappingJS as Array<Feature>;
