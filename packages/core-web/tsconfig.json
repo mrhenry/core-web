@@ -21,9 +21,9 @@
 	"include": [
 		"types/**/*.ts",
 		"index.ts",
-		"./helpers/__browsers.js",
-		"./helpers/__engines.js",
-		"./helpers/__mapping.js",
+		"__browsers.js",
+		"__engines.js",
+		"__mapping.js",
 	],
 	"files": [
 		"index.ts"

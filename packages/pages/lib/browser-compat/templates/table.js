@@ -3,7 +3,7 @@ const headRowHTML = require('./table-head');
 const polyfillRowHTML = require('./table-row-polyfill');
 const nativeRowHTML = require('./table-row-native');
 const { nativeTableNotes, polyfillTableNotes } = require('./notes');
-const { engines } = require('@mrhenry/core-web/lib/helpers/__engines');
+const { engines } = require('@mrhenry/core-web/lib/__engines');
 const { browsersToEngines } = require('@mrhenry/core-web-generator/lib/browsers-to-engines/browsers-to-engines');
 const { coreWebBrowsers } = require('../browsers');
 
