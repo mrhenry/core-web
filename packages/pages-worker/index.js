@@ -12,14 +12,16 @@ addEventListener('fetch', event => {
  * @param {Request} request
  */
 async function handleRequest(request) {
-	if (request.url.pathname === '/.ua') {
+	const url = new URL(request.url);
+
+	if (url.pathname === '/.ua') {
 		const parseUA = (await uaParser).parse;
 		const ua = parseUA(request.headers.get('User-Agent') || '');
 		return new Response(JSON.stringify(ua), { headers: { 'content-type': 'application/json' } });
 	}
 
 	try {
-		const resp = await fetch('https://mrhenry.github.io/core-web' + new URL(request.url).pathname);
+		const resp = await fetch('https://mrhenry.github.io/core-web' + url.pathname);
 
 		let engine;
 		let possibleTargets = [];
