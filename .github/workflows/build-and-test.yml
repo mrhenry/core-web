@@ -41,3 +41,27 @@ jobs:
         uses: 'browserstack/github-actions/setup-local@master'
         with:
           local-testing: 'stop'
+
+  validate-pages-worker:
+    name: Validate Pages Worker
+    runs-on: ubuntu-latest
+    steps:
+    - name: check out
+      uses: actions/checkout@v2.3.2
+      with:
+        fetch-depth: 1
+
+    - name: setup node
+      uses: actions/setup-node@v2.1.2
+      with:
+        node-version: 15
+
+    - run: make build-pages-worker
+
+    - name: validate
+      uses: cloudflare/wrangler-action@1.3.0
+      with:
+        apiToken: ${{ secrets.CF_API_TOKEN }}
+        workingDirectory: 'packages/pages-worker'
+        publish: false
+        preCommands: wrangler build
