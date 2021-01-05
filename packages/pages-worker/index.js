@@ -1,7 +1,7 @@
 const parser = require('ua-parser-js');
 const semver = require('semver');
 const bcdBrowsers = require('./bcd-browsers.json');
-const parseUA = require('./vendor-ua-parser/ua_parser_wasm').parse;
+const uaParser = import('./vendor-ua-parser/ua_parser_wasm');
 
 addEventListener('fetch', event => {
 	event.respondWith(handleRequest(event.request))
@@ -13,6 +13,7 @@ addEventListener('fetch', event => {
  */
 async function handleRequest(request) {
 	if (request.url.pathname === '/.ua') {
+		const parseUA = (await uaParser).parse;
 		const ua = parseUA(request.headers.get('User-Agent') || '');
 		return new Response(JSON.stringify(ua), { headers: { 'content-type': 'application/json' } });
 	}
