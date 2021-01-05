@@ -64,3 +64,4 @@ jobs:
         apiToken: ${{ secrets.CF_API_TOKEN }}
         workingDirectory: 'packages/pages-worker'
         publish: false
+        preCommands: wrangler build
