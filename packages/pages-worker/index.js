@@ -1,6 +1,7 @@
 const parser = require('ua-parser-js');
 const semver = require('semver');
 const bcdBrowsers = require('./bcd-browsers.json');
+const parseUA = require('./vendor-ua-parser/ua_parser_wasm').parse;
 
 addEventListener('fetch', event => {
 	event.respondWith(handleRequest(event.request))
@@ -11,6 +12,11 @@ addEventListener('fetch', event => {
  * @param {Request} request
  */
 async function handleRequest(request) {
+	if (request.url.pathname === '/.ua') {
+		const ua = parseUA(request.headers.get('User-Agent') || '');
+		return new Response(JSON.stringify(ua), { headers: { 'content-type': 'application/json' } });
+	}
+
 	try {
 		const resp = await fetch('https://mrhenry.github.io/core-web' + new URL(request.url).pathname);
 
@@ -140,7 +146,7 @@ const targets = [
 		engines: {
 			"Blink": "30",
 			"Gecko": "26",
-			"Trident" : "7.0",
+			"Trident": "7.0",
 			"WebKit": "537.51",
 		},
 	},
@@ -150,7 +156,7 @@ const targets = [
 			"Blink": "26",
 			"Gecko": "10",
 			"Presto": "2.10",
-			"Trident" : "5.0",
+			"Trident": "5.0",
 			"WebKit": "534.30",
 		},
 	},
