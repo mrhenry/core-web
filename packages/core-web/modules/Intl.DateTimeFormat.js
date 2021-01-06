@@ -2371,10 +2371,28 @@ if (!("Intl"in self&&"DateTimeFormat"in self.Intl&&"formatToParts"in self.Intl.D
             hour: 'numeric',
         }).formatToParts(0)[2].type !== 'dayPeriod');
     }
+    /**
+     * Node 14's version of Intl.DateTimeFormat does not throw
+     * when dateStyle/timeStyle is used with other options.
+     * This was fixed in newer V8 versions
+     */
+    function hasUnthrownDateTimeStyleBug() {
+        try {
+            return !!new Intl.DateTimeFormat('en', {
+                dateStyle: 'short',
+                hour: 'numeric',
+            }).format(new Date(0));
+        }
+        catch (e) {
+            return false;
+        }
+    }
     function shouldPolyfill() {
         return (!('DateTimeFormat' in Intl) ||
             !('formatToParts' in Intl.DateTimeFormat.prototype) ||
+            !('formatRange' in Intl.DateTimeFormat.prototype) ||
             hasChromeLt71Bug() ||
+            hasUnthrownDateTimeStyleBug() ||
             !supportsDateStyle());
     }
 
