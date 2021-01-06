@@ -1,10 +1,12 @@
 import CreateMethodProperty from "@mrhenry/core-web/helpers/_ESAbstract.CreateMethodProperty";
 import IsCallable from "@mrhenry/core-web/helpers/_ESAbstract.IsCallable";
 (function(undefined) {
-if (!("document"in self&&"documentElement"in self.document&&"style"in self.document.documentElement&&"scrollBehavior"in document.documentElement.style||function(){try{var e=!1,t={top:1,left:0}
+if (!((function(){if("document"in self&&"documentElement"in self.document&&"style"in self.document.documentElement&&"scrollBehavior"in document.documentElement.style)return!0
+if(Element.prototype.scrollTo&&Element.prototype.scrollTo.toString().indexOf("[native code]")>-1)return!1
+try{var e=!1,t={top:1,left:0}
 Object.defineProperty(t,"behavior",{get:function(){return e=!0,"smooth"},enumerable:!0})
-var n=document.createElement("DIV"),o=document.createElement("DIV")
-return n.setAttribute("style","height: 1px; overflow: scroll;"),o.setAttribute("style","height: 2px; overflow: scroll;"),n.appendChild(o),n.scrollTo(t),e}catch(l){return!1}}()
+var o=document.createElement("DIV"),n=document.createElement("DIV")
+return o.setAttribute("style","height: 1px; overflow: scroll;"),n.setAttribute("style","height: 2px; overflow: scroll;"),o.appendChild(n),o.scrollTo(t),e}catch(r){return!1}})()
 )) {
 // smoothscroll
 (function (global, factory) {

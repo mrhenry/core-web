@@ -219,7 +219,7 @@ async function allDependencies(feature: string): Promise<Set<string>> {
 }
 
 function providedByBabel(f: string): boolean {
-	const p = /^(_(String|Array)?Iterator|_TypedArray|Function|Date|Math|Object|String|Number|(Weak)?(Map|Set)|Symbol|Array|RegExp|Promise|Reflect)($|\.)/;
+	const p = /^(_(String|Array)?Iterator|ArrayBuffer|Function|Date|Math|Object|String|Number|(Weak)?(Map|Set)|Symbol|Array|RegExp|Promise|Reflect)($|\.)/;
 	return p.test(f) || f.endsWith(".@@iterator");
 }
 

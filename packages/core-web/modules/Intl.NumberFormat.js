@@ -2739,6 +2739,7 @@ if (!("Intl"in self&&"NumberFormat"in self.Intl&&function(){try{new Intl.NumberF
       return internalSlots;
   }
 
+  var numberingSystemNames = names;
   var RESOLVED_OPTIONS_KEYS = [
       'locale',
       'numberingSystem',
@@ -2772,7 +2773,7 @@ if (!("Intl"in self&&"NumberFormat"in self.Intl&&function(){try{new Intl.NumberF
           availableLocales: NumberFormat.availableLocales,
           getDefaultLocale: NumberFormat.getDefaultLocale,
           currencyDigitsData: currencyDigitsData,
-          numberingSystemNames: names,
+          numberingSystemNames: numberingSystemNames,
       });
       var internalSlots = getInternalSlots(this);
       var dataLocale = internalSlots.dataLocale;
@@ -2886,6 +2887,18 @@ if (!("Intl"in self&&"NumberFormat"in self.Intl&&function(){try{new Intl.NumberF
           if (!NumberFormat.__defaultLocale) {
               NumberFormat.__defaultLocale = minimizedLocale;
           }
+      }
+  };
+  NumberFormat.__addUnitData = function __addUnitData(locale, unitsData) {
+      var _a = NumberFormat.localeData, _b = locale, existingData = _a[_b];
+      if (!existingData) {
+          throw new Error("Locale data for \"" + locale + "\" has not been loaded in NumberFormat. \nPlease __addLocaleData before adding additional unit data");
+      }
+      for (var unit in unitsData.simple) {
+          existingData.units.simple[unit] = unitsData.simple[unit];
+      }
+      for (var unit in unitsData.compound) {
+          existingData.units.compound[unit] = unitsData.compound[unit];
       }
   };
   NumberFormat.__defaultLocale = '';
