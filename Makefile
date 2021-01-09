@@ -16,10 +16,7 @@ build-tests: install
 build-pages: install
 	(cd packages/pages && npm run build)
 
-build-pages-worker: install
-	(cd packages/pages-worker && npm run build)
-
-build: install generate build-example build-tests build-pages build-pages-worker
+build: install generate build-example build-tests build-pages
 
 run-tests: install
 	(cd packages/core-web-generator && npm run test)

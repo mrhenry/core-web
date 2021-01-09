@@ -1,7 +1,7 @@
 if (process.env.GITHUB_ACTIONS) {
 	module.exports = [
 		{
-			name: '2020',
+			name: '2021',
 			webpackTarget: [
 				'web',
 				'browserslist:Chrome 87 or Firefox 83 or Safari 14'
@@ -17,9 +17,9 @@ if (process.env.GITHUB_ACTIONS) {
 				"WebKit": "610.1.28",
 			},
 		},
-		
+
 		{
-			name: '2018',
+			name: '2019',
 			webpackTarget: [
 				'web',
 				'browserslist:Chrome 71 or Edge 18 or Firefox 64 or Safari 12'
@@ -39,7 +39,7 @@ if (process.env.GITHUB_ACTIONS) {
 		},
 
 		{
-			name: '2016',
+			name: '2017',
 			webpackTarget: [
 				'web',
 				'browserslist:Chrome 51 or Edge 14 or Firefox 54 or Safari 10'
@@ -57,9 +57,9 @@ if (process.env.GITHUB_ACTIONS) {
 				"WebKit": "602.1.50",
 			},
 		},
-		
+
 		{
-			name: '2014',
+			name: '2015',
 			webpackTarget: [
 				'web',
 				'browserslist:Chrome 39 or Edge 12 or Firefox 34 or Safari 8'
@@ -77,9 +77,9 @@ if (process.env.GITHUB_ACTIONS) {
 				"WebKit": "538.35",
 			},
 		},
-		
+
 		{
-			name: '2013',
+			name: '2014',
 			webpackTarget: [
 				'web',
 				'browserslist:Chrome 31 or Firefox 26 or IE 11 or Safari 7 or Android 4.4'
@@ -98,9 +98,9 @@ if (process.env.GITHUB_ACTIONS) {
 				"WebKit": "537.51",
 			},
 		},
-		
+
 		{
-			name: '2011',
+			name: '2012',
 			webpackTarget: [
 				'web',
 				'browserslist:Chrome 17 or Firefox 10 or IE 9 or Opera 12 or Safari 5.1 or Android 4'
@@ -125,7 +125,7 @@ if (process.env.GITHUB_ACTIONS) {
 } else {
 	module.exports = [
 		{
-			name: '2020',
+			name: '2021',
 			webpackTarget: [
 				'web',
 				'browserslist:Chrome 87 or Firefox 83 or Safari 14'
