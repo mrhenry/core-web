@@ -1,0 +1,48 @@
+version: "3.7"
+services:
+  # Update this to the name of the service you want to work with in your docker-compose.yml file
+  toolbox:
+    image: gcr.io/hypnotic-surge-101511/toolbox:latest
+    user: vscode
+
+    volumes:
+      - .:/workspace:cached
+      - /var/run/docker.sock:/var/run/docker.sock
+      - "${HOME}/.config/gcloud:/home/vscode/.config/gcloud"
+      - "${HOME}/.config/vault-github:/home/vscode/.config/vault-github"
+      - "${HOME}/.config/gh:/home/vscode/.config/gh"
+      - "${HOME}/.docker:/home/vscode/.docker"
+      - "${HOME}/.kube:/home/vscode/.kube"
+      - "direnv:/home/vscode/.config/direnv"
+      - "vscode-extensions:/home/vscode/.vscode-server/extensions"
+      - "vscode-extensions-insiders:/home/vscode/.vscode-server-insiders/extensions"
+      - "go-path:/home/vscode/go"
+      - "yarn-cache:/home/vscode/.yarn/cache"
+      - "npm-cache:/home/vscode/.npm"
+      - "general-cache:/home/vscode/.cache"
+      - "terraform-cache:/home/vscode/.terraform.d"
+      - "packer-cache:/home/vscode/.packer.d"
+      - "direnv-state:/home/vscode/.local/share/direnv"
+      - "bash-history:/home/vscode/.local/share/history"
+
+    # Uncomment the next four lines if you will use a ptrace-based debugger like C++, Go, and Rust.
+    cap_add:
+      - SYS_PTRACE
+    security_opt:
+      - seccomp:unconfined
+
+    # Overrides default command so things don't shut down after the process ends.
+    command: /bin/sh -c "while sleep 1000; do :; done"
+
+volumes:
+  direnv:
+  general-cache:
+  go-path:
+  yarn-cache:
+  npm-cache:
+  terraform-cache:
+  packer-cache:
+  vscode-extensions:
+  vscode-extensions-insiders:
+  direnv-state:
+  bash-history:
