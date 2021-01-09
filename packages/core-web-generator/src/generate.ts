@@ -219,8 +219,9 @@ async function allDependencies(feature: string): Promise<Set<string>> {
 }
 
 function providedByBabel(f: string): boolean {
-	const p = /^(_(String|Array)?Iterator|ArrayBuffer|Function|Date|Math|Object|String|Number|(Weak)?(Map|Set)|Symbol|Array|RegExp|Promise|Reflect|URL|URLSeachParams|setTimeout|setInterval|queueMicroTask|DOMTokenList|NodeList)($|\.)/;
-	return p.test(f) || f.endsWith(".@@iterator");
+	const p = /^(_(String|Array)?Iterator|Function|Date|Math|Object|String|Number|(Weak)?(Map|Set)|Symbol|Array|RegExp|Promise|Reflect|URL|URLSeachParams|setTimeout|setInterval|setImmediate|queueMicrotask|DOMTokenList|NodeList)($|\.)/;
+	const typedArrays = /^(|ArrayBuffer|Int8Array|Uint8Array|Uint8ClampedArray|Int16Array|Uint16Array|Int32Array|Uint32Array|Float32Array|Float64Array)($|\.)/;
+	return p.test(f) || typedArrays.test(f) || f.endsWith(".@@iterator");
 }
 
 function providedByCoreWeb(f: string): boolean {
