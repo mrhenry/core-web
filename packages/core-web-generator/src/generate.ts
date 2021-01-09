@@ -219,7 +219,7 @@ async function allDependencies(feature: string): Promise<Set<string>> {
 }
 
 function providedByBabel(f: string): boolean {
-	const p = /^(_(String|Array)?Iterator|ArrayBuffer|Function|Date|Math|Object|String|Number|(Weak)?(Map|Set)|Symbol|Array|RegExp|Promise|Reflect)($|\.)/;
+	const p = /^(_(String|Array)?Iterator|ArrayBuffer|Function|Date|Math|Object|String|Number|(Weak)?(Map|Set)|Symbol|Array|RegExp|Promise|Reflect|URL|URLSeachParams|setTimeout|setInterval|queueMicroTask|DOMTokenList|NodeList)($|\.)/;
 	return p.test(f) || f.endsWith(".@@iterator");
 }
 
@@ -269,7 +269,7 @@ type StreamCache = {
 
 type StreamCacheDestination = {
 	write: (chunk: Buffer) => void,
-	end: () => void 
+	end: () => void
 }
 
 async function streamToString(stream: StreamCache) {
