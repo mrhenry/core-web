@@ -1283,28 +1283,32 @@ if (!("Intl"in self&&"DateTimeFormat"in self.Intl&&"formatToParts"in self.Intl.D
             var fieldName = TABLE_2_FIELDS_1[_i];
             if (dateFieldsPracticallyEqual && !patternContainsLargerDateField) {
                 if (fieldName === 'ampm') {
-                    var v1 = tm1.hour;
-                    var v2 = tm2.hour;
                     var rp = rangePatterns.ampm;
-                    if ((v1 > 11 && v2 < 11) || (v1 < 11 && v2 > 11)) {
-                        dateFieldsPracticallyEqual = false;
-                    }
                     if (rangePattern !== undefined && rp === undefined) {
                         patternContainsLargerDateField = true;
                     }
-                    rangePattern = rp;
+                    else {
+                        var v1 = tm1.hour;
+                        var v2 = tm2.hour;
+                        if ((v1 > 11 && v2 < 11) || (v1 < 11 && v2 > 11)) {
+                            dateFieldsPracticallyEqual = false;
+                        }
+                        rangePattern = rp;
+                    }
                 }
                 else {
-                    var v1 = tm1[fieldName];
-                    var v2 = tm2[fieldName];
                     var rp = rangePatterns[fieldName];
-                    if (!SameValue(v1, v2)) {
-                        dateFieldsPracticallyEqual = false;
-                    }
                     if (rangePattern !== undefined && rp === undefined) {
                         patternContainsLargerDateField = true;
                     }
-                    rangePattern = rp;
+                    else {
+                        var v1 = tm1[fieldName];
+                        var v2 = tm2[fieldName];
+                        if (!SameValue(v1, v2)) {
+                            dateFieldsPracticallyEqual = false;
+                        }
+                        rangePattern = rp;
+                    }
                 }
             }
         }
@@ -1319,9 +1323,17 @@ if (!("Intl"in self&&"DateTimeFormat"in self.Intl&&"formatToParts"in self.Intl.D
         var result = [];
         if (rangePattern === undefined) {
             rangePattern = rangePatterns.default;
+            /** IMPL DETAILS */
+            // Now we have to replace {0} & {1} with actual pattern
+            for (var _b = 0, _c = rangePattern.patternParts; _b < _c.length; _b++) {
+                var patternPart = _c[_b];
+                if (patternPart.pattern === '{0}' || patternPart.pattern === '{1}') {
+                    patternPart.pattern = pattern;
+                }
+            }
         }
-        for (var _b = 0, _c = rangePattern.patternParts; _b < _c.length; _b++) {
-            var rangePatternPart = _c[_b];
+        for (var _d = 0, _e = rangePattern.patternParts; _d < _e.length; _d++) {
+            var rangePatternPart = _e[_d];
             var source = rangePatternPart.source, pattern_1 = rangePatternPart.pattern;
             var z = void 0;
             if (source === "startRange" /* startRange */ ||
@@ -1333,8 +1345,8 @@ if (!("Intl"in self&&"DateTimeFormat"in self.Intl&&"formatToParts"in self.Intl.D
             }
             var patternParts = PartitionPattern(pattern_1);
             var partResult = FormatDateTimePattern(dtf, patternParts, z, implDetails);
-            for (var _d = 0, partResult_1 = partResult; _d < partResult_1.length; _d++) {
-                var r = partResult_1[_d];
+            for (var _f = 0, partResult_1 = partResult; _f < partResult_1.length; _f++) {
+                var r = partResult_1[_f];
                 r.source = source;
             }
             result = result.concat(partResult);
