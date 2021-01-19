@@ -1,6 +1,6 @@
 {
   "name": "@mrhenry/core-web-generator",
-  "version": "0.4.4",
+  "version": "0.4.5",
   "private": true,
   "scripts": {
     "clean": "rm -rf ./lib/",

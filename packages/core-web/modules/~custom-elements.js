@@ -1,3 +1,4 @@
+;(function(){ try { var _reflectConstructHack = Reflect.construct } catch(err) {} })();
 (function(){
 /*
 
