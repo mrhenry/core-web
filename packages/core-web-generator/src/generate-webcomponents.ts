@@ -267,10 +267,18 @@ async function generateShadyCSS(mapping: Array<Feature>) {
 }
 
 async function generateCustomElements(mapping: Array<Feature>) {
-	const src = fs.readFileSync(
+	let src = fs.readFileSync(
 		require.resolve("@webcomponents/custom-elements"),
 		"utf-8"
 	);
+
+	// Reflect.construct is a depedency from core-js needed when Sub/Superclasses are transpiled by Babel.
+	// Babel does not detect this correctly.
+	// Injecting usage of Reflect.construct fixes this.
+	const reflectHack = `;(function(){ try { var _reflectConstructHack = Reflect.construct } catch(err) {} })();\n`;
+
+	src = reflectHack + src;
+
 	fs.writeFileSync(path.join(modulesDir, "~custom-elements.js"), src);
 
 	const browsers = {
