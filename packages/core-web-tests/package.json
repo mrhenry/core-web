@@ -17,7 +17,7 @@
     "browserstack-runner": "^0.9.4",
     "core-js": "^3.8.2",
     "eslint": "^7.18.0",
-    "webpack": "^5.15.0",
+    "webpack": "^5.17.0",
     "webpack-cli": "^4.3.0"
   }
 }
