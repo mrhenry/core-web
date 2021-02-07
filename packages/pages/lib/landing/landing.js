@@ -77,7 +77,7 @@ function generate() {
 			</div>
 		</div>
 
-		<div class="polyfill-notification">
+		<div class="polyfill-notification" style="display: none;">
 			<input
 				aria-hidden="true"
 				class="u-visually-hidden"

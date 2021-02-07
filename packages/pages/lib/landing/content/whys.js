@@ -35,6 +35,13 @@ This makes it easier to report and debug issues.
 			content: html`
 You can add your safeguards and only update core-web when all your requirements are met.
 `.trim()
+		},
+		{
+			title: 'Avoid conflicting polyfills',
+			content: html`
+Core JS and Polyfill.io have overlapping polyfills.
+We make sure you only get a single polyfill for each feature.
+`.trim()
 		}
 	]
 }

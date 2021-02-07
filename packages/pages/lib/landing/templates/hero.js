@@ -16,7 +16,10 @@ module.exports = function hero() {
 					</p>
 				</div>
 
-				<div class="hero__picture-wrapper">
+				<div>
+					<!-- placeholder -->
+				</div>
+				<!-- <div class="hero__picture-wrapper">
 					<div class="hero__picture-placer">
 						<picture class="hero__picture">
 							<source
@@ -31,7 +34,7 @@ module.exports = function hero() {
 							>
 						</picture>
 					</div>
-				</div>
+				</div> -->
 			</div>
 		</section>
 	`;

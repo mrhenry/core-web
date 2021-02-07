@@ -8,7 +8,7 @@ function renderMilestones(milestones) {
 	milestones.forEach((milestone, index) => {
 		if ('current' === milestone.type && !hasCurrent) {
 			hasCurrent = true;
-			output += html`<h4 class="roadmap__future">Where we are</h4>`;
+			output += html`<h4 class="roadmap__future" style="display: none;">Where we are</h4>`;
 		}
 
 		// if ('future' === milestone.type && !hasFuture) {
