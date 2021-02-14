@@ -14,6 +14,6 @@
     "ua-parser-js": "^0.7.23"
   },
   "devDependencies": {
-    "@mdn/browser-compat-data": "^3.0.6"
+    "@mdn/browser-compat-data": "^3.1.0"
   }
 }
