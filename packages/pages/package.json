@@ -23,8 +23,8 @@
     "dev-server": "cd ./dist && npx http-server"
   },
   "dependencies": {
-    "@babel/core": "^7.12.10",
-    "@babel/preset-env": "^7.12.13",
+    "@babel/core": "^7.12.16",
+    "@babel/preset-env": "^7.12.16",
     "@mdn/browser-compat-data": "^3.1.0",
     "@mrhenry/babel-plugin-core-web": "^0.4.0",
     "@mrhenry/core-web": "^0.4.0",
@@ -33,10 +33,10 @@
     "core-js": "^3.8.2",
     "cssnano": "^4.1.10",
     "polyfill-library": "^3.102.0",
-    "postcss": "^8.2.5",
+    "postcss": "^8.2.6",
     "postcss-import": "^14.0.0",
     "postcss-preset-env": "^6.7.0",
-    "webpack": "^5.21.1",
+    "webpack": "^5.21.2",
     "webpack-cli": "^4.5.0"
   }
 }
