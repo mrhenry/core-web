@@ -101,12 +101,12 @@
 			</thead>
 			<tbody>
 				<tr><td><span title="atob">polyfill-library</span></td><td>-</td><td>-</td><td>-</td><td>-</td><td><10</td><td>-</td><td>-</td><td>-</td></tr>
-				<tr><td><span title="atob">native</span></td><td>≤37</td><td>4</td><td>12</td><td><span>1</span><br><span title="<code>atob()</code> ignores all space characters in the argument to comply with the latest HTML5 spec (see <a href='https://bugzil.la/711180'>bug 711180</a>)."><span>27</span> ⓘ</span><br><span title="<code>atob()</code> now defined on <code><A href='https://developer.mozilla.org/docs/Web/API/WindowOrWorkerGlobalScope'>WindowOrWorkerGlobalScope</a></code> mixin."><span>57</span> ⓘ</span></td><td>10</td><td>10.5</td><td>3</td><td>1</td></tr>
+				<tr><td><span title="atob">native</span></td><td>≤37</td><td>4</td><td>12</td><td><span>1</span><br><span title="<code>atob()</code> ignores all space characters in the argument to comply with the latest HTML5 spec (see <a href='https://bugzil.la/711180'>bug 711180</a>)."><span>27</span> ⓘ</span></td><td>10</td><td>10.5</td><td>3</td><td>1</td></tr>
 			</tbody>
 		</table>
 
 		<div class="compat-table-notes">
-			<h3>mdn notes : </h3><p>firefox 27 : <code>atob()</code> ignores all space characters in the argument to comply with the latest HTML5 spec (see <a href='https://bugzil.la/711180'>bug 711180</a>).</p><p>firefox 57 : <code>atob()</code> now defined on <code><A href='https://developer.mozilla.org/docs/Web/API/WindowOrWorkerGlobalScope'>WindowOrWorkerGlobalScope</a></code> mixin.</p>
+			<h3>mdn notes : </h3><p>firefox 27 : <code>atob()</code> ignores all space characters in the argument to comply with the latest HTML5 spec (see <a href='https://bugzil.la/711180'>bug 711180</a>).</p>
 			
 		</div>
 
@@ -116,7 +116,7 @@
 			</thead>
 			<tbody>
 				<tr><td>polyfill-library</td><td>-</td><td>-</td><td>-</td><td>-</td><td>4.0 - 5.0</td><td>-</td></tr>
-				<tr><td>native</td><td>-</td><td>12</td><td>57</td><td>2.5</td><td>6.0</td><td>525.26</td></tr>
+				<tr><td>native</td><td>-</td><td>12</td><td>27</td><td>2.5</td><td>6.0</td><td>525.26</td></tr>
 			</tbody>
 		</table>
 		
@@ -941,12 +941,12 @@
 			</thead>
 			<tbody>
 				<tr><td><span title="document.querySelector">polyfill-library</span></td><td>-</td><td>-</td><td>-</td><td>-</td><td>6 - 8</td><td>-</td><td>-</td><td>-</td></tr>
-				<tr><td><span title="Document.querySelector">native</span></td><td>1</td><td>1</td><td>12</td><td>3.5</td><td>8</td><td>10</td><td>3.2</td><td>3</td></tr>
+				<tr><td><span title="Document.querySelector">native</span></td><td>1</td><td>1</td><td>12</td><td>3.5</td><td><span>9</span><br><span title="<code>querySelectorAll()</code> is supported, but only for CSS 2.1 selectors."><span>8</span> ⓘ</span></td><td>10</td><td>3.1</td><td>2</td></tr>
 			</tbody>
 		</table>
 
 		<div class="compat-table-notes">
-			
+			<h3>mdn notes : </h3><p>ie 8 : <code>querySelectorAll()</code> is supported, but only for CSS 2.1 selectors.</p>
 			
 		</div>
 
@@ -956,7 +956,7 @@
 			</thead>
 			<tbody>
 				<tr><td>polyfill-library</td><td>-</td><td>-</td><td>-</td><td>-</td><td>4.0 - 4.0</td><td>-</td></tr>
-				<tr><td>native</td><td>-</td><td>12</td><td>1.9.1</td><td>2.6</td><td>4.0</td><td>531.21</td></tr>
+				<tr><td>native</td><td>-</td><td>12</td><td>1.9.1</td><td>2.6</td><td>4.0</td><td>525.18</td></tr>
 			</tbody>
 		</table>
 		
@@ -969,12 +969,12 @@
 			</thead>
 			<tbody>
 				<tr><td><span title="document.visibilityState">polyfill-library</span></td><td>4.4 - *</td><td>14 - 32</td><td>-</td><td>10 - 17</td><td>-</td><td>15 - 19</td><td>4</td><td>-</td></tr>
-				<tr><td><span title="Document.visibilityState">native</span></td><td>4.4.3</td><td><span>33</span><br><span>13</span></td><td>12</td><td><span>18</span><br><span>10</span> - <span style="color:red;">52</span></td><td>10</td><td><span title="Doesn't fire the <code>visibilitychange</code> event when the browser window is minimized, nor when <code>hidden</code> is set to true.">12.1 ⓘ</span></td><td>6.1</td><td>7</td></tr>
+				<tr><td><span title="Document.visibilityState">native</span></td><td><span>4.4.3</span><br><span>≤37</span></td><td><span>33</span><br><span>13</span></td><td>12</td><td><span>18</span><br><span>10</span> - <span style="color:red;">52</span></td><td>10</td><td><span>20</span><br><span>15</span><br><span>12.1</span> - <span style="color:red;">15</span></td><td>6.1</td><td>7</td></tr>
 			</tbody>
 		</table>
 
 		<div class="compat-table-notes">
-			<h3>mdn notes : </h3><p>opera 12.1 : Doesn't fire the <code>visibilitychange</code> event when the browser window is minimized, nor when <code>hidden</code> is set to true.</p>
+			
 			
 		</div>
 
@@ -1013,6 +1013,62 @@
 			<tbody>
 				<tr><td>polyfill-library</td><td>-</td><td>-</td><td>1.7 - 1.9.2</td><td>1 - 2.6</td><td>4.0 - 5.0</td><td>85 - 531.21</td></tr>
 				<tr><td>native</td><td>-</td><td>12</td><td>1.8</td><td>1</td><td>5.0</td><td>525.26</td></tr>
+			</tbody>
+		</table>
+		
+	
+		<h3 id="DocumentFragment.prototype.append" class="compat-table-header"><a href="#DocumentFragment.prototype.append">DocumentFragment.prototype.append</a></h3>
+		
+		<table class="compat-table">
+			<thead>
+				<tr><th><a href="https://developer.mozilla.org/docs/Web/API/DocumentFragment/append" title="DocumentFragment.prototype.append" target="_blank">MDN</a></th><th>android</th><th>chrome</th><th>edge</th><th>firefox</th><th>ie</th><th>opera</th><th>safari</th><th>ios_saf</th></tr>
+			</thead>
+			<tbody>
+				<tr><td><span title="DocumentFragment.prototype.append">polyfill-library</span></td><td>*</td><td><54</td><td><17</td><td><49</td><td>8 - *</td><td><39</td><td><10</td><td><10</td></tr>
+				<tr><td><span title="DocumentFragment.prototype.append">native</span></td><td>54</td><td>54</td><td>17</td><td>49</td><td>-</td><td>41</td><td>10</td><td>10</td></tr>
+			</tbody>
+		</table>
+
+		<div class="compat-table-notes">
+			
+			
+		</div>
+
+		<table class="compat-table">
+			<thead>
+				<tr><th></th><th>Blink</th><th>EdgeHTML</th><th>Gecko</th><th>Presto</th><th>Trident</th><th>WebKit</th></tr>
+			</thead>
+			<tbody>
+				<tr><td>polyfill-library</td><td>28 - 53</td><td>12 - 16</td><td>1.7 - 48</td><td>>= 1</td><td>>= 4.0</td><td>85 - 601.5.17</td></tr>
+				<tr><td>native</td><td>54</td><td>17</td><td>49</td><td>-</td><td>-</td><td>603.2.1</td></tr>
+			</tbody>
+		</table>
+		
+	
+		<h3 id="DocumentFragment.prototype.prepend" class="compat-table-header"><a href="#DocumentFragment.prototype.prepend">DocumentFragment.prototype.prepend</a></h3>
+		
+		<table class="compat-table">
+			<thead>
+				<tr><th><a href="https://developer.mozilla.org/docs/Web/API/DocumentFragment/prepend" title="DocumentFragment.prototype.prepend" target="_blank">MDN</a></th><th>android</th><th>chrome</th><th>edge</th><th>firefox</th><th>ie</th><th>opera</th><th>safari</th><th>ios_saf</th></tr>
+			</thead>
+			<tbody>
+				<tr><td><span title="DocumentFragment.prototype.prepend">polyfill-library</span></td><td>*</td><td><54</td><td><17</td><td><49</td><td>8 - *</td><td><39</td><td><10</td><td><10</td></tr>
+				<tr><td><span title="DocumentFragment.prototype.prepend">native</span></td><td>54</td><td>54</td><td>17</td><td>49</td><td>-</td><td>41</td><td>10</td><td>10</td></tr>
+			</tbody>
+		</table>
+
+		<div class="compat-table-notes">
+			
+			
+		</div>
+
+		<table class="compat-table">
+			<thead>
+				<tr><th></th><th>Blink</th><th>EdgeHTML</th><th>Gecko</th><th>Presto</th><th>Trident</th><th>WebKit</th></tr>
+			</thead>
+			<tbody>
+				<tr><td>polyfill-library</td><td>28 - 53</td><td>12 - 16</td><td>1.7 - 48</td><td>>= 1</td><td>>= 4.0</td><td>85 - 601.5.17</td></tr>
+				<tr><td>native</td><td>54</td><td>17</td><td>49</td><td>-</td><td>-</td><td>603.2.1</td></tr>
 			</tbody>
 		</table>
 		
@@ -1069,6 +1125,34 @@
 			<tbody>
 				<tr><td>polyfill-library</td><td>-</td><td>-</td><td>-</td><td>-</td><td>4.0 - 4.0</td><td>-</td></tr>
 				<tr><td>native</td><td>-</td><td>12</td><td>1.8</td><td>1</td><td>-</td><td>522.11</td></tr>
+			</tbody>
+		</table>
+		
+	
+		<h3 id="Element.prototype.append" class="compat-table-header"><a href="#Element.prototype.append">Element.prototype.append</a></h3>
+		
+		<table class="compat-table">
+			<thead>
+				<tr><th><a href="https://developer.mozilla.org/docs/Web/API/Element/append" title="Element.prototype.append" target="_blank">MDN</a></th><th>android</th><th>chrome</th><th>edge</th><th>firefox</th><th>ie</th><th>opera</th><th>safari</th><th>ios_saf</th></tr>
+			</thead>
+			<tbody>
+				<tr><td><span title="Element.prototype.append">polyfill-library</span></td><td><5</td><td><54</td><td><17</td><td><49</td><td>6 - *</td><td><39</td><td><10</td><td><10</td></tr>
+				<tr><td><span title="Element.prototype.append">native</span></td><td>54</td><td>54</td><td>17</td><td>49</td><td>-</td><td>41</td><td>10</td><td>10</td></tr>
+			</tbody>
+		</table>
+
+		<div class="compat-table-notes">
+			
+			
+		</div>
+
+		<table class="compat-table">
+			<thead>
+				<tr><th></th><th>Blink</th><th>EdgeHTML</th><th>Gecko</th><th>Presto</th><th>Trident</th><th>WebKit</th></tr>
+			</thead>
+			<tbody>
+				<tr><td>polyfill-library</td><td>28 - 53</td><td>12 - 16</td><td>1.7 - 48</td><td>>= 1</td><td>>= 4.0</td><td>85 - 601.5.17</td></tr>
+				<tr><td>native</td><td>54</td><td>17</td><td>49</td><td>-</td><td>-</td><td>603.2.1</td></tr>
 			</tbody>
 		</table>
 		
@@ -1155,6 +1239,90 @@ Alternate name : mozMatchesSelector"><span>3.6</span> ⓘ</span></td><td><span t
 			<tbody>
 				<tr><td>polyfill-library</td><td>28 - 33</td><td>12 - 14</td><td>1.7 - 33</td><td>>= 1</td><td>>= 4.0</td><td>522.11 - 537.71</td></tr>
 				<tr><td>native</td><td>-</td><td>12</td><td>1.9.2</td><td>2.9</td><td>5.0</td><td>534.48</td></tr>
+			</tbody>
+		</table>
+		
+	
+		<h3 id="Element.prototype.nextElementSibling" class="compat-table-header"><a href="#Element.prototype.nextElementSibling">Element.prototype.nextElementSibling</a></h3>
+		
+		<table class="compat-table">
+			<thead>
+				<tr><th><a href="https://developer.mozilla.org/docs/Web/API/Element/nextElementSibling" title="Element.prototype.nextElementSibling" target="_blank">MDN</a></th><th>android</th><th>chrome</th><th>edge</th><th>firefox</th><th>ie</th><th>opera</th><th>safari</th><th>ios_saf</th></tr>
+			</thead>
+			<tbody>
+				<tr><td><span title="Element.prototype.nextElementSibling">polyfill-library</span></td><td>-</td><td><4</td><td><12</td><td><3.5</td><td><9</td><td><10</td><td><4</td><td>-</td></tr>
+				<tr><td><span title="Element.prototype.nextElementSibling">native</span></td><td>≤37</td><td>1</td><td>12</td><td>3.5</td><td>9</td><td>10</td><td>4</td><td>3</td></tr>
+			</tbody>
+		</table>
+
+		<div class="compat-table-notes">
+			
+			
+		</div>
+
+		<table class="compat-table">
+			<thead>
+				<tr><th></th><th>Blink</th><th>EdgeHTML</th><th>Gecko</th><th>Presto</th><th>Trident</th><th>WebKit</th></tr>
+			</thead>
+			<tbody>
+				<tr><td>polyfill-library</td><td>-</td><td>-</td><td>1.7 - 1.9</td><td>1 - 2.1</td><td>4.0 - 4.0</td><td>85 - 525.26</td></tr>
+				<tr><td>native</td><td>-</td><td>12</td><td>1.9.1</td><td>2.6</td><td>5.0</td><td>531.21</td></tr>
+			</tbody>
+		</table>
+		
+	
+		<h3 id="Element.prototype.prepend" class="compat-table-header"><a href="#Element.prototype.prepend">Element.prototype.prepend</a></h3>
+		
+		<table class="compat-table">
+			<thead>
+				<tr><th><a href="https://developer.mozilla.org/docs/Web/API/Element/prepend" title="Element.prototype.prepend" target="_blank">MDN</a></th><th>android</th><th>chrome</th><th>edge</th><th>firefox</th><th>ie</th><th>opera</th><th>safari</th><th>ios_saf</th></tr>
+			</thead>
+			<tbody>
+				<tr><td><span title="Element.prototype.prepend">polyfill-library</span></td><td><5</td><td><54</td><td><17</td><td><49</td><td>6 - *</td><td><39</td><td><10</td><td><10</td></tr>
+				<tr><td><span title="Element.prototype.prepend">native</span></td><td>54</td><td>54</td><td>17</td><td>49</td><td>-</td><td>41</td><td>10</td><td>10</td></tr>
+			</tbody>
+		</table>
+
+		<div class="compat-table-notes">
+			
+			
+		</div>
+
+		<table class="compat-table">
+			<thead>
+				<tr><th></th><th>Blink</th><th>EdgeHTML</th><th>Gecko</th><th>Presto</th><th>Trident</th><th>WebKit</th></tr>
+			</thead>
+			<tbody>
+				<tr><td>polyfill-library</td><td>28 - 53</td><td>12 - 16</td><td>1.7 - 48</td><td>>= 1</td><td>>= 4.0</td><td>85 - 601.5.17</td></tr>
+				<tr><td>native</td><td>54</td><td>17</td><td>49</td><td>-</td><td>-</td><td>603.2.1</td></tr>
+			</tbody>
+		</table>
+		
+	
+		<h3 id="Element.prototype.previousElementSibling" class="compat-table-header"><a href="#Element.prototype.previousElementSibling">Element.prototype.previousElementSibling</a></h3>
+		
+		<table class="compat-table">
+			<thead>
+				<tr><th><a href="https://developer.mozilla.org/docs/Web/API/Element/previousElementSibling" title="Element.prototype.previousElementSibling" target="_blank">MDN</a></th><th>android</th><th>chrome</th><th>edge</th><th>firefox</th><th>ie</th><th>opera</th><th>safari</th><th>ios_saf</th></tr>
+			</thead>
+			<tbody>
+				<tr><td><span title="Element.prototype.previousElementSibling">polyfill-library</span></td><td>-</td><td><4</td><td><12</td><td><3.5</td><td><9</td><td><10</td><td><4</td><td>-</td></tr>
+				<tr><td><span title="Element.prototype.previousElementSibling">native</span></td><td>≤37</td><td>1</td><td>12</td><td>3.5</td><td>9</td><td>10</td><td>4</td><td>3</td></tr>
+			</tbody>
+		</table>
+
+		<div class="compat-table-notes">
+			
+			
+		</div>
+
+		<table class="compat-table">
+			<thead>
+				<tr><th></th><th>Blink</th><th>EdgeHTML</th><th>Gecko</th><th>Presto</th><th>Trident</th><th>WebKit</th></tr>
+			</thead>
+			<tbody>
+				<tr><td>polyfill-library</td><td>-</td><td>-</td><td>1.7 - 1.9</td><td>1 - 2.1</td><td>4.0 - 4.0</td><td>85 - 525.26</td></tr>
+				<tr><td>native</td><td>-</td><td>12</td><td>1.9.1</td><td>2.6</td><td>5.0</td><td>531.21</td></tr>
 			</tbody>
 		</table>
 		
@@ -1337,12 +1505,12 @@ No support for <code>smooth</code> behavior or <code>center</code> options.">5 �
 			</thead>
 			<tbody>
 				<tr><td><span title="fetch">polyfill-library</span></td><td><67</td><td><66</td><td><16</td><td><57</td><td>*</td><td><53</td><td><12</td><td><12</td></tr>
-				<tr><td><span title="fetch">native</span></td><td>42</td><td>42</td><td>14</td><td><span>39</span><br><span>34</span><br><span title="<code>fetch()</code> now defined on <code><a href='https://developer.mozilla.org/docs/Web/API/WindowOrWorkerGlobalScope'>WindowOrWorkerGlobalScope</a></code> mixin."><span>52</span> ⓘ</span></td><td>-</td><td><span>29</span><br><span>28</span></td><td>10.1</td><td>10.3</td></tr>
+				<tr><td><span title="fetch">native</span></td><td>42</td><td>42</td><td>14</td><td>39</td><td>-</td><td>29</td><td>10.1</td><td>10.3</td></tr>
 			</tbody>
 		</table>
 
 		<div class="compat-table-notes">
-			<h3>mdn notes : </h3><p>firefox 52 : <code>fetch()</code> now defined on <code><a href='https://developer.mozilla.org/docs/Web/API/WindowOrWorkerGlobalScope'>WindowOrWorkerGlobalScope</a></code> mixin.</p>
+			
 			
 		</div>
 
@@ -1352,7 +1520,7 @@ No support for <code>smooth</code> behavior or <code>center</code> options.">5 �
 			</thead>
 			<tbody>
 				<tr><td>polyfill-library</td><td>28 - 65</td><td>12 - 15</td><td>1.7 - 56</td><td>>= 1</td><td>>= 4.0</td><td>85 - 605.1.33</td></tr>
-				<tr><td>native</td><td>42</td><td>14</td><td>52</td><td>-</td><td>-</td><td>603.2.1</td></tr>
+				<tr><td>native</td><td>42</td><td>14</td><td>39</td><td>-</td><td>-</td><td>603.2.1</td></tr>
 			</tbody>
 		</table>
 		
@@ -2798,7 +2966,7 @@ In Firefox 60 the accuracy was increased to 1 millisecond.">15 ⓘ</span></td><t
 		
 	
 
-				<pre><code style="font-size:10px;">Last updated : Sun Feb 21 2021 08:08:26 GMT+0000 (Coordinated Universal Time)</code></pre>
+				<pre><code style="font-size:10px;">Last updated : Sun Feb 21 2021 08:31:35 GMT+0000 (Coordinated Universal Time)</code></pre>
 			</div>
 		</div>
 	</main>
