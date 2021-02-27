@@ -17,6 +17,8 @@ function browsersToEngines(browsers) {
         // "op_mini": "opera_android",
         "safari": "safari",
         "ios_saf": "safari_ios",
+        // "ios_chr": "safari_ios",
+        // "samsung_mob": "samsunginternet_android",
     };
     // Find all version ranges by browser + engine.
     for (const browserName in browsers) {
