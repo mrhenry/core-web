@@ -3,8 +3,7 @@ updates:
 - package-ecosystem: "npm"
   directory: "/"
   schedule:
-    interval: "weekly"
-    day: "sunday"
+    interval: daily
     time: "01:00"
     timezone: "Europe/Brussels"
   open-pull-requests-limit: 10
@@ -13,3 +12,14 @@ updates:
   - fd
   versioning-strategy: increase
   rebase-strategy: disabled
+- package-ecosystem: "github-actions"
+  directory: "/"
+  schedule:
+    interval: daily
+    time: "01:00"
+    timezone: Europe/Brussels
+  open-pull-requests-limit: 10
+  rebase-strategy: disabled
+  reviewers:
+  - romainmenke
+  - fd
