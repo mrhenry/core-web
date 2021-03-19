@@ -12,7 +12,7 @@
     "test": "__tests__"
   },
   "dependencies": {
-    "@mdn/browser-compat-data": "^3.2.0",
+    "@mdn/browser-compat-data": "^3.2.1",
     "@webcomponents/custom-elements": "^1.4.3",
     "@webcomponents/shadycss": "^1.10.2",
     "@webcomponents/shadydom": "^1.8.0",
