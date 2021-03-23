@@ -10,7 +10,7 @@
     "install-wrangler": "npm install -g @cloudflare/wrangler"
   },
   "dependencies": {
-    "semver": "^7.3.4",
+    "semver": "^7.3.5",
     "ua-parser-js": "^0.7.24"
   },
   "devDependencies": {
