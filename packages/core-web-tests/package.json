@@ -9,15 +9,15 @@
     "browserstack-runner": "browserstack-runner"
   },
   "devDependencies": {
-    "@babel/core": "^7.13.10",
+    "@babel/core": "^7.13.13",
     "@babel/preset-env": "^7.13.12",
     "@mrhenry/babel-plugin-core-web": "^0.4.0",
     "@mrhenry/core-web": "^0.4.0",
     "babel-loader": "^8.2.2",
     "browserstack-runner": "^0.9.4",
     "core-js": "^3.9.1",
-    "eslint": "^7.22.0",
+    "eslint": "^7.23.0",
     "webpack": "^5.28.0",
-    "webpack-cli": "^4.5.0"
+    "webpack-cli": "^4.6.0"
   }
 }
