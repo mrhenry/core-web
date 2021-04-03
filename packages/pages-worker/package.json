@@ -11,7 +11,7 @@
   },
   "dependencies": {
     "semver": "^7.3.5",
-    "ua-parser-js": "^0.7.26"
+    "ua-parser-js": "^0.7.27"
   },
   "devDependencies": {
     "@mdn/browser-compat-data": "^3.2.3"
