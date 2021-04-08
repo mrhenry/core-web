@@ -30,13 +30,13 @@
     "@mrhenry/core-web": "^0.4.0",
     "babel-loader": "^8.2.2",
     "browserstack-runner": "^0.9.4",
-    "core-js": "^3.10.0",
+    "core-js": "^3.10.1",
     "cssnano": "^4.1.11",
     "polyfill-library": "^3.104.0",
     "postcss": "^8.2.9",
     "postcss-import": "^14.0.1",
     "postcss-preset-env": "^6.7.0",
-    "webpack": "^5.30.0",
+    "webpack": "^5.31.0",
     "webpack-cli": "^4.6.0"
   }
 }
