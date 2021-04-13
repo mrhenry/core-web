@@ -31,7 +31,7 @@
     "babel-loader": "^8.2.2",
     "browserstack-runner": "^0.9.4",
     "core-js": "^3.10.1",
-    "cssnano": "^5.0.0",
+    "cssnano": "^5.0.1",
     "polyfill-library": "^3.104.0",
     "postcss": "^8.2.10",
     "postcss-import": "^14.0.1",
