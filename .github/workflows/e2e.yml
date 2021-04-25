@@ -5,6 +5,9 @@ on:
     - cron: '0 22 * * *'
   workflow_dispatch:
 
+concurrency: 
+  group: browserstack-test
+
 jobs:
  e2e:
     name: 'E2E'
