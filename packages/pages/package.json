@@ -33,7 +33,7 @@
     "core-js": "^3.11.3",
     "cssnano": "^5.0.2",
     "polyfill-library": "^3.104.0",
-    "postcss": "^8.2.13",
+    "postcss": "^8.2.14",
     "postcss-import": "^14.0.1",
     "postcss-preset-env": "^6.7.0",
     "webpack": "^5.36.2",
