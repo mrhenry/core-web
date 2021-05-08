@@ -24,7 +24,7 @@ function renderWhyItems(items) {
 
 module.exports = function why(whys) {
 	return html`
-		<section class="why">
+		<section class="why" id="why">
 			<header class="why__header">
 				<h2>
 					Why use <em>core-web</em>?
