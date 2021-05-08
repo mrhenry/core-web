@@ -1,7 +1,6 @@
 const parser = require('ua-parser-js');
 const semver = require('semver');
 const bcdBrowsers = require('./bcd-browsers.json');
-const uaParser = import('./vendor-ua-parser/ua_parser_wasm');
 
 addEventListener('fetch', event => {
 	event.respondWith(handleRequest(event.request))
@@ -12,6 +11,8 @@ addEventListener('fetch', event => {
  * @param {Request} request
  */
 async function handleRequest(request) {
+	const uaParser = import('./vendor-ua-parser/ua_parser_wasm');
+
 	const url = new URL(request.url);
 
 	if (url.pathname === '/.ua') {
@@ -21,7 +22,7 @@ async function handleRequest(request) {
 	}
 
 	try {
-		const resp = await fetch('https://mrhenry.github.io/core-web' + url.pathname);
+		const upstreamResponse = await fetch('https://mrhenry.github.io/core-web' + url.pathname);
 
 		let engine;
 		let possibleTargets = [];
@@ -65,7 +66,7 @@ async function handleRequest(request) {
 			possibleTargets = targets.filter((target) => { return target.name === '2016' });
 		}
 
-		return new HTMLRewriter()
+		const resp = new HTMLRewriter()
 			.on('meta[name="ua-targets"]', {
 				element(element) {
 					const buildTargets = (element.getAttribute('content') || '').split(' ');
@@ -102,7 +103,22 @@ async function handleRequest(request) {
 					}
 				}
 			})
-			.transform(resp);
+			.transform(upstreamResponse);
+		
+		
+		if (/([-a-zA-Z0-9]+)\.([a-f0-9]{20})\.(.+?)\.js$/.test(url.pathname)) { // index.b155b505505e529f8a86.2020.js
+			resp.headers.set('cache-control', 'public, max-age=31536000, immutable');
+		}
+
+		if (/([-a-zA-Z0-9]+)\.([a-f0-9]{20})\.(.+?)\.css$/.test(url.pathname)) { // index.d203129fd72032c3ca2e.2020.css
+			resp.headers.set('cache-control', 'public, max-age=31536000, immutable');
+		}
+
+		if (/\.woff$/.test(url.pathname) || /\.woff2$/.test(url.pathname)) { // Atkinson-Hyperlegible-Bold-102.woff | Atkinson-Hyperlegible-Bold-102.woff2
+			resp.headers.set('cache-control', 'public, max-age=31536000, immutable');
+		}
+
+		return resp;
 	} catch (error) {
 		return new Response(error.message);
 	}

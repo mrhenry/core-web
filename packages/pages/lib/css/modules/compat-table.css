@@ -7,6 +7,17 @@
 	background-color: #dde4ff;
 }
 
+@media (prefers-color-scheme: dark) {
+	.compat-table td+td {
+		background-color: #25443d;
+		border: 1px solid #ddd;
+	}
+
+	.compat-table tr+tr>td+td {
+		background-color: #313856;
+	}
+}
+
 .compat-table-header a {
 	text-decoration: none;
 	color: currentColor;

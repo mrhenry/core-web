@@ -12,12 +12,14 @@ const generate_webcomponents_1 = require("./generate-webcomponents");
 const browsers_to_engines_1 = require("./browsers-to-engines/browsers-to-engines");
 genAll();
 async function genAll() {
-    fs.rmdirSync(modulesDir, {
-        recursive: true
+    fs.rmSync(modulesDir, {
+        recursive: true,
+        force: true,
     });
     fs.mkdirSync(modulesDir);
-    fs.rmdirSync(helpersDir, {
-        recursive: true
+    fs.rmSync(helpersDir, {
+        recursive: true,
+        force: true,
     });
     fs.mkdirSync(helpersDir);
     const mapping = [];

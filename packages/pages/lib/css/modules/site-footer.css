@@ -2,12 +2,23 @@
 	background-color: #ff5d10;
 	box-sizing: border-box;
 	color: black;
-	padding-bottom: 1.25rem;
+	padding-bottom: 5rem;
 	padding-top: 1.25rem;
 }
 
 .site-footer a {
 	color: #0000A1;
+}
+
+@media (prefers-color-scheme: dark) {
+	.site-footer {
+		background-color: black;
+		color: white;
+	}
+
+	.site-footer a {
+		color: #8989ff;
+	}
 }
 
 .site-footer a:focus,

@@ -396,6 +396,37 @@ if (!("Intl"in self&&"DisplayNames"in self.Intl
         return true;
     }
 
+    var UNICODE_REGION_SUBTAG_REGEX = /^([a-z]{2}|[0-9]{3})$/i;
+    var ALPHA_4 = /^[a-z]{4}$/i;
+    function isUnicodeRegionSubtag(region) {
+        return UNICODE_REGION_SUBTAG_REGEX.test(region);
+    }
+    function isUnicodeScriptSubtag(script) {
+        return ALPHA_4.test(script);
+    }
+    function CanonicalCodeForDisplayNames(type, code) {
+        if (type === 'language') {
+            return CanonicalizeLocaleList([code])[0];
+        }
+        if (type === 'region') {
+            if (!isUnicodeRegionSubtag(code)) {
+                throw RangeError('invalid region');
+            }
+            return code.toUpperCase();
+        }
+        if (type === 'script') {
+            if (!isUnicodeScriptSubtag(code)) {
+                throw RangeError('invalid script');
+            }
+            return "" + code[0].toUpperCase() + code.slice(1).toLowerCase();
+        }
+        invariant(type === 'currency', 'invalid type');
+        if (!IsWellFormedCurrencyCode(code)) {
+            throw RangeError('invalid currency');
+        }
+        return code.toUpperCase();
+    }
+
     /**
      * https://tc39.es/ecma402/#sec-lookupsupportedlocales
      * @param availableLocales
@@ -499,36 +530,18 @@ if (!("Intl"in self&&"DisplayNames"in self.Intl
             }
             var _a = getMultiInternalSlots(__INTERNAL_SLOT_MAP__, this, 'localeData', 'style', 'fallback'), localeData = _a.localeData, style = _a.style, fallback = _a.fallback;
             // Canonicalize the case.
-            var canonicalCode;
+            var canonicalCode = CanonicalCodeForDisplayNames(type, codeAsString);
             // This is only used to store extracted language region.
             var regionSubTag;
-            switch (type) {
-                // Normalize the locale id and remove the region.
-                case 'language': {
-                    canonicalCode = CanonicalizeLocaleList(codeAsString)[0];
-                    var regionMatch = /-([a-z]{2}|\d{3})\b/i.exec(canonicalCode);
-                    if (regionMatch) {
-                        // Remove region subtag
-                        canonicalCode =
-                            canonicalCode.substring(0, regionMatch.index) +
-                                canonicalCode.substring(regionMatch.index + regionMatch[0].length);
-                        regionSubTag = regionMatch[1];
-                    }
-                    break;
-                }
-                // currency code should be all upper-case.
-                case 'currency':
-                    canonicalCode = codeAsString.toUpperCase();
-                    break;
-                // script code should be title case
-                case 'script':
+            if (type === 'language') {
+                var regionMatch = /-([a-z]{2}|\d{3})\b/i.exec(canonicalCode);
+                if (regionMatch) {
+                    // Remove region subtag
                     canonicalCode =
-                        codeAsString[0] + codeAsString.substring(1).toLowerCase();
-                    break;
-                // region shold be all upper-case
-                case 'region':
-                    canonicalCode = codeAsString.toUpperCase();
-                    break;
+                        canonicalCode.substring(0, regionMatch.index) +
+                            canonicalCode.substring(regionMatch.index + regionMatch[0].length);
+                    regionSubTag = regionMatch[1];
+                }
             }
             var typesData = localeData.types[type];
             // If the style of choice does not exist, fallback to "long".
