@@ -19,9 +19,9 @@ function renderMilestones(milestones) {
 		output += html`
 			<article
 				class="milestone milestone--${milestone.type}"
-				data-emoji="${milestone.emoji}"
 				milestone-observer=""
 			>
+				<div class="milestone__icon"><div class="milestone__icon__positioner"><div class="milestone__icon__emoji">${milestone.emoji}</div></div></div>
 				<h3 class="milestone__title">${milestone.title}</h3>
 				${ (() => {
 					if (milestone.description) {

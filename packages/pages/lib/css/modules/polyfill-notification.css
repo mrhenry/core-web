@@ -41,10 +41,11 @@
 
 .polyfill-notification__toggle::after {
 	content: attr(data-closed);
+	font-size: 4em;
 	left: 50%;
 	position: absolute;
 	top: 50%;
-	transform: translate(-50%, -50%) translateX(2px) translateY(-1px);
+	transform: translate(-50%, -50%) scale(0.25);
 }
 
 .polyfill-notification__label:focus,
