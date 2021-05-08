@@ -1,6 +1,6 @@
 {
   "name": "@mrhenry/pages",
-  "version": "0.4.6",
+  "version": "0.4.7",
   "description": "generator for GitHub pages.",
   "license": "MIT",
   "main": "lib/pages.js",
