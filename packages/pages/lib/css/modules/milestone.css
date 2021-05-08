@@ -13,35 +13,57 @@
 	}
 }
 
-.milestone::after,
-.milestone:before {
-	border-radius: 50%;
+.milestone__icon {
+	font-size: 1.125rem;
+	height: 3rem;
 	left: -1.5rem;
 	overflow: hidden;
 	position: absolute;
-	top: 0.625rem;
+	top: 2.1875rem;
 	transform: translateX(-50%);
+	width: 3rem;
 }
 
-.milestone:before {
+.milestone__icon:before,
+.milestone__icon:after {
+	border-radius: 50%;
+	left: 0;
+	overflow: hidden;
+	position: absolute;
+	top: 0;
+}
+
+.milestone__icon:before {
 	background-color: var(--color-background);
 	content: '';
 	height: 3rem;
 	width: 3rem;
 }
 
-.milestone::after {
+.milestone__icon::after {
 	border: 3px dotted currentColor;
-	content: attr(data-emoji);
-	font-size: 1.125rem;
+	content: '';
 	height: 2.625rem;
-	line-height: 2.5;
-	text-align: center;
 	width: 2.625rem;
 }
 
-.milestone.milestone--past::after {
+.milestone--past .milestone__icon::after {
 	border-style: solid;
+}
+
+.milestone__icon__positioner {
+	height: 3rem;
+	position: relative;
+	width: 3rem;
+}
+
+.milestone__icon__emoji {
+	font-size: 4em;
+	left: 1.5rem;
+	position: absolute;
+	text-align: center;
+	top: 1.5rem;
+	transform: translate(-50%, -50%) scale(0.25);
 }
 
 .milestone__description {
