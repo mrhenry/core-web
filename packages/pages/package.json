@@ -1,6 +1,6 @@
 {
   "name": "@mrhenry/pages",
-  "version": "0.4.7",
+  "version": "0.4.8",
   "description": "generator for GitHub pages.",
   "license": "MIT",
   "main": "lib/pages.js",
@@ -26,8 +26,8 @@
     "@babel/core": "^7.14.0",
     "@babel/preset-env": "^7.14.1",
     "@mdn/browser-compat-data": "^3.3.3",
-    "@mrhenry/babel-plugin-core-web": "^0.4.0",
-    "@mrhenry/core-web": "^0.4.0",
+    "@mrhenry/babel-plugin-core-web": "^0.4.8",
+    "@mrhenry/core-web": "^0.4.8",
     "babel-loader": "^8.2.2",
     "browserstack-runner": "^0.9.4",
     "core-js": "^3.12.0",
