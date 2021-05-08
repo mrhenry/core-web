@@ -18,7 +18,6 @@ function renderMilestones(milestones) {
 
 		output += html`
 			<article
-				aria-description="${milestone.type} milestone"
 				class="milestone milestone--${milestone.type}"
 				data-emoji="${milestone.emoji}"
 				milestone-observer=""

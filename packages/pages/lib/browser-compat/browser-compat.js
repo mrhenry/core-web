@@ -10,7 +10,7 @@ const { browsersCoreWebToMDN, coreWebBrowsers } = require('./browsers');
 
 module.exports = generate;
 
-function generate() {
+function generate(assetMap) {
 	const compat = {};
 
 	mapping.forEach((feature) => {
@@ -43,7 +43,7 @@ function generate() {
 		fs.mkdirSync(path.join(__dirname, '../../dist/browser-compat'), {recursive: true});
 	}
 
-	fs.writeFileSync(path.join(__dirname, '../../dist/browser-compat/index.html'), pageHTML(tables));
+	fs.writeFileSync(path.join(__dirname, '../../dist/browser-compat/index.html'), pageHTML(assetMap, tables));
 }
 
 function handleFeature(compat, name, feature) {

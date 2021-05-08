@@ -14,16 +14,21 @@ const requirements = require('./templates/requirements');
 
 module.exports = generate;
 
-function generate() {
+function generate(assetMap) {
 	fs.writeFileSync(path.join(__dirname, '../../dist/index.html'), html`<!DOCTYPE html>
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="icon"
-		href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🕸</text></svg>">
+	<meta name="description" content="Bringing polyfill.io to your babel flow.">
+	<meta name="author" content="Mr. Henry">
+	<meta name="publisher" content="Mr. Henry">
+	<meta name="copyright" content="Mr. Henry">
+	<meta name="robots" content="index,follow">
+	<meta name="distribution" content="Global">
+	<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🕸</text></svg>">
 	<title>core-web</title>
-	${indexJsAndCss()}
+	${indexJsAndCss(assetMap)}
 </head>
 <body>
 	<a
@@ -77,7 +82,7 @@ function generate() {
 			</div>
 		</div>
 
-		<div class="polyfill-notification" style="display: none;">
+		<div class="polyfill-notification">
 			<input
 				aria-hidden="true"
 				class="u-visually-hidden"
@@ -154,7 +159,6 @@ function generate() {
 				])}
 
 				${polyfillNotificationContent('fallback', '0', [])}
-				
 			</div>
 		</div>
 	</main>
@@ -165,28 +169,30 @@ function generate() {
 `);
 }
 
-function indexJsAndCss() {
+function indexJsAndCss(assetMap) {
 	if (process.env.GITHUB_ACTIONS) {
 		return html`<meta name="ua-targets" content="2020 2018 2016 2014 2013 2011">
-<link rel="stylesheet" href="/css/index.2020.css" ua-target="2020">
-<link rel="stylesheet" href="/css/index.2018.css" ua-target="2018">
-<link rel="stylesheet" href="/css/index.2016.css" ua-target="2016">
-<link rel="stylesheet" href="/css/index.2014.css" ua-target="2014">
-<link rel="stylesheet" href="/css/index.2013.css" ua-target="2013">
-<link rel="stylesheet" href="/css/index.2011.css" ua-target="2011">
-<link rel="stylesheet" href="/css/index.2011.css" ua-target="fallback">
-<script src="/js/index.2020.js" ua-target="2020" async></script>
-<script src="/js/index.2018.js" ua-target="2018" async></script>
-<script src="/js/index.2016.js" ua-target="2016" async></script>
-<script src="/js/index.2014.js" ua-target="2014" async></script>
-<script src="/js/index.2013.js" ua-target="2013" async></script>
-<script src="/js/index.2011.js" ua-target="2011" async></script>
+<script src="/js/${assetMap.js['index']['2020'].fullName}" ua-target="2020" async></script>
+<script src="/js/${assetMap.js['index']['2018'].fullName}" ua-target="2018" async></script>
+<script src="/js/${assetMap.js['index']['2016'].fullName}" ua-target="2016" async></script>
+<script src="/js/${assetMap.js['index']['2014'].fullName}" ua-target="2014" async></script>
+<script src="/js/${assetMap.js['index']['2013'].fullName}" ua-target="2013" async></script>
+<script src="/js/${assetMap.js['index']['2011'].fullName}" ua-target="2011" async></script>
+
+<link rel="stylesheet" href="/css/${assetMap.css['index']['2020'].fullName}" ua-target="2020">
+<link rel="stylesheet" href="/css/${assetMap.css['index']['2018'].fullName}" ua-target="2018">
+<link rel="stylesheet" href="/css/${assetMap.css['index']['2016'].fullName}" ua-target="2016">
+<link rel="stylesheet" href="/css/${assetMap.css['index']['2014'].fullName}" ua-target="2014">
+<link rel="stylesheet" href="/css/${assetMap.css['index']['2013'].fullName}" ua-target="2013">
+<link rel="stylesheet" href="/css/${assetMap.css['index']['2011'].fullName}" ua-target="2011">
+<link rel="stylesheet" href="/css/${assetMap.css['index']['2011'].fullName}" ua-target="fallback">
 `;
 	}
 
 	return html`
-<link rel="stylesheet" href="/css/index.2020.css">
-<script src="/js/index.2020.js" async></script>
+<script src="/js/${assetMap.js['index']['2020'].fullName}" async></script>
+
+<link rel="stylesheet" href="/css/${assetMap.css['index']['2020'].fullName}">
 `;
 }
 
@@ -195,16 +201,22 @@ function polyfillNotificationContent(target, size, polyfills) {
 		return html`<p ua-target="${target}">0 polyfills loaded</p>`;
 	}
 
+	let wording = 'polyfills';
+
+	if (polyfills.length === 1) {
+		wording = 'polyfill';
+	}
+
 	return html`
 <p ua-target="${target}">
 	<span class="u-visually-hidden">
-		${polyfills.length} polyfills loaded:
+		${polyfills.length} ${wording} loaded:
 	</span>
 
 	${size}KB:<br>
 
 	<ul>
-		${ polyfills.map((polyfill) => { return html`<li>${polyfill}</li>` }).join('') }
+		${ polyfills.map((polyfill) => { return html`<li title="${polyfill}">${polyfill}</li>` }).join('') }
 	</ul>
 </p>
 `
