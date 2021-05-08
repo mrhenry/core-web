@@ -17,7 +17,7 @@
     "@webcomponents/shadycss": "^1.10.2",
     "@webcomponents/shadydom": "^1.8.0",
     "@webcomponents/template": "^1.4.4",
-    "polyfill-library": "^3.104.0",
+    "polyfill-library": "^3.105.0",
     "semver": "^7.3.5"
   },
   "devDependencies": {

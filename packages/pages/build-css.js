@@ -6,11 +6,27 @@ const targets = require('./targets');
 const fs = require('fs');
 const path = require('path');
 
+const { createHash } = require('crypto');
+
 fs.readFile('./lib/css/index.css', async (err, css) => {
 	if (err) {
 		console.warn(err);
 		process.exit(1);
 	}
+
+	const contentHash = await postcss([
+		postcssImport({
+				root: './lib/css'
+			}),
+		]).process(css, {
+			map: false,
+			from: './lib/css/index.css',
+		}).then((result) => {
+			const hash = createHash('sha256');
+
+			hash.update(result.css);
+			return hash.copy().digest('hex').slice(0, 20);
+		});
 
 	for (const target of targets) {
 		await postcss([
@@ -37,15 +53,15 @@ fs.readFile('./lib/css/index.css', async (err, css) => {
 				inline: false,
 			},
 			from: './lib/css/index.css',
-			to: `./dist/css/index.${target.name}.css`
+			to: `./dist/css/index.${contentHash}.${target.name}.css`
 		}).then((result) => {
 			if (!fs.existsSync(path.join(__dirname, './dist/css'))) {
 				fs.mkdirSync(path.join(__dirname, './dist/css'), {recursive: true});
 			}
 			
-			fs.writeFileSync(`./dist/css/index.${target.name}.css`, result.css);
+			fs.writeFileSync(`./dist/css/index.${contentHash}.${target.name}.css`, result.css);
 			if (result.map) {
-				fs.writeFileSync(`./dist/css/index.${target.name}.css.map`, result.map.toString());
+				fs.writeFileSync(`./dist/css/index.${contentHash}.${target.name}.css.map`, result.map.toString());
 			}
 		});
 	}

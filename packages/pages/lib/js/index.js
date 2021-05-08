@@ -31,4 +31,8 @@ function init() {
 
 init();
 requestAnimationFrame(init);
-document.addEventListener("DOMContentLoaded", init);
+window.addEventListener('load', init);
+
+window.addEventListener('load', () => {
+	document.documentElement.setAttribute('loaded', '');
+})

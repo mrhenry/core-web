@@ -1,3 +1,27 @@
+@media (prefers-reduced-motion: reduce) {
+	*,
+	*::after,
+	*::before {
+		animation-delay: -1ms !important;
+		animation-duration: 0.01ms !important;
+		animation-iteration-count: 1 !important;
+		background-attachment: initial !important;
+		transition-delay: -1ms !important;
+		transition-duration: 0.01ms !important;
+	}
+}
+
+html:not([loaded]) *,
+html:not([loaded]) *::after,
+html:not([loaded]) *::before {
+	animation-delay: -1ms !important;
+	animation-duration: 0.01ms !important;
+	animation-iteration-count: 1 !important;
+	background-attachment: initial !important;
+	transition-delay: -1ms !important;
+	transition-duration: 0.01ms !important;
+}
+
 body {
 	background-color: var(--color-background);
 	box-sizing: border-box;
