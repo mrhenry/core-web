@@ -31,6 +31,10 @@
 	.why__item:nth-child(2) {
 		margin-top: 0;
 	}
+
+	.why__item > *:only-child {
+		height: 100%;
+	}
 }
 
 @media (min-width: 768px) and (max-width: 1023px) {
@@ -43,10 +47,6 @@
 	.why__item {
 		flex-basis: calc(33.3333% - 1rem);
 		margin-right: 1.5rem;
-	}
-
-	.why__item > *:only-child {
-		height: 100%;
 	}
 
 	.why__item:nth-child(3n+3) {

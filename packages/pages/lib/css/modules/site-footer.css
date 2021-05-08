@@ -6,13 +6,6 @@
 	padding-top: 1.25rem;
 }
 
-@media (max-width: 767px) {
-	.site-footer {
-		padding-bottom: 1.25rem;
-	}
-}
-
-
 .site-footer a {
 	color: #0000A1;
 }
@@ -26,7 +19,6 @@
 	.site-footer a {
 		color: #8989ff;
 	}
-
 }
 
 .site-footer a:focus,
