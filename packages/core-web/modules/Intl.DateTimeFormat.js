@@ -1702,7 +1702,10 @@ if (!("Intl"in self&&"DateTimeFormat"in self.Intl&&"formatToParts"in self.Intl.D
     function IsValidTimeZoneName(tz, _a) {
         var tzData = _a.tzData, uppercaseLinks = _a.uppercaseLinks;
         var uppercasedTz = tz.toUpperCase();
-        var zoneNames = new Set(Object.keys(tzData).map(function (z) { return z.toUpperCase(); }));
+        var zoneNames = new Set();
+        Object.keys(tzData)
+            .map(function (z) { return z.toUpperCase(); })
+            .forEach(function (z) { return zoneNames.add(z); });
         return zoneNames.has(uppercasedTz) || uppercasedTz in uppercaseLinks;
     }
 
@@ -2370,18 +2373,28 @@ if (!("Intl"in self&&"DateTimeFormat"in self.Intl&&"formatToParts"in self.Intl.D
     }
 
     function supportsDateStyle() {
-        return !!new Intl.DateTimeFormat(undefined, {
-            dateStyle: 'short',
-        }).resolvedOptions().dateStyle;
+        try {
+            return !!new Intl.DateTimeFormat(undefined, {
+                dateStyle: 'short',
+            }).resolvedOptions().dateStyle;
+        }
+        catch (e) {
+            return false;
+        }
     }
     /**
      * https://bugs.chromium.org/p/chromium/issues/detail?id=865351
      */
     function hasChromeLt71Bug() {
-        return (new Intl.DateTimeFormat('en', {
-            hourCycle: 'h11',
-            hour: 'numeric',
-        }).formatToParts(0)[2].type !== 'dayPeriod');
+        try {
+            return (new Intl.DateTimeFormat('en', {
+                hourCycle: 'h11',
+                hour: 'numeric',
+            }).formatToParts(0)[2].type !== 'dayPeriod');
+        }
+        catch (e) {
+            return false;
+        }
     }
     /**
      * Node 14's version of Intl.DateTimeFormat does not throw

@@ -58,6 +58,7 @@ if (!("Intl"in self&&"PluralRules"in self.Intl
     PERFORMANCE OF THIS SOFTWARE.
     ***************************************************************************** */
 
+    /** @deprecated */
     function __spreadArrays() {
         for (var s = 0, i = 0, il = arguments.length; i < il; i++) s += arguments[i].length;
         for (var r = Array(s), k = 0, i = 0; i < il; i++)
