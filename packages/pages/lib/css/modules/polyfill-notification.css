@@ -23,7 +23,7 @@
 	transition:
 		background-color 96ms linear,
 		opacity 96ms linear 400ms;
-	width: 110px;
+	width: 160px;
 	z-index: 2;
 }
 
@@ -79,7 +79,7 @@
 	position: absolute;
 	height: 30px;
 	right: 40px;
-	width: 110px;
+	width: 160px;
 	transition:
 		height 640ms cubic-bezier(0.65, 0, 0.165, 1) 128ms,
 		padding-bottom 16ms linear 96ms,
@@ -90,6 +90,14 @@
 .polyfill-notification__content ul {
 	padding: 0 0 0 1rem;
 	margin: 0;
+}
+
+.polyfill-notification__content li {
+	word-break: break-all;
+}
+
+.polyfill-notification__content li:not(:last-child):not(:only-child) {
+	margin-bottom: 0.5rem;
 }
 
 .polyfill-notification__content li::marker {
@@ -103,7 +111,13 @@
 		height 640ms cubic-bezier(0.65, 0, 0.165, 1),
 		padding-bottom 16ms linear 640ms,
 		width 640ms cubic-bezier(0.65, 0, 0.165, 1);
-	width: 220px;
+	width: 260px;
+}
+
+@media (min-width: 768px) { 
+	#show-polyfill-content:checked ~ .polyfill-notification__content {
+		width: 380px;
+	}
 }
 
 .polyfill-notification__content > * {
