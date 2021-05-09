@@ -13,13 +13,24 @@
 .navigation__list {
 	align-items: center;
 	display: flex;
+	flex-wrap: wrap;
 	list-style: none;
 	margin: 0;
 	padding-left: 0;
 }
 
-.navigation__list-item + .navigation__list-item {
-	margin-left: 1.5rem;
+.navigation__list-item {
+	margin-right: 1.5rem;
+}
+
+@media (min-width: 768px) {
+	.navigation__list-item {
+		margin-right: 0;
+	}
+
+	.navigation__list-item+.navigation__list-item {
+		margin-left: 1.5rem;
+	}
 }
 
 .navigation__link {

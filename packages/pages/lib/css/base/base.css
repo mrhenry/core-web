@@ -85,7 +85,7 @@ td+td {
 	text-align: center;
 }
 
-li:not(:last-child):not(:only-child) {
+li:not([class]):not(:last-child):not(:only-child) {
 	margin-bottom: 0.5rem;
 }
 
