@@ -7,15 +7,24 @@ const generateLanding = require('./landing/landing');
 const generateBrowserCompat = require('./browser-compat/browser-compat');
 const generateE2E = require('./e2e/e2e');
 
-generateLanding(
-	getAssetMap()
-);
+async function main() {
+	generateLanding(
+		getAssetMap()
+	);
 
-generateBrowserCompat(
-	getAssetMap()
-);
+	await generateBrowserCompat(
+		getAssetMap()
+	);
 
-generateE2E();
+	generateE2E();
+}
+
+try {
+	main();
+} catch (err) {
+	console.log(err);
+	process.exit(1);
+}
 
 function getAssetMap() {
 	const out = {

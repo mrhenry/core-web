@@ -24,8 +24,8 @@
 	width: 3rem;
 }
 
-.milestone__icon:before,
-.milestone__icon:after {
+.milestone__icon::before,
+.milestone__icon::after {
 	border-radius: 50%;
 	left: 0;
 	overflow: hidden;
@@ -33,7 +33,7 @@
 	top: 0;
 }
 
-.milestone__icon:before {
+.milestone__icon::before {
 	background-color: var(--color-background);
 	content: '';
 	height: 3rem;
@@ -85,7 +85,7 @@
 	transform: translate3d(0, 0, 0);
 }
 
-.milestone__description:before {
+.milestone__description::before {
 	background-color: currentColor;
 	content: '';
 	height: 100%;
