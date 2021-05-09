@@ -6,19 +6,31 @@ const fs = require('fs');
 const path = require('path');
 const tableHTML = require('./templates/table');
 const pageHTML = require('./templates/page');
+const polyfillCardHTML = require('./templates/polyfill-card');
 const { browsersCoreWebToMDN, coreWebBrowsers } = require('./browsers');
+const polyfillLibrary = require('polyfill-library');
+const polyfillCardOgImage = require('./templates/polyfill-card-og-image');
 
 module.exports = generate;
 
-function generate(assetMap) {
+async function generate(assetMap) {
 	const compat = {};
 
 	mapping.forEach((feature) => {
 		handleFeature(compat, feature.name, feature);
 	});
 
+	const sitemap = {};
+
 	const compatArray = [];
 	for (const key in compat) {
+		const feature = compat[key];
+
+		for (const entry of feature.data) {
+			entry.polyfillio = await polyfillLibrary.describePolyfill(entry.polyfillName);
+			sitemap[entry.name] = path.join('/polyfills/', entry.name, '/');
+		}
+
 		compatArray.push(compat[key]);
 	}
 
@@ -33,6 +45,31 @@ function generate(assetMap) {
 
 		return 0;
 	});
+
+	for (const feature of compatArray) {
+		for (const entry of feature.data) {
+			if (!fs.existsSync(path.join(__dirname, '../../dist/polyfills/', entry.name ))) {
+				fs.mkdirSync(path.join(__dirname, '../../dist/polyfills/', entry.name), {
+					recursive: true
+				});
+			}
+
+			fs.writeFileSync(
+				path.join(__dirname, '../../dist/polyfills/', entry.name, 'index.json'),
+				JSON.stringify(entry, null, 2)
+			);
+
+			fs.writeFileSync(
+				path.join(__dirname, '../../dist/polyfills/', entry.name, 'index.html'),
+				polyfillCardHTML(assetMap, entry, sitemap)
+			);
+
+			fs.writeFileSync(
+				path.join(__dirname, '../../dist/polyfills/', entry.name, 'og-image.jpg'),
+				await polyfillCardOgImage(entry)
+			);
+		}
+	}
 
 	let tables = '';
 	compatArray.forEach((feature) => {

@@ -94,10 +94,6 @@
 	word-break: break-all;
 }
 
-.polyfill-notification__content li:not(:last-child):not(:only-child) {
-	margin-bottom: 0.5rem;
-}
-
 .polyfill-notification__content li::marker {
 	content: '↳ ';
 }

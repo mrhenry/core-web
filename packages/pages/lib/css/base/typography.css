@@ -15,6 +15,7 @@ p {
 h1, h2, h3, h4, h5, h6 {
 	margin-bottom: 0.875rem;
 	margin-top: 0.875rem;
+	word-break: break-word;
 }
 
 @media (min-width: 768px) {
@@ -30,4 +31,28 @@ h1:first-child, h2:first-child, h3:first-child, h4:first-child, h5:first-child, 
 
 h1:last-child, h2:last-child, h3:last-child, h4:last-child, h5:last-child, h6:last-child, p:last-child {
 	margin-bottom: 0;
+}
+
+h1 {
+	font-size: 2rem;
+}
+
+h2 {
+	font-size: 1.75rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+}
+
+h4 {
+	font-size: 1.125rem;
+}
+
+h5 {
+	font-size: 1rem;
+}
+
+h6 {
+	font-size: 1rem;
 }

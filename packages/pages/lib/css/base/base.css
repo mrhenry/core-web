@@ -85,6 +85,10 @@ td+td {
 	text-align: center;
 }
 
+li:not(:last-child):not(:only-child) {
+	margin-bottom: 0.5rem;
+}
+
 a:not([class]) {
 	color: currentColor;
 }
