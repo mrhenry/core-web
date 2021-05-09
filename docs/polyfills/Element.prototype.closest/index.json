@@ -1,0 +1,163 @@
+{
+  "name": "Element.prototype.closest",
+  "polyfillName": "Element.prototype.closest",
+  "coreWeb": {
+    "name": "Element.prototype.closest",
+    "deps": [
+      "Element.prototype.matches",
+      "Element",
+      "document",
+      "document.querySelector"
+    ],
+    "browsers": {
+      "bb": "*",
+      "android": "<5",
+      "chrome": "<41",
+      "edge": "<15",
+      "edge_mob": "<15",
+      "ie": "*",
+      "ie_mob": "*",
+      "ios_saf": "<9",
+      "firefox": "<35",
+      "opera": "<28",
+      "op_mini": "*",
+      "op_mob": "<33",
+      "safari": "<9",
+      "firefox_mob": "<35"
+    },
+    "engines": {
+      "Blink": "28 - 40",
+      "EdgeHTML": "12 - 14",
+      "Trident": ">= 4.0",
+      "WebKit": "85 - 600.1.4",
+      "Gecko": "1.7 - 34",
+      "Presto": ">= 1"
+    },
+    "size": 175,
+    "hasCustomMatcher": false,
+    "isAlias": false,
+    "providedByCoreWeb": false
+  },
+  "mdn": {
+    "__compat": {
+      "mdn_url": "https://developer.mozilla.org/docs/Web/API/Element/closest",
+      "spec_url": "https://dom.spec.whatwg.org/#ref-for-dom-element-closest①",
+      "support": {
+        "chrome": {
+          "version_added": "41"
+        },
+        "chrome_android": {
+          "version_added": "41"
+        },
+        "edge": {
+          "version_added": "15"
+        },
+        "firefox": {
+          "version_added": "35"
+        },
+        "firefox_android": {
+          "version_added": "35"
+        },
+        "ie": {
+          "version_added": false
+        },
+        "opera": {
+          "version_added": "28"
+        },
+        "opera_android": {
+          "version_added": "28"
+        },
+        "safari": {
+          "version_added": "6"
+        },
+        "safari_ios": {
+          "version_added": "9"
+        },
+        "samsunginternet_android": {
+          "version_added": "4.0"
+        },
+        "webview_android": {
+          "version_added": "41"
+        }
+      },
+      "status": {
+        "experimental": false,
+        "standard_track": true,
+        "deprecated": false
+      }
+    }
+  },
+  "polyfilled": {
+    "android": "<5",
+    "chrome": "<41",
+    "edge": "<15",
+    "firefox": "<35",
+    "ie": "*",
+    "opera": "<28",
+    "safari": "<9",
+    "ios_saf": "<9"
+  },
+  "native": {
+    "android": {
+      "version_added": "41"
+    },
+    "chrome": {
+      "version_added": "41"
+    },
+    "edge": {
+      "version_added": "15"
+    },
+    "firefox": {
+      "version_added": "35"
+    },
+    "ie": {
+      "version_added": false
+    },
+    "opera": {
+      "version_added": "28"
+    },
+    "safari": {
+      "version_added": "6"
+    },
+    "ios_saf": {
+      "version_added": "9"
+    }
+  },
+  "polyfillio": {
+    "aliases": [
+      "default-3.3",
+      "default-3.4",
+      "default-3.5",
+      "default-3.6",
+      "default",
+      "blissfuljs"
+    ],
+    "dependencies": [
+      "Element.prototype.matches"
+    ],
+    "docs": "https://developer.mozilla.org/en-US/docs/Web/API/Element/closest",
+    "spec": "http://dom.spec.whatwg.org/#dom-element-closest",
+    "browsers": {
+      "bb": "*",
+      "android": "<5",
+      "chrome": "<41",
+      "edge": "<15",
+      "edge_mob": "<15",
+      "ie": "*",
+      "ie_mob": "*",
+      "ios_saf": "<9",
+      "firefox": "<35",
+      "opera": "<28",
+      "op_mini": "*",
+      "op_mob": "<33",
+      "safari": "<9",
+      "firefox_mob": "<35"
+    },
+    "detectSource": "\"document\"in self&&\"closest\"in document.documentElement\n",
+    "baseDir": "Element/prototype/closest",
+    "hasTests": true,
+    "isTestable": true,
+    "isPublic": true,
+    "size": 175
+  }
+}

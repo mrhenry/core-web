@@ -1,0 +1,142 @@
+{
+  "name": "Window.customElements",
+  "polyfillName": "~custom-elements",
+  "coreWeb": {
+    "name": "~custom-elements",
+    "deps": [
+      "console.error",
+      "console.log",
+      "console.warn",
+      "console",
+      "CustomEvent",
+      "document.head",
+      "document.querySelector",
+      "document",
+      "DocumentFragment.prototype.append",
+      "DocumentFragment.prototype.prepend",
+      "DocumentFragment",
+      "Element.prototype.after",
+      "Element.prototype.append",
+      "Element.prototype.before",
+      "Element.prototype.cloneNode",
+      "Element.prototype.matches",
+      "Element.prototype.prepend",
+      "Element.prototype.remove",
+      "Element.prototype.replaceWith",
+      "Element",
+      "Event",
+      "HTMLDocument",
+      "HTMLTemplateElement",
+      "MutationObserver",
+      "Node.prototype.contains",
+      "NodeList.prototype.forEach",
+      "Window"
+    ],
+    "browsers": {
+      "chrome": "<67",
+      "edge": "<79",
+      "edge_mob": "*",
+      "firefox": "<63",
+      "safari": "<11",
+      "ie": "*",
+      "opera": "<64",
+      "op_mob": "<46",
+      "op_mini": "*",
+      "samsung_mob": "<8"
+    },
+    "engines": {
+      "Blink": "28 - 66",
+      "EdgeHTML": ">= 12",
+      "Gecko": "1.7 - 62",
+      "WebKit": "85 - 603.2.1",
+      "Trident": ">= 4.0",
+      "Presto": ">= 1"
+    },
+    "hasCustomMatcher": true,
+    "size": 19509,
+    "isAlias": false,
+    "providedByCoreWeb": true
+  },
+  "mdn": {
+    "__compat": {
+      "mdn_url": "https://developer.mozilla.org/docs/Web/API/Window/customElements",
+      "support": {
+        "chrome": {
+          "version_added": "54"
+        },
+        "chrome_android": {
+          "version_added": "54"
+        },
+        "edge": {
+          "version_added": "79"
+        },
+        "firefox": {
+          "version_added": "63"
+        },
+        "firefox_android": {
+          "version_added": "63"
+        },
+        "ie": {
+          "version_added": false
+        },
+        "opera": {
+          "version_added": "41"
+        },
+        "opera_android": {
+          "version_added": "41"
+        },
+        "safari": {
+          "version_added": "10.1"
+        },
+        "safari_ios": {
+          "version_added": "10.3"
+        },
+        "samsunginternet_android": {
+          "version_added": "6.0"
+        },
+        "webview_android": {
+          "version_added": "54"
+        }
+      },
+      "status": {
+        "experimental": false,
+        "standard_track": true,
+        "deprecated": false
+      }
+    }
+  },
+  "polyfilled": {
+    "chrome": "<67",
+    "edge": "<79",
+    "firefox": "<63",
+    "ie": "*",
+    "opera": "<64",
+    "safari": "<11"
+  },
+  "native": {
+    "android": {
+      "version_added": "54"
+    },
+    "chrome": {
+      "version_added": "54"
+    },
+    "edge": {
+      "version_added": "79"
+    },
+    "firefox": {
+      "version_added": "63"
+    },
+    "ie": {
+      "version_added": false
+    },
+    "opera": {
+      "version_added": "41"
+    },
+    "safari": {
+      "version_added": "10.1"
+    },
+    "ios_saf": {
+      "version_added": "10.3"
+    }
+  }
+}

@@ -1,0 +1,134 @@
+{
+  "name": "Console.profileEnd",
+  "polyfillName": "console.profileEnd",
+  "coreWeb": {
+    "name": "console.profileEnd",
+    "deps": [
+      "Window",
+      "console"
+    ],
+    "browsers": {
+      "ie": "*",
+      "firefox": "1 - 4"
+    },
+    "engines": {
+      "Trident": ">= 4.0",
+      "Gecko": "1.7 - 2"
+    },
+    "size": 34,
+    "hasCustomMatcher": false,
+    "isAlias": false,
+    "providedByCoreWeb": false
+  },
+  "mdn": {
+    "__compat": {
+      "mdn_url": "https://developer.mozilla.org/docs/Web/API/Console/profileEnd",
+      "support": {
+        "chrome": {
+          "version_added": "4"
+        },
+        "chrome_android": {
+          "version_added": "18"
+        },
+        "edge": {
+          "version_added": "12"
+        },
+        "firefox": {
+          "version_added": "16"
+        },
+        "firefox_android": {
+          "version_added": "16"
+        },
+        "ie": {
+          "version_added": "9"
+        },
+        "nodejs": {
+          "version_added": "8.0.0",
+          "flags": [
+            {
+              "type": "runtime_flag",
+              "name": "--inspect"
+            }
+          ]
+        },
+        "opera": {
+          "version_added": "11"
+        },
+        "opera_android": {
+          "version_added": "11"
+        },
+        "safari": {
+          "version_added": "4"
+        },
+        "safari_ios": {
+          "version_added": "3.2"
+        },
+        "samsunginternet_android": {
+          "version_added": "1.0"
+        },
+        "webview_android": {
+          "version_added": "≤37"
+        }
+      },
+      "status": {
+        "experimental": true,
+        "standard_track": false,
+        "deprecated": false
+      }
+    }
+  },
+  "polyfilled": {
+    "firefox": "1 - 4",
+    "ie": "*"
+  },
+  "native": {
+    "android": {
+      "version_added": "≤37"
+    },
+    "chrome": {
+      "version_added": "4"
+    },
+    "edge": {
+      "version_added": "12"
+    },
+    "firefox": {
+      "version_added": "16"
+    },
+    "ie": {
+      "version_added": "9"
+    },
+    "opera": {
+      "version_added": "11"
+    },
+    "safari": {
+      "version_added": "4"
+    },
+    "ios_saf": {
+      "version_added": "3.2"
+    }
+  },
+  "polyfillio": {
+    "aliases": [
+      "caniuse:console-basic"
+    ],
+    "dependencies": [
+      "Window",
+      "console"
+    ],
+    "spec": "https://console.spec.whatwg.org",
+    "docs": "https://developer.mozilla.org/en/docs/Web/API/console",
+    "browsers": {
+      "ie": "*",
+      "firefox": "1 - 4"
+    },
+    "test": {
+      "ci": false
+    },
+    "detectSource": "\"console\"in self&&\"profileEnd\"in self.console\n",
+    "baseDir": "console/profileEnd",
+    "hasTests": true,
+    "isTestable": false,
+    "isPublic": true,
+    "size": 34
+  }
+}

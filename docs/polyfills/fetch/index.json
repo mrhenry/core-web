@@ -1,0 +1,394 @@
+{
+  "name": "fetch",
+  "polyfillName": "fetch",
+  "coreWeb": {
+    "name": "fetch",
+    "deps": [
+      "_ESAbstract.CreateMethodProperty",
+      "_ESAbstract.ToObject",
+      "_ESAbstract.ToLength",
+      "_ESAbstract.ToInteger",
+      "_ESAbstract.Type",
+      "_ESAbstract.Get",
+      "_ESAbstract.IsCallable",
+      "_ESAbstract.HasProperty",
+      "_ESAbstract.Call",
+      "_ESAbstract.ToString",
+      "_ESAbstract.ToPrimitive",
+      "_ESAbstract.GetMethod",
+      "_ESAbstract.GetV",
+      "_ESAbstract.OrdinaryToPrimitive",
+      "_ESAbstract.SameValueZero",
+      "_ESAbstract.SameValueNonNumber",
+      "_ESAbstract.ArraySpeciesCreate",
+      "_ESAbstract.IsArray",
+      "_ESAbstract.ArrayCreate",
+      "_ESAbstract.IsConstructor",
+      "_ESAbstract.Construct",
+      "_ESAbstract.OrdinaryCreateFromConstructor",
+      "_ESAbstract.GetPrototypeFromConstructor",
+      "_ESAbstract.HasOwnProperty",
+      "_ESAbstract.ToPropertyKey",
+      "_ESAbstract.ToBoolean",
+      "_ESAbstract.CreateDataPropertyOrThrow",
+      "_ESAbstract.CreateDataProperty",
+      "XMLHttpRequest",
+      "Event",
+      "Window",
+      "document",
+      "Element"
+    ],
+    "browsers": {
+      "android": "<67",
+      "bb": "10 - *",
+      "edge": "<16",
+      "edge_mob": "<16",
+      "ie": "*",
+      "ie_mob": "*",
+      "firefox": "<57",
+      "opera": "<53",
+      "safari": "<12",
+      "chrome": "<66",
+      "ios_saf": "<12",
+      "firefox_mob": "<64"
+    },
+    "engines": {
+      "EdgeHTML": "12 - 15",
+      "Trident": ">= 4.0",
+      "Gecko": "1.7 - 56",
+      "Presto": ">= 1",
+      "WebKit": "85 - 605.1.33",
+      "Blink": "28 - 65"
+    },
+    "size": 8171,
+    "hasCustomMatcher": true,
+    "isAlias": false,
+    "providedByCoreWeb": false
+  },
+  "mdn": {
+    "__compat": {
+      "mdn_url": "https://developer.mozilla.org/docs/Web/API/WindowOrWorkerGlobalScope/fetch",
+      "support": {
+        "chrome": {
+          "version_added": "42"
+        },
+        "chrome_android": {
+          "version_added": "42"
+        },
+        "edge": {
+          "version_added": "14"
+        },
+        "firefox": {
+          "version_added": "39"
+        },
+        "firefox_android": {
+          "version_added": "39"
+        },
+        "ie": {
+          "version_added": false
+        },
+        "opera": {
+          "version_added": "29"
+        },
+        "opera_android": {
+          "version_added": "29"
+        },
+        "safari": {
+          "version_added": "10.1"
+        },
+        "safari_ios": {
+          "version_added": "10.3"
+        },
+        "samsunginternet_android": {
+          "version_added": "4.0"
+        },
+        "webview_android": {
+          "version_added": "42"
+        }
+      },
+      "status": {
+        "experimental": true,
+        "standard_track": true,
+        "deprecated": false
+      }
+    },
+    "blob_data_support": {
+      "__compat": {
+        "description": "Support for blob: and data:",
+        "support": {
+          "chrome": {
+            "version_added": "48"
+          },
+          "chrome_android": {
+            "version_added": "48"
+          },
+          "edge": {
+            "version_added": "79"
+          },
+          "firefox": {
+            "version_added": null
+          },
+          "firefox_android": {
+            "version_added": null
+          },
+          "ie": {
+            "version_added": false
+          },
+          "opera": {
+            "version_added": null
+          },
+          "opera_android": {
+            "version_added": null
+          },
+          "safari": {
+            "version_added": null
+          },
+          "safari_ios": {
+            "version_added": null
+          },
+          "samsunginternet_android": {
+            "version_added": "5.0"
+          },
+          "webview_android": {
+            "version_added": "43"
+          }
+        },
+        "status": {
+          "experimental": true,
+          "standard_track": true,
+          "deprecated": false
+        }
+      }
+    },
+    "referrerpolicy": {
+      "__compat": {
+        "description": "referrerPolicy",
+        "support": {
+          "chrome": {
+            "version_added": "52"
+          },
+          "chrome_android": {
+            "version_added": "52"
+          },
+          "edge": {
+            "version_added": "79"
+          },
+          "firefox": {
+            "version_added": "52"
+          },
+          "firefox_android": {
+            "version_added": "52"
+          },
+          "ie": {
+            "version_added": false
+          },
+          "opera": {
+            "version_added": "39"
+          },
+          "opera_android": {
+            "version_added": "41"
+          },
+          "safari": {
+            "version_added": "11.1"
+          },
+          "safari_ios": {
+            "version_added": false
+          },
+          "samsunginternet_android": {
+            "version_added": "6.0"
+          },
+          "webview_android": {
+            "version_added": "52"
+          }
+        },
+        "status": {
+          "experimental": false,
+          "standard_track": true,
+          "deprecated": false
+        }
+      }
+    },
+    "signal": {
+      "__compat": {
+        "description": "signal",
+        "support": {
+          "chrome": {
+            "version_added": "66"
+          },
+          "chrome_android": {
+            "version_added": "66"
+          },
+          "edge": {
+            "version_added": "16"
+          },
+          "firefox": {
+            "version_added": "57"
+          },
+          "firefox_android": {
+            "version_added": "57"
+          },
+          "ie": {
+            "version_added": false
+          },
+          "opera": {
+            "version_added": "53"
+          },
+          "opera_android": {
+            "version_added": "47"
+          },
+          "safari": {
+            "version_added": "11.1"
+          },
+          "safari_ios": {
+            "version_added": "11.3"
+          },
+          "samsunginternet_android": {
+            "version_added": "9.0"
+          },
+          "webview_android": {
+            "version_added": "66"
+          }
+        },
+        "status": {
+          "experimental": true,
+          "standard_track": true,
+          "deprecated": false
+        }
+      }
+    },
+    "streaming_response_body": {
+      "__compat": {
+        "description": "Streaming response body",
+        "support": {
+          "chrome": {
+            "version_added": "43"
+          },
+          "chrome_android": {
+            "version_added": "43"
+          },
+          "edge": {
+            "version_added": "14"
+          },
+          "firefox": {
+            "version_added": true,
+            "flags": [
+              {
+                "type": "preference",
+                "name": "dom.streams.enabled"
+              },
+              {
+                "type": "preference",
+                "name": "javascript.options.streams"
+              }
+            ]
+          },
+          "firefox_android": {
+            "version_added": false
+          },
+          "ie": {
+            "version_added": false
+          },
+          "opera": {
+            "version_added": "29"
+          },
+          "opera_android": {
+            "version_added": false
+          },
+          "safari": {
+            "version_added": "10.1"
+          },
+          "safari_ios": {
+            "version_added": "10.3"
+          },
+          "samsunginternet_android": {
+            "version_added": "4.0"
+          },
+          "webview_android": {
+            "version_added": "43"
+          }
+        },
+        "status": {
+          "experimental": true,
+          "standard_track": true,
+          "deprecated": false
+        }
+      }
+    }
+  },
+  "polyfilled": {
+    "android": "<67",
+    "chrome": "<66",
+    "edge": "<16",
+    "firefox": "<57",
+    "ie": "*",
+    "opera": "<53",
+    "safari": "<12",
+    "ios_saf": "<12"
+  },
+  "native": {
+    "android": {
+      "version_added": "42"
+    },
+    "chrome": {
+      "version_added": "42"
+    },
+    "edge": {
+      "version_added": "14"
+    },
+    "firefox": {
+      "version_added": "39"
+    },
+    "ie": {
+      "version_added": false
+    },
+    "opera": {
+      "version_added": "29"
+    },
+    "safari": {
+      "version_added": "10.1"
+    },
+    "ios_saf": {
+      "version_added": "10.3"
+    }
+  },
+  "polyfillio": {
+    "dependencies": [
+      "Array.prototype.forEach",
+      "Object.getOwnPropertyNames",
+      "Promise",
+      "XMLHttpRequest",
+      "Symbol.iterator"
+    ],
+    "license": "MIT",
+    "spec": "https://fetch.spec.whatwg.org/",
+    "repo": "https://github.com/github/fetch",
+    "notes": [
+      "Makes use of FormData, FileReader and Blob if they exist. Readable streams not supported. CORS (Cross Origin Resource Sharing) requests do not work in IE 9 or lower."
+    ],
+    "docs": "https://developer.mozilla.org/en-US/docs/Web/API/GlobalFetch/fetch",
+    "browsers": {
+      "android": "<67",
+      "bb": "10 - *",
+      "edge": "<16",
+      "edge_mob": "<16",
+      "ie": "*",
+      "ie_mob": "*",
+      "firefox": "<57",
+      "opera": "<53",
+      "safari": "<12",
+      "chrome": "<66",
+      "ios_saf": "<12",
+      "firefox_mob": "<64"
+    },
+    "install": {
+      "module": "whatwg-fetch",
+      "postinstall": "update.task.js"
+    },
+    "detectSource": "\"fetch\"in self\n",
+    "baseDir": "fetch",
+    "hasTests": true,
+    "isTestable": true,
+    "isPublic": true,
+    "size": 8171
+  }
+}

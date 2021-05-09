@@ -1,0 +1,4161 @@
+{
+  "name": "Intl",
+  "polyfillName": "Intl.getCanonicalLocales",
+  "coreWeb": {
+    "name": "Intl.getCanonicalLocales",
+    "deps": [
+      "_ESAbstract.CreateMethodProperty",
+      "_ESAbstract.ToObject",
+      "_ESAbstract.ToLength",
+      "_ESAbstract.ToInteger",
+      "_ESAbstract.Type",
+      "_ESAbstract.Get",
+      "_ESAbstract.IsCallable",
+      "_ESAbstract.ArraySpeciesCreate",
+      "_ESAbstract.IsArray",
+      "_ESAbstract.ArrayCreate",
+      "_ESAbstract.IsConstructor",
+      "_ESAbstract.GetMethod",
+      "_ESAbstract.GetV",
+      "_ESAbstract.Construct",
+      "_ESAbstract.OrdinaryCreateFromConstructor",
+      "_ESAbstract.GetPrototypeFromConstructor",
+      "_ESAbstract.HasOwnProperty",
+      "_ESAbstract.ToPropertyKey",
+      "_ESAbstract.ToPrimitive",
+      "_ESAbstract.Call",
+      "_ESAbstract.OrdinaryToPrimitive",
+      "_ESAbstract.ToString",
+      "_ESAbstract.HasProperty",
+      "_ESAbstract.ToBoolean",
+      "_ESAbstract.CreateDataPropertyOrThrow",
+      "_ESAbstract.CreateDataProperty"
+    ],
+    "browsers": {
+      "android": "*",
+      "chrome": "<54",
+      "edge": "<16",
+      "edge_mob": "<16",
+      "firefox": "<48",
+      "firefox_mob": "<56",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "ios_saf": "<11",
+      "opera": "*",
+      "safari": "<11",
+      "samsung_mob": "*"
+    },
+    "engines": {
+      "Blink": "28 - 53",
+      "EdgeHTML": "12 - 15",
+      "Gecko": "1.7 - 47",
+      "Trident": ">= 5.0",
+      "WebKit": "85 - 603.2.1",
+      "Presto": ">= 1"
+    },
+    "size": 53581,
+    "hasCustomMatcher": false,
+    "isAlias": false,
+    "providedByCoreWeb": false
+  },
+  "mdn": {
+    "Collator": {
+      "__compat": {
+        "mdn_url": "https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Intl/Collator",
+        "spec_url": "https://tc39.es/ecma402/#collator-objects",
+        "support": {
+          "chrome": {
+            "version_added": "24"
+          },
+          "chrome_android": {
+            "version_added": "25"
+          },
+          "edge": {
+            "version_added": "12"
+          },
+          "firefox": {
+            "version_added": "29"
+          },
+          "firefox_android": {
+            "version_added": "56"
+          },
+          "ie": {
+            "version_added": "11"
+          },
+          "nodejs": {
+            "version_added": "0.12.0",
+            "notes": "Before version 13.0.0, only the locale data for <code>en-US</code> is available by default. See <a href='https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Intl/Collator/Collator'>the <code>Collator()</code> constructor</a> for more details."
+          },
+          "opera": {
+            "version_added": "15"
+          },
+          "opera_android": {
+            "version_added": "14"
+          },
+          "safari": {
+            "version_added": "10"
+          },
+          "safari_ios": {
+            "version_added": "10"
+          },
+          "samsunginternet_android": {
+            "version_added": "1.5"
+          },
+          "webview_android": {
+            "version_added": "4.4"
+          }
+        },
+        "status": {
+          "experimental": false,
+          "standard_track": true,
+          "deprecated": false
+        }
+      },
+      "Collator": {
+        "__compat": {
+          "description": "<code>Collator()</code> constructor",
+          "mdn_url": "https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Intl/Collator/Collator",
+          "spec_url": "https://tc39.es/ecma402/#sec-the-intl-collator-constructor",
+          "support": {
+            "chrome": {
+              "version_added": "24"
+            },
+            "chrome_android": {
+              "version_added": "25"
+            },
+            "edge": {
+              "version_added": "12"
+            },
+            "firefox": {
+              "version_added": "29"
+            },
+            "firefox_android": {
+              "version_added": "56"
+            },
+            "ie": {
+              "version_added": "11"
+            },
+            "nodejs": [
+              {
+                "version_added": "13.0.0"
+              },
+              {
+                "version_added": "0.12.0",
+                "partial_implementation": true,
+                "notes": "Before version 13.0.0, only the locale data for <code>en-US</code> is available by default. When other locales are specified, the <code>Collator</code> instance silently falls back to <code>en-US</code>. To make full ICU (locale) data available for versions prior to 13, see <a href='https://nodejs.org/docs/latest/api/intl.html#intl_options_for_building_node_js'>Node.js documentation on the <code>--with-intl</code> option</a> and how to provide the data."
+              }
+            ],
+            "opera": {
+              "version_added": "15"
+            },
+            "opera_android": {
+              "version_added": "14"
+            },
+            "safari": {
+              "version_added": "10"
+            },
+            "safari_ios": {
+              "version_added": "10"
+            },
+            "samsunginternet_android": {
+              "version_added": "1.5"
+            },
+            "webview_android": {
+              "version_added": "4.4"
+            }
+          },
+          "status": {
+            "experimental": false,
+            "standard_track": true,
+            "deprecated": false
+          }
+        },
+        "caseFirst": {
+          "__compat": {
+            "description": "<code>caseFirst</code> option",
+            "support": {
+              "chrome": {
+                "version_added": "24"
+              },
+              "chrome_android": {
+                "version_added": "25"
+              },
+              "edge": {
+                "version_added": "18"
+              },
+              "firefox": {
+                "version_added": "55"
+              },
+              "firefox_android": {
+                "version_added": "56"
+              },
+              "ie": {
+                "version_added": false
+              },
+              "nodejs": {
+                "version_added": "0.12.0"
+              },
+              "opera": {
+                "version_added": "15"
+              },
+              "opera_android": {
+                "version_added": "14"
+              },
+              "safari": {
+                "version_added": "11"
+              },
+              "safari_ios": {
+                "version_added": "11"
+              },
+              "samsunginternet_android": {
+                "version_added": "1.5"
+              },
+              "webview_android": {
+                "version_added": "4.4"
+              }
+            },
+            "status": {
+              "experimental": false,
+              "standard_track": true,
+              "deprecated": false
+            }
+          }
+        },
+        "collation": {
+          "__compat": {
+            "description": "<code>collation</code> option",
+            "support": {
+              "chrome": {
+                "version_added": "87"
+              },
+              "chrome_android": {
+                "version_added": "87"
+              },
+              "edge": {
+                "version_added": "87"
+              },
+              "firefox": {
+                "version_added": "85"
+              },
+              "firefox_android": {
+                "version_added": "85"
+              },
+              "ie": {
+                "version_added": false
+              },
+              "nodejs": {
+                "version_added": "15.0.0"
+              },
+              "opera": {
+                "version_added": "73"
+              },
+              "opera_android": {
+                "version_added": false
+              },
+              "safari": {
+                "version_added": false
+              },
+              "safari_ios": {
+                "version_added": false
+              },
+              "samsunginternet_android": {
+                "version_added": false
+              },
+              "webview_android": {
+                "version_added": "87"
+              }
+            },
+            "status": {
+              "experimental": false,
+              "standard_track": true,
+              "deprecated": false
+            }
+          }
+        }
+      },
+      "compare": {
+        "__compat": {
+          "mdn_url": "https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Intl/Collator/compare",
+          "spec_url": "https://tc39.es/ecma402/#sec-intl.collator.prototype.compare",
+          "support": {
+            "chrome": {
+              "version_added": "24"
+            },
+            "chrome_android": {
+              "version_added": "25"
+            },
+            "edge": {
+              "version_added": "12"
+            },
+            "firefox": {
+              "version_added": "29"
+            },
+            "firefox_android": {
+              "version_added": "56"
+            },
+            "ie": {
+              "version_added": "11"
+            },
+            "nodejs": {
+              "version_added": "0.12.0",
+              "notes": "Before version 13.0.0, only the locale data for <code>en-US</code> is available by default. See <a href='https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Intl/Collator/Collator'>the <code>Collator()</code> constructor</a> for more details."
+            },
+            "opera": {
+              "version_added": "15"
+            },
+            "opera_android": {
+              "version_added": "14"
+            },
+            "safari": {
+              "version_added": "10"
+            },
+            "safari_ios": {
+              "version_added": "10"
+            },
+            "samsunginternet_android": {
+              "version_added": "1.5"
+            },
+            "webview_android": {
+              "version_added": "4.4"
+            }
+          },
+          "status": {
+            "experimental": false,
+            "standard_track": true,
+            "deprecated": false
+          }
+        }
+      },
+      "resolvedOptions": {
+        "__compat": {
+          "mdn_url": "https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Intl/Collator/resolvedOptions",
+          "spec_url": "https://tc39.es/ecma402/#sec-intl.collator.prototype.resolvedoptions",
+          "support": {
+            "chrome": {
+              "version_added": "24"
+            },
+            "chrome_android": {
+              "version_added": "25"
+            },
+            "edge": {
+              "version_added": "12"
+            },
+            "firefox": {
+              "version_added": "29"
+            },
+            "firefox_android": {
+              "version_added": "56"
+            },
+            "ie": {
+              "version_added": "11"
+            },
+            "nodejs": {
+              "version_added": "0.12.0",
+              "notes": "Before version 13.0.0, only the locale data for <code>en-US</code> is available by default. See <a href='https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Intl/Collator/Collator'>the <code>Collator()</code> constructor</a> for more details."
+            },
+            "opera": {
+              "version_added": "15"
+            },
+            "opera_android": {
+              "version_added": "14"
+            },
+            "safari": {
+              "version_added": "10"
+            },
+            "safari_ios": {
+              "version_added": "10"
+            },
+            "samsunginternet_android": {
+              "version_added": "1.5"
+            },
+            "webview_android": {
+              "version_added": "4.4"
+            }
+          },
+          "status": {
+            "experimental": false,
+            "standard_track": true,
+            "deprecated": false
+          }
+        }
+      },
+      "supportedLocalesOf": {
+        "__compat": {
+          "mdn_url": "https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Intl/Collator/supportedLocalesOf",
+          "spec_url": "https://tc39.es/ecma402/#sec-intl.collator.supportedlocalesof",
+          "support": {
+            "chrome": {
+              "version_added": "24"
+            },
+            "chrome_android": {
+              "version_added": "25"
+            },
+            "edge": {
+              "version_added": "12"
+            },
+            "firefox": {
+              "version_added": "29"
+            },
+            "firefox_android": {
+              "version_added": "56"
+            },
+            "ie": {
+              "version_added": "11"
+            },
+            "nodejs": [
+              {
+                "version_added": "13.0.0"
+              },
+              {
+                "version_added": "0.12.0",
+                "partial_implementation": true,
+                "notes": "Before version 13.0.0, only the locale data for <code>en-US</code> is available by default. To make full ICU (locale) data available for versions prior to 13, see <a href='https://nodejs.org/docs/latest/api/intl.html#intl_options_for_building_node_js'>Node.js documentation on the <code>--with-intl</code> option</a> and how to provide the data."
+              }
+            ],
+            "opera": {
+              "version_added": "15"
+            },
+            "opera_android": {
+              "version_added": "14"
+            },
+            "safari": {
+              "version_added": "10"
+            },
+            "safari_ios": {
+              "version_added": "10"
+            },
+            "samsunginternet_android": {
+              "version_added": "1.5"
+            },
+            "webview_android": {
+              "version_added": "4.4"
+            }
+          },
+          "status": {
+            "experimental": false,
+            "standard_track": true,
+            "deprecated": false
+          }
+        }
+      }
+    },
+    "DateTimeFormat": {
+      "__compat": {
+        "mdn_url": "https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat",
+        "spec_url": "https://tc39.es/ecma402/#datetimeformat-objects",
+        "support": {
+          "chrome": {
+            "version_added": "24"
+          },
+          "chrome_android": {
+            "version_added": "25"
+          },
+          "edge": {
+            "version_added": "12"
+          },
+          "firefox": {
+            "version_added": "29"
+          },
+          "firefox_android": {
+            "version_added": "56"
+          },
+          "ie": {
+            "version_added": "11"
+          },
+          "nodejs": {
+            "version_added": "0.12.0",
+            "notes": "Before version 13.0.0, only the locale data for <code>en-US</code> is available by default. See <a href='https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat'>the <code>DateTimeFormat()</code> constructor</a> for more details."
+          },
+          "opera": {
+            "version_added": "15"
+          },
+          "opera_android": {
+            "version_added": "14"
+          },
+          "safari": {
+            "version_added": "10"
+          },
+          "safari_ios": {
+            "version_added": "10"
+          },
+          "samsunginternet_android": {
+            "version_added": "1.5"
+          },
+          "webview_android": {
+            "version_added": "4.4"
+          }
+        },
+        "status": {
+          "experimental": false,
+          "standard_track": true,
+          "deprecated": false
+        }
+      },
+      "DateTimeFormat": {
+        "__compat": {
+          "description": "<code>DateTimeFormat()</code> constructor",
+          "mdn_url": "https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat",
+          "spec_url": "https://tc39.es/ecma402/#sec-intl-datetimeformat-constructor",
+          "support": {
+            "chrome": {
+              "version_added": "24"
+            },
+            "chrome_android": {
+              "version_added": "25"
+            },
+            "edge": {
+              "version_added": "12"
+            },
+            "firefox": {
+              "version_added": "29"
+            },
+            "firefox_android": {
+              "version_added": "56"
+            },
+            "ie": {
+              "version_added": "11"
+            },
+            "nodejs": [
+              {
+                "version_added": "13.0.0"
+              },
+              {
+                "version_added": "0.12.0",
+                "partial_implementation": true,
+                "notes": "Before version 13.0.0, only the locale data for <code>en-US</code> is available by default. When other locales are specified, the <code>DateTimeFormat</code> instance silently falls back to <code>en-US</code>. To make full ICU (locale) data available for versions prior to 13, see <a href='https://nodejs.org/docs/latest/api/intl.html#intl_options_for_building_node_js'>Node.js documentation on the <code>--with-intl</code> option</a> and how to provide the data."
+              }
+            ],
+            "opera": {
+              "version_added": "15"
+            },
+            "opera_android": {
+              "version_added": "14"
+            },
+            "safari": {
+              "version_added": "10"
+            },
+            "safari_ios": {
+              "version_added": "10"
+            },
+            "samsunginternet_android": {
+              "version_added": "1.5"
+            },
+            "webview_android": {
+              "version_added": "4.4"
+            }
+          },
+          "status": {
+            "experimental": false,
+            "standard_track": true,
+            "deprecated": false
+          }
+        },
+        "dateStyle": {
+          "__compat": {
+            "support": {
+              "chrome": {
+                "version_added": "76"
+              },
+              "chrome_android": {
+                "version_added": "76"
+              },
+              "edge": {
+                "version_added": "79"
+              },
+              "firefox": {
+                "version_added": "79"
+              },
+              "firefox_android": {
+                "version_added": "79"
+              },
+              "ie": {
+                "version_added": false
+              },
+              "nodejs": {
+                "version_added": "12.9.0"
+              },
+              "opera": {
+                "version_added": "63"
+              },
+              "opera_android": {
+                "version_added": "54"
+              },
+              "safari": {
+                "version_added": "14.1"
+              },
+              "safari_ios": {
+                "version_added": "14.5"
+              },
+              "samsunginternet_android": {
+                "version_added": false
+              },
+              "webview_android": {
+                "version_added": "76"
+              }
+            },
+            "status": {
+              "experimental": false,
+              "standard_track": true,
+              "deprecated": false
+            }
+          }
+        },
+        "fractionalSecondDigits": {
+          "__compat": {
+            "support": {
+              "chrome": {
+                "version_added": "84"
+              },
+              "chrome_android": {
+                "version_added": "84"
+              },
+              "edge": {
+                "version_added": "84"
+              },
+              "firefox": {
+                "version_added": "84"
+              },
+              "firefox_android": {
+                "version_added": "84"
+              },
+              "ie": {
+                "version_added": false
+              },
+              "nodejs": {
+                "version_added": "14.6.0"
+              },
+              "opera": {
+                "version_added": "70"
+              },
+              "opera_android": {
+                "version_added": "60"
+              },
+              "safari": {
+                "version_added": false
+              },
+              "safari_ios": {
+                "version_added": false
+              },
+              "samsunginternet_android": {
+                "version_added": false
+              },
+              "webview_android": {
+                "version_added": "84"
+              }
+            },
+            "status": {
+              "experimental": false,
+              "standard_track": true,
+              "deprecated": false
+            }
+          }
+        },
+        "hourCycle": {
+          "__compat": {
+            "support": {
+              "chrome": {
+                "version_added": "73"
+              },
+              "chrome_android": {
+                "version_added": "73"
+              },
+              "edge": {
+                "version_added": "18"
+              },
+              "firefox": {
+                "version_added": "58"
+              },
+              "firefox_android": {
+                "version_added": "58"
+              },
+              "ie": {
+                "version_added": false
+              },
+              "nodejs": {
+                "version_added": "12.0.0"
+              },
+              "opera": {
+                "version_added": "60"
+              },
+              "opera_android": {
+                "version_added": "52"
+              },
+              "safari": {
+                "version_added": "13"
+              },
+              "safari_ios": {
+                "version_added": "13"
+              },
+              "samsunginternet_android": {
+                "version_added": false
+              },
+              "webview_android": {
+                "version_added": "73"
+              }
+            },
+            "status": {
+              "experimental": false,
+              "standard_track": true,
+              "deprecated": false
+            }
+          }
+        },
+        "iana_time_zone_names": {
+          "__compat": {
+            "description": "IANA time zone names in <code>timeZone</code> option",
+            "support": {
+              "chrome": {
+                "version_added": "24"
+              },
+              "chrome_android": {
+                "version_added": "25"
+              },
+              "edge": {
+                "version_added": "14"
+              },
+              "firefox": {
+                "version_added": "52"
+              },
+              "firefox_android": {
+                "version_added": "56"
+              },
+              "ie": {
+                "version_added": false
+              },
+              "nodejs": {
+                "version_added": "4.0.0"
+              },
+              "opera": {
+                "version_added": "15"
+              },
+              "opera_android": {
+                "version_added": "14"
+              },
+              "safari": {
+                "version_added": "10"
+              },
+              "safari_ios": {
+                "version_added": "10"
+              },
+              "samsunginternet_android": {
+                "version_added": "1.5"
+              },
+              "webview_android": {
+                "version_added": "37"
+              }
+            },
+            "status": {
+              "experimental": false,
+              "standard_track": true,
+              "deprecated": false
+            }
+          }
+        },
+        "timeStyle": {
+          "__compat": {
+            "support": {
+              "chrome": {
+                "version_added": "76"
+              },
+              "chrome_android": {
+                "version_added": "76"
+              },
+              "edge": {
+                "version_added": "79"
+              },
+              "firefox": {
+                "version_added": "79"
+              },
+              "firefox_android": {
+                "version_added": "79"
+              },
+              "ie": {
+                "version_added": false
+              },
+              "nodejs": {
+                "version_added": "12.9.0"
+              },
+              "opera": {
+                "version_added": "63"
+              },
+              "opera_android": {
+                "version_added": "54"
+              },
+              "safari": {
+                "version_added": "14.1"
+              },
+              "safari_ios": {
+                "version_added": "14.5"
+              },
+              "samsunginternet_android": {
+                "version_added": false
+              },
+              "webview_android": {
+                "version_added": "76"
+              }
+            },
+            "status": {
+              "experimental": false,
+              "standard_track": true,
+              "deprecated": false
+            }
+          }
+        }
+      },
+      "format": {
+        "__compat": {
+          "mdn_url": "https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/format",
+          "spec_url": "https://tc39.es/ecma402/#sec-intl.datetimeformat.prototype.format",
+          "support": {
+            "chrome": {
+              "version_added": "24"
+            },
+            "chrome_android": {
+              "version_added": "25"
+            },
+            "edge": {
+              "version_added": "12"
+            },
+            "firefox": {
+              "version_added": "29"
+            },
+            "firefox_android": {
+              "version_added": "56"
+            },
+            "ie": {
+              "version_added": "11"
+            },
+            "nodejs": {
+              "version_added": "0.12.0",
+              "notes": "Before version 13.0.0, only the locale data for <code>en-US</code> is available by default. See <a href='https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat'>the <code>DateTimeFormat()</code> constructor</a> for more details."
+            },
+            "opera": {
+              "version_added": "15"
+            },
+            "opera_android": {
+              "version_added": "14"
+            },
+            "safari": {
+              "version_added": "10"
+            },
+            "safari_ios": {
+              "version_added": "10"
+            },
+            "samsunginternet_android": {
+              "version_added": "1.5"
+            },
+            "webview_android": {
+              "version_added": "4.4"
+            }
+          },
+          "status": {
+            "experimental": false,
+            "standard_track": true,
+            "deprecated": false
+          }
+        }
+      },
+      "formatRange": {
+        "__compat": {
+          "mdn_url": "https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/formatRange",
+          "spec_url": "https://tc39.es/ecma402/#sec-intl.datetimeformat.prototype.formatRange",
+          "support": {
+            "chrome": {
+              "version_added": "76"
+            },
+            "chrome_android": {
+              "version_added": "76"
+            },
+            "edge": {
+              "version_added": "79"
+            },
+            "firefox": {
+              "version_added": false
+            },
+            "firefox_android": {
+              "version_added": false
+            },
+            "ie": {
+              "version_added": false
+            },
+            "nodejs": {
+              "version_added": "12.9.0",
+              "notes": "Before version 13.0.0, only the locale data for <code>en-US</code> is available by default. See <a href='https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat'>the <code>DateTimeFormat()</code> constructor</a> for more details."
+            },
+            "opera": {
+              "version_added": false
+            },
+            "opera_android": {
+              "version_added": "54"
+            },
+            "safari": {
+              "version_added": "14.1"
+            },
+            "safari_ios": {
+              "version_added": "14.5"
+            },
+            "samsunginternet_android": {
+              "version_added": false
+            },
+            "webview_android": {
+              "version_added": "76"
+            }
+          },
+          "status": {
+            "experimental": false,
+            "standard_track": true,
+            "deprecated": false
+          }
+        }
+      },
+      "formatRangeToParts": {
+        "__compat": {
+          "mdn_url": "https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/formatRangeToParts",
+          "spec_url": "https://tc39.es/ecma402/#sec-Intl.DateTimeFormat.prototype.formatRangeToParts",
+          "support": {
+            "chrome": {
+              "version_added": "76"
+            },
+            "chrome_android": {
+              "version_added": "76"
+            },
+            "edge": {
+              "version_added": "79"
+            },
+            "firefox": {
+              "version_added": false
+            },
+            "firefox_android": {
+              "version_added": false
+            },
+            "ie": {
+              "version_added": false
+            },
+            "nodejs": {
+              "version_added": "12.9.0",
+              "notes": "Before version 13.0.0, only the locale data for <code>en-US</code> is available by default. See <a href='https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat'>the <code>DateTimeFormat()</code> constructor</a> for more details."
+            },
+            "opera": {
+              "version_added": false
+            },
+            "opera_android": {
+              "version_added": "54"
+            },
+            "safari": {
+              "version_added": false
+            },
+            "safari_ios": {
+              "version_added": false
+            },
+            "samsunginternet_android": {
+              "version_added": false
+            },
+            "webview_android": {
+              "version_added": "76"
+            }
+          },
+          "status": {
+            "experimental": false,
+            "standard_track": true,
+            "deprecated": false
+          }
+        }
+      },
+      "formatToParts": {
+        "__compat": {
+          "mdn_url": "https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/formatToParts",
+          "spec_url": "https://tc39.es/ecma402/#sec-Intl.DateTimeFormat.prototype.formatToParts",
+          "support": {
+            "chrome": {
+              "version_added": "57",
+              "notes": "Before version 71, <code>formatToParts()</code> returned an object with an incorrectly cased type key of <code>dayperiod</code>. Version 71 and later use the specification defined <code>dayPeriod</code>. See <a href='https://crbug.com/865351'>Chromium bug 865351</a>."
+            },
+            "chrome_android": {
+              "version_added": "57",
+              "notes": "Before version 71, <code>formatToParts()</code> returned an object with an incorrectly cased type key of <code>dayperiod</code>. Version 71 and later use the specification defined <code>dayPeriod</code>. See <a href='https://crbug.com/865351'>Chromium bug 865351</a>."
+            },
+            "edge": {
+              "version_added": "18"
+            },
+            "firefox": {
+              "version_added": "51"
+            },
+            "firefox_android": {
+              "version_added": "56"
+            },
+            "ie": {
+              "version_added": false
+            },
+            "nodejs": {
+              "version_added": "8.0.0",
+              "notes": [
+                "Before version 12.0.0, <code>formatToParts()</code> returned an object with an incorrectly cased type key of <code>dayperiod</code>. Version 12.0.0 and later use the specification defined <code>dayPeriod</code>. See <a href='https://crbug.com/865351'>Chromium bug 865351</a>.",
+                "Before version 13.0.0, only the locale data for <code>en-US</code> is available by default. See <a href='https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat'>the <code>DateTimeFormat()</code> constructor</a> for more details."
+              ]
+            },
+            "opera": {
+              "version_added": "44",
+              "notes": "Before version 58, <code>formatToParts()</code> returned an object with an incorrectly cased type key of <code>dayperiod</code>. Version 58 and later use the specification defined <code>dayPeriod</code>. See <a href='https://crbug.com/865351'>Chromium bug 865351</a>."
+            },
+            "opera_android": {
+              "version_added": "43",
+              "notes": "Before version 50, <code>formatToParts()</code> returned an object with an incorrectly cased type key of <code>dayperiod</code>. Version 50 and later use the specification defined <code>dayPeriod</code>. See <a href='https://crbug.com/865351'>Chromium bug 865351</a>."
+            },
+            "safari": {
+              "version_added": "11"
+            },
+            "safari_ios": {
+              "version_added": "11"
+            },
+            "samsunginternet_android": {
+              "version_added": "7.0",
+              "notes": "Before version 71, <code>formatToParts()</code> returned an object with an incorrectly cased type key of <code>dayperiod</code>. Version 71 and later use the specification defined <code>dayPeriod</code>. See <a href='https://crbug.com/865351'>Chromium bug 865351</a>."
+            },
+            "webview_android": {
+              "version_added": "57",
+              "notes": "Before version 71, <code>formatToParts()</code> returned an object with an incorrectly cased type key of <code>dayperiod</code>. Version 71 and later use the specification defined <code>dayPeriod</code>. See <a href='https://crbug.com/865351'>Chromium bug 865351</a>."
+            }
+          },
+          "status": {
+            "experimental": false,
+            "standard_track": true,
+            "deprecated": false
+          }
+        }
+      },
+      "resolvedOptions": {
+        "__compat": {
+          "mdn_url": "https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/resolvedOptions",
+          "spec_url": "https://tc39.es/ecma402/#sec-intl.datetimeformat.prototype.resolvedoptions",
+          "support": {
+            "chrome": {
+              "version_added": "24"
+            },
+            "chrome_android": {
+              "version_added": "25"
+            },
+            "edge": {
+              "version_added": "12"
+            },
+            "firefox": {
+              "version_added": "29"
+            },
+            "firefox_android": {
+              "version_added": "56"
+            },
+            "ie": {
+              "version_added": "11"
+            },
+            "nodejs": {
+              "version_added": "0.12.0",
+              "notes": "Before version 13.0.0, only the locale data for <code>en-US</code> is available by default. See <a href='https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat'>the <code>DateTimeFormat()</code> constructor</a> for more details."
+            },
+            "opera": {
+              "version_added": "15"
+            },
+            "opera_android": {
+              "version_added": "14"
+            },
+            "safari": {
+              "version_added": "10"
+            },
+            "safari_ios": {
+              "version_added": "10"
+            },
+            "samsunginternet_android": {
+              "version_added": "1.5"
+            },
+            "webview_android": {
+              "version_added": "4.4"
+            }
+          },
+          "status": {
+            "experimental": false,
+            "standard_track": true,
+            "deprecated": false
+          }
+        },
+        "computed_timezone": {
+          "__compat": {
+            "description": "computed <code>timeZone</code>",
+            "support": {
+              "chrome": {
+                "version_added": "35"
+              },
+              "chrome_android": {
+                "version_added": "35"
+              },
+              "edge": {
+                "version_added": "14"
+              },
+              "firefox": {
+                "version_added": "53"
+              },
+              "firefox_android": {
+                "version_added": "56"
+              },
+              "ie": {
+                "version_added": false
+              },
+              "nodejs": {
+                "version_added": "8.10.0"
+              },
+              "opera": {
+                "version_added": "30"
+              },
+              "opera_android": {
+                "version_added": "22"
+              },
+              "safari": {
+                "version_added": "10"
+              },
+              "safari_ios": {
+                "version_added": "10"
+              },
+              "samsunginternet_android": {
+                "version_added": "3.0"
+              },
+              "webview_android": {
+                "version_added": "≤37"
+              }
+            },
+            "status": {
+              "experimental": false,
+              "standard_track": true,
+              "deprecated": false
+            }
+          }
+        }
+      },
+      "supportedLocalesOf": {
+        "__compat": {
+          "mdn_url": "https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/supportedLocalesOf",
+          "spec_url": "https://tc39.es/ecma402/#sec-intl.datetimeformat.supportedlocalesof",
+          "support": {
+            "chrome": {
+              "version_added": "24"
+            },
+            "chrome_android": {
+              "version_added": "25"
+            },
+            "edge": {
+              "version_added": "12"
+            },
+            "firefox": {
+              "version_added": "29"
+            },
+            "firefox_android": {
+              "version_added": "56"
+            },
+            "ie": {
+              "version_added": "11"
+            },
+            "nodejs": [
+              {
+                "version_added": "13.0.0"
+              },
+              {
+                "version_added": "0.12.0",
+                "partial_implementation": true,
+                "notes": "Before version 13.0.0, only the locale data for <code>en-US</code> is available by default. To make full ICU (locale) data available for versions prior to 13, see <a href='https://nodejs.org/docs/latest/api/intl.html#intl_options_for_building_node_js'>Node.js documentation on the <code>--with-intl</code> option</a> and how to provide the data."
+              }
+            ],
+            "opera": {
+              "version_added": "15"
+            },
+            "opera_android": {
+              "version_added": "14"
+            },
+            "safari": {
+              "version_added": "10"
+            },
+            "safari_ios": {
+              "version_added": "10"
+            },
+            "samsunginternet_android": {
+              "version_added": "1.5"
+            },
+            "webview_android": {
+              "version_added": "4.4"
+            }
+          },
+          "status": {
+            "experimental": false,
+            "standard_track": true,
+            "deprecated": false
+          }
+        }
+      }
+    },
+    "DisplayNames": {
+      "__compat": {
+        "mdn_url": "https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Intl/DisplayNames",
+        "spec_url": "https://tc39.es/ecma402/#intl-displaynames-objects",
+        "support": {
+          "chrome": {
+            "version_added": "81"
+          },
+          "chrome_android": {
+            "version_added": "81"
+          },
+          "edge": {
+            "version_added": "81"
+          },
+          "firefox": {
+            "version_added": "86"
+          },
+          "firefox_android": {
+            "version_added": "86"
+          },
+          "ie": {
+            "version_added": false
+          },
+          "nodejs": {
+            "version_added": "14.0.0"
+          },
+          "opera": {
+            "version_added": "68"
+          },
+          "opera_android": {
+            "version_added": "58"
+          },
+          "safari": {
+            "version_added": "14.1"
+          },
+          "safari_ios": {
+            "version_added": "14.5"
+          },
+          "samsunginternet_android": {
+            "version_added": false
+          },
+          "webview_android": {
+            "version_added": "81"
+          }
+        },
+        "status": {
+          "experimental": false,
+          "standard_track": true,
+          "deprecated": false
+        }
+      },
+      "DisplayNames": {
+        "__compat": {
+          "description": "<code>DisplayNames()</code> constructor",
+          "mdn_url": "https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Intl/DisplayNames/DisplayNames",
+          "spec_url": "https://tc39.es/ecma402/#sec-intl-displaynames-constructor",
+          "support": {
+            "chrome": {
+              "version_added": "81"
+            },
+            "chrome_android": {
+              "version_added": "81"
+            },
+            "edge": {
+              "version_added": "81"
+            },
+            "firefox": {
+              "version_added": "86"
+            },
+            "firefox_android": {
+              "version_added": "86"
+            },
+            "ie": {
+              "version_added": false
+            },
+            "nodejs": {
+              "version_added": "14.0.0"
+            },
+            "opera": {
+              "version_added": "68"
+            },
+            "opera_android": {
+              "version_added": "58"
+            },
+            "safari": {
+              "version_added": "14.1"
+            },
+            "safari_ios": {
+              "version_added": "14.5"
+            },
+            "samsunginternet_android": {
+              "version_added": false
+            },
+            "webview_android": {
+              "version_added": "81"
+            }
+          },
+          "status": {
+            "experimental": false,
+            "standard_track": true,
+            "deprecated": false
+          }
+        }
+      },
+      "of": {
+        "__compat": {
+          "mdn_url": "https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Intl/DisplayNames/of",
+          "spec_url": "https://tc39.es/ecma402/#sec-Intl.DisplayNames.prototype.of",
+          "support": {
+            "chrome": {
+              "version_added": "81"
+            },
+            "chrome_android": {
+              "version_added": "81"
+            },
+            "edge": {
+              "version_added": "81"
+            },
+            "firefox": {
+              "version_added": "86"
+            },
+            "firefox_android": {
+              "version_added": "86"
+            },
+            "ie": {
+              "version_added": false
+            },
+            "nodejs": {
+              "version_added": "14.0.0"
+            },
+            "opera": {
+              "version_added": "68"
+            },
+            "opera_android": {
+              "version_added": "58"
+            },
+            "safari": {
+              "version_added": "14.1"
+            },
+            "safari_ios": {
+              "version_added": "14.5"
+            },
+            "samsunginternet_android": {
+              "version_added": false
+            },
+            "webview_android": {
+              "version_added": "81"
+            }
+          },
+          "status": {
+            "experimental": false,
+            "standard_track": true,
+            "deprecated": false
+          }
+        }
+      },
+      "resolvedOptions": {
+        "__compat": {
+          "mdn_url": "https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Intl/DisplayNames/resolvedOptions",
+          "spec_url": "https://tc39.es/ecma402/#sec-Intl.DisplayNames.prototype.resolvedOptions",
+          "support": {
+            "chrome": {
+              "version_added": "81"
+            },
+            "chrome_android": {
+              "version_added": "81"
+            },
+            "edge": {
+              "version_added": "81"
+            },
+            "firefox": {
+              "version_added": "86"
+            },
+            "firefox_android": {
+              "version_added": "86"
+            },
+            "ie": {
+              "version_added": false
+            },
+            "nodejs": {
+              "version_added": "14.0.0"
+            },
+            "opera": {
+              "version_added": "68"
+            },
+            "opera_android": {
+              "version_added": "58"
+            },
+            "safari": {
+              "version_added": "14.1"
+            },
+            "safari_ios": {
+              "version_added": "14.5"
+            },
+            "samsunginternet_android": {
+              "version_added": false
+            },
+            "webview_android": {
+              "version_added": "81"
+            }
+          },
+          "status": {
+            "experimental": false,
+            "standard_track": true,
+            "deprecated": false
+          }
+        }
+      },
+      "supportedLocalesOf": {
+        "__compat": {
+          "mdn_url": "https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Intl/DisplayNames/supportedLocalesOf",
+          "spec_url": "https://tc39.es/ecma402/#sec-Intl.DisplayNames.supportedLocalesOf",
+          "support": {
+            "chrome": {
+              "version_added": "81"
+            },
+            "chrome_android": {
+              "version_added": "81"
+            },
+            "edge": {
+              "version_added": "81"
+            },
+            "firefox": {
+              "version_added": "86"
+            },
+            "firefox_android": {
+              "version_added": "86"
+            },
+            "ie": {
+              "version_added": false
+            },
+            "nodejs": {
+              "version_added": "14.0.0"
+            },
+            "opera": {
+              "version_added": "68"
+            },
+            "opera_android": {
+              "version_added": "58"
+            },
+            "safari": {
+              "version_added": "14.1"
+            },
+            "safari_ios": {
+              "version_added": "14.5"
+            },
+            "samsunginternet_android": {
+              "version_added": false
+            },
+            "webview_android": {
+              "version_added": "81"
+            }
+          },
+          "status": {
+            "experimental": false,
+            "standard_track": true,
+            "deprecated": false
+          }
+        }
+      }
+    },
+    "__compat": {
+      "mdn_url": "https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Intl",
+      "spec_url": "https://tc39.es/ecma402/#intl-object",
+      "support": {
+        "chrome": {
+          "version_added": "24"
+        },
+        "chrome_android": {
+          "version_added": "25"
+        },
+        "edge": {
+          "version_added": "12"
+        },
+        "firefox": {
+          "version_added": "29"
+        },
+        "firefox_android": {
+          "version_added": "56"
+        },
+        "ie": {
+          "version_added": "11"
+        },
+        "nodejs": {
+          "version_added": "0.12.0"
+        },
+        "opera": {
+          "version_added": "15"
+        },
+        "opera_android": {
+          "version_added": "14"
+        },
+        "safari": {
+          "version_added": "10"
+        },
+        "safari_ios": {
+          "version_added": "10"
+        },
+        "samsunginternet_android": {
+          "version_added": "1.5"
+        },
+        "webview_android": {
+          "version_added": "4.4"
+        }
+      },
+      "status": {
+        "experimental": false,
+        "standard_track": true,
+        "deprecated": false
+      }
+    },
+    "getCanonicalLocales": {
+      "__compat": {
+        "mdn_url": "https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Intl/getCanonicalLocales",
+        "spec_url": "https://tc39.es/ecma402/#sec-intl.getcanonicallocales",
+        "support": {
+          "chrome": {
+            "version_added": "54"
+          },
+          "chrome_android": {
+            "version_added": false
+          },
+          "edge": {
+            "version_added": "16"
+          },
+          "firefox": {
+            "version_added": "48"
+          },
+          "firefox_android": {
+            "version_added": "56"
+          },
+          "ie": {
+            "version_added": false
+          },
+          "nodejs": {
+            "version_added": "7.0.0"
+          },
+          "opera": {
+            "version_added": false
+          },
+          "opera_android": {
+            "version_added": false
+          },
+          "safari": {
+            "version_added": "11"
+          },
+          "safari_ios": {
+            "version_added": "11"
+          },
+          "samsunginternet_android": {
+            "version_added": false
+          },
+          "webview_android": {
+            "version_added": false
+          }
+        },
+        "status": {
+          "experimental": false,
+          "standard_track": true,
+          "deprecated": false
+        }
+      }
+    },
+    "@@toStringTag": {
+      "__compat": {
+        "mdn_url": "https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Intl/@@toStringTag",
+        "spec_url": "https://tc39.es/ecma402/#sec-Intl-toStringTag",
+        "support": {
+          "chrome": {
+            "version_added": "86"
+          },
+          "chrome_android": {
+            "version_added": "86"
+          },
+          "edge": {
+            "version_added": "86"
+          },
+          "firefox": {
+            "version_added": "83"
+          },
+          "firefox_android": {
+            "version_added": "83"
+          },
+          "ie": {
+            "version_added": false
+          },
+          "nodejs": {
+            "version_added": "15.0.0"
+          },
+          "opera": {
+            "version_added": "72"
+          },
+          "opera_android": {
+            "version_added": false
+          },
+          "safari": {
+            "version_added": "14"
+          },
+          "safari_ios": {
+            "version_added": "14"
+          },
+          "samsunginternet_android": {
+            "version_added": false
+          },
+          "webview_android": {
+            "version_added": "86"
+          }
+        },
+        "status": {
+          "experimental": false,
+          "standard_track": true,
+          "deprecated": false
+        }
+      }
+    },
+    "ListFormat": {
+      "__compat": {
+        "mdn_url": "https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Intl/ListFormat",
+        "spec_url": "https://tc39.es/ecma402/#listformat-objects",
+        "support": {
+          "chrome": {
+            "version_added": "72"
+          },
+          "chrome_android": {
+            "version_added": "72"
+          },
+          "edge": {
+            "version_added": "79"
+          },
+          "firefox": {
+            "version_added": "78"
+          },
+          "firefox_android": {
+            "version_added": "79"
+          },
+          "ie": {
+            "version_added": false
+          },
+          "nodejs": {
+            "version_added": "12.0.0",
+            "notes": "Before version 13.0.0, only the locale data for <code>en-US</code> is available by default. See <a href='https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Intl/ListFormat/ListFormat'>the <code>ListFormat()</code> constructor</a> for more details."
+          },
+          "opera": {
+            "version_added": "60"
+          },
+          "opera_android": {
+            "version_added": "51"
+          },
+          "safari": {
+            "version_added": "14.1"
+          },
+          "safari_ios": {
+            "version_added": "14.5"
+          },
+          "samsunginternet_android": {
+            "version_added": false
+          },
+          "webview_android": {
+            "version_added": "72"
+          }
+        },
+        "status": {
+          "experimental": true,
+          "standard_track": true,
+          "deprecated": false
+        }
+      },
+      "ListFormat": {
+        "__compat": {
+          "description": "<code>ListFormat()</code> constructor",
+          "mdn_url": "https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Intl/ListFormat/ListFormat",
+          "spec_url": "https://tc39.es/ecma402/#sec-intl-listformat-constructor",
+          "support": {
+            "chrome": {
+              "version_added": "72"
+            },
+            "chrome_android": {
+              "version_added": "72"
+            },
+            "edge": {
+              "version_added": "79"
+            },
+            "firefox": {
+              "version_added": "78"
+            },
+            "firefox_android": {
+              "version_added": "79"
+            },
+            "ie": {
+              "version_added": false
+            },
+            "nodejs": [
+              {
+                "version_added": "13.0.0"
+              },
+              {
+                "version_added": "12.0.0",
+                "partial_implementation": true,
+                "notes": "Before version 13.0.0, only the locale data for <code>en-US</code> is available by default. When other locales are specified, the <code>ListFormat</code> instance silently falls back to <code>en-US</code>. To make full ICU (locale) data available for versions prior to 13, see <a href='https://nodejs.org/docs/latest/api/intl.html#intl_options_for_building_node_js'>Node.js documentation on the <code>--with-intl</code> option</a> and how to provide the data."
+              }
+            ],
+            "opera": {
+              "version_added": "60"
+            },
+            "opera_android": {
+              "version_added": "51"
+            },
+            "safari": {
+              "version_added": "14.1"
+            },
+            "safari_ios": {
+              "version_added": "14.5"
+            },
+            "samsunginternet_android": {
+              "version_added": false
+            },
+            "webview_android": {
+              "version_added": "72"
+            }
+          },
+          "status": {
+            "experimental": true,
+            "standard_track": true,
+            "deprecated": false
+          }
+        }
+      },
+      "format": {
+        "__compat": {
+          "mdn_url": "https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Intl/ListFormat/format",
+          "spec_url": "https://tc39.es/ecma402/#sec-Intl.ListFormat.prototype.format",
+          "support": {
+            "chrome": {
+              "version_added": "72"
+            },
+            "chrome_android": {
+              "version_added": "72"
+            },
+            "edge": {
+              "version_added": "79"
+            },
+            "firefox": {
+              "version_added": "78"
+            },
+            "firefox_android": {
+              "version_added": "79"
+            },
+            "ie": {
+              "version_added": false
+            },
+            "nodejs": {
+              "version_added": "12.0.0",
+              "notes": "Before version 13.0.0, only the locale data for <code>en-US</code> is available by default. See <a href='https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Intl/ListFormat/ListFormat'>the <code>ListFormat()</code> constructor</a> for more details."
+            },
+            "opera": {
+              "version_added": "60"
+            },
+            "opera_android": {
+              "version_added": "51"
+            },
+            "safari": {
+              "version_added": "14.1"
+            },
+            "safari_ios": {
+              "version_added": "14.5"
+            },
+            "samsunginternet_android": {
+              "version_added": false
+            },
+            "webview_android": {
+              "version_added": "72"
+            }
+          },
+          "status": {
+            "experimental": true,
+            "standard_track": true,
+            "deprecated": false
+          }
+        }
+      },
+      "formatToParts": {
+        "__compat": {
+          "mdn_url": "https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Intl/ListFormat/formatToParts",
+          "spec_url": "https://tc39.es/ecma402/#sec-Intl.ListFormat.prototype.formatToParts",
+          "support": {
+            "chrome": {
+              "version_added": "72"
+            },
+            "chrome_android": {
+              "version_added": "72"
+            },
+            "edge": {
+              "version_added": "79"
+            },
+            "firefox": {
+              "version_added": "78"
+            },
+            "firefox_android": {
+              "version_added": "79"
+            },
+            "ie": {
+              "version_added": false
+            },
+            "nodejs": {
+              "version_added": "12.0.0",
+              "notes": "Before version 13.0.0, only the locale data for <code>en-US</code> is available by default. See <a href='https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Intl/ListFormat/ListFormat'>the <code>ListFormat()</code> constructor</a> for more details."
+            },
+            "opera": {
+              "version_added": "60"
+            },
+            "opera_android": {
+              "version_added": "51"
+            },
+            "safari": {
+              "version_added": "14.1"
+            },
+            "safari_ios": {
+              "version_added": "14.5"
+            },
+            "samsunginternet_android": {
+              "version_added": false
+            },
+            "webview_android": {
+              "version_added": "72"
+            }
+          },
+          "status": {
+            "experimental": true,
+            "standard_track": true,
+            "deprecated": false
+          }
+        }
+      },
+      "resolvedOptions": {
+        "__compat": {
+          "mdn_url": "https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Intl/ListFormat/resolvedOptions",
+          "spec_url": "https://tc39.es/ecma402/#sec-Intl.ListFormat.prototype.resolvedoptions",
+          "support": {
+            "chrome": {
+              "version_added": "72"
+            },
+            "chrome_android": {
+              "version_added": "72"
+            },
+            "edge": {
+              "version_added": "79"
+            },
+            "firefox": {
+              "version_added": "78"
+            },
+            "firefox_android": {
+              "version_added": "79"
+            },
+            "ie": {
+              "version_added": false
+            },
+            "nodejs": {
+              "version_added": "12.0.0",
+              "notes": "Before version 13.0.0, only the locale data for <code>en-US</code> is available by default. See <a href='https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Intl/ListFormat/ListFormat'>the <code>ListFormat()</code> constructor</a> for more details."
+            },
+            "opera": {
+              "version_added": "60"
+            },
+            "opera_android": {
+              "version_added": "51"
+            },
+            "safari": {
+              "version_added": "14.1"
+            },
+            "safari_ios": {
+              "version_added": "14.5"
+            },
+            "samsunginternet_android": {
+              "version_added": false
+            },
+            "webview_android": {
+              "version_added": "72"
+            }
+          },
+          "status": {
+            "experimental": true,
+            "standard_track": true,
+            "deprecated": false
+          }
+        }
+      },
+      "supportedLocalesOf": {
+        "__compat": {
+          "mdn_url": "https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Intl/ListFormat/supportedLocalesOf",
+          "spec_url": "https://tc39.es/ecma402/#sec-Intl.ListFormat.supportedLocalesOf",
+          "support": {
+            "chrome": {
+              "version_added": "72"
+            },
+            "chrome_android": {
+              "version_added": "72"
+            },
+            "edge": {
+              "version_added": "79"
+            },
+            "firefox": {
+              "version_added": "78"
+            },
+            "firefox_android": {
+              "version_added": "79"
+            },
+            "ie": {
+              "version_added": false
+            },
+            "nodejs": [
+              {
+                "version_added": "13.0.0"
+              },
+              {
+                "version_added": "12.0.0",
+                "partial_implementation": true,
+                "notes": "Before version 13.0.0, only the locale data for <code>en-US</code> is available by default. To make full ICU (locale) data available for versions prior to 13, see <a href='https://nodejs.org/docs/latest/api/intl.html#intl_options_for_building_node_js'>Node.js documentation on the <code>--with-intl</code> option</a> and how to provide the data."
+              }
+            ],
+            "opera": {
+              "version_added": "60"
+            },
+            "opera_android": {
+              "version_added": "51"
+            },
+            "safari": {
+              "version_added": "14.1"
+            },
+            "safari_ios": {
+              "version_added": "14.5"
+            },
+            "samsunginternet_android": {
+              "version_added": false
+            },
+            "webview_android": {
+              "version_added": "72"
+            }
+          },
+          "status": {
+            "experimental": true,
+            "standard_track": true,
+            "deprecated": false
+          }
+        }
+      }
+    },
+    "Locale": {
+      "__compat": {
+        "mdn_url": "https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale",
+        "spec_url": "https://tc39.es/ecma402/#locale-objects",
+        "support": {
+          "chrome": {
+            "version_added": "74"
+          },
+          "chrome_android": {
+            "version_added": "74"
+          },
+          "edge": {
+            "version_added": "79"
+          },
+          "firefox": {
+            "version_added": "75"
+          },
+          "firefox_android": {
+            "version_added": "79"
+          },
+          "ie": {
+            "version_added": false
+          },
+          "nodejs": {
+            "version_added": "12.0.0"
+          },
+          "opera": {
+            "version_added": "62"
+          },
+          "opera_android": {
+            "version_added": "53"
+          },
+          "safari": {
+            "version_added": "14"
+          },
+          "safari_ios": {
+            "version_added": "14"
+          },
+          "samsunginternet_android": {
+            "version_added": "11.0"
+          },
+          "webview_android": {
+            "version_added": "74"
+          }
+        },
+        "status": {
+          "standard_track": true,
+          "deprecated": false,
+          "experimental": false
+        }
+      },
+      "Locale": {
+        "__compat": {
+          "description": "<code>Locale()</code> constructor",
+          "mdn_url": "https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/Locale",
+          "spec_url": "https://tc39.es/ecma402/#sec-intl-locale-constructor",
+          "support": {
+            "chrome": {
+              "version_added": "74"
+            },
+            "chrome_android": {
+              "version_added": "74"
+            },
+            "edge": {
+              "version_added": "79"
+            },
+            "firefox": {
+              "version_added": "75"
+            },
+            "firefox_android": {
+              "version_added": "79"
+            },
+            "ie": {
+              "version_added": false
+            },
+            "nodejs": {
+              "version_added": "12.0.0"
+            },
+            "opera": {
+              "version_added": "62"
+            },
+            "opera_android": {
+              "version_added": "53"
+            },
+            "safari": {
+              "version_added": "14"
+            },
+            "safari_ios": {
+              "version_added": "14"
+            },
+            "samsunginternet_android": {
+              "version_added": "11.0"
+            },
+            "webview_android": {
+              "version_added": "74"
+            }
+          },
+          "status": {
+            "experimental": false,
+            "deprecated": false,
+            "standard_track": true
+          }
+        }
+      },
+      "baseName": {
+        "__compat": {
+          "mdn_url": "https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/baseName",
+          "spec_url": "https://tc39.es/ecma402/#sec-Intl.Locale.prototype.baseName",
+          "support": {
+            "chrome": {
+              "version_added": "74"
+            },
+            "chrome_android": {
+              "version_added": "74"
+            },
+            "edge": {
+              "version_added": "79"
+            },
+            "firefox": {
+              "version_added": "75"
+            },
+            "firefox_android": {
+              "version_added": "79"
+            },
+            "ie": {
+              "version_added": false
+            },
+            "nodejs": {
+              "version_added": "12.0.0"
+            },
+            "opera": {
+              "version_added": "62"
+            },
+            "opera_android": {
+              "version_added": "53"
+            },
+            "safari": {
+              "version_added": "14"
+            },
+            "safari_ios": {
+              "version_added": "14"
+            },
+            "samsunginternet_android": {
+              "version_added": "11.0"
+            },
+            "webview_android": {
+              "version_added": "74"
+            }
+          },
+          "status": {
+            "experimental": false,
+            "deprecated": false,
+            "standard_track": true
+          }
+        }
+      },
+      "calendar": {
+        "__compat": {
+          "mdn_url": "https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/calendar",
+          "spec_url": "https://tc39.es/ecma402/#sec-Intl.Locale.prototype.calendar",
+          "support": {
+            "chrome": {
+              "version_added": "74"
+            },
+            "chrome_android": {
+              "version_added": "74"
+            },
+            "edge": {
+              "version_added": "79"
+            },
+            "firefox": {
+              "version_added": "75"
+            },
+            "firefox_android": {
+              "version_added": "79"
+            },
+            "ie": {
+              "version_added": false
+            },
+            "nodejs": {
+              "version_added": "12.0.0"
+            },
+            "opera": {
+              "version_added": "62"
+            },
+            "opera_android": {
+              "version_added": "53"
+            },
+            "safari": {
+              "version_added": "14"
+            },
+            "safari_ios": {
+              "version_added": "14"
+            },
+            "samsunginternet_android": {
+              "version_added": "11.0"
+            },
+            "webview_android": {
+              "version_added": "74"
+            }
+          },
+          "status": {
+            "deprecated": false,
+            "experimental": false,
+            "standard_track": true
+          }
+        }
+      },
+      "caseFirst": {
+        "__compat": {
+          "mdn_url": "https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/caseFirst",
+          "spec_url": "https://tc39.es/ecma402/#sec-Intl.Locale.prototype.caseFirst",
+          "support": {
+            "chrome": {
+              "version_added": "74"
+            },
+            "chrome_android": {
+              "version_added": "74"
+            },
+            "edge": {
+              "version_added": "79"
+            },
+            "firefox": {
+              "version_added": "75"
+            },
+            "firefox_android": {
+              "version_added": "79"
+            },
+            "ie": {
+              "version_added": false
+            },
+            "nodejs": {
+              "version_added": "12.0.0"
+            },
+            "opera": {
+              "version_added": "62"
+            },
+            "opera_android": {
+              "version_added": "53"
+            },
+            "safari": {
+              "version_added": "14"
+            },
+            "safari_ios": {
+              "version_added": "14"
+            },
+            "samsunginternet_android": {
+              "version_added": "11.0"
+            },
+            "webview_android": {
+              "version_added": "74"
+            }
+          },
+          "status": {
+            "deprecated": false,
+            "experimental": false,
+            "standard_track": true
+          }
+        }
+      },
+      "collation": {
+        "__compat": {
+          "mdn_url": "https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/collation",
+          "spec_url": "https://tc39.es/ecma402/#sec-Intl.Locale.prototype.collation",
+          "support": {
+            "chrome": {
+              "version_added": "74"
+            },
+            "chrome_android": {
+              "version_added": "74"
+            },
+            "edge": {
+              "version_added": "79"
+            },
+            "firefox": {
+              "version_added": "75"
+            },
+            "firefox_android": {
+              "version_added": "79"
+            },
+            "ie": {
+              "version_added": false
+            },
+            "nodejs": {
+              "version_added": "12.0.0"
+            },
+            "opera": {
+              "version_added": "62"
+            },
+            "opera_android": {
+              "version_added": "53"
+            },
+            "safari": {
+              "version_added": "14"
+            },
+            "safari_ios": {
+              "version_added": "14"
+            },
+            "samsunginternet_android": {
+              "version_added": "11.0"
+            },
+            "webview_android": {
+              "version_added": "74"
+            }
+          },
+          "status": {
+            "deprecated": false,
+            "experimental": false,
+            "standard_track": true
+          }
+        }
+      },
+      "hourCycle": {
+        "__compat": {
+          "mdn_url": "https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/hourCycle",
+          "spec_url": "https://tc39.es/ecma402/#sec-Intl.Locale.prototype.hourCycle",
+          "support": {
+            "chrome": {
+              "version_added": "74"
+            },
+            "chrome_android": {
+              "version_added": "74"
+            },
+            "edge": {
+              "version_added": "79"
+            },
+            "firefox": {
+              "version_added": "75"
+            },
+            "firefox_android": {
+              "version_added": "79"
+            },
+            "ie": {
+              "version_added": false
+            },
+            "nodejs": {
+              "version_added": "12.0.0"
+            },
+            "opera": {
+              "version_added": "62"
+            },
+            "opera_android": {
+              "version_added": "53"
+            },
+            "safari": {
+              "version_added": "14"
+            },
+            "safari_ios": {
+              "version_added": "14"
+            },
+            "samsunginternet_android": {
+              "version_added": "11.0"
+            },
+            "webview_android": {
+              "version_added": "74"
+            }
+          },
+          "status": {
+            "deprecated": false,
+            "experimental": false,
+            "standard_track": true
+          }
+        }
+      },
+      "language": {
+        "__compat": {
+          "mdn_url": "https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/language",
+          "spec_url": "https://tc39.es/ecma402/#sec-Intl.Locale.prototype.language",
+          "support": {
+            "chrome": {
+              "version_added": "74"
+            },
+            "chrome_android": {
+              "version_added": "74"
+            },
+            "edge": {
+              "version_added": "79"
+            },
+            "firefox": {
+              "version_added": "75"
+            },
+            "firefox_android": {
+              "version_added": "79"
+            },
+            "ie": {
+              "version_added": false
+            },
+            "nodejs": {
+              "version_added": "12.0.0"
+            },
+            "opera": {
+              "version_added": "62"
+            },
+            "opera_android": {
+              "version_added": "53"
+            },
+            "safari": {
+              "version_added": "14"
+            },
+            "safari_ios": {
+              "version_added": "14"
+            },
+            "samsunginternet_android": {
+              "version_added": "11.0"
+            },
+            "webview_android": {
+              "version_added": "74"
+            }
+          },
+          "status": {
+            "deprecated": false,
+            "experimental": false,
+            "standard_track": true
+          }
+        }
+      },
+      "maximize": {
+        "__compat": {
+          "mdn_url": "https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/maximize",
+          "spec_url": "https://tc39.es/ecma402/#sec-Intl.Locale.prototype.maximize",
+          "support": {
+            "chrome": {
+              "version_added": "74"
+            },
+            "chrome_android": {
+              "version_added": "74"
+            },
+            "edge": {
+              "version_added": "79"
+            },
+            "firefox": {
+              "version_added": "75"
+            },
+            "firefox_android": {
+              "version_added": "79"
+            },
+            "ie": {
+              "version_added": false
+            },
+            "nodejs": {
+              "version_added": "12.0.0"
+            },
+            "opera": {
+              "version_added": "62"
+            },
+            "opera_android": {
+              "version_added": "53"
+            },
+            "safari": {
+              "version_added": "14"
+            },
+            "safari_ios": {
+              "version_added": "14"
+            },
+            "samsunginternet_android": {
+              "version_added": "11.0"
+            },
+            "webview_android": {
+              "version_added": "74"
+            }
+          },
+          "status": {
+            "experimental": false,
+            "deprecated": false,
+            "standard_track": true
+          }
+        }
+      },
+      "minimize": {
+        "__compat": {
+          "mdn_url": "https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/minimize",
+          "spec_url": "https://tc39.es/ecma402/#sec-Intl.Locale.prototype.minimize",
+          "support": {
+            "chrome": {
+              "version_added": "74"
+            },
+            "chrome_android": {
+              "version_added": "74"
+            },
+            "edge": {
+              "version_added": "79"
+            },
+            "firefox": {
+              "version_added": "75"
+            },
+            "firefox_android": {
+              "version_added": "79"
+            },
+            "ie": {
+              "version_added": false
+            },
+            "nodejs": {
+              "version_added": "12.0.0"
+            },
+            "opera": {
+              "version_added": "62"
+            },
+            "opera_android": {
+              "version_added": "53"
+            },
+            "safari": {
+              "version_added": "14"
+            },
+            "safari_ios": {
+              "version_added": "14"
+            },
+            "samsunginternet_android": {
+              "version_added": "11.0"
+            },
+            "webview_android": {
+              "version_added": "74"
+            }
+          },
+          "status": {
+            "experimental": false,
+            "deprecated": false,
+            "standard_track": true
+          }
+        }
+      },
+      "numberingSystem": {
+        "__compat": {
+          "mdn_url": "https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/numberingSystem",
+          "spec_url": "https://tc39.es/ecma402/#sec-Intl.Locale.prototype.numberingSystem",
+          "support": {
+            "chrome": {
+              "version_added": "74"
+            },
+            "chrome_android": {
+              "version_added": "74"
+            },
+            "edge": {
+              "version_added": "79"
+            },
+            "firefox": {
+              "version_added": "75"
+            },
+            "firefox_android": {
+              "version_added": "79"
+            },
+            "ie": {
+              "version_added": false
+            },
+            "nodejs": {
+              "version_added": "12.0.0"
+            },
+            "opera": {
+              "version_added": "62"
+            },
+            "opera_android": {
+              "version_added": "53"
+            },
+            "safari": {
+              "version_added": "14"
+            },
+            "safari_ios": {
+              "version_added": "14"
+            },
+            "samsunginternet_android": {
+              "version_added": "11.0"
+            },
+            "webview_android": {
+              "version_added": "74"
+            }
+          },
+          "status": {
+            "deprecated": false,
+            "experimental": false,
+            "standard_track": true
+          }
+        }
+      },
+      "numeric": {
+        "__compat": {
+          "mdn_url": "https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/numeric",
+          "spec_url": "https://tc39.es/ecma402/#sec-Intl.Locale.prototype.numeric",
+          "support": {
+            "chrome": {
+              "version_added": "74"
+            },
+            "chrome_android": {
+              "version_added": "74"
+            },
+            "edge": {
+              "version_added": "79"
+            },
+            "firefox": {
+              "version_added": "75"
+            },
+            "firefox_android": {
+              "version_added": "79"
+            },
+            "ie": {
+              "version_added": false
+            },
+            "nodejs": {
+              "version_added": "12.0.0"
+            },
+            "opera": {
+              "version_added": "62"
+            },
+            "opera_android": {
+              "version_added": "53"
+            },
+            "safari": {
+              "version_added": "14"
+            },
+            "safari_ios": {
+              "version_added": "14"
+            },
+            "samsunginternet_android": {
+              "version_added": "11.0"
+            },
+            "webview_android": {
+              "version_added": "74"
+            }
+          },
+          "status": {
+            "deprecated": false,
+            "experimental": false,
+            "standard_track": true
+          }
+        }
+      },
+      "region": {
+        "__compat": {
+          "mdn_url": "https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/region",
+          "spec_url": "https://tc39.es/ecma402/#sec-Intl.Locale.prototype.region",
+          "support": {
+            "chrome": {
+              "version_added": "74"
+            },
+            "chrome_android": {
+              "version_added": "74"
+            },
+            "edge": {
+              "version_added": "79"
+            },
+            "firefox": {
+              "version_added": "75"
+            },
+            "firefox_android": {
+              "version_added": "79"
+            },
+            "ie": {
+              "version_added": false
+            },
+            "nodejs": {
+              "version_added": "12.0.0"
+            },
+            "opera": {
+              "version_added": "62"
+            },
+            "opera_android": {
+              "version_added": "53"
+            },
+            "safari": {
+              "version_added": "14"
+            },
+            "safari_ios": {
+              "version_added": "14"
+            },
+            "samsunginternet_android": {
+              "version_added": "11.0"
+            },
+            "webview_android": {
+              "version_added": "74"
+            }
+          },
+          "status": {
+            "deprecated": false,
+            "experimental": false,
+            "standard_track": true
+          }
+        }
+      },
+      "script": {
+        "__compat": {
+          "mdn_url": "https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/script",
+          "spec_url": "https://tc39.es/ecma402/#sec-Intl.Locale.prototype.script",
+          "support": {
+            "chrome": {
+              "version_added": "74"
+            },
+            "chrome_android": {
+              "version_added": "74"
+            },
+            "edge": {
+              "version_added": "79"
+            },
+            "firefox": {
+              "version_added": "75"
+            },
+            "firefox_android": {
+              "version_added": "79"
+            },
+            "ie": {
+              "version_added": false
+            },
+            "nodejs": {
+              "version_added": "12.0.0"
+            },
+            "opera": {
+              "version_added": "62"
+            },
+            "opera_android": {
+              "version_added": "53"
+            },
+            "safari": {
+              "version_added": "14"
+            },
+            "safari_ios": {
+              "version_added": "14"
+            },
+            "samsunginternet_android": {
+              "version_added": "11.0"
+            },
+            "webview_android": {
+              "version_added": "74"
+            }
+          },
+          "status": {
+            "deprecated": false,
+            "experimental": false,
+            "standard_track": true
+          }
+        }
+      },
+      "toString": {
+        "__compat": {
+          "mdn_url": "https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/toString",
+          "spec_url": "https://tc39.es/ecma402/#sec-Intl.Locale.prototype.toString",
+          "support": {
+            "chrome": {
+              "version_added": "74"
+            },
+            "chrome_android": {
+              "version_added": "74"
+            },
+            "edge": {
+              "version_added": "79"
+            },
+            "firefox": {
+              "version_added": "75"
+            },
+            "firefox_android": {
+              "version_added": "79"
+            },
+            "ie": {
+              "version_added": false
+            },
+            "nodejs": {
+              "version_added": "12.0.0"
+            },
+            "opera": {
+              "version_added": "62"
+            },
+            "opera_android": {
+              "version_added": "53"
+            },
+            "safari": {
+              "version_added": "14"
+            },
+            "safari_ios": {
+              "version_added": "14"
+            },
+            "samsunginternet_android": {
+              "version_added": "11.0"
+            },
+            "webview_android": {
+              "version_added": "74"
+            }
+          },
+          "status": {
+            "experimental": false,
+            "deprecated": false,
+            "standard_track": true
+          }
+        }
+      }
+    },
+    "NumberFormat": {
+      "__compat": {
+        "mdn_url": "https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat",
+        "spec_url": "https://tc39.es/ecma402/#numberformat-objects",
+        "support": {
+          "chrome": {
+            "version_added": "24"
+          },
+          "chrome_android": {
+            "version_added": "25"
+          },
+          "edge": {
+            "version_added": "12"
+          },
+          "firefox": {
+            "version_added": "29"
+          },
+          "firefox_android": {
+            "version_added": "56"
+          },
+          "ie": {
+            "version_added": "11"
+          },
+          "nodejs": {
+            "version_added": "0.12.0",
+            "notes": "Before version 13.0.0, only the locale data for <code>en-US</code> is available by default. See <a href='https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat'>the <code>NumberFormat()</code> constructor</a> for more details."
+          },
+          "opera": {
+            "version_added": "15"
+          },
+          "opera_android": {
+            "version_added": "14"
+          },
+          "safari": {
+            "version_added": "10"
+          },
+          "safari_ios": {
+            "version_added": "10"
+          },
+          "samsunginternet_android": {
+            "version_added": "1.5"
+          },
+          "webview_android": {
+            "version_added": "4.4"
+          }
+        },
+        "status": {
+          "experimental": false,
+          "standard_track": true,
+          "deprecated": false
+        }
+      },
+      "NumberFormat": {
+        "__compat": {
+          "description": "<code>NumberFormat()</code> constructor",
+          "mdn_url": "https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat",
+          "spec_url": "https://tc39.es/ecma402/#sec-intl-numberformat-constructor",
+          "support": {
+            "chrome": {
+              "version_added": "24"
+            },
+            "chrome_android": {
+              "version_added": "25"
+            },
+            "edge": {
+              "version_added": "12"
+            },
+            "firefox": {
+              "version_added": "29"
+            },
+            "firefox_android": {
+              "version_added": "56"
+            },
+            "ie": {
+              "version_added": "11"
+            },
+            "nodejs": [
+              {
+                "version_added": "13.0.0"
+              },
+              {
+                "version_added": "0.12.0",
+                "partial_implementation": true,
+                "notes": "Before version 13.0.0, only the locale data for <code>en-US</code> is available by default. When other locales are specified, the <code>NumberFormat</code> instance silently falls back to <code>en-US</code>. To make full ICU (locale) data available for versions prior to 13, see <a href='https://nodejs.org/docs/latest/api/intl.html#intl_options_for_building_node_js'>Node.js documentation on the <code>--with-intl</code> option</a> and how to provide the data."
+              }
+            ],
+            "opera": {
+              "version_added": "15"
+            },
+            "opera_android": {
+              "version_added": "14"
+            },
+            "safari": {
+              "version_added": "10"
+            },
+            "safari_ios": {
+              "version_added": "10"
+            },
+            "samsunginternet_android": {
+              "version_added": "1.5"
+            },
+            "webview_android": {
+              "version_added": "4.4"
+            }
+          },
+          "status": {
+            "experimental": false,
+            "standard_track": true,
+            "deprecated": false
+          }
+        },
+        "compactDisplay": {
+          "__compat": {
+            "description": "<code>compactDisplay</code> option",
+            "support": {
+              "chrome": {
+                "version_added": "77"
+              },
+              "chrome_android": {
+                "version_added": "77"
+              },
+              "edge": {
+                "version_added": "79"
+              },
+              "firefox": {
+                "version_added": "78"
+              },
+              "firefox_android": {
+                "version_added": "79"
+              },
+              "ie": {
+                "version_added": false
+              },
+              "nodejs": {
+                "version_added": "12.11.0"
+              },
+              "opera": {
+                "version_added": "64"
+              },
+              "opera_android": {
+                "version_added": "55"
+              },
+              "safari": {
+                "version_added": "14.1"
+              },
+              "safari_ios": {
+                "version_added": "14.5"
+              },
+              "samsunginternet_android": {
+                "version_added": "12.0"
+              },
+              "webview_android": {
+                "version_added": "77"
+              }
+            },
+            "status": {
+              "experimental": false,
+              "standard_track": true,
+              "deprecated": false
+            }
+          }
+        },
+        "currencyDisplay": {
+          "__compat": {
+            "description": "<code>currencyDisplay</code> option",
+            "support": {
+              "chrome": {
+                "version_added": "77"
+              },
+              "chrome_android": {
+                "version_added": "77"
+              },
+              "edge": {
+                "version_added": "79"
+              },
+              "firefox": {
+                "version_added": "78"
+              },
+              "firefox_android": {
+                "version_added": "79"
+              },
+              "ie": {
+                "version_added": false
+              },
+              "nodejs": {
+                "version_added": "12.11.0"
+              },
+              "opera": {
+                "version_added": "64"
+              },
+              "opera_android": {
+                "version_added": "55"
+              },
+              "safari": [
+                {
+                  "version_added": "14.1"
+                },
+                {
+                  "version_added": "10",
+                  "version_removed": "14.1",
+                  "partial_implementation": true,
+                  "notes": "Doesn't support <code>currencyDisplay: 'narrowSymbol'</code>."
+                }
+              ],
+              "safari_ios": [
+                {
+                  "version_added": "14.5"
+                },
+                {
+                  "version_added": "10",
+                  "version_removed": "14.5",
+                  "partial_implementation": true,
+                  "notes": "Doesn't support <code>currencyDisplay: 'narrowSymbol'</code>."
+                }
+              ],
+              "samsunginternet_android": {
+                "version_added": "12.0"
+              },
+              "webview_android": {
+                "version_added": "77"
+              }
+            },
+            "status": {
+              "experimental": false,
+              "standard_track": true,
+              "deprecated": false
+            }
+          }
+        },
+        "currencySign": {
+          "__compat": {
+            "description": "<code>currencySign</code> option",
+            "support": {
+              "chrome": {
+                "version_added": "77"
+              },
+              "chrome_android": {
+                "version_added": "77"
+              },
+              "edge": {
+                "version_added": "79"
+              },
+              "firefox": {
+                "version_added": "78"
+              },
+              "firefox_android": {
+                "version_added": "79"
+              },
+              "ie": {
+                "version_added": false
+              },
+              "nodejs": {
+                "version_added": "12.11.0"
+              },
+              "opera": {
+                "version_added": "64"
+              },
+              "opera_android": {
+                "version_added": "55"
+              },
+              "safari": {
+                "version_added": "14.1"
+              },
+              "safari_ios": {
+                "version_added": "14.5"
+              },
+              "samsunginternet_android": {
+                "version_added": "12.0"
+              },
+              "webview_android": {
+                "version_added": "77"
+              }
+            },
+            "status": {
+              "experimental": false,
+              "standard_track": true,
+              "deprecated": false
+            }
+          }
+        },
+        "notation": {
+          "__compat": {
+            "description": "<code>notation</code> option",
+            "support": {
+              "chrome": {
+                "version_added": "77"
+              },
+              "chrome_android": {
+                "version_added": "77"
+              },
+              "edge": {
+                "version_added": "79"
+              },
+              "firefox": {
+                "version_added": "78"
+              },
+              "firefox_android": {
+                "version_added": "79"
+              },
+              "ie": {
+                "version_added": false
+              },
+              "nodejs": {
+                "version_added": "12.11.0"
+              },
+              "opera": {
+                "version_added": "64"
+              },
+              "opera_android": {
+                "version_added": "55"
+              },
+              "safari": {
+                "version_added": "14.1"
+              },
+              "safari_ios": {
+                "version_added": "14.5"
+              },
+              "samsunginternet_android": {
+                "version_added": "12.0"
+              },
+              "webview_android": {
+                "version_added": "77"
+              }
+            },
+            "status": {
+              "experimental": false,
+              "standard_track": true,
+              "deprecated": false
+            }
+          }
+        },
+        "signDisplay": {
+          "__compat": {
+            "description": "<code>signDisplay</code> option",
+            "support": {
+              "chrome": {
+                "version_added": "77"
+              },
+              "chrome_android": {
+                "version_added": "77"
+              },
+              "edge": {
+                "version_added": "79"
+              },
+              "firefox": {
+                "version_added": "78"
+              },
+              "firefox_android": {
+                "version_added": "79"
+              },
+              "ie": {
+                "version_added": false
+              },
+              "nodejs": {
+                "version_added": "12.11.0"
+              },
+              "opera": {
+                "version_added": "64"
+              },
+              "opera_android": {
+                "version_added": "55"
+              },
+              "safari": {
+                "version_added": "14.1"
+              },
+              "safari_ios": {
+                "version_added": "14.5"
+              },
+              "samsunginternet_android": {
+                "version_added": "12.0"
+              },
+              "webview_android": {
+                "version_added": "77"
+              }
+            },
+            "status": {
+              "experimental": false,
+              "standard_track": true,
+              "deprecated": false
+            }
+          }
+        },
+        "unit": {
+          "__compat": {
+            "description": "<code>unit</code> option",
+            "support": {
+              "chrome": {
+                "version_added": "77"
+              },
+              "chrome_android": {
+                "version_added": "77"
+              },
+              "edge": {
+                "version_added": "79"
+              },
+              "firefox": {
+                "version_added": "78"
+              },
+              "firefox_android": {
+                "version_added": "79"
+              },
+              "ie": {
+                "version_added": false
+              },
+              "nodejs": {
+                "version_added": "12.11.0"
+              },
+              "opera": {
+                "version_added": "64"
+              },
+              "opera_android": {
+                "version_added": "55"
+              },
+              "safari": {
+                "version_added": "14.1"
+              },
+              "safari_ios": {
+                "version_added": "14.5"
+              },
+              "samsunginternet_android": {
+                "version_added": "12.0"
+              },
+              "webview_android": {
+                "version_added": "77"
+              }
+            },
+            "status": {
+              "experimental": false,
+              "standard_track": true,
+              "deprecated": false
+            }
+          }
+        },
+        "unitDisplay": {
+          "__compat": {
+            "description": "<code>unitDisplay</code> option",
+            "support": {
+              "chrome": {
+                "version_added": "77"
+              },
+              "chrome_android": {
+                "version_added": "77"
+              },
+              "edge": {
+                "version_added": "79"
+              },
+              "firefox": {
+                "version_added": "78"
+              },
+              "firefox_android": {
+                "version_added": "79"
+              },
+              "ie": {
+                "version_added": false
+              },
+              "nodejs": {
+                "version_added": "12.11.0"
+              },
+              "opera": {
+                "version_added": "64"
+              },
+              "opera_android": {
+                "version_added": "55"
+              },
+              "safari": {
+                "version_added": "14.1"
+              },
+              "safari_ios": {
+                "version_added": "14.5"
+              },
+              "samsunginternet_android": {
+                "version_added": "12.0"
+              },
+              "webview_android": {
+                "version_added": "77"
+              }
+            },
+            "status": {
+              "experimental": false,
+              "standard_track": true,
+              "deprecated": false
+            }
+          }
+        }
+      },
+      "format": {
+        "__compat": {
+          "mdn_url": "https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/format",
+          "spec_url": "https://tc39.es/ecma402/#sec-intl.numberformat.prototype.format",
+          "support": {
+            "chrome": {
+              "version_added": "24"
+            },
+            "chrome_android": {
+              "version_added": "25"
+            },
+            "edge": {
+              "version_added": "12",
+              "notes": "Before Edge 18, numbers are rounded to 15 decimal digits. For example, <code>new Intl.NumberFormat('en-US').format(1000000000000005)</code> returns <code>\"1,000,000,000,000,010\"</code>."
+            },
+            "firefox": {
+              "version_added": "29"
+            },
+            "firefox_android": {
+              "version_added": "56"
+            },
+            "ie": {
+              "version_added": "11",
+              "notes": "In Internet Explorer 11, numbers are rounded to 15 decimal digits. For example, <code>new Intl.NumberFormat('en-US').format(1000000000000005)</code> returns <code>\"1,000,000,000,000,010\"</code>."
+            },
+            "nodejs": {
+              "version_added": "0.12.0",
+              "notes": "Before version 13.0.0, only the locale data for <code>en-US</code> is available by default. See <a href='https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat'>the <code>NumberFormat()</code> constructor</a> for more details."
+            },
+            "opera": {
+              "version_added": "15"
+            },
+            "opera_android": {
+              "version_added": "14"
+            },
+            "safari": {
+              "version_added": "10"
+            },
+            "safari_ios": {
+              "version_added": "10"
+            },
+            "samsunginternet_android": {
+              "version_added": "1.5"
+            },
+            "webview_android": {
+              "version_added": "4.4"
+            }
+          },
+          "status": {
+            "experimental": false,
+            "standard_track": true,
+            "deprecated": false
+          }
+        }
+      },
+      "formatToParts": {
+        "__compat": {
+          "mdn_url": "https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/formatToParts",
+          "spec_url": "https://tc39.es/ecma402/#sec-intl.numberformat.prototype.formattoparts",
+          "support": {
+            "chrome": {
+              "version_added": "64"
+            },
+            "chrome_android": {
+              "version_added": "64"
+            },
+            "edge": {
+              "version_added": "12"
+            },
+            "firefox": {
+              "version_added": "58"
+            },
+            "firefox_android": {
+              "version_added": "58"
+            },
+            "ie": {
+              "version_added": false
+            },
+            "nodejs": {
+              "version_added": "10.0.0",
+              "notes": "Before version 13.0.0, only the locale data for <code>en-US</code> is available by default. See <a href='https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat'>the <code>NumberFormat()</code> constructor</a> for more details."
+            },
+            "opera": {
+              "version_added": "51"
+            },
+            "opera_android": {
+              "version_added": "47"
+            },
+            "safari": {
+              "version_added": "13"
+            },
+            "safari_ios": {
+              "version_added": "13"
+            },
+            "samsunginternet_android": {
+              "version_added": "9.0"
+            },
+            "webview_android": {
+              "version_added": "64"
+            }
+          },
+          "status": {
+            "experimental": true,
+            "standard_track": true,
+            "deprecated": false
+          }
+        }
+      },
+      "resolvedOptions": {
+        "__compat": {
+          "mdn_url": "https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/resolvedOptions",
+          "spec_url": "https://tc39.es/ecma402/#sec-intl.numberformat.prototype.resolvedoptions",
+          "support": {
+            "chrome": {
+              "version_added": "24"
+            },
+            "chrome_android": {
+              "version_added": "25"
+            },
+            "edge": {
+              "version_added": "12"
+            },
+            "firefox": {
+              "version_added": "29"
+            },
+            "firefox_android": {
+              "version_added": "56"
+            },
+            "ie": {
+              "version_added": "11"
+            },
+            "nodejs": {
+              "version_added": "0.12.0",
+              "notes": "Before version 13.0.0, only the locale data for <code>en-US</code> is available by default. See <a href='https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat'>the <code>NumberFormat()</code> constructor</a> for more details."
+            },
+            "opera": {
+              "version_added": "15"
+            },
+            "opera_android": {
+              "version_added": "14"
+            },
+            "safari": {
+              "version_added": "10"
+            },
+            "safari_ios": {
+              "version_added": "10"
+            },
+            "samsunginternet_android": {
+              "version_added": "1.5"
+            },
+            "webview_android": {
+              "version_added": "4.4"
+            }
+          },
+          "status": {
+            "experimental": false,
+            "standard_track": true,
+            "deprecated": false
+          }
+        }
+      },
+      "supportedLocalesOf": {
+        "__compat": {
+          "mdn_url": "https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/supportedLocalesOf",
+          "spec_url": "https://tc39.es/ecma402/#sec-intl.numberformat.supportedlocalesof",
+          "support": {
+            "chrome": {
+              "version_added": "24"
+            },
+            "chrome_android": {
+              "version_added": "25"
+            },
+            "edge": {
+              "version_added": "12"
+            },
+            "firefox": {
+              "version_added": "29"
+            },
+            "firefox_android": {
+              "version_added": "56"
+            },
+            "ie": {
+              "version_added": "11"
+            },
+            "nodejs": [
+              {
+                "version_added": "13.0.0"
+              },
+              {
+                "version_added": "0.12.0",
+                "partial_implementation": true,
+                "notes": "Before version 13.0.0, only the locale data for <code>en-US</code> is available by default. To make full ICU (locale) data available for versions prior to 13, see <a href='https://nodejs.org/docs/latest/api/intl.html#intl_options_for_building_node_js'>Node.js documentation on the <code>--with-intl</code> option</a> and how to provide the data."
+              }
+            ],
+            "opera": {
+              "version_added": "15"
+            },
+            "opera_android": {
+              "version_added": "14"
+            },
+            "safari": {
+              "version_added": "10"
+            },
+            "safari_ios": {
+              "version_added": "10"
+            },
+            "samsunginternet_android": {
+              "version_added": "1.5"
+            },
+            "webview_android": {
+              "version_added": "4.4"
+            }
+          },
+          "status": {
+            "experimental": false,
+            "standard_track": true,
+            "deprecated": false
+          }
+        }
+      }
+    },
+    "PluralRules": {
+      "__compat": {
+        "mdn_url": "https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Intl/PluralRules",
+        "spec_url": "https://tc39.es/ecma402/#pluralrules-objects",
+        "support": {
+          "chrome": {
+            "version_added": "63"
+          },
+          "chrome_android": {
+            "version_added": "63"
+          },
+          "edge": {
+            "version_added": "18"
+          },
+          "firefox": {
+            "version_added": "58"
+          },
+          "firefox_android": {
+            "version_added": "58"
+          },
+          "ie": {
+            "version_added": false
+          },
+          "nodejs": {
+            "version_added": "10.0.0",
+            "notes": "Before version 13.0.0, only the locale data for <code>en-US</code> is available by default. See <a href='https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Intl/PluralRules/PluralRules'>the <code>PluralRules()</code> constructor</a> for more details."
+          },
+          "opera": {
+            "version_added": "50"
+          },
+          "opera_android": {
+            "version_added": "46"
+          },
+          "safari": {
+            "version_added": "13"
+          },
+          "safari_ios": {
+            "version_added": "13"
+          },
+          "samsunginternet_android": {
+            "version_added": "8.0"
+          },
+          "webview_android": {
+            "version_added": "63"
+          }
+        },
+        "status": {
+          "experimental": false,
+          "standard_track": true,
+          "deprecated": false
+        }
+      },
+      "PluralRules": {
+        "__compat": {
+          "mdn_url": "https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Intl/PluralRules/PluralRules",
+          "spec_url": "https://tc39.es/ecma402/#sec-intl-pluralrules-constructor",
+          "description": "<code>PluralRules()</code> constructor",
+          "support": {
+            "chrome": {
+              "version_added": "63"
+            },
+            "chrome_android": {
+              "version_added": "63"
+            },
+            "edge": {
+              "version_added": "18"
+            },
+            "firefox": {
+              "version_added": "58"
+            },
+            "firefox_android": {
+              "version_added": "58"
+            },
+            "ie": {
+              "version_added": false
+            },
+            "nodejs": [
+              {
+                "version_added": "13.0.0"
+              },
+              {
+                "version_added": "10.0.0",
+                "partial_implementation": true,
+                "notes": "Before version 13.0.0, only the locale data for <code>en-US</code> is available by default. When other locales are specified, the <code>PluralRules</code> instance silently falls back to <code>en-US</code>. To make full ICU (locale) data available for versions prior to 13, see <a href='https://nodejs.org/docs/latest/api/intl.html#intl_options_for_building_node_js'>Node.js documentation on the <code>--with-intl</code> option</a> and how to provide the data."
+              }
+            ],
+            "opera": {
+              "version_added": "50"
+            },
+            "opera_android": {
+              "version_added": "46"
+            },
+            "safari": {
+              "version_added": "13"
+            },
+            "safari_ios": {
+              "version_added": "13"
+            },
+            "samsunginternet_android": {
+              "version_added": "8.0"
+            },
+            "webview_android": {
+              "version_added": "63"
+            }
+          },
+          "status": {
+            "experimental": false,
+            "standard_track": true,
+            "deprecated": false
+          }
+        }
+      },
+      "resolvedOptions": {
+        "__compat": {
+          "mdn_url": "https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Intl/PluralRules/resolvedOptions",
+          "spec_url": "https://tc39.es/ecma402/#sec-intl.pluralrules.prototype.resolvedoptions",
+          "support": {
+            "chrome": {
+              "version_added": "63"
+            },
+            "chrome_android": {
+              "version_added": "63"
+            },
+            "edge": {
+              "version_added": "18"
+            },
+            "firefox": {
+              "version_added": "58"
+            },
+            "firefox_android": {
+              "version_added": "58"
+            },
+            "ie": {
+              "version_added": false
+            },
+            "nodejs": {
+              "version_added": "10.0.0",
+              "notes": "Before version 13.0.0, only the locale data for <code>en-US</code> is available by default. See <a href='https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Intl/PluralRules/PluralRules'>the <code>PluralRules()</code> constructor</a> for more details."
+            },
+            "opera": {
+              "version_added": "50"
+            },
+            "opera_android": {
+              "version_added": "46"
+            },
+            "safari": {
+              "version_added": "13"
+            },
+            "safari_ios": {
+              "version_added": "13"
+            },
+            "samsunginternet_android": {
+              "version_added": "8.0"
+            },
+            "webview_android": {
+              "version_added": "63"
+            }
+          },
+          "status": {
+            "experimental": false,
+            "standard_track": true,
+            "deprecated": false
+          }
+        }
+      },
+      "select": {
+        "__compat": {
+          "mdn_url": "https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Intl/PluralRules/select",
+          "spec_url": "https://tc39.es/ecma402/#sec-intl.pluralrules.prototype.select",
+          "support": {
+            "chrome": {
+              "version_added": "63"
+            },
+            "chrome_android": {
+              "version_added": "63"
+            },
+            "edge": {
+              "version_added": "18"
+            },
+            "firefox": {
+              "version_added": "58"
+            },
+            "firefox_android": {
+              "version_added": "58"
+            },
+            "ie": {
+              "version_added": false
+            },
+            "nodejs": {
+              "version_added": "10.0.0",
+              "notes": "Before version 13.0.0, only the locale data for <code>en-US</code> is available by default. See <a href='https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Intl/PluralRules/PluralRules'>the <code>PluralRules()</code> constructor</a> for more details."
+            },
+            "opera": {
+              "version_added": "50"
+            },
+            "opera_android": {
+              "version_added": "46"
+            },
+            "safari": {
+              "version_added": "13"
+            },
+            "safari_ios": {
+              "version_added": "13"
+            },
+            "samsunginternet_android": {
+              "version_added": "8.0"
+            },
+            "webview_android": {
+              "version_added": "63"
+            }
+          },
+          "status": {
+            "experimental": false,
+            "standard_track": true,
+            "deprecated": false
+          }
+        }
+      },
+      "supportedLocalesOf": {
+        "__compat": {
+          "mdn_url": "https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Intl/PluralRules/supportedLocalesOf",
+          "spec_url": "https://tc39.es/ecma402/#sec-intl.pluralrules.supportedlocalesof",
+          "support": {
+            "chrome": {
+              "version_added": "63"
+            },
+            "chrome_android": {
+              "version_added": "63"
+            },
+            "edge": {
+              "version_added": "18"
+            },
+            "firefox": {
+              "version_added": "58"
+            },
+            "firefox_android": {
+              "version_added": "58"
+            },
+            "ie": {
+              "version_added": false
+            },
+            "nodejs": {
+              "version_added": "10.0.0",
+              "notes": "Before version 13.0.0, only the locale data for <code>en-US</code> is available by default. See <a href='https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Intl/PluralRules/PluralRules'>the <code>PluralRules()</code> constructor</a> for more details."
+            },
+            "opera": {
+              "version_added": "50"
+            },
+            "opera_android": {
+              "version_added": "46"
+            },
+            "safari": {
+              "version_added": "13"
+            },
+            "safari_ios": {
+              "version_added": "13"
+            },
+            "samsunginternet_android": {
+              "version_added": "8.0"
+            },
+            "webview_android": {
+              "version_added": "63"
+            }
+          },
+          "status": {
+            "experimental": false,
+            "standard_track": true,
+            "deprecated": false
+          }
+        }
+      }
+    },
+    "RelativeTimeFormat": {
+      "__compat": {
+        "mdn_url": "https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat",
+        "spec_url": "https://tc39.es/ecma402/#relativetimeformat-objects",
+        "support": {
+          "chrome": {
+            "version_added": "71"
+          },
+          "chrome_android": {
+            "version_added": "71"
+          },
+          "edge": {
+            "version_added": "79"
+          },
+          "firefox": {
+            "version_added": "65"
+          },
+          "firefox_android": {
+            "version_added": "65"
+          },
+          "ie": {
+            "version_added": false
+          },
+          "nodejs": {
+            "version_added": "12.0.0",
+            "notes": "Before version 13.0.0, only the locale data for <code>en-US</code> is available by default. See <a href='https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/RelativeTimeFormat'>the <code>RelativeTimeFormat()</code> constructor</a> for more details."
+          },
+          "opera": {
+            "version_added": "58"
+          },
+          "opera_android": {
+            "version_added": "50"
+          },
+          "safari": {
+            "version_added": "14"
+          },
+          "safari_ios": {
+            "version_added": "14"
+          },
+          "samsunginternet_android": {
+            "version_added": "10.0"
+          },
+          "webview_android": {
+            "version_added": "71"
+          }
+        },
+        "status": {
+          "experimental": false,
+          "standard_track": true,
+          "deprecated": false
+        }
+      },
+      "RelativeTimeFormat": {
+        "__compat": {
+          "mdn_url": "https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/RelativeTimeFormat",
+          "spec_url": "https://tc39.es/ecma402/#sec-intl-relativetimeformat-constructor",
+          "description": "<code>RelativeTimeFormat()</code> constructor",
+          "support": {
+            "chrome": {
+              "version_added": "71"
+            },
+            "chrome_android": {
+              "version_added": "71"
+            },
+            "edge": {
+              "version_added": "79"
+            },
+            "firefox": {
+              "version_added": "65"
+            },
+            "firefox_android": {
+              "version_added": "65"
+            },
+            "ie": {
+              "version_added": false
+            },
+            "nodejs": [
+              {
+                "version_added": "13.0.0"
+              },
+              {
+                "version_added": "12.0.0",
+                "partial_implementation": true,
+                "notes": "Before version 13.0.0, only the locale data for <code>en-US</code> is available by default. When other locales are specified, the <code>RelativeTimeFormat</code> instance silently falls back to <code>en-US</code>. To make full ICU (locale) data available for versions prior to 13, see <a href='https://nodejs.org/docs/latest/api/intl.html#intl_options_for_building_node_js'>Node.js documentation on the <code>--with-intl</code> option</a> and how to provide the data."
+              }
+            ],
+            "opera": {
+              "version_added": "58"
+            },
+            "opera_android": {
+              "version_added": "50"
+            },
+            "safari": {
+              "version_added": "14"
+            },
+            "safari_ios": {
+              "version_added": "14"
+            },
+            "samsunginternet_android": {
+              "version_added": "10.0"
+            },
+            "webview_android": {
+              "version_added": "71"
+            }
+          },
+          "status": {
+            "experimental": false,
+            "standard_track": true,
+            "deprecated": false
+          }
+        }
+      },
+      "format": {
+        "__compat": {
+          "mdn_url": "https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/format",
+          "spec_url": "https://tc39.es/ecma402/#sec-Intl.RelativeTimeFormat.prototype.format",
+          "support": {
+            "chrome": {
+              "version_added": "71"
+            },
+            "chrome_android": {
+              "version_added": "71"
+            },
+            "edge": {
+              "version_added": "79"
+            },
+            "firefox": {
+              "version_added": "65"
+            },
+            "firefox_android": {
+              "version_added": "65"
+            },
+            "ie": {
+              "version_added": false
+            },
+            "nodejs": {
+              "version_added": "12.0.0",
+              "notes": "Before version 13.0.0, only the locale data for <code>en-US</code> is available by default. See <a href='https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/RelativeTimeFormat'>the <code>RelativeTimeFormat()</code> constructor</a> for more details."
+            },
+            "opera": {
+              "version_added": "58"
+            },
+            "opera_android": {
+              "version_added": "50"
+            },
+            "safari": {
+              "version_added": "14"
+            },
+            "safari_ios": {
+              "version_added": "14"
+            },
+            "samsunginternet_android": {
+              "version_added": "10.0"
+            },
+            "webview_android": {
+              "version_added": "71"
+            }
+          },
+          "status": {
+            "experimental": false,
+            "standard_track": true,
+            "deprecated": false
+          }
+        }
+      },
+      "formatToParts": {
+        "__compat": {
+          "mdn_url": "https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/formatToParts",
+          "spec_url": "https://tc39.es/ecma402/#sec-Intl.RelativeTimeFormat.prototype.formatToParts",
+          "support": {
+            "chrome": {
+              "version_added": "71"
+            },
+            "chrome_android": {
+              "version_added": "71"
+            },
+            "edge": {
+              "version_added": "79"
+            },
+            "firefox": {
+              "version_added": "70"
+            },
+            "firefox_android": {
+              "version_added": "79"
+            },
+            "ie": {
+              "version_added": false
+            },
+            "nodejs": {
+              "version_added": "12.0.0",
+              "notes": "Before version 13.0.0, only the locale data for <code>en-US</code> is available by default. See <a href='https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/RelativeTimeFormat'>the <code>RelativeTimeFormat()</code> constructor</a> for more details."
+            },
+            "opera": {
+              "version_added": "58"
+            },
+            "opera_android": {
+              "version_added": "50"
+            },
+            "safari": {
+              "version_added": "14"
+            },
+            "safari_ios": {
+              "version_added": "14"
+            },
+            "samsunginternet_android": {
+              "version_added": "10.0"
+            },
+            "webview_android": {
+              "version_added": "71"
+            }
+          },
+          "status": {
+            "experimental": false,
+            "standard_track": true,
+            "deprecated": false
+          }
+        }
+      },
+      "resolvedOptions": {
+        "__compat": {
+          "mdn_url": "https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/resolvedOptions",
+          "spec_url": "https://tc39.es/ecma402/#sec-intl.relativetimeformat.prototype.resolvedoptions",
+          "support": {
+            "chrome": {
+              "version_added": "71"
+            },
+            "chrome_android": {
+              "version_added": "71"
+            },
+            "edge": {
+              "version_added": "79"
+            },
+            "firefox": {
+              "version_added": "65"
+            },
+            "firefox_android": {
+              "version_added": "65"
+            },
+            "ie": {
+              "version_added": false
+            },
+            "nodejs": {
+              "version_added": "12.0.0",
+              "notes": "Before version 13.0.0, only the locale data for <code>en-US</code> is available by default. See <a href='https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/RelativeTimeFormat'>the <code>RelativeTimeFormat()</code> constructor</a> for more details."
+            },
+            "opera": {
+              "version_added": "58"
+            },
+            "opera_android": {
+              "version_added": "50"
+            },
+            "safari": {
+              "version_added": "14"
+            },
+            "safari_ios": {
+              "version_added": "14"
+            },
+            "samsunginternet_android": {
+              "version_added": "10.0"
+            },
+            "webview_android": {
+              "version_added": "71"
+            }
+          },
+          "status": {
+            "experimental": false,
+            "standard_track": true,
+            "deprecated": false
+          }
+        },
+        "numberingSystem": {
+          "__compat": {
+            "support": {
+              "chrome": {
+                "version_added": "73"
+              },
+              "chrome_android": {
+                "version_added": "73"
+              },
+              "edge": {
+                "version_added": "79"
+              },
+              "firefox": {
+                "version_added": "70"
+              },
+              "firefox_android": {
+                "version_added": "79"
+              },
+              "ie": {
+                "version_added": false
+              },
+              "nodejs": {
+                "version_added": "12.0.0"
+              },
+              "opera": {
+                "version_added": "60"
+              },
+              "opera_android": {
+                "version_added": "52"
+              },
+              "safari": {
+                "version_added": "14"
+              },
+              "safari_ios": {
+                "version_added": "14"
+              },
+              "samsunginternet_android": {
+                "version_added": false
+              },
+              "webview_android": {
+                "version_added": "73"
+              }
+            },
+            "status": {
+              "experimental": false,
+              "standard_track": true,
+              "deprecated": false
+            }
+          }
+        }
+      },
+      "supportedLocalesOf": {
+        "__compat": {
+          "mdn_url": "https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/supportedLocalesOf",
+          "spec_url": "https://tc39.es/ecma402/#sec-Intl.RelativeTimeFormat.supportedLocalesOf",
+          "support": {
+            "chrome": {
+              "version_added": "71"
+            },
+            "chrome_android": {
+              "version_added": "71"
+            },
+            "edge": {
+              "version_added": "79"
+            },
+            "firefox": {
+              "version_added": "65"
+            },
+            "firefox_android": {
+              "version_added": "65"
+            },
+            "ie": {
+              "version_added": false
+            },
+            "nodejs": [
+              {
+                "version_added": "13.0.0"
+              },
+              {
+                "version_added": "12.0.0",
+                "partial_implementation": true,
+                "notes": "Before version 13.0.0, only the locale data for <code>en-US</code> is available by default. To make full ICU (locale) data available for versions prior to 13, see <a href='https://nodejs.org/docs/latest/api/intl.html#intl_options_for_building_node_js'>Node.js documentation on the <code>--with-intl</code> option</a> and how to provide the data."
+              }
+            ],
+            "opera": {
+              "version_added": "58"
+            },
+            "opera_android": {
+              "version_added": "50"
+            },
+            "safari": {
+              "version_added": "14"
+            },
+            "safari_ios": {
+              "version_added": "14"
+            },
+            "samsunginternet_android": {
+              "version_added": "10.0"
+            },
+            "webview_android": {
+              "version_added": "71"
+            }
+          },
+          "status": {
+            "experimental": false,
+            "standard_track": true,
+            "deprecated": false
+          }
+        }
+      }
+    }
+  },
+  "polyfilled": {
+    "android": "*",
+    "chrome": "<54",
+    "edge": "<16",
+    "firefox": "<48",
+    "ie": "9 - *",
+    "opera": "*",
+    "safari": "<11",
+    "ios_saf": "<11"
+  },
+  "native": {
+    "android": {
+      "version_added": "4.4"
+    },
+    "chrome": {
+      "version_added": "24"
+    },
+    "edge": {
+      "version_added": "12"
+    },
+    "firefox": {
+      "version_added": "29"
+    },
+    "ie": {
+      "version_added": "11"
+    },
+    "opera": {
+      "version_added": "15"
+    },
+    "safari": {
+      "version_added": "10"
+    },
+    "ios_saf": {
+      "version_added": "10"
+    }
+  },
+  "polyfillio": {
+    "aliases": [
+      "Intl"
+    ],
+    "dependencies": [
+      "Array.prototype.filter",
+      "Array.prototype.indexOf",
+      "Array.prototype.reduce",
+      "Array.prototype.sort",
+      "Object.assign",
+      "Object.defineProperty",
+      "Object.keys"
+    ],
+    "docs": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/getCanonicalLocales",
+    "license": "MIT",
+    "repo": "https://github.com/formatjs/formatjs/tree/master/packages/intl-getcanonicallocales/",
+    "spec": "https://tc39.es/ecma402/#sec-intl.getcanonicallocales",
+    "browsers": {
+      "android": "*",
+      "chrome": "<54",
+      "edge": "<16",
+      "edge_mob": "<16",
+      "firefox": "<48",
+      "firefox_mob": "<56",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "ios_saf": "<11",
+      "opera": "*",
+      "safari": "<11",
+      "samsung_mob": "*"
+    },
+    "install": {
+      "module": "@formatjs/intl-getcanonicallocales",
+      "paths": [
+        "polyfill.umd.js"
+      ],
+      "clean": [
+        "~locale",
+        "polyfill.js"
+      ]
+    },
+    "detectSource": "\"Intl\"in self&&\"getCanonicalLocales\"in self.Intl\n",
+    "baseDir": "Intl/getCanonicalLocales",
+    "hasTests": true,
+    "isTestable": true,
+    "isPublic": true,
+    "size": 53581
+  }
+}

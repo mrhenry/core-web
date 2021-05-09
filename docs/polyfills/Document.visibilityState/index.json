@@ -1,0 +1,297 @@
+{
+  "name": "Document.visibilityState",
+  "polyfillName": "document.visibilityState",
+  "coreWeb": {
+    "name": "document.visibilityState",
+    "deps": [
+      "CustomEvent",
+      "Event",
+      "Window",
+      "document",
+      "Element",
+      "_ESAbstract.CreateMethodProperty",
+      "_ESAbstract.ToObject",
+      "_ESAbstract.ToLength",
+      "_ESAbstract.ToInteger",
+      "_ESAbstract.Type",
+      "_ESAbstract.Get",
+      "_ESAbstract.HasProperty",
+      "_ESAbstract.ToString",
+      "_ESAbstract.ToPrimitive",
+      "_ESAbstract.Call",
+      "_ESAbstract.GetMethod",
+      "_ESAbstract.GetV",
+      "_ESAbstract.IsCallable",
+      "_ESAbstract.OrdinaryToPrimitive",
+      "_ESAbstract.SameValueZero",
+      "_ESAbstract.SameValueNonNumber"
+    ],
+    "browsers": {
+      "firefox": "10 - 17",
+      "safari": "4",
+      "android": "4.4 - *",
+      "opera": "15 - 19",
+      "chrome": "14 - 32"
+    },
+    "engines": {
+      "Gecko": "10 - 17",
+      "WebKit": "530.17 - 530.17",
+      "Blink": "28 - 32"
+    },
+    "size": 338,
+    "hasCustomMatcher": false,
+    "isAlias": false,
+    "providedByCoreWeb": false
+  },
+  "mdn": {
+    "__compat": {
+      "mdn_url": "https://developer.mozilla.org/docs/Web/API/Document/visibilityState",
+      "spec_url": "https://w3c.github.io/page-visibility/#visibilitystate-attribute",
+      "support": {
+        "chrome": [
+          {
+            "version_added": "33"
+          },
+          {
+            "version_added": "13",
+            "prefix": "webkit"
+          }
+        ],
+        "chrome_android": [
+          {
+            "version_added": "33"
+          },
+          {
+            "version_added": "18",
+            "prefix": "webkit"
+          }
+        ],
+        "edge": {
+          "version_added": "12"
+        },
+        "firefox": [
+          {
+            "version_added": "18"
+          },
+          {
+            "version_added": "10",
+            "version_removed": "52",
+            "prefix": "moz"
+          }
+        ],
+        "firefox_android": [
+          {
+            "version_added": "18"
+          },
+          {
+            "version_added": "10",
+            "version_removed": "52",
+            "prefix": "moz"
+          }
+        ],
+        "ie": {
+          "version_added": "10"
+        },
+        "opera": [
+          {
+            "version_added": "20"
+          },
+          {
+            "version_added": "15",
+            "prefix": "webkit"
+          },
+          {
+            "version_added": "12.1",
+            "version_removed": "15"
+          }
+        ],
+        "opera_android": [
+          {
+            "version_added": "20"
+          },
+          {
+            "version_added": "14",
+            "prefix": "webkit"
+          },
+          {
+            "version_added": "12.1",
+            "version_removed": "14"
+          }
+        ],
+        "safari": {
+          "version_added": "6.1"
+        },
+        "safari_ios": {
+          "version_added": "7"
+        },
+        "samsunginternet_android": [
+          {
+            "version_added": "2.0"
+          },
+          {
+            "version_added": "1.0",
+            "prefix": "webkit"
+          }
+        ],
+        "webview_android": [
+          {
+            "version_added": "4.4.3"
+          },
+          {
+            "version_added": "≤37",
+            "prefix": "webkit"
+          }
+        ]
+      },
+      "status": {
+        "experimental": false,
+        "standard_track": true,
+        "deprecated": false
+      }
+    },
+    "prerender": {
+      "__compat": {
+        "description": "<code>prerender</code> value",
+        "support": {
+          "chrome": {
+            "version_added": true
+          },
+          "chrome_android": {
+            "version_added": true
+          },
+          "edge": {
+            "version_added": "≤79"
+          },
+          "firefox": {
+            "version_added": "49"
+          },
+          "firefox_android": {
+            "version_added": "49"
+          },
+          "ie": {
+            "version_added": null
+          },
+          "opera": {
+            "version_added": null
+          },
+          "opera_android": {
+            "version_added": null
+          },
+          "safari": {
+            "version_added": "6.1"
+          },
+          "safari_ios": {
+            "version_added": "7"
+          },
+          "samsunginternet_android": {
+            "version_added": true
+          },
+          "webview_android": {
+            "version_added": true
+          }
+        },
+        "status": {
+          "experimental": false,
+          "standard_track": false,
+          "deprecated": true
+        }
+      }
+    }
+  },
+  "polyfilled": {
+    "android": "4.4 - *",
+    "chrome": "14 - 32",
+    "firefox": "10 - 17",
+    "opera": "15 - 19",
+    "safari": "4"
+  },
+  "native": {
+    "android": [
+      {
+        "version_added": "4.4.3"
+      },
+      {
+        "version_added": "≤37",
+        "prefix": "webkit"
+      }
+    ],
+    "chrome": [
+      {
+        "version_added": "33"
+      },
+      {
+        "version_added": "13",
+        "prefix": "webkit"
+      }
+    ],
+    "edge": {
+      "version_added": "12"
+    },
+    "firefox": [
+      {
+        "version_added": "18"
+      },
+      {
+        "version_added": "10",
+        "version_removed": "52",
+        "prefix": "moz"
+      }
+    ],
+    "ie": {
+      "version_added": "10"
+    },
+    "opera": [
+      {
+        "version_added": "20"
+      },
+      {
+        "version_added": "15",
+        "prefix": "webkit"
+      },
+      {
+        "version_added": "12.1",
+        "version_removed": "15"
+      }
+    ],
+    "safari": {
+      "version_added": "6.1"
+    },
+    "ios_saf": {
+      "version_added": "7"
+    }
+  },
+  "polyfillio": {
+    "aliases": [
+      "default-3.3",
+      "default-3.4",
+      "default-3.5",
+      "default-3.6",
+      "default",
+      "caniuse:visib",
+      "caniuse:pagevisibility",
+      "modernizr:pagevisibility",
+      "PageVisibility"
+    ],
+    "dependencies": [
+      "CustomEvent"
+    ],
+    "docs": "https://developer.mozilla.org/en-US/docs/Web/API/Page_Visibility_API",
+    "spec": "http://www.w3.org/TR/page-visibility/",
+    "notes": [
+      "The alias `PageVisibility` works for this feature for backwards compatibility with the name under which it was previously (erroneously) available"
+    ],
+    "browsers": {
+      "firefox": "10 - 17",
+      "safari": "4",
+      "android": "4.4 - *",
+      "opera": "15 - 19",
+      "chrome": "14 - 32"
+    },
+    "detectSource": "\"document\"in self&&\"hidden\"in document&&\"visibilityState\"in document\n",
+    "baseDir": "document/visibilityState",
+    "hasTests": true,
+    "isTestable": true,
+    "isPublic": true,
+    "size": 338
+  }
+}

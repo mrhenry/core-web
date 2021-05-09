@@ -1,0 +1,197 @@
+{
+  "name": "Intl.getCanonicalLocales",
+  "polyfillName": "Intl.getCanonicalLocales",
+  "coreWeb": {
+    "name": "Intl.getCanonicalLocales",
+    "deps": [
+      "_ESAbstract.CreateMethodProperty",
+      "_ESAbstract.ToObject",
+      "_ESAbstract.ToLength",
+      "_ESAbstract.ToInteger",
+      "_ESAbstract.Type",
+      "_ESAbstract.Get",
+      "_ESAbstract.IsCallable",
+      "_ESAbstract.ArraySpeciesCreate",
+      "_ESAbstract.IsArray",
+      "_ESAbstract.ArrayCreate",
+      "_ESAbstract.IsConstructor",
+      "_ESAbstract.GetMethod",
+      "_ESAbstract.GetV",
+      "_ESAbstract.Construct",
+      "_ESAbstract.OrdinaryCreateFromConstructor",
+      "_ESAbstract.GetPrototypeFromConstructor",
+      "_ESAbstract.HasOwnProperty",
+      "_ESAbstract.ToPropertyKey",
+      "_ESAbstract.ToPrimitive",
+      "_ESAbstract.Call",
+      "_ESAbstract.OrdinaryToPrimitive",
+      "_ESAbstract.ToString",
+      "_ESAbstract.HasProperty",
+      "_ESAbstract.ToBoolean",
+      "_ESAbstract.CreateDataPropertyOrThrow",
+      "_ESAbstract.CreateDataProperty"
+    ],
+    "browsers": {
+      "android": "*",
+      "chrome": "<54",
+      "edge": "<16",
+      "edge_mob": "<16",
+      "firefox": "<48",
+      "firefox_mob": "<56",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "ios_saf": "<11",
+      "opera": "*",
+      "safari": "<11",
+      "samsung_mob": "*"
+    },
+    "engines": {
+      "Blink": "28 - 53",
+      "EdgeHTML": "12 - 15",
+      "Gecko": "1.7 - 47",
+      "Trident": ">= 5.0",
+      "WebKit": "85 - 603.2.1",
+      "Presto": ">= 1"
+    },
+    "size": 53581,
+    "hasCustomMatcher": false,
+    "isAlias": false,
+    "providedByCoreWeb": false
+  },
+  "mdn": {
+    "__compat": {
+      "mdn_url": "https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Intl/getCanonicalLocales",
+      "spec_url": "https://tc39.es/ecma402/#sec-intl.getcanonicallocales",
+      "support": {
+        "chrome": {
+          "version_added": "54"
+        },
+        "chrome_android": {
+          "version_added": false
+        },
+        "edge": {
+          "version_added": "16"
+        },
+        "firefox": {
+          "version_added": "48"
+        },
+        "firefox_android": {
+          "version_added": "56"
+        },
+        "ie": {
+          "version_added": false
+        },
+        "nodejs": {
+          "version_added": "7.0.0"
+        },
+        "opera": {
+          "version_added": false
+        },
+        "opera_android": {
+          "version_added": false
+        },
+        "safari": {
+          "version_added": "11"
+        },
+        "safari_ios": {
+          "version_added": "11"
+        },
+        "samsunginternet_android": {
+          "version_added": false
+        },
+        "webview_android": {
+          "version_added": false
+        }
+      },
+      "status": {
+        "experimental": false,
+        "standard_track": true,
+        "deprecated": false
+      }
+    }
+  },
+  "polyfilled": {
+    "android": "*",
+    "chrome": "<54",
+    "edge": "<16",
+    "firefox": "<48",
+    "ie": "9 - *",
+    "opera": "*",
+    "safari": "<11",
+    "ios_saf": "<11"
+  },
+  "native": {
+    "android": {
+      "version_added": false
+    },
+    "chrome": {
+      "version_added": "54"
+    },
+    "edge": {
+      "version_added": "16"
+    },
+    "firefox": {
+      "version_added": "48"
+    },
+    "ie": {
+      "version_added": false
+    },
+    "opera": {
+      "version_added": false
+    },
+    "safari": {
+      "version_added": "11"
+    },
+    "ios_saf": {
+      "version_added": "11"
+    }
+  },
+  "polyfillio": {
+    "aliases": [
+      "Intl"
+    ],
+    "dependencies": [
+      "Array.prototype.filter",
+      "Array.prototype.indexOf",
+      "Array.prototype.reduce",
+      "Array.prototype.sort",
+      "Object.assign",
+      "Object.defineProperty",
+      "Object.keys"
+    ],
+    "docs": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/getCanonicalLocales",
+    "license": "MIT",
+    "repo": "https://github.com/formatjs/formatjs/tree/master/packages/intl-getcanonicallocales/",
+    "spec": "https://tc39.es/ecma402/#sec-intl.getcanonicallocales",
+    "browsers": {
+      "android": "*",
+      "chrome": "<54",
+      "edge": "<16",
+      "edge_mob": "<16",
+      "firefox": "<48",
+      "firefox_mob": "<56",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "ios_saf": "<11",
+      "opera": "*",
+      "safari": "<11",
+      "samsung_mob": "*"
+    },
+    "install": {
+      "module": "@formatjs/intl-getcanonicallocales",
+      "paths": [
+        "polyfill.umd.js"
+      ],
+      "clean": [
+        "~locale",
+        "polyfill.js"
+      ]
+    },
+    "detectSource": "\"Intl\"in self&&\"getCanonicalLocales\"in self.Intl\n",
+    "baseDir": "Intl/getCanonicalLocales",
+    "hasTests": true,
+    "isTestable": true,
+    "isPublic": true,
+    "size": 53581
+  }
+}

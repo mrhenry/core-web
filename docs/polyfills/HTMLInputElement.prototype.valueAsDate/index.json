@@ -1,0 +1,184 @@
+{
+  "name": "HTMLInputElement.prototype.valueAsDate",
+  "polyfillName": "HTMLInputElement.prototype.valueAsDate",
+  "coreWeb": {
+    "name": "HTMLInputElement.prototype.valueAsDate",
+    "deps": [
+      "_ESAbstract.CreateMethodProperty",
+      "_ESAbstract.HasOwnProperty",
+      "_ESAbstract.ToObject",
+      "_ESAbstract.ToPropertyKey",
+      "_ESAbstract.ToPrimitive",
+      "_ESAbstract.Call",
+      "_ESAbstract.GetMethod",
+      "_ESAbstract.GetV",
+      "_ESAbstract.IsCallable",
+      "_ESAbstract.OrdinaryToPrimitive",
+      "_ESAbstract.Get",
+      "_ESAbstract.Type",
+      "_ESAbstract.ToString"
+    ],
+    "browsers": {
+      "android": "<43",
+      "bb": "*",
+      "chrome": "<43",
+      "firefox": "*",
+      "ios_chr": "<4",
+      "ios_saf": "<4",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "opera": "<12.1",
+      "op_mini": "<12.1",
+      "safari": ">=10.1",
+      "firefox_mob": "*",
+      "samsung_mob": "<4"
+    },
+    "engines": {
+      "Blink": "28 - 42",
+      "Gecko": ">= 1.7",
+      "WebKit": ">= 522.11",
+      "Trident": ">= 5.0",
+      "Presto": "1 - 2.10"
+    },
+    "size": 3348,
+    "hasCustomMatcher": false,
+    "isAlias": false,
+    "providedByCoreWeb": false
+  },
+  "mdn": {
+    "__compat": {
+      "support": {
+        "chrome": {
+          "version_added": "5"
+        },
+        "chrome_android": {
+          "version_added": "18"
+        },
+        "edge": {
+          "version_added": "12"
+        },
+        "firefox": [
+          {
+            "version_added": "57"
+          },
+          {
+            "version_added": "20",
+            "version_removed": "24"
+          }
+        ],
+        "firefox_android": [
+          {
+            "version_added": "57"
+          },
+          {
+            "version_added": "20",
+            "version_removed": "24"
+          }
+        ],
+        "ie": {
+          "version_added": false
+        },
+        "opera": {
+          "version_added": "≤12.1"
+        },
+        "opera_android": {
+          "version_added": "≤12.1"
+        },
+        "safari": {
+          "version_added": "5"
+        },
+        "safari_ios": {
+          "version_added": "4"
+        },
+        "samsunginternet_android": {
+          "version_added": "1.0"
+        },
+        "webview_android": {
+          "version_added": "≤37"
+        }
+      },
+      "status": {
+        "experimental": false,
+        "standard_track": true,
+        "deprecated": false
+      }
+    }
+  },
+  "polyfilled": {
+    "android": "<43",
+    "chrome": "<43",
+    "firefox": "*",
+    "ie": "9 - *",
+    "opera": "<12.1",
+    "safari": ">=10.1",
+    "ios_saf": "<4"
+  },
+  "native": {
+    "android": {
+      "version_added": "≤37"
+    },
+    "chrome": {
+      "version_added": "5"
+    },
+    "edge": {
+      "version_added": "12"
+    },
+    "firefox": [
+      {
+        "version_added": "57"
+      },
+      {
+        "version_added": "20",
+        "version_removed": "24"
+      }
+    ],
+    "ie": {
+      "version_added": false
+    },
+    "opera": {
+      "version_added": "≤12.1"
+    },
+    "safari": {
+      "version_added": "5"
+    },
+    "ios_saf": {
+      "version_added": "4"
+    }
+  },
+  "polyfillio": {
+    "aliases": [],
+    "dependencies": [
+      "Object.defineProperty",
+      "Object.getOwnPropertyDescriptor"
+    ],
+    "spec": "https://html.spec.whatwg.org/multipage/input.html#common-input-element-apis",
+    "docs": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLInputElement#properties",
+    "license": "MIT",
+    "notes": [
+      "Safari older than 10.1 does not allow re-defining 'HTMLInputElement.prototype.valueAsDate'.",
+      "IE8 doesn't have 'setter' support, so we can't serve this polyfill",
+      "Browsers that do not support date|month|week|time also won't have type property support. This implies we have to look at the attribute of the element. Setting the property without updating the attribute will have unexpected behaviour."
+    ],
+    "browsers": {
+      "android": "<43",
+      "bb": "*",
+      "chrome": "<43",
+      "firefox": "*",
+      "ios_chr": "<4",
+      "ios_saf": "<4",
+      "ie": "9 - *",
+      "ie_mob": "9 - *",
+      "opera": "<12.1",
+      "op_mini": "<12.1",
+      "safari": ">=10.1",
+      "firefox_mob": "*",
+      "samsung_mob": "<4"
+    },
+    "detectSource": "(function(){if(!(\"HTMLInputElement\"in self&&\"valueAsDate\"in HTMLInputElement.prototype))return!1\ntry{for(var e=document.createElement(\"INPUT\"),t=[[\"date\",\"2006-01-02\",new Date(\"2006-01-02T00:00:00.000Z\")],[\"month\",\"2019-12\",new Date(\"2019-12-01T00:00:00.000Z\")],[\"week\",\"2015-W53\",new Date(\"2015-12-28T00:00:00.000Z\")],[\"time\",\"21:59\",new Date(\"1970-01-01T21:59:00.000Z\")]],n=0;n<t.length;n++){var r=t[n]\ntry{e.type=r[0]}catch(a){}if(e.setAttribute(\"type\",r[0]),e.value=r[1],e.valueAsDate.getTime()!==r[2].getTime())return!1}}catch(u){return!1}return!0})()\n",
+    "baseDir": "HTMLInputElement/prototype/valueAsDate",
+    "hasTests": true,
+    "isTestable": true,
+    "isPublic": true,
+    "size": 3348
+  }
+}

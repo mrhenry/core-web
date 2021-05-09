@@ -1,0 +1,505 @@
+{
+  "name": "TextEncoder",
+  "polyfillName": "TextEncoder",
+  "coreWeb": {
+    "name": "TextEncoder",
+    "deps": [],
+    "browsers": {
+      "chrome": "<38",
+      "firefox": "<19",
+      "firefox_mob": "<19",
+      "edge": "<79",
+      "edge_mob": "<79",
+      "ie": "*",
+      "ie_mob": "*",
+      "safari": "<10.1",
+      "ios_saf": "<10.3",
+      "opera": "<25",
+      "android": "38",
+      "samsung_mob": "<3.0"
+    },
+    "engines": {
+      "Blink": "28 - 37",
+      "Gecko": "1.7 - 18",
+      "EdgeHTML": ">= 12",
+      "Trident": ">= 4.0",
+      "WebKit": "85 - 602.1.50",
+      "Presto": ">= 1"
+    },
+    "size": 3349,
+    "hasCustomMatcher": false,
+    "isAlias": false,
+    "providedByCoreWeb": false
+  },
+  "mdn": {
+    "__compat": {
+      "mdn_url": "https://developer.mozilla.org/docs/Web/API/TextEncoder",
+      "support": {
+        "chrome": {
+          "version_added": "38"
+        },
+        "chrome_android": {
+          "version_added": "38"
+        },
+        "edge": {
+          "version_added": "79"
+        },
+        "firefox": [
+          {
+            "version_added": "19"
+          },
+          {
+            "version_added": "18",
+            "notes": "Firefox 18 implemented an earlier and slightly different version of the specification."
+          }
+        ],
+        "firefox_android": [
+          {
+            "version_added": "19"
+          },
+          {
+            "version_added": "18",
+            "notes": "Firefox 18 implemented an earlier and slightly different version of the specification."
+          }
+        ],
+        "ie": {
+          "version_added": false
+        },
+        "nodejs": [
+          {
+            "version_added": "11.0.0"
+          },
+          {
+            "version_added": "8.3.0",
+            "partial_implementation": true,
+            "notes": "Exported from the <code>util</code> module but not globally available."
+          }
+        ],
+        "opera": {
+          "version_added": "25"
+        },
+        "opera_android": {
+          "version_added": true
+        },
+        "safari": {
+          "version_added": "10.1"
+        },
+        "safari_ios": {
+          "version_added": "10.3"
+        },
+        "samsunginternet_android": {
+          "version_added": "3.0"
+        },
+        "webview_android": {
+          "version_added": "38"
+        }
+      },
+      "status": {
+        "experimental": true,
+        "standard_track": true,
+        "deprecated": false
+      }
+    },
+    "TextEncoder": {
+      "__compat": {
+        "mdn_url": "https://developer.mozilla.org/docs/Web/API/TextEncoder/TextEncoder",
+        "description": "<code>TextEncoder()</code> constructor",
+        "support": {
+          "chrome": [
+            {
+              "version_added": "53",
+              "notes": "Does not accept parameters. Supports only <code>utf-8</code> encoding."
+            },
+            {
+              "version_added": "38",
+              "version_removed": "53",
+              "notes": "Throws <code>RangeError</code> exception for unknown encoding types."
+            }
+          ],
+          "chrome_android": {
+            "version_added": "38"
+          },
+          "edge": {
+            "version_added": "79",
+            "notes": "Does not accept parameters. Supports only <code>utf-8</code> encoding."
+          },
+          "firefox": [
+            {
+              "version_added": "48",
+              "notes": "The constructor accepts an encoding type label argument, but the value is ignored. Only <code>utf-8</code> encoding is supported."
+            },
+            {
+              "version_added": "38",
+              "version_removed": "48",
+              "notes": "If the encoding type label argument is invalid, then a <code>RangeError</code> exception is thrown."
+            },
+            {
+              "version_added": "19",
+              "version_removed": "38",
+              "notes": "If the encoding type label argument is invalid, then a <code>TypeError</code> exception is thrown."
+            },
+            {
+              "version_added": "18",
+              "notes": "Firefox 18 implemented an earlier and slightly different version of the specification."
+            }
+          ],
+          "firefox_android": [
+            {
+              "version_added": "48",
+              "notes": "The constructor accepts an encoding type label argument, but the value is ignored. Only <code>utf-8</code> encoding is supported."
+            },
+            {
+              "version_added": "38",
+              "version_removed": "48",
+              "notes": "If the encoding type label argument is invalid, then a <code>RangeError</code> exception is thrown."
+            },
+            {
+              "version_added": "19",
+              "version_removed": "38",
+              "notes": "If the encoding type label argument is invalid, then a <code>TypeError</code> exception is thrown."
+            },
+            {
+              "version_added": "18",
+              "notes": "Firefox 18 implemented an earlier and slightly different version of the specification."
+            }
+          ],
+          "ie": {
+            "version_added": false
+          },
+          "nodejs": [
+            {
+              "version_added": "11.0.0"
+            },
+            {
+              "version_added": "8.3.0",
+              "notes": "Exported from the <code>util</code> module but not globally available."
+            }
+          ],
+          "opera": {
+            "version_added": "25"
+          },
+          "opera_android": {
+            "version_added": null
+          },
+          "safari": {
+            "version_added": "10.1"
+          },
+          "safari_ios": {
+            "version_added": "10.3"
+          },
+          "samsunginternet_android": {
+            "version_added": "3.0"
+          },
+          "webview_android": {
+            "version_added": "38"
+          }
+        },
+        "status": {
+          "experimental": true,
+          "standard_track": true,
+          "deprecated": false
+        }
+      }
+    },
+    "encode": {
+      "__compat": {
+        "mdn_url": "https://developer.mozilla.org/docs/Web/API/TextEncoder/encode",
+        "support": {
+          "chrome": {
+            "version_added": "38"
+          },
+          "chrome_android": {
+            "version_added": "38"
+          },
+          "edge": {
+            "version_added": "79"
+          },
+          "firefox": [
+            {
+              "version_added": "19"
+            },
+            {
+              "version_added": "18",
+              "notes": "Firefox 18 implemented an earlier and slightly different version of the specification."
+            }
+          ],
+          "firefox_android": [
+            {
+              "version_added": "19"
+            },
+            {
+              "version_added": "18",
+              "notes": "Firefox 18 implemented an earlier and slightly different version of the specification."
+            }
+          ],
+          "ie": {
+            "version_added": false
+          },
+          "nodejs": {
+            "version_added": "8.3.0"
+          },
+          "opera": {
+            "version_added": "25"
+          },
+          "opera_android": {
+            "version_added": true
+          },
+          "safari": {
+            "version_added": "10.1"
+          },
+          "safari_ios": {
+            "version_added": "10.3"
+          },
+          "samsunginternet_android": {
+            "version_added": "3.0"
+          },
+          "webview_android": {
+            "version_added": "38"
+          }
+        },
+        "status": {
+          "experimental": true,
+          "standard_track": true,
+          "deprecated": false
+        }
+      }
+    },
+    "encodeInto": {
+      "__compat": {
+        "mdn_url": "https://developer.mozilla.org/docs/Web/API/TextEncoder/encodeInto",
+        "support": {
+          "chrome": {
+            "version_added": "74"
+          },
+          "chrome_android": {
+            "version_added": "74"
+          },
+          "edge": {
+            "version_added": "79"
+          },
+          "firefox": {
+            "version_added": "66"
+          },
+          "firefox_android": {
+            "version_added": "66"
+          },
+          "ie": {
+            "version_added": false
+          },
+          "nodejs": {
+            "version_added": null
+          },
+          "opera": {
+            "version_added": false
+          },
+          "opera_android": {
+            "version_added": false
+          },
+          "safari": {
+            "version_added": "14.1"
+          },
+          "safari_ios": {
+            "version_added": "14.5"
+          },
+          "samsunginternet_android": {
+            "version_added": "11.0"
+          },
+          "webview_android": {
+            "version_added": "74"
+          }
+        },
+        "status": {
+          "experimental": true,
+          "standard_track": true,
+          "deprecated": false
+        }
+      }
+    },
+    "encoding": {
+      "__compat": {
+        "mdn_url": "https://developer.mozilla.org/docs/Web/API/TextEncoder/encoding",
+        "support": {
+          "chrome": {
+            "version_added": "38"
+          },
+          "chrome_android": {
+            "version_added": "38"
+          },
+          "edge": {
+            "version_added": "79"
+          },
+          "firefox": [
+            {
+              "version_added": "19"
+            },
+            {
+              "version_added": "18",
+              "notes": "Firefox 18 implemented an earlier and slightly different version of the specification."
+            }
+          ],
+          "firefox_android": [
+            {
+              "version_added": "19"
+            },
+            {
+              "version_added": "18",
+              "notes": "Firefox 18 implemented an earlier and slightly different version of the specification."
+            }
+          ],
+          "ie": {
+            "version_added": false
+          },
+          "nodejs": {
+            "version_added": "8.3.0"
+          },
+          "opera": {
+            "version_added": "25"
+          },
+          "opera_android": {
+            "version_added": true
+          },
+          "safari": {
+            "version_added": "10.1"
+          },
+          "safari_ios": {
+            "version_added": "10.3"
+          },
+          "samsunginternet_android": {
+            "version_added": "3.0"
+          },
+          "webview_android": {
+            "version_added": "38"
+          }
+        },
+        "status": {
+          "experimental": true,
+          "standard_track": true,
+          "deprecated": false
+        }
+      }
+    },
+    "worker_support": {
+      "__compat": {
+        "description": "Available in workers",
+        "support": {
+          "chrome": {
+            "version_added": "38"
+          },
+          "chrome_android": {
+            "version_added": "38"
+          },
+          "edge": {
+            "version_added": "79"
+          },
+          "firefox": {
+            "version_added": "20"
+          },
+          "firefox_android": {
+            "version_added": "20"
+          },
+          "ie": {
+            "version_added": false
+          },
+          "nodejs": {
+            "version_added": "10.5.0"
+          },
+          "opera": {
+            "version_added": "25"
+          },
+          "opera_android": {
+            "version_added": null
+          },
+          "safari": {
+            "version_added": "10.1"
+          },
+          "safari_ios": {
+            "version_added": "10.3"
+          },
+          "samsunginternet_android": {
+            "version_added": "3.0"
+          },
+          "webview_android": {
+            "version_added": "38"
+          }
+        },
+        "status": {
+          "experimental": true,
+          "standard_track": true,
+          "deprecated": false
+        }
+      }
+    }
+  },
+  "polyfilled": {
+    "android": "38",
+    "chrome": "<38",
+    "edge": "<79",
+    "firefox": "<19",
+    "ie": "*",
+    "opera": "<25",
+    "safari": "<10.1",
+    "ios_saf": "<10.3"
+  },
+  "native": {
+    "android": {
+      "version_added": "38"
+    },
+    "chrome": {
+      "version_added": "38"
+    },
+    "edge": {
+      "version_added": "79"
+    },
+    "firefox": [
+      {
+        "version_added": "19"
+      },
+      {
+        "version_added": "18",
+        "notes": "Firefox 18 implemented an earlier and slightly different version of the specification."
+      }
+    ],
+    "ie": {
+      "version_added": false
+    },
+    "opera": {
+      "version_added": "25"
+    },
+    "safari": {
+      "version_added": "10.1"
+    },
+    "ios_saf": {
+      "version_added": "10.3"
+    }
+  },
+  "polyfillio": {
+    "aliases": [
+      "TextDecoder"
+    ],
+    "dependencies": [],
+    "license": "CC0-1.0",
+    "spec": "https://encoding.spec.whatwg.org/#interface-textencoder",
+    "docs": "https://developer.mozilla.org/en-US/docs/Web/API/TextEncoder",
+    "repo": "https://github.com/anonyco/FastestSmallestTextEncoderDecoder",
+    "browsers": {
+      "chrome": "<38",
+      "firefox": "<19",
+      "firefox_mob": "<19",
+      "edge": "<79",
+      "edge_mob": "<79",
+      "ie": "*",
+      "ie_mob": "*",
+      "safari": "<10.1",
+      "ios_saf": "<10.3",
+      "opera": "<25",
+      "android": "38",
+      "samsung_mob": "<3.0"
+    },
+    "detectSource": "\"TextEncoder\"in self&&\"TextDecoder\"in self\n",
+    "baseDir": "TextEncoder",
+    "hasTests": true,
+    "isTestable": true,
+    "isPublic": true,
+    "size": 3349
+  }
+}

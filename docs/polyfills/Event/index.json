@@ -1,0 +1,1535 @@
+{
+  "name": "Event",
+  "polyfillName": "Event",
+  "coreWeb": {
+    "name": "Event",
+    "deps": [
+      "Window",
+      "document",
+      "Element",
+      "_ESAbstract.CreateMethodProperty",
+      "_ESAbstract.ToObject",
+      "_ESAbstract.ToLength",
+      "_ESAbstract.ToInteger",
+      "_ESAbstract.Type",
+      "_ESAbstract.Get",
+      "_ESAbstract.HasProperty",
+      "_ESAbstract.ToString",
+      "_ESAbstract.ToPrimitive",
+      "_ESAbstract.Call",
+      "_ESAbstract.GetMethod",
+      "_ESAbstract.GetV",
+      "_ESAbstract.IsCallable",
+      "_ESAbstract.OrdinaryToPrimitive",
+      "_ESAbstract.SameValueZero",
+      "_ESAbstract.SameValueNonNumber"
+    ],
+    "browsers": {
+      "firefox": "6 - 10",
+      "ie": "6 - 11",
+      "ie_mob": "10",
+      "opera": "10 - 11.5",
+      "safari": "4 - 7",
+      "firefox_mob": "6 - 10"
+    },
+    "engines": {
+      "Gecko": "6 - 10",
+      "Trident": ">= 4.0",
+      "Presto": "2.2 - 2.9",
+      "WebKit": "530.17 - 537.71"
+    },
+    "size": 3340,
+    "hasCustomMatcher": false,
+    "isAlias": false,
+    "providedByCoreWeb": false
+  },
+  "mdn": {
+    "__compat": {
+      "mdn_url": "https://developer.mozilla.org/docs/Web/API/Event",
+      "spec_url": "https://dom.spec.whatwg.org/#interface-event",
+      "support": {
+        "chrome": {
+          "version_added": "1"
+        },
+        "chrome_android": {
+          "version_added": "18"
+        },
+        "edge": {
+          "version_added": "12"
+        },
+        "firefox": {
+          "version_added": "1"
+        },
+        "firefox_android": {
+          "version_added": "4"
+        },
+        "ie": {
+          "version_added": "6"
+        },
+        "nodejs": {
+          "version_added": "14.5.0"
+        },
+        "opera": {
+          "version_added": "4"
+        },
+        "opera_android": {
+          "version_added": "10.1"
+        },
+        "safari": {
+          "version_added": "1"
+        },
+        "safari_ios": {
+          "version_added": "1"
+        },
+        "samsunginternet_android": {
+          "version_added": "1.0"
+        },
+        "webview_android": {
+          "version_added": "1"
+        }
+      },
+      "status": {
+        "experimental": false,
+        "standard_track": true,
+        "deprecated": false
+      }
+    },
+    "Event": {
+      "__compat": {
+        "mdn_url": "https://developer.mozilla.org/docs/Web/API/Event/Event",
+        "spec_url": "https://dom.spec.whatwg.org/#ref-for-dom-event-event",
+        "description": "<code>Event()</code> constructor",
+        "support": {
+          "chrome": {
+            "version_added": "15"
+          },
+          "chrome_android": {
+            "version_added": "18"
+          },
+          "edge": {
+            "version_added": "12"
+          },
+          "firefox": {
+            "version_added": "11"
+          },
+          "firefox_android": {
+            "version_added": "14"
+          },
+          "ie": {
+            "version_added": false
+          },
+          "nodejs": [
+            {
+              "version_added": "15.0.0"
+            },
+            {
+              "version_added": "14.5.0",
+              "notes": "Only available from the <code>events</code> module"
+            }
+          ],
+          "opera": {
+            "version_added": "11.6"
+          },
+          "opera_android": {
+            "version_added": "12"
+          },
+          "safari": {
+            "version_added": "6"
+          },
+          "safari_ios": {
+            "version_added": "6"
+          },
+          "samsunginternet_android": {
+            "version_added": "1.0"
+          },
+          "webview_android": {
+            "version_added": "≤37"
+          }
+        },
+        "status": {
+          "experimental": false,
+          "standard_track": true,
+          "deprecated": false
+        }
+      }
+    },
+    "bubbles": {
+      "__compat": {
+        "mdn_url": "https://developer.mozilla.org/docs/Web/API/Event/bubbles",
+        "spec_url": "https://dom.spec.whatwg.org/#ref-for-dom-event-bubbles③",
+        "support": {
+          "chrome": {
+            "version_added": true
+          },
+          "chrome_android": {
+            "version_added": true
+          },
+          "edge": {
+            "version_added": "12"
+          },
+          "firefox": {
+            "version_added": true
+          },
+          "firefox_android": {
+            "version_added": true
+          },
+          "ie": {
+            "version_added": null
+          },
+          "nodejs": {
+            "version_added": "14.5.0",
+            "notes": "This is not used in Node.js and is provided purely for completeness."
+          },
+          "opera": {
+            "version_added": true
+          },
+          "opera_android": {
+            "version_added": true
+          },
+          "safari": {
+            "version_added": true
+          },
+          "safari_ios": {
+            "version_added": true
+          },
+          "samsunginternet_android": {
+            "version_added": true
+          },
+          "webview_android": {
+            "version_added": true
+          }
+        },
+        "status": {
+          "experimental": false,
+          "standard_track": true,
+          "deprecated": false
+        }
+      }
+    },
+    "cancelable": {
+      "__compat": {
+        "mdn_url": "https://developer.mozilla.org/docs/Web/API/Event/cancelable",
+        "spec_url": "https://dom.spec.whatwg.org/#ref-for-dom-event-cancelable②",
+        "support": {
+          "chrome": {
+            "version_added": true
+          },
+          "chrome_android": {
+            "version_added": true
+          },
+          "edge": {
+            "version_added": "12"
+          },
+          "firefox": {
+            "version_added": true
+          },
+          "firefox_android": {
+            "version_added": true
+          },
+          "ie": {
+            "version_added": null
+          },
+          "nodejs": {
+            "version_added": "14.5.0"
+          },
+          "opera": {
+            "version_added": true
+          },
+          "opera_android": {
+            "version_added": true
+          },
+          "safari": {
+            "version_added": true
+          },
+          "safari_ios": {
+            "version_added": true
+          },
+          "samsunginternet_android": {
+            "version_added": true
+          },
+          "webview_android": {
+            "version_added": true
+          }
+        },
+        "status": {
+          "experimental": false,
+          "standard_track": true,
+          "deprecated": false
+        }
+      }
+    },
+    "cancelBubble": {
+      "__compat": {
+        "mdn_url": "https://developer.mozilla.org/docs/Web/API/Event/cancelBubble",
+        "spec_url": "https://dom.spec.whatwg.org/#ref-for-dom-event-cancelbubble①",
+        "support": {
+          "chrome": {
+            "version_added": true,
+            "notes": "Starting with Chrome 58 and Opera 45, setting this property to false does nothing, as per <a href='https://github.com/whatwg/dom/issues/211'>spec discussion</a>."
+          },
+          "chrome_android": {
+            "version_added": true,
+            "notes": "Starting with Chrome 58 and Opera 45, setting this property to false does nothing, as per <a href='https://github.com/whatwg/dom/issues/211'>spec discussion</a>."
+          },
+          "edge": {
+            "version_added": "12"
+          },
+          "firefox": [
+            {
+              "version_added": "53"
+            },
+            {
+              "version_removed": "53",
+              "version_added": "1",
+              "partial_implementation": true,
+              "notes": "Only supported for <a href='https://developer.mozilla.org/docs/Web/API/UIEvent'><code>UIEvent</code></a>, not all <code>Event</code> objects."
+            }
+          ],
+          "firefox_android": [
+            {
+              "version_added": "53"
+            },
+            {
+              "version_removed": "53",
+              "version_added": "4",
+              "partial_implementation": true,
+              "notes": "Only supported for <a href='https://developer.mozilla.org/docs/Web/API/UIEvent'><code>UIEvent</code></a>, not all <code>Event</code> objects."
+            }
+          ],
+          "ie": {
+            "version_added": true
+          },
+          "nodejs": {
+            "version_added": "14.5.0",
+            "notes": "This is not used in Node.js and is provided purely for completeness."
+          },
+          "opera": {
+            "version_added": true,
+            "notes": "Starting with Chrome 58 and Opera 45, setting this property to false does nothing, as per <a href='https://github.com/whatwg/dom/issues/211'>spec discussion</a>."
+          },
+          "opera_android": {
+            "version_added": true,
+            "notes": "Starting with Chrome 58 and Opera 45, setting this property to false does nothing, as per <a href='https://github.com/whatwg/dom/issues/211'>spec discussion</a>."
+          },
+          "safari": {
+            "version_added": true
+          },
+          "safari_ios": {
+            "version_added": true
+          },
+          "samsunginternet_android": {
+            "version_added": true,
+            "notes": "Starting with Samsung Internet 7.0 and Opera 45, setting this property to false does nothing, as per <a href='https://github.com/whatwg/dom/issues/211'>spec discussion</a>."
+          },
+          "webview_android": {
+            "version_added": true,
+            "notes": "Starting with Chrome 58 and Opera 45, setting this property to false does nothing, as per <a href='https://github.com/whatwg/dom/issues/211'>spec discussion</a>."
+          }
+        },
+        "status": {
+          "experimental": false,
+          "standard_track": true,
+          "deprecated": false
+        }
+      }
+    },
+    "composed": {
+      "__compat": {
+        "mdn_url": "https://developer.mozilla.org/docs/Web/API/Event/composed",
+        "spec_url": "https://dom.spec.whatwg.org/#ref-for-dom-event-composed①",
+        "support": {
+          "chrome": {
+            "version_added": "53"
+          },
+          "chrome_android": {
+            "version_added": "53"
+          },
+          "edge": {
+            "version_added": "79"
+          },
+          "firefox": {
+            "version_added": "52"
+          },
+          "firefox_android": {
+            "version_added": "52"
+          },
+          "ie": {
+            "version_added": false
+          },
+          "nodejs": {
+            "version_added": "14.5.0",
+            "notes": "This is not used in Node.js and is provided purely for completeness."
+          },
+          "opera": {
+            "version_added": "40"
+          },
+          "opera_android": {
+            "version_added": "41"
+          },
+          "safari": {
+            "version_added": true
+          },
+          "safari_ios": {
+            "version_added": true
+          },
+          "samsunginternet_android": {
+            "version_added": "6.0"
+          },
+          "webview_android": {
+            "version_added": "53"
+          }
+        },
+        "status": {
+          "experimental": false,
+          "standard_track": true,
+          "deprecated": false
+        }
+      }
+    },
+    "composedPath": {
+      "__compat": {
+        "mdn_url": "https://developer.mozilla.org/docs/Web/API/Event/composedPath",
+        "spec_url": "https://dom.spec.whatwg.org/#ref-for-dom-event-composedpath①",
+        "support": {
+          "chrome": [
+            {
+              "version_added": "53"
+            },
+            {
+              "version_added": "50",
+              "version_removed": "53",
+              "alternative_name": "deepPath"
+            }
+          ],
+          "chrome_android": [
+            {
+              "version_added": "53"
+            },
+            {
+              "version_added": "50",
+              "version_removed": "53",
+              "alternative_name": "deepPath"
+            }
+          ],
+          "edge": {
+            "version_added": "79"
+          },
+          "firefox": {
+            "version_added": "52"
+          },
+          "firefox_android": {
+            "version_added": "52"
+          },
+          "ie": {
+            "version_added": false
+          },
+          "nodejs": {
+            "version_added": "14.5.0",
+            "notes": "Returns an array with either the event itself or no contents."
+          },
+          "opera": [
+            {
+              "version_added": "40"
+            },
+            {
+              "version_added": "37",
+              "version_removed": "40",
+              "alternative_name": "deepPath"
+            }
+          ],
+          "opera_android": [
+            {
+              "version_added": "41"
+            },
+            {
+              "version_added": "37",
+              "version_removed": "41",
+              "alternative_name": "deepPath"
+            }
+          ],
+          "safari": {
+            "version_added": "10"
+          },
+          "safari_ios": {
+            "version_added": "10"
+          },
+          "samsunginternet_android": [
+            {
+              "version_added": "6.0"
+            },
+            {
+              "alternative_name": "deepPath",
+              "version_added": "5.0",
+              "version_removed": "6.0"
+            }
+          ],
+          "webview_android": [
+            {
+              "version_added": "53"
+            },
+            {
+              "version_added": "50",
+              "version_removed": "53",
+              "alternative_name": "deepPath"
+            }
+          ]
+        },
+        "status": {
+          "experimental": false,
+          "standard_track": true,
+          "deprecated": false
+        }
+      }
+    },
+    "currentTarget": {
+      "__compat": {
+        "mdn_url": "https://developer.mozilla.org/docs/Web/API/Event/currentTarget",
+        "spec_url": "https://dom.spec.whatwg.org/#ref-for-dom-event-currenttarget②",
+        "support": {
+          "chrome": {
+            "version_added": "1"
+          },
+          "chrome_android": {
+            "version_added": "18"
+          },
+          "edge": {
+            "version_added": "12"
+          },
+          "firefox": {
+            "version_added": "1"
+          },
+          "firefox_android": {
+            "version_added": "4"
+          },
+          "ie": [
+            {
+              "version_added": "9"
+            },
+            {
+              "version_added": "6",
+              "version_removed": "9",
+              "partial_implementation": true,
+              "notes": "On Internet Explorer 6 through 8, the event model is different. Event listeners are attached with the non-standard <a href='https://developer.mozilla.org/docs/Web/API/EventTarget/attachEvent'><code>EventTarget.attachEvent</code></a> method. In this model, there is no equivalent to <code>event.currentTarget</code> and <code>this</code> is the global object. One solution to emulate the <code>event.currentTarget</code> feature is to wrap your handler in a function calling the handler using <code>Function.prototype.call</code> with the element as a first argument. This way, <code>this</code> will be the expected value."
+            }
+          ],
+          "nodejs": {
+            "version_added": "14.5.0"
+          },
+          "opera": {
+            "version_added": "7"
+          },
+          "opera_android": {
+            "version_added": "10.1"
+          },
+          "safari": {
+            "version_added": "10"
+          },
+          "safari_ios": {
+            "version_added": "10"
+          },
+          "samsunginternet_android": {
+            "version_added": "1.0"
+          },
+          "webview_android": {
+            "version_added": "1"
+          }
+        },
+        "status": {
+          "experimental": false,
+          "standard_track": true,
+          "deprecated": false
+        }
+      }
+    },
+    "defaultPrevented": {
+      "__compat": {
+        "mdn_url": "https://developer.mozilla.org/docs/Web/API/Event/defaultPrevented",
+        "spec_url": "https://dom.spec.whatwg.org/#ref-for-dom-event-defaultprevented①",
+        "support": {
+          "chrome": {
+            "version_added": "18"
+          },
+          "chrome_android": {
+            "version_added": "18"
+          },
+          "edge": {
+            "version_added": "12"
+          },
+          "firefox": {
+            "version_added": "6"
+          },
+          "firefox_android": {
+            "version_added": "6"
+          },
+          "ie": {
+            "version_added": "9"
+          },
+          "nodejs": {
+            "version_added": "14.5.0"
+          },
+          "opera": {
+            "version_added": "11"
+          },
+          "opera_android": {
+            "version_added": "11"
+          },
+          "safari": {
+            "version_added": "5"
+          },
+          "safari_ios": {
+            "version_added": "5"
+          },
+          "samsunginternet_android": {
+            "version_added": "1.0"
+          },
+          "webview_android": {
+            "version_added": "≤37"
+          }
+        },
+        "status": {
+          "experimental": false,
+          "standard_track": true,
+          "deprecated": false
+        }
+      }
+    },
+    "eventPhase": {
+      "__compat": {
+        "mdn_url": "https://developer.mozilla.org/docs/Web/API/Event/eventPhase",
+        "spec_url": "https://dom.spec.whatwg.org/#ref-for-dom-event-eventphase③",
+        "support": {
+          "chrome": {
+            "version_added": "45"
+          },
+          "chrome_android": {
+            "version_added": "45"
+          },
+          "edge": {
+            "version_added": "12"
+          },
+          "firefox": {
+            "version_added": true
+          },
+          "firefox_android": {
+            "version_added": true
+          },
+          "ie": {
+            "version_added": "9"
+          },
+          "nodejs": {
+            "version_added": "14.5.0"
+          },
+          "opera": {
+            "version_added": "32"
+          },
+          "opera_android": {
+            "version_added": "32"
+          },
+          "safari": {
+            "version_added": true
+          },
+          "safari_ios": {
+            "version_added": true
+          },
+          "samsunginternet_android": {
+            "version_added": "5.0"
+          },
+          "webview_android": {
+            "version_added": "45"
+          }
+        },
+        "status": {
+          "experimental": false,
+          "standard_track": true,
+          "deprecated": false
+        }
+      }
+    },
+    "explicitOriginalTarget": {
+      "__compat": {
+        "mdn_url": "https://developer.mozilla.org/docs/Web/API/Event/explicitOriginalTarget",
+        "support": {
+          "chrome": {
+            "version_added": false
+          },
+          "chrome_android": {
+            "version_added": false
+          },
+          "edge": {
+            "version_added": false
+          },
+          "firefox": {
+            "version_added": true
+          },
+          "firefox_android": {
+            "version_added": true
+          },
+          "ie": {
+            "version_added": false
+          },
+          "nodejs": {
+            "version_added": false
+          },
+          "opera": {
+            "version_added": false
+          },
+          "opera_android": {
+            "version_added": false
+          },
+          "safari": {
+            "version_added": false
+          },
+          "safari_ios": {
+            "version_added": false
+          },
+          "samsunginternet_android": {
+            "version_added": false
+          },
+          "webview_android": {
+            "version_added": false
+          }
+        },
+        "status": {
+          "experimental": false,
+          "standard_track": false,
+          "deprecated": false
+        }
+      }
+    },
+    "getPreventDefault": {
+      "__compat": {
+        "mdn_url": "https://developer.mozilla.org/docs/Web/API/Event/getPreventDefault",
+        "support": {
+          "chrome": {
+            "version_added": false
+          },
+          "chrome_android": {
+            "version_added": false
+          },
+          "edge": {
+            "version_added": false
+          },
+          "firefox": {
+            "version_added": true,
+            "version_removed": "59",
+            "notes": "See <a href='https://bugzil.la/691151'>bug 691151</a>."
+          },
+          "firefox_android": {
+            "version_added": true,
+            "version_removed": "59",
+            "notes": "See <a href='https://bugzil.la/691151'>bug 691151</a>."
+          },
+          "ie": {
+            "version_added": false
+          },
+          "nodejs": {
+            "version_added": false
+          },
+          "opera": {
+            "version_added": false
+          },
+          "opera_android": {
+            "version_added": false
+          },
+          "safari": {
+            "version_added": null
+          },
+          "safari_ios": {
+            "version_added": null
+          },
+          "samsunginternet_android": {
+            "version_added": false
+          },
+          "webview_android": {
+            "version_added": false
+          }
+        },
+        "status": {
+          "experimental": false,
+          "standard_track": false,
+          "deprecated": true
+        }
+      }
+    },
+    "initEvent": {
+      "__compat": {
+        "mdn_url": "https://developer.mozilla.org/docs/Web/API/Event/initEvent",
+        "spec_url": "https://dom.spec.whatwg.org/#ref-for-dom-event-initevent①",
+        "support": {
+          "chrome": {
+            "version_added": true
+          },
+          "chrome_android": {
+            "version_added": true
+          },
+          "edge": {
+            "version_added": "12"
+          },
+          "firefox": [
+            {
+              "version_added": "17"
+            },
+            {
+              "version_added": true,
+              "version_removed": "17",
+              "partial_implementation": true,
+              "notes": "Before Firefox 17, a call to this method after the dispatching of the event raised an exception instead of doing nothing."
+            }
+          ],
+          "firefox_android": [
+            {
+              "version_added": "17"
+            },
+            {
+              "version_added": true,
+              "version_removed": "17",
+              "partial_implementation": true,
+              "notes": "Before Firefox 17, a call to this method after the dispatching of the event raised an exception instead of doing nothing."
+            }
+          ],
+          "ie": {
+            "version_added": true
+          },
+          "nodejs": {
+            "version_added": false
+          },
+          "opera": {
+            "version_added": true
+          },
+          "opera_android": {
+            "version_added": true
+          },
+          "safari": {
+            "version_added": true
+          },
+          "safari_ios": {
+            "version_added": true
+          },
+          "samsunginternet_android": {
+            "version_added": true
+          },
+          "webview_android": {
+            "version_added": true
+          }
+        },
+        "status": {
+          "experimental": false,
+          "standard_track": true,
+          "deprecated": true
+        }
+      }
+    },
+    "isTrusted": {
+      "__compat": {
+        "mdn_url": "https://developer.mozilla.org/docs/Web/API/Event/isTrusted",
+        "spec_url": "https://dom.spec.whatwg.org/#ref-for-dom-event-istrusted①",
+        "support": {
+          "chrome": {
+            "version_added": "46",
+            "notes": "Starting with Chrome 53 and Opera 40, untrusted events do not invoke the default action."
+          },
+          "chrome_android": {
+            "version_added": "46",
+            "notes": "Starting with Chrome 53 and Opera 40, untrusted events do not invoke the default action."
+          },
+          "edge": {
+            "version_added": "12"
+          },
+          "firefox": {
+            "version_added": true
+          },
+          "firefox_android": {
+            "version_added": true
+          },
+          "ie": {
+            "version_added": false,
+            "notes": "In Internet Explorer, all events are trusted except those that are created with the <code>createEvent()</code> method."
+          },
+          "nodejs": {
+            "version_added": "14.5.0",
+            "notes": "This is not used in Node.js and is provided purely for completeness."
+          },
+          "opera": {
+            "version_added": "33",
+            "notes": "Starting with Chrome 53 and Opera 40, untrusted events do not invoke the default action."
+          },
+          "opera_android": {
+            "version_added": "33",
+            "notes": "Starting with Chrome 53 and Opera 40, untrusted events do not invoke the default action."
+          },
+          "safari": {
+            "version_added": "10"
+          },
+          "safari_ios": {
+            "version_added": "10"
+          },
+          "samsunginternet_android": {
+            "version_added": "5.0",
+            "notes": "Starting with Samsung Internet 6.0 and Opera 40, untrusted events do not invoke the default action."
+          },
+          "webview_android": {
+            "version_added": "46",
+            "notes": "Starting with version 53, untrusted events do not invoke the default action."
+          }
+        },
+        "status": {
+          "experimental": false,
+          "standard_track": true,
+          "deprecated": false
+        }
+      }
+    },
+    "originalTarget": {
+      "__compat": {
+        "mdn_url": "https://developer.mozilla.org/docs/Web/API/Event/originalTarget",
+        "support": {
+          "chrome": {
+            "version_added": false
+          },
+          "chrome_android": {
+            "version_added": false
+          },
+          "edge": {
+            "version_added": false
+          },
+          "firefox": {
+            "version_added": true
+          },
+          "firefox_android": {
+            "version_added": true
+          },
+          "ie": {
+            "version_added": false
+          },
+          "nodejs": {
+            "version_added": false
+          },
+          "opera": {
+            "version_added": false
+          },
+          "opera_android": {
+            "version_added": false
+          },
+          "safari": {
+            "version_added": false
+          },
+          "safari_ios": {
+            "version_added": false
+          },
+          "samsunginternet_android": {
+            "version_added": false
+          },
+          "webview_android": {
+            "version_added": false
+          }
+        },
+        "status": {
+          "experimental": false,
+          "standard_track": false,
+          "deprecated": false
+        }
+      }
+    },
+    "preventBubble": {
+      "__compat": {
+        "mdn_url": "https://developer.mozilla.org/docs/Web/API/Event/preventBubble",
+        "support": {
+          "chrome": {
+            "version_added": false
+          },
+          "chrome_android": {
+            "version_added": false
+          },
+          "edge": {
+            "version_added": false
+          },
+          "firefox": {
+            "version_added": true,
+            "version_removed": "24"
+          },
+          "firefox_android": {
+            "version_added": true,
+            "version_removed": "24"
+          },
+          "ie": {
+            "version_added": false
+          },
+          "nodejs": {
+            "version_added": false
+          },
+          "opera": {
+            "version_added": false
+          },
+          "opera_android": {
+            "version_added": false
+          },
+          "safari": {
+            "version_added": null
+          },
+          "safari_ios": {
+            "version_added": null
+          },
+          "samsunginternet_android": {
+            "version_added": false
+          },
+          "webview_android": {
+            "version_added": false
+          }
+        },
+        "status": {
+          "experimental": false,
+          "standard_track": false,
+          "deprecated": true
+        }
+      }
+    },
+    "preventCapture": {
+      "__compat": {
+        "mdn_url": "https://developer.mozilla.org/docs/Web/API/Event/preventCapture",
+        "support": {
+          "chrome": {
+            "version_added": false
+          },
+          "chrome_android": {
+            "version_added": false
+          },
+          "edge": {
+            "version_added": false
+          },
+          "firefox": {
+            "version_added": true,
+            "version_removed": "24"
+          },
+          "firefox_android": {
+            "version_added": true,
+            "version_removed": "24"
+          },
+          "ie": {
+            "version_added": false
+          },
+          "nodejs": {
+            "version_added": false
+          },
+          "opera": {
+            "version_added": false
+          },
+          "opera_android": {
+            "version_added": false
+          },
+          "safari": {
+            "version_added": null
+          },
+          "safari_ios": {
+            "version_added": null
+          },
+          "samsunginternet_android": {
+            "version_added": false
+          },
+          "webview_android": {
+            "version_added": false
+          }
+        },
+        "status": {
+          "experimental": false,
+          "standard_track": false,
+          "deprecated": true
+        }
+      }
+    },
+    "preventDefault": {
+      "__compat": {
+        "mdn_url": "https://developer.mozilla.org/docs/Web/API/Event/preventDefault",
+        "spec_url": "https://dom.spec.whatwg.org/#ref-for-dom-event-preventdefault③",
+        "support": {
+          "chrome": {
+            "version_added": "1"
+          },
+          "chrome_android": {
+            "version_added": "18"
+          },
+          "edge": {
+            "version_added": "12"
+          },
+          "firefox": {
+            "version_added": "1"
+          },
+          "firefox_android": {
+            "version_added": "4"
+          },
+          "ie": {
+            "version_added": "9"
+          },
+          "nodejs": {
+            "version_added": "14.5.0"
+          },
+          "opera": {
+            "version_added": "7"
+          },
+          "opera_android": {
+            "version_added": "10.1"
+          },
+          "safari": {
+            "version_added": "1"
+          },
+          "safari_ios": {
+            "version_added": "1"
+          },
+          "samsunginternet_android": {
+            "version_added": "1.0"
+          },
+          "webview_android": {
+            "version_added": "1"
+          }
+        },
+        "status": {
+          "experimental": false,
+          "standard_track": true,
+          "deprecated": false
+        }
+      }
+    },
+    "returnValue": {
+      "__compat": {
+        "mdn_url": "https://developer.mozilla.org/docs/Web/API/Event/returnValue",
+        "spec_url": "https://dom.spec.whatwg.org/#dom-event-returnvalue",
+        "support": {
+          "chrome": {
+            "version_added": true
+          },
+          "chrome_android": {
+            "version_added": true
+          },
+          "edge": {
+            "version_added": "12"
+          },
+          "firefox": {
+            "version_added": false,
+            "notes": "Temporarily added in 63, removed in 64, briefly added in 65, then removed again while related compatibility issues are sorted out (see <a href='https://bugzil.la/1520756'>bug 1520756</a>)."
+          },
+          "firefox_android": {
+            "version_added": false,
+            "notes": "Temporarily added in 63, removed in 64, briefly added in 65, then removed again while related compatibility issues are sorted out (see <a href='https://bugzil.la/1520756'>bug 1520756</a>)."
+          },
+          "ie": {
+            "version_added": "6"
+          },
+          "nodejs": {
+            "version_added": "14.5.0"
+          },
+          "opera": {
+            "version_added": true
+          },
+          "opera_android": {
+            "version_added": true
+          },
+          "safari": {
+            "version_added": true
+          },
+          "safari_ios": {
+            "version_added": true
+          },
+          "samsunginternet_android": {
+            "version_added": true
+          },
+          "webview_android": {
+            "version_added": true
+          }
+        },
+        "status": {
+          "experimental": false,
+          "standard_track": true,
+          "deprecated": true
+        }
+      }
+    },
+    "srcElement": {
+      "__compat": {
+        "mdn_url": "https://developer.mozilla.org/docs/Web/API/Event/srcElement",
+        "spec_url": "https://dom.spec.whatwg.org/#dom-event-srcelement",
+        "support": {
+          "chrome": {
+            "version_added": true
+          },
+          "chrome_android": {
+            "version_added": true
+          },
+          "edge": {
+            "version_added": "12"
+          },
+          "firefox": {
+            "version_added": "62"
+          },
+          "firefox_android": {
+            "version_added": "62"
+          },
+          "ie": {
+            "version_added": true
+          },
+          "nodejs": {
+            "version_added": "14.5.0"
+          },
+          "opera": {
+            "version_added": true
+          },
+          "opera_android": {
+            "version_added": true
+          },
+          "safari": {
+            "version_added": true
+          },
+          "safari_ios": {
+            "version_added": true
+          },
+          "samsunginternet_android": {
+            "version_added": true
+          },
+          "webview_android": {
+            "version_added": true
+          }
+        },
+        "status": {
+          "experimental": false,
+          "standard_track": true,
+          "deprecated": true
+        }
+      }
+    },
+    "stopImmediatePropagation": {
+      "__compat": {
+        "mdn_url": "https://developer.mozilla.org/docs/Web/API/Event/stopImmediatePropagation",
+        "spec_url": "https://dom.spec.whatwg.org/#ref-for-dom-event-stopimmediatepropagation①",
+        "support": {
+          "chrome": {
+            "version_added": "6"
+          },
+          "chrome_android": {
+            "version_added": "18"
+          },
+          "edge": {
+            "version_added": "12"
+          },
+          "firefox": {
+            "version_added": "10"
+          },
+          "firefox_android": {
+            "version_added": "10"
+          },
+          "ie": {
+            "version_added": "9"
+          },
+          "nodejs": {
+            "version_added": "14.5.0"
+          },
+          "opera": {
+            "version_added": "15"
+          },
+          "opera_android": {
+            "version_added": "14"
+          },
+          "safari": {
+            "version_added": "5"
+          },
+          "safari_ios": {
+            "version_added": "5"
+          },
+          "samsunginternet_android": {
+            "version_added": "1.0"
+          },
+          "webview_android": {
+            "version_added": "≤37"
+          }
+        },
+        "status": {
+          "experimental": false,
+          "standard_track": true,
+          "deprecated": false
+        }
+      }
+    },
+    "stopPropagation": {
+      "__compat": {
+        "mdn_url": "https://developer.mozilla.org/docs/Web/API/Event/stopPropagation",
+        "spec_url": "https://dom.spec.whatwg.org/#ref-for-dom-event-stoppropagation①",
+        "support": {
+          "chrome": {
+            "version_added": "1"
+          },
+          "chrome_android": {
+            "version_added": "18"
+          },
+          "edge": {
+            "version_added": "12"
+          },
+          "firefox": {
+            "version_added": "1"
+          },
+          "firefox_android": {
+            "version_added": "4"
+          },
+          "ie": {
+            "version_added": "9"
+          },
+          "nodejs": {
+            "version_added": "14.5.0",
+            "notes": "This is not used in Node.js and is provided purely for completeness."
+          },
+          "opera": {
+            "version_added": "7"
+          },
+          "opera_android": {
+            "version_added": "10.1"
+          },
+          "safari": {
+            "version_added": "1"
+          },
+          "safari_ios": {
+            "version_added": "1"
+          },
+          "samsunginternet_android": {
+            "version_added": "1.0"
+          },
+          "webview_android": {
+            "version_added": "1"
+          }
+        },
+        "status": {
+          "experimental": false,
+          "standard_track": true,
+          "deprecated": false
+        }
+      }
+    },
+    "target": {
+      "__compat": {
+        "mdn_url": "https://developer.mozilla.org/docs/Web/API/Event/target",
+        "spec_url": "https://dom.spec.whatwg.org/#ref-for-dom-event-target③",
+        "support": {
+          "chrome": {
+            "version_added": "1"
+          },
+          "chrome_android": {
+            "version_added": "18"
+          },
+          "edge": {
+            "version_added": "12"
+          },
+          "firefox": {
+            "version_added": "1"
+          },
+          "firefox_android": {
+            "version_added": "4"
+          },
+          "ie": {
+            "version_added": "9"
+          },
+          "nodejs": {
+            "version_added": "14.5.0"
+          },
+          "opera": {
+            "version_added": "7"
+          },
+          "opera_android": {
+            "version_added": "10.1"
+          },
+          "safari": {
+            "version_added": "1"
+          },
+          "safari_ios": {
+            "version_added": "1"
+          },
+          "samsunginternet_android": {
+            "version_added": "1.0"
+          },
+          "webview_android": {
+            "version_added": "1"
+          }
+        },
+        "status": {
+          "experimental": false,
+          "standard_track": true,
+          "deprecated": false
+        }
+      }
+    },
+    "timeStamp": {
+      "__compat": {
+        "mdn_url": "https://developer.mozilla.org/docs/Web/API/Event/timeStamp",
+        "spec_url": "https://dom.spec.whatwg.org/#ref-for-dom-event-timestamp①",
+        "support": {
+          "chrome": {
+            "version_added": "49",
+            "notes": "Starting with Chrome 49, Firefox 54 and Opera 36, this property returns <a href='https://developer.mozilla.org/docs/Web/API/DOMHighResTimeStamp'><code>DOMHighResTimeStamp</code></a> instead of <a href='https://developer.mozilla.org/docs/Web/API/DOMTimeStamp'><code>DOMTimeStamp</code></a>."
+          },
+          "chrome_android": {
+            "version_added": "49",
+            "notes": "Starting with Chrome 49, Firefox 54 and Opera 36, this property returns <a href='https://developer.mozilla.org/docs/Web/API/DOMHighResTimeStamp'><code>DOMHighResTimeStamp</code></a> instead of <a href='https://developer.mozilla.org/docs/Web/API/DOMTimeStamp'><code>DOMTimeStamp</code></a>."
+          },
+          "edge": {
+            "version_added": "12"
+          },
+          "firefox": {
+            "version_added": true,
+            "notes": "Starting with Chrome 49, Firefox 54 and Opera 36, this property returns <a href='https://developer.mozilla.org/docs/Web/API/DOMHighResTimeStamp'><code>DOMHighResTimeStamp</code></a> instead of <a href='https://developer.mozilla.org/docs/Web/API/DOMTimeStamp'><code>DOMTimeStamp</code></a>."
+          },
+          "firefox_android": {
+            "version_added": true,
+            "notes": "Starting with Chrome 49, Firefox 54 and Opera 36, this property returns <a href='https://developer.mozilla.org/docs/Web/API/DOMHighResTimeStamp'><code>DOMHighResTimeStamp</code></a> instead of <a href='https://developer.mozilla.org/docs/Web/API/DOMTimeStamp'><code>DOMTimeStamp</code></a>."
+          },
+          "ie": {
+            "version_added": true,
+            "notes": "Starting with Chrome 49, Firefox 54 and Opera 36, this property returns <a href='https://developer.mozilla.org/docs/Web/API/DOMHighResTimeStamp'><code>DOMHighResTimeStamp</code></a> instead of <a href='https://developer.mozilla.org/docs/Web/API/DOMTimeStamp'><code>DOMTimeStamp</code></a>."
+          },
+          "nodejs": {
+            "version_added": "14.5.0"
+          },
+          "opera": {
+            "version_added": "36",
+            "notes": "Starting with Chrome 49, Firefox 54 and Opera 36, this property returns <a href='https://developer.mozilla.org/docs/Web/API/DOMHighResTimeStamp'><code>DOMHighResTimeStamp</code></a> instead of <a href='https://developer.mozilla.org/docs/Web/API/DOMTimeStamp'><code>DOMTimeStamp</code></a>."
+          },
+          "opera_android": {
+            "version_added": "36",
+            "notes": "Starting with Chrome 49, Firefox 54 and Opera 36, this property returns <a href='https://developer.mozilla.org/docs/Web/API/DOMHighResTimeStamp'><code>DOMHighResTimeStamp</code></a> instead of <a href='https://developer.mozilla.org/docs/Web/API/DOMTimeStamp'><code>DOMTimeStamp</code></a>."
+          },
+          "safari": {
+            "version_added": true
+          },
+          "safari_ios": {
+            "version_added": true
+          },
+          "samsunginternet_android": {
+            "version_added": "5.0",
+            "notes": "Starting with Samsung Internet 5.0, Firefox 54 and Opera 36, this property returns <a href='https://developer.mozilla.org/docs/Web/API/DOMHighResTimeStamp'><code>DOMHighResTimeStamp</code></a> instead of <a href='https://developer.mozilla.org/docs/Web/API/DOMTimeStamp'><code>DOMTimeStamp</code></a>."
+          },
+          "webview_android": {
+            "version_added": "49",
+            "notes": "Starting with version 49, this property returns <a href='https://developer.mozilla.org/docs/Web/API/DOMHighResTimeStamp'><code>DOMHighResTimeStamp</code></a> instead of <a href='https://developer.mozilla.org/docs/Web/API/DOMTimeStamp'><code>DOMTimeStamp</code></a>."
+          }
+        },
+        "status": {
+          "experimental": false,
+          "standard_track": true,
+          "deprecated": false
+        }
+      }
+    },
+    "type": {
+      "__compat": {
+        "mdn_url": "https://developer.mozilla.org/docs/Web/API/Event/type",
+        "spec_url": "https://dom.spec.whatwg.org/#ref-for-dom-event-type④",
+        "support": {
+          "chrome": {
+            "version_added": "1"
+          },
+          "chrome_android": {
+            "version_added": "18"
+          },
+          "edge": {
+            "version_added": "12"
+          },
+          "firefox": {
+            "version_added": "1"
+          },
+          "firefox_android": {
+            "version_added": "4"
+          },
+          "ie": {
+            "version_added": "9"
+          },
+          "nodejs": {
+            "version_added": "14.5.0"
+          },
+          "opera": {
+            "version_added": "7"
+          },
+          "opera_android": {
+            "version_added": "10.1"
+          },
+          "safari": {
+            "version_added": "1"
+          },
+          "safari_ios": {
+            "version_added": "1"
+          },
+          "samsunginternet_android": {
+            "version_added": "1.0"
+          },
+          "webview_android": {
+            "version_added": "1"
+          }
+        },
+        "status": {
+          "experimental": false,
+          "standard_track": true,
+          "deprecated": false
+        }
+      }
+    }
+  },
+  "polyfilled": {
+    "firefox": "6 - 10",
+    "ie": "6 - 11",
+    "opera": "10 - 11.5",
+    "safari": "4 - 7"
+  },
+  "native": {
+    "android": {
+      "version_added": "1"
+    },
+    "chrome": {
+      "version_added": "1"
+    },
+    "edge": {
+      "version_added": "12"
+    },
+    "firefox": {
+      "version_added": "1"
+    },
+    "ie": {
+      "version_added": "6"
+    },
+    "opera": {
+      "version_added": "4"
+    },
+    "safari": {
+      "version_added": "1"
+    },
+    "ios_saf": {
+      "version_added": "1"
+    }
+  },
+  "polyfillio": {
+    "aliases": [
+      "default-3.3",
+      "default-3.4",
+      "default-3.5",
+      "default-3.6",
+      "default"
+    ],
+    "dependencies": [
+      "Window",
+      "document",
+      "Element",
+      "Object.defineProperty",
+      "Array.prototype.indexOf",
+      "Array.prototype.includes"
+    ],
+    "docs": "https://developer.mozilla.org/en/docs/Web/API/Event",
+    "notes": [
+      "Where necessary, also adds the [EventTarget](https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener) methods `addEventListener`, `removeEventListener` and `dispatchEvent`."
+    ],
+    "browsers": {
+      "firefox": "6 - 10",
+      "ie": "6 - 11",
+      "ie_mob": "10",
+      "opera": "10 - 11.5",
+      "safari": "4 - 7",
+      "firefox_mob": "6 - 10"
+    },
+    "detectSource": "(function(n){if(!(\"Event\"in n))return!1\ntry{return new Event(\"click\"),!0}catch(t){return!1}})(self)\n",
+    "baseDir": "Event",
+    "hasTests": true,
+    "isTestable": true,
+    "isPublic": true,
+    "size": 3340
+  }
+}

@@ -1,0 +1,524 @@
+{
+  "name": "Element.prototype.animate",
+  "polyfillName": "WebAnimations",
+  "coreWeb": {
+    "name": "WebAnimations",
+    "deps": [],
+    "browsers": {
+      "edge": "<79",
+      "edge_mob": "*",
+      "ie": "10 - *",
+      "ie_mob": "10 - *",
+      "firefox": "27 - 50",
+      "opera": "11.6 - 42",
+      "safari": "9 - *",
+      "chrome": "* - 38",
+      "ios_saf": "7.1 - *",
+      "firefox_mob": "27 - 50",
+      "android": "<53"
+    },
+    "engines": {
+      "EdgeHTML": ">= 12",
+      "Trident": ">= 6.0",
+      "Gecko": "27 - 50",
+      "Presto": ">= 2.10",
+      "WebKit": ">= 600.1.4",
+      "Blink": "28 - 38"
+    },
+    "size": 47131,
+    "hasCustomMatcher": true,
+    "isAlias": false,
+    "providedByCoreWeb": false
+  },
+  "mdn": {
+    "__compat": {
+      "mdn_url": "https://developer.mozilla.org/docs/Web/API/Element/animate",
+      "spec_url": "https://drafts.csswg.org/web-animations/#dom-animatable-animate",
+      "support": {
+        "chrome": {
+          "version_added": "36"
+        },
+        "chrome_android": {
+          "version_added": "36"
+        },
+        "edge": {
+          "version_added": "79"
+        },
+        "firefox": {
+          "version_added": "48"
+        },
+        "firefox_android": {
+          "version_added": "48"
+        },
+        "ie": {
+          "version_added": false
+        },
+        "opera": {
+          "version_added": "23"
+        },
+        "opera_android": {
+          "version_added": "24"
+        },
+        "safari": [
+          {
+            "version_added": "13.1"
+          },
+          {
+            "version_added": true,
+            "flags": [
+              {
+                "type": "preference",
+                "name": "Web Animations"
+              },
+              {
+                "type": "preference",
+                "name": "CSS Animations via Web Animations"
+              }
+            ]
+          }
+        ],
+        "safari_ios": {
+          "version_added": "13.4"
+        },
+        "samsunginternet_android": {
+          "version_added": "3.0"
+        },
+        "webview_android": {
+          "version_added": "37"
+        }
+      },
+      "status": {
+        "experimental": true,
+        "standard_track": true,
+        "deprecated": false
+      }
+    },
+    "composite_option": {
+      "__compat": {
+        "description": "<code>composite</code> option",
+        "support": {
+          "chrome": {
+            "version_added": "79",
+            "flags": [
+              {
+                "type": "preference",
+                "name": "Experimental Web Platform Features"
+              }
+            ]
+          },
+          "chrome_android": {
+            "version_added": "79",
+            "flags": [
+              {
+                "type": "preference",
+                "name": "Experimental Web Platform Features"
+              }
+            ]
+          },
+          "edge": {
+            "version_added": "79",
+            "flags": [
+              {
+                "type": "preference",
+                "name": "Experimental Web Platform Features"
+              }
+            ]
+          },
+          "firefox": [
+            {
+              "version_added": "80"
+            },
+            {
+              "version_added": "63",
+              "version_removed": "79",
+              "flags": [
+                {
+                  "type": "preference",
+                  "name": "dom.animations-api.compositing.enabled"
+                }
+              ]
+            }
+          ],
+          "firefox_android": {
+            "version_added": "63",
+            "version_removed": "79",
+            "flags": [
+              {
+                "type": "preference",
+                "name": "dom.animations-api.compositing.enabled"
+              }
+            ]
+          },
+          "ie": {
+            "version_added": false
+          },
+          "opera": {
+            "version_added": "66",
+            "flags": [
+              {
+                "type": "preference",
+                "name": "Experimental Web Platform Features"
+              }
+            ]
+          },
+          "opera_android": {
+            "version_added": false
+          },
+          "safari": {
+            "version_added": false
+          },
+          "safari_ios": {
+            "version_added": false
+          },
+          "samsunginternet_android": {
+            "version_added": false
+          },
+          "webview_android": {
+            "version_added": false
+          }
+        },
+        "status": {
+          "experimental": true,
+          "standard_track": true,
+          "deprecated": false
+        }
+      }
+    },
+    "id_option": {
+      "__compat": {
+        "description": "<code>id</code> option",
+        "support": {
+          "chrome": {
+            "version_added": "50"
+          },
+          "chrome_android": {
+            "version_added": "50"
+          },
+          "edge": {
+            "version_added": "79"
+          },
+          "firefox": {
+            "version_added": "48"
+          },
+          "firefox_android": {
+            "version_added": "48"
+          },
+          "ie": {
+            "version_added": false
+          },
+          "opera": {
+            "version_added": "37"
+          },
+          "opera_android": {
+            "version_added": "37"
+          },
+          "safari": {
+            "version_added": false
+          },
+          "safari_ios": {
+            "version_added": false
+          },
+          "samsunginternet_android": {
+            "version_added": "5.0"
+          },
+          "webview_android": {
+            "version_added": "50"
+          }
+        },
+        "status": {
+          "experimental": true,
+          "standard_track": true,
+          "deprecated": false
+        }
+      }
+    },
+    "implicit_tofrom": {
+      "__compat": {
+        "description": "Implicit to/from keyframes are supported",
+        "mdn_url": "https://developer.mozilla.org/docs/Web/API/Element/animate#Implicit_tofrom_keyframes",
+        "support": {
+          "chrome": {
+            "version_added": false,
+            "notes": "Currently Chrome Canary only"
+          },
+          "chrome_android": {
+            "version_added": false,
+            "notes": "Currently Chrome Canary only"
+          },
+          "edge": {
+            "version_added": false
+          },
+          "firefox": {
+            "version_added": "75"
+          },
+          "firefox_android": {
+            "version_added": false
+          },
+          "ie": {
+            "version_added": false
+          },
+          "opera": {
+            "version_added": false
+          },
+          "opera_android": {
+            "version_added": false
+          },
+          "safari": {
+            "version_added": "13.1",
+            "partial_implementation": true,
+            "notes": "Implementation seems somewhat buggy. More information will follow when available."
+          },
+          "safari_ios": {
+            "version_added": "13.4",
+            "partial_implementation": true,
+            "notes": "Implementation seems somewhat buggy. More information will follow when available."
+          },
+          "samsunginternet_android": {
+            "version_added": false
+          },
+          "webview_android": {
+            "version_added": false
+          }
+        },
+        "status": {
+          "experimental": true,
+          "standard_track": true,
+          "deprecated": false
+        }
+      }
+    },
+    "iterationcomposite_option": {
+      "__compat": {
+        "description": "<code>iterationComposite</code> option",
+        "support": {
+          "chrome": {
+            "version_added": false
+          },
+          "chrome_android": {
+            "version_added": false
+          },
+          "edge": {
+            "version_added": false
+          },
+          "firefox": [
+            {
+              "version_added": "80"
+            },
+            {
+              "version_added": "63",
+              "version_removed": "79",
+              "flags": [
+                {
+                  "type": "preference",
+                  "name": "dom.animations-api.compositing.enabled"
+                }
+              ]
+            }
+          ],
+          "firefox_android": {
+            "version_added": "63",
+            "version_removed": "79",
+            "flags": [
+              {
+                "type": "preference",
+                "name": "dom.animations-api.compositing.enabled"
+              }
+            ]
+          },
+          "ie": {
+            "version_added": false
+          },
+          "opera": {
+            "version_added": false
+          },
+          "opera_android": {
+            "version_added": false
+          },
+          "safari": {
+            "version_added": false
+          },
+          "safari_ios": {
+            "version_added": false
+          },
+          "samsunginternet_android": {
+            "version_added": false
+          },
+          "webview_android": {
+            "version_added": false
+          }
+        },
+        "status": {
+          "experimental": true,
+          "standard_track": true,
+          "deprecated": false
+        }
+      }
+    },
+    "pseudoElement_option": {
+      "__compat": {
+        "description": "<code>pseudoElement</code> option",
+        "support": {
+          "chrome": {
+            "version_added": "81",
+            "partial_implementation": true,
+            "notes": "A valid animation object is returned but the targeted pseudoelement is not visually animated.",
+            "flags": [
+              {
+                "type": "preference",
+                "name": "Experimental Web Platform Features"
+              }
+            ]
+          },
+          "chrome_android": {
+            "version_added": "81",
+            "partial_implementation": true,
+            "notes": "A valid animation object is returned but the targeted pseudoelement is not visually animated.",
+            "flags": [
+              {
+                "type": "preference",
+                "name": "Experimental Web Platform Features"
+              }
+            ]
+          },
+          "edge": {
+            "version_added": "81",
+            "partial_implementation": true,
+            "notes": "A valid animation object is returned but the targeted pseudoelement is not visually animated.",
+            "flags": [
+              {
+                "type": "preference",
+                "name": "Experimental Web Platform Features"
+              }
+            ]
+          },
+          "firefox": {
+            "version_added": "75"
+          },
+          "firefox_android": {
+            "version_added": false
+          },
+          "ie": {
+            "version_added": false
+          },
+          "opera": {
+            "version_added": "68",
+            "partial_implementation": true,
+            "notes": "A valid animation object is returned but the targeted pseudoelement is not visually animated.",
+            "flags": [
+              {
+                "type": "preference",
+                "name": "Experimental Web Platform Features"
+              }
+            ]
+          },
+          "opera_android": {
+            "version_added": false
+          },
+          "safari": {
+            "version_added": false
+          },
+          "safari_ios": {
+            "version_added": false
+          },
+          "samsunginternet_android": {
+            "version_added": false
+          },
+          "webview_android": {
+            "version_added": false
+          }
+        },
+        "status": {
+          "experimental": true,
+          "standard_track": true,
+          "deprecated": false
+        }
+      }
+    }
+  },
+  "polyfilled": {
+    "android": "<53",
+    "chrome": "* - 38",
+    "edge": "<79",
+    "firefox": "27 - 50",
+    "ie": "10 - *",
+    "opera": "11.6 - 42",
+    "safari": "9 - *",
+    "ios_saf": "7.1 - *"
+  },
+  "native": {
+    "android": {
+      "version_added": "37"
+    },
+    "chrome": {
+      "version_added": "36"
+    },
+    "edge": {
+      "version_added": "79"
+    },
+    "firefox": {
+      "version_added": "48"
+    },
+    "ie": {
+      "version_added": false
+    },
+    "opera": {
+      "version_added": "23"
+    },
+    "safari": [
+      {
+        "version_added": "13.1"
+      },
+      {
+        "version_added": true,
+        "flags": [
+          {
+            "type": "preference",
+            "name": "Web Animations"
+          },
+          {
+            "type": "preference",
+            "name": "CSS Animations via Web Animations"
+          }
+        ]
+      }
+    ],
+    "ios_saf": {
+      "version_added": "13.4"
+    }
+  },
+  "polyfillio": {
+    "aliases": [
+      "Element.prototype.animate"
+    ],
+    "dependencies": [],
+    "license": "Apache-2.0",
+    "spec": "https://w3c.github.io/web-animations/",
+    "repo": "https://github.com/web-animations/web-animations-js",
+    "docs": "https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API",
+    "browsers": {
+      "edge": "<79",
+      "edge_mob": "*",
+      "ie": "10 - *",
+      "ie_mob": "10 - *",
+      "firefox": "27 - 50",
+      "opera": "11.6 - 42",
+      "safari": "9 - *",
+      "chrome": "* - 38",
+      "ios_saf": "7.1 - *",
+      "firefox_mob": "27 - 50",
+      "android": "<53"
+    },
+    "install": {
+      "module": "web-animations-js",
+      "paths": [
+        "web-animations.min.js"
+      ]
+    },
+    "detectSource": "\"function\"==typeof document.head.animate\n",
+    "baseDir": "WebAnimations",
+    "hasTests": false,
+    "isTestable": true,
+    "isPublic": true,
+    "size": 47131
+  }
+}

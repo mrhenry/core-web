@@ -1,0 +1,123 @@
+{
+  "name": "Window.devicePixelRatio",
+  "polyfillName": "devicePixelRatio",
+  "coreWeb": {
+    "name": "devicePixelRatio",
+    "deps": [],
+    "browsers": {
+      "safari": "4 - 9.1",
+      "ie": "6 - 10",
+      "firefox": "<=17",
+      "ios_saf": "<9.3"
+    },
+    "engines": {
+      "WebKit": "522.11 - 601.5.17",
+      "Trident": "4.0 - 6.0",
+      "Gecko": "1.7 - 17"
+    },
+    "size": 24,
+    "hasCustomMatcher": false,
+    "isAlias": false,
+    "providedByCoreWeb": false
+  },
+  "mdn": {
+    "__compat": {
+      "mdn_url": "https://developer.mozilla.org/docs/Web/API/Window/devicePixelRatio",
+      "support": {
+        "chrome": {
+          "version_added": "1"
+        },
+        "chrome_android": {
+          "version_added": "18"
+        },
+        "edge": {
+          "version_added": "12"
+        },
+        "firefox": {
+          "version_added": "18"
+        },
+        "firefox_android": {
+          "version_added": "18"
+        },
+        "ie": {
+          "version_added": "11"
+        },
+        "opera": {
+          "version_added": "11.1"
+        },
+        "opera_android": {
+          "version_added": "11.1"
+        },
+        "safari": {
+          "version_added": "3"
+        },
+        "safari_ios": {
+          "version_added": "1"
+        },
+        "samsunginternet_android": {
+          "version_added": "1.0"
+        },
+        "webview_android": {
+          "version_added": "1"
+        }
+      },
+      "status": {
+        "experimental": false,
+        "standard_track": true,
+        "deprecated": false
+      }
+    }
+  },
+  "polyfilled": {
+    "firefox": "<=17",
+    "ie": "6 - 10",
+    "safari": "4 - 9.1",
+    "ios_saf": "<9.3"
+  },
+  "native": {
+    "android": {
+      "version_added": "1"
+    },
+    "chrome": {
+      "version_added": "1"
+    },
+    "edge": {
+      "version_added": "12"
+    },
+    "firefox": {
+      "version_added": "18"
+    },
+    "ie": {
+      "version_added": "11"
+    },
+    "opera": {
+      "version_added": "11.1"
+    },
+    "safari": {
+      "version_added": "3"
+    },
+    "ios_saf": {
+      "version_added": "1"
+    }
+  },
+  "polyfillio": {
+    "spec": "http://dev.w3.org/csswg/cssom-view/#dom-window-devicepixelratio",
+    "docs": "https://developer.mozilla.org/en-US/docs/Web/API/Window/devicePixelRatio",
+    "notes": [
+      "This polyfill just sets `devicePixelRatio` to 1 without attempting to measure it.",
+      "Older versions of Firefox are known to incorrectly alter the DPR on user zoom, but we don't (currently) correct for this"
+    ],
+    "browsers": {
+      "safari": "4 - 9.1",
+      "ie": "6 - 10",
+      "firefox": "<=17",
+      "ios_saf": "<9.3"
+    },
+    "detectSource": "\"devicePixelRatio\"in self\n",
+    "baseDir": "devicePixelRatio",
+    "hasTests": false,
+    "isTestable": true,
+    "isPublic": true,
+    "size": 24
+  }
+}
