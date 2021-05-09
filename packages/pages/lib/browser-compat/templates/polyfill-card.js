@@ -22,7 +22,7 @@ module.exports = function polyfillCardHTML(assetMap, feature, sitemap) {
 	<meta property="og:url" content="https://core-web.mrhenry.studio${sitemap[feature.name].toLowerCase()}">
 	<meta property="og:image:width" content="1200">
 	<meta property="og:image:height" content="630">
-	<meta property="og:image" content="https://core-web.mrhenry.studio${sitemap[feature.name]}og-image.jpg">
+	<meta property="og:image" content="https://core-web.mrhenry.studio${sitemap[feature.name].toLowerCase()}og-image.jpg">
 	<meta property="og:site_name" content="core-web">
 	<meta property="og:description" content="Polyfill for ${cleanName(feature.name)}">
 	<meta name="twitter:card" content="summary_large_image">
