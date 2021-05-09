@@ -59,6 +59,10 @@ function generate(assetMap) {
 		{
 			title: 'roadmap to v1',
 			url: '/#roadmap'
+		},
+		{
+			title: 'polyfills',
+			url: '/polyfills/'
 		}
 	])}
 

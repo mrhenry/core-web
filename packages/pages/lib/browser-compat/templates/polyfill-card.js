@@ -10,48 +10,64 @@ module.exports = function polyfillCardHTML(assetMap, feature, sitemap) {
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-	<title>${dotsZeroWidthSpace(feature.name)} | core-web</title>
-	<meta name="description" content="Polyfill for ${feature.name}">
+	<title>${dotsZeroWidthSpace(cleanName(feature.name))} | core-web</title>
+	<meta name="description" content="Polyfill for ${cleanName(feature.name)}">
 	<meta name="author" content="Mr. Henry">
 	<meta name="publisher" content="Mr. Henry">
 	<meta name="copyright" content="Mr. Henry">
 	<meta name="robots" content="index,follow">
 	<meta name="distribution" content="Global">
 	<meta property="og:type" content="website">
-	<meta property="og:title" content="${dotsZeroWidthSpace(feature.name)} | core-web">
-	<meta property="og:url" content="https://core-web.mrhenry.studio${sitemap[feature.name]}">
+	<meta property="og:title" content="${dotsZeroWidthSpace(cleanName(feature.name))} | core-web">
+	<meta property="og:url" content="https://core-web.mrhenry.studio${sitemap[feature.name].toLowerCase()}">
 	<meta property="og:image:width" content="1200">
 	<meta property="og:image:height" content="630">
 	<meta property="og:image" content="https://core-web.mrhenry.studio${sitemap[feature.name]}og-image.jpg">
 	<meta property="og:site_name" content="core-web">
-	<meta property="og:description" content="Polyfill for ${feature.name}">
+	<meta property="og:description" content="Polyfill for ${cleanName(feature.name)}">
 	<meta name="twitter:card" content="summary_large_image">
-	<meta name="twitter:site" content="wearemrhenry">
-	<meta name="twitter:title" content="${dotsZeroWidthSpace(feature.name)} | core-web">
-	<meta name="twitter:description" content="Polyfill for ${feature.name}">
-	<meta name="twitter:image" content="https://core-web.mrhenry.studio${sitemap[feature.name]}og-image.jpg">
+	<meta name="twitter:site" content="@wearemrhenry">
+	<meta name="twitter:title" content="${dotsZeroWidthSpace(cleanName(feature.name))} | core-web">
+	<meta name="twitter:description" content="Polyfill for ${cleanName(feature.name)}">
+	<meta name="twitter:image" content="https://core-web.mrhenry.studio${sitemap[feature.name].toLowerCase()}og-image.jpg">
 
 	<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🕸</text></svg>">
 	${indexCss(assetMap)}
 </head>
 <body>
-	<main id="main-content">
-		<div class="wrapper">
-			<div class="site-header">
-				<a
-					class="logo"
-					href="/"
-				>
-					core-web
-				</a>
-			</div>
-		</div>
+	<a
+		class="skip-to-main-content-link"
+		href="#main-content"
+	>
+		Skip to main content
+	</a>
 
+	<div class="wrapper">
+		<div class="site-header">
+			<a
+				class="logo"
+				href="/"
+			>
+				core-web
+			</a>
+
+			<nav class="navigation">
+				<ul class="navigation__list">
+					<li class="navigation__list-item"><a href="/#what" class="navigation__link">what</a></li>
+					<li class="navigation__list-item"><a href="/#why" class="navigation__link">why</a></li>
+					<li class="navigation__list-item"><a href="/#roadmap" class="navigation__link">roadmap to v1</a></li>
+					<li class="navigation__list-item"><a href="/polyfills/" class="navigation__link">polyfills</a></li>
+				</ul>
+			</nav>
+		</div>
+	</div>
+
+	<main id="main-content">
 		<div class="section">
 			<div class="wrapper">
-				<h2>
-					${dotsWBR(feature.name)} <span style="font-family: monospace; font-size: 0.8em;">polyfill</span>
-				</h2>
+				<h1>
+					${dotsWBR(cleanName(feature.name))} <span style="font-family: monospace; font-size: 0.8em;">polyfill</span>
+				</h1>
 			</div>
 		</div>
 
@@ -99,14 +115,14 @@ function dependencies(feature, sitemap) {
 		if (sitemap && sitemap[dep]) {
 			return html`
 		<li>
-			<a href="${sitemap[dep]}">${dotsWBR(dep)}</a>
+			<a href="${sitemap[dep].toLowerCase()}">${dotsWBR(cleanName(dep))}</a>
 		</li>
 	`;
 		}
 
 		return html`
 		<li>
-			${dep}
+			${dotsWBR(cleanName(dep))}
 		</li>
 	`;
 	});
@@ -118,9 +134,9 @@ function dependencies(feature, sitemap) {
 	return html`
 	<div class="section">
 		<div class="wrapper">
-			<h3>
-				Dependencies
-			</h3>
+			<h2>
+				dependencies
+			</h2>
 
 			<ul>
 				${list.join('')}
@@ -180,9 +196,9 @@ function links(feature) {
 	return html`
 	<div class="section">
 		<div class="wrapper">
-			<h3>
-				Links
-			</h3>
+			<h2>
+				links
+			</h2>
 
 			<ul>
 				${list.join('')}
@@ -222,9 +238,9 @@ function notes(feature) {
 	return html`
 	<div class="section">
 		<div class="wrapper">
-			<h3>
-				Notes
-			</h3>
+			<h2>
+				notes
+			</h2>
 
 			<ul>
 				${list.join('')}
@@ -302,9 +318,9 @@ function browsers(feature) {
 	return html`
 	<div class="section">
 		<div class="wrapper">
-			<h3>
-				Browsers
-			</h3>
+			<h2>
+				browsers
+			</h2>
 
 			<ul>
 				${list.join('')}
@@ -312,4 +328,17 @@ function browsers(feature) {
 		</div>
 	</div>
 	`;
+}
+
+function cleanName(str) {
+	let out = str;
+	if (out.indexOf('Console.') === 0) {
+		out = out.replace('Console.', 'console.');
+	}
+
+	if (out.indexOf('Performance.') === 0) {
+		out = out.replace('Performance.', 'performance.');
+	}
+
+	return out;
 }
