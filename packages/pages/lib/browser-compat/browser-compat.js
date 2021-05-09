@@ -9,7 +9,8 @@ const pageHTML = require('./templates/page');
 const polyfillCardHTML = require('./templates/polyfill-card');
 const { browsersCoreWebToMDN, coreWebBrowsers } = require('./browsers');
 const polyfillLibrary = require('polyfill-library');
-const polyfillCardOgImage = require('./templates/polyfill-card-og-image');
+const { polyfillCardOGImage, allPolyfillsCardOGImage } = require('./templates/polyfill-card-og-image');
+const allPolyfillsHTML = require('./templates/polyfills');
 
 module.exports = generate;
 
@@ -46,30 +47,46 @@ async function generate(assetMap) {
 		return 0;
 	});
 
+	const allPolyfills = [];
 	for (const feature of compatArray) {
 		for (const entry of feature.data) {
-			if (!fs.existsSync(path.join(__dirname, '../../dist/polyfills/', entry.name ))) {
-				fs.mkdirSync(path.join(__dirname, '../../dist/polyfills/', entry.name), {
+			if (entry.name.indexOf('Intl') > -1) {
+				continue;
+			}
+
+			allPolyfills.push(entry);
+			if (!fs.existsSync(path.join(__dirname, '../../dist/polyfills/', entry.name.toLowerCase() ))) {
+				fs.mkdirSync(path.join(__dirname, '../../dist/polyfills/', entry.name.toLowerCase()), {
 					recursive: true
 				});
 			}
 
 			fs.writeFileSync(
-				path.join(__dirname, '../../dist/polyfills/', entry.name, 'index.json'),
+				path.join(__dirname, '../../dist/polyfills/', entry.name.toLowerCase(), 'index.json'),
 				JSON.stringify(entry, null, 2)
 			);
 
 			fs.writeFileSync(
-				path.join(__dirname, '../../dist/polyfills/', entry.name, 'index.html'),
+				path.join(__dirname, '../../dist/polyfills/', entry.name.toLowerCase(), 'index.html'),
 				polyfillCardHTML(assetMap, entry, sitemap)
 			);
 
 			fs.writeFileSync(
-				path.join(__dirname, '../../dist/polyfills/', entry.name, 'og-image.jpg'),
-				await polyfillCardOgImage(entry)
+				path.join(__dirname, '../../dist/polyfills/', entry.name.toLowerCase(), 'og-image.jpg'),
+				await polyfillCardOGImage(entry)
 			);
 		}
 	}
+
+	fs.writeFileSync(
+		path.join(__dirname, '../../dist/polyfills/index.html'),
+		allPolyfillsHTML(assetMap, allPolyfills, sitemap)
+	);
+
+	fs.writeFileSync(
+		path.join(__dirname, '../../dist/polyfills/og-image.jpg'),
+		await allPolyfillsCardOGImage()
+	);
 
 	let tables = '';
 	compatArray.forEach((feature) => {
@@ -401,6 +418,6 @@ function mapMainFeatureBuiltin(compat, featureName, polyfillName, feature) {
 }
 
 function toTitleCase(str) {
-	return str.replace(/\w\S*/g, function(txt){return txt.charAt(0).toUpperCase() + txt.substr(1);});
+	return str.replace(/\w\S*/g, function (txt) { return txt.charAt(0).toUpperCase() + txt.substr(1); });
 };
 
