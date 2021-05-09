@@ -16,11 +16,11 @@ module.exports = {
 };
 
 async function polyfillCardOGImage(feature) {
-	const canvas = createCanvas(1200, 630);
+	const canvas = createCanvas(1200, 628);
 	const ctx = canvas.getContext('2d');
 
 	ctx.fillStyle = '#ffd41b';
-	ctx.fillRect(0, 0, 1200, 630);
+	ctx.fillRect(0, 0, 1200, 628);
 
 	ctx.strokeStyle = '#000';
 	ctx.fillStyle = '#000';
@@ -32,17 +32,17 @@ async function polyfillCardOGImage(feature) {
 	ctx.fillText('polyfill', 75, 225);
 
 	ctx.font = '50px monospace';
-	ctx.fillText('core-web', 75, 540);
+	ctx.fillText('core-web', 75, 538);
 
 	ctx.font = '50px monospace';
 	if (feature.coreWeb.size < 1024) {
 		const kbSize = `${feature.coreWeb.size}b`;
 		const kbSizeWidth = ctx.measureText(kbSize).width;
-		ctx.fillText(kbSize, 1200 - (75 + kbSizeWidth), 540);
+		ctx.fillText(kbSize, 1200 - (75 + kbSizeWidth), 538);
 	} else {
 		const kbSize = `${Math.round(feature.coreWeb.size / 1024)}kb`;
 		const kbSizeWidth = ctx.measureText(kbSize).width;
-		ctx.fillText(kbSize, 1200 - (75 + kbSizeWidth), 540);
+		ctx.fillText(kbSize, 1200 - (75 + kbSizeWidth), 538);
 	}
 
 	const logoImage = await logoLoader();
@@ -52,13 +52,13 @@ async function polyfillCardOGImage(feature) {
 }
 
 async function allPolyfillsCardOGImage() {
-	const canvas = createCanvas(1200, 630);
+	const canvas = createCanvas(1200, 628);
 	const ctx = canvas.getContext('2d');
 
 	const title = 'All polyfills'
 
 	ctx.fillStyle = '#ffd41b';
-	ctx.fillRect(0, 0, 1200, 630);
+	ctx.fillRect(0, 0, 1200, 628);
 
 	ctx.strokeStyle = '#000';
 	ctx.fillStyle = '#000';
@@ -68,7 +68,7 @@ async function allPolyfillsCardOGImage() {
 	ctx.fillText(title, 75, 125, 900);
 
 	ctx.font = '50px monospace';
-	ctx.fillText('core-web', 75, 540);
+	ctx.fillText('core-web', 75, 538);
 
 	const logoImage = await logoLoader();
 	ctx.drawImage(logoImage, 1200 - (75 + 80), 75, 80, 80);
