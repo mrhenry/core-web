@@ -68,7 +68,9 @@ module.exports = function allPolyfillsHTML(assetMap, features, sitemap) {
 					All polyfills
 				</h1>
 
-				${allPolyfills(features, sitemap)}
+				<div class="polyfill-info">
+					${allPolyfills(features, sitemap)}
+				</div>
 			</div>
 		</div>
 	</main>
@@ -115,7 +117,7 @@ function allPolyfills(features, sitemap) {
 	});
 
 	return html`
-	<ul>
+	<ul class="polyfill-info__list">
 		${list.join('')}
 	</ul>
 	`;

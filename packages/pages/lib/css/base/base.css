@@ -85,8 +85,14 @@ td+td {
 	text-align: center;
 }
 
-li:not([class]):not(:last-child):not(:only-child) {
-	margin-bottom: 0.5rem;
+li:not([class]) {
+	padding-bottom: 0.625rem;
+	padding-top: 0.625rem;
+}
+
+li:not([class]) a {
+	padding-bottom: 0.625rem;
+	padding-top: 0.625rem;
 }
 
 a:not([class]) {
