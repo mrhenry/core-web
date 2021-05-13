@@ -1,6 +1,6 @@
 :root {
-	--color-background: azure;
-	--color-foreground: navy;
+	--color-background: #ffdc45;
+	--color-foreground: black;
 }
 
 @media (prefers-color-scheme: dark) {

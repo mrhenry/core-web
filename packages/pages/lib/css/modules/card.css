@@ -1,5 +1,5 @@
 .card {
-	border-radius: 4px;
+	border-radius: 0.5rem;
 	box-sizing: border-box;
 	color: currentColor;
 	overflow: hidden;
@@ -8,11 +8,10 @@
 }
 
 .card::before {
-	background-color: currentColor;
+	background-color: #fff;
 	content: '';
 	height: 100%;
 	left: 0;
-	opacity: 0.1;
 	position: absolute;
 	top: 0;
 	width: 100%;
