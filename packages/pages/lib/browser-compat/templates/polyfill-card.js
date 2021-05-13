@@ -71,13 +71,15 @@ module.exports = function polyfillCardHTML(assetMap, feature, sitemap) {
 			</div>
 		</div>
 
-		${browsers(feature)}
+		<div class="polyfill-info">
+			${browsers(feature)}
 
-		${links(feature)}
+			${links(feature)}
 
-		${notes(feature)}
+			${notes(feature)}
 
-		${dependencies(feature, sitemap)}
+			${dependencies(feature, sitemap)}
+		</div>
 	</main>
 
 	${siteFooter()}
@@ -138,7 +140,7 @@ function dependencies(feature, sitemap) {
 				dependencies
 			</h2>
 
-			<ul>
+			<ul class="polyfill-info__list">
 				${list.join('')}
 			</ul>
 		</div>
@@ -200,7 +202,7 @@ function links(feature) {
 				links
 			</h2>
 
-			<ul>
+			<ul class="polyfill-info__list">
 				${list.join('')}
 			</ul>
 		</div>
@@ -242,7 +244,7 @@ function notes(feature) {
 				notes
 			</h2>
 
-			<ul>
+			<ul class="polyfill-info__list">
 				${list.join('')}
 			</ul>
 		</div>
@@ -322,7 +324,7 @@ function browsers(feature) {
 				browsers
 			</h2>
 
-			<ul>
+			<ul class="polyfill-info__list">
 				${list.join('')}
 			</ul>
 		</div>
