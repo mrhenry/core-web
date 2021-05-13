@@ -112,12 +112,12 @@
 	}
 }
 
-.polyfill-notification__content > * {
+.polyfill-notification__content>[ua-target] {
 	opacity: 0;
 	transition: opacity 96ms linear;
 }
 
-#show-polyfill-content:checked ~ .polyfill-notification__content > * {
+#show-polyfill-content:checked~.polyfill-notification__content>[ua-target] {
 	opacity: 1;
 	transition: opacity 96ms linear 672ms;
 }
