@@ -34,14 +34,14 @@
 }
 
 .milestone__icon::before {
-	background-color: white;
+	background-color: var(--color-card-background);
 	content: '';
 	height: 3rem;
 	width: 3rem;
 }
 
 .milestone__icon::after {
-	border: 3px dotted currentColor;
+	border: 3px dotted var(--color-foreground);
 	content: '';
 	height: 2.625rem;
 	width: 2.625rem;
@@ -86,7 +86,7 @@
 }
 
 .milestone__description::before {
-	background-color: white;
+	background-color: var(--color-card-background);
 	content: '';
 	height: 100%;
 	left: 0;

@@ -1,11 +1,13 @@
 :root {
 	--color-background: #ffdc45;
 	--color-foreground: black;
+	--color-card-background: white;
 }
 
 @media (prefers-color-scheme: dark) {
 	:root {
 		--color-background: #222;
 		--color-foreground: white;
+		--color-card-background: black;
 	}
 }
