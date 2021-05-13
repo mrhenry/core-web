@@ -24,7 +24,7 @@
   },
   "dependencies": {
     "@babel/core": "^7.14.2",
-    "@babel/preset-env": "^7.14.1",
+    "@babel/preset-env": "^7.14.2",
     "@mdn/browser-compat-data": "^3.3.3",
     "@mrhenry/babel-plugin-core-web": "^0.4.8",
     "@mrhenry/core-web": "^0.4.8",
