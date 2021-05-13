@@ -10,7 +10,7 @@
   },
   "devDependencies": {
     "@babel/core": "^7.14.2",
-    "@babel/preset-env": "^7.14.1",
+    "@babel/preset-env": "^7.14.2",
     "@mrhenry/babel-plugin-core-web": "^0.4.8",
     "@mrhenry/core-web": "^0.4.8",
     "babel-loader": "^8.2.2",
