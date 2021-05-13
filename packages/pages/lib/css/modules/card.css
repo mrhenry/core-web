@@ -8,7 +8,7 @@
 }
 
 .card::before {
-	background-color: #fff;
+	background-color: var(--color-card-background);
 	content: '';
 	height: 100%;
 	left: 0;
