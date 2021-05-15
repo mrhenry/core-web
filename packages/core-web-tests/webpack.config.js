@@ -99,6 +99,18 @@ function configBuilder(opts) {
 										debug: false,
 									}
 								]
+							],
+							presets: [
+								[
+									'@babel/preset-env',
+									{
+										corejs: '^3.6.3',
+										targets: {
+											browsers: opts.coreJsBrowsers
+										},
+										useBuiltIns: 'usage'
+									}
+								]
 							]
 						}
 					}
