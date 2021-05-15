@@ -6,13 +6,10 @@ import * as path from "path";
 const coreWebDir = path.resolve(__dirname, "../../core-web");
 const modulesDir = path.resolve(__dirname, "../../core-web/modules");
 const helpersDir = path.resolve(__dirname, "../../core-web/helpers");
-const matchersDir = path.resolve(
-	__dirname,
-	"../../babel-plugin-core-web/matchers"
-);
 
 import { generateWebComponents } from "./generate-webcomponents";
 import { browsersToEngines } from "./browsers-to-engines/browsers-to-engines";
+import { generateMappings } from './generate-mappings';
 
 genAll();
 
@@ -31,7 +28,7 @@ async function genAll() {
 
 	fs.mkdirSync(helpersDir);
 
-	const mapping: Array<Feature> = [];
+	let mapping: Array<Feature> = [];
 	const aliases: Array<FeatureAlias> = [];
 
 	const features = await polyfillLibrary.listAllPolyfills();
@@ -52,18 +49,6 @@ async function genAll() {
 		fs.writeFileSync(filename, await gen(feature, mapping, aliases), {
 			encoding: "utf-8"
 		});
-	}
-
-	const matchers = new Set(fs.readdirSync(matchersDir,).filter((n: string) => {
-		return n.endsWith(".js") && !n.startsWith(".");
-	}).map((n: string) => {
-		return n.replace(/\.js$/, "");
-	}));
-
-	for (let spec of mapping) {
-		if (matchers.has(spec.name)) {
-			spec.hasCustomMatcher = true;
-		}
 	}
 
 	// webcomponents
@@ -91,7 +76,6 @@ async function genAll() {
 			isAlias: true,
 			name: entrypoint,
 			size: 0,
-			hasCustomMatcher: false,
 			providedByCoreWeb: false,
 		});
 	}
@@ -132,6 +116,8 @@ async function genAll() {
 		path.join(coreWebDir, "__engines.js"),
 		`export const engines = ${JSON.stringify(knownEngines, undefined, "  ")}`
 	);
+
+	generateMappings(mapping);
 }
 
 async function gen(feature: string, mapping: Array<Feature>, aliases: Array<FeatureAlias>) {
@@ -147,7 +133,6 @@ async function gen(feature: string, mapping: Array<Feature>, aliases: Array<Feat
 			browsers: meta.browsers,
 			engines: browsersToEngines(meta.browsers),
 			size: meta.size,
-			hasCustomMatcher: false,
 			isAlias: false,
 			providedByCoreWeb: false,
 		});
@@ -228,7 +213,7 @@ function providedByBabel(f: string): boolean {
 
 function providedByCoreWeb(f: string): boolean {
 	const p = /^(HTMLTemplateElement)($|\.)/;
-	return p.test(f) || f.endsWith(".@@iterator");
+	return p.test(f);
 }
 
 function normalizeHelperName(name: string): string | boolean {

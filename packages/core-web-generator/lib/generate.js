@@ -7,9 +7,9 @@ const path = require("path");
 const coreWebDir = path.resolve(__dirname, "../../core-web");
 const modulesDir = path.resolve(__dirname, "../../core-web/modules");
 const helpersDir = path.resolve(__dirname, "../../core-web/helpers");
-const matchersDir = path.resolve(__dirname, "../../babel-plugin-core-web/matchers");
 const generate_webcomponents_1 = require("./generate-webcomponents");
 const browsers_to_engines_1 = require("./browsers-to-engines/browsers-to-engines");
+const generate_mappings_1 = require("./generate-mappings");
 genAll();
 async function genAll() {
     fs.rmSync(modulesDir, {
@@ -22,7 +22,7 @@ async function genAll() {
         force: true,
     });
     fs.mkdirSync(helpersDir);
-    const mapping = [];
+    let mapping = [];
     const aliases = [];
     const features = await polyfillLibrary.listAllPolyfills();
     for (const feature of features) {
@@ -39,16 +39,6 @@ async function genAll() {
         fs.writeFileSync(filename, await gen(feature, mapping, aliases), {
             encoding: "utf-8"
         });
-    }
-    const matchers = new Set(fs.readdirSync(matchersDir).filter((n) => {
-        return n.endsWith(".js") && !n.startsWith(".");
-    }).map((n) => {
-        return n.replace(/\.js$/, "");
-    }));
-    for (let spec of mapping) {
-        if (matchers.has(spec.name)) {
-            spec.hasCustomMatcher = true;
-        }
     }
     // webcomponents
     await generate_webcomponents_1.generateWebComponents(mapping);
@@ -72,7 +62,6 @@ async function genAll() {
             isAlias: true,
             name: entrypoint,
             size: 0,
-            hasCustomMatcher: false,
             providedByCoreWeb: false,
         });
     }
@@ -97,6 +86,7 @@ async function genAll() {
     });
     knownEngines.sort();
     fs.writeFileSync(path.join(coreWebDir, "__engines.js"), `export const engines = ${JSON.stringify(knownEngines, undefined, "  ")}`);
+    generate_mappings_1.generateMappings(mapping);
 }
 async function gen(feature, mapping, aliases) {
     const meta = await polyfillLibrary.describePolyfill(feature);
@@ -110,7 +100,6 @@ async function gen(feature, mapping, aliases) {
             browsers: meta.browsers,
             engines: browsers_to_engines_1.browsersToEngines(meta.browsers),
             size: meta.size,
-            hasCustomMatcher: false,
             isAlias: false,
             providedByCoreWeb: false,
         });
@@ -174,7 +163,7 @@ function providedByBabel(f) {
 }
 function providedByCoreWeb(f) {
     const p = /^(HTMLTemplateElement)($|\.)/;
-    return p.test(f) || f.endsWith(".@@iterator");
+    return p.test(f);
 }
 function normalizeHelperName(name) {
     if (name === "_mutation" || name === "_DOMTokenList") {
