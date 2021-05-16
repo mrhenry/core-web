@@ -34,9 +34,11 @@ module.exports = function (_, opts) {
 			},
 			CallExpression(path, state) {
 				injector.handleCallExpression(path, state);
+				injector.handleCallExpressionStringLiterals(path, state);
 			},
 			NewExpression(path, state) {
 				injector.handleNewExpression(path, state);
+				injector.handleNewExpressionStringLiterals(path, state);
 			},
 			Program: {
 				exit(path, state) {

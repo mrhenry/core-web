@@ -8,8 +8,12 @@ const memberExpressionMatcher = require("./matchers/__member_expression_matcher"
 const memberExpressionMatcherMap = require("./matchers/__member_expression_matcher_map.json");
 const callExpressionMatcher = require("./matchers/__call_expression_matcher");
 const callExpressionMatcherMap = require("./matchers/__call_expression_matcher_map.json");
+const callExpressionMatcherStringLiterals = require("./matchers/__call_expression_matcher_string_literals");
+const callExpressionMatcherStringLiteralsMap = require("./matchers/__call_expression_matcher_string_literals_map.json");
 const newExpressionMatcher = require("./matchers/__new_expression_matcher");
 const newExpressionMatcherMap = require("./matchers/__new_expression_matcher_map.json");
+const newExpressionMatcherStringLiterals = require("./matchers/__new_expression_matcher_string_literals");
+const newExpressionMatcherStringLiteralsMap = require("./matchers/__new_expression_matcher_string_literals_map.json");
 
 class Injector {
 	constructor(features, opts = {}) {
@@ -69,87 +73,35 @@ class Injector {
 
 	handleIdentifier(path, state) {
 		const matchers = identifierMatcher(path.node, identifierMatcherMap);
-		if (!matchers) {
-			return;
-		}
-
-		for (const x of matchers) {
-			if (!this.featureSet.has(x.feature)) {
-				continue;
-			}
-
-			if (this.importSet.has(x.feature)) {
-				continue;
-			}
-
-			if (this.aliasSet.has(x.feature)) {
-				continue;
-			}
-
-			const _state = {};
-			const matched = matchNode(x.matcher, path.node, _state);
-			if (matched) {
-				this._addPolyfill(x.feature);
-			}
-		}
+		this._handleGeneric(path, state, matchers);
 	}
 
 	handleMemberExpression(path, state) {
 		const matchers = memberExpressionMatcher(path.node, memberExpressionMatcherMap);
-		if (!matchers) {
-			return;
-		}
-
-		for (const x of matchers) {
-			if (!this.featureSet.has(x.feature)) {
-				continue;
-			}
-
-			if (this.importSet.has(x.feature)) {
-				continue;
-			}
-
-			if (this.aliasSet.has(x.feature)) {
-				continue;
-			}
-
-			const _state = {};
-			const matched = matchNode(x.matcher, path.node, _state);
-			if (matched) {
-				this._addPolyfill(x.feature);
-			}
-		}
+		this._handleGeneric(path, state, matchers);
 	}
 
 	handleCallExpression(path, state) {
 		const matchers = callExpressionMatcher(path.node, callExpressionMatcherMap);
-		if (!matchers) {
-			return;
-		}
+		this._handleGeneric(path, state, matchers);
+	}
 
-		for (const x of matchers) {
-			if (!this.featureSet.has(x.feature)) {
-				continue;
-			}
-
-			if (this.importSet.has(x.feature)) {
-				continue;
-			}
-
-			if (this.aliasSet.has(x.feature)) {
-				continue;
-			}
-
-			const _state = {};
-			const matched = matchNode(x.matcher, path.node, _state);
-			if (matched) {
-				this._addPolyfill(x.feature);
-			}
-		}
+		handleCallExpressionStringLiterals(path, state) {
+		const matchers = callExpressionMatcherStringLiterals(path.node, callExpressionMatcherStringLiteralsMap);
+		this._handleGeneric(path, state, matchers);
 	}
 
 	handleNewExpression(path, state) {
 		const matchers = newExpressionMatcher(path.node, newExpressionMatcherMap);
+		this._handleGeneric(path, state, matchers);
+	}
+
+	handleNewExpressionStringLiterals(path, state) {
+		const matchers = newExpressionMatcherStringLiterals(path.node, newExpressionMatcherStringLiteralsMap);
+		this._handleGeneric(path, state, matchers);
+	}
+
+	_handleGeneric(path, state, matchers) {
 		if (!matchers) {
 			return;
 		}
@@ -172,12 +124,6 @@ class Injector {
 			if (matched) {
 				this._addPolyfill(x.feature);
 			}
-		}
-	}
-
-	handleGeneric(path, state) {
-		for (const m of this.matchers) {
-			m(path, state);
 		}
 	}
 

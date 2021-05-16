@@ -23,7 +23,6 @@ function customMatcherSources() {
         '~shadydom': [
             "ShadyDOM",
             "shadowRoot",
-            "$_instance.attachShadow()",
             "$_instance.attachShadow($1)",
         ],
         '~viewport': [
@@ -35,11 +34,13 @@ function customMatcherSources() {
             "scrollY",
         ],
         'atob': [
-            "btoa",
-            "atob",
+            "btoa($1)",
+            "atob($1)",
         ],
         'Blob': [
             'Blob',
+            'new Blob($1)',
+            'new Blob($1, $2)',
             'BlobBuilder',
             'URL.createObjectURL($1)',
             'URL.revokeObjectURL($1)',
@@ -88,13 +89,11 @@ function customMatcherSources() {
 function generateMappings(featureMapping) {
     const intlLocaleRegExp = /^Intl\.~locale\.(.*?)$/;
     const intlSubFeatureRegExp = /^Intl\.([a-zA-Z]+)\.~locale\.(.*?)$/;
-    const first2charsFromIdentifier = {};
     const identifierMatchers = {};
-    const first2charsFromIdentifierInMemberExpression = {};
     const memberExpressionMatchers = {};
-    const first5charsStringLiteralsInCallExpression = {};
+    const callExpressionMatchersWithStringLiterals = {};
     const callExpressionMatchers = {};
-    const first5charsStringLiteralsInNewExpression = {};
+    const newExpressionMatchersWithStringLiterals = {};
     const newExpressionMatchers = {};
     const customMatchers = customMatcherSources();
     featureMapping.forEach((feature) => {
@@ -157,7 +156,6 @@ function generateMappings(featureMapping) {
             }
             try {
                 const parsed = parser.parseExpression(candidate);
-                setNodeIsVariable(parsed);
                 if (parsed.type !== 'CallExpression' &&
                     parsed.type !== 'MemberExpression' &&
                     parsed.type !== 'Identifier' &&
@@ -165,10 +163,13 @@ function generateMappings(featureMapping) {
                     console.log('unknown parsed type', parsed.type, feature.name);
                     return;
                 }
+                setNodeIsVariable(parsed);
+                if (parsed.isVariable === true) {
+                    console.log('root as variable is not allowed', parsed.type, feature.name);
+                    return;
+                }
                 switch (parsed.type) {
                     case 'Identifier':
-                        first2charsFromIdentifier[(parsed.name).slice(0, 2)] = first2charsFromIdentifier[(parsed.name).slice(0, 2)] || 0;
-                        first2charsFromIdentifier[(parsed.name).slice(0, 2)]++;
                         identifierMatchers[(parsed.name).slice(0, 2)] = identifierMatchers[(parsed.name).slice(0, 2)] || [];
                         identifierMatchers[(parsed.name).slice(0, 2)].push({
                             matcher: parsed,
@@ -180,8 +181,6 @@ function generateMappings(featureMapping) {
                         if (!parsed.property || !property.name) {
                             throw new Error('expected MemberExpression to have property.name, got : ' + JSON.stringify(parsed));
                         }
-                        first2charsFromIdentifierInMemberExpression[(property.name).slice(0, 2)] = first2charsFromIdentifierInMemberExpression[(property.name).slice(0, 2)] || 0;
-                        first2charsFromIdentifierInMemberExpression[(property.name).slice(0, 2)]++;
                         memberExpressionMatchers[(property.name).slice(0, 2)] = memberExpressionMatchers[(property.name).slice(0, 2)] || [];
                         memberExpressionMatchers[(property.name).slice(0, 2)].push({
                             matcher: parsed,
@@ -189,32 +188,74 @@ function generateMappings(featureMapping) {
                         });
                         break;
                     case 'CallExpression':
-                        const callCallee = parsed.callee;
-                        if (callCallee.property) {
-                            firstStringLiteralFromIntlArguments(parsed.arguments).forEach((arg) => {
-                                first5charsStringLiteralsInCallExpression[(arg.value).slice(0, 5)] = first5charsStringLiteralsInCallExpression[(arg.value).slice(0, 5)] || 0;
-                                first5charsStringLiteralsInCallExpression[(arg.value).slice(0, 5)]++;
-                                callExpressionMatchers[(arg.value).slice(0, 5)] = callExpressionMatchers[(arg.value).slice(0, 5)] || [];
-                                callExpressionMatchers[(arg.value).slice(0, 5)].push({
+                        const callArgumentStringLiterals = stringLiteralsFromArguments(parsed.arguments);
+                        if (callArgumentStringLiterals && callArgumentStringLiterals.length > 0) {
+                            callArgumentStringLiterals.forEach((arg) => {
+                                callExpressionMatchersWithStringLiterals[(arg.value).slice(0, 5)] = callExpressionMatchersWithStringLiterals[(arg.value).slice(0, 5)] || [];
+                                callExpressionMatchersWithStringLiterals[(arg.value).slice(0, 5)].push({
                                     matcher: parsed,
                                     feature: feature.name,
                                 });
                             });
                         }
                         else {
-                            throw new Error('expected CallExpression to have "callee.property", got : ' + JSON.stringify(parsed));
+                            if (parsed.callee.type === 'MemberExpression') {
+                                const property = parsed.callee.property;
+                                if (!property || !property.name) {
+                                    throw new Error('expected CallExpression.callee to have property.name, got : ' + JSON.stringify(parsed));
+                                }
+                                callExpressionMatchers[(property.name).slice(0, 2)] = callExpressionMatchers[(property.name).slice(0, 2)] || [];
+                                callExpressionMatchers[(property.name).slice(0, 2)].push({
+                                    matcher: parsed,
+                                    feature: feature.name,
+                                });
+                            }
+                            if (parsed.callee.type === 'Identifier') {
+                                if (!parsed.callee.name) {
+                                    throw new Error('expected CallExpression.callee to have name, got : ' + JSON.stringify(parsed));
+                                }
+                                callExpressionMatchers[(parsed.callee.name).slice(0, 2)] = callExpressionMatchers[(parsed.callee.name).slice(0, 2)] || [];
+                                callExpressionMatchers[(parsed.callee.name).slice(0, 2)].push({
+                                    matcher: parsed,
+                                    feature: feature.name,
+                                });
+                            }
                         }
                         break;
                     case 'NewExpression':
-                        firstStringLiteralFromIntlArguments(parsed.arguments).forEach((arg) => {
-                            first5charsStringLiteralsInNewExpression[(arg.value).slice(0, 5)] = first5charsStringLiteralsInNewExpression[(arg.value).slice(0, 5)] || 0;
-                            first5charsStringLiteralsInNewExpression[(arg.value).slice(0, 5)]++;
-                            newExpressionMatchers[(arg.value).slice(0, 5)] = newExpressionMatchers[(arg.value).slice(0, 5)] || [];
-                            newExpressionMatchers[(arg.value).slice(0, 5)].push({
-                                matcher: parsed,
-                                feature: feature.name,
+                        const newArgumentStringLiterals = stringLiteralsFromArguments(parsed.arguments);
+                        if (newArgumentStringLiterals && newArgumentStringLiterals.length > 0) {
+                            newArgumentStringLiterals.forEach((arg) => {
+                                newExpressionMatchersWithStringLiterals[(arg.value).slice(0, 5)] = newExpressionMatchersWithStringLiterals[(arg.value).slice(0, 5)] || [];
+                                newExpressionMatchersWithStringLiterals[(arg.value).slice(0, 5)].push({
+                                    matcher: parsed,
+                                    feature: feature.name,
+                                });
                             });
-                        });
+                        }
+                        else {
+                            if (parsed.callee.type === 'MemberExpression') {
+                                const property = parsed.callee.property;
+                                if (!property || !property.name) {
+                                    throw new Error('expected CallExpression.callee to have property.name, got : ' + JSON.stringify(parsed));
+                                }
+                                newExpressionMatchers[(property.name).slice(0, 2)] = newExpressionMatchers[(property.name).slice(0, 2)] || [];
+                                newExpressionMatchers[(property.name).slice(0, 2)].push({
+                                    matcher: parsed,
+                                    feature: feature.name,
+                                });
+                            }
+                            if (parsed.callee.type === 'Identifier') {
+                                if (!parsed.callee.name) {
+                                    throw new Error('expected CallExpression.callee to have name, got : ' + JSON.stringify(parsed));
+                                }
+                                newExpressionMatchers[(parsed.callee.name).slice(0, 2)] = newExpressionMatchers[(parsed.callee.name).slice(0, 2)] || [];
+                                newExpressionMatchers[(parsed.callee.name).slice(0, 2)].push({
+                                    matcher: parsed,
+                                    feature: feature.name,
+                                });
+                            }
+                        }
                         break;
                     default:
                         break;
@@ -226,17 +267,21 @@ function generateMappings(featureMapping) {
             }
         });
     });
-    fs.writeFileSync(path.join(coreWebBabelPluginDir, 'lib', 'matchers', "__identifier_matcher.js"), generateIdentifierMatcher(Object.keys(first2charsFromIdentifier)));
+    fs.writeFileSync(path.join(coreWebBabelPluginDir, 'lib', 'matchers', "__identifier_matcher.js"), generateIdentifierMatcher());
     fs.writeFileSync(path.join(coreWebBabelPluginDir, 'lib', 'matchers', "__identifier_matcher_map.json"), JSON.stringify(identifierMatchers, matcherAST_JSONReplacer));
-    fs.writeFileSync(path.join(coreWebBabelPluginDir, 'lib', 'matchers', "__member_expression_matcher.js"), generateMemberExpressionMatcher(Object.keys(first2charsFromIdentifierInMemberExpression)));
+    fs.writeFileSync(path.join(coreWebBabelPluginDir, 'lib', 'matchers', "__member_expression_matcher.js"), generateMemberExpressionMatcher());
     fs.writeFileSync(path.join(coreWebBabelPluginDir, 'lib', 'matchers', "__member_expression_matcher_map.json"), JSON.stringify(memberExpressionMatchers, matcherAST_JSONReplacer));
-    fs.writeFileSync(path.join(coreWebBabelPluginDir, 'lib', 'matchers', "__call_expression_matcher.js"), generateCallExpressionMatcher(Object.keys(first5charsStringLiteralsInCallExpression)));
+    fs.writeFileSync(path.join(coreWebBabelPluginDir, 'lib', 'matchers', "__call_expression_matcher_string_literals.js"), generateCallExpressionMatcherWithStringLiterals());
+    fs.writeFileSync(path.join(coreWebBabelPluginDir, 'lib', 'matchers', "__call_expression_matcher_string_literals_map.json"), JSON.stringify(callExpressionMatchersWithStringLiterals, matcherAST_JSONReplacer));
     fs.writeFileSync(path.join(coreWebBabelPluginDir, 'lib', 'matchers', "__call_expression_matcher_map.json"), JSON.stringify(callExpressionMatchers, matcherAST_JSONReplacer));
-    fs.writeFileSync(path.join(coreWebBabelPluginDir, 'lib', 'matchers', "__new_expression_matcher.js"), generateNewExpressionMatcher(Object.keys(first5charsStringLiteralsInNewExpression)));
+    fs.writeFileSync(path.join(coreWebBabelPluginDir, 'lib', 'matchers', "__call_expression_matcher.js"), generateCallExpressionMatcher());
+    fs.writeFileSync(path.join(coreWebBabelPluginDir, 'lib', 'matchers', "__new_expression_matcher_string_literals.js"), generateNewExpressionMatcherWithStringLiterals());
+    fs.writeFileSync(path.join(coreWebBabelPluginDir, 'lib', 'matchers', "__new_expression_matcher_string_literals_map.json"), JSON.stringify(newExpressionMatchersWithStringLiterals, matcherAST_JSONReplacer));
+    fs.writeFileSync(path.join(coreWebBabelPluginDir, 'lib', 'matchers', "__new_expression_matcher.js"), generateNewExpressionMatcher());
     fs.writeFileSync(path.join(coreWebBabelPluginDir, 'lib', 'matchers', "__new_expression_matcher_map.json"), JSON.stringify(newExpressionMatchers, matcherAST_JSONReplacer));
 }
 exports.generateMappings = generateMappings;
-function firstStringLiteralFromIntlArguments(args) {
+function stringLiteralsFromArguments(args) {
     if (!args) {
         return [];
     }
@@ -260,24 +305,27 @@ function firstStringLiteralFromIntlArguments(args) {
         return el;
     });
 }
-function generateIdentifierMatcher(first2Chars) {
-    const cases = first2Chars.map((chars) => {
-        return `
-		case '${chars}':
-			return matcherMap['${chars}'];
-`;
-    });
+function generateIdentifierMatcher() {
     return `module.exports = function identifierMatcher(identifier, matcherMap) {
-	switch ((identifier.name).slice(0, 2)) {
-		${cases.join('\n')}
-
-		default:
-			return null;
+	if (!identifier.name) {
+		return null;
 	}
+
+	return matcherMap[(identifier.name).slice(0, 2)]
 }`;
 }
-function generateFirstStringLiteralFromIntlArguments() {
-    return `function firstStringLiteralFromIntlArguments(args) {
+function generateMemberExpressionMatcher() {
+    return `module.exports = function memberExpressionMatcher(memberExpression, matcherMap) {
+	if (!memberExpression.property || !memberExpression.property.name) {
+		return null;
+	}
+
+	return matcherMap[(memberExpression.property.name).slice(0, 2)];
+}
+`;
+}
+function generateStringLiteralsFromArguments() {
+    return `function stringLiteralsFromArguments(args) {
 	if (!args) {
 		return [];
 	}
@@ -295,6 +343,10 @@ function generateFirstStringLiteralFromIntlArguments() {
 		return [];
 	}
 
+	if (!firstArg.elements || !Array.isArray(firstArg.elements)) {
+		return [];
+	}
+
 	return firstArg.elements.filter((el) => {
 		if (!el) {
 			return false;
@@ -304,78 +356,79 @@ function generateFirstStringLiteralFromIntlArguments() {
 	});
 }`;
 }
-function generateMemberExpressionMatcher(first2Chars) {
-    const cases = first2Chars.map((chars) => {
-        return `
-		case '${chars}':
-			return matcherMap['${chars}'];
-`;
-    });
-    return `module.exports = function memberExpressionMatcher(memberExpression, matcherMap) {
-	if (!memberExpression.property || !memberExpression.property.name) {
-		return null;
-	}
-
-	switch ((memberExpression.property.name).slice(0, 2)) {
-		${cases.join('\n')}
-
-		default:
-			return null;
-	}
-}
-`;
-}
-function generateCallExpressionMatcher(first2Chars) {
-    const cases = first2Chars.map((chars) => {
-        return `
-		case '${chars}':
-			return matcherMap['${chars}'];
-`;
-    });
-    return `module.exports = function callExpressionMatcher(callExpression, matcherMap) {
+function generateCallExpressionMatcherWithStringLiterals() {
+    return `module.exports = function callExpressionMatcherWithStringLiterals(callExpression, matcherMap) {
 	if (!callExpression.arguments) {
 		return null;
 	}
 
-	return firstStringLiteralFromIntlArguments(callExpression.arguments).flatMap((arg) => {
-		switch ((arg.value).slice(0, 5)) {
-		${cases.join('\n')}
-
-		default:
-			return null;
-		}
+	return stringLiteralsFromArguments(callExpression.arguments).flatMap((arg) => {
+		return matcherMap[(arg.value).slice(0, 5)];
 	}).filter((matcher) => {
 		return !!matcher;	
 	});
 }
 
-${generateFirstStringLiteralFromIntlArguments()}`;
+${generateStringLiteralsFromArguments()}`;
 }
-function generateNewExpressionMatcher(first2Chars) {
-    const cases = first2Chars.map((chars) => {
-        return `
-		case '${chars}':
-			return matcherMap['${chars}'];
-`;
-    });
+function generateCallExpressionMatcher() {
+    return `module.exports = function callExpressionMatcher(callExpression, matcherMap) {
+	if (callExpression.callee.type === 'MemberExpression') {
+		const property = callExpression.callee.property;
+		if (!property || !property.name) {
+			return null;
+		}
+
+		return matcherMap[(property.name).slice(0, 2)];
+	}
+
+	if (callExpression.callee.type === 'Identifier') {
+		if (!callExpression.callee.name) {
+			return null;
+		}
+
+		return matcherMap[(callExpression.callee.name).slice(0, 2)];
+	}
+
+	return null;
+}`;
+}
+function generateNewExpressionMatcherWithStringLiterals() {
     return `module.exports = function newExpressionMatcher(newExpression, matcherMap) {
 	if (!newExpression.arguments) {
 		return null;
 	}
 
-	return firstStringLiteralFromIntlArguments(newExpression.arguments).flatMap((arg) => {
-		switch ((arg.value).slice(0, 5)) {
-		${cases.join('\n')}
-
-		default:
-			return null;
-		}
+	return stringLiteralsFromArguments(newExpression.arguments).flatMap((arg) => {
+		return matcherMap[(arg.value).slice(0, 5)];
 	}).filter((matcher) => {
 		return !!matcher;	
 	});
 }
 
-${generateFirstStringLiteralFromIntlArguments()}`;
+${generateStringLiteralsFromArguments()}`;
+}
+function generateNewExpressionMatcher() {
+    return `module.exports = function newExpressionMatcher(newExpression, matcherMap) {
+	if (newExpression.callee.type === 'MemberExpression') {
+		const property = newExpression.callee.property;
+		if (!property || !property.name) {
+			return null;
+		}
+
+		return matcherMap[(property.name).slice(0, 2)];
+	}
+
+	if (newExpression.callee.type === 'Identifier') {
+		if (!newExpression.callee.name) {
+			return null;
+		}
+
+		return matcherMap[(newExpression.callee.name).slice(0, 2)];
+	}
+
+	return null;
+}`;
 }
 function setNodeIsVariable(matcher) {
     traverse_1.default(matcher, {

@@ -27,7 +27,6 @@ function customMatcherSources(): Record<string, Array<string>> {
 		'~shadydom': [
 			"ShadyDOM",
 			"shadowRoot",
-			"$_instance.attachShadow()",
 			"$_instance.attachShadow($1)",
 		],
 
@@ -41,12 +40,14 @@ function customMatcherSources(): Record<string, Array<string>> {
 		],
 
 		'atob': [
-			"btoa",
-			"atob",
+			"btoa($1)",
+			"atob($1)",
 		],
 
 		'Blob': [
 			'Blob',
+			'new Blob($1)',
+			'new Blob($1, $2)',
 			'BlobBuilder',
 			'URL.createObjectURL($1)',
 			'URL.revokeObjectURL($1)',
@@ -104,25 +105,31 @@ export function generateMappings(featureMapping: Array<Feature>): void {
 	const intlLocaleRegExp = /^Intl\.~locale\.(.*?)$/;
 	const intlSubFeatureRegExp = /^Intl\.([a-zA-Z]+)\.~locale\.(.*?)$/;
 
-	const first2charsFromIdentifier: Record<string, number> = {};
 	const identifierMatchers: Record<string, Array<{
 		matcher: any,
 		feature: string
 	}>> = {}
 
-	const first2charsFromIdentifierInMemberExpression: Record<string, number> = {};
 	const memberExpressionMatchers: Record<string, Array<{
 		matcher: any,
 		feature: string
 	}>> = {}
 
-	const first5charsStringLiteralsInCallExpression: Record<string, number> = {};
+	const callExpressionMatchersWithStringLiterals: Record<string, Array<{
+		matcher: any,
+		feature: string
+	}>> = {}
+
 	const callExpressionMatchers: Record<string, Array<{
 		matcher: any,
 		feature: string
 	}>> = {}
 
-	const first5charsStringLiteralsInNewExpression: Record<string, number> = {};
+	const newExpressionMatchersWithStringLiterals: Record<string, Array<{
+		matcher: any,
+		feature: string
+	}>> = {}
+
 	const newExpressionMatchers: Record<string, Array<{
 		matcher: any,
 		feature: string
@@ -194,7 +201,6 @@ export function generateMappings(featureMapping: Array<Feature>): void {
 
 			try {
 				const parsed = parser.parseExpression(candidate);
-				setNodeIsVariable(parsed);
 				if (
 					parsed.type !== 'CallExpression' &&
 					parsed.type !== 'MemberExpression' &&
@@ -206,11 +212,14 @@ export function generateMappings(featureMapping: Array<Feature>): void {
 					return;
 				}
 
+				setNodeIsVariable(parsed);
+				if ((parsed as { isVariable?: boolean }).isVariable === true) {
+					console.log('root as variable is not allowed', parsed.type, feature.name);
+					return;
+				}
+
 				switch (parsed.type) {
 					case 'Identifier':
-						first2charsFromIdentifier[(parsed.name).slice(0, 2)] = first2charsFromIdentifier[(parsed.name).slice(0, 2)] || 0;
-						first2charsFromIdentifier[(parsed.name).slice(0, 2)]++;
-
 						identifierMatchers[(parsed.name).slice(0, 2)] = identifierMatchers[(parsed.name).slice(0, 2)] || [];
 						identifierMatchers[(parsed.name).slice(0, 2)].push({
 							matcher: parsed,
@@ -224,9 +233,6 @@ export function generateMappings(featureMapping: Array<Feature>): void {
 							throw new Error('expected MemberExpression to have property.name, got : ' + JSON.stringify(parsed));
 						}
 
-						first2charsFromIdentifierInMemberExpression[(property.name).slice(0, 2)] = first2charsFromIdentifierInMemberExpression[(property.name).slice(0, 2)] || 0;
-						first2charsFromIdentifierInMemberExpression[(property.name).slice(0, 2)]++;
-
 						memberExpressionMatchers[(property.name).slice(0, 2)] = memberExpressionMatchers[(property.name).slice(0, 2)] || [];
 						memberExpressionMatchers[(property.name).slice(0, 2)].push({
 							matcher: parsed,
@@ -235,38 +241,80 @@ export function generateMappings(featureMapping: Array<Feature>): void {
 						break;
 
 					case 'CallExpression':
-						const callCallee = parsed.callee as {
-							property?: {
-								name: string
-							}
-						};
-						if (callCallee.property) {
-							firstStringLiteralFromIntlArguments(parsed.arguments).forEach((arg) => {
-								first5charsStringLiteralsInCallExpression[(arg.value).slice(0, 5)] = first5charsStringLiteralsInCallExpression[(arg.value).slice(0, 5)] || 0;
-								first5charsStringLiteralsInCallExpression[(arg.value).slice(0, 5)]++;
-
-								callExpressionMatchers[(arg.value).slice(0, 5)] = callExpressionMatchers[(arg.value).slice(0, 5)] || [];
-								callExpressionMatchers[(arg.value).slice(0, 5)].push({
+						const callArgumentStringLiterals = stringLiteralsFromArguments(parsed.arguments);
+						if (callArgumentStringLiterals && callArgumentStringLiterals.length > 0) {
+							callArgumentStringLiterals.forEach((arg) => {
+								callExpressionMatchersWithStringLiterals[(arg.value).slice(0, 5)] = callExpressionMatchersWithStringLiterals[(arg.value).slice(0, 5)] || [];
+								callExpressionMatchersWithStringLiterals[(arg.value).slice(0, 5)].push({
 									matcher: parsed,
 									feature: feature.name,
 								});
 							});
 						} else {
-							throw new Error('expected CallExpression to have "callee.property", got : ' + JSON.stringify(parsed));
+							if (parsed.callee.type === 'MemberExpression') {
+								const property = parsed.callee.property as { name: string };
+								if (!property || !property.name) {
+									throw new Error('expected CallExpression.callee to have property.name, got : ' + JSON.stringify(parsed));
+								}
+
+								callExpressionMatchers[(property.name).slice(0, 2)] = callExpressionMatchers[(property.name).slice(0, 2)] || [];
+								callExpressionMatchers[(property.name).slice(0, 2)].push({
+									matcher: parsed,
+									feature: feature.name,
+								});
+							}
+
+							if (parsed.callee.type === 'Identifier') {
+								if (!parsed.callee.name) {
+									throw new Error('expected CallExpression.callee to have name, got : ' + JSON.stringify(parsed));
+								}
+
+								callExpressionMatchers[(parsed.callee.name).slice(0, 2)] = callExpressionMatchers[(parsed.callee.name).slice(0, 2)] || [];
+								callExpressionMatchers[(parsed.callee.name).slice(0, 2)].push({
+									matcher: parsed,
+									feature: feature.name,
+								});
+							}
 						}
+
 						break;
 
 					case 'NewExpression':
-						firstStringLiteralFromIntlArguments(parsed.arguments).forEach((arg) => {
-							first5charsStringLiteralsInNewExpression[(arg.value).slice(0, 5)] = first5charsStringLiteralsInNewExpression[(arg.value).slice(0, 5)] || 0;
-							first5charsStringLiteralsInNewExpression[(arg.value).slice(0, 5)]++;
-
-							newExpressionMatchers[(arg.value).slice(0, 5)] = newExpressionMatchers[(arg.value).slice(0, 5)] || [];
-							newExpressionMatchers[(arg.value).slice(0, 5)].push({
-								matcher: parsed,
-								feature: feature.name,
+						const newArgumentStringLiterals = stringLiteralsFromArguments(parsed.arguments);
+						if (newArgumentStringLiterals && newArgumentStringLiterals.length > 0) {
+							newArgumentStringLiterals.forEach((arg) => {
+								newExpressionMatchersWithStringLiterals[(arg.value).slice(0, 5)] = newExpressionMatchersWithStringLiterals[(arg.value).slice(0, 5)] || [];
+								newExpressionMatchersWithStringLiterals[(arg.value).slice(0, 5)].push({
+									matcher: parsed,
+									feature: feature.name,
+								});
 							});
-						});
+						} else {
+							if (parsed.callee.type === 'MemberExpression') {
+								const property = parsed.callee.property as { name: string };
+								if (!property || !property.name) {
+									throw new Error('expected CallExpression.callee to have property.name, got : ' + JSON.stringify(parsed));
+								}
+
+								newExpressionMatchers[(property.name).slice(0, 2)] = newExpressionMatchers[(property.name).slice(0, 2)] || [];
+								newExpressionMatchers[(property.name).slice(0, 2)].push({
+									matcher: parsed,
+									feature: feature.name,
+								});
+							}
+
+							if (parsed.callee.type === 'Identifier') {
+								if (!parsed.callee.name) {
+									throw new Error('expected CallExpression.callee to have name, got : ' + JSON.stringify(parsed));
+								}
+
+								newExpressionMatchers[(parsed.callee.name).slice(0, 2)] = newExpressionMatchers[(parsed.callee.name).slice(0, 2)] || [];
+								newExpressionMatchers[(parsed.callee.name).slice(0, 2)].push({
+									matcher: parsed,
+									feature: feature.name,
+								});
+							}
+						}
 						break;
 
 					default:
@@ -281,7 +329,7 @@ export function generateMappings(featureMapping: Array<Feature>): void {
 
 	fs.writeFileSync(
 		path.join(coreWebBabelPluginDir, 'lib', 'matchers', "__identifier_matcher.js"),
-		generateIdentifierMatcher(Object.keys(first2charsFromIdentifier))
+		generateIdentifierMatcher()
 	);
 
 	fs.writeFileSync(
@@ -291,7 +339,7 @@ export function generateMappings(featureMapping: Array<Feature>): void {
 
 	fs.writeFileSync(
 		path.join(coreWebBabelPluginDir, 'lib', 'matchers', "__member_expression_matcher.js"),
-		generateMemberExpressionMatcher(Object.keys(first2charsFromIdentifierInMemberExpression))
+		generateMemberExpressionMatcher()
 	);
 
 	fs.writeFileSync(
@@ -300,8 +348,13 @@ export function generateMappings(featureMapping: Array<Feature>): void {
 	);
 
 	fs.writeFileSync(
-		path.join(coreWebBabelPluginDir, 'lib', 'matchers', "__call_expression_matcher.js"),
-		generateCallExpressionMatcher(Object.keys(first5charsStringLiteralsInCallExpression))
+		path.join(coreWebBabelPluginDir, 'lib', 'matchers', "__call_expression_matcher_string_literals.js"),
+		generateCallExpressionMatcherWithStringLiterals()
+	);
+
+	fs.writeFileSync(
+		path.join(coreWebBabelPluginDir, 'lib', 'matchers', "__call_expression_matcher_string_literals_map.json"),
+		JSON.stringify(callExpressionMatchersWithStringLiterals, matcherAST_JSONReplacer)
 	);
 
 	fs.writeFileSync(
@@ -310,8 +363,23 @@ export function generateMappings(featureMapping: Array<Feature>): void {
 	);
 
 	fs.writeFileSync(
+		path.join(coreWebBabelPluginDir, 'lib', 'matchers', "__call_expression_matcher.js"),
+		generateCallExpressionMatcher()
+	);
+
+	fs.writeFileSync(
+		path.join(coreWebBabelPluginDir, 'lib', 'matchers', "__new_expression_matcher_string_literals.js"),
+		generateNewExpressionMatcherWithStringLiterals()
+	);
+
+	fs.writeFileSync(
+		path.join(coreWebBabelPluginDir, 'lib', 'matchers', "__new_expression_matcher_string_literals_map.json"),
+		JSON.stringify(newExpressionMatchersWithStringLiterals, matcherAST_JSONReplacer)
+	);
+
+	fs.writeFileSync(
 		path.join(coreWebBabelPluginDir, 'lib', 'matchers', "__new_expression_matcher.js"),
-		generateNewExpressionMatcher(Object.keys(first5charsStringLiteralsInNewExpression))
+		generateNewExpressionMatcher()
 	);
 
 	fs.writeFileSync(
@@ -320,7 +388,7 @@ export function generateMappings(featureMapping: Array<Feature>): void {
 	);
 }
 
-function firstStringLiteralFromIntlArguments(args?: Array<Expression | SpreadElement | JSXNamespacedName | ArgumentPlaceholder> | null): Array<StringLiteral> {
+function stringLiteralsFromArguments(args?: Array<Expression | SpreadElement | JSXNamespacedName | ArgumentPlaceholder> | null): Array<StringLiteral> {
 	if (!args) {
 		return [];
 	}
@@ -351,26 +419,29 @@ function firstStringLiteralFromIntlArguments(args?: Array<Expression | SpreadEle
 	});
 }
 
-function generateIdentifierMatcher(first2Chars: Array<string>): string {
-	const cases = first2Chars.map((chars) => {
-		return `
-		case '${chars}':
-			return matcherMap['${chars}'];
-`;
-	});
-
+function generateIdentifierMatcher(): string {
 	return `module.exports = function identifierMatcher(identifier, matcherMap) {
-	switch ((identifier.name).slice(0, 2)) {
-		${cases.join('\n')}
-
-		default:
-			return null;
+	if (!identifier.name) {
+		return null;
 	}
+
+	return matcherMap[(identifier.name).slice(0, 2)]
 }`;
 }
 
-function generateFirstStringLiteralFromIntlArguments(): string {
-	return `function firstStringLiteralFromIntlArguments(args) {
+function generateMemberExpressionMatcher(): string {
+	return `module.exports = function memberExpressionMatcher(memberExpression, matcherMap) {
+	if (!memberExpression.property || !memberExpression.property.name) {
+		return null;
+	}
+
+	return matcherMap[(memberExpression.property.name).slice(0, 2)];
+}
+`;
+}
+
+function generateStringLiteralsFromArguments(): string {
+	return `function stringLiteralsFromArguments(args) {
 	if (!args) {
 		return [];
 	}
@@ -388,6 +459,10 @@ function generateFirstStringLiteralFromIntlArguments(): string {
 		return [];
 	}
 
+	if (!firstArg.elements || !Array.isArray(firstArg.elements)) {
+		return [];
+	}
+
 	return firstArg.elements.filter((el) => {
 		if (!el) {
 			return false;
@@ -398,83 +473,82 @@ function generateFirstStringLiteralFromIntlArguments(): string {
 }`
 }
 
-function generateMemberExpressionMatcher(first2Chars: Array<string>): string {
-	const cases = first2Chars.map((chars) => {
-		return `
-		case '${chars}':
-			return matcherMap['${chars}'];
-`;
-	});
-
-	return `module.exports = function memberExpressionMatcher(memberExpression, matcherMap) {
-	if (!memberExpression.property || !memberExpression.property.name) {
-		return null;
-	}
-
-	switch ((memberExpression.property.name).slice(0, 2)) {
-		${cases.join('\n')}
-
-		default:
-			return null;
-	}
-}
-`;
-}
-
-function generateCallExpressionMatcher(first2Chars: Array<string>): string {
-	const cases = first2Chars.map((chars) => {
-		return `
-		case '${chars}':
-			return matcherMap['${chars}'];
-`;
-	});
-
-	return `module.exports = function callExpressionMatcher(callExpression, matcherMap) {
+function generateCallExpressionMatcherWithStringLiterals(): string {
+	return `module.exports = function callExpressionMatcherWithStringLiterals(callExpression, matcherMap) {
 	if (!callExpression.arguments) {
 		return null;
 	}
 
-	return firstStringLiteralFromIntlArguments(callExpression.arguments).flatMap((arg) => {
-		switch ((arg.value).slice(0, 5)) {
-		${cases.join('\n')}
-
-		default:
-			return null;
-		}
+	return stringLiteralsFromArguments(callExpression.arguments).flatMap((arg) => {
+		return matcherMap[(arg.value).slice(0, 5)];
 	}).filter((matcher) => {
 		return !!matcher;	
 	});
 }
 
-${generateFirstStringLiteralFromIntlArguments()}`;
+${generateStringLiteralsFromArguments()}`;
 }
 
-function generateNewExpressionMatcher(first2Chars: Array<string>): string {
-	const cases = first2Chars.map((chars) => {
-		return `
-		case '${chars}':
-			return matcherMap['${chars}'];
-`;
-	});
+function generateCallExpressionMatcher(): string {
+	return `module.exports = function callExpressionMatcher(callExpression, matcherMap) {
+	if (callExpression.callee.type === 'MemberExpression') {
+		const property = callExpression.callee.property;
+		if (!property || !property.name) {
+			return null;
+		}
 
+		return matcherMap[(property.name).slice(0, 2)];
+	}
+
+	if (callExpression.callee.type === 'Identifier') {
+		if (!callExpression.callee.name) {
+			return null;
+		}
+
+		return matcherMap[(callExpression.callee.name).slice(0, 2)];
+	}
+
+	return null;
+}`
+}
+
+function generateNewExpressionMatcherWithStringLiterals(): string {
 	return `module.exports = function newExpressionMatcher(newExpression, matcherMap) {
 	if (!newExpression.arguments) {
 		return null;
 	}
 
-	return firstStringLiteralFromIntlArguments(newExpression.arguments).flatMap((arg) => {
-		switch ((arg.value).slice(0, 5)) {
-		${cases.join('\n')}
-
-		default:
-			return null;
-		}
+	return stringLiteralsFromArguments(newExpression.arguments).flatMap((arg) => {
+		return matcherMap[(arg.value).slice(0, 5)];
 	}).filter((matcher) => {
 		return !!matcher;	
 	});
 }
 
-${generateFirstStringLiteralFromIntlArguments()}`;
+${generateStringLiteralsFromArguments()}`;
+}
+
+function generateNewExpressionMatcher(): string {
+	return `module.exports = function newExpressionMatcher(newExpression, matcherMap) {
+	if (newExpression.callee.type === 'MemberExpression') {
+		const property = newExpression.callee.property;
+		if (!property || !property.name) {
+			return null;
+		}
+
+		return matcherMap[(property.name).slice(0, 2)];
+	}
+
+	if (newExpression.callee.type === 'Identifier') {
+		if (!newExpression.callee.name) {
+			return null;
+		}
+
+		return matcherMap[(newExpression.callee.name).slice(0, 2)];
+	}
+
+	return null;
+}`
 }
 
 function setNodeIsVariable(matcher: Expression) {
