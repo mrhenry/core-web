@@ -10,6 +10,9 @@ customElements.define('mr-x', class extends HTMLElement { });
 
 console.log(Document);
 
+var query = 'p:last-child';
+document.querySelectorAll(`:scope ${query}`);
+
 // ["@mrhenry/core-web", {
 // 	browsers: {
 // 		// chrome: "71",

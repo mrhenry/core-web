@@ -10,6 +10,7 @@ const helpersDir = path.resolve(__dirname, "../../core-web/helpers");
 const generate_webcomponents_1 = require("./generate-webcomponents");
 const browsers_to_engines_1 = require("./browsers-to-engines/browsers-to-engines");
 const generate_mappings_1 = require("./generate-mappings");
+const generate_element_qsa_scope_1 = require("./generate-element-qsa-scope");
 genAll();
 async function genAll() {
     fs.rmSync(modulesDir, {
@@ -42,6 +43,7 @@ async function genAll() {
     }
     // webcomponents
     await generate_webcomponents_1.generateWebComponents(mapping);
+    await generate_element_qsa_scope_1.generateElementQsaScope(mapping);
     // aliases
     const inversedAliases = {};
     aliases.forEach((alias) => {

@@ -14,6 +14,7 @@ const newExpressionMatcher = require("./matchers/__new_expression_matcher");
 const newExpressionMatcherMap = require("./matchers/__new_expression_matcher_map.json");
 const newExpressionMatcherStringLiterals = require("./matchers/__new_expression_matcher_string_literals");
 const newExpressionMatcherStringLiteralsMap = require("./matchers/__new_expression_matcher_string_literals_map.json");
+const elementQsaScopeMatchers = require("./matchers/element_qsa_scope_matchers.json");
 
 class Injector {
 	constructor(features, opts = {}) {
@@ -86,7 +87,7 @@ class Injector {
 		this._handleGeneric(path, state, matchers);
 	}
 
-		handleCallExpressionStringLiterals(path, state) {
+	handleCallExpressionStringLiterals(path, state) {
 		const matchers = callExpressionMatcherStringLiterals(path.node, callExpressionMatcherStringLiteralsMap);
 		this._handleGeneric(path, state, matchers);
 	}
@@ -99,6 +100,59 @@ class Injector {
 	handleNewExpressionStringLiterals(path, state) {
 		const matchers = newExpressionMatcherStringLiterals(path.node, newExpressionMatcherStringLiteralsMap);
 		this._handleGeneric(path, state, matchers);
+	}
+
+	handleElementQsaScopeCallExpression(path, state) {
+		if (
+			path.node &&
+			path.node.arguments &&
+			path.node.arguments.length > 0 &&
+			path.node.arguments[0].type === 'StringLiteral'
+		) {
+			if (/:scope(?![\w-])/i.test(path.node.arguments[0].value)) {
+				this._handleGeneric(
+					{
+						node: path.node.callee
+					},
+					state,
+					elementQsaScopeMatchers
+				);
+			}
+		}
+
+		if (
+			path.node &&
+			path.node.arguments &&
+			path.node.arguments.length > 0 &&
+			path.node.arguments[0].type === 'TemplateLiteral' &&
+			path.node.arguments[0].quasis &&
+			path.node.arguments[0].quasis.length > 0
+		) {
+			const quasisElWithScope = path.node.arguments[0].quasis.find((x) => {
+				if (!x.value) {
+					return false;
+				}
+
+				if (!x.value.cooked) {
+					return false;
+				}
+
+				if (/:scope(?![\w-])/i.test(x.value.cooked)) {
+					return true;
+				}
+
+				return false;
+			});
+			if (!!quasisElWithScope) {
+				this._handleGeneric(
+					{
+						node: path.node.callee
+					},
+					state,
+					elementQsaScopeMatchers
+				);
+			}
+		}
 	}
 
 	_handleGeneric(path, state, matchers) {

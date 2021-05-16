@@ -10,6 +10,7 @@ const helpersDir = path.resolve(__dirname, "../../core-web/helpers");
 import { generateWebComponents } from "./generate-webcomponents";
 import { browsersToEngines } from "./browsers-to-engines/browsers-to-engines";
 import { generateMappings } from './generate-mappings';
+import { generateElementQsaScope } from './generate-element-qsa-scope';
 
 genAll();
 
@@ -53,6 +54,7 @@ async function genAll() {
 
 	// webcomponents
 	await generateWebComponents(mapping);
+	await generateElementQsaScope(mapping);
 
 	// aliases
 	const inversedAliases: Record<string, Array<string>> = {};
