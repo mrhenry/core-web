@@ -107,10 +107,10 @@ function generate(assetMap) {
 			>
 				<span ua-target="2020">0 polyfills</span>
 				<span ua-target="2018">1 polyfill</span>
-				<span ua-target="2016">3 polyfill</span>
-				<span ua-target="2014">6 polyfill</span>
-				<span ua-target="2013">8 polyfills</span>
-				<span ua-target="2011">9 polyfills</span>
+				<span ua-target="2016">1 polyfill</span>
+				<span ua-target="2014">3 polyfills</span>
+				<span ua-target="2013">4 polyfills</span>
+				<span ua-target="2011">5 polyfills</span>
 				<span ua-target="fallback">no javascript</span>
 			</label>
 
@@ -130,38 +130,25 @@ function generate(assetMap) {
 				])}
 
 				${polyfillNotificationContent('2016', '7', [
-					"DOMTokenList.prototype.forEach",
-					"IntersectionObserver",
-					"NodeList.prototype.forEach",
+					'IntersectionObserver'
 				])}
 
-				${polyfillNotificationContent('2014', '9', [
-					"DOMTokenList",
-					"DOMTokenList.prototype.forEach",
+				${polyfillNotificationContent('2014', '8', [
 					"IntersectionObserver",
-					"NodeList.prototype.forEach",
 					"performance.now",
 					"requestAnimationFrame",
 				])}
 				
-				${polyfillNotificationContent('2013', '13', [
-					"DOMTokenList",
-					"DOMTokenList.prototype.forEach",
-					"Element.prototype.classList",
+				${polyfillNotificationContent('2013', '11', [
 					"Event",
 					"IntersectionObserver",
-					"NodeList.prototype.forEach",
 					"performance.now",
 					"requestAnimationFrame",
 				])}
 
-				${polyfillNotificationContent('2011', '13', [
-					"DOMTokenList",
-					"DOMTokenList.prototype.forEach",
-					"Element.prototype.classList",
+				${polyfillNotificationContent('2011', '11', [
 					"Event",
 					"IntersectionObserver",
-					"NodeList.prototype.forEach",
 					"Window",
 					"performance.now",
 					"requestAnimationFrame",
