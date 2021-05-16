@@ -229,7 +229,7 @@ async function generateShadyCSS(mapping) {
 }
 async function generateCustomElements(mapping) {
     let src = fs.readFileSync(require.resolve("@webcomponents/custom-elements"), "utf-8");
-    // Reflect.construct is a depedency from core-js needed when Sub/Superclasses are transpiled by Babel.
+    // Reflect.construct is a dependency from core-js needed when Sub/Superclasses are transpiled by Babel.
     // Babel does not detect this correctly.
     // Injecting usage of Reflect.construct fixes this.
     const reflectHack = `;(function(){ try { var _reflectConstructHack = Reflect.construct } catch(err) {} })();\n`;

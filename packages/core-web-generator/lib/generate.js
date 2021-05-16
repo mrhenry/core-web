@@ -52,9 +52,9 @@ async function genAll() {
             inversedAliases[entry].push(alias.name);
         });
     });
-    for (let entrypoint in inversedAliases) {
-        const features = inversedAliases[entrypoint];
-        if (skipAlias(entrypoint)) {
+    for (let entryPoint in inversedAliases) {
+        const features = inversedAliases[entryPoint];
+        if (skipAlias(entryPoint)) {
             continue;
         }
         mapping.push({
@@ -62,12 +62,12 @@ async function genAll() {
             deps: features,
             engines: {},
             isAlias: true,
-            name: entrypoint,
+            name: entryPoint,
             size: 0,
             providedByCoreWeb: false,
         });
     }
-    fs.writeFileSync(path.join(coreWebDir, "__mapping.js"), `export const mapping = ${JSON.stringify(mapping, undefined, "  ")}`);
+    fs.writeFileSync(path.join(coreWebDir, "__mapping.js"), `export const mapping = ${JSON.stringify(mapping)}`);
     let knownBrowsers = [];
     mapping.forEach((feature) => {
         for (const browser in feature.browsers) {
@@ -77,7 +77,7 @@ async function genAll() {
         }
     });
     knownBrowsers.sort();
-    fs.writeFileSync(path.join(coreWebDir, "__browsers.js"), `export const browsers = ${JSON.stringify(knownBrowsers, undefined, "  ")}`);
+    fs.writeFileSync(path.join(coreWebDir, "__browsers.js"), `export const browsers = ${JSON.stringify(knownBrowsers)}`);
     let knownEngines = [];
     mapping.forEach((feature) => {
         for (const engine in feature.engines) {
@@ -87,7 +87,7 @@ async function genAll() {
         }
     });
     knownEngines.sort();
-    fs.writeFileSync(path.join(coreWebDir, "__engines.js"), `export const engines = ${JSON.stringify(knownEngines, undefined, "  ")}`);
+    fs.writeFileSync(path.join(coreWebDir, "__engines.js"), `export const engines = ${JSON.stringify(knownEngines)}`);
     generate_mappings_1.generateMappings(mapping);
 }
 async function gen(feature, mapping, aliases) {
@@ -151,15 +151,15 @@ async function allDependencies(feature) {
             continue;
         }
         dependencies.add(dep);
-        const nestedDepedencies = await allDependencies(dep);
-        nestedDepedencies.forEach(dep2 => {
+        const nestedDependencies = await allDependencies(dep);
+        nestedDependencies.forEach(dep2 => {
             dependencies.add(dep2);
         });
     }
     return dependencies;
 }
 function providedByBabel(f) {
-    const p = /^(_(String|Array)?Iterator|Function|Date|Math|Object|String|Number|(Weak)?(Map|Set)|Symbol|Array|RegExp|Promise|Reflect|URL|URLSeachParams|setTimeout|setInterval|setImmediate|queueMicrotask|DOMTokenList|NodeList)($|\.)/;
+    const p = /^(_(String|Array)?Iterator|Function|Date|Math|Object|String|Number|(Weak)?(Map|Set)|Symbol|Array|RegExp|Promise|Reflect|URL|URLSearchParams|setTimeout|setInterval|setImmediate|queueMicrotask|DOMTokenList|NodeList)($|\.)/;
     const typedArrays = /^(|ArrayBuffer|Int8Array|Uint8Array|Uint8ClampedArray|Int16Array|Uint16Array|Int32Array|Uint32Array|Float32Array|Float64Array)($|\.)/;
     return p.test(f) || typedArrays.test(f) || f.endsWith(".@@iterator");
 }
@@ -179,10 +179,10 @@ function normalizeHelperName(name) {
     }
     return false;
 }
-function skipAlias(aliasEntrypoint) {
+function skipAlias(aliasEntryPoint) {
     let skip = false;
     aliasPrefixesToSkip.forEach((prefix) => {
-        if (aliasEntrypoint.indexOf(prefix) === 0) {
+        if (aliasEntryPoint.indexOf(prefix) === 0) {
             skip = true;
         }
     });

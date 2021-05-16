@@ -65,9 +65,9 @@ async function genAll() {
 		});
 	});
 
-	for (let entrypoint in inversedAliases) {
-		const features = inversedAliases[entrypoint];
-		if (skipAlias(entrypoint)) {
+	for (let entryPoint in inversedAliases) {
+		const features = inversedAliases[entryPoint];
+		if (skipAlias(entryPoint)) {
 			continue;
 		}
 
@@ -76,7 +76,7 @@ async function genAll() {
 			deps: features,
 			engines: {},
 			isAlias: true,
-			name: entrypoint,
+			name: entryPoint,
 			size: 0,
 			providedByCoreWeb: false,
 		});
@@ -84,7 +84,7 @@ async function genAll() {
 
 	fs.writeFileSync(
 		path.join(coreWebDir, "__mapping.js"),
-		`export const mapping = ${JSON.stringify(mapping, undefined, "  ")}`
+		`export const mapping = ${JSON.stringify(mapping)}`
 	);
 
 	let knownBrowsers: Array<string> = [];
@@ -100,7 +100,7 @@ async function genAll() {
 
 	fs.writeFileSync(
 		path.join(coreWebDir, "__browsers.js"),
-		`export const browsers = ${JSON.stringify(knownBrowsers, undefined, "  ")}`
+		`export const browsers = ${JSON.stringify(knownBrowsers)}`
 	);
 
 	let knownEngines: Array<string> = [];
@@ -116,7 +116,7 @@ async function genAll() {
 
 	fs.writeFileSync(
 		path.join(coreWebDir, "__engines.js"),
-		`export const engines = ${JSON.stringify(knownEngines, undefined, "  ")}`
+		`export const engines = ${JSON.stringify(knownEngines)}`
 	);
 
 	generateMappings(mapping);
@@ -198,8 +198,8 @@ async function allDependencies(feature: string): Promise<Set<string>> {
 
 		dependencies.add(dep);
 
-		const nestedDepedencies = await allDependencies(dep);
-		nestedDepedencies.forEach(dep2 => {
+		const nestedDependencies = await allDependencies(dep);
+		nestedDependencies.forEach(dep2 => {
 			dependencies.add(dep2);
 		});
 	}
@@ -208,7 +208,7 @@ async function allDependencies(feature: string): Promise<Set<string>> {
 }
 
 function providedByBabel(f: string): boolean {
-	const p = /^(_(String|Array)?Iterator|Function|Date|Math|Object|String|Number|(Weak)?(Map|Set)|Symbol|Array|RegExp|Promise|Reflect|URL|URLSeachParams|setTimeout|setInterval|setImmediate|queueMicrotask|DOMTokenList|NodeList)($|\.)/;
+	const p = /^(_(String|Array)?Iterator|Function|Date|Math|Object|String|Number|(Weak)?(Map|Set)|Symbol|Array|RegExp|Promise|Reflect|URL|URLSearchParams|setTimeout|setInterval|setImmediate|queueMicrotask|DOMTokenList|NodeList)($|\.)/;
 	const typedArrays = /^(|ArrayBuffer|Int8Array|Uint8Array|Uint8ClampedArray|Int16Array|Uint16Array|Int32Array|Uint32Array|Float32Array|Float64Array)($|\.)/;
 	return p.test(f) || typedArrays.test(f) || f.endsWith(".@@iterator");
 }
@@ -231,10 +231,10 @@ function normalizeHelperName(name: string): string | boolean {
 	return false;
 }
 
-function skipAlias(aliasEntrypoint: string): boolean {
+function skipAlias(aliasEntryPoint: string): boolean {
 	let skip = false;
 	aliasPrefixesToSkip.forEach((prefix) => {
-		if (aliasEntrypoint.indexOf(prefix) === 0) {
+		if (aliasEntryPoint.indexOf(prefix) === 0) {
 			skip = true;
 		}
 	});

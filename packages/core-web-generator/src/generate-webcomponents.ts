@@ -267,7 +267,7 @@ async function generateCustomElements(mapping: Array<Feature>) {
 		"utf-8"
 	);
 
-	// Reflect.construct is a depedency from core-js needed when Sub/Superclasses are transpiled by Babel.
+	// Reflect.construct is a dependency from core-js needed when Sub/Superclasses are transpiled by Babel.
 	// Babel does not detect this correctly.
 	// Injecting usage of Reflect.construct fixes this.
 	const reflectHack = `;(function(){ try { var _reflectConstructHack = Reflect.construct } catch(err) {} })();\n`;
