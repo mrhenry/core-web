@@ -35,7 +35,7 @@ QUnit.module('querySelector', function() {
 		div.className = 'three';
 		
 		const resultA = [];
-		item.querySelectorAll(':scope > .three').forEach((el) => {
+		item.querySelectorAll(':scope > div').forEach((el) => {
 			resultA.push(el);
 		});
 
