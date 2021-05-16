@@ -15,8 +15,11 @@ QUnit.module('querySelector', function() {
 			result.push(el);
 		});
 
-		assert.equal(result[0].className, 'one');
-		assert.equal(result[1].className, 'two');
+		assert.equal(result.length, 2);
+		if (result.length == 2) {
+			assert.equal(result[0].className, 'one');
+			assert.equal(result[1].className, 'two');
+		}
 	});
 
 	QUnit.test('querySelectorAll with :scope', function(assert) {
@@ -35,20 +38,24 @@ QUnit.module('querySelector', function() {
 		div.className = 'three';
 		
 		const resultA = [];
-		item.querySelectorAll(':scope > div').forEach((el) => {
+		item.querySelectorAll(':scope > .three').forEach((el) => {
 			resultA.push(el);
 		});
 
-		assert.equal(resultA[0].className, 'three');
 		assert.equal(resultA.length, 1);
+		if (resultA[0]) {
+			assert.equal(resultA[0].className, 'three');
+		}
 
 		const resultB = [];
 		fixture.querySelectorAll('.three').forEach((el) => {
 			resultB.push(el);
 		});
 
-		assert.equal(resultB[0].className, 'three');
 		assert.equal(resultB.length, 1);
+		if (resultB[0]) {
+			assert.equal(resultB[0].className, 'three');
+		}
 
 		const resultC = [];
 		fixture.querySelectorAll(':scope > .three').forEach((el) => {
@@ -98,7 +105,6 @@ QUnit.module('querySelector', function() {
 		div3.className = 'one delta';
 
 		assert.equal(div2.closest('.one'), div2);
-		assert.equal(div2.closest('.one:not(:scope)'), div1);
-		assert.equal(div3.closest('.one:not(:scope)'), div2);
+		assert.equal(div2.closest('.one:scope'), div2);
 	});
 });
