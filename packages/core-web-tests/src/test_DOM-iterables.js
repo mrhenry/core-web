@@ -1,5 +1,7 @@
 QUnit.module('DOM Iterables', function () {
 	QUnit.test('NodeList iterator', function (assert) {
+		const done = assert.async();
+
 		const fixture = document.getElementById('qunit-fixture');
 
 		const div1 = document.createElement('div');
@@ -30,5 +32,7 @@ QUnit.module('DOM Iterables', function () {
 			assert.equal(resultsB[0], div1);
 			assert.equal(resultsB[1], div2);
 		}
+
+		done();
 	});
 });
