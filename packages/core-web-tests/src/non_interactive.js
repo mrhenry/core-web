@@ -1,5 +1,6 @@
 import './test_AbortController.js';
 import './test_Blob.js';
+import './test_DOM-iterables.js';
 import './test_Element.prototype.classList.js';
 import './test_Intl.DateTimeFormat.js';
 import './test_Intl.RelativeTimeFormat.js';
