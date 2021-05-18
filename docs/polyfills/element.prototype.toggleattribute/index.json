@@ -34,7 +34,6 @@
       "Presto": ">= 1"
     },
     "size": 180,
-    "hasCustomMatcher": false,
     "isAlias": false,
     "providedByCoreWeb": false
   },
