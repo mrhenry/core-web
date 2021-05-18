@@ -15,6 +15,7 @@
       "Trident": "4.0 - 4.0"
     },
     "size": 116,
+    "hasCustomMatcher": false,
     "isAlias": false,
     "providedByCoreWeb": false
   },

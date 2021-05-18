@@ -16,6 +16,7 @@
       "Presto": "2 - 2.2"
     },
     "size": 8020,
+    "hasCustomMatcher": false,
     "isAlias": false,
     "providedByCoreWeb": false
   },

@@ -28,6 +28,7 @@
       "Presto": ">= 1"
     },
     "size": 932,
+    "hasCustomMatcher": false,
     "isAlias": false,
     "providedByCoreWeb": false
   },

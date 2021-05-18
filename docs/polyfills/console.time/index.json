@@ -18,6 +18,7 @@
       "Blink": "28 - 30"
     },
     "size": 28,
+    "hasCustomMatcher": false,
     "isAlias": false,
     "providedByCoreWeb": false
   },

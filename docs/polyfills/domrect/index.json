@@ -37,6 +37,7 @@
       "EdgeHTML": ">= 12"
     },
     "size": 918,
+    "hasCustomMatcher": false,
     "isAlias": false,
     "providedByCoreWeb": false
   },

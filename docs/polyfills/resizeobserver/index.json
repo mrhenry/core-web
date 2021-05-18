@@ -67,6 +67,7 @@
       "WebKit": ">= 85"
     },
     "size": 8513,
+    "hasCustomMatcher": false,
     "isAlias": false,
     "providedByCoreWeb": false
   },

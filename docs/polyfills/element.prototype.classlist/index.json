@@ -31,6 +31,7 @@
       "WebKit": "530.17 - 530.17"
     },
     "size": 800,
+    "hasCustomMatcher": false,
     "isAlias": false,
     "providedByCoreWeb": false
   },

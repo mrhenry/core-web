@@ -26,6 +26,7 @@
     },
     "engines": {},
     "size": 1241,
+    "hasCustomMatcher": false,
     "isAlias": false,
     "providedByCoreWeb": false
   },

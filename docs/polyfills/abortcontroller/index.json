@@ -70,6 +70,7 @@
       "Blink": "28 - 65"
     },
     "size": 9074,
+    "hasCustomMatcher": false,
     "isAlias": false,
     "providedByCoreWeb": false
   },

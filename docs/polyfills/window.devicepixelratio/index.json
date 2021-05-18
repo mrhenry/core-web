@@ -16,6 +16,7 @@
       "Gecko": "1.7 - 17"
     },
     "size": 24,
+    "hasCustomMatcher": false,
     "isAlias": false,
     "providedByCoreWeb": false
   },

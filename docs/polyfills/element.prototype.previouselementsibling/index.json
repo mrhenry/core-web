@@ -24,6 +24,7 @@
       "WebKit": "85 - 525.26"
     },
     "size": 163,
+    "hasCustomMatcher": false,
     "isAlias": false,
     "providedByCoreWeb": false
   },
