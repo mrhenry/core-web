@@ -23,14 +23,14 @@
     "dev-server": "cd ./dist && npx http-server"
   },
   "dependencies": {
-    "@babel/core": "^7.14.2",
+    "@babel/core": "^7.14.3",
     "@babel/preset-env": "^7.14.2",
     "@mdn/browser-compat-data": "^3.3.3",
     "@mrhenry/babel-plugin-core-web": "^0.4.8",
     "@mrhenry/core-web": "^0.4.8",
     "babel-loader": "^8.2.2",
     "browserstack-runner": "^0.9.4",
-    "canvas": "^2.7.0",
+    "canvas": "^2.8.0",
     "core-js": "^3.12.1",
     "cssnano": "^5.0.2",
     "polyfill-library": "^3.105.0",
