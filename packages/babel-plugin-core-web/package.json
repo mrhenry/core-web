@@ -20,7 +20,6 @@
   ],
   "files": [
     "/lib",
-    "/matchers",
     "/LICENSE"
   ],
   "dependencies": {
