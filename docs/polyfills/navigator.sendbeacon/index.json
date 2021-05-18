@@ -50,7 +50,6 @@
       "WebKit": "85 - 604.2.4"
     },
     "size": 413,
-    "hasCustomMatcher": false,
     "isAlias": false,
     "providedByCoreWeb": false
   },

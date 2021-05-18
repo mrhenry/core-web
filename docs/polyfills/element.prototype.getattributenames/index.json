@@ -30,7 +30,6 @@
       "Presto": ">= 1"
     },
     "size": 160,
-    "hasCustomMatcher": false,
     "isAlias": false,
     "providedByCoreWeb": false
   },

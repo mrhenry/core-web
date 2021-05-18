@@ -59,7 +59,6 @@
       "Presto": "1 - 2.10"
     },
     "size": 3492,
-    "hasCustomMatcher": true,
     "isAlias": false,
     "providedByCoreWeb": false
   },

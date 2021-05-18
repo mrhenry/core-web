@@ -48,7 +48,6 @@
       "Presto": ">= 1"
     },
     "size": 225,
-    "hasCustomMatcher": false,
     "isAlias": false,
     "providedByCoreWeb": false
   },
