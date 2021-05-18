@@ -26,8 +26,20 @@ module.exports = function (_, opts) {
 			ImportDeclaration(path, state) {
 				injector.handleImport(path, state);
 			},
-			"Identifier|MemberExpression"(path, state) {
-				injector.handleGeneric(path, state);
+			Identifier(path, state) {
+				injector.handleIdentifier(path, state);
+			},
+			MemberExpression(path, state) {
+				injector.handleMemberExpression(path, state);
+			},
+			CallExpression(path, state) {
+				injector.handleCallExpression(path, state);
+				injector.handleCallExpressionStringLiterals(path, state);
+				// injector.handleElementQsaScopeCallExpression(path, state); // excluded for now
+			},
+			NewExpression(path, state) {
+				injector.handleNewExpression(path, state);
+				injector.handleNewExpressionStringLiterals(path, state);
 			},
 			Program: {
 				exit(path, state) {

@@ -1,8 +1,1 @@
-export const engines = [
-  "Blink",
-  "EdgeHTML",
-  "Gecko",
-  "Presto",
-  "Trident",
-  "WebKit"
-]
+export const engines = ["Blink","EdgeHTML","Gecko","Presto","Trident","WebKit"]

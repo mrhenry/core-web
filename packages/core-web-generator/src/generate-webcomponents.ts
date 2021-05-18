@@ -44,7 +44,6 @@ async function generateTemplate(mapping: Array<Feature>) {
 		],
 		browsers: browsers,
 		engines: browsersToEngines(browsers),
-		hasCustomMatcher: true,
 		size: src.length,
 		isAlias: false,
 		providedByCoreWeb: true,
@@ -92,7 +91,6 @@ async function generateShadyDOM(mapping: Array<Feature>) {
 		],
 		browsers: browsers,
 		engines: browsersToEngines(browsers),
-		hasCustomMatcher: true,
 		size: src.length,
 		isAlias: false,
 		providedByCoreWeb: true,
@@ -165,7 +163,6 @@ async function generateShadyCSS(mapping: Array<Feature>) {
 		],
 		browsers: scopingShimBrowsers,
 		engines: browsersToEngines(scopingShimBrowsers),
-		hasCustomMatcher: true,
 		size: scopingShim.length,
 		isAlias: false,
 		providedByCoreWeb: true,
@@ -210,7 +207,6 @@ async function generateShadyCSS(mapping: Array<Feature>) {
 		],
 		browsers: applyShimBrowsers,
 		engines: browsersToEngines(applyShimBrowsers),
-		hasCustomMatcher: true,
 		size: applyShim.length,
 		isAlias: false,
 		providedByCoreWeb: true,
@@ -259,7 +255,6 @@ async function generateShadyCSS(mapping: Array<Feature>) {
 		],
 		browsers: customStyleInterfaceBrowsers,
 		engines: browsersToEngines(customStyleInterfaceBrowsers),
-		hasCustomMatcher: true,
 		size: customStyleInterface.length,
 		isAlias: false,
 		providedByCoreWeb: true,
@@ -272,7 +267,7 @@ async function generateCustomElements(mapping: Array<Feature>) {
 		"utf-8"
 	);
 
-	// Reflect.construct is a depedency from core-js needed when Sub/Superclasses are transpiled by Babel.
+	// Reflect.construct is a dependency from core-js needed when Sub/Superclasses are transpiled by Babel.
 	// Babel does not detect this correctly.
 	// Injecting usage of Reflect.construct fixes this.
 	const reflectHack = `;(function(){ try { var _reflectConstructHack = Reflect.construct } catch(err) {} })();\n`;
@@ -327,7 +322,6 @@ async function generateCustomElements(mapping: Array<Feature>) {
 		],
 		browsers: browsers,
 		engines: browsersToEngines(browsers),
-		hasCustomMatcher: true,
 		size: src.length,
 		isAlias: false,
 		providedByCoreWeb: true,

@@ -7,9 +7,10 @@ const path = require("path");
 const coreWebDir = path.resolve(__dirname, "../../core-web");
 const modulesDir = path.resolve(__dirname, "../../core-web/modules");
 const helpersDir = path.resolve(__dirname, "../../core-web/helpers");
-const matchersDir = path.resolve(__dirname, "../../babel-plugin-core-web/matchers");
 const generate_webcomponents_1 = require("./generate-webcomponents");
 const browsers_to_engines_1 = require("./browsers-to-engines/browsers-to-engines");
+const generate_mappings_1 = require("./generate-mappings");
+const generate_element_qsa_scope_1 = require("./generate-element-qsa-scope");
 genAll();
 async function genAll() {
     fs.rmSync(modulesDir, {
@@ -22,7 +23,7 @@ async function genAll() {
         force: true,
     });
     fs.mkdirSync(helpersDir);
-    const mapping = [];
+    let mapping = [];
     const aliases = [];
     const features = await polyfillLibrary.listAllPolyfills();
     for (const feature of features) {
@@ -40,18 +41,9 @@ async function genAll() {
             encoding: "utf-8"
         });
     }
-    const matchers = new Set(fs.readdirSync(matchersDir).filter((n) => {
-        return n.endsWith(".js") && !n.startsWith(".");
-    }).map((n) => {
-        return n.replace(/\.js$/, "");
-    }));
-    for (let spec of mapping) {
-        if (matchers.has(spec.name)) {
-            spec.hasCustomMatcher = true;
-        }
-    }
     // webcomponents
     await generate_webcomponents_1.generateWebComponents(mapping);
+    await generate_element_qsa_scope_1.generateElementQsaScope(mapping);
     // aliases
     const inversedAliases = {};
     aliases.forEach((alias) => {
@@ -60,9 +52,9 @@ async function genAll() {
             inversedAliases[entry].push(alias.name);
         });
     });
-    for (let entrypoint in inversedAliases) {
-        const features = inversedAliases[entrypoint];
-        if (skipAlias(entrypoint)) {
+    for (let entryPoint in inversedAliases) {
+        const features = inversedAliases[entryPoint];
+        if (skipAlias(entryPoint)) {
             continue;
         }
         mapping.push({
@@ -70,13 +62,12 @@ async function genAll() {
             deps: features,
             engines: {},
             isAlias: true,
-            name: entrypoint,
+            name: entryPoint,
             size: 0,
-            hasCustomMatcher: false,
             providedByCoreWeb: false,
         });
     }
-    fs.writeFileSync(path.join(coreWebDir, "__mapping.js"), `export const mapping = ${JSON.stringify(mapping, undefined, "  ")}`);
+    fs.writeFileSync(path.join(coreWebDir, "__mapping.js"), `export const mapping = ${JSON.stringify(mapping)}`);
     let knownBrowsers = [];
     mapping.forEach((feature) => {
         for (const browser in feature.browsers) {
@@ -86,7 +77,7 @@ async function genAll() {
         }
     });
     knownBrowsers.sort();
-    fs.writeFileSync(path.join(coreWebDir, "__browsers.js"), `export const browsers = ${JSON.stringify(knownBrowsers, undefined, "  ")}`);
+    fs.writeFileSync(path.join(coreWebDir, "__browsers.js"), `export const browsers = ${JSON.stringify(knownBrowsers)}`);
     let knownEngines = [];
     mapping.forEach((feature) => {
         for (const engine in feature.engines) {
@@ -96,7 +87,8 @@ async function genAll() {
         }
     });
     knownEngines.sort();
-    fs.writeFileSync(path.join(coreWebDir, "__engines.js"), `export const engines = ${JSON.stringify(knownEngines, undefined, "  ")}`);
+    fs.writeFileSync(path.join(coreWebDir, "__engines.js"), `export const engines = ${JSON.stringify(knownEngines)}`);
+    generate_mappings_1.generateMappings(mapping);
 }
 async function gen(feature, mapping, aliases) {
     const meta = await polyfillLibrary.describePolyfill(feature);
@@ -110,7 +102,6 @@ async function gen(feature, mapping, aliases) {
             browsers: meta.browsers,
             engines: browsers_to_engines_1.browsersToEngines(meta.browsers),
             size: meta.size,
-            hasCustomMatcher: false,
             isAlias: false,
             providedByCoreWeb: false,
         });
@@ -160,21 +151,21 @@ async function allDependencies(feature) {
             continue;
         }
         dependencies.add(dep);
-        const nestedDepedencies = await allDependencies(dep);
-        nestedDepedencies.forEach(dep2 => {
+        const nestedDependencies = await allDependencies(dep);
+        nestedDependencies.forEach(dep2 => {
             dependencies.add(dep2);
         });
     }
     return dependencies;
 }
 function providedByBabel(f) {
-    const p = /^(_(String|Array)?Iterator|Function|Date|Math|Object|String|Number|(Weak)?(Map|Set)|Symbol|Array|RegExp|Promise|Reflect|URL|URLSeachParams|setTimeout|setInterval|setImmediate|queueMicrotask|DOMTokenList|NodeList)($|\.)/;
+    const p = /^(_(String|Array)?Iterator|Function|Date|Math|Object|String|Number|(Weak)?(Map|Set)|Symbol|Array|RegExp|Promise|Reflect|URL|URLSearchParams|setTimeout|setInterval|setImmediate|queueMicrotask|DOMTokenList|NodeList)($|\.)/;
     const typedArrays = /^(|ArrayBuffer|Int8Array|Uint8Array|Uint8ClampedArray|Int16Array|Uint16Array|Int32Array|Uint32Array|Float32Array|Float64Array)($|\.)/;
     return p.test(f) || typedArrays.test(f) || f.endsWith(".@@iterator");
 }
 function providedByCoreWeb(f) {
     const p = /^(HTMLTemplateElement)($|\.)/;
-    return p.test(f) || f.endsWith(".@@iterator");
+    return p.test(f);
 }
 function normalizeHelperName(name) {
     if (name === "_mutation" || name === "_DOMTokenList") {
@@ -188,10 +179,10 @@ function normalizeHelperName(name) {
     }
     return false;
 }
-function skipAlias(aliasEntrypoint) {
+function skipAlias(aliasEntryPoint) {
     let skip = false;
     aliasPrefixesToSkip.forEach((prefix) => {
-        if (aliasEntrypoint.indexOf(prefix) === 0) {
+        if (aliasEntryPoint.indexOf(prefix) === 0) {
             skip = true;
         }
     });

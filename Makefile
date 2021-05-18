@@ -1,8 +1,11 @@
 packages := ./ ./packages/babel-plugin-core-web ./packages/core-web ./packages/core-web-example ./packages/core-web-generator ./packages/core-web-tests ./packages/pages ./packages/pages-worker
 
-install:
+node_modules: ./package-lock.json
 	rm -rf ./node_modules
 	npm install
+	touch ./node_modules
+
+install: node_modules
 
 generate: install
 	(cd packages/core-web-generator && npm run build)

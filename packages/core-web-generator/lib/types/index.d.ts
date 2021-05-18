@@ -5,7 +5,6 @@ declare type Feature = {
     deps: Array<string>;
     isAlias: boolean;
     size: number;
-    hasCustomMatcher: boolean;
     providedByCoreWeb: boolean;
 };
 declare type FeatureAlias = {

@@ -1,12 +1,17 @@
-import "@mrhenry/core-web/modules/Intl.~locale.nl-BE";
-import "@mrhenry/core-web/modules/Intl.~locale.nl-NL";
-import "@mrhenry/core-web/modules/Intl.~locale.fr-BE";
-import "@mrhenry/core-web/modules/Intl.~locale.fr-FR";
-
 var event = new Date(Date.UTC(2012, 11, 20, 3, 0, 0));
-console.log(event.toLocaleString('nl-BE', { timeZone: 'UTC' }));
+console.log(event.toLocaleString('es', { timeZone: 'UTC' }));
+console.log(event.toLocaleString(['nl-BE', 'af'], { timeZone: 'UTC' }));
+console.log(event.toLocaleString(['en', 'nl-BE'], { timeZone: 'UTC' }));
 
-customElements.define('mr-x', class extends HTMLElement {});
+const number = 123456.789;
+console.log(new Intl.NumberFormat('es', { style: 'currency', currency: 'EUR' }).format(number));
+
+customElements.define('mr-x', class extends HTMLElement { });
+
+console.log(Document);
+
+var query = 'p:last-child';
+document.querySelectorAll(`:scope ${query}`);
 
 // ["@mrhenry/core-web", {
 // 	browsers: {

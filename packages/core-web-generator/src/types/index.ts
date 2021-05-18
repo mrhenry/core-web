@@ -13,8 +13,6 @@ type Feature = {
 	isAlias: boolean
 	// Size of the feature code.
 	size: number
-	// If the feature has a custom matcher for babel.
-	hasCustomMatcher: boolean
 	// If the polyfill was added in core-web and not upstream in polyfill-library.
 	providedByCoreWeb: boolean
 }

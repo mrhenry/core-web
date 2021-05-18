@@ -6,13 +6,11 @@ import * as path from "path";
 const coreWebDir = path.resolve(__dirname, "../../core-web");
 const modulesDir = path.resolve(__dirname, "../../core-web/modules");
 const helpersDir = path.resolve(__dirname, "../../core-web/helpers");
-const matchersDir = path.resolve(
-	__dirname,
-	"../../babel-plugin-core-web/matchers"
-);
 
 import { generateWebComponents } from "./generate-webcomponents";
 import { browsersToEngines } from "./browsers-to-engines/browsers-to-engines";
+import { generateMappings } from './generate-mappings';
+import { generateElementQsaScope } from './generate-element-qsa-scope';
 
 genAll();
 
@@ -31,7 +29,7 @@ async function genAll() {
 
 	fs.mkdirSync(helpersDir);
 
-	const mapping: Array<Feature> = [];
+	let mapping: Array<Feature> = [];
 	const aliases: Array<FeatureAlias> = [];
 
 	const features = await polyfillLibrary.listAllPolyfills();
@@ -54,20 +52,9 @@ async function genAll() {
 		});
 	}
 
-	const matchers = new Set(fs.readdirSync(matchersDir,).filter((n: string) => {
-		return n.endsWith(".js") && !n.startsWith(".");
-	}).map((n: string) => {
-		return n.replace(/\.js$/, "");
-	}));
-
-	for (let spec of mapping) {
-		if (matchers.has(spec.name)) {
-			spec.hasCustomMatcher = true;
-		}
-	}
-
 	// webcomponents
 	await generateWebComponents(mapping);
+	await generateElementQsaScope(mapping);
 
 	// aliases
 	const inversedAliases: Record<string, Array<string>> = {};
@@ -78,9 +65,9 @@ async function genAll() {
 		});
 	});
 
-	for (let entrypoint in inversedAliases) {
-		const features = inversedAliases[entrypoint];
-		if (skipAlias(entrypoint)) {
+	for (let entryPoint in inversedAliases) {
+		const features = inversedAliases[entryPoint];
+		if (skipAlias(entryPoint)) {
 			continue;
 		}
 
@@ -89,16 +76,15 @@ async function genAll() {
 			deps: features,
 			engines: {},
 			isAlias: true,
-			name: entrypoint,
+			name: entryPoint,
 			size: 0,
-			hasCustomMatcher: false,
 			providedByCoreWeb: false,
 		});
 	}
 
 	fs.writeFileSync(
 		path.join(coreWebDir, "__mapping.js"),
-		`export const mapping = ${JSON.stringify(mapping, undefined, "  ")}`
+		`export const mapping = ${JSON.stringify(mapping)}`
 	);
 
 	let knownBrowsers: Array<string> = [];
@@ -114,7 +100,7 @@ async function genAll() {
 
 	fs.writeFileSync(
 		path.join(coreWebDir, "__browsers.js"),
-		`export const browsers = ${JSON.stringify(knownBrowsers, undefined, "  ")}`
+		`export const browsers = ${JSON.stringify(knownBrowsers)}`
 	);
 
 	let knownEngines: Array<string> = [];
@@ -130,8 +116,10 @@ async function genAll() {
 
 	fs.writeFileSync(
 		path.join(coreWebDir, "__engines.js"),
-		`export const engines = ${JSON.stringify(knownEngines, undefined, "  ")}`
+		`export const engines = ${JSON.stringify(knownEngines)}`
 	);
+
+	generateMappings(mapping);
 }
 
 async function gen(feature: string, mapping: Array<Feature>, aliases: Array<FeatureAlias>) {
@@ -147,7 +135,6 @@ async function gen(feature: string, mapping: Array<Feature>, aliases: Array<Feat
 			browsers: meta.browsers,
 			engines: browsersToEngines(meta.browsers),
 			size: meta.size,
-			hasCustomMatcher: false,
 			isAlias: false,
 			providedByCoreWeb: false,
 		});
@@ -211,8 +198,8 @@ async function allDependencies(feature: string): Promise<Set<string>> {
 
 		dependencies.add(dep);
 
-		const nestedDepedencies = await allDependencies(dep);
-		nestedDepedencies.forEach(dep2 => {
+		const nestedDependencies = await allDependencies(dep);
+		nestedDependencies.forEach(dep2 => {
 			dependencies.add(dep2);
 		});
 	}
@@ -221,14 +208,14 @@ async function allDependencies(feature: string): Promise<Set<string>> {
 }
 
 function providedByBabel(f: string): boolean {
-	const p = /^(_(String|Array)?Iterator|Function|Date|Math|Object|String|Number|(Weak)?(Map|Set)|Symbol|Array|RegExp|Promise|Reflect|URL|URLSeachParams|setTimeout|setInterval|setImmediate|queueMicrotask|DOMTokenList|NodeList)($|\.)/;
+	const p = /^(_(String|Array)?Iterator|Function|Date|Math|Object|String|Number|(Weak)?(Map|Set)|Symbol|Array|RegExp|Promise|Reflect|URL|URLSearchParams|setTimeout|setInterval|setImmediate|queueMicrotask|DOMTokenList|NodeList)($|\.)/;
 	const typedArrays = /^(|ArrayBuffer|Int8Array|Uint8Array|Uint8ClampedArray|Int16Array|Uint16Array|Int32Array|Uint32Array|Float32Array|Float64Array)($|\.)/;
 	return p.test(f) || typedArrays.test(f) || f.endsWith(".@@iterator");
 }
 
 function providedByCoreWeb(f: string): boolean {
 	const p = /^(HTMLTemplateElement)($|\.)/;
-	return p.test(f) || f.endsWith(".@@iterator");
+	return p.test(f);
 }
 
 function normalizeHelperName(name: string): string | boolean {
@@ -244,10 +231,10 @@ function normalizeHelperName(name: string): string | boolean {
 	return false;
 }
 
-function skipAlias(aliasEntrypoint: string): boolean {
+function skipAlias(aliasEntryPoint: string): boolean {
 	let skip = false;
 	aliasPrefixesToSkip.forEach((prefix) => {
-		if (aliasEntrypoint.indexOf(prefix) === 0) {
+		if (aliasEntryPoint.indexOf(prefix) === 0) {
 			skip = true;
 		}
 	});

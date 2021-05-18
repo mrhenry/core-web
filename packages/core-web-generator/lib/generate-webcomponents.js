@@ -41,7 +41,6 @@ async function generateTemplate(mapping) {
         ],
         browsers: browsers,
         engines: browsers_to_engines_1.browsersToEngines(browsers),
-        hasCustomMatcher: true,
         size: src.length,
         isAlias: false,
         providedByCoreWeb: true,
@@ -83,7 +82,6 @@ async function generateShadyDOM(mapping) {
         ],
         browsers: browsers,
         engines: browsers_to_engines_1.browsersToEngines(browsers),
-        hasCustomMatcher: true,
         size: src.length,
         isAlias: false,
         providedByCoreWeb: true,
@@ -136,7 +134,6 @@ async function generateShadyCSS(mapping) {
         ],
         browsers: scopingShimBrowsers,
         engines: browsers_to_engines_1.browsersToEngines(scopingShimBrowsers),
-        hasCustomMatcher: true,
         size: scopingShim.length,
         isAlias: false,
         providedByCoreWeb: true,
@@ -179,7 +176,6 @@ async function generateShadyCSS(mapping) {
         ],
         browsers: applyShimBrowsers,
         engines: browsers_to_engines_1.browsersToEngines(applyShimBrowsers),
-        hasCustomMatcher: true,
         size: applyShim.length,
         isAlias: false,
         providedByCoreWeb: true,
@@ -226,7 +222,6 @@ async function generateShadyCSS(mapping) {
         ],
         browsers: customStyleInterfaceBrowsers,
         engines: browsers_to_engines_1.browsersToEngines(customStyleInterfaceBrowsers),
-        hasCustomMatcher: true,
         size: customStyleInterface.length,
         isAlias: false,
         providedByCoreWeb: true,
@@ -234,7 +229,7 @@ async function generateShadyCSS(mapping) {
 }
 async function generateCustomElements(mapping) {
     let src = fs.readFileSync(require.resolve("@webcomponents/custom-elements"), "utf-8");
-    // Reflect.construct is a depedency from core-js needed when Sub/Superclasses are transpiled by Babel.
+    // Reflect.construct is a dependency from core-js needed when Sub/Superclasses are transpiled by Babel.
     // Babel does not detect this correctly.
     // Injecting usage of Reflect.construct fixes this.
     const reflectHack = `;(function(){ try { var _reflectConstructHack = Reflect.construct } catch(err) {} })();\n`;
@@ -285,7 +280,6 @@ async function generateCustomElements(mapping) {
         ],
         browsers: browsers,
         engines: browsers_to_engines_1.browsersToEngines(browsers),
-        hasCustomMatcher: true,
         size: src.length,
         isAlias: false,
         providedByCoreWeb: true,

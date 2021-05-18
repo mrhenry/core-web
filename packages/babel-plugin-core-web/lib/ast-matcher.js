@@ -1,37 +1,9 @@
-const parser = require("@babel/parser");
-const traverse = require("@babel/traverse").default;
 const types = require("@babel/types/lib/definitions");
 const equal = require("fast-deep-equal");
 
-module.exports = buildMatcher;
-
-function buildMatcher(src) {
-	const matcherAST = parse(src);
-
-	traverse(matcherAST, {
-		noScope: true,
-		Identifier(path) {
-			if (path.node.name.startsWith("$")) {
-				path.node.isVariable = true;
-			}
-		}
-	});
-
-	return ast => {
-		let state = {};
-		let matched = matchNode(matcherAST, ast, state);
-		return matched ? state : false;
-	};
-}
-
-function parse(src) {
-	try {
-		return parser.parseExpression(src);
-	} catch (e) {
-		console.log(`error: ${e}\n${src}`);
-		throw e;
-	}
-}
+module.exports = {
+	matchNode: matchNode,
+};
 
 function nullish(v) {
 	return v === null || v === undefined;
