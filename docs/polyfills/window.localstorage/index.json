@@ -32,6 +32,7 @@
   "mdn": {
     "__compat": {
       "mdn_url": "https://developer.mozilla.org/docs/Web/API/Window/localStorage",
+      "spec_url": "https://html.spec.whatwg.org/multipage/webstorage.html#dom-localstorage-dev",
       "support": {
         "chrome": {
           "version_added": "4"

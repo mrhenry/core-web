@@ -570,6 +570,55 @@
         }
       }
     },
+    "after": {
+      "__compat": {
+        "mdn_url": "https://developer.mozilla.org/docs/Web/API/Element/after",
+        "spec_url": "https://dom.spec.whatwg.org/#ref-for-dom-childnode-after①",
+        "support": {
+          "chrome": {
+            "version_added": "54"
+          },
+          "chrome_android": {
+            "version_added": "54"
+          },
+          "edge": {
+            "version_added": "17"
+          },
+          "firefox": {
+            "version_added": "49"
+          },
+          "firefox_android": {
+            "version_added": "49"
+          },
+          "ie": {
+            "version_added": false
+          },
+          "opera": {
+            "version_added": "39"
+          },
+          "opera_android": {
+            "version_added": "41"
+          },
+          "safari": {
+            "version_added": "10"
+          },
+          "safari_ios": {
+            "version_added": "10"
+          },
+          "samsunginternet_android": {
+            "version_added": "6.0"
+          },
+          "webview_android": {
+            "version_added": "54"
+          }
+        },
+        "status": {
+          "experimental": false,
+          "standard_track": true,
+          "deprecated": false
+        }
+      }
+    },
     "afterscriptexecute_event": {
       "__compat": {
         "description": "<code>afterscriptexecute</code> event",
@@ -1309,6 +1358,55 @@
           },
           "webview_android": {
             "version_added": "55"
+          }
+        },
+        "status": {
+          "experimental": false,
+          "standard_track": true,
+          "deprecated": false
+        }
+      }
+    },
+    "before": {
+      "__compat": {
+        "mdn_url": "https://developer.mozilla.org/docs/Web/API/Element/before",
+        "spec_url": "https://dom.spec.whatwg.org/#ref-for-dom-childnode-before①",
+        "support": {
+          "chrome": {
+            "version_added": "54"
+          },
+          "chrome_android": {
+            "version_added": "54"
+          },
+          "edge": {
+            "version_added": "17"
+          },
+          "firefox": {
+            "version_added": "49"
+          },
+          "firefox_android": {
+            "version_added": "49"
+          },
+          "ie": {
+            "version_added": false
+          },
+          "opera": {
+            "version_added": "39"
+          },
+          "opera_android": {
+            "version_added": "41"
+          },
+          "safari": {
+            "version_added": "10"
+          },
+          "safari_ios": {
+            "version_added": "10"
+          },
+          "samsunginternet_android": {
+            "version_added": "6.0"
+          },
+          "webview_android": {
+            "version_added": "54"
           }
         },
         "status": {
@@ -3015,6 +3113,7 @@
       "__compat": {
         "description": "<code>fullscreenchange</code> event",
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/Element/fullscreenchange_event",
+        "spec_url": "https://fullscreen.spec.whatwg.org/#handler-document-onfullscreenchange",
         "support": {
           "chrome": [
             {
@@ -3094,6 +3193,7 @@
       "__compat": {
         "description": "<code>fullscreenerror</code> event",
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/Element/fullscreenerror_event",
+        "spec_url": "https://fullscreen.spec.whatwg.org/#handler-document-onfullscreenerror",
         "support": {
           "chrome": [
             {
@@ -6310,6 +6410,55 @@
         }
       }
     },
+    "remove": {
+      "__compat": {
+        "mdn_url": "https://developer.mozilla.org/docs/Web/API/Element/remove",
+        "spec_url": "https://dom.spec.whatwg.org/#ref-for-dom-childnode-remove①",
+        "support": {
+          "chrome": {
+            "version_added": "24"
+          },
+          "chrome_android": {
+            "version_added": "25"
+          },
+          "edge": {
+            "version_added": "12"
+          },
+          "firefox": {
+            "version_added": "23"
+          },
+          "firefox_android": {
+            "version_added": "23"
+          },
+          "ie": {
+            "version_added": false
+          },
+          "opera": {
+            "version_added": "15"
+          },
+          "opera_android": {
+            "version_added": "14"
+          },
+          "safari": {
+            "version_added": "7"
+          },
+          "safari_ios": {
+            "version_added": "7"
+          },
+          "samsunginternet_android": {
+            "version_added": "1.5"
+          },
+          "webview_android": {
+            "version_added": "≤37"
+          }
+        },
+        "status": {
+          "experimental": false,
+          "standard_track": true,
+          "deprecated": false
+        }
+      }
+    },
     "removeAttribute": {
       "__compat": {
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/Element/removeAttribute",
@@ -6449,6 +6598,55 @@
           },
           "webview_android": {
             "version_added": "1"
+          }
+        },
+        "status": {
+          "experimental": false,
+          "standard_track": true,
+          "deprecated": false
+        }
+      }
+    },
+    "replaceWith": {
+      "__compat": {
+        "mdn_url": "https://developer.mozilla.org/docs/Web/API/Element/replaceWith",
+        "spec_url": "https://dom.spec.whatwg.org/#ref-for-dom-childnode-replacewith①",
+        "support": {
+          "chrome": {
+            "version_added": "54"
+          },
+          "chrome_android": {
+            "version_added": "54"
+          },
+          "edge": {
+            "version_added": "17"
+          },
+          "firefox": {
+            "version_added": "49"
+          },
+          "firefox_android": {
+            "version_added": "49"
+          },
+          "ie": {
+            "version_added": false
+          },
+          "opera": {
+            "version_added": "39"
+          },
+          "opera_android": {
+            "version_added": "41"
+          },
+          "safari": {
+            "version_added": "10"
+          },
+          "safari_ios": {
+            "version_added": "10"
+          },
+          "samsunginternet_android": {
+            "version_added": "6.0"
+          },
+          "webview_android": {
+            "version_added": "54"
           }
         },
         "status": {
@@ -6955,10 +7153,10 @@
             "version_added": null
           },
           "safari": {
-            "version_added": null
+            "version_added": "1.3"
           },
           "safari_ios": {
-            "version_added": null
+            "version_added": "1"
           },
           "samsunginternet_android": {
             "version_added": true
@@ -8841,6 +9039,7 @@
     "ariaAtomic": {
       "__compat": {
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/Element/ariaAtomic",
+        "spec_url": "https://w3c.github.io/aria/#dom-ariamixin-ariaatomic",
         "support": {
           "chrome": {
             "version_added": "81"
@@ -8889,6 +9088,7 @@
     "ariaAutoComplete": {
       "__compat": {
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/Element/ariaAutoComplete",
+        "spec_url": "https://w3c.github.io/aria/#dom-ariamixin-ariaautocomplete",
         "support": {
           "chrome": {
             "version_added": "81"
@@ -8937,6 +9137,7 @@
     "ariaBusy": {
       "__compat": {
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/Element/ariaBusy",
+        "spec_url": "https://w3c.github.io/aria/#dom-ariamixin-ariabusy",
         "support": {
           "chrome": {
             "version_added": "81"
@@ -8985,6 +9186,7 @@
     "ariaChecked": {
       "__compat": {
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/Element/ariaChecked",
+        "spec_url": "https://w3c.github.io/aria/#dom-ariamixin-ariachecked",
         "support": {
           "chrome": {
             "version_added": "81"
@@ -9033,6 +9235,7 @@
     "ariaColCount": {
       "__compat": {
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/Element/ariaColCount",
+        "spec_url": "https://w3c.github.io/aria/#dom-ariamixin-ariacolcount",
         "support": {
           "chrome": {
             "version_added": "81"
@@ -9081,6 +9284,7 @@
     "ariaColIndex": {
       "__compat": {
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/Element/ariaColIndex",
+        "spec_url": "https://w3c.github.io/aria/#dom-ariamixin-ariacolindex",
         "support": {
           "chrome": {
             "version_added": "81"
@@ -9129,6 +9333,7 @@
     "ariaColSpan": {
       "__compat": {
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/Element/ariaColSpan",
+        "spec_url": "https://w3c.github.io/aria/#dom-ariamixin-ariacolspan",
         "support": {
           "chrome": {
             "version_added": "81"
@@ -9177,6 +9382,7 @@
     "ariaCurrent": {
       "__compat": {
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/Element/ariaCurrent",
+        "spec_url": "https://w3c.github.io/aria/#dom-ariamixin-ariacurrent",
         "support": {
           "chrome": {
             "version_added": "81"
@@ -9225,6 +9431,7 @@
     "ariaDescription": {
       "__compat": {
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/Element/ariaDescription",
+        "spec_url": "https://w3c.github.io/aria/#dom-ariamixin-ariadescription",
         "support": {
           "chrome": {
             "version_added": "83"
@@ -9273,6 +9480,7 @@
     "ariaDisabled": {
       "__compat": {
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/Element/ariaDisabled",
+        "spec_url": "https://w3c.github.io/aria/#dom-ariamixin-ariadisabled",
         "support": {
           "chrome": {
             "version_added": "81"
@@ -9321,6 +9529,7 @@
     "ariaExpanded": {
       "__compat": {
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/Element/ariaExpanded",
+        "spec_url": "https://w3c.github.io/aria/#dom-ariamixin-ariaexpanded",
         "support": {
           "chrome": {
             "version_added": "81"
@@ -9369,6 +9578,7 @@
     "ariaHasPopup": {
       "__compat": {
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/Element/ariaHasPopup",
+        "spec_url": "https://w3c.github.io/aria/#dom-ariamixin-ariahaspopup",
         "support": {
           "chrome": {
             "version_added": "81"
@@ -9417,6 +9627,7 @@
     "ariaHidden": {
       "__compat": {
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/Element/ariaHidden",
+        "spec_url": "https://w3c.github.io/aria/#dom-ariamixin-ariahidden",
         "support": {
           "chrome": {
             "version_added": "81"
@@ -9465,6 +9676,7 @@
     "ariaKeyShortcuts": {
       "__compat": {
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/Element/ariaKeyShortcuts",
+        "spec_url": "https://w3c.github.io/aria/#dom-ariamixin-ariakeyshortcuts",
         "support": {
           "chrome": {
             "version_added": "81"
@@ -9513,6 +9725,7 @@
     "ariaLabel": {
       "__compat": {
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/Element/ariaLabel",
+        "spec_url": "https://w3c.github.io/aria/#dom-ariamixin-arialabel",
         "support": {
           "chrome": {
             "version_added": "81"
@@ -9561,6 +9774,7 @@
     "ariaLevel": {
       "__compat": {
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/Element/ariaLevel",
+        "spec_url": "https://w3c.github.io/aria/#dom-ariamixin-arialevel",
         "support": {
           "chrome": {
             "version_added": "81"
@@ -9609,6 +9823,7 @@
     "ariaLive": {
       "__compat": {
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/Element/ariaLive",
+        "spec_url": "https://w3c.github.io/aria/#dom-ariamixin-arialive",
         "support": {
           "chrome": {
             "version_added": "81"
@@ -9657,6 +9872,7 @@
     "ariaModal": {
       "__compat": {
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/Element/ariaModal",
+        "spec_url": "https://w3c.github.io/aria/#dom-ariamixin-ariamodal",
         "support": {
           "chrome": {
             "version_added": "81"
@@ -9705,6 +9921,7 @@
     "ariaMultiLine": {
       "__compat": {
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/Element/ariaMultiLine",
+        "spec_url": "https://w3c.github.io/aria/#dom-ariamixin-ariamultiline",
         "support": {
           "chrome": {
             "version_added": "81"
@@ -9753,6 +9970,7 @@
     "ariaMultiSelectable": {
       "__compat": {
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/Element/ariaMultiSelectable",
+        "spec_url": "https://w3c.github.io/aria/#dom-ariamixin-ariamultiselectable",
         "support": {
           "chrome": {
             "version_added": "81"
@@ -9801,6 +10019,7 @@
     "ariaOrientation": {
       "__compat": {
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/Element/ariaOrientation",
+        "spec_url": "https://w3c.github.io/aria/#dom-ariamixin-ariaorientation",
         "support": {
           "chrome": {
             "version_added": "81"
@@ -9849,6 +10068,7 @@
     "ariaPlaceholder": {
       "__compat": {
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/Element/ariaPlaceholder",
+        "spec_url": "https://w3c.github.io/aria/#dom-ariamixin-ariaplaceholder",
         "support": {
           "chrome": {
             "version_added": "81"
@@ -9897,6 +10117,7 @@
     "ariaPosInSet": {
       "__compat": {
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/Element/ariaPosInSet",
+        "spec_url": "https://w3c.github.io/aria/#dom-ariamixin-ariaposinset",
         "support": {
           "chrome": {
             "version_added": "81"
@@ -9945,6 +10166,7 @@
     "ariaPressed": {
       "__compat": {
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/Element/ariaPressed",
+        "spec_url": "https://w3c.github.io/aria/#dom-ariamixin-ariapressed",
         "support": {
           "chrome": {
             "version_added": "81"
@@ -9993,6 +10215,7 @@
     "ariaReadOnly": {
       "__compat": {
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/Element/ariaReadOnly",
+        "spec_url": "https://w3c.github.io/aria/#dom-ariamixin-ariareadonly",
         "support": {
           "chrome": {
             "version_added": "81"
@@ -10081,7 +10304,7 @@
         },
         "status": {
           "experimental": false,
-          "standard_track": true,
+          "standard_track": false,
           "deprecated": false
         }
       }
@@ -10089,6 +10312,7 @@
     "ariaRequired": {
       "__compat": {
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/Element/ariaRequired",
+        "spec_url": "https://w3c.github.io/aria/#dom-ariamixin-ariarequired",
         "support": {
           "chrome": {
             "version_added": "81"
@@ -10137,6 +10361,7 @@
     "ariaRoleDescription": {
       "__compat": {
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/Element/ariaRoleDescription",
+        "spec_url": "https://w3c.github.io/aria/#dom-ariamixin-ariaorientation",
         "support": {
           "chrome": {
             "version_added": "81"
@@ -10185,6 +10410,7 @@
     "ariaRowCount": {
       "__compat": {
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/Element/ariaRowCount",
+        "spec_url": "https://w3c.github.io/aria/#dom-ariamixin-ariarowcount",
         "support": {
           "chrome": {
             "version_added": "81"
@@ -10233,6 +10459,7 @@
     "ariaRowIndex": {
       "__compat": {
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/Element/ariaRowIndex",
+        "spec_url": "https://w3c.github.io/aria/#dom-ariamixin-ariarowindex",
         "support": {
           "chrome": {
             "version_added": "81"
@@ -10281,6 +10508,7 @@
     "ariaRowSpan": {
       "__compat": {
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/Element/ariaRowSpan",
+        "spec_url": "https://w3c.github.io/aria/#dom-ariamixin-ariarowspan",
         "support": {
           "chrome": {
             "version_added": "81"
@@ -10329,6 +10557,7 @@
     "ariaSelected": {
       "__compat": {
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/Element/ariaSelected",
+        "spec_url": "https://w3c.github.io/aria/#dom-ariamixin-ariavaluemax",
         "support": {
           "chrome": {
             "version_added": "81"
@@ -10377,6 +10606,7 @@
     "ariaSetSize": {
       "__compat": {
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/Element/ariaSetSize",
+        "spec_url": "https://w3c.github.io/aria/#dom-ariamixin-ariasetsize",
         "support": {
           "chrome": {
             "version_added": "84"
@@ -10425,6 +10655,7 @@
     "ariaSort": {
       "__compat": {
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/Element/ariaSort",
+        "spec_url": "https://w3c.github.io/aria/#dom-ariamixin-ariasort",
         "support": {
           "chrome": {
             "version_added": "81"
@@ -10473,6 +10704,7 @@
     "ariaValueMax": {
       "__compat": {
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/Element/ariaValueMax",
+        "spec_url": "https://w3c.github.io/aria/#dom-ariamixin-ariavaluemax",
         "support": {
           "chrome": {
             "version_added": "81"
@@ -10521,6 +10753,7 @@
     "ariaValueMin": {
       "__compat": {
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/Element/ariaValueMin",
+        "spec_url": "https://w3c.github.io/aria/#dom-ariamixin-ariavaluemin",
         "support": {
           "chrome": {
             "version_added": "81"
@@ -10569,6 +10802,7 @@
     "ariaValueNow": {
       "__compat": {
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/Element/ariaValueNow",
+        "spec_url": "https://w3c.github.io/aria/#dom-ariamixin-ariavaluenow",
         "support": {
           "chrome": {
             "version_added": "81"
@@ -10617,6 +10851,7 @@
     "ariaValueText": {
       "__compat": {
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/Element/ariaValueText",
+        "spec_url": "https://w3c.github.io/aria/#dom-ariamixin-ariavaluetext",
         "support": {
           "chrome": {
             "version_added": "81"
@@ -10665,6 +10900,7 @@
     "append": {
       "__compat": {
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/Element/append",
+        "spec_url": "https://dom.spec.whatwg.org/#ref-for-dom-parentnode-append①",
         "support": {
           "chrome": {
             "version_added": "54"
@@ -10713,6 +10949,7 @@
     "childElementCount": {
       "__compat": {
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/Element/childElementCount",
+        "spec_url": "https://dom.spec.whatwg.org/#dom-parentnode-childelementcount",
         "support": {
           "chrome": {
             "version_added": "1"
@@ -10761,6 +10998,7 @@
     "children": {
       "__compat": {
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/Element/children",
+        "spec_url": "https://dom.spec.whatwg.org/#ref-for-dom-parentnode-children①",
         "support": {
           "chrome": {
             "version_added": "1"
@@ -10816,6 +11054,7 @@
     "firstElementChild": {
       "__compat": {
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/Element/firstElementChild",
+        "spec_url": "https://dom.spec.whatwg.org/#ref-for-dom-parentnode-firstelementchild①",
         "support": {
           "chrome": {
             "version_added": "1"
@@ -10864,6 +11103,7 @@
     "lastElementChild": {
       "__compat": {
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/Element/lastElementChild",
+        "spec_url": "https://dom.spec.whatwg.org/#ref-for-dom-parentnode-lastelementchild①",
         "support": {
           "chrome": {
             "version_added": "1"
@@ -10912,6 +11152,7 @@
     "prepend": {
       "__compat": {
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/Element/prepend",
+        "spec_url": "https://dom.spec.whatwg.org/#ref-for-dom-parentnode-prepend①",
         "support": {
           "chrome": {
             "version_added": "54"
@@ -10960,6 +11201,7 @@
     "querySelector": {
       "__compat": {
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/Element/querySelector",
+        "spec_url": "https://dom.spec.whatwg.org/#ref-for-dom-parentnode-queryselectorall①",
         "support": {
           "chrome": {
             "version_added": "1"
@@ -11015,6 +11257,7 @@
     "querySelectorAll": {
       "__compat": {
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/Element/querySelectorAll",
+        "spec_url": "https://dom.spec.whatwg.org/#ref-for-dom-parentnode-queryselectorall①",
         "support": {
           "chrome": {
             "version_added": "1"
@@ -11070,6 +11313,7 @@
     "replaceChildren": {
       "__compat": {
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/Element/replaceChildren",
+        "spec_url": "https://dom.spec.whatwg.org/#ref-for-dom-parentnode-replacechildren①",
         "support": {
           "chrome": {
             "version_added": "86"

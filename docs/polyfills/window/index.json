@@ -21,6 +21,7 @@
   "mdn": {
     "__compat": {
       "mdn_url": "https://developer.mozilla.org/docs/Web/API/Window",
+      "spec_url": "https://html.spec.whatwg.org/multipage/window-object.html#the-window-object",
       "support": {
         "chrome": {
           "version_added": "1"
@@ -69,6 +70,7 @@
       "__compat": {
         "description": "<code>DOMContentLoaded</code> event",
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/Window/DOMContentLoaded_event",
+        "spec_url": "https://html.spec.whatwg.org/multipage/indices.html#event-domcontentloaded",
         "support": {
           "chrome": {
             "version_added": "1"
@@ -118,6 +120,7 @@
       "__compat": {
         "description": "<code>afterprint</code> event",
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/Window/afterprint_event",
+        "spec_url": "https://html.spec.whatwg.org/multipage/indices.html#event-afterprint",
         "support": {
           "chrome": {
             "version_added": "63"
@@ -166,6 +169,7 @@
     "alert": {
       "__compat": {
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/Window/alert",
+        "spec_url": "https://html.spec.whatwg.org/multipage/timers-and-user-prompts.html#dom-alert-dev",
         "support": {
           "chrome": {
             "version_added": "1",
@@ -221,6 +225,7 @@
       "__compat": {
         "description": "<code>animationcancel</code> event",
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/Window/animationcancel_event",
+        "spec_url": "https://drafts.csswg.org/css-animations/#eventdef-animationevent-animationcancel",
         "support": {
           "chrome": {
             "version_added": false
@@ -300,6 +305,7 @@
       "__compat": {
         "description": "<code>animationend</code> event",
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/Window/animationend_event",
+        "spec_url": "https://drafts.csswg.org/css-animations/#eventdef-animationevent-animationend",
         "support": {
           "chrome": [
             {
@@ -379,6 +385,7 @@
       "__compat": {
         "description": "<code>animationiteration</code> event",
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/Window/animationiteration_event",
+        "spec_url": "https://drafts.csswg.org/css-animations/#eventdef-animationevent-animationiteration",
         "support": {
           "chrome": [
             {
@@ -458,6 +465,7 @@
       "__compat": {
         "description": "<code>animationstart</code> event",
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/Window/animationstart_event",
+        "spec_url": "https://drafts.csswg.org/css-animations/#eventdef-animationevent-animationstart",
         "support": {
           "chrome": [
             {
@@ -533,10 +541,75 @@
         }
       }
     },
+    "appinstalled_event": {
+      "__compat": {
+        "description": "<code>appinstalled</code> event",
+        "mdn_url": "https://developer.mozilla.org/docs/Web/API/Window/appinstalled_event",
+        "support": {
+          "chrome": {
+            "version_added": "64"
+          },
+          "chrome_android": {
+            "version_added": "57"
+          },
+          "edge": {
+            "version_added": "≤79"
+          },
+          "firefox": {
+            "version_added": "49",
+            "version_removed": "76",
+            "flags": [
+              {
+                "type": "preference",
+                "name": "dom.manifest.onappinstall",
+                "value_to_set": "true"
+              }
+            ]
+          },
+          "firefox_android": {
+            "version_added": "49",
+            "flags": [
+              {
+                "type": "preference",
+                "name": "dom.manifest.onappinstall",
+                "value_to_set": "true"
+              }
+            ]
+          },
+          "ie": {
+            "version_added": false
+          },
+          "opera": {
+            "version_added": false
+          },
+          "opera_android": {
+            "version_added": false
+          },
+          "safari": {
+            "version_added": false
+          },
+          "safari_ios": {
+            "version_added": false
+          },
+          "samsunginternet_android": {
+            "version_added": "7.0"
+          },
+          "webview_android": {
+            "version_added": "57"
+          }
+        },
+        "status": {
+          "experimental": false,
+          "standard_track": false,
+          "deprecated": true
+        }
+      }
+    },
     "beforeprint_event": {
       "__compat": {
         "description": "<code>beforeprint</code> event",
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/Window/beforeprint_event",
+        "spec_url": "https://html.spec.whatwg.org/multipage/indices.html#event-beforeprint",
         "support": {
           "chrome": {
             "version_added": "63"
@@ -585,6 +658,7 @@
     "beforeunload_event": {
       "__compat": {
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/Window/beforeunload_event",
+        "spec_url": "https://html.spec.whatwg.org/multipage/indices.html#event-beforeunload",
         "description": "<code>beforeunload</code> event",
         "support": {
           "chrome": {
@@ -836,6 +910,7 @@
     "blur": {
       "__compat": {
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/Window/blur",
+        "spec_url": "https://html.spec.whatwg.org/multipage/interaction.html#dom-window-blur",
         "support": {
           "chrome": {
             "version_added": "1"
@@ -885,6 +960,7 @@
       "__compat": {
         "description": "<code>blur</code> event",
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/Window/blur_event",
+        "spec_url": "https://w3c.github.io/uievents/#event-type-blur",
         "support": {
           "chrome": {
             "version_added": "5"
@@ -941,6 +1017,7 @@
     "cancelAnimationFrame": {
       "__compat": {
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/Window/cancelAnimationFrame",
+        "spec_url": "https://html.spec.whatwg.org/multipage/imagebitmap-and-animations.html#animationframeprovider-cancelanimationframe",
         "support": {
           "chrome": {
             "version_added": "24"
@@ -1010,6 +1087,7 @@
     "cancelIdleCallback": {
       "__compat": {
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/Window/cancelIdleCallback",
+        "spec_url": "https://w3c.github.io/requestidlecallback/#the-cancelidlecallback-method",
         "support": {
           "chrome": {
             "version_added": "47"
@@ -1105,6 +1183,7 @@
     "clearImmediate": {
       "__compat": {
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/Window/clearImmediate",
+        "spec_url": "https://w3c.github.io/setImmediate/#si-clearImmediate",
         "support": {
           "chrome": {
             "version_added": false
@@ -1159,6 +1238,7 @@
     "close": {
       "__compat": {
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/Window/close",
+        "spec_url": "https://html.spec.whatwg.org/multipage/window-object.html#dom-window-close-dev",
         "support": {
           "chrome": {
             "version_added": "1"
@@ -1257,6 +1337,7 @@
     "confirm": {
       "__compat": {
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/Window/confirm",
+        "spec_url": "https://html.spec.whatwg.org/multipage/timers-and-user-prompts.html#dom-confirm-dev",
         "support": {
           "chrome": {
             "version_added": "1",
@@ -1483,6 +1564,7 @@
       "__compat": {
         "description": "<code>copy</code> event",
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/Window/copy_event",
+        "spec_url": "https://w3c.github.io/clipboard-apis/#clipboard-event-copy",
         "support": {
           "chrome": {
             "version_added": "1"
@@ -1578,6 +1660,7 @@
     "crypto": {
       "__compat": {
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/Window/crypto",
+        "spec_url": "https://w3c.github.io/webcrypto/#crypto-interface",
         "support": {
           "chrome": {
             "version_added": "37"
@@ -1627,6 +1710,7 @@
     "customElements": {
       "__compat": {
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/Window/customElements",
+        "spec_url": "https://html.spec.whatwg.org/multipage/custom-elements.html#dom-window-customelements",
         "support": {
           "chrome": {
             "version_added": "54"
@@ -1676,6 +1760,7 @@
       "__compat": {
         "description": "<code>cut</code> event",
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/Window/cut_event",
+        "spec_url": "https://w3c.github.io/clipboard-apis/#clipboard-event-cut",
         "support": {
           "chrome": {
             "version_added": "1"
@@ -1771,6 +1856,7 @@
     "devicemotion_event": {
       "__compat": {
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/Window/devicemotion_event",
+        "spec_url": "https://w3c.github.io/deviceorientation/#devicemotion",
         "description": "<code>devicemotion</code> event",
         "support": {
           "chrome": {
@@ -1820,6 +1906,7 @@
     "deviceorientation_event": {
       "__compat": {
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/Window/deviceorientation_event",
+        "spec_url": "https://w3c.github.io/deviceorientation/#deviceorientation",
         "description": "<code>deviceorientation</code> event",
         "support": {
           "chrome": {
@@ -1883,6 +1970,7 @@
     "devicePixelRatio": {
       "__compat": {
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/Window/devicePixelRatio",
+        "spec_url": "https://drafts.csswg.org/cssom-view/#dom-window-devicepixelratio",
         "support": {
           "chrome": {
             "version_added": "1"
@@ -1979,6 +2067,7 @@
     "document": {
       "__compat": {
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/Window/document",
+        "spec_url": "https://html.spec.whatwg.org/multipage/window-object.html#dom-document-dev",
         "support": {
           "chrome": {
             "version_added": "1"
@@ -2028,6 +2117,7 @@
       "__compat": {
         "description": "<code>error</code> event",
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/Window/error_event",
+        "spec_url": "https://w3c.github.io/uievents/#event-type-error",
         "support": {
           "chrome": {
             "version_added": true
@@ -2076,6 +2166,7 @@
     "event": {
       "__compat": {
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/Window/event",
+        "spec_url": "https://dom.spec.whatwg.org/#dom-window-event",
         "support": {
           "chrome": {
             "version_added": "1"
@@ -2124,6 +2215,7 @@
     "external": {
       "__compat": {
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/Window/external",
+        "spec_url": "https://html.spec.whatwg.org/multipage/obsolete.html#external",
         "support": {
           "chrome": {
             "version_added": true
@@ -2222,6 +2314,7 @@
     "focus": {
       "__compat": {
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/Window/focus",
+        "spec_url": "https://html.spec.whatwg.org/multipage/interaction.html#dom-window-focus-dev",
         "support": {
           "chrome": {
             "version_added": "1",
@@ -2272,6 +2365,7 @@
       "__compat": {
         "description": "<code>focus</code> event",
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/Window/focus_event",
+        "spec_url": "https://w3c.github.io/uievents/#event-type-focus",
         "support": {
           "chrome": {
             "version_added": true
@@ -2328,6 +2422,7 @@
     "frameElement": {
       "__compat": {
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/Window/frameElement",
+        "spec_url": "https://html.spec.whatwg.org/multipage/browsers.html#dom-frameelement-dev",
         "support": {
           "chrome": {
             "version_added": "1"
@@ -2376,6 +2471,7 @@
     "frames": {
       "__compat": {
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/Window/frames",
+        "spec_url": "https://html.spec.whatwg.org/multipage/window-object.html#dom-frames-dev",
         "support": {
           "chrome": {
             "version_added": "1"
@@ -2472,6 +2568,7 @@
     "gamepadconnected_event": {
       "__compat": {
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/Window/gamepadconnected_event",
+        "spec_url": "https://w3c.github.io/gamepad/#the-gamepadconnected-event",
         "description": "<code>gamepadconnected</code> event",
         "support": {
           "chrome": [
@@ -2535,6 +2632,7 @@
     "gamepaddisconnected_event": {
       "__compat": {
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/Window/gamepaddisconnected_event",
+        "spec_url": "https://w3c.github.io/gamepad/#the-gamepaddisconnected-event",
         "description": "<code>gamepaddisconnected</code> event",
         "support": {
           "chrome": [
@@ -2598,6 +2696,7 @@
     "getComputedStyle": {
       "__compat": {
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/Window/getComputedStyle",
+        "spec_url": "https://drafts.csswg.org/cssom/#dom-window-getcomputedstyle",
         "support": {
           "chrome": {
             "version_added": "1"
@@ -2792,6 +2891,7 @@
     "getSelection": {
       "__compat": {
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/Window/getSelection",
+        "spec_url": "https://w3c.github.io/selection-api/#dom-window-getselection",
         "support": {
           "chrome": {
             "version_added": "1"
@@ -2891,6 +2991,7 @@
       "__compat": {
         "description": "<code>hashchange</code> event",
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/Window/hashchange_event",
+        "spec_url": "https://html.spec.whatwg.org/multipage/indices.html#event-hashchange",
         "support": {
           "chrome": {
             "version_added": "5"
@@ -2939,6 +3040,7 @@
     "history": {
       "__compat": {
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/Window/history",
+        "spec_url": "https://html.spec.whatwg.org/multipage/history.html#the-history-interface",
         "support": {
           "chrome": {
             "version_added": "1"
@@ -3038,6 +3140,7 @@
     "innerHeight": {
       "__compat": {
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/Window/innerHeight",
+        "spec_url": "https://drafts.csswg.org/cssom-view/#dom-window-innerheight",
         "support": {
           "chrome": {
             "version_added": "1"
@@ -3101,6 +3204,7 @@
     "innerWidth": {
       "__compat": {
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/Window/innerWidth",
+        "spec_url": "https://drafts.csswg.org/cssom-view/#dom-window-innerwidth",
         "support": {
           "chrome": {
             "version_added": "1"
@@ -3164,6 +3268,7 @@
     "isSecureContext": {
       "__compat": {
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/Window/isSecureContext",
+        "spec_url": "https://html.spec.whatwg.org/multipage/webappapis.html#dom-issecurecontext-dev",
         "support": {
           "chrome": {
             "version_added": "47"
@@ -3261,6 +3366,7 @@
       "__compat": {
         "description": "<code>languagechange</code> event",
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/Window/languagechange_event",
+        "spec_url": "https://html.spec.whatwg.org/multipage/indices.html#event-languagechange",
         "support": {
           "chrome": {
             "version_added": "37"
@@ -3309,6 +3415,7 @@
     "length": {
       "__compat": {
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/Window/length",
+        "spec_url": "https://html.spec.whatwg.org/multipage/window-object.html#dom-length-dev",
         "support": {
           "chrome": {
             "version_added": "1"
@@ -3358,6 +3465,10 @@
       "__compat": {
         "description": "<code>load</code> event",
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/Window/load_event",
+        "spec_url": [
+          "https://w3c.github.io/uievents/#event-type-load",
+          "https://html.spec.whatwg.org/multipage/parsing.html#delay-the-load-event"
+        ],
         "support": {
           "chrome": {
             "version_added": "1"
@@ -3406,6 +3517,7 @@
     "localStorage": {
       "__compat": {
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/Window/localStorage",
+        "spec_url": "https://html.spec.whatwg.org/multipage/webstorage.html#dom-localstorage-dev",
         "support": {
           "chrome": {
             "version_added": "4"
@@ -3454,6 +3566,7 @@
     "location": {
       "__compat": {
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/Window/location",
+        "spec_url": "https://html.spec.whatwg.org/multipage/history.html#the-location-interface",
         "support": {
           "chrome": {
             "version_added": "1"
@@ -3552,6 +3665,7 @@
     "locationbar": {
       "__compat": {
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/Window/locationbar",
+        "spec_url": "https://html.spec.whatwg.org/multipage/window-object.html#dom-window-locationbar-dev",
         "support": {
           "chrome": {
             "version_added": "1"
@@ -3600,6 +3714,7 @@
     "matchMedia": {
       "__compat": {
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/Window/matchMedia",
+        "spec_url": "https://drafts.csswg.org/cssom-view/#dom-window-matchmedia",
         "support": {
           "chrome": {
             "version_added": "9"
@@ -3696,6 +3811,7 @@
     "menubar": {
       "__compat": {
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/Window/menubar",
+        "spec_url": "https://html.spec.whatwg.org/multipage/window-object.html#dom-window-menubar-dev",
         "support": {
           "chrome": {
             "version_added": "1"
@@ -3745,6 +3861,7 @@
       "__compat": {
         "description": "<code>message</code> event",
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/Window/message_event",
+        "spec_url": "https://html.spec.whatwg.org/multipage/indices.html#event-message",
         "support": {
           "chrome": {
             "version_added": "60"
@@ -3794,6 +3911,7 @@
       "__compat": {
         "description": "<code>messageerror</code> event",
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/Window/messageerror_event",
+        "spec_url": "https://html.spec.whatwg.org/multipage/indices.html#event-messageerror",
         "support": {
           "chrome": {
             "version_added": "60"
@@ -3890,6 +4008,7 @@
     "moveBy": {
       "__compat": {
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/Window/moveBy",
+        "spec_url": "https://drafts.csswg.org/cssom-view/#dom-window-moveby",
         "support": {
           "chrome": {
             "version_added": "1"
@@ -3938,6 +4057,7 @@
     "moveTo": {
       "__compat": {
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/Window/moveTo",
+        "spec_url": "https://drafts.csswg.org/cssom-view/#dom-window-moveto",
         "support": {
           "chrome": {
             "version_added": "1"
@@ -4182,6 +4302,7 @@
     "name": {
       "__compat": {
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/Window/name",
+        "spec_url": "https://html.spec.whatwg.org/multipage/window-object.html#dom-name-dev",
         "support": {
           "chrome": {
             "version_added": "1"
@@ -4232,6 +4353,7 @@
     "navigator": {
       "__compat": {
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/Window/navigator",
+        "spec_url": "https://html.spec.whatwg.org/multipage/system-state.html#dom-navigator",
         "support": {
           "chrome": {
             "version_added": "1"
@@ -4281,6 +4403,7 @@
       "__compat": {
         "description": "<code>offline</code> event",
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/Window/offline_event",
+        "spec_url": "https://html.spec.whatwg.org/multipage/indices.html#event-offline",
         "support": {
           "chrome": {
             "version_added": true
@@ -4518,6 +4641,7 @@
     "ondevicemotion": {
       "__compat": {
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/Window/ondevicemotion",
+        "spec_url": "https://w3c.github.io/deviceorientation/#ref-for-dom-window-ondevicemotion",
         "support": {
           "chrome": {
             "version_added": "31"
@@ -4566,6 +4690,7 @@
     "ondeviceorientation": {
       "__compat": {
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/Window/ondeviceorientation",
+        "spec_url": "https://w3c.github.io/deviceorientation/#ref-for-dom-window-ondeviceorientation",
         "support": {
           "chrome": {
             "version_added": "7"
@@ -4738,6 +4863,7 @@
     "ongamepadconnected": {
       "__compat": {
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/Window/ongamepadconnected",
+        "spec_url": "https://w3c.github.io/gamepad/#event-gamepadconnected",
         "support": {
           "chrome": [
             {
@@ -4821,6 +4947,7 @@
     "ongamepaddisconnected": {
       "__compat": {
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/Window/ongamepaddisconnected",
+        "spec_url": "https://w3c.github.io/gamepad/#event-gamepaddisconnected",
         "support": {
           "chrome": [
             {
@@ -4905,6 +5032,7 @@
       "__compat": {
         "description": "<code>online</code> event",
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/Window/online_event",
+        "spec_url": "https://html.spec.whatwg.org/multipage/indices.html#event-online",
         "support": {
           "chrome": {
             "version_added": true
@@ -5637,6 +5765,10 @@
     "open": {
       "__compat": {
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/Window/open",
+        "spec_url": [
+          "https://html.spec.whatwg.org/multipage/window-object.html#dom-open-dev",
+          "https://drafts.csswg.org/cssom-view/#the-features-argument-to-the-open()-method"
+        ],
         "support": {
           "chrome": {
             "version_added": "1"
@@ -5832,6 +5964,7 @@
     "opener": {
       "__compat": {
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/Window/opener",
+        "spec_url": "https://html.spec.whatwg.org/multipage/browsers.html#dom-opener-dev",
         "support": {
           "chrome": {
             "version_added": "1"
@@ -5880,6 +6013,7 @@
     "orientation": {
       "__compat": {
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/Window/orientation",
+        "spec_url": "https://compat.spec.whatwg.org/#dfn-window-orientation-angle",
         "support": {
           "chrome": {
             "version_added": false
@@ -5929,6 +6063,7 @@
       "__compat": {
         "description": "<code>orientationchange</code> event",
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/Window/orientationchange_event",
+        "spec_url": "https://compat.spec.whatwg.org/#event-orientationchange",
         "support": {
           "chrome": {
             "version_added": false
@@ -6025,6 +6160,7 @@
     "outerHeight": {
       "__compat": {
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/Window/outerHeight",
+        "spec_url": "https://drafts.csswg.org/cssom-view/#dom-window-outerheight",
         "support": {
           "chrome": {
             "version_added": "1"
@@ -6073,6 +6209,7 @@
     "outerWidth": {
       "__compat": {
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/Window/outerWidth",
+        "spec_url": "https://drafts.csswg.org/cssom-view/#dom-window-outerwidth",
         "support": {
           "chrome": {
             "version_added": "1"
@@ -6121,6 +6258,7 @@
     "pagehide_event": {
       "__compat": {
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/Window/pagehide_event",
+        "spec_url": "https://html.spec.whatwg.org/multipage/indices.html#event-pagehide",
         "description": "<code>pagehide</code> event",
         "support": {
           "chrome": {
@@ -6170,6 +6308,7 @@
     "pageshow_event": {
       "__compat": {
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/Window/pageshow_event",
+        "spec_url": "https://html.spec.whatwg.org/multipage/indices.html#event-pageshow",
         "description": "<code>pageshow</code> event",
         "support": {
           "chrome": {
@@ -6219,6 +6358,7 @@
     "pageXOffset": {
       "__compat": {
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/Window/pageXOffset",
+        "spec_url": "https://drafts.csswg.org/cssom-view/#dom-window-pagexoffset",
         "support": {
           "chrome": {
             "version_added": "1"
@@ -6267,6 +6407,7 @@
     "pageYOffset": {
       "__compat": {
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/Window/pageYOffset",
+        "spec_url": "https://drafts.csswg.org/cssom-view/#dom-window-pageyoffset",
         "support": {
           "chrome": {
             "version_added": "1"
@@ -6315,6 +6456,7 @@
     "parent": {
       "__compat": {
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/Window/parent",
+        "spec_url": "https://html.spec.whatwg.org/multipage/browsers.html#dom-parent-dev",
         "support": {
           "chrome": {
             "version_added": "1"
@@ -6364,6 +6506,7 @@
       "__compat": {
         "description": "<code>paste</code> event",
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/Window/paste_event",
+        "spec_url": "https://w3c.github.io/clipboard-apis/#clipboard-event-paste",
         "support": {
           "chrome": {
             "version_added": "1"
@@ -6459,6 +6602,7 @@
     "performance": {
       "__compat": {
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/Window/performance",
+        "spec_url": "https://w3c.github.io/hr-time/#the-performance-attribute",
         "support": {
           "chrome": {
             "version_added": "6"
@@ -6507,6 +6651,7 @@
     "personalbar": {
       "__compat": {
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/Window/personalbar",
+        "spec_url": "https://html.spec.whatwg.org/multipage/window-object.html#dom-window-personalbar-dev",
         "support": {
           "chrome": {
             "version_added": "1"
@@ -6606,6 +6751,7 @@
       "__compat": {
         "description": "<code>popstate</code> event",
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/Window/popstate_event",
+        "spec_url": "https://html.spec.whatwg.org/multipage/indices.html#event-popstate",
         "support": {
           "chrome": {
             "version_added": "5",
@@ -6662,6 +6808,7 @@
     "postMessage": {
       "__compat": {
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/Window/postMessage",
+        "spec_url": "https://html.spec.whatwg.org/multipage/web-messaging.html#dom-window-postmessage-options-dev",
         "support": {
           "chrome": {
             "version_added": "1"
@@ -6790,6 +6937,7 @@
     "print": {
       "__compat": {
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/Window/print",
+        "spec_url": "https://html.spec.whatwg.org/multipage/timers-and-user-prompts.html#printing",
         "support": {
           "chrome": {
             "version_added": "1",
@@ -6845,6 +6993,7 @@
     "prompt": {
       "__compat": {
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/Window/prompt",
+        "spec_url": "https://html.spec.whatwg.org/multipage/timers-and-user-prompts.html#dom-prompt-dev",
         "support": {
           "chrome": {
             "version_added": "1",
@@ -6900,6 +7049,7 @@
     "rejectionhandled_event": {
       "__compat": {
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/Window/rejectionhandled_event",
+        "spec_url": "https://html.spec.whatwg.org/multipage/webappapis.html#unhandled-promise-rejections",
         "description": "<code>rejectionhandled</code> event",
         "support": {
           "chrome": {
@@ -7016,6 +7166,7 @@
     "requestAnimationFrame": {
       "__compat": {
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/Window/requestAnimationFrame",
+        "spec_url": "https://html.spec.whatwg.org/multipage/imagebitmap-and-animations.html#dom-animationframeprovider-requestanimationframe",
         "support": {
           "chrome": [
             {
@@ -7235,6 +7386,7 @@
     "requestIdleCallback": {
       "__compat": {
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/Window/requestIdleCallback",
+        "spec_url": "https://w3c.github.io/requestidlecallback/#the-requestidlecallback-method",
         "support": {
           "chrome": {
             "version_added": "47"
@@ -7284,6 +7436,7 @@
       "__compat": {
         "description": "<code>resize</code> event",
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/Window/resize_event",
+        "spec_url": "https://drafts.csswg.org/cssom-view/#resizing-viewports",
         "support": {
           "chrome": {
             "version_added": "1",
@@ -7341,6 +7494,7 @@
     "resizeBy": {
       "__compat": {
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/Window/resizeBy",
+        "spec_url": "https://drafts.csswg.org/cssom-view/#dom-window-resizeby",
         "support": {
           "chrome": {
             "version_added": "1"
@@ -7390,6 +7544,7 @@
     "resizeTo": {
       "__compat": {
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/Window/resizeTo",
+        "spec_url": "https://drafts.csswg.org/cssom-view/#dom-window-resizeto",
         "support": {
           "chrome": {
             "version_added": "1"
@@ -7489,54 +7644,6 @@
         }
       }
     },
-    "returnValue": {
-      "__compat": {
-        "mdn_url": "https://developer.mozilla.org/docs/Web/API/Window/returnValue",
-        "support": {
-          "chrome": {
-            "version_added": false
-          },
-          "chrome_android": {
-            "version_added": false
-          },
-          "edge": {
-            "version_added": false
-          },
-          "firefox": {
-            "version_added": false
-          },
-          "firefox_android": {
-            "version_added": false
-          },
-          "ie": {
-            "version_added": false
-          },
-          "opera": {
-            "version_added": null
-          },
-          "opera_android": {
-            "version_added": null
-          },
-          "safari": {
-            "version_added": false
-          },
-          "safari_ios": {
-            "version_added": false
-          },
-          "samsunginternet_android": {
-            "version_added": false
-          },
-          "webview_android": {
-            "version_added": false
-          }
-        },
-        "status": {
-          "experimental": false,
-          "standard_track": true,
-          "deprecated": false
-        }
-      }
-    },
     "routeEvent": {
       "__compat": {
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/Window/routeEvent",
@@ -7590,6 +7697,7 @@
     "screen": {
       "__compat": {
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/Window/screen",
+        "spec_url": "https://drafts.csswg.org/cssom-view/#dom-window-screen",
         "support": {
           "chrome": {
             "version_added": "1"
@@ -7638,6 +7746,7 @@
     "screenLeft": {
       "__compat": {
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/Window/screenLeft",
+        "spec_url": "https://drafts.csswg.org/cssom-view/#dom-window-screenleft",
         "support": {
           "chrome": {
             "version_added": "1"
@@ -7686,6 +7795,7 @@
     "screenTop": {
       "__compat": {
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/Window/screenTop",
+        "spec_url": "https://drafts.csswg.org/cssom-view/#dom-window-screentop",
         "support": {
           "chrome": {
             "version_added": "1"
@@ -7734,6 +7844,7 @@
     "screenX": {
       "__compat": {
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/Window/screenX",
+        "spec_url": "https://drafts.csswg.org/cssom-view/#dom-window-screenx",
         "support": {
           "chrome": {
             "version_added": "1"
@@ -7784,6 +7895,7 @@
     "screenY": {
       "__compat": {
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/Window/screenY",
+        "spec_url": "https://drafts.csswg.org/cssom-view/#dom-window-screeny",
         "support": {
           "chrome": {
             "version_added": "1"
@@ -7834,6 +7946,7 @@
     "scroll": {
       "__compat": {
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/Window/scroll",
+        "spec_url": "https://drafts.csswg.org/cssom-view/#dom-window-scroll",
         "support": {
           "chrome": {
             "version_added": "1"
@@ -7930,6 +8043,7 @@
     "scrollbars": {
       "__compat": {
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/Window/scrollbars",
+        "spec_url": "https://html.spec.whatwg.org/multipage/window-object.html#dom-window-scrollbars-dev",
         "support": {
           "chrome": {
             "version_added": "1"
@@ -7978,6 +8092,7 @@
     "scrollBy": {
       "__compat": {
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/Window/scrollBy",
+        "spec_url": "https://drafts.csswg.org/cssom-view/#dom-window-scrollby",
         "support": {
           "chrome": {
             "version_added": "1"
@@ -8276,6 +8391,7 @@
     "scrollTo": {
       "__compat": {
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/Window/scrollTo",
+        "spec_url": "https://drafts.csswg.org/cssom-view/#dom-window-scrollto",
         "support": {
           "chrome": {
             "version_added": "1"
@@ -8372,6 +8488,7 @@
     "scrollX": {
       "__compat": {
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/Window/scrollX",
+        "spec_url": "https://drafts.csswg.org/cssom-view/#dom-window-scrollx",
         "support": {
           "chrome": [
             {
@@ -8535,6 +8652,7 @@
     "scrollY": {
       "__compat": {
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/Window/scrollY",
+        "spec_url": "https://drafts.csswg.org/cssom-view/#dom-window-scrolly",
         "support": {
           "chrome": [
             {
@@ -8698,6 +8816,7 @@
     "self": {
       "__compat": {
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/Window/self",
+        "spec_url": "https://html.spec.whatwg.org/multipage/window-object.html#dom-self-dev",
         "support": {
           "chrome": {
             "version_added": "1"
@@ -8746,6 +8865,7 @@
     "sessionStorage": {
       "__compat": {
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/Window/sessionStorage",
+        "spec_url": "https://html.spec.whatwg.org/multipage/webstorage.html#dom-sessionstorage-dev",
         "support": {
           "chrome": {
             "version_added": "5"
@@ -8842,6 +8962,7 @@
     "setImmediate": {
       "__compat": {
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/Window/setImmediate",
+        "spec_url": "https://w3c.github.io/setImmediate/#si-setImmediate",
         "support": {
           "chrome": {
             "version_added": false
@@ -9234,6 +9355,7 @@
     "speechSynthesis": {
       "__compat": {
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/Window/speechSynthesis",
+        "spec_url": "https://wicg.github.io/speech-api/#tts-section",
         "support": {
           "chrome": {
             "version_added": "33"
@@ -9283,6 +9405,7 @@
     "status": {
       "__compat": {
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/Window/status",
+        "spec_url": "https://html.spec.whatwg.org/multipage/window-object.html#dom-window-status",
         "support": {
           "chrome": {
             "version_added": "1"
@@ -9331,6 +9454,7 @@
     "statusbar": {
       "__compat": {
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/Window/statusbar",
+        "spec_url": "https://html.spec.whatwg.org/multipage/window-object.html#dom-window-statusbar-dev",
         "support": {
           "chrome": {
             "version_added": "1"
@@ -9379,6 +9503,7 @@
     "stop": {
       "__compat": {
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/Window/stop",
+        "spec_url": "https://html.spec.whatwg.org/multipage/window-object.html#dom-window-stop-dev",
         "support": {
           "chrome": {
             "version_added": "1"
@@ -9428,6 +9553,7 @@
       "__compat": {
         "description": "<code>storage</code> event",
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/Window/storage_event",
+        "spec_url": "https://html.spec.whatwg.org/multipage/indices.html#event-storage",
         "support": {
           "chrome": {
             "version_added": "1"
@@ -9523,6 +9649,7 @@
     "toolbar": {
       "__compat": {
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/Window/toolbar",
+        "spec_url": "https://html.spec.whatwg.org/multipage/window-object.html#dom-window-toolbar-dev",
         "support": {
           "chrome": {
             "version_added": "1"
@@ -9571,6 +9698,7 @@
     "top": {
       "__compat": {
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/Window/top",
+        "spec_url": "https://html.spec.whatwg.org/multipage/browsers.html#dom-top-dev",
         "support": {
           "chrome": {
             "version_added": "1"
@@ -9621,6 +9749,7 @@
       "__compat": {
         "description": "<code>transitioncancel</code> event",
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/Window/transitioncancel_event",
+        "spec_url": "https://drafts.csswg.org/css-transitions/#transitioncancel",
         "support": {
           "chrome": {
             "version_added": false
@@ -9700,6 +9829,7 @@
       "__compat": {
         "description": "<code>transitionend</code> event",
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/Window/transitionend_event",
+        "spec_url": "https://drafts.csswg.org/css-transitions/#transitionend",
         "support": {
           "chrome": {
             "version_added": false
@@ -9749,6 +9879,7 @@
       "__compat": {
         "description": "<code>transitionrun</code> event",
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/Window/transitionrun_event",
+        "spec_url": "https://drafts.csswg.org/css-transitions/#transitionrun",
         "support": {
           "chrome": {
             "version_added": false
@@ -9828,6 +9959,7 @@
       "__compat": {
         "description": "<code>transitionstart</code> event",
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/Window/transitionstart_event",
+        "spec_url": "https://drafts.csswg.org/css-transitions/#transitionstart",
         "support": {
           "chrome": {
             "version_added": false
@@ -9953,6 +10085,7 @@
     "unhandledrejection_event": {
       "__compat": {
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/Window/unhandledrejection_event",
+        "spec_url": "https://html.spec.whatwg.org/multipage/indices.html#event-unhandledrejection",
         "description": "<code>unhandledrejection</code> event",
         "support": {
           "chrome": {
@@ -10022,6 +10155,7 @@
       "__compat": {
         "description": "<code>unload</code> event",
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/Window/unload_event",
+        "spec_url": "https://html.spec.whatwg.org/multipage/indices.html#event-unload",
         "support": {
           "chrome": {
             "version_added": "1"
@@ -10118,6 +10252,7 @@
     "visualViewport": {
       "__compat": {
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/Window/visualViewport",
+        "spec_url": "https://wicg.github.io/visual-viewport/#dom-window-visualviewport",
         "support": {
           "chrome": {
             "version_added": "61"
@@ -10229,7 +10364,7 @@
         "status": {
           "experimental": true,
           "standard_track": true,
-          "deprecated": false
+          "deprecated": true
         }
       }
     },
@@ -10279,7 +10414,7 @@
         "status": {
           "experimental": true,
           "standard_track": true,
-          "deprecated": false
+          "deprecated": true
         }
       }
     },
@@ -10348,7 +10483,7 @@
         "status": {
           "experimental": true,
           "standard_track": true,
-          "deprecated": false
+          "deprecated": true
         }
       }
     },
@@ -10404,7 +10539,7 @@
         "status": {
           "experimental": true,
           "standard_track": true,
-          "deprecated": false
+          "deprecated": true
         }
       }
     },
@@ -10473,7 +10608,7 @@
         "status": {
           "experimental": true,
           "standard_track": true,
-          "deprecated": false
+          "deprecated": true
         }
       }
     },
@@ -10523,7 +10658,7 @@
         "status": {
           "experimental": true,
           "standard_track": true,
-          "deprecated": false
+          "deprecated": true
         }
       }
     },
@@ -10573,7 +10708,7 @@
         "status": {
           "experimental": true,
           "standard_track": true,
-          "deprecated": false
+          "deprecated": true
         }
       }
     },
@@ -10623,7 +10758,7 @@
         "status": {
           "experimental": true,
           "standard_track": true,
-          "deprecated": false
+          "deprecated": true
         }
       }
     },
@@ -10691,13 +10826,14 @@
         "status": {
           "experimental": true,
           "standard_track": true,
-          "deprecated": false
+          "deprecated": true
         }
       }
     },
     "window": {
       "__compat": {
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/Window/window",
+        "spec_url": "https://html.spec.whatwg.org/multipage/window-object.html#dom-window-dev",
         "support": {
           "chrome": {
             "version_added": "1"

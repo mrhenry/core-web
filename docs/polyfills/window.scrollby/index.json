@@ -37,6 +37,7 @@
   "mdn": {
     "__compat": {
       "mdn_url": "https://developer.mozilla.org/docs/Web/API/Window/scrollBy",
+      "spec_url": "https://drafts.csswg.org/cssom-view/#dom-window-scrollby",
       "support": {
         "chrome": {
           "version_added": "1"

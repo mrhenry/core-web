@@ -33,6 +33,7 @@
   "mdn": {
     "__compat": {
       "mdn_url": "https://developer.mozilla.org/docs/Web/API/TextEncoder",
+      "spec_url": "https://encoding.spec.whatwg.org/#interface-textencoder",
       "support": {
         "chrome": {
           "version_added": "38"
@@ -102,6 +103,7 @@
     "TextEncoder": {
       "__compat": {
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/TextEncoder/TextEncoder",
+        "spec_url": "https://encoding.spec.whatwg.org/#ref-for-dom-textencoder①",
         "description": "<code>TextEncoder()</code> constructor",
         "support": {
           "chrome": [
@@ -203,6 +205,7 @@
     "encode": {
       "__compat": {
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/TextEncoder/encode",
+        "spec_url": "https://encoding.spec.whatwg.org/#ref-for-dom-textencoder-encode①",
         "support": {
           "chrome": {
             "version_added": "38"
@@ -266,6 +269,7 @@
     "encodeInto": {
       "__compat": {
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/TextEncoder/encodeInto",
+        "spec_url": "https://encoding.spec.whatwg.org/#ref-for-dom-textencoder-encodeinto①",
         "support": {
           "chrome": {
             "version_added": "74"
@@ -317,6 +321,7 @@
     "encoding": {
       "__compat": {
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/TextEncoder/encoding",
+        "spec_url": "https://encoding.spec.whatwg.org/#dom-textencoder-encoding",
         "support": {
           "chrome": {
             "version_added": "38"

@@ -20,6 +20,7 @@
   "mdn": {
     "__compat": {
       "mdn_url": "https://developer.mozilla.org/docs/Web/API/Document/querySelector",
+      "spec_url": "https://dom.spec.whatwg.org/#ref-for-dom-parentnode-queryselector①",
       "support": {
         "chrome": {
           "version_added": "1"

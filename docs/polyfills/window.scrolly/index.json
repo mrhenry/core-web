@@ -31,6 +31,7 @@
   "mdn": {
     "__compat": {
       "mdn_url": "https://developer.mozilla.org/docs/Web/API/Window/scrollY",
+      "spec_url": "https://drafts.csswg.org/cssom-view/#dom-window-scrolly",
       "support": {
         "chrome": [
           {
