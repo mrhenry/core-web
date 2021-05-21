@@ -12,7 +12,8 @@ let logoLoader = async () => {
 
 module.exports = {
 	polyfillCardOGImage: polyfillCardOGImage,
-	allPolyfillsCardOGImage: allPolyfillsCardOGImage
+	allPolyfillsCardOGImage: allPolyfillsCardOGImage,
+	coreWebCardOGImage: coreWebCardOGImage
 };
 
 async function polyfillCardOGImage(feature) {
@@ -56,6 +57,31 @@ async function allPolyfillsCardOGImage() {
 	const ctx = canvas.getContext('2d');
 
 	const title = 'All polyfills'
+
+	ctx.fillStyle = '#ffd41b';
+	ctx.fillRect(0, 0, 1200, 628);
+
+	ctx.strokeStyle = '#000';
+	ctx.fillStyle = '#000';
+	const nameFontSize = Math.min(80, Math.round(80 * (1 / title.length * 21)));
+	ctx.font = `${nameFontSize}px monospace`;
+
+	ctx.fillText(title, 75, 125, 900);
+
+	ctx.font = '50px monospace';
+	ctx.fillText('core-web', 75, 538);
+
+	const logoImage = await logoLoader();
+	ctx.drawImage(logoImage, 1200 - (75 + 80), 75, 80, 80);
+	
+	return canvas.toBuffer('image/jpeg');
+}
+
+async function coreWebCardOGImage() {
+	const canvas = createCanvas(1200, 628);
+	const ctx = canvas.getContext('2d');
+
+	const title = 'Automatically import polyfills'
 
 	ctx.fillStyle = '#ffd41b';
 	ctx.fillRect(0, 0, 1200, 628);

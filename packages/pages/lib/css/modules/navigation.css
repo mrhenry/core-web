@@ -23,6 +23,13 @@
 	margin-right: 1.5rem;
 }
 
+@media (max-width: 767px) {
+	.navigation__list-item {
+		margin-bottom: 0.625rem;
+		margin-top: 0.625rem;
+	}
+}
+
 @media (min-width: 768px) {
 	.navigation__list-item {
 		margin-right: 0;
@@ -36,4 +43,5 @@
 .navigation__link {
 	color: currentColor;
 	font-family: sans-serif;
+	padding: 0.3125rem;
 }
