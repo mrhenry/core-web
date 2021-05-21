@@ -8,7 +8,7 @@ const generateBrowserCompat = require('./browser-compat/browser-compat');
 const generateE2E = require('./e2e/e2e');
 
 async function main() {
-	generateLanding(
+	await generateLanding(
 		getAssetMap()
 	);
 

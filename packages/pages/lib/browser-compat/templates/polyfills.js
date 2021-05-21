@@ -56,6 +56,7 @@ module.exports = function allPolyfillsHTML(assetMap, features, sitemap) {
 					<li class="navigation__list-item"><a href="/#why" class="navigation__link">why</a></li>
 					<li class="navigation__list-item"><a href="/#roadmap" class="navigation__link">roadmap to v1</a></li>
 					<li class="navigation__list-item"><a href="/polyfills/" class="navigation__link">polyfills</a></li>
+					<li class="navigation__list-item"><a href="https://github.com/mrhenry/core-web" class="navigation__link" target="_blank" rel="noopener">github</a></li>
 				</ul>
 			</nav>
 		</div>

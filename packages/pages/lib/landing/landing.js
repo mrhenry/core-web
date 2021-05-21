@@ -11,23 +11,44 @@ const whys = require('./content/whys');
 const roadmap = require('./templates/roadmap');
 const siteFooter = require('./templates/site-footer');
 const requirements = require('./templates/requirements');
+const { coreWebCardOGImage } = require('../browser-compat/templates/polyfill-card-og-image');
 
 module.exports = generate;
 
-function generate(assetMap) {
+async function generate(assetMap) {
+	fs.writeFileSync(
+			path.join(__dirname, '../../dist/', 'og-image.jpg'),
+			await coreWebCardOGImage()
+	);
+	
 	fs.writeFileSync(path.join(__dirname, '../../dist/index.html'), html`<!DOCTYPE html>
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta name="description" content="Bringing polyfill.io to your babel flow.">
+
+	<title>core-web</title>
+	<meta name="description" content="Bringing web polyfills to your babel flow.">
 	<meta name="author" content="Mr. Henry">
 	<meta name="publisher" content="Mr. Henry">
 	<meta name="copyright" content="Mr. Henry">
 	<meta name="robots" content="index,follow">
 	<meta name="distribution" content="Global">
+	<meta property="og:type" content="website">
+	<meta property="og:title" content="core-web">
+	<meta property="og:url" content="https://core-web.mrhenry.studio">
+	<meta property="og:image:width" content="1200">
+	<meta property="og:image:height" content="628">
+	<meta property="og:image" content="https://core-web.mrhenry.studio/og-image.jpg">
+	<meta property="og:site_name" content="core-web">
+	<meta property="og:description" content="Bringing web polyfills to your babel flow.">
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:site" content="@wearemrhenry">
+	<meta name="twitter:title" content="core-web">
+	<meta name="twitter:description" content="Bringing web polyfills to your babel flow.">
+	<meta name="twitter:image" content="https://core-web.mrhenry.studio/og-image.jpg">
+
 	<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🕸</text></svg>">
-	<title>core-web</title>
 
 	<link rel="preload" href="/fonts/Atkinson-Hyperlegible-Regular-102a.woff2" as="font" type="font/woff2" crossorigin="anonymous" />
 	<link rel="preload" href="/fonts/Atkinson-Hyperlegible-Bold-102a.woff2" as="font" type="font/woff2" crossorigin="anonymous" />
@@ -63,6 +84,10 @@ function generate(assetMap) {
 		{
 			title: 'polyfills',
 			url: '/polyfills/'
+		},
+		{
+			title: 'github',
+			url: 'https://github.com/mrhenry/core-web'
 		}
 	])}
 
