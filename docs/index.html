@@ -3,14 +3,29 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta name="description" content="Bringing polyfill.io to your babel flow.">
+
+	<title>core-web</title>
+	<meta name="description" content="Bringing web polyfills to your babel flow.">
 	<meta name="author" content="Mr. Henry">
 	<meta name="publisher" content="Mr. Henry">
 	<meta name="copyright" content="Mr. Henry">
 	<meta name="robots" content="index,follow">
 	<meta name="distribution" content="Global">
+	<meta property="og:type" content="website">
+	<meta property="og:title" content="core-web">
+	<meta property="og:url" content="https://core-web.mrhenry.studio">
+	<meta property="og:image:width" content="1200">
+	<meta property="og:image:height" content="628">
+	<meta property="og:image" content="https://core-web.mrhenry.studio/og-image.jpg">
+	<meta property="og:site_name" content="core-web">
+	<meta property="og:description" content="Bringing web polyfills to your babel flow.">
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:site" content="@wearemrhenry">
+	<meta name="twitter:title" content="core-web">
+	<meta name="twitter:description" content="Bringing web polyfills to your babel flow.">
+	<meta name="twitter:image" content="https://core-web.mrhenry.studio/og-image.jpg">
+
 	<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🕸</text></svg>">
-	<title>core-web</title>
 
 	<link rel="preload" href="/fonts/Atkinson-Hyperlegible-Regular-102a.woff2" as="font" type="font/woff2" crossorigin="anonymous" />
 	<link rel="preload" href="/fonts/Atkinson-Hyperlegible-Bold-102a.woff2" as="font" type="font/woff2" crossorigin="anonymous" />
@@ -24,13 +39,13 @@
 <script src="/js/index.b62c277f0db6b0b988d7.2013.js" ua-target="2013" async></script>
 <script src="/js/index.83850461f0d348ec1295.2011.js" ua-target="2011" async></script>
 
-<link rel="stylesheet" href="/css/index.888c756f01dd16a15a9f.2020.css" ua-target="2020">
-<link rel="stylesheet" href="/css/index.888c756f01dd16a15a9f.2018.css" ua-target="2018">
-<link rel="stylesheet" href="/css/index.888c756f01dd16a15a9f.2016.css" ua-target="2016">
-<link rel="stylesheet" href="/css/index.888c756f01dd16a15a9f.2014.css" ua-target="2014">
-<link rel="stylesheet" href="/css/index.888c756f01dd16a15a9f.2013.css" ua-target="2013">
-<link rel="stylesheet" href="/css/index.888c756f01dd16a15a9f.2011.css" ua-target="2011">
-<link rel="stylesheet" href="/css/index.888c756f01dd16a15a9f.2011.css" ua-target="fallback">
+<link rel="stylesheet" href="/css/index.b2c231b60c8ef205b212.2020.css" ua-target="2020">
+<link rel="stylesheet" href="/css/index.b2c231b60c8ef205b212.2018.css" ua-target="2018">
+<link rel="stylesheet" href="/css/index.b2c231b60c8ef205b212.2016.css" ua-target="2016">
+<link rel="stylesheet" href="/css/index.b2c231b60c8ef205b212.2014.css" ua-target="2014">
+<link rel="stylesheet" href="/css/index.b2c231b60c8ef205b212.2013.css" ua-target="2013">
+<link rel="stylesheet" href="/css/index.b2c231b60c8ef205b212.2011.css" ua-target="2011">
+<link rel="stylesheet" href="/css/index.b2c231b60c8ef205b212.2011.css" ua-target="fallback">
 
 </head>
 <body>
@@ -57,7 +72,7 @@
 
 				<nav class="navigation" aria-label="page sections">
 					<ul class="navigation__list">
-						<li class="navigation__list-item"><a href="/#what" class="navigation__link">what</a></li><li class="navigation__list-item"><a href="/#why" class="navigation__link">why</a></li><li class="navigation__list-item"><a href="/#roadmap" class="navigation__link">roadmap to v1</a></li><li class="navigation__list-item"><a href="/polyfills/" class="navigation__link">polyfills</a></li>
+						<li class="navigation__list-item"><a href="/#what" class="navigation__link">what</a></li><li class="navigation__list-item"><a href="/#why" class="navigation__link">why</a></li><li class="navigation__list-item"><a href="/#roadmap" class="navigation__link">roadmap to v1</a></li><li class="navigation__list-item"><a href="/polyfills/" class="navigation__link">polyfills</a></li><li class="navigation__list-item"><a href="https://github.com/mrhenry/core-web" class="navigation__link" target="_blank" rel="noopener">github</a></li>
 					</ul>
 				</nav>
 			</div>
@@ -78,7 +93,7 @@
 			<div class="hero__content">
 				<div class="hero__text">
 					<p>
-						core-web is a set of tools to bundle polyfills together with your javascript code. Just define a set of browsers and automatically receive everything you need.
+						<strong>core-web</strong> is a set of tools to bundle polyfills together with your javascript code. Just define a set of browsers and automatically receive everything you need.
 					</p>
 				</div>
 
@@ -127,8 +142,7 @@
 
 					<p class="why__item__content">
 						Most visitors use a modern browser which doesn't need any polyfills.
-When polyfills are bundled there is no need for an extra http request.
-For most visitors your pages will render faster.
+When polyfills are bundled there is no need for an extra http request, making your site faster.
 					</p>
 				</div>
 			</article>
@@ -140,8 +154,8 @@ For most visitors your pages will render faster.
 					</h3>
 
 					<p class="why__item__content">
-						Any external client side dependency has some inherent risk.
-Converting this to a build depedency reduces this.
+						Any external client-side dependency has some inherent risk.
+Converting this to a build dependency reduces this by making changes more visible to you.
 					</p>
 				</div>
 			</article>
@@ -153,7 +167,8 @@ Converting this to a build depedency reduces this.
 					</h3>
 
 					<p class="why__item__content">
-						When an external polyfill provider changes or updates their code they potentially introduce bugs impacting your code. Packaging polyfills with your code adds an extra level of checks to prevent bugs from landing in production.
+						When an external polyfill provider changes or updates their code they potentially introduce bugs impacting your code.
+Packaging polyfills with your code adds an extra level of checks to prevent bugs from landing in production.
 					</p>
 				</div>
 			</article>
@@ -165,8 +180,8 @@ Converting this to a build depedency reduces this.
 					</h3>
 
 					<p class="why__item__content">
-						Because your build process sees every polyfill you can have sourcemaps.
-This makes it easier to report and debug issues.
+						Because your build process sees every polyfill, you can have sourcemaps.
+This makes it easier to debug and report issues.
 					</p>
 				</div>
 			</article>
@@ -178,7 +193,7 @@ This makes it easier to report and debug issues.
 					</h3>
 
 					<p class="why__item__content">
-						You can add your safeguards and only update core-web when all your requirements are met.
+						You can add your own safeguards and only update <strong>core-web</strong> when all your requirements are met.
 					</p>
 				</div>
 			</article>
@@ -190,7 +205,7 @@ This makes it easier to report and debug issues.
 					</h3>
 
 					<p class="why__item__content">
-						Core JS and Polyfill.io have overlapping polyfills.
+						<a href="https://github.com/zloirock/core-js" target="_blank" rel="noopener"><strong>core-js</strong></a> and <a href="https://polyfill.io/v3/" target="_blank" rel="noopener"><strong>Polyfill.io</strong></a> have overlapping polyfills.
 We make sure you only get a single polyfill for each feature.
 					</p>
 				</div>
