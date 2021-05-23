@@ -27,6 +27,7 @@ build: install generate build-example build-tests build-pages build-pages-worker
 
 run-tests: install
 	(cd packages/core-web-generator && npm run test)
+	(cd packages/babel-plugin-core-web && npm run test)
 	(cd packages/core-web-tests && npm run browserstack-runner)
 
 run-tests-e2e: build-pages

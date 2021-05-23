@@ -97,6 +97,7 @@ function customMatcherSources(): Record<string, Array<string>> {
 			"new Animation()",
 			"new Animation($1)",
 			"new Animation($1, $2)",
+			"document.timeline"
 		]
 	}
 }
