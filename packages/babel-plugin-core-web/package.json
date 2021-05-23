@@ -22,6 +22,12 @@
     "/lib",
     "/LICENSE"
   ],
+   "directories": {
+    "test": "__tests__"
+  },
+  "scripts": {
+    "test": "node ./__tests__/index.test.js"
+  },
   "dependencies": {
     "@babel/helper-module-imports": "^7.13.12",
     "@babel/types": "^7.14.2",
