@@ -92,23 +92,25 @@ class Injector {
 		this._handleGeneric(path, state, matchers);
 	}
 
-	handleNewExpression(path, state) {
-		const matchers = newExpressionMatcher(path.node, newExpressionMatcherMap);
-		this._handleGeneric(path, state, matchers);
-	}
-
-	handleNewExpressionStringLiterals(path, state) {
-		const matchers = newExpressionMatcherStringLiterals(path.node, newExpressionMatcherStringLiteralsMap);
-		this._handleGeneric(path, state, matchers);
-	}
-
 	handleElementQsaScopeCallExpression(path, state) {
 		if (
-			path.node &&
-			path.node.arguments &&
-			path.node.arguments.length > 0 &&
-			path.node.arguments[0].type === 'StringLiteral'
+			!path.node ||
+			!path.node.callee ||
+			!path.node.callee.property ||
+			path.node.callee.property.type !== 'Identifier' ||
+			path.node.callee.property.name !== 'querySelectorAll'
 		) {
+			return;
+		}
+
+		if (
+			!path.node.arguments ||
+			path.node.arguments.length <= 0
+		) {
+			return;
+		}
+
+		if (path.node.arguments[0].type === 'StringLiteral') {
 			if (/:scope(?![\w-])/i.test(path.node.arguments[0].value)) {
 				this._handleGeneric(
 					{
@@ -121,9 +123,6 @@ class Injector {
 		}
 
 		if (
-			path.node &&
-			path.node.arguments &&
-			path.node.arguments.length > 0 &&
 			path.node.arguments[0].type === 'TemplateLiteral' &&
 			path.node.arguments[0].quasis &&
 			path.node.arguments[0].quasis.length > 0
@@ -143,6 +142,7 @@ class Injector {
 
 				return false;
 			});
+
 			if (!!quasisElWithScope) {
 				this._handleGeneric(
 					{
@@ -153,6 +153,16 @@ class Injector {
 				);
 			}
 		}
+	}
+
+	handleNewExpression(path, state) {
+		const matchers = newExpressionMatcher(path.node, newExpressionMatcherMap);
+		this._handleGeneric(path, state, matchers);
+	}
+
+	handleNewExpressionStringLiterals(path, state) {
+		const matchers = newExpressionMatcherStringLiterals(path.node, newExpressionMatcherStringLiteralsMap);
+		this._handleGeneric(path, state, matchers);
 	}
 
 	_handleGeneric(path, state, matchers) {
