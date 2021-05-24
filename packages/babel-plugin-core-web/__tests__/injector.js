@@ -30,8 +30,10 @@ main();
 
 function main() {
 	testIdentifiers();
+	testMemberExpressions();
 	testNewExpressions();
 	testNewExpressionsWithStringLiterals();
+	testQSAScope();
 }
 
 function testIdentifiers() {
@@ -131,6 +133,50 @@ function testNewExpressionsWithStringLiterals() {
 		const parsed = parser.parseExpression(testCase.expression);
 
 		injector.handleNewExpressionStringLiterals({ node: parsed }, {});
+		assert.ok(injector.importSet.has(testCase.feature), `expected import set to have : ${testCase.feature}, got : ${JSON.stringify(Array.from(injector.importSet))}`);
+	}
+}
+
+function testQSAScope() {
+	const testCases = [
+		{
+			expression: "document.querySelectorAll(`:scope ${'p:last-child'}`)",
+			feature: '~element-qsa-scope',
+			featureSet: featureSetChrome17,
+		},
+		{
+			expression: "document.querySelectorAll(':scope div')",
+			feature: '~element-qsa-scope',
+			featureSet: featureSetChrome17,
+		},
+		{
+			expression: "document.querySelectorAll(':scope.foo')",
+			feature: '~element-qsa-scope',
+			featureSet: featureSetChrome17,
+		},
+		{
+			expression: "document.querySelectorAll('.foo:scope')",
+			feature: '~element-qsa-scope',
+			featureSet: featureSetChrome17,
+		},
+		{
+			expression: "document.querySelectorAll('div :scope')",
+			feature: '~element-qsa-scope',
+			featureSet: featureSetChrome17,
+		},
+	];
+
+	for (const testCase of testCases) {
+		const injector = new Injector(
+			testCase.featureSet,
+			{
+				debug: false,
+			}
+		);
+
+		const parsed = parser.parseExpression(testCase.expression);
+
+		injector.handleElementQsaScopeCallExpression({ node: parsed }, {});
 		assert.ok(injector.importSet.has(testCase.feature), `expected import set to have : ${testCase.feature}, got : ${JSON.stringify(Array.from(injector.importSet))}`);
 	}
 }
