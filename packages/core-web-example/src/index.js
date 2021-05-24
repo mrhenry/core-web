@@ -8,8 +8,6 @@ console.log(new Intl.NumberFormat('es', { style: 'currency', currency: 'EUR' }).
 
 customElements.define('mr-x', class extends HTMLElement { });
 
-console.log(Document);
-
 var query = 'p:last-child';
 document.querySelectorAll(`:scope ${query}`);
 
