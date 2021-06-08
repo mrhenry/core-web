@@ -62,7 +62,7 @@
           "version_added": "1.0"
         },
         "webview_android": {
-          "version_added": "1"
+          "version_added": "≤37"
         }
       },
       "status": {
@@ -78,7 +78,7 @@
   },
   "native": {
     "android": {
-      "version_added": "1"
+      "version_added": "≤37"
     },
     "chrome": {
       "version_added": "1"

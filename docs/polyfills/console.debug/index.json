@@ -68,7 +68,7 @@
           "version_added": "1.0"
         },
         "webview_android": {
-          "version_added": "1"
+          "version_added": "≤37"
         }
       },
       "status": {
@@ -129,7 +129,7 @@
             "notes": "In Samsung Internet 1.5, if a negative value is passed to <code>%d</code>, it will be rounded down to the closest negative integer. For example, -0.1 becomes -1."
           },
           "webview_android": {
-            "version_added": "1",
+            "version_added": "≤37",
             "notes": "In version 28, if a negative value is passed to <code>%d</code>, it will be rounded down to the closest negative integer. For example, -0.1 becomes -1."
           }
         },
@@ -147,7 +147,7 @@
   },
   "native": {
     "android": {
-      "version_added": "1"
+      "version_added": "≤37"
     },
     "chrome": {
       "version_added": "1"
