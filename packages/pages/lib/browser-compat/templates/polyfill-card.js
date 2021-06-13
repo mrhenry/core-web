@@ -184,7 +184,7 @@ function links(feature) {
 		list.push(
 			html`
 				<li>
-					<a href="${path.join('https://github.com/Financial-Times/polyfill-library/tree/master/polyfills/', feature.polyfillio.baseDir)}" target="_blank" rel="noopener">polyfill-library</a>
+					<a href="https://${path.join('github.com/Financial-Times/polyfill-library/tree/master/polyfills/', feature.polyfillio.baseDir)}" target="_blank" rel="noopener">polyfill-library</a>
 				</li>
 			`
 		);
