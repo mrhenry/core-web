@@ -48,6 +48,9 @@ async function generate(assetMap) {
 	<meta name="twitter:description" content="Bringing web polyfills to your babel flow.">
 	<meta name="twitter:image" content="https://core-web.mrhenry.studio/og-image.jpg">
 
+	<meta name="theme-color" content="#ffdc45" media="(prefers-color-scheme: light)">
+	<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)">
+
 	<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🕸</text></svg>">
 
 	<link rel="preload" href="/fonts/Atkinson-Hyperlegible-Regular-102a.woff2" as="font" type="font/woff2" crossorigin="anonymous" />
