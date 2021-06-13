@@ -15,7 +15,7 @@
     "@babel/parser": "^7.14.4",
     "@babel/traverse": "^7.14.0",
     "@babel/types": "^7.14.5",
-    "@mdn/browser-compat-data": "^3.3.6",
+    "@mdn/browser-compat-data": "^3.3.7",
     "@webcomponents/custom-elements": "^1.4.3",
     "@webcomponents/shadycss": "^1.10.2",
     "@webcomponents/shadydom": "^1.8.0",
