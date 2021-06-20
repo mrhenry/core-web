@@ -381,6 +381,8 @@
     },
     "all": {
       "__compat": {
+        "mdn_url": "https://developer.mozilla.org/docs/Web/API/Document/all",
+        "spec_url": "https://html.spec.whatwg.org/multipage/obsolete.html#dom-document-all",
         "support": {
           "chrome": [
             {
@@ -2294,10 +2296,10 @@
               "notes": "For backwards compatibility, the <code>options</code> argument can be an object or a string with the custom element tag name, although the string version is deprecated."
             },
             "safari": {
-              "version_added": null
+              "version_added": false
             },
             "safari_ios": {
-              "version_added": null
+              "version_added": false
             },
             "samsunginternet_android": {
               "version_added": "6.0",
@@ -4727,7 +4729,7 @@
               "version_added": null
             },
             "safari": {
-              "version_added": null
+              "version_added": false
             },
             "safari_ios": {
               "version_added": false
