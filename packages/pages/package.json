@@ -32,7 +32,7 @@
     "browserstack-runner": "^0.9.4",
     "canvas": "^2.8.0",
     "core-js": "^3.14.0",
-    "cssnano": "^3.10.0",
+    "cssnano": "^5.0.6",
     "polyfill-library": "^3.105.0",
     "postcss": "^8.3.1",
     "postcss-import": "^14.0.2",
