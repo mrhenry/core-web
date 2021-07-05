@@ -37,7 +37,7 @@
     "postcss": "^8.3.5",
     "postcss-import": "^14.0.2",
     "postcss-preset-env": "^6.7.0",
-    "webpack": "^5.39.1",
+    "webpack": "^5.42.1",
     "webpack-cli": "^4.7.2"
   }
 }
