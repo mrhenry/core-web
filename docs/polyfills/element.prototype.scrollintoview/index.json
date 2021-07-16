@@ -104,9 +104,9 @@
         "deprecated": false
       }
     },
-    "scrollIntoViewOptions": {
+    "options_parameter": {
       "__compat": {
-        "description": "<code>scrollIntoViewOptions</code>",
+        "description": "<code>options</code> parameter",
         "support": {
           "chrome": {
             "version_added": "61",
