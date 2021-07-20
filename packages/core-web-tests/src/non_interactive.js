@@ -2,6 +2,7 @@ import './test_AbortController.js';
 import './test_Blob.js';
 import './test_Element.prototype.classList.js';
 import './test_Intl.DateTimeFormat.js';
+import './test_Intl.DateTimeFormat~timeZone.js';
 import './test_Intl.RelativeTimeFormat.js';
 import './test_Object.assign.js';
 import './test_TypedArray.js';

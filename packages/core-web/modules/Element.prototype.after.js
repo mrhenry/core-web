@@ -31,7 +31,7 @@ Document.prototype.after = Element.prototype.after = function after() {
 			}
 			idx = args.indexOf(viableNextSibling);
 		}
-		
+
 		this.parentNode.insertBefore(_mutation(arguments), viableNextSibling);
 	}
 };

@@ -50,7 +50,7 @@ if (!("Blob"in self&&function(){try{return new Blob,!0}catch(n){return!1}}()&&fu
  */
 
 /*jslint bitwise: true, regexp: true, confusion: true, es5: true, vars: true, white: true,
-  plusplus: true */
+	plusplus: true */
 
 /*! @source http://purl.eligrey.com/github/Blob.js/blob/master/Blob.js */
 
