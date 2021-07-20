@@ -35,12 +35,12 @@ import IteratorStep from "@mrhenry/core-web/helpers/_ESAbstract.IteratorStep";
 import IteratorValue from "@mrhenry/core-web/helpers/_ESAbstract.IteratorValue";
 import SameValue from "@mrhenry/core-web/helpers/_ESAbstract.SameValue";
 (function(undefined) {
-if (!("Intl"in self&&Intl.ListFormat&&Intl.ListFormat.supportedLocalesOf&&1===Intl.ListFormat.supportedLocalesOf("en-US").length
+if (!("Intl"in self&&Intl.ListFormat&&Intl.ListFormat.supportedLocalesOf&&1===Intl.ListFormat.supportedLocalesOf("no").length
 )) {
-// Intl.ListFormat.~locale.en-US
+// Intl.ListFormat.~locale.no
 /* @generated */	
 // prettier-ignore
 if (Intl.ListFormat && typeof Intl.ListFormat.__addLocaleData === 'function') {
-  Intl.ListFormat.__addLocaleData({"data":{"conjunction":{"long":{"start":"{0}, {1}","middle":"{0}, {1}","end":"{0}, and {1}","pair":"{0} and {1}"},"short":{"start":"{0}, {1}","middle":"{0}, {1}","end":"{0}, & {1}","pair":"{0} & {1}"},"narrow":{"start":"{0}, {1}","middle":"{0}, {1}","end":"{0}, {1}","pair":"{0}, {1}"}},"disjunction":{"long":{"start":"{0}, {1}","middle":"{0}, {1}","end":"{0}, or {1}","pair":"{0} or {1}"},"short":{"start":"{0}, {1}","middle":"{0}, {1}","end":"{0}, or {1}","pair":"{0} or {1}"},"narrow":{"start":"{0}, {1}","middle":"{0}, {1}","end":"{0}, or {1}","pair":"{0} or {1}"}},"unit":{"long":{"start":"{0}, {1}","middle":"{0}, {1}","end":"{0}, {1}","pair":"{0}, {1}"},"short":{"start":"{0}, {1}","middle":"{0}, {1}","end":"{0}, {1}","pair":"{0}, {1}"},"narrow":{"start":"{0} {1}","middle":"{0} {1}","end":"{0} {1}","pair":"{0} {1}"}}},"locale":"en-US"}
+  Intl.ListFormat.__addLocaleData({"data":{"conjunction":{"long":{"start":"{0}, {1}","middle":"{0}, {1}","end":"{0} og {1}","pair":"{0} og {1}"},"short":{"start":"{0}, {1}","middle":"{0}, {1}","end":"{0} og {1}","pair":"{0} og {1}"},"narrow":{"start":"{0}, {1}","middle":"{0}, {1}","end":"{0} og {1}","pair":"{0} og {1}"}},"disjunction":{"long":{"start":"{0}, {1}","middle":"{0}, {1}","end":"{0} eller {1}","pair":"{0} eller {1}"},"short":{"start":"{0}, {1}","middle":"{0}, {1}","end":"{0} eller {1}","pair":"{0} eller {1}"},"narrow":{"start":"{0}, {1}","middle":"{0}, {1}","end":"{0} eller {1}","pair":"{0} eller {1}"}},"unit":{"long":{"start":"{0}, {1}","middle":"{0}, {1}","end":"{0} og {1}","pair":"{0} og {1}"},"short":{"start":"{0}, {1}","middle":"{0}, {1}","end":"{0}, {1}","pair":"{0}, {1}"},"narrow":{"start":"{0}, {1}","middle":"{0}, {1}","end":"{0}, {1}","pair":"{0}, {1}"}}},"locale":"no"}
 )
 }}}).call('object' === typeof window && window || 'object' === typeof self && self || 'object' === typeof global && global || {});

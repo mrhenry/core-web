@@ -201,13 +201,11 @@ const aliasPrefixesToSkip = [
 async function streamToString(stream) {
     return new Promise((resolve) => {
         let out = '';
-        stream.pipe({
-            write: (chunk) => {
-                out += chunk.toString("utf-8");
-            },
-            end: () => {
-                resolve(out);
-            },
+        stream.on('data', (chunk) => {
+            out += chunk.toString("utf-8");
+        });
+        stream.on('end', () => {
+            resolve(out);
         });
     });
 }

@@ -47,4 +47,5 @@ function ToPrimitive(input /* [, PreferredType] */) { // eslint-disable-line no-
 	}
 	// 3. Return input
 	return input;
-}export default ToPrimitive;
+}
+export default ToPrimitive;

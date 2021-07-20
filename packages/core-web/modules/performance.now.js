@@ -7,11 +7,11 @@ if (!("performance"in self&&"now"in self.performance
 var startTime = Date.now();
 
 if (!global.performance) {
-    global.performance = {};
+	global.performance = {};
 }
 
 global.performance.now = function () {
-    return Date.now() - startTime;
+	return Date.now() - startTime;
 };
 
 }(self));

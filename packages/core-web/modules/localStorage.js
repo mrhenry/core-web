@@ -94,7 +94,7 @@ if (!((function(){try{return self.localStorage.setItem("storage_test",1),self.lo
 			return false;
 		}
 	})();
-	
+
 	if (!localStorageExists) {
 		var
 		// <Global>.localStorage

@@ -19,7 +19,7 @@ if (!("DOMRect"in self&&function(e){try{return new e}catch(t){return!1}}(self.DO
 	function number(v) {
 		return v === undefined ? 0 : Number(v);
 	}
-	
+
 	function different(u, v) {
 		return u !== v && !(isNaN(u) && isNaN(v));
 	}
@@ -111,7 +111,7 @@ if (!("DOMRect"in self&&function(e){try{return new e}catch(t){return!1}}(self.DO
 			}
 		});
 	}
-	
+
 	global.DOMRect = DOMRect;
 }(self));
 }}).call('object' === typeof window && window || 'object' === typeof self && self || 'object' === typeof global && global || {});
