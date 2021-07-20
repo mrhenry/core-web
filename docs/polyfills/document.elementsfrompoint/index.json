@@ -1,0 +1,205 @@
+{
+  "name": "Document.elementsFromPoint",
+  "polyfillName": "document.elementsFromPoint",
+  "coreWeb": {
+    "name": "document.elementsFromPoint",
+    "deps": [
+      "_ESAbstract.CreateMethodProperty",
+      "_ESAbstract.ToObject",
+      "_ESAbstract.ToLength",
+      "_ESAbstract.ToInteger",
+      "_ESAbstract.Type",
+      "_ESAbstract.Get",
+      "_ESAbstract.IsCallable",
+      "_ESAbstract.ArraySpeciesCreate",
+      "_ESAbstract.IsArray",
+      "_ESAbstract.ArrayCreate",
+      "_ESAbstract.IsConstructor",
+      "_ESAbstract.GetMethod",
+      "_ESAbstract.GetV",
+      "_ESAbstract.Construct",
+      "_ESAbstract.OrdinaryCreateFromConstructor",
+      "_ESAbstract.GetPrototypeFromConstructor",
+      "_ESAbstract.HasOwnProperty",
+      "_ESAbstract.ToPropertyKey",
+      "_ESAbstract.ToPrimitive",
+      "_ESAbstract.Call",
+      "_ESAbstract.OrdinaryToPrimitive",
+      "_ESAbstract.ToString",
+      "_ESAbstract.HasProperty",
+      "_ESAbstract.CreateDataPropertyOrThrow",
+      "_ESAbstract.CreateDataProperty"
+    ],
+    "browsers": {
+      "android": "<53",
+      "bb": "*",
+      "chrome": "<43",
+      "edge": "<79",
+      "edge_mob": "<79",
+      "firefox": "<63",
+      "ios_chr": "<43",
+      "ios_saf": "<11.3",
+      "ie": "*",
+      "ie_mob": "*",
+      "opera": "<40",
+      "op_mini": "<41",
+      "safari": "<11.1",
+      "firefox_mob": "<63",
+      "samsung_mob": "<6"
+    },
+    "engines": {
+      "Blink": "28 - 42",
+      "EdgeHTML": ">= 12",
+      "Gecko": "1.7 - 62",
+      "WebKit": "85 - 604.2.4",
+      "Trident": ">= 4.0",
+      "Presto": ">= 1"
+    },
+    "size": 799,
+    "isAlias": false,
+    "providedByCoreWeb": false
+  },
+  "mdn": {
+    "__compat": {
+      "mdn_url": "https://developer.mozilla.org/docs/Web/API/Document/elementsFromPoint",
+      "spec_url": "https://drafts.csswg.org/cssom-view/#dom-document-elementsfrompoint",
+      "support": {
+        "chrome": {
+          "version_added": "43",
+          "notes": "Before Chrome 66, this method returned <code>null</code> when the element was a child of a host node. See <a href='https://crbug.com/759947'>issue 759947</a>."
+        },
+        "chrome_android": {
+          "version_added": "43",
+          "notes": "Before Chrome 66, this method returned <code>null</code> when the element was a child of a host node. See <a href='https://crbug.com/759947'>issue 759947</a>."
+        },
+        "edge": [
+          {
+            "version_added": "79"
+          },
+          {
+            "version_added": "12",
+            "version_removed": "79",
+            "prefix": "ms",
+            "notes": "Returns a <code>NodeList</code> instead of an array. See <a href='https://msdn.microsoft.com/en-us/library/hh772121(v=vs.85).aspx'>the MSDN documentation</a>. Returns <code>null</code> when the point provided has no elements beneath it (e.g., when given a point outside the document)."
+          }
+        ],
+        "firefox": {
+          "version_added": "46"
+        },
+        "firefox_android": {
+          "version_added": "46"
+        },
+        "ie": {
+          "version_added": "10",
+          "prefix": "ms",
+          "notes": "Returns a <code>NodeList</code> instead of an array. See <a href='https://msdn.microsoft.com/en-us/library/hh772121(v=vs.85).aspx'>the MSDN documentation</a>. Returns <code>null</code> when the point provided has no elements beneath it (e.g., when given a point outside the document)."
+        },
+        "opera": {
+          "version_added": "30"
+        },
+        "opera_android": {
+          "version_added": "30"
+        },
+        "safari": {
+          "version_added": "11.1"
+        },
+        "safari_ios": {
+          "version_added": "11.3"
+        },
+        "samsunginternet_android": {
+          "version_added": "4.0",
+          "notes": "Before Samsung Internet 9.0, this method returned <code>null</code> when the element was a child of a host node. See <a href='https://crbug.com/759947'>issue 759947</a>."
+        },
+        "webview_android": {
+          "version_added": "43",
+          "notes": "Before WebView 66, this method returned <code>null</code> when the element was a child of a host node. See <a href='https://crbug.com/759947'>issue 759947</a>."
+        }
+      },
+      "status": {
+        "experimental": false,
+        "standard_track": true,
+        "deprecated": false
+      }
+    }
+  },
+  "polyfilled": {
+    "android": "<53",
+    "chrome": "<43",
+    "edge": "<79",
+    "firefox": "<63",
+    "ie": "*",
+    "opera": "<40",
+    "safari": "<11.1",
+    "ios_saf": "<11.3"
+  },
+  "native": {
+    "android": {
+      "version_added": "43",
+      "notes": "Before WebView 66, this method returned <code>null</code> when the element was a child of a host node. See <a href='https://crbug.com/759947'>issue 759947</a>."
+    },
+    "chrome": {
+      "version_added": "43",
+      "notes": "Before Chrome 66, this method returned <code>null</code> when the element was a child of a host node. See <a href='https://crbug.com/759947'>issue 759947</a>."
+    },
+    "edge": [
+      {
+        "version_added": "79"
+      },
+      {
+        "version_added": "12",
+        "version_removed": "79",
+        "prefix": "ms",
+        "notes": "Returns a <code>NodeList</code> instead of an array. See <a href='https://msdn.microsoft.com/en-us/library/hh772121(v=vs.85).aspx'>the MSDN documentation</a>. Returns <code>null</code> when the point provided has no elements beneath it (e.g., when given a point outside the document)."
+      }
+    ],
+    "firefox": {
+      "version_added": "46"
+    },
+    "ie": {
+      "version_added": "10",
+      "prefix": "ms",
+      "notes": "Returns a <code>NodeList</code> instead of an array. See <a href='https://msdn.microsoft.com/en-us/library/hh772121(v=vs.85).aspx'>the MSDN documentation</a>. Returns <code>null</code> when the point provided has no elements beneath it (e.g., when given a point outside the document)."
+    },
+    "opera": {
+      "version_added": "30"
+    },
+    "safari": {
+      "version_added": "11.1"
+    },
+    "ios_saf": {
+      "version_added": "11.3"
+    }
+  },
+  "polyfillio": {
+    "aliases": [],
+    "dependencies": [
+      "Array.prototype.map"
+    ],
+    "spec": "https://drafts.csswg.org/cssom-view/#dom-document-elementsfrompoint",
+    "docs": "https://developer.mozilla.org/en-US/docs/Web/API/Document/elementsFromPoint",
+    "license": "MIT",
+    "browsers": {
+      "android": "<53",
+      "bb": "*",
+      "chrome": "<43",
+      "edge": "<79",
+      "edge_mob": "<79",
+      "firefox": "<63",
+      "ios_chr": "<43",
+      "ios_saf": "<11.3",
+      "ie": "*",
+      "ie_mob": "*",
+      "opera": "<40",
+      "op_mini": "<41",
+      "safari": "<11.1",
+      "firefox_mob": "<63",
+      "samsung_mob": "<6"
+    },
+    "detectSource": "\"document\"in self&&\"elementsFromPoint\"in self.document\n",
+    "baseDir": "document/elementsFromPoint",
+    "hasTests": true,
+    "isTestable": true,
+    "isPublic": true,
+    "size": 799
+  }
+}
