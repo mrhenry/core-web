@@ -119,11 +119,29 @@ async function genAll() {
 		`export const engines = ${JSON.stringify(knownEngines)}`
 	);
 
-	generateMappings(mapping);
+	await generateMappings(mapping);
+}
+
+// Override meta data from polyfill-library
+async function patchedMeta(feature: string, meta: Record<string, unknown>) : Promise<unknown> {
+	switch (feature) {
+		case 'Intl.DateTimeFormat.~timeZone.all':
+		case 'Intl.DateTimeFormat.~timeZone.golden':
+			const dateTimeFormatMeta = await polyfillLibrary.describePolyfill('Intl.DateTimeFormat');
+			return {
+				...meta,
+				browsers: dateTimeFormatMeta.browsers
+			};
+	
+		default:
+			return meta;
+	}
 }
 
 async function gen(feature: string, mapping: Array<Feature>, aliases: Array<FeatureAlias>) {
-	const meta = await polyfillLibrary.describePolyfill(feature);
+	let meta = await polyfillLibrary.describePolyfill(feature);
+	meta = await patchedMeta(feature, meta);
+
 	let output = '';
 	const helperName = normalizeHelperName(feature);
 	const dependencies = await allDependencies(feature);

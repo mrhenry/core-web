@@ -43,6 +43,12 @@ module.exports = function (_, opts) {
 			},
 			Program: {
 				exit(path, state) {
+					if (path.parent && path.parent.comments) {
+						path.parent.comments.forEach((comment) => {
+							injector.handleIgnoreComment(comment);
+						})
+					}
+
 					injector.inject(path, state);
 				}
 			},
