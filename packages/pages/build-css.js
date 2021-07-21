@@ -56,7 +56,6 @@ fs.readFile('./lib/css/index.css', async (err, css) => {
 			}),
 			postcssSplitByMedia({
 				onManifest: (m) => {
-					// console.log(m);
 					manifest = m;
 				}
 			})

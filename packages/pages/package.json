@@ -37,7 +37,7 @@
     "postcss": "^8.3.5",
     "postcss-import": "^14.0.2",
     "postcss-preset-env": "^6.7.0",
-	"postcss-split-by-media": "^0.1.2",
+    "postcss-split-by-media": "^0.1.2",
     "webpack": "^5.45.1",
     "webpack-cli": "^4.7.2"
   }
