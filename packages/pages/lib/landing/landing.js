@@ -3,6 +3,7 @@
 const fs = require('fs');
 const path = require('path');
 const html = require('../html/html');
+const cssTags = require('../css/to-html');
 
 const siteHeader = require('./templates/site-header');
 const hero = require('./templates/hero');
@@ -203,20 +204,14 @@ function indexJsAndCss(assetMap) {
 <script src="/js/${assetMap.js['index']['2013'].fullName}" ua-target="2013" async></script>
 <script src="/js/${assetMap.js['index']['2011'].fullName}" ua-target="2011" async></script>
 
-<link rel="stylesheet" href="/css/${assetMap.css['index']['2020'].fullName}" ua-target="2020">
-<link rel="stylesheet" href="/css/${assetMap.css['index']['2018'].fullName}" ua-target="2018">
-<link rel="stylesheet" href="/css/${assetMap.css['index']['2016'].fullName}" ua-target="2016">
-<link rel="stylesheet" href="/css/${assetMap.css['index']['2014'].fullName}" ua-target="2014">
-<link rel="stylesheet" href="/css/${assetMap.css['index']['2013'].fullName}" ua-target="2013">
-<link rel="stylesheet" href="/css/${assetMap.css['index']['2011'].fullName}" ua-target="2011">
-<link rel="stylesheet" href="/css/${assetMap.css['index']['2011'].fullName}" ua-target="fallback">
+${cssTags(assetMap, 'index')}
 `;
 	}
 
 	return html`
 <script src="/js/${assetMap.js['index']['2020'].fullName}" async></script>
 
-<link rel="stylesheet" href="/css/${assetMap.css['index']['2020'].fullName}">
+${cssTags(assetMap, 'index')}
 `;
 }
 
