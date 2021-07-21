@@ -38,13 +38,13 @@
       "Window",
       "document",
       "Element",
-      "_ESAbstract.CreateIterResultObject",
       "_ESAbstract.GetIterator",
       "_ESAbstract.IteratorClose",
-      "_ESAbstract.IteratorComplete",
-      "_ESAbstract.IteratorNext",
       "_ESAbstract.IteratorStep",
+      "_ESAbstract.IteratorNext",
+      "_ESAbstract.IteratorComplete",
       "_ESAbstract.IteratorValue",
+      "_ESAbstract.CreateIterResultObject",
       "_ESAbstract.SameValue"
     ],
     "browsers": {

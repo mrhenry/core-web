@@ -36,7 +36,14 @@
       "Event",
       "Window",
       "document",
-      "Element"
+      "Element",
+      "_ESAbstract.GetIterator",
+      "_ESAbstract.IteratorClose",
+      "_ESAbstract.IteratorStep",
+      "_ESAbstract.IteratorNext",
+      "_ESAbstract.IteratorComplete",
+      "_ESAbstract.IteratorValue",
+      "_ESAbstract.CreateIterResultObject"
     ],
     "browsers": {
       "android": "<67",
@@ -357,7 +364,8 @@
       "Object.getOwnPropertyNames",
       "Promise",
       "XMLHttpRequest",
-      "Symbol.iterator"
+      "Symbol.iterator",
+      "URL"
     ],
     "license": "MIT",
     "spec": "https://fetch.spec.whatwg.org/",
