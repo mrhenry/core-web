@@ -36,6 +36,25 @@ function matchNode(matcher, ast, state) {
 
 	for (const key of getMatcherKeys(matcher)) {
 		if (types.VISITOR_KEYS[matcher.type].indexOf(key) >= 0) {
+
+			// 'ObjectExpressions' don't need an exact properties list match.
+			if (key === 'properties' && ast.type === 'ObjectExpression' && matcher.type === 'ObjectExpression') {
+				const astProperties = ast.properties.filter((x) => {
+					return !!(matcher.properties.find((y) => {
+						if (!x.key || !y.key) {
+							return false;
+						}
+
+						return x.key.name === y.key.name;
+					}));
+				});
+
+				if (!matchNode(matcher.properties, astProperties, state)) {
+					return false;
+				}
+				continue;
+			}
+
 			if (!matchNode(matcher[key], ast[key], state)) {
 				return false;
 			}

@@ -1,1 +1,1 @@
-export declare function generateMappings(featureMapping: Array<Feature>): void;
+export declare function generateMappings(featureMapping: Array<Feature>): Promise<void>;

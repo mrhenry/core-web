@@ -3,6 +3,7 @@ import * as path from "path";
 import * as parser from '@babel/parser';
 import traverse from '@babel/traverse';
 import { StringLiteral, Expression, SpreadElement, JSXNamespacedName, ArgumentPlaceholder } from '@babel/types';
+import { getIntlTimeZoneOptionsExpressionCandidates } from './generate-intl-timezone-mapping-candidates';
 
 const coreWebBabelPluginDir = path.resolve(__dirname, "../../babel-plugin-core-web");
 
@@ -102,7 +103,7 @@ function customMatcherSources(): Record<string, Array<string>> {
 	}
 }
 
-export function generateMappings(featureMapping: Array<Feature>): void {
+export async function generateMappings(featureMapping: Array<Feature>) {
 	const intlLocaleRegExp = /^Intl\.~locale\.(.*?)$/;
 	const intlSubFeatureRegExp = /^Intl\.([a-zA-Z]+)\.~locale\.(.*?)$/;
 
@@ -138,6 +139,8 @@ export function generateMappings(featureMapping: Array<Feature>): void {
 
 	const customMatchers = customMatcherSources();
 
+	const intlTimeZoneOptionsExpressionsCandidates = await getIntlTimeZoneOptionsExpressionCandidates();
+
 	featureMapping.forEach((feature) => {
 		let matchCandidates = [];
 		if (feature.name.indexOf(".prototype.") >= 0) {
@@ -156,6 +159,10 @@ export function generateMappings(featureMapping: Array<Feature>): void {
 		}
 
 		matchCandidates = matchCandidates.flatMap((candidate) => {
+			if ('Intl.DateTimeFormat.~timeZone.golden' === candidate) {
+				return intlTimeZoneOptionsExpressionsCandidates;
+			}
+
 			if (intlSubFeatureRegExp.test(candidate)) {
 				let intlCandidates: Record<string, true> = {};
 				const matches = candidate.match(intlSubFeatureRegExp);

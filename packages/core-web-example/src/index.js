@@ -1,3 +1,8 @@
+// core-web-ignore @mrhenry/core-web/modules/console.warn
+/* core-web-ignore @mrhenry/core-web/modules/console.error */
+
+import '@mrhenry/core-web/modules/Intl.DateTimeFormat.~timeZone.all'; /* importing ~timeZone.all : ~timeZone.golden would have been detected, but skipped after import of ~timeZone.all */
+
 var event = new Date(Date.UTC(2012, 11, 20, 3, 0, 0));
 console.log(event.toLocaleString('es', { timeZone: 'UTC' }));
 console.log(event.toLocaleString(['nl-BE', 'af'], { timeZone: 'UTC' }));
@@ -10,6 +15,11 @@ customElements.define('mr-x', class extends HTMLElement { });
 
 var query = 'p:last-child';
 document.querySelectorAll(`:scope ${query}`);
+
+console.log(new Intl.DateTimeFormat('en', {
+	timeZone: 'Australia/Sydney',
+	timeZoneName: 'long'
+}).format(date));
 
 // ["@mrhenry/core-web", {
 // 	browsers: {
