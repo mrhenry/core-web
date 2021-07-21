@@ -18,13 +18,14 @@ const elementQsaScopeMatchers = require("./matchers/element_qsa_scope_matchers.j
 
 class Injector {
 	constructor(features, opts = {}) {
+		this.debug = opts.debug || false;
 		this.features = features.filter(n => has(n));
 		this.featureSet = new Set(this.features);
-		this.importSet = new Set();
+
 		this.aliasSet = new Set();
-		this.removeSet = new Set();
-		this.debug = opts.debug || false;
 		this.ignoreSet = new Set();
+		this.importSet = new Set();
+		this.removeSet = new Set();
 	}
 
 	_addPolyfill(name) {
@@ -229,8 +230,9 @@ class Injector {
 	}
 
 	reset() {
-		this.importSet = new Set();
 		this.aliasSet = new Set();
+		this.ignoreSet = new Set();
+		this.importSet = new Set();
 		this.removeSet = new Set();
 	}
 }
