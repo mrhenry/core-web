@@ -6,7 +6,6 @@ QUnit.test('Intl.DateTimeFormat – time zone', function (assert) {
 		timeZone: 'Australia/Sydney',
 		timeZoneName: 'long'
 	};
-	new Intl.DateTimeFormat('en', options).format(date);
 
 	assert.equal(new Intl.DateTimeFormat('en', options).format(date).slice(-32), 'Australian Eastern Daylight Time');
 });
