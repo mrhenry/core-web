@@ -5,6 +5,7 @@ const fs = require("fs");
 const path = require("path");
 const parser = require("@babel/parser");
 const traverse_1 = require("@babel/traverse");
+const generate_intl_timezone_mapping_candidates_1 = require("./generate-intl-timezone-mapping-candidates");
 const coreWebBabelPluginDir = path.resolve(__dirname, "../../babel-plugin-core-web");
 function customMatcherSources() {
     return {
@@ -87,7 +88,7 @@ function customMatcherSources() {
         ]
     };
 }
-function generateMappings(featureMapping) {
+async function generateMappings(featureMapping) {
     const intlLocaleRegExp = /^Intl\.~locale\.(.*?)$/;
     const intlSubFeatureRegExp = /^Intl\.([a-zA-Z]+)\.~locale\.(.*?)$/;
     const identifierMatchers = {};
@@ -97,6 +98,7 @@ function generateMappings(featureMapping) {
     const newExpressionMatchersWithStringLiterals = {};
     const newExpressionMatchers = {};
     const customMatchers = customMatcherSources();
+    const intlTimeZoneOptionsExpressionsCandidates = await generate_intl_timezone_mapping_candidates_1.getIntlTimeZoneOptionsExpressionCandidates();
     featureMapping.forEach((feature) => {
         let matchCandidates = [];
         if (feature.name.indexOf(".prototype.") >= 0) {
@@ -112,6 +114,9 @@ function generateMappings(featureMapping) {
             matchCandidates.push(...customMatchers[feature.name]);
         }
         matchCandidates = matchCandidates.flatMap((candidate) => {
+            if ('Intl.DateTimeFormat.~timeZone.golden' === candidate) {
+                return intlTimeZoneOptionsExpressionsCandidates;
+            }
             if (intlSubFeatureRegExp.test(candidate)) {
                 let intlCandidates = {};
                 const matches = candidate.match(intlSubFeatureRegExp);

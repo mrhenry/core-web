@@ -119,7 +119,7 @@ async function genAll() {
 		`export const engines = ${JSON.stringify(knownEngines)}`
 	);
 
-	generateMappings(mapping);
+	await generateMappings(mapping);
 }
 
 async function gen(feature: string, mapping: Array<Feature>, aliases: Array<FeatureAlias>) {

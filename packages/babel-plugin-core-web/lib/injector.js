@@ -24,6 +24,7 @@ class Injector {
 		this.aliasSet = new Set();
 		this.removeSet = new Set();
 		this.debug = opts.debug || false;
+		this.ignoreSet = new Set();
 	}
 
 	_addPolyfill(name) {
@@ -50,8 +51,24 @@ class Injector {
 			logImportedPolyfills([...this.importSet]);
 		}
 
+		// Allow users to block polyfills.
+		for (const ignore of this.ignoreSet.values()) {
+			this.importSet.delete(ignore);
+		}
+
 		// insert in reverse order
-		const all = [...this.importSet];
+		let all = [...this.importSet];
+		
+		// Some polyfills can't coexist.
+		all = all.filter((importName) => {
+			// "golden" should only be imported if "all" doesn't exist.
+			if (importName === 'Intl.DateTimeFormat.~timeZone.golden') {
+				return all.indexOf('Intl.DateTimeFormat.~timeZone.all') === -1;
+			}
+
+			return true;
+		});
+		
 		while (all.length) {
 			const importName = all.pop();
 			addSideEffect(path, `@mrhenry/core-web/modules/${importName}`);
@@ -60,6 +77,26 @@ class Injector {
 		// remove unused imports
 		for (const path of this.removeSet) {
 			path.remove();
+		}
+	}
+
+	handleIgnoreComment(comment) {
+		if (!comment || !comment.value) {
+			return;
+		}
+
+		const COMMENT_PREFIX = 'core-web-ignore';
+		const cleanComment = comment.value.trim();
+		if (!cleanComment.startsWith(COMMENT_PREFIX)) {
+			return;
+		}
+
+		const importPath = cleanComment.substr(COMMENT_PREFIX.length).trim();
+
+		const PREFIX = "@mrhenry/core-web/modules/";
+		if (importPath.startsWith(PREFIX)) {
+			const feature = importPath.substr(PREFIX.length);
+			this.ignoreSet.add(feature);
 		}
 	}
 

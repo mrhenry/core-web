@@ -88,7 +88,7 @@ async function genAll() {
     });
     knownEngines.sort();
     fs.writeFileSync(path.join(coreWebDir, "__engines.js"), `export const engines = ${JSON.stringify(knownEngines)}`);
-    generate_mappings_1.generateMappings(mapping);
+    await generate_mappings_1.generateMappings(mapping);
 }
 async function gen(feature, mapping, aliases) {
     const meta = await polyfillLibrary.describePolyfill(feature);
