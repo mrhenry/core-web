@@ -5,6 +5,7 @@ const cssnano = require('cssnano');
 const targets = require('./targets');
 const fs = require('fs');
 const path = require('path');
+const postcssSplitByMedia = require('postcss-split-by-media');
 
 const { createHash } = require('crypto');
 
@@ -28,8 +29,14 @@ fs.readFile('./lib/css/index.css', async (err, css) => {
 			return hash.copy().digest('hex').slice(0, 20);
 		});
 
+	if (!fs.existsSync(path.join(__dirname, './dist/css'))) {
+		fs.mkdirSync(path.join(__dirname, './dist/css'), {recursive: true});
+	}
+	
 	for (const target of targets) {
-		await postcss([
+		let manifest = undefined;
+
+		const mainResult = await postcss([
 			postcssImport({
 				root: './lib/css'
 			}),
@@ -47,22 +54,45 @@ fs.readFile('./lib/css/index.css', async (err, css) => {
 					'has-pseudo-class': false, //  requires JS
 				},
 			}),
-			cssnano(),
+			postcssSplitByMedia({
+				onManifest: (m) => {
+					// console.log(m);
+					manifest = m;
+				}
+			})
 		]).process(css, {
 			map: {
 				inline: false,
 			},
 			from: './lib/css/index.css',
 			to: `./dist/css/index.${contentHash}.${target.name}.css`
-		}).then((result) => {
-			if (!fs.existsSync(path.join(__dirname, './dist/css'))) {
-				fs.mkdirSync(path.join(__dirname, './dist/css'), {recursive: true});
-			}
-			
-			fs.writeFileSync(`./dist/css/index.${contentHash}.${target.name}.css`, result.css);
-			if (result.map) {
-				fs.writeFileSync(`./dist/css/index.${contentHash}.${target.name}.css.map`, result.map.toString());
-			}
 		});
+
+		fs.writeFileSync(`./dist/css/index.${contentHash}.${target.name}.css`, mainResult.css);
+		if (mainResult.map) {
+			fs.writeFileSync(`./dist/css/index.${contentHash}.${target.name}.css.map`, mainResult.map.toString());
+		}
+
+		fs.writeFileSync(`./dist/css/index.${contentHash}.${target.name}.manifest.json`, JSON.stringify(manifest));
+
+		for (const mediaQuery of Object.keys(manifest)) {
+			const info = manifest[mediaQuery];
+
+			const splitResult = await postcss([
+				cssnano()
+			]).process(fs.readFileSync(`./dist/css/${info.base}`), {
+				map: {
+					inline: false,
+				},
+				from: `./dist/css/${info.base}`,
+				to: `./dist/css/${info.base}`
+			});
+			
+			fs.writeFileSync(`./dist/css/${info.base}`, splitResult.css);
+			if (splitResult.map) {
+				fs.writeFileSync(`./dist/css/${info.base}.map`, splitResult.map.toString());
+			}
+		}
+
 	}
 });
