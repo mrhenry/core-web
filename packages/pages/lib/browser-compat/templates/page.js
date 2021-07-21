@@ -1,4 +1,5 @@
-const  html = require('../../html/html');
+const html = require('../../html/html');
+const cssTags = require('../../css/to-html');
 const siteHeader = require('../../landing/templates/site-header');
 const hero = require('./hero');
 const siteFooter = require('../../landing/templates/site-footer');
@@ -67,17 +68,11 @@ module.exports = function pageHTML(assetMap, tables) {
 function indexCss(assetMap) {
 	if (process.env.GITHUB_ACTIONS) {
 		return html`<meta name="ua-targets" content="2020 2018 2016 2014 2013 2011">
-<link rel="stylesheet" href="/css/${assetMap.css['index']['2020'].fullName}" ua-target="2020">
-<link rel="stylesheet" href="/css/${assetMap.css['index']['2018'].fullName}" ua-target="2018">
-<link rel="stylesheet" href="/css/${assetMap.css['index']['2016'].fullName}" ua-target="2016">
-<link rel="stylesheet" href="/css/${assetMap.css['index']['2014'].fullName}" ua-target="2014">
-<link rel="stylesheet" href="/css/${assetMap.css['index']['2013'].fullName}" ua-target="2013">
-<link rel="stylesheet" href="/css/${assetMap.css['index']['2011'].fullName}" ua-target="2011">
-<link rel="stylesheet" href="/css/${assetMap.css['index']['2011'].fullName}" ua-target="fallback">
+	${cssTags(assetMap, 'index')}
 `;
 	}
 
 	return html`
-<link rel="stylesheet" href="/css/${assetMap.css['index']['2020'].fullName}">
+${cssTags(assetMap, 'index')}
 `;
 }
