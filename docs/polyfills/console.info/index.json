@@ -1,5 +1,5 @@
 {
-  "name": "Console.info",
+  "name": "console.info",
   "polyfillName": "console.info",
   "coreWeb": {
     "name": "console.info",
@@ -23,7 +23,7 @@
   },
   "mdn": {
     "__compat": {
-      "mdn_url": "https://developer.mozilla.org/docs/Web/API/Console/info",
+      "mdn_url": "https://developer.mozilla.org/docs/Web/API/console/info",
       "spec_url": "https://console.spec.whatwg.org/#info",
       "support": {
         "chrome": {

@@ -1,5 +1,5 @@
 {
-  "name": "Console.warn",
+  "name": "console.warn",
   "polyfillName": "console.warn",
   "coreWeb": {
     "name": "console.warn",
@@ -22,7 +22,7 @@
   },
   "mdn": {
     "__compat": {
-      "mdn_url": "https://developer.mozilla.org/docs/Web/API/Console/warn",
+      "mdn_url": "https://developer.mozilla.org/docs/Web/API/console/warn",
       "spec_url": "https://console.spec.whatwg.org/#warn",
       "support": {
         "chrome": {

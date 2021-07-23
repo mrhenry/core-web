@@ -1,5 +1,5 @@
 {
-  "name": "Console.profile",
+  "name": "console.profile",
   "polyfillName": "console.profile",
   "coreWeb": {
     "name": "console.profile",
@@ -21,7 +21,7 @@
   },
   "mdn": {
     "__compat": {
-      "mdn_url": "https://developer.mozilla.org/docs/Web/API/Console/profile",
+      "mdn_url": "https://developer.mozilla.org/docs/Web/API/console/profile",
       "support": {
         "chrome": {
           "version_added": "4"

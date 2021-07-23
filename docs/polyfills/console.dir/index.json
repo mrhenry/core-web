@@ -1,5 +1,5 @@
 {
-  "name": "Console.dir",
+  "name": "console.dir",
   "polyfillName": "console.dir",
   "coreWeb": {
     "name": "console.dir",
@@ -21,7 +21,7 @@
   },
   "mdn": {
     "__compat": {
-      "mdn_url": "https://developer.mozilla.org/docs/Web/API/Console/dir",
+      "mdn_url": "https://developer.mozilla.org/docs/Web/API/console/dir",
       "spec_url": "https://console.spec.whatwg.org/#dir",
       "support": {
         "chrome": {

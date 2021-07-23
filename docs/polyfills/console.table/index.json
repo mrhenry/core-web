@@ -1,5 +1,5 @@
 {
-  "name": "Console.table",
+  "name": "console.table",
   "polyfillName": "console.table",
   "coreWeb": {
     "name": "console.table",
@@ -21,7 +21,7 @@
   },
   "mdn": {
     "__compat": {
-      "mdn_url": "https://developer.mozilla.org/docs/Web/API/Console/table",
+      "mdn_url": "https://developer.mozilla.org/docs/Web/API/console/table",
       "spec_url": "https://console.spec.whatwg.org/#table",
       "support": {
         "chrome": {

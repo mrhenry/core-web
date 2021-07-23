@@ -1,5 +1,5 @@
 {
-  "name": "Console.clear",
+  "name": "console.clear",
   "polyfillName": "console.clear",
   "coreWeb": {
     "name": "console.clear",
@@ -21,7 +21,7 @@
   },
   "mdn": {
     "__compat": {
-      "mdn_url": "https://developer.mozilla.org/docs/Web/API/Console/clear",
+      "mdn_url": "https://developer.mozilla.org/docs/Web/API/console/clear",
       "spec_url": "https://console.spec.whatwg.org/#clear",
       "support": {
         "chrome": {

@@ -1,5 +1,5 @@
 {
-  "name": "Console.error",
+  "name": "console.error",
   "polyfillName": "console.error",
   "coreWeb": {
     "name": "console.error",
@@ -23,7 +23,7 @@
   },
   "mdn": {
     "__compat": {
-      "mdn_url": "https://developer.mozilla.org/docs/Web/API/Console/error",
+      "mdn_url": "https://developer.mozilla.org/docs/Web/API/console/error",
       "spec_url": "https://console.spec.whatwg.org/#error",
       "support": {
         "chrome": {

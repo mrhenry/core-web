@@ -1,5 +1,5 @@
 {
-  "name": "Console.count",
+  "name": "console.count",
   "polyfillName": "console.count",
   "coreWeb": {
     "name": "console.count",
@@ -21,7 +21,7 @@
   },
   "mdn": {
     "__compat": {
-      "mdn_url": "https://developer.mozilla.org/docs/Web/API/Console/count",
+      "mdn_url": "https://developer.mozilla.org/docs/Web/API/console/count",
       "spec_url": "https://console.spec.whatwg.org/#count",
       "support": {
         "chrome": {

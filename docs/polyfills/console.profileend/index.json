@@ -1,5 +1,5 @@
 {
-  "name": "Console.profileEnd",
+  "name": "console.profileEnd",
   "polyfillName": "console.profileEnd",
   "coreWeb": {
     "name": "console.profileEnd",
@@ -21,7 +21,7 @@
   },
   "mdn": {
     "__compat": {
-      "mdn_url": "https://developer.mozilla.org/docs/Web/API/Console/profileEnd",
+      "mdn_url": "https://developer.mozilla.org/docs/Web/API/console/profileEnd",
       "support": {
         "chrome": {
           "version_added": "4"

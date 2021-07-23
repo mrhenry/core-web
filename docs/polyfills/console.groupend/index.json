@@ -1,5 +1,5 @@
 {
-  "name": "Console.groupEnd",
+  "name": "console.groupEnd",
   "polyfillName": "console.groupEnd",
   "coreWeb": {
     "name": "console.groupEnd",
@@ -21,7 +21,7 @@
   },
   "mdn": {
     "__compat": {
-      "mdn_url": "https://developer.mozilla.org/docs/Web/API/Console/groupEnd",
+      "mdn_url": "https://developer.mozilla.org/docs/Web/API/console/groupEnd",
       "spec_url": "https://console.spec.whatwg.org/#groupend",
       "support": {
         "chrome": {

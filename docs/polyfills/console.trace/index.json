@@ -1,5 +1,5 @@
 {
-  "name": "Console.trace",
+  "name": "console.trace",
   "polyfillName": "console.trace",
   "coreWeb": {
     "name": "console.trace",
@@ -21,7 +21,7 @@
   },
   "mdn": {
     "__compat": {
-      "mdn_url": "https://developer.mozilla.org/docs/Web/API/Console/trace",
+      "mdn_url": "https://developer.mozilla.org/docs/Web/API/console/trace",
       "spec_url": "https://console.spec.whatwg.org/#trace",
       "support": {
         "chrome": {

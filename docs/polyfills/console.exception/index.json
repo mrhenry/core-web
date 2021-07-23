@@ -1,5 +1,5 @@
 {
-  "name": "Console.exception",
+  "name": "console.exception",
   "polyfillName": "console.exception",
   "coreWeb": {
     "name": "console.exception",
@@ -24,7 +24,6 @@
   },
   "mdn": {
     "__compat": {
-      "mdn_url": "https://developer.mozilla.org/docs/Web/API/Console/exception",
       "description": "<code>exception</code> (an alias for <code>error</code>)",
       "support": {
         "chrome": {

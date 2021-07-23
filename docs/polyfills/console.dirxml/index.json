@@ -1,5 +1,5 @@
 {
-  "name": "Console.dirxml",
+  "name": "console.dirxml",
   "polyfillName": "console.dirxml",
   "coreWeb": {
     "name": "console.dirxml",
@@ -21,7 +21,7 @@
   },
   "mdn": {
     "__compat": {
-      "mdn_url": "https://developer.mozilla.org/docs/Web/API/Console/dirxml",
+      "mdn_url": "https://developer.mozilla.org/docs/Web/API/console/dirxml",
       "spec_url": "https://console.spec.whatwg.org/#dirxml",
       "support": {
         "chrome": {

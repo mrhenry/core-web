@@ -4542,9 +4542,19 @@
               "prefix": "webkit"
             }
           ],
-          "edge": {
-            "version_added": "12"
-          },
+          "edge": [
+            {
+              "version_added": "79"
+            },
+            {
+              "version_added": "12",
+              "prefix": "webkit"
+            },
+            {
+              "version_added": "12",
+              "version_removed": "14"
+            }
+          ],
           "firefox": [
             {
               "version_added": "64"
@@ -4574,6 +4584,10 @@
             {
               "version_added": "15",
               "prefix": "webkit"
+            },
+            {
+              "version_added": "12.1",
+              "version_removed": "15"
             }
           ],
           "opera_android": [
@@ -4583,6 +4597,10 @@
             {
               "version_added": "14",
               "prefix": "webkit"
+            },
+            {
+              "version_added": "12.1",
+              "version_removed": "14"
             }
           ],
           "safari": {
@@ -4749,7 +4767,8 @@
               "version_added": "50"
             },
             {
-              "version_added": true,
+              "version_added": "14",
+              "version_removed": "50",
               "prefix": "moz"
             }
           ],
@@ -4758,7 +4777,8 @@
               "version_added": "50"
             },
             {
-              "version_added": true,
+              "version_added": "14",
+              "version_removed": "50",
               "prefix": "moz"
             }
           ],
@@ -5226,7 +5246,7 @@
               "version_added": "79"
             },
             {
-              "version_added": "≤79",
+              "version_added": "12",
               "alternative_name": "webkitIsFullScreen"
             }
           ],
@@ -5329,9 +5349,19 @@
               "alternative_name": "webkitfullscreenchange"
             }
           ],
-          "edge": {
-            "version_added": "12"
-          },
+          "edge": [
+            {
+              "version_added": "79"
+            },
+            {
+              "version_added": "12",
+              "alternative_name": "webkitfullscreenchange"
+            },
+            {
+              "version_added": "12",
+              "version_removed": "14"
+            }
+          ],
           "firefox": [
             {
               "version_added": "64"
@@ -5361,6 +5391,10 @@
             {
               "version_added": "15",
               "alternative_name": "webkitfullscreenchange"
+            },
+            {
+              "version_added": "12.1",
+              "version_removed": "15"
             }
           ],
           "opera_android": [
@@ -5370,6 +5404,10 @@
             {
               "version_added": "14",
               "alternative_name": "webkitfullscreenchange"
+            },
+            {
+              "version_added": "12.1",
+              "version_removed": "14"
             }
           ],
           "safari": {
@@ -5463,6 +5501,10 @@
             {
               "version_added": "15",
               "prefix": "webkit"
+            },
+            {
+              "version_added": "12.1",
+              "version_removed": "15"
             }
           ],
           "opera_android": [
@@ -5472,6 +5514,10 @@
             {
               "version_added": "14",
               "prefix": "webkit"
+            },
+            {
+              "version_added": "12.1",
+              "version_removed": "14"
             }
           ],
           "safari": {
@@ -5534,9 +5580,19 @@
               "alternative_name": "webkitfullscreenerror"
             }
           ],
-          "edge": {
-            "version_added": "12"
-          },
+          "edge": [
+            {
+              "version_added": "79"
+            },
+            {
+              "version_added": "12",
+              "alternative_name": "webkitfullscreenerror"
+            },
+            {
+              "version_added": "12",
+              "version_removed": "14"
+            }
+          ],
           "firefox": [
             {
               "version_added": "64"
@@ -5566,6 +5622,10 @@
             {
               "version_added": "15",
               "alternative_name": "webkitfullscreenerror"
+            },
+            {
+              "version_added": "12.1",
+              "version_removed": "15"
             }
           ],
           "opera_android": [
@@ -5575,6 +5635,10 @@
             {
               "version_added": "14",
               "alternative_name": "webkitfullscreenerror"
+            },
+            {
+              "version_added": "12.1",
+              "version_removed": "14"
             }
           ],
           "safari": {
@@ -7463,9 +7527,19 @@
               "alternative_name": "onwebkitfullscreenchange"
             }
           ],
-          "edge": {
-            "version_added": "12"
-          },
+          "edge": [
+            {
+              "version_added": "79"
+            },
+            {
+              "version_added": "12",
+              "alternative_name": "onwebkitfullscreenchange"
+            },
+            {
+              "version_added": "12",
+              "version_removed": "14"
+            }
+          ],
           "firefox": [
             {
               "version_added": "64"
@@ -7495,6 +7569,10 @@
             {
               "version_added": "15",
               "alternative_name": "onwebkitfullscreenchange"
+            },
+            {
+              "version_added": "12.1",
+              "version_removed": "15"
             }
           ],
           "opera_android": [
@@ -7504,6 +7582,10 @@
             {
               "version_added": "14",
               "alternative_name": "onwebkitfullscreenchange"
+            },
+            {
+              "version_added": "12.1",
+              "version_removed": "14"
             }
           ],
           "safari": {
@@ -7565,9 +7647,19 @@
               "alternative_name": "onwebkitfullscreenerror"
             }
           ],
-          "edge": {
-            "version_added": "12"
-          },
+          "edge": [
+            {
+              "version_added": "79"
+            },
+            {
+              "version_added": "12",
+              "alternative_name": "onwebkitfullscreenerror"
+            },
+            {
+              "version_added": "12",
+              "version_removed": "14"
+            }
+          ],
           "firefox": [
             {
               "version_added": "64"
@@ -7597,6 +7689,10 @@
             {
               "version_added": "15",
               "alternative_name": "onwebkitfullscreenerror"
+            },
+            {
+              "version_added": "12.1",
+              "version_removed": "15"
             }
           ],
           "opera_android": [
@@ -7606,6 +7702,10 @@
             {
               "version_added": "14",
               "alternative_name": "onwebkitfullscreenerror"
+            },
+            {
+              "version_added": "12.1",
+              "version_removed": "14"
             }
           ],
           "safari": {
@@ -7705,12 +7805,26 @@
           "edge": {
             "version_added": "13"
           },
-          "firefox": {
-            "version_added": "50"
-          },
-          "firefox_android": {
-            "version_added": "50"
-          },
+          "firefox": [
+            {
+              "version_added": "50"
+            },
+            {
+              "version_added": "14",
+              "version_removed": "50",
+              "alternative_name": "onmozpointerlockchange"
+            }
+          ],
+          "firefox_android": [
+            {
+              "version_added": "50"
+            },
+            {
+              "version_added": "14",
+              "version_removed": "50",
+              "alternative_name": "onmozpointerlockchange"
+            }
+          ],
           "ie": {
             "version_added": false
           },
@@ -7753,12 +7867,26 @@
           "edge": {
             "version_added": "13"
           },
-          "firefox": {
-            "version_added": "50"
-          },
-          "firefox_android": {
-            "version_added": "50"
-          },
+          "firefox": [
+            {
+              "version_added": "50"
+            },
+            {
+              "version_added": "14",
+              "version_removed": "50",
+              "alternative_name": "onmozpointerlockerror"
+            }
+          ],
+          "firefox_android": [
+            {
+              "version_added": "50"
+            },
+            {
+              "version_added": "14",
+              "version_removed": "50",
+              "alternative_name": "onmozpointerlockerror"
+            }
+          ],
           "ie": {
             "version_added": false
           },
@@ -8710,12 +8838,26 @@
           "edge": {
             "version_added": "≤79"
           },
-          "firefox": {
-            "version_added": null
-          },
-          "firefox_android": {
-            "version_added": null
-          },
+          "firefox": [
+            {
+              "version_added": "50"
+            },
+            {
+              "version_added": "14",
+              "version_removed": "50",
+              "prefix": "moz"
+            }
+          ],
+          "firefox_android": [
+            {
+              "version_added": "50"
+            },
+            {
+              "version_added": "14",
+              "version_removed": "50",
+              "prefix": "moz"
+            }
+          ],
           "ie": {
             "version_added": null
           },
@@ -8788,12 +8930,26 @@
           "edge": {
             "version_added": "≤79"
           },
-          "firefox": {
-            "version_added": null
-          },
-          "firefox_android": {
-            "version_added": null
-          },
+          "firefox": [
+            {
+              "version_added": "50"
+            },
+            {
+              "version_added": "14",
+              "version_removed": "50",
+              "prefix": "moz"
+            }
+          ],
+          "firefox_android": [
+            {
+              "version_added": "50"
+            },
+            {
+              "version_added": "14",
+              "version_removed": "50",
+              "prefix": "moz"
+            }
+          ],
           "ie": {
             "version_added": null
           },
@@ -10132,6 +10288,54 @@
           "experimental": true,
           "standard_track": false,
           "deprecated": false
+        }
+      }
+    },
+    "rootElement": {
+      "__compat": {
+        "spec_url": "https://svgwg.org/svg2-draft/struct.html#__svg__SVGDocument__rootElement",
+        "support": {
+          "chrome": {
+            "version_added": "34"
+          },
+          "chrome_android": {
+            "version_added": "34"
+          },
+          "edge": {
+            "version_added": "12"
+          },
+          "firefox": {
+            "version_added": "52"
+          },
+          "firefox_android": {
+            "version_added": "52"
+          },
+          "ie": {
+            "version_added": "9"
+          },
+          "opera": {
+            "version_added": "21"
+          },
+          "opera_android": {
+            "version_added": "21"
+          },
+          "safari": {
+            "version_added": "10.1"
+          },
+          "safari_ios": {
+            "version_added": "10.3"
+          },
+          "samsunginternet_android": {
+            "version_added": "2.0"
+          },
+          "webview_android": {
+            "version_added": "37"
+          }
+        },
+        "status": {
+          "experimental": false,
+          "standard_track": true,
+          "deprecated": true
         }
       }
     },
@@ -12082,7 +12286,7 @@
     "adoptedStyleSheets": {
       "__compat": {
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/Document/adoptedStyleSheets",
-        "spec_url": "https://wicg.github.io/construct-stylesheets/#dom-documentorshadowroot-adoptedstylesheets",
+        "spec_url": "https://drafts.csswg.org/cssom/#dom-documentorshadowroot-adoptedstylesheets",
         "support": {
           "chrome": {
             "version_added": "73"
@@ -12271,15 +12475,15 @@
           ],
           "edge": [
             {
-              "version_added": "≤79"
+              "version_added": "79"
             },
             {
-              "version_added": "≤18",
+              "version_added": "12",
               "prefix": "webkit"
             },
             {
               "version_added": "12",
-              "prefix": "ms"
+              "version_removed": "14"
             }
           ],
           "firefox": [
@@ -12311,6 +12515,10 @@
             {
               "version_added": "15",
               "prefix": "webkit"
+            },
+            {
+              "version_added": "12.1",
+              "version_removed": "15"
             }
           ],
           "opera_android": [
@@ -12320,6 +12528,10 @@
             {
               "version_added": "14",
               "prefix": "webkit"
+            },
+            {
+              "version_added": "12.1",
+              "version_removed": "14"
             }
           ],
           "safari": {
@@ -12561,12 +12773,26 @@
           "edge": {
             "version_added": "12"
           },
-          "firefox": {
-            "version_added": "50"
-          },
-          "firefox_android": {
-            "version_added": "50"
-          },
+          "firefox": [
+            {
+              "version_added": "50"
+            },
+            {
+              "version_added": "14",
+              "version_removed": "50",
+              "prefix": "moz"
+            }
+          ],
+          "firefox_android": [
+            {
+              "version_added": "50"
+            },
+            {
+              "version_added": "14",
+              "version_removed": "50",
+              "prefix": "moz"
+            }
+          ],
           "ie": {
             "version_added": false
           },

@@ -1,5 +1,5 @@
 {
-  "name": "Console.timeStamp",
+  "name": "console.timeStamp",
   "polyfillName": "console.timeStamp",
   "coreWeb": {
     "name": "console.timeStamp",
@@ -25,7 +25,7 @@
   },
   "mdn": {
     "__compat": {
-      "mdn_url": "https://developer.mozilla.org/docs/Web/API/Console/timeStamp",
+      "mdn_url": "https://developer.mozilla.org/docs/Web/API/console/timeStamp",
       "support": {
         "chrome": {
           "version_added": "14"

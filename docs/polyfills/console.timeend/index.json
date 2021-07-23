@@ -1,5 +1,5 @@
 {
-  "name": "Console.timeEnd",
+  "name": "console.timeEnd",
   "polyfillName": "console.timeEnd",
   "coreWeb": {
     "name": "console.timeEnd",
@@ -22,7 +22,7 @@
   },
   "mdn": {
     "__compat": {
-      "mdn_url": "https://developer.mozilla.org/docs/Web/API/Console/timeEnd",
+      "mdn_url": "https://developer.mozilla.org/docs/Web/API/console/timeEnd",
       "spec_url": "https://console.spec.whatwg.org/#timeend",
       "support": {
         "chrome": {
