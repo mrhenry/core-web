@@ -165,6 +165,16 @@ async function allDependencies(feature) {
         if (!("string" === typeof dep)) {
             continue;
         }
+        if (providedByBabel(dep)) {
+            switch (dep) {
+                case 'DOMTokenList':
+                    // 'DOMTokenList' dependents also depend on '_DOMTokenList'.
+                    // Preserving 'DOMTokenList' ensures it is included.
+                    break;
+                default:
+                    continue;
+            }
+        }
         dependencies.add(dep);
         const nestedDependencies = await allDependencies(dep);
         nestedDependencies.forEach(dep2 => {

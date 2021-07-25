@@ -10,9 +10,6 @@ import GetV from "@mrhenry/core-web/helpers/_ESAbstract.GetV";
 import ToObject from "@mrhenry/core-web/helpers/_ESAbstract.ToObject";
 import IsCallable from "@mrhenry/core-web/helpers/_ESAbstract.IsCallable";
 import OrdinaryToPrimitive from "@mrhenry/core-web/helpers/_ESAbstract.OrdinaryToPrimitive";
-import CreateMethodProperty from "@mrhenry/core-web/helpers/_ESAbstract.CreateMethodProperty";
-import SameValueZero from "@mrhenry/core-web/helpers/_ESAbstract.SameValueZero";
-import SameValueNonNumber from "@mrhenry/core-web/helpers/_ESAbstract.SameValueNonNumber";
 
 // _ESAbstract.CreateListFromArrayLike
 /* global Type, ToLength, Get, ToString */

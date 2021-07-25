@@ -17,24 +17,14 @@ module.exports = function cssTags(assetMap, entryPoint) {
 	}
 
 	let cssTags = targets.flatMap((target) => {
-		return Object.keys(assetMap.css[entryPoint][target].manifest).sort((a, b) => {
-			if (a === 'all') {
-				return -1;
-			}
-
-			if (b === 'all') {
-				return 1;
-			}
-
-			return 0;
-		}).flatMap((mediaQueries) => {
+		return assetMap.css[entryPoint][target].manifest.flatMap((manifestEntry) => {
 			const tags = [
-				html`<link rel="stylesheet" media="${mediaQueries}" href="/css/${assetMap.css[entryPoint][target].manifest[mediaQueries].base}" ua-target="${target}">`
+				html`<link rel="stylesheet" media="${manifestEntry.media}" href="/css/${manifestEntry.base}" ua-target="${target}">`
 			];
 
 			if (target === '2011') {
 				tags.push(
-					html`<link rel="stylesheet" media="${mediaQueries}" href="/css/${assetMap.css[entryPoint][target].manifest[mediaQueries].base}" ua-target="fallback">`
+					html`<link rel="stylesheet" media="${manifestEntry.media}" href="/css/${manifestEntry.base}" ua-target="fallback">`
 				);
 			}
 

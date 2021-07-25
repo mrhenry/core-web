@@ -7,13 +7,6 @@ import Type from "@mrhenry/core-web/helpers/_ESAbstract.Type";
 import OrdinaryCreateFromConstructor from "@mrhenry/core-web/helpers/_ESAbstract.OrdinaryCreateFromConstructor";
 import GetPrototypeFromConstructor from "@mrhenry/core-web/helpers/_ESAbstract.GetPrototypeFromConstructor";
 import Get from "@mrhenry/core-web/helpers/_ESAbstract.Get";
-import CreateMethodProperty from "@mrhenry/core-web/helpers/_ESAbstract.CreateMethodProperty";
-import HasOwnProperty from "@mrhenry/core-web/helpers/_ESAbstract.HasOwnProperty";
-import ToPropertyKey from "@mrhenry/core-web/helpers/_ESAbstract.ToPropertyKey";
-import ToPrimitive from "@mrhenry/core-web/helpers/_ESAbstract.ToPrimitive";
-import Call from "@mrhenry/core-web/helpers/_ESAbstract.Call";
-import OrdinaryToPrimitive from "@mrhenry/core-web/helpers/_ESAbstract.OrdinaryToPrimitive";
-import ToString from "@mrhenry/core-web/helpers/_ESAbstract.ToString";
 
 // _ESAbstract.Construct
 /* global IsConstructor, OrdinaryCreateFromConstructor, Call */
