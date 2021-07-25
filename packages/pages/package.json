@@ -1,6 +1,6 @@
 {
   "name": "@mrhenry/pages",
-  "version": "0.5.1",
+  "version": "0.5.2",
   "description": "generator for GitHub pages.",
   "license": "MIT",
   "main": "lib/pages.js",
@@ -37,8 +37,11 @@
     "postcss": "^8.3.5",
     "postcss-import": "^14.0.2",
     "postcss-preset-env": "^6.7.0",
-    "postcss-split-by-media": "^0.1.2",
+    "postcss-split-by-media": "^0.2.0",
     "webpack": "^5.46.0",
     "webpack-cli": "^4.7.2"
+  },
+  "volta": {
+    "extends": "../../package.json"
   }
 }

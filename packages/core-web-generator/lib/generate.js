@@ -165,6 +165,9 @@ async function allDependencies(feature) {
         if (!("string" === typeof dep)) {
             continue;
         }
+        if (providedByBabel(dep)) {
+            continue;
+        }
         dependencies.add(dep);
         const nestedDependencies = await allDependencies(dep);
         nestedDependencies.forEach(dep2 => {

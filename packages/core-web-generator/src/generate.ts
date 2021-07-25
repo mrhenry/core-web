@@ -214,6 +214,10 @@ async function allDependencies(feature: string): Promise<Set<string>> {
 			continue;
 		}
 
+		if (providedByBabel(dep)) {
+			continue;
+		}
+
 		dependencies.add(dep);
 
 		const nestedDependencies = await allDependencies(dep);

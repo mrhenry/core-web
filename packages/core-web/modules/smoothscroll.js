@@ -1,5 +1,3 @@
-import CreateMethodProperty from "@mrhenry/core-web/helpers/_ESAbstract.CreateMethodProperty";
-import IsCallable from "@mrhenry/core-web/helpers/_ESAbstract.IsCallable";
 (function(undefined) {
 if (!((function(){if("document"in self&&"documentElement"in self.document&&"style"in self.document.documentElement&&"scrollBehavior"in document.documentElement.style)return!0
 if(Element.prototype.scrollTo&&Element.prototype.scrollTo.toString().indexOf("[native code]")>-1)return!1

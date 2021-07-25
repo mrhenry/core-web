@@ -1,7 +1,7 @@
 {
   "name": "@mrhenry/pages-worker",
   "main": "index.js",
-  "version": "0.5.1",
+  "version": "0.5.2",
   "license": "MIT",
   "private": true,
   "scripts": {
@@ -15,5 +15,8 @@
   },
   "devDependencies": {
     "@mdn/browser-compat-data": "^3.3.12"
+  },
+  "volta": {
+    "extends": "../../package.json"
   }
 }
