@@ -5,8 +5,6 @@
     "name": "smoothscroll",
     "deps": [
       "requestAnimationFrame",
-      "_ESAbstract.CreateMethodProperty",
-      "_ESAbstract.IsCallable",
       "getComputedStyle",
       "Window"
     ],

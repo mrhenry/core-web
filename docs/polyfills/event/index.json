@@ -6,23 +6,7 @@
     "deps": [
       "Window",
       "document",
-      "Element",
-      "_ESAbstract.CreateMethodProperty",
-      "_ESAbstract.ToObject",
-      "_ESAbstract.ToLength",
-      "_ESAbstract.ToInteger",
-      "_ESAbstract.Type",
-      "_ESAbstract.Get",
-      "_ESAbstract.HasProperty",
-      "_ESAbstract.ToString",
-      "_ESAbstract.ToPrimitive",
-      "_ESAbstract.Call",
-      "_ESAbstract.GetMethod",
-      "_ESAbstract.GetV",
-      "_ESAbstract.IsCallable",
-      "_ESAbstract.OrdinaryToPrimitive",
-      "_ESAbstract.SameValueZero",
-      "_ESAbstract.SameValueNonNumber"
+      "Element"
     ],
     "browsers": {
       "firefox": "6 - 10",

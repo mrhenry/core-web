@@ -3,21 +3,7 @@
   "polyfillName": "DocumentFragment",
   "coreWeb": {
     "name": "DocumentFragment",
-    "deps": [
-      "_ESAbstract.CreateMethodProperty",
-      "_ESAbstract.Type",
-      "_ESAbstract.Get",
-      "_ESAbstract.ToObject",
-      "_ESAbstract.HasOwnProperty",
-      "_ESAbstract.ToPropertyKey",
-      "_ESAbstract.ToPrimitive",
-      "_ESAbstract.Call",
-      "_ESAbstract.GetMethod",
-      "_ESAbstract.GetV",
-      "_ESAbstract.IsCallable",
-      "_ESAbstract.OrdinaryToPrimitive",
-      "_ESAbstract.ToString"
-    ],
+    "deps": [],
     "browsers": {
       "android": "<4.4",
       "chrome": "<29",
