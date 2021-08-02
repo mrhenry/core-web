@@ -19,7 +19,7 @@
     "@webcomponents/custom-elements": "^1.4.3",
     "@webcomponents/shadycss": "^1.10.2",
     "@webcomponents/shadydom": "^1.8.0",
-    "@webcomponents/template": "^1.4.4",
+    "@webcomponents/template": "^1.5.0",
     "polyfill-library": "^3.105.0",
     "semver": "^7.3.5"
   },
