@@ -21,7 +21,7 @@ module.exports = {
 			title: 'Reproducible builds',
 			content: html`
 <p>When an external polyfill provider changes or updates their code they potentially introduce bugs (or unexpected fixes) impacting your code.</p>
-<p>Packaging polyfills with your code adds an extra level of checks to prevent unwanted changes from effecting production.</p>
+<p>Packaging polyfills with your code adds an extra level of checks to prevent unwanted changes from affecting production.</p>
 `.trim()
 		},
 		{
