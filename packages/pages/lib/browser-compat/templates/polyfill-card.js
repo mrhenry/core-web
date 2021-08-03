@@ -24,6 +24,7 @@ module.exports = function polyfillCardHTML(assetMap, feature, sitemap) {
 	<meta property="og:image:width" content="1200">
 	<meta property="og:image:height" content="628">
 	<meta property="og:image" content="https://core-web.mrhenry.studio${sitemap[feature.name].toLowerCase()}og-image.jpg">
+	<meta property="og:image:alt" content="core-web : ${cleanName(feature.name)}">
 	<meta property="og:site_name" content="core-web">
 	<meta property="og:description" content="Polyfill for ${cleanName(feature.name)}">
 	<meta name="twitter:card" content="summary_large_image">
@@ -31,6 +32,7 @@ module.exports = function polyfillCardHTML(assetMap, feature, sitemap) {
 	<meta name="twitter:title" content="${dotsZeroWidthSpace(cleanName(feature.name))} | core-web">
 	<meta name="twitter:description" content="Polyfill for ${cleanName(feature.name)}">
 	<meta name="twitter:image" content="https://core-web.mrhenry.studio${sitemap[feature.name].toLowerCase()}og-image.jpg">
+	<meta name="twitter:image:alt" content="core-web : ${cleanName(feature.name)}">
 
 	<meta name="theme-color" content="#ffdc45" media="(prefers-color-scheme: light)">
 	<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)">
