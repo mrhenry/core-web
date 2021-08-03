@@ -41,6 +41,7 @@ async function generate(assetMap) {
 	<meta property="og:image:width" content="1200">
 	<meta property="og:image:height" content="628">
 	<meta property="og:image" content="https://core-web.mrhenry.studio/og-image.jpg">
+	<meta property="og:image:alt" content="core-web : Automatically import polyfills">
 	<meta property="og:site_name" content="core-web">
 	<meta property="og:description" content="Bringing web polyfills to your babel flow.">
 	<meta name="twitter:card" content="summary_large_image">
@@ -48,6 +49,7 @@ async function generate(assetMap) {
 	<meta name="twitter:title" content="core-web">
 	<meta name="twitter:description" content="Bringing web polyfills to your babel flow.">
 	<meta name="twitter:image" content="https://core-web.mrhenry.studio/og-image.jpg">
+	<meta name="twitter:image:alt" content="core-web : Automatically import polyfills">
 
 	<meta name="theme-color" content="#ffdc45" media="(prefers-color-scheme: light)">
 	<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)">

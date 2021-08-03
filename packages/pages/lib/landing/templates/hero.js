@@ -12,29 +12,18 @@ module.exports = function hero() {
 			<div class="hero__content">
 				<div class="hero__text">
 					<p>
-						<strong>core-web</strong> is a set of tools to bundle polyfills together with your javascript code. Just define a set of browsers and automatically receive everything you need.
+						<strong>core-web</strong> is a set of tools to bundle polyfills together with your javascript code.
+						Just define a set of browsers and automatically receive everything you need.
+					</p>
+					<p>
+						Generate multiple outputs with multiple sets of browsers to speed up your site.
 					</p>
 				</div>
 
 				<div>
 					<!-- placeholder -->
+					<!-- Used to be an image -->
 				</div>
-				<!-- <div class="hero__picture-wrapper">
-					<div class="hero__picture-placer">
-						<picture class="hero__picture">
-							<source
-								srcset="/images/hero-mobile.gif"
-								media="(max-width: 767px)"
-							>
-							<img
-								alt="overview of this website in other browsers to show off how cool this tool is."
-								class="hero__picture__image"
-								src="/images/hero-desktop.gif"
-								loading="lazy"
-							>
-						</picture>
-					</div>
-				</div> -->
 			</div>
 		</section>
 	`;
