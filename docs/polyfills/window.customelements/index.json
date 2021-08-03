@@ -52,7 +52,7 @@
       "Trident": ">= 4.0",
       "Presto": ">= 1"
     },
-    "size": 19509,
+    "size": 19000,
     "isAlias": false,
     "providedByCoreWeb": true
   },
