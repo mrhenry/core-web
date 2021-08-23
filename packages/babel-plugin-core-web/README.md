@@ -24,6 +24,10 @@ npm install --save-dev @mrhenry/babel-plugin-core-web
 yarn add --dev @mrhenry/babel-plugin-core-web
 ```
 
+## Example with script tags (`module` vs `nomodules`)
+
+[example migration](https://github.com/mrhenry/core-web-example-script-tag)
+
 
 ## babel.config.js
 
