@@ -23,7 +23,7 @@
     "dev-server": "cd ./dist && npx http-server"
   },
   "dependencies": {
-    "@babel/core": "^7.15.0",
+    "@babel/core": "^7.15.4",
     "@babel/preset-env": "^7.15.0",
     "@mdn/browser-compat-data": "^3.3.14",
     "@mrhenry/babel-plugin-core-web": "*",
