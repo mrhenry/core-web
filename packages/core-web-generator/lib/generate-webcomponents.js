@@ -40,7 +40,7 @@ async function generateTemplate(mapping) {
             "Window"
         ],
         browsers: browsers,
-        engines: browsers_to_engines_1.browsersToEngines(browsers),
+        engines: (0, browsers_to_engines_1.browsersToEngines)(browsers),
         size: src.length,
         isAlias: false,
         providedByCoreWeb: true,
@@ -81,7 +81,7 @@ async function generateShadyDOM(mapping) {
             "Window"
         ],
         browsers: browsers,
-        engines: browsers_to_engines_1.browsersToEngines(browsers),
+        engines: (0, browsers_to_engines_1.browsersToEngines)(browsers),
         size: src.length,
         isAlias: false,
         providedByCoreWeb: true,
@@ -133,7 +133,7 @@ async function generateShadyCSS(mapping) {
             "Window"
         ],
         browsers: scopingShimBrowsers,
-        engines: browsers_to_engines_1.browsersToEngines(scopingShimBrowsers),
+        engines: (0, browsers_to_engines_1.browsersToEngines)(scopingShimBrowsers),
         size: scopingShim.length,
         isAlias: false,
         providedByCoreWeb: true,
@@ -175,7 +175,7 @@ async function generateShadyCSS(mapping) {
             "Window"
         ],
         browsers: applyShimBrowsers,
-        engines: browsers_to_engines_1.browsersToEngines(applyShimBrowsers),
+        engines: (0, browsers_to_engines_1.browsersToEngines)(applyShimBrowsers),
         size: applyShim.length,
         isAlias: false,
         providedByCoreWeb: true,
@@ -221,7 +221,7 @@ async function generateShadyCSS(mapping) {
             "Window"
         ],
         browsers: customStyleInterfaceBrowsers,
-        engines: browsers_to_engines_1.browsersToEngines(customStyleInterfaceBrowsers),
+        engines: (0, browsers_to_engines_1.browsersToEngines)(customStyleInterfaceBrowsers),
         size: customStyleInterface.length,
         isAlias: false,
         providedByCoreWeb: true,
@@ -279,7 +279,7 @@ async function generateCustomElements(mapping) {
             "Window"
         ],
         browsers: browsers,
-        engines: browsers_to_engines_1.browsersToEngines(browsers),
+        engines: (0, browsers_to_engines_1.browsersToEngines)(browsers),
         size: src.length,
         isAlias: false,
         providedByCoreWeb: true,

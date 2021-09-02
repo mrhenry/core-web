@@ -98,7 +98,7 @@ async function generateMappings(featureMapping) {
     const newExpressionMatchersWithStringLiterals = {};
     const newExpressionMatchers = {};
     const customMatchers = customMatcherSources();
-    const intlTimeZoneOptionsExpressionsCandidates = await generate_intl_timezone_mapping_candidates_1.getIntlTimeZoneOptionsExpressionCandidates();
+    const intlTimeZoneOptionsExpressionsCandidates = await (0, generate_intl_timezone_mapping_candidates_1.getIntlTimeZoneOptionsExpressionCandidates)();
     featureMapping.forEach((feature) => {
         let matchCandidates = [];
         if (feature.name.indexOf(".prototype.") >= 0) {
@@ -437,7 +437,7 @@ function generateNewExpressionMatcher() {
 }`;
 }
 function setNodeIsVariable(matcher) {
-    traverse_1.default(matcher, {
+    (0, traverse_1.default)(matcher, {
         noScope: true,
         Identifier(path) {
             if (path.node.name.startsWith("$")) {

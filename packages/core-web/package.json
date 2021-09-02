@@ -1,6 +1,6 @@
 {
   "name": "@mrhenry/core-web",
-  "version": "0.5.2",
+  "version": "0.5.3",
   "description": "browser feature polyfills as a babel plugin",
   "main": "lib/index.js",
   "author": "Simon Menke <simon.menke@gmail.com>",
