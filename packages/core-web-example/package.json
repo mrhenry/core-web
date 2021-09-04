@@ -1,13 +1,13 @@
 {
   "name": "@mrhenry/core-web-example",
-  "version": "0.5.2",
+  "version": "0.6.0",
   "private": true,
   "scripts": {
     "build": "babel src -d lib"
   },
   "devDependencies": {
     "@babel/cli": "^7.14.5",
-    "@babel/core": "^7.15.0",
+    "@babel/core": "^7.15.5",
     "@mrhenry/babel-plugin-core-web": "*",
     "@mrhenry/core-web": "*"
   },

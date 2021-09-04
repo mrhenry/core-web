@@ -1,6 +1,6 @@
 {
   "name": "@mrhenry/pages",
-  "version": "0.5.2",
+  "version": "0.6.0",
   "description": "generator for GitHub pages.",
   "license": "MIT",
   "main": "lib/pages.js",
@@ -19,11 +19,11 @@
     "build-fonts": "cp -r ./lib/fonts/ ./dist/fonts/ && rm -rf ./dist/fonts/sources",
     "build-images": "cp -r ./lib/images/ ./dist/images/",
     "build-qunit": "cp -r ./lib/js/qunit-2.9.2.js ./dist/js/qunit-2.9.2.js && cp -r ./lib/css/qunit-2.9.2.css ./dist/css/qunit-2.9.2.css",
-    "build": "rm -rf ./dist/ && mkdir -p ./dist/ && npm run build-css && npm run build-js && npm run build-fonts && npm run build-images && npm run build-qunit && npm run build-html",
+    "build": "rm -rf ./dist/* && mkdir -p ./dist/ && npm run build-css && npm run build-js && npm run build-fonts && npm run build-images && npm run build-qunit && npm run build-html",
     "dev-server": "cd ./dist && npx http-server"
   },
   "dependencies": {
-    "@babel/core": "^7.15.0",
+    "@babel/core": "^7.15.5",
     "@babel/preset-env": "^7.15.0",
     "@mdn/browser-compat-data": "^3.3.14",
     "@mrhenry/babel-plugin-core-web": "*",
