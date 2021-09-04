@@ -1,0 +1,155 @@
+{
+  "name": "DOMTokenList.prototype.forEach",
+  "polyfillName": "DOMTokenList.prototype.forEach",
+  "coreWeb": {
+    "name": "DOMTokenList.prototype.forEach",
+    "deps": [
+      "DOMTokenList",
+      "_DOMTokenList",
+      "Element.prototype.classList",
+      "Element",
+      "document"
+    ],
+    "browsers": {
+      "edge": "<16",
+      "edge_mob": "<16",
+      "ie": "*",
+      "ie_mob": "*",
+      "chrome": "<42",
+      "firefox": "<50",
+      "opera": "<32",
+      "op_mob": "<32",
+      "safari": "<10.1",
+      "android": "<45",
+      "firefox_mob": "<50",
+      "ios_saf": "<10.3",
+      "samsung_mob": "<5"
+    },
+    "engines": {
+      "EdgeHTML": "12 - 15",
+      "Trident": ">= 4.0",
+      "Blink": "28 - 41",
+      "Gecko": "1.7 - 49",
+      "Presto": ">= 1",
+      "WebKit": "85 - 602.1.50"
+    },
+    "size": 55,
+    "isAlias": false,
+    "providedByCoreWeb": false
+  },
+  "mdn": {
+    "__compat": {
+      "mdn_url": "https://developer.mozilla.org/docs/Web/API/DOMTokenList/forEach",
+      "support": {
+        "chrome": {
+          "version_added": "42"
+        },
+        "chrome_android": {
+          "version_added": "45"
+        },
+        "edge": {
+          "version_added": "16"
+        },
+        "firefox": {
+          "version_added": "50"
+        },
+        "firefox_android": {
+          "version_added": "50"
+        },
+        "ie": {
+          "version_added": false
+        },
+        "opera": {
+          "version_added": "32"
+        },
+        "opera_android": {
+          "version_added": "32"
+        },
+        "safari": {
+          "version_added": "10.1"
+        },
+        "safari_ios": {
+          "version_added": "10.3"
+        },
+        "samsunginternet_android": {
+          "version_added": "5.0"
+        },
+        "webview_android": {
+          "version_added": "45"
+        }
+      },
+      "status": {
+        "experimental": false,
+        "standard_track": true,
+        "deprecated": false
+      }
+    }
+  },
+  "polyfilled": {
+    "android": "<45",
+    "chrome": "<42",
+    "edge": "<16",
+    "firefox": "<50",
+    "ie": "*",
+    "opera": "<32",
+    "safari": "<10.1",
+    "ios_saf": "<10.3"
+  },
+  "native": {
+    "android": {
+      "version_added": "45"
+    },
+    "chrome": {
+      "version_added": "42"
+    },
+    "edge": {
+      "version_added": "16"
+    },
+    "firefox": {
+      "version_added": "50"
+    },
+    "ie": {
+      "version_added": false
+    },
+    "opera": {
+      "version_added": "32"
+    },
+    "safari": {
+      "version_added": "10.1"
+    },
+    "ios_saf": {
+      "version_added": "10.3"
+    }
+  },
+  "polyfillio": {
+    "dependencies": [
+      "DOMTokenList",
+      "Array.prototype.forEach",
+      "Element.prototype.classList"
+    ],
+    "spec": "https://dom.spec.whatwg.org/#interface-domtokenlist",
+    "docs": "https://developer.mozilla.org/en-US/docs/Web/API/DOMTokenList/forEach",
+    "license": "MIT",
+    "browsers": {
+      "edge": "<16",
+      "edge_mob": "<16",
+      "ie": "*",
+      "ie_mob": "*",
+      "chrome": "<42",
+      "firefox": "<50",
+      "opera": "<32",
+      "op_mob": "<32",
+      "safari": "<10.1",
+      "android": "<45",
+      "firefox_mob": "<50",
+      "ios_saf": "<10.3",
+      "samsung_mob": "<5"
+    },
+    "detectSource": "\"DOMTokenList\"in self&&\"forEach\"in self.DOMTokenList.prototype\n",
+    "baseDir": "DOMTokenList/prototype/forEach",
+    "hasTests": true,
+    "isTestable": true,
+    "isPublic": true,
+    "size": 55
+  }
+}

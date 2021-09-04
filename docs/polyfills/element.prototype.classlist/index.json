@@ -4,6 +4,7 @@
   "coreWeb": {
     "name": "Element.prototype.classList",
     "deps": [
+      "DOMTokenList",
       "_DOMTokenList",
       "Element",
       "document"

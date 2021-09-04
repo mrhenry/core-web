@@ -1,0 +1,1108 @@
+{
+  "name": "DOMTokenList",
+  "polyfillName": "DOMTokenList",
+  "coreWeb": {
+    "name": "DOMTokenList",
+    "deps": [
+      "_DOMTokenList"
+    ],
+    "browsers": {
+      "edge": "<14",
+      "edge_mob": "<14",
+      "ie": "*",
+      "safari": "4 - 6.0",
+      "ie_mob": "10 - *"
+    },
+    "engines": {
+      "EdgeHTML": "12 - 13",
+      "Trident": ">= 4.0",
+      "WebKit": "530.17 - 536.25"
+    },
+    "size": 1224,
+    "isAlias": false,
+    "providedByCoreWeb": false
+  },
+  "mdn": {
+    "__compat": {
+      "mdn_url": "https://developer.mozilla.org/docs/Web/API/DOMTokenList",
+      "spec_url": "https://dom.spec.whatwg.org/#interface-domtokenlist",
+      "support": {
+        "chrome": {
+          "version_added": "8"
+        },
+        "chrome_android": {
+          "version_added": "18"
+        },
+        "edge": {
+          "version_added": "12"
+        },
+        "firefox": {
+          "version_added": "3.6"
+        },
+        "firefox_android": {
+          "version_added": "4"
+        },
+        "ie": {
+          "version_added": "10"
+        },
+        "opera": {
+          "version_added": "11.5"
+        },
+        "opera_android": {
+          "version_added": "11.5"
+        },
+        "safari": {
+          "version_added": "5.1"
+        },
+        "safari_ios": {
+          "version_added": "5"
+        },
+        "samsunginternet_android": {
+          "version_added": "1.0"
+        },
+        "webview_android": {
+          "version_added": "3"
+        }
+      },
+      "status": {
+        "experimental": false,
+        "standard_track": true,
+        "deprecated": false
+      }
+    },
+    "add": {
+      "__compat": {
+        "mdn_url": "https://developer.mozilla.org/docs/Web/API/DOMTokenList/add",
+        "spec_url": "https://dom.spec.whatwg.org/#ref-for-dom-domtokenlist-add①",
+        "support": {
+          "chrome": {
+            "version_added": "8"
+          },
+          "chrome_android": {
+            "version_added": "18"
+          },
+          "edge": {
+            "version_added": "12"
+          },
+          "firefox": {
+            "version_added": "3.6"
+          },
+          "firefox_android": {
+            "version_added": "4"
+          },
+          "ie": {
+            "version_added": "10"
+          },
+          "opera": {
+            "version_added": true
+          },
+          "opera_android": {
+            "version_added": true
+          },
+          "safari": {
+            "version_added": "5.1"
+          },
+          "safari_ios": {
+            "version_added": "5"
+          },
+          "samsunginternet_android": {
+            "version_added": "1.0"
+          },
+          "webview_android": {
+            "version_added": "3"
+          }
+        },
+        "status": {
+          "experimental": false,
+          "standard_track": true,
+          "deprecated": false
+        }
+      },
+      "multiple_parameters": {
+        "__compat": {
+          "description": "Multiple parameters for <code>add()</code>",
+          "support": {
+            "chrome": {
+              "version_added": "24"
+            },
+            "chrome_android": {
+              "version_added": "25"
+            },
+            "edge": {
+              "version_added": "12"
+            },
+            "firefox": {
+              "version_added": "26"
+            },
+            "firefox_android": {
+              "version_added": "26"
+            },
+            "ie": {
+              "version_added": false
+            },
+            "opera": {
+              "version_added": "15"
+            },
+            "opera_android": {
+              "version_added": "14"
+            },
+            "safari": {
+              "version_added": "7"
+            },
+            "safari_ios": {
+              "version_added": "7"
+            },
+            "samsunginternet_android": {
+              "version_added": "1.5"
+            },
+            "webview_android": {
+              "version_added": "≤37"
+            }
+          },
+          "status": {
+            "experimental": false,
+            "standard_track": true,
+            "deprecated": false
+          }
+        }
+      }
+    },
+    "contains": {
+      "__compat": {
+        "mdn_url": "https://developer.mozilla.org/docs/Web/API/DOMTokenList/contains",
+        "spec_url": "https://dom.spec.whatwg.org/#ref-for-dom-domtokenlist-contains①",
+        "support": {
+          "chrome": {
+            "version_added": "8"
+          },
+          "chrome_android": {
+            "version_added": "18"
+          },
+          "edge": {
+            "version_added": "12"
+          },
+          "firefox": {
+            "version_added": "3.6"
+          },
+          "firefox_android": {
+            "version_added": "4"
+          },
+          "ie": {
+            "version_added": "10"
+          },
+          "opera": {
+            "version_added": true
+          },
+          "opera_android": {
+            "version_added": true
+          },
+          "safari": {
+            "version_added": "5.1"
+          },
+          "safari_ios": {
+            "version_added": "5"
+          },
+          "samsunginternet_android": {
+            "version_added": "1.0"
+          },
+          "webview_android": {
+            "version_added": "3"
+          }
+        },
+        "status": {
+          "experimental": false,
+          "standard_track": true,
+          "deprecated": false
+        }
+      }
+    },
+    "entries": {
+      "__compat": {
+        "mdn_url": "https://developer.mozilla.org/docs/Web/API/DOMTokenList/entries",
+        "support": {
+          "chrome": {
+            "version_added": "42"
+          },
+          "chrome_android": {
+            "version_added": "45"
+          },
+          "edge": {
+            "version_added": "16"
+          },
+          "firefox": {
+            "version_added": "50"
+          },
+          "firefox_android": {
+            "version_added": "50"
+          },
+          "ie": {
+            "version_added": false
+          },
+          "opera": {
+            "version_added": "32"
+          },
+          "opera_android": {
+            "version_added": "32"
+          },
+          "safari": {
+            "version_added": "10.1"
+          },
+          "safari_ios": {
+            "version_added": "10.3"
+          },
+          "samsunginternet_android": {
+            "version_added": "5.0"
+          },
+          "webview_android": {
+            "version_added": "45"
+          }
+        },
+        "status": {
+          "experimental": false,
+          "standard_track": true,
+          "deprecated": false
+        }
+      }
+    },
+    "forEach": {
+      "__compat": {
+        "mdn_url": "https://developer.mozilla.org/docs/Web/API/DOMTokenList/forEach",
+        "support": {
+          "chrome": {
+            "version_added": "42"
+          },
+          "chrome_android": {
+            "version_added": "45"
+          },
+          "edge": {
+            "version_added": "16"
+          },
+          "firefox": {
+            "version_added": "50"
+          },
+          "firefox_android": {
+            "version_added": "50"
+          },
+          "ie": {
+            "version_added": false
+          },
+          "opera": {
+            "version_added": "32"
+          },
+          "opera_android": {
+            "version_added": "32"
+          },
+          "safari": {
+            "version_added": "10.1"
+          },
+          "safari_ios": {
+            "version_added": "10.3"
+          },
+          "samsunginternet_android": {
+            "version_added": "5.0"
+          },
+          "webview_android": {
+            "version_added": "45"
+          }
+        },
+        "status": {
+          "experimental": false,
+          "standard_track": true,
+          "deprecated": false
+        }
+      }
+    },
+    "item": {
+      "__compat": {
+        "mdn_url": "https://developer.mozilla.org/docs/Web/API/DOMTokenList/item",
+        "spec_url": "https://dom.spec.whatwg.org/#ref-for-dom-domtokenlist-item①",
+        "support": {
+          "chrome": {
+            "version_added": "8"
+          },
+          "chrome_android": {
+            "version_added": "18"
+          },
+          "edge": {
+            "version_added": "12"
+          },
+          "firefox": {
+            "version_added": "3.6"
+          },
+          "firefox_android": {
+            "version_added": "4"
+          },
+          "ie": {
+            "version_added": "10"
+          },
+          "opera": {
+            "version_added": true
+          },
+          "opera_android": {
+            "version_added": true
+          },
+          "safari": {
+            "version_added": "5.1"
+          },
+          "safari_ios": {
+            "version_added": "5"
+          },
+          "samsunginternet_android": {
+            "version_added": "1.0"
+          },
+          "webview_android": {
+            "version_added": "3"
+          }
+        },
+        "status": {
+          "experimental": false,
+          "standard_track": true,
+          "deprecated": false
+        }
+      }
+    },
+    "keys": {
+      "__compat": {
+        "mdn_url": "https://developer.mozilla.org/docs/Web/API/DOMTokenList/keys",
+        "support": {
+          "chrome": {
+            "version_added": "42"
+          },
+          "chrome_android": {
+            "version_added": "45"
+          },
+          "edge": {
+            "version_added": "16"
+          },
+          "firefox": {
+            "version_added": "50"
+          },
+          "firefox_android": {
+            "version_added": "50"
+          },
+          "ie": {
+            "version_added": false
+          },
+          "opera": {
+            "version_added": "32"
+          },
+          "opera_android": {
+            "version_added": "32"
+          },
+          "safari": {
+            "version_added": "10.1"
+          },
+          "safari_ios": {
+            "version_added": "10.3"
+          },
+          "samsunginternet_android": {
+            "version_added": "5.0"
+          },
+          "webview_android": {
+            "version_added": "45"
+          }
+        },
+        "status": {
+          "experimental": false,
+          "standard_track": true,
+          "deprecated": false
+        }
+      }
+    },
+    "length": {
+      "__compat": {
+        "mdn_url": "https://developer.mozilla.org/docs/Web/API/DOMTokenList/length",
+        "spec_url": "https://dom.spec.whatwg.org/#ref-for-dom-domtokenlist-length①",
+        "support": {
+          "chrome": {
+            "version_added": "8"
+          },
+          "chrome_android": {
+            "version_added": "18"
+          },
+          "edge": {
+            "version_added": "12"
+          },
+          "firefox": {
+            "version_added": "50"
+          },
+          "firefox_android": {
+            "version_added": "50"
+          },
+          "ie": {
+            "version_added": "10"
+          },
+          "opera": {
+            "version_added": true
+          },
+          "opera_android": {
+            "version_added": true
+          },
+          "safari": {
+            "version_added": "5.1"
+          },
+          "safari_ios": {
+            "version_added": "5"
+          },
+          "samsunginternet_android": {
+            "version_added": "1.0"
+          },
+          "webview_android": {
+            "version_added": "3"
+          }
+        },
+        "status": {
+          "experimental": false,
+          "standard_track": true,
+          "deprecated": false
+        }
+      }
+    },
+    "remove": {
+      "__compat": {
+        "mdn_url": "https://developer.mozilla.org/docs/Web/API/DOMTokenList/remove",
+        "spec_url": "https://dom.spec.whatwg.org/#ref-for-dom-domtokenlist-remove①",
+        "support": {
+          "chrome": {
+            "version_added": "8"
+          },
+          "chrome_android": {
+            "version_added": "18"
+          },
+          "edge": {
+            "version_added": "12"
+          },
+          "firefox": {
+            "version_added": "3.6"
+          },
+          "firefox_android": {
+            "version_added": "4"
+          },
+          "ie": {
+            "version_added": "10"
+          },
+          "opera": {
+            "version_added": true
+          },
+          "opera_android": {
+            "version_added": true
+          },
+          "safari": {
+            "version_added": "5.1"
+          },
+          "safari_ios": {
+            "version_added": "5"
+          },
+          "samsunginternet_android": {
+            "version_added": "1.0"
+          },
+          "webview_android": {
+            "version_added": "3"
+          }
+        },
+        "status": {
+          "experimental": false,
+          "standard_track": true,
+          "deprecated": false
+        }
+      },
+      "multiple_parameters": {
+        "__compat": {
+          "description": "Multiple parameters for <code>remove()</code>",
+          "support": {
+            "chrome": {
+              "version_added": "24"
+            },
+            "chrome_android": {
+              "version_added": "25"
+            },
+            "edge": {
+              "version_added": "12"
+            },
+            "firefox": {
+              "version_added": "26"
+            },
+            "firefox_android": {
+              "version_added": "26"
+            },
+            "ie": {
+              "version_added": false
+            },
+            "opera": {
+              "version_added": "15"
+            },
+            "opera_android": {
+              "version_added": "14"
+            },
+            "safari": {
+              "version_added": "7"
+            },
+            "safari_ios": {
+              "version_added": "7"
+            },
+            "samsunginternet_android": {
+              "version_added": "1.5"
+            },
+            "webview_android": {
+              "version_added": "≤37"
+            }
+          },
+          "status": {
+            "experimental": false,
+            "standard_track": true,
+            "deprecated": false
+          }
+        }
+      }
+    },
+    "remove_duplicates": {
+      "__compat": {
+        "description": "Removes duplicates",
+        "mdn_url": "https://developer.mozilla.org/docs/Web/API/DOMTokenList#Trimming_of_whitespace_and_removal_of_duplicates",
+        "support": {
+          "chrome": {
+            "version_added": "60"
+          },
+          "chrome_android": {
+            "version_added": "60"
+          },
+          "edge": {
+            "version_added": "17"
+          },
+          "firefox": {
+            "version_added": "55"
+          },
+          "firefox_android": {
+            "version_added": "55"
+          },
+          "ie": {
+            "version_added": false
+          },
+          "opera": {
+            "version_added": "47"
+          },
+          "opera_android": {
+            "version_added": "44"
+          },
+          "safari": {
+            "version_added": "10"
+          },
+          "safari_ios": {
+            "version_added": "10"
+          },
+          "samsunginternet_android": {
+            "version_added": "8.0"
+          },
+          "webview_android": {
+            "version_added": "60"
+          }
+        },
+        "status": {
+          "experimental": false,
+          "standard_track": true,
+          "deprecated": false
+        }
+      }
+    },
+    "replace": {
+      "__compat": {
+        "mdn_url": "https://developer.mozilla.org/docs/Web/API/DOMTokenList/replace",
+        "spec_url": "https://dom.spec.whatwg.org/#ref-for-dom-domtokenlist-replace①",
+        "support": {
+          "chrome": {
+            "version_added": "61"
+          },
+          "chrome_android": {
+            "version_added": "61"
+          },
+          "edge": {
+            "version_added": "17"
+          },
+          "firefox": {
+            "version_added": "49"
+          },
+          "firefox_android": {
+            "version_added": "49"
+          },
+          "ie": {
+            "version_added": false
+          },
+          "opera": {
+            "version_added": "48"
+          },
+          "opera_android": {
+            "version_added": "45"
+          },
+          "safari": {
+            "version_added": "10.1"
+          },
+          "safari_ios": {
+            "version_added": "10.3"
+          },
+          "samsunginternet_android": {
+            "version_added": "8.0"
+          },
+          "webview_android": {
+            "version_added": "61"
+          }
+        },
+        "status": {
+          "experimental": false,
+          "standard_track": true,
+          "deprecated": false
+        }
+      },
+      "boolean_value": {
+        "__compat": {
+          "description": "<code>return()</code>'s value is a boolean, not void as it used to be.",
+          "support": {
+            "chrome": {
+              "version_added": "67"
+            },
+            "chrome_android": {
+              "version_added": "67"
+            },
+            "edge": {
+              "version_added": "18"
+            },
+            "firefox": {
+              "version_added": "61"
+            },
+            "firefox_android": {
+              "version_added": "61"
+            },
+            "ie": {
+              "version_added": false
+            },
+            "opera": {
+              "version_added": "54"
+            },
+            "opera_android": {
+              "version_added": "48"
+            },
+            "safari": {
+              "version_added": "12"
+            },
+            "safari_ios": {
+              "version_added": "12"
+            },
+            "samsunginternet_android": {
+              "version_added": "9.0"
+            },
+            "webview_android": {
+              "version_added": "67"
+            }
+          },
+          "status": {
+            "experimental": false,
+            "standard_track": true,
+            "deprecated": false
+          }
+        }
+      }
+    },
+    "supports": {
+      "__compat": {
+        "mdn_url": "https://developer.mozilla.org/docs/Web/API/DOMTokenList/supports",
+        "spec_url": "https://dom.spec.whatwg.org/#ref-for-dom-domtokenlist-supports①",
+        "support": {
+          "chrome": {
+            "version_added": "49"
+          },
+          "chrome_android": {
+            "version_added": "49"
+          },
+          "edge": {
+            "version_added": "17"
+          },
+          "firefox": {
+            "version_added": "49"
+          },
+          "firefox_android": {
+            "version_added": "49"
+          },
+          "ie": {
+            "version_added": false
+          },
+          "opera": {
+            "version_added": "36"
+          },
+          "opera_android": {
+            "version_added": "36"
+          },
+          "safari": {
+            "version_added": "10.1"
+          },
+          "safari_ios": {
+            "version_added": "10.3"
+          },
+          "samsunginternet_android": {
+            "version_added": "5.0"
+          },
+          "webview_android": {
+            "version_added": "49"
+          }
+        },
+        "status": {
+          "experimental": true,
+          "standard_track": true,
+          "deprecated": false
+        }
+      }
+    },
+    "toggle": {
+      "__compat": {
+        "mdn_url": "https://developer.mozilla.org/docs/Web/API/DOMTokenList/toggle",
+        "spec_url": "https://dom.spec.whatwg.org/#ref-for-dom-domtokenlist-toggle①",
+        "support": {
+          "chrome": {
+            "version_added": "8"
+          },
+          "chrome_android": {
+            "version_added": "18"
+          },
+          "edge": {
+            "version_added": "12"
+          },
+          "firefox": {
+            "version_added": "3.6"
+          },
+          "firefox_android": {
+            "version_added": "4"
+          },
+          "ie": {
+            "version_added": "10"
+          },
+          "opera": {
+            "version_added": true
+          },
+          "opera_android": {
+            "version_added": true
+          },
+          "safari": {
+            "version_added": "5.1"
+          },
+          "safari_ios": {
+            "version_added": "5"
+          },
+          "samsunginternet_android": {
+            "version_added": "1.0"
+          },
+          "webview_android": {
+            "version_added": "3"
+          }
+        },
+        "status": {
+          "experimental": false,
+          "standard_track": true,
+          "deprecated": false
+        }
+      },
+      "force_parameter": {
+        "__compat": {
+          "description": "<code>force</code> parameter",
+          "support": {
+            "chrome": {
+              "version_added": "24"
+            },
+            "chrome_android": {
+              "version_added": "25"
+            },
+            "edge": {
+              "version_added": "12"
+            },
+            "firefox": {
+              "version_added": "24"
+            },
+            "firefox_android": {
+              "version_added": "24"
+            },
+            "ie": {
+              "version_added": false
+            },
+            "opera": {
+              "version_added": "15"
+            },
+            "opera_android": {
+              "version_added": "14"
+            },
+            "safari": {
+              "version_added": "6.1"
+            },
+            "safari_ios": {
+              "version_added": "6.1"
+            },
+            "samsunginternet_android": {
+              "version_added": "1.5"
+            },
+            "webview_android": {
+              "version_added": "≤37"
+            }
+          },
+          "status": {
+            "experimental": false,
+            "standard_track": true,
+            "deprecated": false
+          }
+        }
+      }
+    },
+    "trim_whitespace": {
+      "__compat": {
+        "description": "Trims whitespace",
+        "mdn_url": "https://developer.mozilla.org/docs/Web/API/DOMTokenList#Trimming_of_whitespace_and_removal_of_duplicates",
+        "support": {
+          "chrome": {
+            "version_added": "48"
+          },
+          "chrome_android": {
+            "version_added": "48"
+          },
+          "edge": {
+            "version_added": "12"
+          },
+          "firefox": {
+            "version_added": "51"
+          },
+          "firefox_android": {
+            "version_added": "51"
+          },
+          "ie": {
+            "version_added": "10"
+          },
+          "opera": {
+            "version_added": "35"
+          },
+          "opera_android": {
+            "version_added": "35"
+          },
+          "safari": {
+            "version_added": "10"
+          },
+          "safari_ios": {
+            "version_added": "10"
+          },
+          "samsunginternet_android": {
+            "version_added": "5.0"
+          },
+          "webview_android": {
+            "version_added": "48"
+          }
+        },
+        "status": {
+          "experimental": false,
+          "standard_track": true,
+          "deprecated": false
+        }
+      }
+    },
+    "value": {
+      "__compat": {
+        "mdn_url": "https://developer.mozilla.org/docs/Web/API/DOMTokenList/value",
+        "spec_url": "https://dom.spec.whatwg.org/#ref-for-dom-domtokenlist-value②",
+        "support": {
+          "chrome": {
+            "version_added": "50",
+            "notes": "Before Chrome 50, this property was part of the deprecated child <code>DOMSettableTokenList</code> interface."
+          },
+          "chrome_android": {
+            "version_added": "50",
+            "notes": "Before Chrome 50, this property was part of the deprecated child <code>DOMSettableTokenList</code> interface."
+          },
+          "edge": {
+            "version_added": "17"
+          },
+          "firefox": {
+            "version_added": "47"
+          },
+          "firefox_android": {
+            "version_added": "47"
+          },
+          "ie": {
+            "version_added": false
+          },
+          "opera": {
+            "version_added": "37",
+            "notes": "Before Opera 37, this property was part of the deprecated child <code>DOMSettableTokenList</code> interface."
+          },
+          "opera_android": {
+            "version_added": "37",
+            "notes": "Before Opera 37, this property was part of the deprecated child <code>DOMSettableTokenList</code> interface."
+          },
+          "safari": {
+            "version_added": "10"
+          },
+          "safari_ios": {
+            "version_added": "10"
+          },
+          "samsunginternet_android": {
+            "version_added": "5.0",
+            "notes": "Before Samsung Internet 5.0, this property was part of the deprecated child <code>DOMSettableTokenList</code> interface."
+          },
+          "webview_android": {
+            "version_added": "50",
+            "notes": "Before Chrome 50, this property was part of the deprecated child <code>DOMSettableTokenList</code> interface."
+          }
+        },
+        "status": {
+          "experimental": false,
+          "standard_track": true,
+          "deprecated": false
+        }
+      }
+    },
+    "values": {
+      "__compat": {
+        "mdn_url": "https://developer.mozilla.org/docs/Web/API/DOMTokenList/values",
+        "support": {
+          "chrome": {
+            "version_added": "42"
+          },
+          "chrome_android": {
+            "version_added": "45"
+          },
+          "edge": {
+            "version_added": "16"
+          },
+          "firefox": {
+            "version_added": "50"
+          },
+          "firefox_android": {
+            "version_added": "50"
+          },
+          "ie": {
+            "version_added": false
+          },
+          "opera": {
+            "version_added": "32"
+          },
+          "opera_android": {
+            "version_added": "32"
+          },
+          "safari": {
+            "version_added": "10.1"
+          },
+          "safari_ios": {
+            "version_added": "10.3"
+          },
+          "samsunginternet_android": {
+            "version_added": "5.0"
+          },
+          "webview_android": {
+            "version_added": "45"
+          }
+        },
+        "status": {
+          "experimental": false,
+          "standard_track": true,
+          "deprecated": false
+        }
+      }
+    },
+    "@@iterator": {
+      "__compat": {
+        "support": {
+          "chrome": {
+            "version_added": "42"
+          },
+          "chrome_android": {
+            "version_added": "42"
+          },
+          "edge": {
+            "version_added": "16"
+          },
+          "firefox": {
+            "version_added": "36"
+          },
+          "firefox_android": {
+            "version_added": "36"
+          },
+          "ie": {
+            "version_added": false
+          },
+          "opera": {
+            "version_added": "29"
+          },
+          "opera_android": {
+            "version_added": "29"
+          },
+          "safari": {
+            "version_added": "10.1"
+          },
+          "safari_ios": {
+            "version_added": "10.3"
+          },
+          "samsunginternet_android": {
+            "version_added": "4.0"
+          },
+          "webview_android": {
+            "version_added": "42"
+          }
+        },
+        "status": {
+          "experimental": false,
+          "standard_track": true,
+          "deprecated": false
+        }
+      }
+    }
+  },
+  "polyfilled": {
+    "edge": "<14",
+    "ie": "*",
+    "safari": "4 - 6.0"
+  },
+  "native": {
+    "android": {
+      "version_added": "3"
+    },
+    "chrome": {
+      "version_added": "8"
+    },
+    "edge": {
+      "version_added": "12"
+    },
+    "firefox": {
+      "version_added": "3.6"
+    },
+    "ie": {
+      "version_added": "10"
+    },
+    "opera": {
+      "version_added": "11.5"
+    },
+    "safari": {
+      "version_added": "5.1"
+    },
+    "ios_saf": {
+      "version_added": "5"
+    }
+  },
+  "polyfillio": {
+    "aliases": [
+      "default-3.3",
+      "default-3.4",
+      "default-3.5",
+      "default-3.6",
+      "default"
+    ],
+    "dependencies": [
+      "_DOMTokenList"
+    ],
+    "spec": "http://www.whatwg.org/specs/web-apps/current-work/#domtokenlist",
+    "docs": "https://developer.mozilla.org/en/docs/Web/API/DOMTokenList",
+    "browsers": {
+      "edge": "<14",
+      "edge_mob": "<14",
+      "ie": "*",
+      "safari": "4 - 6.0",
+      "ie_mob": "10 - *"
+    },
+    "detectSource": "\"DOMTokenList\"in self&&function(e){return!(\"classList\"in e)||!e.classList.toggle(\"x\",!1)&&!e.className}(document.createElement(\"x\"))\n",
+    "baseDir": "DOMTokenList",
+    "hasTests": false,
+    "isTestable": true,
+    "isPublic": true,
+    "size": 1224
+  }
+}

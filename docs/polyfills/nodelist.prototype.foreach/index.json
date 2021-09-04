@@ -1,0 +1,146 @@
+{
+  "name": "NodeList.prototype.forEach",
+  "polyfillName": "NodeList.prototype.forEach",
+  "coreWeb": {
+    "name": "NodeList.prototype.forEach",
+    "deps": [],
+    "browsers": {
+      "edge": "<16",
+      "edge_mob": "<16",
+      "ie": "*",
+      "ie_mob": "*",
+      "chrome": "<51",
+      "firefox": "<50",
+      "opera": "<38",
+      "op_mob": "<38",
+      "safari": "<10",
+      "android": "<51",
+      "firefox_mob": "<50",
+      "ios_saf": "<10",
+      "samsung_mob": "<5"
+    },
+    "engines": {
+      "EdgeHTML": "12 - 15",
+      "Trident": ">= 4.0",
+      "Blink": "28 - 50",
+      "Gecko": "1.7 - 49",
+      "Presto": ">= 1",
+      "WebKit": "85 - 601.5.17"
+    },
+    "size": 51,
+    "isAlias": false,
+    "providedByCoreWeb": false
+  },
+  "mdn": {
+    "__compat": {
+      "mdn_url": "https://developer.mozilla.org/docs/Web/API/NodeList/forEach",
+      "support": {
+        "chrome": {
+          "version_added": "51"
+        },
+        "chrome_android": {
+          "version_added": "51"
+        },
+        "edge": {
+          "version_added": "16"
+        },
+        "firefox": {
+          "version_added": "50"
+        },
+        "firefox_android": {
+          "version_added": "50"
+        },
+        "ie": {
+          "version_added": false
+        },
+        "opera": {
+          "version_added": "38"
+        },
+        "opera_android": {
+          "version_added": "41"
+        },
+        "safari": {
+          "version_added": "10"
+        },
+        "safari_ios": {
+          "version_added": "10"
+        },
+        "samsunginternet_android": {
+          "version_added": "5.0"
+        },
+        "webview_android": {
+          "version_added": "51"
+        }
+      },
+      "status": {
+        "experimental": false,
+        "standard_track": true,
+        "deprecated": false
+      }
+    }
+  },
+  "polyfilled": {
+    "android": "<51",
+    "chrome": "<51",
+    "edge": "<16",
+    "firefox": "<50",
+    "ie": "*",
+    "opera": "<38",
+    "safari": "<10",
+    "ios_saf": "<10"
+  },
+  "native": {
+    "android": {
+      "version_added": "51"
+    },
+    "chrome": {
+      "version_added": "51"
+    },
+    "edge": {
+      "version_added": "16"
+    },
+    "firefox": {
+      "version_added": "50"
+    },
+    "ie": {
+      "version_added": false
+    },
+    "opera": {
+      "version_added": "38"
+    },
+    "safari": {
+      "version_added": "10"
+    },
+    "ios_saf": {
+      "version_added": "10"
+    }
+  },
+  "polyfillio": {
+    "dependencies": [
+      "Array.prototype.forEach"
+    ],
+    "spec": "https://heycam.github.io/webidl/#es-forEach",
+    "docs": "https://developer.mozilla.org/en-US/docs/Web/API/NodeList/forEach",
+    "browsers": {
+      "edge": "<16",
+      "edge_mob": "<16",
+      "ie": "*",
+      "ie_mob": "*",
+      "chrome": "<51",
+      "firefox": "<50",
+      "opera": "<38",
+      "op_mob": "<38",
+      "safari": "<10",
+      "android": "<51",
+      "firefox_mob": "<50",
+      "ios_saf": "<10",
+      "samsung_mob": "<5"
+    },
+    "detectSource": "\"forEach\"in NodeList.prototype\n",
+    "baseDir": "NodeList/prototype/forEach",
+    "hasTests": true,
+    "isTestable": true,
+    "isPublic": true,
+    "size": 51
+  }
+}
