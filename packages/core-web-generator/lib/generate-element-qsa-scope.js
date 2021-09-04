@@ -23,7 +23,7 @@ async function generateElementQsaScope(mapping) {
             "Element",
         ],
         browsers: browsers,
-        engines: browsers_to_engines_1.browsersToEngines(browsers),
+        engines: (0, browsers_to_engines_1.browsersToEngines)(browsers),
         size: src.length,
         isAlias: false,
         providedByCoreWeb: true,

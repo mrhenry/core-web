@@ -85,6 +85,32 @@ function customMatcherSources() {
             "new Animation($1)",
             "new Animation($1, $2)",
             "document.timeline"
+        ],
+        'NodeList.prototype.@@iterator': [
+            "addedNodes",
+            "childNodes",
+            "elements",
+            "getElementsByName",
+            "labels",
+            "querySelectorAll",
+            "removedNodes"
+        ],
+        'NodeList.prototype.forEach': [
+            "addedNodes",
+            "childNodes",
+            "elements",
+            "getElementsByName",
+            "labels",
+            "querySelectorAll",
+            "removedNodes"
+        ],
+        'DOMTokenList.prototype.@@iterator': [
+            "classList",
+            "relList"
+        ],
+        'DOMTokenList.prototype.forEach': [
+            "classList",
+            "relList"
         ]
     };
 }
@@ -98,10 +124,16 @@ async function generateMappings(featureMapping) {
     const newExpressionMatchersWithStringLiterals = {};
     const newExpressionMatchers = {};
     const customMatchers = customMatcherSources();
-    const intlTimeZoneOptionsExpressionsCandidates = await generate_intl_timezone_mapping_candidates_1.getIntlTimeZoneOptionsExpressionCandidates();
+    const intlTimeZoneOptionsExpressionsCandidates = await (0, generate_intl_timezone_mapping_candidates_1.getIntlTimeZoneOptionsExpressionCandidates)();
     featureMapping.forEach((feature) => {
         let matchCandidates = [];
-        if (feature.name.indexOf(".prototype.") >= 0) {
+        if (feature.name === "DOMTokenList.prototype.@@iterator" || feature.name === "DOMTokenList.prototype.forEach") {
+            // noop
+        }
+        else if (feature.name === "NodeList.prototype.@@iterator" || feature.name === "NodeList.prototype.forEach") {
+            // noop
+        }
+        else if (feature.name.indexOf(".prototype.") >= 0) {
             matchCandidates.push('$_instance.' + feature.name.replace(/^.+\.prototype\./, ""));
         }
         else {
@@ -437,7 +469,7 @@ function generateNewExpressionMatcher() {
 }`;
 }
 function setNodeIsVariable(matcher) {
-    traverse_1.default(matcher, {
+    (0, traverse_1.default)(matcher, {
         noScope: true,
         Identifier(path) {
             if (path.node.name.startsWith("$")) {

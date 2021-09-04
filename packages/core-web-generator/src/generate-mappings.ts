@@ -99,6 +99,36 @@ function customMatcherSources(): Record<string, Array<string>> {
 			"new Animation($1)",
 			"new Animation($1, $2)",
 			"document.timeline"
+		],
+
+		'NodeList.prototype.@@iterator': [
+			"addedNodes",
+			"childNodes",
+			"elements",
+			"getElementsByName",
+			"labels",
+			"querySelectorAll",
+			"removedNodes"
+		],
+
+		'NodeList.prototype.forEach': [
+			"addedNodes",
+			"childNodes",
+			"elements",
+			"getElementsByName",
+			"labels",
+			"querySelectorAll",
+			"removedNodes"
+		],
+
+		'DOMTokenList.prototype.@@iterator': [
+			"classList",
+			"relList"
+		],
+
+		'DOMTokenList.prototype.forEach': [
+			"classList",
+			"relList"
 		]
 	}
 }
@@ -143,7 +173,11 @@ export async function generateMappings(featureMapping: Array<Feature>) {
 
 	featureMapping.forEach((feature) => {
 		let matchCandidates = [];
-		if (feature.name.indexOf(".prototype.") >= 0) {
+		if (feature.name === "DOMTokenList.prototype.@@iterator" || feature.name === "DOMTokenList.prototype.forEach") {
+			// noop
+		} else if (feature.name === "NodeList.prototype.@@iterator" || feature.name === "NodeList.prototype.forEach") {
+			// noop
+		} else if (feature.name.indexOf(".prototype.") >= 0) {
 			matchCandidates.push('$_instance.' + feature.name.replace(/^.+\.prototype\./, ""));
 		} else {
 			if (

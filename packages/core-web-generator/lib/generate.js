@@ -42,8 +42,8 @@ async function genAll() {
         });
     }
     // webcomponents
-    await generate_webcomponents_1.generateWebComponents(mapping);
-    await generate_element_qsa_scope_1.generateElementQsaScope(mapping);
+    await (0, generate_webcomponents_1.generateWebComponents)(mapping);
+    await (0, generate_element_qsa_scope_1.generateElementQsaScope)(mapping);
     // aliases
     const inversedAliases = {};
     aliases.forEach((alias) => {
@@ -88,7 +88,7 @@ async function genAll() {
     });
     knownEngines.sort();
     fs.writeFileSync(path.join(coreWebDir, "__engines.js"), `export const engines = ${JSON.stringify(knownEngines)}`);
-    await generate_mappings_1.generateMappings(mapping);
+    await (0, generate_mappings_1.generateMappings)(mapping);
 }
 // Override meta data from polyfill-library
 async function patchedMeta(feature, meta) {
@@ -115,7 +115,7 @@ async function gen(feature, mapping, aliases) {
             name: feature,
             deps: Array.from(dependencies).filter(n => !providedByBabel(n)),
             browsers: meta.browsers,
-            engines: browsers_to_engines_1.browsersToEngines(meta.browsers),
+            engines: (0, browsers_to_engines_1.browsersToEngines)(meta.browsers),
             size: meta.size,
             isAlias: false,
             providedByCoreWeb: false,
@@ -184,8 +184,12 @@ async function allDependencies(feature) {
     return dependencies;
 }
 function providedByBabel(f) {
-    const p = /^(_(String|Array)?Iterator|Function|Date|Math|Object|String|Number|(Weak)?(Map|Set)|Symbol|Array|RegExp|Promise|Reflect|URL|URLSearchParams|setTimeout|setInterval|setImmediate|queueMicrotask|DOMTokenList|NodeList)($|\.)/;
-    const typedArrays = /^(|ArrayBuffer|Int8Array|Uint8Array|Uint8ClampedArray|Int16Array|Uint16Array|Int32Array|Uint32Array|Float32Array|Float64Array)($|\.)/;
+    const p = /^(_StringIterator|Function|Date|Math|Object|String|Number|(Weak)?(Map|Set)|Symbol|Array|RegExp|Promise|Reflect|URL|URLSearchParams|setTimeout|setInterval|setImmediate|queueMicrotask)($|\.)/;
+    const typedArrays = /^(ArrayBuffer|Int8Array|Uint8Array|Uint8ClampedArray|Int16Array|Uint16Array|Int32Array|Uint32Array|Float32Array|Float64Array)($|\.)/;
+    const domIterables = /^(DOMTokenList|NodeList)\.prototype\.(forEach|@@iterator)($|\.)/;
+    if (domIterables.test(f)) {
+        return false;
+    }
     return p.test(f) || typedArrays.test(f) || f.endsWith(".@@iterator");
 }
 function providedByCoreWeb(f) {

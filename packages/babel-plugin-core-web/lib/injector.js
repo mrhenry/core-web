@@ -69,15 +69,15 @@ class Injector {
 
 			return true;
 		});
-		
+
 		while (all.length) {
 			const importName = all.pop();
 			addSideEffect(path, `@mrhenry/core-web/modules/${importName}`);
 		}
 
 		// remove unused imports
-		for (const path of this.removeSet) {
-			path.remove();
+		for (const forRemoval of this.removeSet) {
+			forRemoval.remove();
 		}
 	}
 
