@@ -1,6 +1,6 @@
 {
   "name": "@mrhenry/core-web-tests",
-  "version": "0.5.3",
+  "version": "0.6.0",
   "private": true,
   "scripts": {
     "build": "webpack",

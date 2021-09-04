@@ -81,7 +81,11 @@ module.exports = [
 												targets: {
 													browsers: target.presetEnvBrowsers
 												},
-												useBuiltIns: 'usage'
+												useBuiltIns: 'usage',
+												exclude: [
+													"web.dom-collections.iterator",
+													"web.dom-collections.for-each"
+												]
 											}
 										]
 									]

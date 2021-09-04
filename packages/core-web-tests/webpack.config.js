@@ -112,7 +112,11 @@ function configBuilder(opts) {
 										targets: {
 											browsers: opts.coreJsBrowsers
 										},
-										useBuiltIns: 'usage'
+										useBuiltIns: 'usage',
+										exclude: [
+											'web.dom-collections.iterator',
+											'web.dom-collections.for-each'
+										]
 									}
 								]
 							]

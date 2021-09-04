@@ -48,11 +48,12 @@ module.exports = function (_, opts) {
 							injector.handleIgnoreComment(comment);
 						})
 					}
+
+					injector.inject(path, state);
 				}
 			},
 		},
 		post(state) {
-			injector.inject(state.path, state);
 			injector.reset();
 		},
 	};

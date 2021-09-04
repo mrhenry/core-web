@@ -1,7 +1,7 @@
 {
   "name": "@mrhenry/pages-worker",
   "main": "index.js",
-  "version": "0.5.3",
+  "version": "0.6.0",
   "license": "MIT",
   "private": true,
   "scripts": {
