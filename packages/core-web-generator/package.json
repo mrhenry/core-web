@@ -1,6 +1,6 @@
 {
   "name": "@mrhenry/core-web-generator",
-  "version": "0.5.2",
+  "version": "0.6.0",
   "private": true,
   "scripts": {
     "clean": "rm -rf ./lib/",
@@ -12,7 +12,7 @@
     "test": "__tests__"
   },
   "dependencies": {
-    "@babel/parser": "^7.15.3",
+    "@babel/parser": "^7.15.5",
     "@babel/traverse": "^7.14.9",
     "@babel/types": "^7.14.9",
     "@mdn/browser-compat-data": "^3.3.14",
