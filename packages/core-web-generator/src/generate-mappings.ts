@@ -102,33 +102,33 @@ function customMatcherSources(): Record<string, Array<string>> {
 		],
 
 		'NodeList.prototype.@@iterator': [
-			"addedNodes",
-			"childNodes",
-			"elements",
-			"getElementsByName",
-			"labels",
-			"querySelectorAll",
-			"removedNodes"
+			"$instance_.addedNodes",
+			"$instance_.childNodes",
+			"$instance_.elements",
+			"$instance_.getElementsByName",
+			"$instance_.labels",
+			"$instance_.querySelectorAll",
+			"$instance_.removedNodes"
 		],
 
 		'NodeList.prototype.forEach': [
-			"addedNodes",
-			"childNodes",
-			"elements",
-			"getElementsByName",
-			"labels",
-			"querySelectorAll",
-			"removedNodes"
+			"$instance_.addedNodes",
+			"$instance_.childNodes",
+			"$instance_.elements",
+			"$instance_.getElementsByName",
+			"$instance_.labels",
+			"$instance_.querySelectorAll",
+			"$instance_.removedNodes"
 		],
 
 		'DOMTokenList.prototype.@@iterator': [
-			"classList",
-			"relList"
+			"$instance_.classList",
+			"$instance_.relList"
 		],
 
 		'DOMTokenList.prototype.forEach': [
-			"classList",
-			"relList"
+			"$instance_.classList",
+			"$instance_.relList"
 		]
 	}
 }
