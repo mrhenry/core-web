@@ -167,15 +167,14 @@ function mapWindowFeatureAPI(compat, featureName, polyfillName, feature) {
 		}
 	}
 
+	if (compat['Window.' + featureName]) {
+		return true;
+	}
+
 	compat['Window.' + featureName] = compat['Window.' + featureName] || {
 		key: 'Window.' + featureName,
 		data: [],
 	};
-
-	if (compat['Window.' + featureName].data.length === 1) {
-		console.log(compat['Window.' + featureName].data[0].name);
-		console.log('Window.' + featureName);
-	}
 
 	compat['Window.' + featureName].data.push({
 		name: 'Window.' + featureName,
