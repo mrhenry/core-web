@@ -44,7 +44,7 @@
           "version_added": "16"
         },
         "safari": {
-          "version_added": "6.1"
+          "version_added": "8"
         },
         "safari_ios": {
           "version_added": "8"
@@ -86,7 +86,7 @@
       "version_added": "16"
     },
     "safari": {
-      "version_added": "6.1"
+      "version_added": "8"
     },
     "ios_saf": {
       "version_added": "8"
