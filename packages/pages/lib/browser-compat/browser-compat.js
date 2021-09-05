@@ -36,11 +36,19 @@ async function generate(assetMap) {
 	}
 
 	compatArray.sort((a, b) => {
-		if (a.key.toLowerCase() < b.key.toLowerCase()) {
+		if (a.key.split('.')[0].toLowerCase() < b.key.split('.')[0].toLowerCase()) {
+			return -1;
+		}
+		
+		if (a.key.split('.')[0].toLowerCase() > b.key.split('.')[0].toLowerCase()) {
+			return 1;
+		}
+
+		if (a.key < b.key) {
 			return -1;
 		}
 
-		if (a.key.toLowerCase() > b.key.toLowerCase()) {
+		if (a.key > b.key) {
 			return 1;
 		}
 
@@ -122,18 +130,20 @@ function handleFeature(compat, name, feature) {
 		mapPropertyFeatureAPI(compat, 'Window.customElements', feature.name, feature);
 	} else if (name.includes('.prototype.')) {
 		mapPrototypeFeatureAPI(compat, name, feature.name, feature) || mapPrototypeFeatureBuiltin(compat, name, feature.name, feature);
-	} else if (name.includes('.')) {
+	} else if (name.includes('.') && !(name.startsWith('Window.') || name.startsWith('window.')) && !(name.startsWith('Self.') || name.startsWith('self.'))) {
 		mapPropertyFeatureAPI(compat, name, feature.name, feature) || mapPropertyFeatureBuiltin(compat, name, feature.name, feature) ||
 			mapPropertyFeatureAPI(compat, toTitleCase(name), feature.name, feature) || mapPropertyFeatureBuiltin(compat, toTitleCase(name), feature.name, feature);
 	} else if (bcd.api[name]) {
 		mapMainFeatureAPI(compat, name, feature.name, feature);
 	} else if (bcd.javascript.builtins[name]) {
 		mapMainFeatureBuiltin(compat, name, feature.name, feature);
-	} else if (bcd.api.WindowOrWorkerGlobalScope[name]) {
-		mapGlobalScopeFeatureAPI(compat, name, feature.name, feature)
+	} else if (bcd.api.Window[name]) {
+		mapWindowFeatureAPI(compat, name, feature.name, feature)
+	} else if (bcd.api.WorkerGlobalScope[name]) {
+		mapWorkerGlobalScopeFeatureAPI(compat, name, feature.name, feature)
 	} else {
-		if (!name.includes('Window.')) {
-			handleFeature(compat, 'Window.' + name, feature);
+		if (name.startsWith('Window.') || name.startsWith('window.')) {
+			handleFeature(compat, name.substr(7), feature);
 			return;
 		}
 
@@ -141,32 +151,70 @@ function handleFeature(compat, name, feature) {
 	}	
 }
 
-function mapGlobalScopeFeatureAPI(compat, featureName, polyfillName, feature) {
+function mapWindowFeatureAPI(compat, featureName, polyfillName, feature) {
 	let polyfilled = {};
 	let native = {};
 	for (const browser of coreWebBrowsers) {
 		const mdnBrowser = browsersCoreWebToMDN(browser);
 		if (
 			mdnBrowser &&
-			bcd.api.WindowOrWorkerGlobalScope[featureName].__compat &&
-			bcd.api.WindowOrWorkerGlobalScope[featureName].__compat.support &&
-			bcd.api.WindowOrWorkerGlobalScope[featureName].__compat.support[mdnBrowser]
+			bcd.api.Window[featureName].__compat &&
+			bcd.api.Window[featureName].__compat.support &&
+			bcd.api.Window[featureName].__compat.support[mdnBrowser]
 		) {
 			polyfilled[browser] = (feature.browsers || {})[browser];
-			native[browser] = bcd.api.WindowOrWorkerGlobalScope[featureName].__compat.support[mdnBrowser];
+			native[browser] = bcd.api.Window[featureName].__compat.support[mdnBrowser];
 		}
 	}
 
-	compat[featureName] = compat[featureName] || {
-		key: featureName,
+	compat['Window.' + featureName] = compat['Window.' + featureName] || {
+		key: 'Window.' + featureName,
 		data: [],
 	};
 
-	compat[featureName].data.push({
-		name: featureName,
+	if (compat['Window.' + featureName].data.length === 1) {
+		console.log(compat['Window.' + featureName].data[0].name);
+		console.log('Window.' + featureName);
+	}
+
+	compat['Window.' + featureName].data.push({
+		name: 'Window.' + featureName,
 		polyfillName: polyfillName,
 		coreWeb: feature,
-		mdn: bcd.api.WindowOrWorkerGlobalScope[featureName],
+		mdn: bcd.api.Window[featureName],
+		polyfilled: polyfilled,
+		native: native,
+	});
+
+	return true;
+}
+
+function mapWorkerGlobalScopeFeatureAPI(compat, featureName, polyfillName, feature) {
+	let polyfilled = {};
+	let native = {};
+	for (const browser of coreWebBrowsers) {
+		const mdnBrowser = browsersCoreWebToMDN(browser);
+		if (
+			mdnBrowser &&
+			bcd.api.WorkerGlobalScope[featureName].__compat &&
+			bcd.api.WorkerGlobalScope[featureName].__compat.support &&
+			bcd.api.WorkerGlobalScope[featureName].__compat.support[mdnBrowser]
+		) {
+			polyfilled[browser] = (feature.browsers || {})[browser];
+			native[browser] = bcd.api.WorkerGlobalScope[featureName].__compat.support[mdnBrowser];
+		}
+	}
+
+	compat['self.' + featureName] = compat['self.' + featureName] || {
+		key: 'self.' + featureName,
+		data: [],
+	};
+
+	compat['self.' + featureName].data.push({
+		name: 'self.' + featureName,
+		polyfillName: polyfillName,
+		coreWeb: feature,
+		mdn: bcd.api.WorkerGlobalScope[featureName],
 		polyfilled: polyfilled,
 		native: native,
 	});
