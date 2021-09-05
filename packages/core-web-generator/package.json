@@ -14,7 +14,7 @@
   "dependencies": {
     "@babel/parser": "^7.15.3",
     "@babel/traverse": "^7.14.9",
-    "@babel/types": "^7.14.9",
+    "@babel/types": "^7.15.4",
     "@mdn/browser-compat-data": "^3.3.14",
     "@webcomponents/custom-elements": "^1.5.0",
     "@webcomponents/shadycss": "^1.11.0",
