@@ -108,6 +108,18 @@ function cleanName(str) {
 		out = out.replace('Console.', 'console.');
 	}
 
+	if (out.indexOf('Window.') === 0 && out.indexOf('.prototype.') === -1) {
+		out = out.replace('Window.', 'window.');
+	}
+
+	if (out.indexOf('Document.') === 0 && out.indexOf('.prototype.') === -1) {
+		out = out.replace('Document.', 'document.');
+	}
+
+	if (out.indexOf('Navigator.') === 0 && out.indexOf('.prototype.') === -1) {
+		out = out.replace('Navigator.', 'navigator.');
+	}
+
 	if (out.indexOf('Performance.') === 0) {
 		out = out.replace('Performance.', 'performance.');
 	}
