@@ -5,7 +5,7 @@ if (!("ResizeObserver"in self
 (function (global, factory) {
     typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports) :
     typeof define === 'function' && define.amd ? define(['exports'], factory) :
-    (global = global || self, factory(global.ResizeObserver = {}));
+    (global = typeof globalThis !== 'undefined' ? globalThis : global || self, factory(global.ResizeObserver = {}));
 }(this, (function (exports) { 'use strict';
 
     var resizeObservers = [];
@@ -41,6 +41,17 @@ if (!("ResizeObserver"in self
         ResizeObserverBoxOptions["DEVICE_PIXEL_CONTENT_BOX"] = "device-pixel-content-box";
     })(ResizeObserverBoxOptions || (ResizeObserverBoxOptions = {}));
 
+    var freeze = function (obj) { return Object.freeze(obj); };
+
+    var ResizeObserverSize = (function () {
+        function ResizeObserverSize(inlineSize, blockSize) {
+            this.inlineSize = inlineSize;
+            this.blockSize = blockSize;
+            freeze(this);
+        }
+        return ResizeObserverSize;
+    }());
+
     var DOMRectReadOnly = (function () {
         function DOMRectReadOnly(x, y, width, height) {
             this.x = x;
@@ -51,7 +62,7 @@ if (!("ResizeObserver"in self
             this.left = this.x;
             this.bottom = this.top + this.height;
             this.right = this.left + this.width;
-            return Object.freeze(this);
+            return freeze(this);
         }
         DOMRectReadOnly.prototype.toJSON = function () {
             var _a = this, x = _a.x, y = _a.y, top = _a.top, right = _a.right, bottom = _a.bottom, left = _a.left, width = _a.width, height = _a.height;
@@ -74,6 +85,9 @@ if (!("ResizeObserver"in self
     };
     var isElement = function (obj) {
         var _a, _b;
+        if (obj instanceof Element) {
+            return true;
+        }
         var scope = (_b = (_a = obj) === null || _a === void 0 ? void 0 : _a.ownerDocument) === null || _b === void 0 ? void 0 : _b.defaultView;
         return !!(scope && obj instanceof scope.Element);
     };
@@ -106,12 +120,9 @@ if (!("ResizeObserver"in self
         if (inlineSize === void 0) { inlineSize = 0; }
         if (blockSize === void 0) { blockSize = 0; }
         if (switchSizes === void 0) { switchSizes = false; }
-        return Object.freeze({
-            inlineSize: (switchSizes ? blockSize : inlineSize) || 0,
-            blockSize: (switchSizes ? inlineSize : blockSize) || 0
-        });
+        return new ResizeObserverSize((switchSizes ? blockSize : inlineSize) || 0, (switchSizes ? inlineSize : blockSize) || 0);
     };
-    var zeroBoxes = Object.freeze({
+    var zeroBoxes = freeze({
         devicePixelContentBoxSize: size(),
         borderBoxSize: size(),
         contentBoxSize: size(),
@@ -152,7 +163,7 @@ if (!("ResizeObserver"in self
         var contentHeight = svg ? svg.height : parseDimension(cs.height) - heightReduction - horizontalScrollbarThickness;
         var borderBoxWidth = contentWidth + horizontalPadding + verticalScrollbarThickness + horizontalBorderArea;
         var borderBoxHeight = contentHeight + verticalPadding + horizontalScrollbarThickness + verticalBorderArea;
-        var boxes = Object.freeze({
+        var boxes = freeze({
             devicePixelContentBoxSize: size(Math.round(contentWidth * devicePixelRatio), Math.round(contentHeight * devicePixelRatio), switchSizes),
             borderBoxSize: size(borderBoxWidth, borderBoxHeight, switchSizes),
             contentBoxSize: size(contentWidth, contentHeight, switchSizes),
@@ -178,9 +189,9 @@ if (!("ResizeObserver"in self
             var boxes = calculateBoxSizes(target);
             this.target = target;
             this.contentRect = boxes.contentRect;
-            this.borderBoxSize = [boxes.borderBoxSize];
-            this.contentBoxSize = [boxes.contentBoxSize];
-            this.devicePixelContentBoxSize = [boxes.devicePixelContentBoxSize];
+            this.borderBoxSize = freeze([boxes.borderBoxSize]);
+            this.contentBoxSize = freeze([boxes.contentBoxSize]);
+            this.devicePixelContentBoxSize = freeze([boxes.devicePixelContentBoxSize]);
         }
         return ResizeObserverEntry;
     }());
@@ -498,6 +509,7 @@ if (!("ResizeObserver"in self
 
     exports.ResizeObserver = ResizeObserver;
     exports.ResizeObserverEntry = ResizeObserverEntry;
+    exports.ResizeObserverSize = ResizeObserverSize;
 
     Object.defineProperty(exports, '__esModule', { value: true });
 

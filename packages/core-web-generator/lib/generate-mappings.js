@@ -79,6 +79,10 @@ function customMatcherSources() {
             'matchMedia',
             'MediaQueryList'
         ],
+        'MediaQueryList.prototype.addEventListener': [
+            'matchMedia',
+            'MediaQueryList'
+        ],
         'WebAnimations': [
             "$instance_.animate",
             "new Animation()",
@@ -127,7 +131,10 @@ async function generateMappings(featureMapping) {
     const intlTimeZoneOptionsExpressionsCandidates = await (0, generate_intl_timezone_mapping_candidates_1.getIntlTimeZoneOptionsExpressionCandidates)();
     featureMapping.forEach((feature) => {
         let matchCandidates = [];
-        if (feature.name === "DOMTokenList.prototype.@@iterator" || feature.name === "DOMTokenList.prototype.forEach") {
+        if (feature.name === "MediaQueryList.prototype.addEventListener") {
+            // noop
+        }
+        else if (feature.name === "DOMTokenList.prototype.@@iterator" || feature.name === "DOMTokenList.prototype.forEach") {
             // noop
         }
         else if (feature.name === "NodeList.prototype.@@iterator" || feature.name === "NodeList.prototype.forEach") {

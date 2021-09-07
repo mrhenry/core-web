@@ -1,5 +1,5 @@
 (function(undefined) {
-if (!("Intl"in self&&"DateTimeFormat"in self.Intl&&"formatToParts"in self.Intl.DateTimeFormat&&self.Intl.DateTimeFormat.supportedLocalesOf("hi").length
+if (!("Intl"in self&&"DateTimeFormat"in self.Intl&&"formatRangeToParts"in self.Intl.DateTimeFormat&&self.Intl.DateTimeFormat.supportedLocalesOf("hi").length
 )) {
 // Intl.DateTimeFormat.~locale.hi
 /* @generated */	

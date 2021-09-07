@@ -1,5 +1,5 @@
 (function(undefined) {
-if (!("Intl"in self&&"DateTimeFormat"in self.Intl&&"formatToParts"in self.Intl.DateTimeFormat&&self.Intl.DateTimeFormat.supportedLocalesOf("nl-CW").length
+if (!("Intl"in self&&"DateTimeFormat"in self.Intl&&"formatRangeToParts"in self.Intl.DateTimeFormat&&self.Intl.DateTimeFormat.supportedLocalesOf("nl-CW").length
 )) {
 // Intl.DateTimeFormat.~locale.nl-CW
 /* @generated */	

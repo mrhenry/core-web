@@ -1,5 +1,5 @@
 (function(undefined) {
-if (!("Intl"in self&&"DateTimeFormat"in self.Intl&&"formatToParts"in self.Intl.DateTimeFormat&&self.Intl.DateTimeFormat.supportedLocalesOf("qu-EC").length
+if (!("Intl"in self&&"DateTimeFormat"in self.Intl&&"formatRangeToParts"in self.Intl.DateTimeFormat&&self.Intl.DateTimeFormat.supportedLocalesOf("qu-EC").length
 )) {
 // Intl.DateTimeFormat.~locale.qu-EC
 /* @generated */	

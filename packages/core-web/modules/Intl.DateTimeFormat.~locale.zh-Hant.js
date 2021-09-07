@@ -1,5 +1,5 @@
 (function(undefined) {
-if (!("Intl"in self&&"DateTimeFormat"in self.Intl&&"formatToParts"in self.Intl.DateTimeFormat&&self.Intl.DateTimeFormat.supportedLocalesOf("zh-Hant").length
+if (!("Intl"in self&&"DateTimeFormat"in self.Intl&&"formatRangeToParts"in self.Intl.DateTimeFormat&&self.Intl.DateTimeFormat.supportedLocalesOf("zh-Hant").length
 )) {
 // Intl.DateTimeFormat.~locale.zh-Hant
 /* @generated */	

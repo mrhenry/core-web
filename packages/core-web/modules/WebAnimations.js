@@ -1,5 +1,5 @@
 (function(undefined) {
-if (!("function"==typeof document.head.animate
+if (!("function"==typeof document.head.animate&&function(){try{return!!document.createElement("DIV").animate({opacity:[0,1]},{direction:"alternate",duration:1,iterations:1})}catch(t){return!1}}()
 )) {
 // WebAnimations
 // Copyright 2014 Google Inc. All rights reserved.

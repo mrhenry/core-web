@@ -1,5 +1,5 @@
 (function(undefined) {
-if (!("Intl"in self&&"DateTimeFormat"in self.Intl&&"formatToParts"in self.Intl.DateTimeFormat&&self.Intl.DateTimeFormat.supportedLocalesOf("sd-Arab").length
+if (!("Intl"in self&&"DateTimeFormat"in self.Intl&&"formatRangeToParts"in self.Intl.DateTimeFormat&&self.Intl.DateTimeFormat.supportedLocalesOf("sd-Arab").length
 )) {
 // Intl.DateTimeFormat.~locale.sd-Arab
 /* @generated */	

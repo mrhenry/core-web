@@ -1,5 +1,5 @@
 (function(undefined) {
-if (!("Intl"in self&&"DateTimeFormat"in self.Intl&&"formatToParts"in self.Intl.DateTimeFormat.prototype&&"dayPeriod"===new self.Intl.DateTimeFormat("en",{hourCycle:"h11",hour:"numeric"}).formatToParts(0)[2].type
+if (!("Intl"in self&&"DateTimeFormat"in self.Intl&&"formatToParts"in self.Intl.DateTimeFormat.prototype&&"dayPeriod"===new self.Intl.DateTimeFormat("en",{hourCycle:"h11",hour:"numeric"}).formatToParts(0)[2].type&&"formatRangeToParts"in self.Intl.DateTimeFormat.prototype&&"dayPeriod"===new self.Intl.DateTimeFormat("en",{hourCycle:"h11",hour:"numeric"}).formatRangeToParts(0,1)[2].type
 )) {
 // Intl.DateTimeFormat
 (function() {
