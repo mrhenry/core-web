@@ -10,26 +10,26 @@
       "_DOMTokenList"
     ],
     "browsers": {
-      "edge": "<13",
-      "edge_mob": "<13",
+      "edge": "<16",
+      "edge_mob": "<16",
       "ie": "9-12",
       "ie_mob": "9 - 12",
-      "safari": "<9",
+      "safari": "<10.1",
       "chrome": "<50",
       "firefox": "<50",
-      "ios_saf": "*",
+      "ios_saf": "10.3",
       "opera": "<50",
       "samsung_mob": "<5",
       "bb": "10 - *"
     },
     "engines": {
-      "EdgeHTML": "12 - 12",
-      "WebKit": ">= 85",
+      "EdgeHTML": "12 - 15",
+      "WebKit": "85 - 603.2.1",
       "Blink": "28 - 49",
       "Gecko": "1.7 - 49",
       "Presto": ">= 1"
     },
-    "size": 83,
+    "size": 370,
     "isAlias": false,
     "providedByCoreWeb": false
   },
@@ -82,12 +82,12 @@
   },
   "polyfilled": {
     "chrome": "<50",
-    "edge": "<13",
+    "edge": "<16",
     "firefox": "<50",
     "ie": "9-12",
     "opera": "<50",
-    "safari": "<9",
-    "ios_saf": "*"
+    "safari": "<10.1",
+    "ios_saf": "10.3"
   },
   "native": {
     "android": {
@@ -124,14 +124,14 @@
     "license": "MIT",
     "spec": "https://dom.spec.whatwg.org/#domtokenlist",
     "browsers": {
-      "edge": "<13",
-      "edge_mob": "<13",
+      "edge": "<16",
+      "edge_mob": "<16",
       "ie": "9-12",
       "ie_mob": "9 - 12",
-      "safari": "<9",
+      "safari": "<10.1",
       "chrome": "<50",
       "firefox": "<50",
-      "ios_saf": "*",
+      "ios_saf": "10.3",
       "opera": "<50",
       "samsung_mob": "<5",
       "bb": "10 - *"
@@ -141,6 +141,6 @@
     "hasTests": true,
     "isTestable": true,
     "isPublic": true,
-    "size": 83
+    "size": 370
   }
 }

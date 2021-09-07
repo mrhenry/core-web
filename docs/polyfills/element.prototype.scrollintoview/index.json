@@ -28,7 +28,7 @@
       "WebKit": ">= 85",
       "Blink": "28 - 60"
     },
-    "size": 9029,
+    "size": 9772,
     "isAlias": false,
     "providedByCoreWeb": false
   },
@@ -266,6 +266,6 @@
     "hasTests": true,
     "isTestable": true,
     "isPublic": true,
-    "size": 9029
+    "size": 9772
   }
 }

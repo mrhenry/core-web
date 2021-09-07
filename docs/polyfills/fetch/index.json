@@ -32,7 +32,7 @@
       "WebKit": "85 - 605.1.33",
       "Blink": "28 - 65"
     },
-    "size": 8171,
+    "size": 9606,
     "isAlias": false,
     "providedByCoreWeb": false
   },
@@ -393,6 +393,7 @@
   "polyfillio": {
     "dependencies": [
       "Array.prototype.forEach",
+      "Array.isArray",
       "Object.getOwnPropertyNames",
       "Promise",
       "XMLHttpRequest",
@@ -424,11 +425,11 @@
       "module": "whatwg-fetch",
       "postinstall": "update.task.js"
     },
-    "detectSource": "\"fetch\"in self\n",
+    "detectSource": "\"fetch\"in self&&\"Request\"in self&&function(){try{return\"signal\"in new Request(\"\")}catch(e){return!1}}()\n",
     "baseDir": "fetch",
     "hasTests": true,
     "isTestable": true,
     "isPublic": true,
-    "size": 8171
+    "size": 9606
   }
 }

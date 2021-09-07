@@ -22,7 +22,7 @@
       "Presto": "1 - 2.10",
       "Trident": ">= 4.0"
     },
-    "size": 11965,
+    "size": 12232,
     "isAlias": false,
     "providedByCoreWeb": false
   },
@@ -820,6 +820,6 @@
     "hasTests": false,
     "isTestable": true,
     "isPublic": true,
-    "size": 11965
+    "size": 12232
   }
 }

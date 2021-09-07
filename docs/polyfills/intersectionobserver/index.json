@@ -21,7 +21,7 @@
       "firefox_mob": "< 55",
       "ie": "*",
       "ie_mob": "*",
-      "ios_saf": "< 12.2",
+      "ios_saf": "*",
       "op_mini": "*",
       "op_mob": "< 46",
       "opera": "< 45",
@@ -33,10 +33,10 @@
       "EdgeHTML": "12 - 15",
       "Gecko": "1.7 - 54",
       "Trident": ">= 4.0",
-      "WebKit": "85 - 607.1.40",
+      "WebKit": ">= 85",
       "Presto": ">= 1"
     },
-    "size": 6532,
+    "size": 6661,
     "isAlias": false,
     "providedByCoreWeb": false
   },
@@ -519,7 +519,7 @@
     "ie": "*",
     "opera": "< 45",
     "safari": "< 12.2",
-    "ios_saf": "< 12.2"
+    "ios_saf": "*"
   },
   "native": {
     "android": {
@@ -575,7 +575,7 @@
       "firefox_mob": "< 55",
       "ie": "*",
       "ie_mob": "*",
-      "ios_saf": "< 12.2",
+      "ios_saf": "*",
       "op_mini": "*",
       "op_mob": "< 46",
       "opera": "< 45",
@@ -587,6 +587,6 @@
     "hasTests": false,
     "isTestable": true,
     "isPublic": true,
-    "size": 6532
+    "size": 6661
   }
 }

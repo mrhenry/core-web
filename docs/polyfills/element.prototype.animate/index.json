@@ -3,7 +3,9 @@
   "polyfillName": "WebAnimations",
   "coreWeb": {
     "name": "WebAnimations",
-    "deps": [],
+    "deps": [
+      "requestAnimationFrame"
+    ],
     "browsers": {
       "edge": "<79",
       "edge_mob": "*",
@@ -11,9 +13,9 @@
       "ie_mob": "10 - *",
       "firefox": "27 - 50",
       "opera": "11.6 - 42",
-      "safari": "9 - *",
-      "chrome": "* - 38",
-      "ios_saf": "7.1 - *",
+      "safari": "<13.1",
+      "chrome": "<47",
+      "ios_saf": "<13.4",
       "firefox_mob": "27 - 50",
       "android": "<53"
     },
@@ -22,8 +24,8 @@
       "Trident": ">= 6.0",
       "Gecko": "27 - 50",
       "Presto": ">= 2.10",
-      "WebKit": ">= 600.1.4",
-      "Blink": "28 - 38"
+      "WebKit": "85 - 608.2.11",
+      "Blink": "28 - 46"
     },
     "size": 47131,
     "isAlias": false,
@@ -440,13 +442,13 @@
   },
   "polyfilled": {
     "android": "<53",
-    "chrome": "* - 38",
+    "chrome": "<47",
     "edge": "<79",
     "firefox": "27 - 50",
     "ie": "10 - *",
     "opera": "11.6 - 42",
-    "safari": "9 - *",
-    "ios_saf": "7.1 - *"
+    "safari": "<13.1",
+    "ios_saf": "<13.4"
   },
   "native": {
     "android": {
@@ -493,7 +495,9 @@
     "aliases": [
       "Element.prototype.animate"
     ],
-    "dependencies": [],
+    "dependencies": [
+      "requestAnimationFrame"
+    ],
     "license": "Apache-2.0",
     "spec": "https://w3c.github.io/web-animations/",
     "repo": "https://github.com/web-animations/web-animations-js",
@@ -505,9 +509,9 @@
       "ie_mob": "10 - *",
       "firefox": "27 - 50",
       "opera": "11.6 - 42",
-      "safari": "9 - *",
-      "chrome": "* - 38",
-      "ios_saf": "7.1 - *",
+      "safari": "<13.1",
+      "chrome": "<47",
+      "ios_saf": "<13.4",
       "firefox_mob": "27 - 50",
       "android": "<53"
     },
@@ -517,7 +521,7 @@
         "web-animations.min.js"
       ]
     },
-    "detectSource": "\"function\"==typeof document.head.animate\n",
+    "detectSource": "\"function\"==typeof document.head.animate&&function(){try{return!!document.createElement(\"DIV\").animate({opacity:[0,1]},{direction:\"alternate\",duration:1,iterations:1})}catch(t){return!1}}()\n",
     "baseDir": "WebAnimations",
     "hasTests": false,
     "isTestable": true,
