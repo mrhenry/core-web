@@ -96,16 +96,21 @@ return o.setAttribute("style","height: 1px; overflow: scroll;"),n.setAttribute("
         return __assign.apply(this, arguments);
     };
 
-    function __values(o) {
-        var s = typeof Symbol === "function" && Symbol.iterator, m = s && o[s], i = 0;
-        if (m) return m.call(o);
-        if (o && typeof o.length === "number") return {
-            next: function () {
-                if (o && i >= o.length) o = void 0;
-                return { value: o && o[i++], done: !o };
+    function __read(o, n) {
+        var m = typeof Symbol === "function" && o[Symbol.iterator];
+        if (!m) return o;
+        var i = m.call(o), r, ar = [], e;
+        try {
+            while ((n === void 0 || n-- > 0) && !(r = i.next()).done) ar.push(r.value);
+        }
+        catch (error) { e = { error: error }; }
+        finally {
+            try {
+                if (r && !r.done && (m = i["return"])) m.call(i);
             }
-        };
-        throw new TypeError(s ? "Object is not iterable." : "Symbol.iterator is not defined.");
+            finally { if (e) throw e.error; }
+        }
+        return ar;
     }
 
     var elementScroll = function (element, options) {
@@ -195,41 +200,110 @@ return o.setAttribute("style","height: 1px; overflow: scroll;"),n.setAttribute("
         });
     };
 
-    // https://cs.chromium.org/chromium/src/third_party/blink/renderer/core/dom/element.cc?l=647-681&rcl=02a6466f4efa021e4e198f373eccda3cfc56142b
-    var toPhysicalAlignment = function (options, axis, isHorizontalWritingMode, isFlippedBlocksMode) {
-        var alignment = (axis === 0 /* HorizontalScroll */ && isHorizontalWritingMode) ||
-            (axis === 1 /* VerticalScroll */ && !isHorizontalWritingMode)
-            ? options.inline
-            : options.block;
-        if (alignment === "center") {
-            return 1 /* AlignCenterAlways */;
+    // https://drafts.csswg.org/css-writing-modes-4/#block-flow
+    var normalizeWritingMode = function (writingMode) {
+        switch (writingMode) {
+            case "horizontal-tb":
+            case "lr":
+            case "lr-tb":
+            case "rl":
+            case "rl-tb":
+                return 0 /* HorizontalTb */;
+            case "vertical-rl":
+            case "tb":
+            case "tb-rl":
+                return 1 /* VerticalRl */;
+            case "vertical-lr":
+            case "tb-lr":
+                return 2 /* VerticalLr */;
+            case "sideways-rl":
+                return 3 /* SidewaysRl */;
+            case "sideways-lr":
+                return 4 /* SidewaysLr */;
         }
-        if (alignment === "nearest") {
-            return 0 /* AlignToEdgeIfNeeded */;
+        return 0 /* HorizontalTb */;
+    };
+    // https://source.chromium.org/chromium/chromium/src/+/main:third_party/blink/renderer/core/dom/element.cc;l=1097-1189;drc=6a7533d4a1e9f2372223a9d912a9e53a6fa35ae0
+    var toPhysicalAlignment = function (options, writingMode, isLTR) {
+        var _a;
+        var _b = __read([options.block || "start", options.inline || "nearest"], 2), xPos = _b[0], yPos = _b[1];
+        /**  0b{vertical}{horizontal}  0: normal, 1: reverse */
+        var layout = 0;
+        /**
+         * WritingMode.VerticalLr: ↓→
+         * | 1 | 4 |   |
+         * | 2 | 5 |   |
+         * | 3 |   |   |
+         *
+         * RTL: ↑→
+         * | 3 |   |   |
+         * | 2 | 5 |   |
+         * | 1 | 4 |   |
+         */
+        if (!isLTR) {
+            layout ^= 2 /* ReverseVertical */;
         }
-        if (alignment === "start") {
-            return axis === 0 /* HorizontalScroll */
-                ? isFlippedBlocksMode
-                    ? 5 /* AlignRightAlways */
-                    : 4 /* AlignLeftAlways */
-                : 2 /* AlignTopAlways */;
+        switch (writingMode) {
+            /**
+             * ↓→
+             * | 1 | 2 | 3 |
+             * | 4 | 5 |   |
+             * |   |   |   |
+             *
+             * RTL: ↓←
+             * | 3 | 2 | 1 |
+             * |   | 5 | 4 |
+             * |   |   |   |
+             */
+            case 0 /* HorizontalTb */:
+                // swap horizontal and vertical
+                layout = (layout >> 1) | ((layout & 1) << 1);
+                _a = __read([yPos, xPos], 2), xPos = _a[0], yPos = _a[1];
+                break;
+            /**
+             * ↓←
+             * |   | 4 | 1 |
+             * |   | 5 | 2 |
+             * |   |   | 3 |
+             *
+             * RTL: ↑←
+             * |   |   | 3 |
+             * |   | 5 | 2 |
+             * |   | 4 | 1 |
+             */
+            case 1 /* VerticalRl */:
+            case 3 /* SidewaysRl */:
+                //  reverse horizontal
+                layout ^= 1 /* ReverseHorizontal */;
+                break;
+            /**
+             * ↑→
+             * | 3 |   |   |
+             * | 2 | 5 |   |
+             * | 1 | 4 |   |
+             *
+             * RTL: ↓→
+             * | 1 | 4 |   |
+             * | 2 | 5 |   |
+             * | 3 |   |   |
+             */
+            case 4 /* SidewaysLr */:
+                // reverse vertical
+                layout ^= 2 /* ReverseVertical */;
+                break;
         }
-        if (alignment === "end") {
-            return axis === 0 /* HorizontalScroll */
-                ? isFlippedBlocksMode
-                    ? 4 /* AlignLeftAlways */
-                    : 5 /* AlignRightAlways */
-                : 3 /* AlignBottomAlways */;
-        }
-        // Default values
-        if (isHorizontalWritingMode) {
-            return axis === 0 /* HorizontalScroll */
-                ? 0 /* AlignToEdgeIfNeeded */
-                : 2 /* AlignTopAlways */;
-        }
-        return axis === 0 /* HorizontalScroll */
-            ? 4 /* AlignLeftAlways */
-            : 0 /* AlignToEdgeIfNeeded */;
+        return [xPos, yPos].map(function (value, index) {
+            switch (value) {
+                case "center":
+                    return 1 /* CenterAlways */;
+                case "nearest":
+                    return 0 /* ToEdgeIfNeeded */;
+                default: {
+                    var reverse = (layout >> index) & 1;
+                    return (value === "start") === !reverse ? 2 /* LeftOrTop */ : 3 /* RightOrBottom */;
+                }
+            }
+        });
     };
     // code from stipsan/compute-scroll-into-view
     // https://github.com/stipsan/compute-scroll-into-view/blob/5396c6b78af5d0bbce11a7c4e93cc3146546fcd3/src/index.ts
@@ -358,23 +432,67 @@ return o.setAttribute("style","height: 1px; overflow: scroll;"),n.setAttribute("
     var canOverflow = function (overflow) {
         return overflow !== "visible" && overflow !== "clip";
     };
-    var isScrollable = function (element) {
+    var getFrameElement = function (element) {
+        if (!element.ownerDocument || !element.ownerDocument.defaultView) {
+            return null;
+        }
+        try {
+            return element.ownerDocument.defaultView.frameElement;
+        }
+        catch (e) {
+            return null;
+        }
+    };
+    var isHiddenByFrame = function (element) {
+        var frame = getFrameElement(element);
+        if (!frame) {
+            return false;
+        }
+        return frame.clientHeight < element.scrollHeight || frame.clientWidth < element.scrollWidth;
+    };
+    var isScrollable = function (element, computedStyle) {
         if (element.clientHeight < element.scrollHeight || element.clientWidth < element.scrollWidth) {
-            var style = getComputedStyle(element);
-            return canOverflow(style.overflowY) || canOverflow(style.overflowX);
+            return canOverflow(computedStyle.overflowY) || canOverflow(computedStyle.overflowX) || isHiddenByFrame(element);
         }
         return false;
     };
     var parentElement = function (element) {
         var parentNode = element.parentNode;
-        return (parentNode &&
-            (parentNode.nodeType === Node.DOCUMENT_FRAGMENT_NODE
-                ? parentNode.host
-                : parentNode));
+        if (parentNode !== null && parentNode.nodeType === Node.DOCUMENT_FRAGMENT_NODE) {
+            return parentNode.host;
+        }
+        return parentNode;
+    };
+    var clamp = function (value, width) {
+        if (value < -width) {
+            return -width;
+        }
+        if (value > width) {
+            return width;
+        }
+        return value;
+    };
+    var isCSSPropertySupported = function (property) { return property in document.documentElement.style; };
+    var getSupportedScrollMarginProperty = function () {
+        // Webkit uses "scroll-snap-margin" https://bugs.webkit.org/show_bug.cgi?id=189265.
+        return ["scroll-margin", "scroll-snap-margin"].filter(isCSSPropertySupported)[0];
+    };
+    var getElementScrollSnapArea = function (element, computedStyle) {
+        var _a = element.getBoundingClientRect(), top = _a.top, right = _a.right, bottom = _a.bottom, left = _a.left;
+        var _b = __read([
+            "top",
+            "right",
+            "bottom",
+            "left",
+        ].map(function (edge) {
+            var scrollProperty = getSupportedScrollMarginProperty();
+            var value = computedStyle.getPropertyValue(scrollProperty + "-" + edge);
+            return parseInt(value, 10) || 0;
+        }), 4), scrollMarginTop = _b[0], scrollMarginRight = _b[1], scrollMarginBottom = _b[2], scrollMarginLeft = _b[3];
+        return [top - scrollMarginTop, right + scrollMarginRight, bottom + scrollMarginBottom, left - scrollMarginLeft];
     };
     var elementScrollIntoView = function (element, options) {
-        var e_1, _a;
-        if (!element.ownerDocument.documentElement.contains(element)) {
+        if (element.isConnected === false) {
             return;
         }
         // On Chrome and Firefox, document.scrollingElement will return the <html> element.
@@ -385,20 +503,27 @@ return o.setAttribute("style","height: 1px; overflow: scroll;"),n.setAttribute("
         var scrollingElement = document.scrollingElement || document.documentElement;
         // Collect all the scrolling boxes, as defined in the spec: https://drafts.csswg.org/cssom-view/#scrolling-box
         var frames = [];
+        var documentElementStyle = getComputedStyle(document.documentElement);
         for (var cursor = parentElement(element); cursor !== null; cursor = parentElement(cursor)) {
             // Stop when we reach the viewport
             if (cursor === scrollingElement) {
                 frames.push(cursor);
                 break;
             }
+            var cursorStyle = getComputedStyle(cursor);
             // Skip document.body if it's not the scrollingElement and documentElement isn't independently scrollable
-            if (cursor === document.body && isScrollable(cursor) && !isScrollable(document.documentElement)) {
+            if (cursor === document.body &&
+                isScrollable(cursor, cursorStyle) &&
+                !isScrollable(document.documentElement, documentElementStyle)) {
                 continue;
             }
             // Now we check if the element is scrollable,
             // this code only runs if the loop haven't already hit the viewport or a custom boundary
-            if (isScrollable(cursor)) {
+            if (isScrollable(cursor, cursorStyle)) {
                 frames.push(cursor);
+            }
+            if (cursorStyle.position === "fixed") {
+                break;
             }
         }
         // Support pinch-zooming properly, making sure elements scroll into the visual viewport
@@ -412,43 +537,40 @@ return o.setAttribute("style","height: 1px; overflow: scroll;"),n.setAttribute("
         // Newer browsers supports scroll[X|Y], page[X|Y]Offset is
         var viewportX = window.scrollX || window.pageXOffset;
         var viewportY = window.scrollY || window.pageYOffset;
-        var _b = element.getBoundingClientRect(), targetHeight = _b.height, targetWidth = _b.width, targetTop = _b.top, targetRight = _b.right, targetBottom = _b.bottom, targetLeft = _b.left;
         var computedStyle = getComputedStyle(element);
-        var writingMode = computedStyle.writingMode ||
+        var _a = __read(getElementScrollSnapArea(element, computedStyle), 4), targetTop = _a[0], targetRight = _a[1], targetBottom = _a[2], targetLeft = _a[3];
+        var targetHeight = targetBottom - targetTop;
+        var targetWidth = targetRight - targetLeft;
+        var writingMode = normalizeWritingMode(computedStyle.writingMode ||
             computedStyle.getPropertyValue("-webkit-writing-mode") ||
-            computedStyle.getPropertyValue("-ms-writing-mode") ||
-            "horizontal-tb";
-        var isHorizontalWritingMode = ["horizontal-tb", "lr", "lr-tb", "rl"].some(function (mode) { return mode === writingMode; });
-        var isFlippedBlocksWritingMode = ["vertical-rl", "tb-rl"].some(function (mode) { return mode === writingMode; });
-        var alignX = toPhysicalAlignment(options, 0 /* HorizontalScroll */, isHorizontalWritingMode, isFlippedBlocksWritingMode);
-        var alignY = toPhysicalAlignment(options, 1 /* VerticalScroll */, isHorizontalWritingMode, isFlippedBlocksWritingMode);
+            computedStyle.getPropertyValue("-ms-writing-mode"));
+        var isLTR = computedStyle.direction !== "rtl";
+        var _b = __read(toPhysicalAlignment(options, writingMode, isLTR), 2), alignX = _b[0], alignY = _b[1];
         var targetBlock = (function () {
             switch (alignY) {
-                case 2 /* AlignTopAlways */:
-                case 0 /* AlignToEdgeIfNeeded */:
-                    return targetTop;
-                case 3 /* AlignBottomAlways */:
-                    return targetBottom;
-                // case ScrollAlignment.AlignCenterAlways:
-                default:
+                case 1 /* CenterAlways */:
                     return targetTop + targetHeight / 2;
+                case 2 /* LeftOrTop */:
+                case 0 /* ToEdgeIfNeeded */:
+                    return targetTop;
+                case 3 /* RightOrBottom */:
+                    return targetBottom;
             }
         })();
         var targetInline = (function () {
             switch (alignX) {
-                case 1 /* AlignCenterAlways */:
+                case 1 /* CenterAlways */:
                     return targetLeft + targetWidth / 2;
-                case 5 /* AlignRightAlways */:
+                case 3 /* RightOrBottom */:
                     return targetRight;
-                // case ScrollAlignment.AlignLeftAlways:
-                // case ScrollAlignment.AlignToEdgeIfNeeded:
-                default:
+                case 2 /* LeftOrTop */:
+                case 0 /* ToEdgeIfNeeded */:
                     return targetLeft;
             }
         })();
         var actions = [];
-        var _loop_1 = function (frame) {
-            var _a = frame.getBoundingClientRect(), height = _a.height, width = _a.width, top_1 = _a.top, right = _a.right, bottom = _a.bottom, left = _a.left;
+        frames.forEach(function (frame) {
+            var _a = frame.getBoundingClientRect(), height = _a.height, width = _a.width, top = _a.top, right = _a.right, bottom = _a.bottom, left = _a.left;
             var frameStyle = getComputedStyle(frame);
             var borderLeft = parseInt(frameStyle.borderLeftWidth, 10);
             var borderTop = parseInt(frameStyle.borderTopWidth, 10);
@@ -468,106 +590,92 @@ return o.setAttribute("style","height: 1px; overflow: scroll;"),n.setAttribute("
             if (scrollingElement === frame) {
                 // Handle viewport logic (document.documentElement or document.body)
                 switch (alignY) {
-                    case 2 /* AlignTopAlways */: {
+                    case 2 /* LeftOrTop */: {
                         blockScroll = targetBlock;
                         break;
                     }
-                    case 3 /* AlignBottomAlways */: {
+                    case 3 /* RightOrBottom */: {
                         blockScroll = targetBlock - viewportHeight;
                         break;
                     }
-                    case 1 /* AlignCenterAlways */: {
+                    case 1 /* CenterAlways */: {
                         blockScroll = targetBlock - viewportHeight / 2;
                         break;
                     }
-                    case 0 /* AlignToEdgeIfNeeded */: {
+                    case 0 /* ToEdgeIfNeeded */: {
                         blockScroll = alignNearest(viewportY, viewportY + viewportHeight, viewportHeight, borderTop, borderBottom, viewportY + targetBlock, viewportY + targetBlock + targetHeight, targetHeight);
                         break;
                     }
                 }
                 switch (alignX) {
-                    case 4 /* AlignLeftAlways */: {
+                    case 2 /* LeftOrTop */: {
                         inlineScroll = targetInline;
                         break;
                     }
-                    case 5 /* AlignRightAlways */: {
+                    case 3 /* RightOrBottom */: {
                         inlineScroll = targetInline - viewportWidth;
                         break;
                     }
-                    case 1 /* AlignCenterAlways */: {
+                    case 1 /* CenterAlways */: {
                         inlineScroll = targetInline - viewportWidth / 2;
                         break;
                     }
-                    case 0 /* AlignToEdgeIfNeeded */: {
+                    case 0 /* ToEdgeIfNeeded */: {
                         inlineScroll = alignNearest(viewportX, viewportX + viewportWidth, viewportWidth, borderLeft, borderRight, viewportX + targetInline, viewportX + targetInline + targetWidth, targetWidth);
                         break;
                     }
                 }
-                // Apply scroll position offsets and ensure they are within bounds
-                blockScroll = Math.max(0, blockScroll + viewportY);
-                inlineScroll = Math.max(0, inlineScroll + viewportX);
+                blockScroll += viewportY;
+                inlineScroll += viewportX;
             }
             else {
                 // Handle each scrolling frame that might exist between the target and the viewport
                 switch (alignY) {
-                    case 2 /* AlignTopAlways */: {
-                        blockScroll = targetBlock - top_1 - borderTop;
+                    case 2 /* LeftOrTop */: {
+                        blockScroll = targetBlock - top - borderTop;
                         break;
                     }
-                    case 3 /* AlignBottomAlways */: {
+                    case 3 /* RightOrBottom */: {
                         blockScroll = targetBlock - bottom + borderBottom + scrollbarHeight;
                         break;
                     }
-                    case 1 /* AlignCenterAlways */: {
-                        blockScroll = targetBlock - (top_1 + height / 2) + scrollbarHeight / 2;
+                    case 1 /* CenterAlways */: {
+                        blockScroll = targetBlock - (top + height / 2) + scrollbarHeight / 2;
                         break;
                     }
-                    case 0 /* AlignToEdgeIfNeeded */: {
-                        blockScroll = alignNearest(top_1, bottom, height, borderTop, borderBottom + scrollbarHeight, targetBlock, targetBlock + targetHeight, targetHeight);
+                    case 0 /* ToEdgeIfNeeded */: {
+                        blockScroll = alignNearest(top, bottom, height, borderTop, borderBottom + scrollbarHeight, targetBlock, targetBlock + targetHeight, targetHeight);
                         break;
                     }
                 }
                 switch (alignX) {
-                    case 4 /* AlignLeftAlways */: {
+                    case 2 /* LeftOrTop */: {
                         inlineScroll = targetInline - left - borderLeft;
                         break;
                     }
-                    case 5 /* AlignRightAlways */: {
+                    case 3 /* RightOrBottom */: {
                         inlineScroll = targetInline - right + borderRight + scrollbarWidth;
                         break;
                     }
-                    case 1 /* AlignCenterAlways */: {
+                    case 1 /* CenterAlways */: {
                         inlineScroll = targetInline - (left + width / 2) + scrollbarWidth / 2;
                         break;
                     }
-                    case 0 /* AlignToEdgeIfNeeded */: {
+                    case 0 /* ToEdgeIfNeeded */: {
                         inlineScroll = alignNearest(left, right, width, borderLeft, borderRight + scrollbarWidth, targetInline, targetInline + targetWidth, targetWidth);
                         break;
                     }
                 }
                 var scrollLeft = frame.scrollLeft, scrollTop = frame.scrollTop;
                 // Ensure scroll coordinates are not out of bounds while applying scroll offsets
-                blockScroll = Math.max(0, Math.min(scrollTop + blockScroll, frame.scrollHeight - height + scrollbarHeight));
-                inlineScroll = Math.max(0, Math.min(scrollLeft + inlineScroll, frame.scrollWidth - width + scrollbarWidth));
+                blockScroll = clamp(scrollTop + blockScroll, frame.scrollHeight - height + scrollbarHeight);
+                inlineScroll = clamp(scrollLeft + inlineScroll, frame.scrollWidth - width + scrollbarWidth);
                 // Cache the offset so that parent frames can scroll this into view correctly
                 targetBlock += scrollTop - blockScroll;
                 targetInline += scrollLeft - inlineScroll;
             }
             actions.push(function () { return elementScroll(frame, __assign(__assign({}, options), { top: blockScroll, left: inlineScroll })); });
-        };
-        try {
-            for (var frames_1 = __values(frames), frames_1_1 = frames_1.next(); !frames_1_1.done; frames_1_1 = frames_1.next()) {
-                var frame = frames_1_1.value;
-                _loop_1(frame);
-            }
-        }
-        catch (e_1_1) { e_1 = { error: e_1_1 }; }
-        finally {
-            try {
-                if (frames_1_1 && !frames_1_1.done && (_a = frames_1.return)) _a.call(frames_1);
-            }
-            finally { if (e_1) throw e_1.error; }
-        }
+        });
         actions.forEach(function (run) { return run(); });
     };
     var elementScrollIntoViewPolyfill = function (animationOptions) {

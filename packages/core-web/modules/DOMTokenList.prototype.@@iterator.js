@@ -6,8 +6,22 @@ if (!("Symbol"in self&&"iterator"in self.Symbol&&function(){try{var t=document.c
 return!(!t.classList||!t.classList[self.Symbol.iterator])}catch(e){return!1}}()
 )) {
 // DOMTokenList.prototype.@@iterator
-/* global Symbol, ArrayIterator*/
-DOMTokenList.prototype[Symbol.iterator] = function () {
-	return new ArrayIterator(this);
-};
+/* global ArrayIterator */
+(function (global) {
+	global.DOMTokenList.prototype[global.Symbol.iterator] = function () {
+		return new ArrayIterator(this);
+	};
+
+	var e = document.createElement('span');
+	if (
+		e.classList &&
+		e.classList.constructor &&
+		e.classList.constructor.prototype &&
+		!e.classList.constructor.prototype[global.Symbol.iterator]
+	) {
+		e.classList.constructor.prototype[global.Symbol.iterator] = function () {
+			return new ArrayIterator(this);
+		}
+	}
+}(self));
 }}).call('object' === typeof window && window || 'object' === typeof self && self || 'object' === typeof global && global || {});

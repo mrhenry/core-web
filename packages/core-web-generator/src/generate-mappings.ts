@@ -93,6 +93,11 @@ function customMatcherSources(): Record<string, Array<string>> {
 			'MediaQueryList'
 		],
 
+		'MediaQueryList.prototype.addEventListener': [
+			'matchMedia',
+			'MediaQueryList'
+		],
+
 		'WebAnimations': [
 			"$instance_.animate",
 			"new Animation()",
@@ -173,7 +178,9 @@ export async function generateMappings(featureMapping: Array<Feature>) {
 
 	featureMapping.forEach((feature) => {
 		let matchCandidates = [];
-		if (feature.name === "DOMTokenList.prototype.@@iterator" || feature.name === "DOMTokenList.prototype.forEach") {
+		if (feature.name === "MediaQueryList.prototype.addEventListener") {
+			// noop
+		} else if (feature.name === "DOMTokenList.prototype.@@iterator" || feature.name === "DOMTokenList.prototype.forEach") {
 			// noop
 		} else if (feature.name === "NodeList.prototype.@@iterator" || feature.name === "NodeList.prototype.forEach") {
 			// noop
