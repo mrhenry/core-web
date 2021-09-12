@@ -105,7 +105,7 @@
         ],
         "safari": [
           {
-            "version_added": "6.1"
+            "version_added": "7"
           },
           {
             "version_added": "6",
@@ -117,7 +117,7 @@
             "version_added": "7"
           },
           {
-            "version_added": "6.1",
+            "version_added": "6",
             "prefix": "webkit"
           }
         ],
@@ -258,7 +258,7 @@
     ],
     "safari": [
       {
-        "version_added": "6.1"
+        "version_added": "7"
       },
       {
         "version_added": "6",
@@ -270,7 +270,7 @@
         "version_added": "7"
       },
       {
-        "version_added": "6.1",
+        "version_added": "6",
         "prefix": "webkit"
       }
     ]
