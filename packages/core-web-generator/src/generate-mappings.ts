@@ -178,12 +178,28 @@ export async function generateMappings(featureMapping: Array<Feature>) {
 
 	featureMapping.forEach((feature) => {
 		let matchCandidates = [];
-		if (feature.name === "MediaQueryList.prototype.addEventListener") {
-			// noop
+		if (feature.name === "document.visibilityState") {
+			matchCandidates.push("document.visibilityState");
+			matchCandidates.push("document.addEventListener('visibilitychange', $1)");
+			matchCandidates.push("document.addEventListener('visibilitychange', $1, $2)");
+		} else if (feature.name === "Event.hashchange") {
+			matchCandidates.push("addEventListener('hashchange', $1)");
+			matchCandidates.push("addEventListener('hashchange', $1, $2)");
+			matchCandidates.push("window.addEventListener('hashchange', $1)");
+			matchCandidates.push("window.addEventListener('hashchange', $1, $2)");
+		} else if (feature.name === "Event.focusin") {
+			matchCandidates.push("$_instance.addEventListener('focusin', $1)");
+			matchCandidates.push("$_instance.addEventListener('focusin', $1, $2)");
+			matchCandidates.push("$_instance.addEventListener('focusout', $1)");
+			matchCandidates.push("$_instance.addEventListener('focusout', $1, $2)");
+		} else if (feature.name === "Navigator.prototype.geolocation") {
+			// Is an alias for `navigator.geolocation` which is a better matcher candidate.
+		} else if (feature.name === "MediaQueryList.prototype.addEventListener") {
+			// Would match any use of `addEventListener`.
 		} else if (feature.name === "DOMTokenList.prototype.@@iterator" || feature.name === "DOMTokenList.prototype.forEach") {
-			// noop
+			// `@@iterator` and `forEach` are poor matcher candidates.
 		} else if (feature.name === "NodeList.prototype.@@iterator" || feature.name === "NodeList.prototype.forEach") {
-			// noop
+			// `@@iterator` and `forEach` are poor matcher candidates.
 		} else if (feature.name.indexOf(".prototype.") >= 0) {
 			matchCandidates.push('$_instance.' + feature.name.replace(/^.+\.prototype\./, ""));
 		} else {
