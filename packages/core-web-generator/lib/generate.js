@@ -166,14 +166,7 @@ async function allDependencies(feature) {
             continue;
         }
         if (providedByBabel(dep)) {
-            switch (dep) {
-                case 'DOMTokenList':
-                    // 'DOMTokenList' dependents also depend on '_DOMTokenList'.
-                    // Preserving 'DOMTokenList' ensures it is included.
-                    break;
-                default:
-                    continue;
-            }
+            continue;
         }
         dependencies.add(dep);
         const nestedDependencies = await allDependencies(dep);
@@ -225,7 +218,8 @@ const aliasPrefixesToSkip = [
     'dom',
     'html5',
     'modernizr',
-    'HTMLCanvasElement.protoype.toBlob', // see : https://github.com/Financial-Times/polyfill-library/issues/836
+    'HTMLCanvasElement.protoype.toBlob',
+    'PageVisibility',
 ];
 async function streamToString(stream) {
     return new Promise((resolve) => {
