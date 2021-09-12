@@ -87,6 +87,10 @@ const babelPresetEnv = require( '@babel/preset-env' );
 						browsers: ...,
 					},
 					useBuiltIns: 'usage',
+					exclude: [
+						"web.dom-collections.iterator",
+						"web.dom-collections.for-each",
+					],
 				},
 			],
 		],
