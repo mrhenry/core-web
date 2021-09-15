@@ -8,13 +8,17 @@ export async function getIntlTimeZoneOptionsExpressionCandidates(): Promise<Arra
 		return [];
 	}
 
-	return goldenTimeZoneData.zones.map((zone) => {
+	return goldenTimeZoneData.zones.flatMap((zone) => {
 		const zoneName = zone.split('|')[0];
 		if (!zoneName) {
-			return '';
+			return [];
 		}
 
-		return `new Intl.DateTimeFormat($1, { timeZone: '${zoneName}' })`;
+		return [
+			`new Intl.DateTimeFormat($1, { timeZone: '${zoneName}' })`,
+			`$_instance.toLocaleDateString($1, { timeZone: '${zoneName}'})`,
+			`$_instance.toLocaleTimeString($1, { timeZone: '${zoneName}'})`,
+		];
 	}).filter((x) => {
 		return !!x;
 	});
