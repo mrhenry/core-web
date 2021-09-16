@@ -134,6 +134,11 @@ function customMatcherSources(): Record<string, Array<string>> {
 		'DOMTokenList.prototype.forEach': [
 			"$instance_.classList",
 			"$instance_.relList"
+		],
+
+		'document.visibilityState': [
+			"document.addEventListener('visibilitychange', $1)",
+			"document.addEventListener('visibilitychange', $1, $2)"
 		]
 	}
 }
@@ -178,11 +183,7 @@ export async function generateMappings(featureMapping: Array<Feature>) {
 
 	featureMapping.forEach((feature) => {
 		let matchCandidates = [];
-		if (feature.name === "document.visibilityState") {
-			matchCandidates.push("document.visibilityState");
-			matchCandidates.push("document.addEventListener('visibilitychange', $1)");
-			matchCandidates.push("document.addEventListener('visibilitychange', $1, $2)");
-		} else if (feature.name === "Event.hashchange") {
+		if (feature.name === "Event.hashchange") {
 			matchCandidates.push("addEventListener('hashchange', $1)");
 			matchCandidates.push("addEventListener('hashchange', $1, $2)");
 			matchCandidates.push("window.addEventListener('hashchange', $1)");
@@ -237,7 +238,9 @@ export async function generateMappings(featureMapping: Array<Feature>) {
 						intlCallExpressionCandidates('toLocaleString', matches[2]).forEach((x) => {
 							intlCandidates[x] = true;
 						})
-					} else if (matches[1] === 'DateTimeFormat') {
+					}
+					
+					if (matches[1] === 'DateTimeFormat') {
 						intlCallExpressionCandidates('toLocaleDateString', matches[2]).forEach((x) => {
 							intlCandidates[x] = true;
 						})

@@ -115,6 +115,10 @@ function customMatcherSources() {
         'DOMTokenList.prototype.forEach': [
             "$instance_.classList",
             "$instance_.relList"
+        ],
+        'document.visibilityState': [
+            "document.addEventListener('visibilitychange', $1)",
+            "document.addEventListener('visibilitychange', $1, $2)"
         ]
     };
 }
@@ -131,12 +135,7 @@ async function generateMappings(featureMapping) {
     const intlTimeZoneOptionsExpressionsCandidates = await (0, generate_intl_timezone_mapping_candidates_1.getIntlTimeZoneOptionsExpressionCandidates)();
     featureMapping.forEach((feature) => {
         let matchCandidates = [];
-        if (feature.name === "document.visibilityState") {
-            matchCandidates.push("document.visibilityState");
-            matchCandidates.push("document.addEventListener('visibilitychange', $1)");
-            matchCandidates.push("document.addEventListener('visibilitychange', $1, $2)");
-        }
-        else if (feature.name === "Event.hashchange") {
+        if (feature.name === "Event.hashchange") {
             matchCandidates.push("addEventListener('hashchange', $1)");
             matchCandidates.push("addEventListener('hashchange', $1, $2)");
             matchCandidates.push("window.addEventListener('hashchange', $1)");
@@ -193,7 +192,7 @@ async function generateMappings(featureMapping) {
                             intlCandidates[x] = true;
                         });
                     }
-                    else if (matches[1] === 'DateTimeFormat') {
+                    if (matches[1] === 'DateTimeFormat') {
                         intlCallExpressionCandidates('toLocaleDateString', matches[2]).forEach((x) => {
                             intlCandidates[x] = true;
                         });

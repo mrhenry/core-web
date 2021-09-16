@@ -21,6 +21,13 @@ console.log(new Intl.DateTimeFormat('en', {
 	timeZoneName: 'long'
 }).format(date));
 
+console.log((new Date()).toLocaleDateString('fr', {
+	timeZone: "Europe/Paris",
+	year: "numeric",
+	month: "long",
+	day: "numeric"
+}))
+
 // ["@mrhenry/core-web", {
 // 	browsers: {
 // 		// chrome: "71",
