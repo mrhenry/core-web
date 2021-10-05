@@ -17,7 +17,7 @@
     "browserstack-runner": "^0.9.4",
     "core-js": "^3.18.1",
     "eslint": "^7.32.0",
-    "webpack": "^5.56.0",
+    "webpack": "^5.57.1",
     "webpack-cli": "^4.8.0"
   },
   "volta": {
