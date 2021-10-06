@@ -34,11 +34,11 @@
     "core-js": "^3.18.2",
     "cssnano": "^5.0.8",
     "polyfill-library": "^3.105.0",
-    "postcss": "^8.3.8",
+    "postcss": "^8.3.9",
     "postcss-import": "^14.0.2",
     "postcss-preset-env": "^6.7.0",
     "postcss-split-by-media": "^0.2.0",
-    "webpack": "^5.56.0",
+    "webpack": "^5.57.1",
     "webpack-cli": "^4.8.0"
   },
   "volta": {
