@@ -1,4 +1,4 @@
-QUnit.test("WebAnimations", assert => {
+QUnit.test("WebAnimations", (assert) => {
 	const fixture = document.getElementById("qunit-fixture");
 
 	const el = document.createElement("div");

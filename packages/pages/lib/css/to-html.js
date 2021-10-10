@@ -2,11 +2,12 @@ const html = require('../html/html')
 
 module.exports = function cssTags(assetMap, entryPoint) {
 	let targets = [
-		'2020'
+		'2021'
 	];
 
 	if (process.env.GITHUB_ACTIONS) {
 		targets = [
+			'2021',
 			'2020',
 			'2018',
 			'2016',

@@ -1,30 +1,19 @@
 .section {
-	padding-bottom: 2rem;
-	padding-top: 2rem;
+	margin-bottom: 2rem;
+	margin-top: 2rem;
 	position: relative;
-}
-
-.section + .section {
-	padding-top: 0 !important;
 }
 
 @media (min-width: 768px) {
 	.section {
-		padding-bottom: 3rem;
-		padding-top: 3rem;
+		margin-bottom: 3rem;
+		margin-top: 3rem;
 	}
 }
 
 @media (min-width: 1280px) {
 	.section {
-		padding-bottom: 5rem;
-		padding-top: 5rem;
-	}
-}
-
-@media (min-width: 1680px) {
-	.section {
-		padding-bottom: 6.5rem;
-		padding-top: 6.5rem;
+		margin-bottom: 5rem;
+		margin-top: 5rem;
 	}
 }

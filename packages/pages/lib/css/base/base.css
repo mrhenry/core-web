@@ -72,7 +72,3 @@ li:not([class]) a {
 a:not([class]) {
 	color: currentColor;
 }
-
-*:target {
-	padding-top: 2rem;
-}

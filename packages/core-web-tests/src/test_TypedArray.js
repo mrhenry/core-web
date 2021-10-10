@@ -1,4 +1,4 @@
-QUnit.test('TypedArray', function(assert) {
+QUnit.test("TypedArray", function(assert) {
 	const typedArray = new Int8Array(8);
 	typedArray[1] = 32;
 

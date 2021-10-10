@@ -1,13 +1,13 @@
-QUnit.test('Element.prototype.classList', function(assert) {
-	const fixture = document.getElementById('qunit-fixture');
+QUnit.test("Element.prototype.classList", function(assert) {
+	const fixture = document.getElementById("qunit-fixture");
 
-	const div = document.createElement('div');
+	const div = document.createElement("div");
 	fixture.appendChild(div);
 
-	div.classList.add('classlist-test');
-	assert.equal(div.className, 'classlist-test');
+	div.classList.add("classlist-test");
+	assert.equal(div.className, "classlist-test");
 
-	div.className = 'foo baz';
+	div.className = "foo baz";
 	var tokenList = div.classList;
 
 	var results = [];
@@ -15,5 +15,5 @@ QUnit.test('Element.prototype.classList', function(assert) {
 		results.push(token);
 	}
 
-	assert.deepEqual(results, ['foo', 'baz']);
+	assert.deepEqual(results, ["foo", "baz"]);
 });
