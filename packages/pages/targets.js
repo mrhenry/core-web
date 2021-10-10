@@ -1,6 +1,22 @@
 if (process.env.GITHUB_ACTIONS) {
 	module.exports = [
 		{
+			name: '2021',
+			webpackTarget: [
+				'web',
+				'browserslist:Chrome 94 or Firefox 93'
+			],
+			presetEnvBrowsers: [
+				'chrome >= 94',
+				'firefox >= 93',
+			],
+			coreWebEngines: {
+				"Blink": "94",
+				"Gecko": "93",
+			},
+		},
+
+		{
 			name: '2020',
 			webpackTarget: [
 				'web',
@@ -125,20 +141,18 @@ if (process.env.GITHUB_ACTIONS) {
 } else {
 	module.exports = [
 		{
-			name: '2020',
+			name: '2021',
 			webpackTarget: [
 				'web',
-				'browserslist:Chrome 87 or Firefox 83 or Safari 14'
+				'browserslist:Chrome 94 or Firefox 93'
 			],
 			presetEnvBrowsers: [
-				'chrome >= 87',
-				'firefox >= 83',
-				'safari >= 14',
+				'chrome >= 94',
+				'firefox >= 93',
 			],
 			coreWebEngines: {
-				"Blink": "87",
-				"Gecko": "83",
-				"WebKit": "610.1.28",
+				"Blink": "94",
+				"Gecko": "93",
 			},
 		},
 	];

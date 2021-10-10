@@ -1,4 +1,4 @@
-QUnit.test("localStorage", assert => {
+QUnit.test("localStorage", (assert) => {
 	window.localStorage.setItem("foo", "bar");
 	window.localStorage.setItem("foz", "baz");
 	assert.ok(["foo", "foz"].includes(window.localStorage.key(0)));

@@ -1,3 +1,24 @@
+.roadmap {
+	box-sizing: border-box;
+	overflow-x: hidden;
+	padding-left: 1.25rem;
+	width: 100%;
+}
+
+@media (min-width: 768px) {
+	.roadmap {
+		padding-left: 3rem;
+	}
+}
+
+@media (min-width: 1280px) {
+	.roadmap {
+		padding-left: calc((100% - 1184px) / 2);
+		padding-right: calc((100% - 1184px) / 2);
+	}
+}
+
+
 .roadmap__header {
 	margin-bottom: 1.5rem;
 }

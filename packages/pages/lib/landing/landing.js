@@ -117,78 +117,89 @@ async function generate(assetMap) {
 		</div>
 
 		<div class="section">
-			<div class="wrapper">
-				${roadmap()}
-			</div>
-		</div>
-
-		<div class="polyfill-notification">
-			<input
-				aria-hidden="true"
-				class="u-visually-hidden"
-				hidden
-				id="show-polyfill-content"
-				type="checkbox"
-			>
-
-			<label
-				aria-hidden="true"
-				class="polyfill-notification__label"
-				for="show-polyfill-content"
-			>
-				<span ua-target="2020">0 polyfills</span>
-				<span ua-target="2018">1 polyfill</span>
-				<span ua-target="2016">1 polyfill</span>
-				<span ua-target="2014">3 polyfills</span>
-				<span ua-target="2013">4 polyfills</span>
-				<span ua-target="2011">5 polyfills</span>
-				<span ua-target="fallback">no javascript</span>
-			</label>
-
-			<label
-				aria-hidden="true"
-				class="polyfill-notification__toggle"
-				for="show-polyfill-content"
-				data-closed="🐵"
-				data-open="🙈"
-			></label>
-
-			<div class="polyfill-notification__content">
-				${polyfillNotificationContent('2020', '0', [])}
-
-				${polyfillNotificationContent('2018', '7', [
-					'IntersectionObserver'
-				])}
-
-				${polyfillNotificationContent('2016', '7', [
-					'IntersectionObserver'
-				])}
-
-				${polyfillNotificationContent('2014', '8', [
-					"IntersectionObserver",
-					"performance.now",
-					"requestAnimationFrame",
-				])}
-				
-				${polyfillNotificationContent('2013', '11', [
-					"Event",
-					"IntersectionObserver",
-					"performance.now",
-					"requestAnimationFrame",
-				])}
-
-				${polyfillNotificationContent('2011', '11', [
-					"Event",
-					"IntersectionObserver",
-					"Window",
-					"performance.now",
-					"requestAnimationFrame",
-				])}
-
-				${polyfillNotificationContent('fallback', '0', [])}
-			</div>
+			${roadmap()}
 		</div>
 	</main>
+
+	<div class="polyfill-notification">
+		<input
+			aria-hidden="true"
+			class="u-visually-hidden"
+			hidden
+			id="show-polyfill-content"
+			type="checkbox"
+		>
+
+		<label
+			aria-hidden="true"
+			class="polyfill-notification__label"
+			for="show-polyfill-content"
+		>
+			<span ua-target="2021">0 polyfills</span>
+			<span ua-target="2020">1 polyfill</span>
+			<span ua-target="2018">1 polyfill</span>
+			<span ua-target="2016">3 polyfill</span>
+			<span ua-target="2014">5 polyfills</span>
+			<span ua-target="2013">6 polyfills</span>
+			<span ua-target="2011">7 polyfills</span>
+			<span ua-target="fallback">no javascript</span>
+		</label>
+
+		<label
+			aria-hidden="true"
+			class="polyfill-notification__toggle"
+			for="show-polyfill-content"
+			data-closed="🐵"
+			data-open="🙈"
+		></label>
+
+		<div class="polyfill-notification__content">
+			${polyfillNotificationContent('2021', '0', [])}
+
+			${polyfillNotificationContent('2020', '7', [
+				'IntersectionObserver'
+			])}
+
+			${polyfillNotificationContent('2018', '7', [
+				'IntersectionObserver'
+			])}
+
+			${polyfillNotificationContent('2016', '7', [
+				'IntersectionObserver',
+				'NodeList.prototype.@@iterator',
+				'NodeList.prototype.forEach'
+			])}
+
+			${polyfillNotificationContent('2014', '8', [
+				"IntersectionObserver",
+				'NodeList.prototype.@@iterator',
+				'NodeList.prototype.forEach',
+				"performance.now",
+				"requestAnimationFrame",
+			])}
+			
+			${polyfillNotificationContent('2013', '11', [
+				"Event",
+				"IntersectionObserver",
+				'NodeList.prototype.@@iterator',
+				'NodeList.prototype.forEach',
+				"performance.now",
+				"requestAnimationFrame",
+			])}
+
+			${polyfillNotificationContent('2011', '12', [
+				"Event",
+				"IntersectionObserver",
+				'NodeList.prototype.@@iterator',
+				'NodeList.prototype.forEach',
+				"Window",
+				"performance.now",
+				"requestAnimationFrame",
+			])}
+
+			${polyfillNotificationContent('fallback', '0', [])}
+		</div>
+	</div>
 
 	${siteFooter()}
 </body>
@@ -198,7 +209,8 @@ async function generate(assetMap) {
 
 function indexJsAndCss(assetMap) {
 	if (process.env.GITHUB_ACTIONS) {
-		return html`<meta name="ua-targets" content="2020 2018 2016 2014 2013 2011">
+		return html`<meta name="ua-targets" content="2021 2020 2018 2016 2014 2013 2011">
+<script src="/js/${assetMap.js['index']['2021'].fullName}" ua-target="2021" async></script>
 <script src="/js/${assetMap.js['index']['2020'].fullName}" ua-target="2020" async></script>
 <script src="/js/${assetMap.js['index']['2018'].fullName}" ua-target="2018" async></script>
 <script src="/js/${assetMap.js['index']['2016'].fullName}" ua-target="2016" async></script>
@@ -211,7 +223,7 @@ ${cssTags(assetMap, 'index')}
 	}
 
 	return html`
-<script src="/js/${assetMap.js['index']['2020'].fullName}" async></script>
+<script src="/js/${assetMap.js['index']['2021'].fullName}" async></script>
 
 ${cssTags(assetMap, 'index')}
 `;

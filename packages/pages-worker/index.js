@@ -126,6 +126,13 @@ async function handleRequest(request) {
 
 const targets = [
 	{
+		name: '2021',
+		engines: {
+			"Blink": "94",
+			"Gecko": "93",
+		},
+	},
+	{
 		name: '2020',
 		engines: {
 			"Blink": "87",

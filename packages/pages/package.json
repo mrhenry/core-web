@@ -14,7 +14,7 @@
   "scripts": {
     "browserstack-runner": "browserstack-runner",
     "build-html": "node lib/pages.js",
-    "build-css": "node ./build-css.js",
+    "build-css": "rm -rf ./dist/css/* && mkdir -p ./dist/css && node ./build-css.js",
     "build-js": "webpack",
     "build-fonts": "cp -r ./lib/fonts/ ./dist/fonts/ && rm -rf ./dist/fonts/sources",
     "build-images": "cp -r ./lib/images/ ./dist/images/",
