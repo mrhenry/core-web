@@ -14,7 +14,7 @@
     "ua-parser-js": "^0.7.28"
   },
   "devDependencies": {
-    "@mdn/browser-compat-data": "^4.0.5"
+    "@mdn/browser-compat-data": "^4.0.6"
   },
   "volta": {
     "extends": "../../package.json"
