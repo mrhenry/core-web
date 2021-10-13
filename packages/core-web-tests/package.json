@@ -15,7 +15,7 @@
     "@mrhenry/core-web": "^0.6.4",
     "babel-loader": "^8.2.2",
     "browserstack-runner": "^0.9.4",
-    "core-js": "^3.18.2",
+    "core-js": "^3.18.3",
     "eslint": "^8.0.0",
     "webpack": "^5.58.0",
     "webpack-cli": "^4.9.0"
