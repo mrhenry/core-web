@@ -4,6 +4,7 @@ import * as semver from "semver";
 export function browsersToEngines(browsers: Record<string, string>) {
 	const engineFeatureMapping: Record<string, { engine: string, versions: Array<string> }> = {};
 	const lastVersionForEngine: Record<string, string> = {};
+	const versionRangeIsOpenEnded: Record<string, boolean> = {};
 
 	const browserNameMapping: Record<string, string> = {
 		"chrome": "chrome",
@@ -29,6 +30,13 @@ export function browsersToEngines(browsers: Record<string, string>) {
 			for (const releaseVersion in bcd.browsers[bcdBrowserName].releases) {
 				const releaseInfo = bcd.browsers[bcdBrowserName].releases[releaseVersion];
 				const releaseVersionSemver = semver.coerce(releaseVersion);
+
+				if (
+					releaseInfo.engine &&
+					semver.satisfies(semver.coerce('99999999.999999.9999')!, browserVersionRange)
+				) {
+					versionRangeIsOpenEnded[releaseInfo.engine] = true;
+				}
 
 				if (
 					releaseInfo.engine &&
@@ -127,6 +135,12 @@ export function browsersToEngines(browsers: Record<string, string>) {
 		let max = parts[1].trim();
 
 		if (semver.eq(semver.coerce(max)!, semver.coerce(lastVersionForEngine[engine])!)) {
+			out[engine] = `>= ${min}`;
+		} else if (versionRangeIsOpenEnded[engine]) {
+			const versionRange = out[engine];
+			const parts = versionRange.split('-');
+			let min = parts[0].trim();
+
 			out[engine] = `>= ${min}`;
 		} else if (min === max) {
 			out[engine] = min;
