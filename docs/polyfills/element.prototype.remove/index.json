@@ -25,7 +25,7 @@
       "firefox_mob": "3.6 - *"
     },
     "engines": {
-      "Blink": "28 - 28",
+      "Blink": "28",
       "EdgeHTML": "12 - 13",
       "Gecko": "1.7 - 44",
       "WebKit": "85 - 601.1.56",

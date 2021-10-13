@@ -13,8 +13,8 @@
       "safari": "4"
     },
     "engines": {
-      "Trident": "4.0 - 4.0",
-      "WebKit": "530.17 - 530.17"
+      "Trident": "4.0",
+      "WebKit": "530.17"
     },
     "size": 1277,
     "isAlias": false,

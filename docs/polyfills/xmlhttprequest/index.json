@@ -13,7 +13,7 @@
       "ie": "6 - 8"
     },
     "engines": {
-      "Trident": "4.0 - 4.0"
+      "Trident": "4.0"
     },
     "size": 1285,
     "isAlias": false,

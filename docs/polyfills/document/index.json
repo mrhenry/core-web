@@ -8,7 +8,7 @@
       "ie": "6 - 8"
     },
     "engines": {
-      "Trident": "4.0 - 4.0"
+      "Trident": "4.0"
     },
     "size": 261,
     "isAlias": false,
@@ -637,10 +637,10 @@
             "version_added": "12"
           },
           "firefox": {
-            "version_added": true
+            "version_added": "6"
           },
           "firefox_android": {
-            "version_added": true
+            "version_added": "6"
           },
           "ie": {
             "version_added": "10"
@@ -687,10 +687,10 @@
             "version_added": "12"
           },
           "firefox": {
-            "version_added": "51"
+            "version_added": "6"
           },
           "firefox_android": {
-            "version_added": "51"
+            "version_added": "6"
           },
           "ie": {
             "version_added": "10"
@@ -737,10 +737,10 @@
             "version_added": "12"
           },
           "firefox": {
-            "version_added": "51"
+            "version_added": "6"
           },
           "firefox_android": {
-            "version_added": "51"
+            "version_added": "6"
           },
           "ie": {
             "version_added": "10"
@@ -1382,6 +1382,7 @@
     "clear": {
       "__compat": {
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/Document/clear",
+        "spec_url": "https://html.spec.whatwg.org/multipage/obsolete.html#dom-document-clear",
         "support": {
           "chrome": [
             {
@@ -1632,7 +1633,7 @@
         },
         "status": {
           "experimental": false,
-          "standard_track": false,
+          "standard_track": true,
           "deprecated": false
         }
       }
@@ -1765,10 +1766,10 @@
             "version_added": "≤18"
           },
           "firefox": {
-            "version_added": true
+            "version_added": "6"
           },
           "firefox_android": {
-            "version_added": true
+            "version_added": "6"
           },
           "ie": {
             "version_added": false
@@ -3002,10 +3003,10 @@
             "version_added": "≤18"
           },
           "firefox": {
-            "version_added": true
+            "version_added": "6"
           },
           "firefox_android": {
-            "version_added": true
+            "version_added": "6"
           },
           "ie": {
             "version_added": false
@@ -7211,10 +7212,10 @@
             "version_added": "17"
           },
           "firefox": {
-            "version_added": "9"
+            "version_added": "6"
           },
           "firefox_android": {
-            "version_added": "9"
+            "version_added": "6"
           },
           "ie": {
             "version_added": false
@@ -7259,10 +7260,10 @@
             "version_added": "17"
           },
           "firefox": {
-            "version_added": "9"
+            "version_added": "6"
           },
           "firefox_android": {
-            "version_added": "9"
+            "version_added": "6"
           },
           "ie": {
             "version_added": false
@@ -7595,10 +7596,10 @@
             "version_added": "17"
           },
           "firefox": {
-            "version_added": "9"
+            "version_added": "6"
           },
           "firefox_android": {
-            "version_added": "9"
+            "version_added": "6"
           },
           "ie": {
             "version_added": false
@@ -8102,10 +8103,10 @@
             "version_added": "12"
           },
           "firefox": {
-            "version_added": true
+            "version_added": "6"
           },
           "firefox_android": {
-            "version_added": true
+            "version_added": "6"
           },
           "ie": {
             "version_added": "11"
@@ -9670,40 +9671,40 @@
         "spec_url": "https://html.spec.whatwg.org/multipage/indices.html#event-readystatechange",
         "support": {
           "chrome": {
-            "version_added": true
+            "version_added": "1"
           },
           "chrome_android": {
-            "version_added": true
+            "version_added": "18"
           },
           "edge": {
             "version_added": "12"
           },
           "firefox": {
-            "version_added": true
+            "version_added": "4"
           },
           "firefox_android": {
-            "version_added": true
+            "version_added": "4"
           },
           "ie": {
-            "version_added": true
+            "version_added": "4"
           },
           "opera": {
-            "version_added": true
+            "version_added": "≤12.1"
           },
           "opera_android": {
-            "version_added": true
+            "version_added": "≤12.1"
           },
           "safari": {
-            "version_added": true
+            "version_added": "≤4"
           },
           "safari_ios": {
-            "version_added": true
+            "version_added": "≤3"
           },
           "samsunginternet_android": {
-            "version_added": true
+            "version_added": "1.0"
           },
           "webview_android": {
-            "version_added": true
+            "version_added": "≤37"
           }
         },
         "status": {
@@ -10380,10 +10381,10 @@
         "description": "<code>selectionchange</code> event",
         "support": {
           "chrome": {
-            "version_added": true
+            "version_added": "11"
           },
           "chrome_android": {
-            "version_added": true
+            "version_added": "18"
           },
           "edge": {
             "version_added": "12"
@@ -10395,25 +10396,25 @@
             "version_added": "52"
           },
           "ie": {
-            "version_added": true
+            "version_added": "5.5"
           },
           "opera": {
-            "version_added": null
+            "version_added": "15"
           },
           "opera_android": {
-            "version_added": null
+            "version_added": "14"
           },
           "safari": {
-            "version_added": "1.3"
+            "version_added": "5.1"
           },
           "safari_ios": {
-            "version_added": true
+            "version_added": "5"
           },
           "samsunginternet_android": {
-            "version_added": true
+            "version_added": "1.0"
           },
           "webview_android": {
-            "version_added": true
+            "version_added": "≤37"
           }
         },
         "status": {
@@ -10430,10 +10431,10 @@
         "description": "<code>selectstart</code> event",
         "support": {
           "chrome": {
-            "version_added": true
+            "version_added": "1"
           },
           "chrome_android": {
-            "version_added": true
+            "version_added": "18"
           },
           "edge": {
             "version_added": "12"
@@ -10445,13 +10446,13 @@
             "version_added": "52"
           },
           "ie": {
-            "version_added": true
+            "version_added": "4"
           },
           "opera": {
-            "version_added": null
+            "version_added": "15"
           },
           "opera_android": {
-            "version_added": null
+            "version_added": "14"
           },
           "safari": {
             "version_added": "1.3"
@@ -10460,10 +10461,10 @@
             "version_added": false
           },
           "samsunginternet_android": {
-            "version_added": true
+            "version_added": "1.0"
           },
           "webview_android": {
-            "version_added": true
+            "version_added": "1"
           }
         },
         "status": {
@@ -10944,10 +10945,10 @@
             "version_added": null
           },
           "safari": {
-            "version_added": true
+            "version_added": "11"
           },
           "safari_ios": {
-            "version_added": true
+            "version_added": "11"
           },
           "samsunginternet_android": {
             "version_added": false
@@ -11569,10 +11570,10 @@
             "version_added": "12"
           },
           "firefox": {
-            "version_added": true
+            "version_added": "17"
           },
           "firefox_android": {
-            "version_added": true
+            "version_added": "17"
           },
           "ie": {
             "version_added": true

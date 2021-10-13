@@ -15,7 +15,7 @@
     },
     "engines": {
       "Trident": ">= 4.0",
-      "WebKit": "530.17 - 530.17"
+      "WebKit": "530.17"
     },
     "size": 800,
     "isAlias": false,
@@ -92,7 +92,7 @@
             "version_added": "7"
           },
           {
-            "version_added": "5",
+            "version_added": "6",
             "version_removed": "7",
             "notes": "Not supported for SVG elements.",
             "partial_implementation": true
@@ -193,7 +193,7 @@
         "version_added": "7"
       },
       {
-        "version_added": "5",
+        "version_added": "6",
         "version_removed": "7",
         "notes": "Not supported for SVG elements.",
         "partial_implementation": true

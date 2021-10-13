@@ -17,7 +17,7 @@
       "Trident": "4.0 - 6.0",
       "Gecko": "1.7 - 20",
       "WebKit": "85 - 537.43",
-      "Blink": "28 - 28"
+      "Blink": "28"
     },
     "size": 346,
     "isAlias": false,

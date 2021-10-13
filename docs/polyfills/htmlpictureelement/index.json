@@ -22,7 +22,7 @@
       "android": "<52"
     },
     "engines": {
-      "EdgeHTML": "12 - 12",
+      "EdgeHTML": "12",
       "Trident": ">= 4.0",
       "Gecko": "2 - 37",
       "Presto": ">= 2.10",

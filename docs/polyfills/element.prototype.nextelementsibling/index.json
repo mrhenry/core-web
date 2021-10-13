@@ -19,7 +19,7 @@
     },
     "engines": {
       "Gecko": "1.7 - 1.9",
-      "Trident": "4.0 - 4.0",
+      "Trident": "4.0",
       "Presto": "1 - 2.1",
       "WebKit": "85 - 525.13"
     },

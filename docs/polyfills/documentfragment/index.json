@@ -20,7 +20,7 @@
       "samsung_mob": "<2"
     },
     "engines": {
-      "Blink": "28 - 28",
+      "Blink": "28",
       "EdgeHTML": "12 - 16",
       "Gecko": "1.7 - 23",
       "Trident": ">= 4.0",

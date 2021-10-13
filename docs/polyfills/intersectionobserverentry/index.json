@@ -17,7 +17,7 @@
       "edge_mob": "15"
     },
     "engines": {
-      "EdgeHTML": "15 - 15"
+      "EdgeHTML": "15"
     },
     "size": 126,
     "isAlias": false,

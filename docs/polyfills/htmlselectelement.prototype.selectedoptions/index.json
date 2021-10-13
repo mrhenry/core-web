@@ -27,7 +27,7 @@
       "Gecko": "1.7 - 25",
       "WebKit": "85 - 534.48",
       "Trident": ">= 5.0",
-      "Presto": "1 - 1"
+      "Presto": "1"
     },
     "size": 820,
     "isAlias": false,
