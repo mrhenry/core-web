@@ -128,6 +128,8 @@ export function browsersToEngines(browsers: Record<string, string>) {
 
 		if (semver.eq(semver.coerce(max)!, semver.coerce(lastVersionForEngine[engine])!)) {
 			out[engine] = `>= ${min}`;
+		} else if (min === max) {
+			out[engine] = min;
 		}
 	}
 
