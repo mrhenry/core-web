@@ -26,7 +26,7 @@
       "Gecko": "2 - 36",
       "Presto": ">= 1",
       "WebKit": ">= 85",
-      "Blink": "28 - 60"
+      "Blink": ">= 28"
     },
     "size": 9772,
     "isAlias": false,

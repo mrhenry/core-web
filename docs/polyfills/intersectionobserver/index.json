@@ -33,7 +33,7 @@
       "EdgeHTML": "12 - 15",
       "Gecko": "1.7 - 54",
       "Trident": ">= 4.0",
-      "WebKit": "85 - 612.1.29",
+      "WebKit": ">= 85",
       "Presto": ">= 1"
     },
     "size": 6661,
