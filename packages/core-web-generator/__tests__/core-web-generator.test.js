@@ -40,15 +40,14 @@ const browsersToEnginesCases = [
 		},
 		engines: { "WebKit": "602.1.50 - 604.2.4" },
 	},
-	// Not stable in tests : 
-	// {
-	// 	message: "WebKit Desktop 10 + iOS *",
-	// 	browsers: {
-	// 		"safari": "10",
-	// 		"ios_saf": "*"
-	// 	},
-	// 	engines: { "WebKit": ">= 522.11" },
-	// },
+	{
+		message: "WebKit Desktop 10 + iOS *",
+		browsers: {
+			"safari": "10",
+			"ios_saf": "*"
+		},
+		engines: { "WebKit": ">= 522.11" },
+	},
 	{
 		message: "WebKit Desktop 8.0 + iOS 8.0",
 		browsers: {
@@ -66,15 +65,14 @@ const browsersToEnginesCases = [
 		},
 		engines: { "WebKit": "602.1.50 - 607.1.40" },
 	},
-	// Not stable in tests : 
-	// {
-	// 	message: "WebKit Desktop 10 - 12 + iOS *",
-	// 	browsers: {
-	// 		"safari": "10 - 12",
-	// 		"ios_saf": "*"
-	// 	},
-	// 	engines: { "WebKit": ">= 522.11" },
-	// },
+	{
+		message: "WebKit Desktop 10 - 12 + iOS *",
+		browsers: {
+			"safari": "10 - 12",
+			"ios_saf": "*"
+		},
+		engines: { "WebKit": ">= 522.11" },
+	},
 	{
 		message: "WebKit Desktop 8.0 - 9.1 + iOS 8.0 - 9.1",
 		browsers: {
@@ -92,15 +90,14 @@ const browsersToEnginesCases = [
 		},
 		engines: { "WebKit": "85 - 603.2.1" },
 	},
-	// Not stable in tests : 
-	// {
-	// 	message: "WebKit Desktop < 12 + iOS *",
-	// 	browsers: {
-	// 		"safari": "< 12",
-	// 		"ios_saf": "*"
-	// 	},
-	// 	engines: { "WebKit": ">= 85" },
-	// },
+	{
+		message: "WebKit Desktop < 12 + iOS *",
+		browsers: {
+			"safari": "< 12",
+			"ios_saf": "*"
+		},
+		engines: { "WebKit": ">= 85" },
+	},
 	{
 		message: "WebKit Desktop <= 9.1 + iOS <= 9.1",
 		browsers: {
