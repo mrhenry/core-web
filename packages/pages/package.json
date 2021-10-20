@@ -25,7 +25,7 @@
   "dependencies": {
     "@babel/core": "^7.15.8",
     "@babel/preset-env": "^7.15.8",
-    "@mdn/browser-compat-data": "^4.0.6",
+    "@mdn/browser-compat-data": "^4.0.7",
     "@mrhenry/babel-plugin-core-web": "*",
     "@mrhenry/core-web": "*",
     "babel-loader": "^8.2.2",
@@ -38,7 +38,7 @@
     "postcss-import": "^14.0.2",
     "postcss-preset-env": "^6.7.0",
     "postcss-split-by-media": "^0.2.0",
-    "webpack": "^5.58.2",
+    "webpack": "^5.59.0",
     "webpack-cli": "^4.9.1"
   },
   "volta": {
