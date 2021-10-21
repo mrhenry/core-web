@@ -28,7 +28,7 @@
     "@mdn/browser-compat-data": "^4.0.7",
     "@mrhenry/babel-plugin-core-web": "*",
     "@mrhenry/core-web": "*",
-    "babel-loader": "^8.2.2",
+    "babel-loader": "^8.2.3",
     "browserstack-runner": "^0.9.4",
     "canvas": "^2.8.0",
     "core-js": "^3.18.3",
