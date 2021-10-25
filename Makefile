@@ -1,4 +1,4 @@
-packages := ./ ./packages/babel-plugin-core-web ./packages/core-web ./packages/core-web-example ./packages/core-web-generator ./packages/core-web-tests ./packages/pages ./packages/pages-worker
+packages := ./ ./packages/babel-plugin-core-web ./packages/core-web ./packages/core-web-example ./packages/core-web-generator ./packages/core-web-tests ./packages/pages
 
 node_modules: ./package-lock.json
 	rm -rf ./node_modules
@@ -20,10 +20,7 @@ build-tests: install
 build-pages: install
 	(cd packages/pages && npm run build)
 
-build-pages-worker: install
-	(cd packages/pages-worker && npm run build)
-
-build: install generate build-example build-tests build-pages build-pages-worker
+build: install generate build-example build-tests build-pages
 
 run-tests: install
 	(cd packages/core-web-generator && npm run test)
