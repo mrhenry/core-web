@@ -10,9 +10,9 @@ if (process.env.GITHUB_ACTIONS) {
 				'chrome >= 94',
 				'firefox >= 93',
 			],
-			coreWebEngines: {
-				"Blink": "94",
-				"Gecko": "93",
+			coreWebBrowsers: {
+				'chrome': '94',
+				'firefox': '93',
 			},
 		},
 
@@ -27,10 +27,11 @@ if (process.env.GITHUB_ACTIONS) {
 				'firefox >= 83',
 				'safari >= 14',
 			],
-			coreWebEngines: {
-				"Blink": "87",
-				"Gecko": "83",
-				"WebKit": "610.1.28",
+			coreWebBrowsers: {
+				'chrome':'87',
+				'firefox':'83',
+				'safari':'14',
+				'ios_saf': '14',
 			},
 		},
 		
@@ -46,11 +47,12 @@ if (process.env.GITHUB_ACTIONS) {
 				'firefox >= 64',
 				'safari >= 12',
 			],
-			coreWebEngines: {
-				"Blink": "71",
-				"Gecko": "64",
-				"EdgeHTML": "18",
-				"WebKit": "606.1.36",
+			coreWebBrowsers: {
+				'chrome':'71',
+				'edge':'18',
+				'firefox':'64',
+				'safari':'12',
+				'ios_saf':'12',
 			},
 		},
 
@@ -66,11 +68,12 @@ if (process.env.GITHUB_ACTIONS) {
 				'firefox >= 54',
 				'safari >= 10',
 			],
-			coreWebEngines: {
-				"Blink": "51",
-				"Gecko": "54",
-				"EdgeHTML": "14",
-				"WebKit": "602.1.50",
+			coreWebBrowsers: {
+				'chrome': '51',
+				'edge': '14',
+				'firefox': '54',
+				'safari': '10',
+				'ios_saf': '10',
 			},
 		},
 		
@@ -86,11 +89,12 @@ if (process.env.GITHUB_ACTIONS) {
 				'firefox >= 34',
 				'safari >= 8',
 			],
-			coreWebEngines: {
-				"Blink": "39",
-				"Gecko": "34",
-				"EdgeHTML": "12",
-				"WebKit": "538.35",
+			coreWebBrowsers: {
+				'chrome': '39',
+				'edge': '12',
+				'firefox': '34',
+				'safari': '8',
+				'ios_saf': '8',
 			},
 		},
 		
@@ -107,11 +111,13 @@ if (process.env.GITHUB_ACTIONS) {
 				'safari >= 7',
 				'android >= 4.4',
 			],
-			coreWebEngines: {
-				"Blink": "30",
-				"Gecko": "26",
-				"Trident": "7.0",
-				"WebKit": "537.51",
+			coreWebBrowsers: {
+				'chrome': '31',
+				'firefox': '26',
+				'ie': '11',
+				'safari': '7',
+				'ios_saf': '7',
+				'android': '4.4',
 			},
 		},
 		
@@ -129,12 +135,14 @@ if (process.env.GITHUB_ACTIONS) {
 				'safari >= 5.1',
 				'android >= 4',
 			],
-			coreWebEngines: {
-				"Blink": "26",
-				"Gecko": "10",
-				"Presto": "2.10",
-				"Trident": "5.0",
-				"WebKit": "534.30",
+			coreWebBrowsers: {
+				'chrome': '17',
+				'firefox': '10',
+				'ie': '9',
+				'opera': '12',
+				'safari': '5.1',
+				'ios_saf': '5.1',
+				'android': '4',
 			},
 		}
 	];
@@ -150,9 +158,9 @@ if (process.env.GITHUB_ACTIONS) {
 				'chrome >= 94',
 				'firefox >= 93',
 			],
-			coreWebEngines: {
-				"Blink": "94",
-				"Gecko": "93",
+			coreWebBrowsers: {
+				'chrome': '94',
+				'firefox': '93',
 			},
 		},
 	];

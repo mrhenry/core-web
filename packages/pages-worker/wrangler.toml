@@ -1,6 +1,7 @@
-name = "twilight-silence-3730"
-type = "webpack"
 account_id = "4717e92a0937c9b616dfd15ace7a092d"
-workers_dev = true
+compatibility_date = "2021-10-25"
+name = "twilight-silence-3730"
 route = ""
+type = "webpack"
+workers_dev = true
 zone_id = ""
