@@ -5,17 +5,13 @@
   "license": "MIT",
   "private": true,
   "scripts": {
-    "build": "node ./build-bcd-browsers",
     "watch": "wrangler dev",
     "install-wrangler": "npm install -g @cloudflare/wrangler"
   },
   "dependencies": {
-    "semver": "^7.3.5",
-    "ua-parser-js": "^0.7.28"
+    "semver": "^7.3.5"
   },
-  "devDependencies": {
-    "@mdn/browser-compat-data": "^4.0.7"
-  },
+  "devDependencies": {},
   "volta": {
     "extends": "../../package.json"
   }
