@@ -40,7 +40,7 @@
 <script src="/js/index.ba4851fd6b61e72e9a9f.2021.js" ua-target="2021" async></script>
 <script src="/js/index.ce8e6cbfa98e3a4dd189.2020.js" ua-target="2020" async></script>
 <script src="/js/index.8ae7614849b12878c507.2018.js" ua-target="2018" async></script>
-<script src="/js/index.3129ee3b0d02ca639785.2016.js" ua-target="2016" async></script>
+<script src="/js/index.d7a31d543d61dca5aea7.2016.js" ua-target="2016" async></script>
 <script src="/js/index.0f86b4d368502300a308.2014.js" ua-target="2014" async></script>
 <script src="/js/index.6752a6c2002c9052fbdd.2013.js" ua-target="2013" async></script>
 <script src="/js/index.1c57b7fc3635e512b208.2011.js" ua-target="2011" async></script>
@@ -168,7 +168,7 @@
 						Just define a set of browsers and automatically receive everything you need.
 					</p>
 					<p>
-						Generate multiple outputs with multiple sets of browsers to speed up your site.
+						Optimize for modern browsers without sacrificing support for older browsers.
 					</p>
 				</div>
 
@@ -197,12 +197,25 @@
 			<article class="why__item">
 				<div class="card">
 					<h3 class="why__item__title">
+						Fully automatic
+					</h3>
+
+					<p class="why__item__content">
+						<p>Needed polyfills are detected in your source code.</p>
+<p>Just define your browser targets and start writing features.</p>
+					</p>
+				</div>
+			</article>
+		
+			<article class="why__item">
+				<div class="card">
+					<h3 class="why__item__title">
 						One less blocking http request
 					</h3>
 
 					<p class="why__item__content">
 						<p>Most visitors use a modern browser which doesn't need any polyfills.</p>
-<p>When polyfills are bundled only for older browsers, there is no need for an extra http request, making your site faster.</p>
+<p>Only your bundle(s) for older browsers will include polyfills, optimizing performance for modern browsers.</p>
 					</p>
 				</div>
 			</article>
@@ -227,8 +240,8 @@
 					</h3>
 
 					<p class="why__item__content">
-						<p>When an external polyfill provider changes or updates their code they potentially introduce bugs (or unexpected fixes) impacting your code.</p>
-<p>Packaging polyfills with your code adds an extra level of checks to prevent unwanted changes from affecting production.</p>
+						<p>When an external polyfill provider changes or updates code they potentially introduce bugs (or unexpected fixes) impacting your code.</p>
+<p>Packaging polyfills with your code adds an extra level of checks to prevent unwanted changes.</p>
 					</p>
 				</div>
 			</article>
@@ -242,18 +255,6 @@
 					<p class="why__item__content">
 						<p>Because your build tool sees every polyfill file, you can have sourcemaps.</p>
 <p>This makes it easier to debug and report issues.</p>
-					</p>
-				</div>
-			</article>
-		
-			<article class="why__item">
-				<div class="card">
-					<h3 class="why__item__title">
-						Control over updates
-					</h3>
-
-					<p class="why__item__content">
-						<p>You can add your own safeguards and only update <strong>core-web</strong> when all your requirements are met.</p>
 					</p>
 				</div>
 			</article>
