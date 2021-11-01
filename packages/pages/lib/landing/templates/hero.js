@@ -16,7 +16,7 @@ module.exports = function hero() {
 						Just define a set of browsers and automatically receive everything you need.
 					</p>
 					<p>
-						Generate multiple outputs with multiple sets of browsers to speed up your site.
+						Optimize for modern browsers without sacrificing support for older browsers.
 					</p>
 				</div>
 

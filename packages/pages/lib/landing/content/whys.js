@@ -3,10 +3,17 @@ const html = require('../../html/html');
 module.exports = {
 	items: [
 		{
+			title: 'Fully automatic',
+			content: html`
+<p>Needed polyfills are detected in your source code.</p>
+<p>Just define your browser targets and start writing features.</p>
+`.trim()
+		},
+		{
 			title: 'One less blocking http request',
 			content: html`
 <p>Most visitors use a modern browser which doesn't need any polyfills.</p>
-<p>When polyfills are bundled only for older browsers, there is no need for an extra http request, making your site faster.</p>
+<p>Only your bundle(s) for older browsers will include polyfills, optimizing performance for modern browsers.</p>
 `.trim()
 		},
 		{
@@ -20,8 +27,8 @@ module.exports = {
 		{
 			title: 'Reproducible builds',
 			content: html`
-<p>When an external polyfill provider changes or updates their code they potentially introduce bugs (or unexpected fixes) impacting your code.</p>
-<p>Packaging polyfills with your code adds an extra level of checks to prevent unwanted changes from affecting production.</p>
+<p>When an external polyfill provider changes or updates code they potentially introduce bugs (or unexpected fixes) impacting your code.</p>
+<p>Packaging polyfills with your code adds an extra level of checks to prevent unwanted changes.</p>
 `.trim()
 		},
 		{
@@ -29,12 +36,6 @@ module.exports = {
 			content: html`
 <p>Because your build tool sees every polyfill file, you can have sourcemaps.</p>
 <p>This makes it easier to debug and report issues.</p>
-`.trim()
-		},
-		{
-			title: 'Control over updates',
-			content: html`
-<p>You can add your own safeguards and only update <strong>core-web</strong> when all your requirements are met.</p>
 `.trim()
 		},
 		{

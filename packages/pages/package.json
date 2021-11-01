@@ -23,8 +23,8 @@
     "dev-server": "cd ./dist && npx http-server"
   },
   "dependencies": {
-    "@babel/core": "^7.15.8",
-    "@babel/preset-env": "^7.15.8",
+    "@babel/core": "^7.16.0",
+    "@babel/preset-env": "^7.16.0",
     "@mdn/browser-compat-data": "^4.0.7",
     "@mrhenry/babel-plugin-core-web": "*",
     "@mrhenry/core-web": "*",
@@ -38,7 +38,7 @@
     "postcss-import": "^14.0.2",
     "postcss-preset-env": "^6.7.0",
     "postcss-split-by-media": "^0.2.0",
-    "webpack": "^5.59.1",
+    "webpack": "^5.61.0",
     "webpack-cli": "^4.9.1"
   },
   "volta": {
