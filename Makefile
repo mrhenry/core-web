@@ -2,7 +2,7 @@ packages := ./ ./packages/babel-plugin-core-web ./packages/core-web ./packages/c
 
 node_modules: ./package-lock.json
 	rm -rf ./node_modules
-	npm ci
+	npm ci --ignore-scripts
 	touch ./node_modules
 
 install: node_modules
