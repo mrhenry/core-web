@@ -114,7 +114,7 @@
             ]
           },
           "nodejs": {
-            "version_added": true
+            "version_added": "0.10.0"
           },
           "opera": {
             "version_added": "15"

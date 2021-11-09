@@ -56,6 +56,7 @@
           {
             "version_added": "12",
             "version_removed": "17",
+            "partial_implementation": true,
             "notes": [
               "Only supported for <a href='https://developer.mozilla.org/docs/Web/API/HTMLElement'><code>HTMLElement</code></a>, not all <code>Element</code> objects, such as <a href='https://developer.mozilla.org/docs/Web/API/SVGElement'><code>SVGElement</code></a>.",
               "No support for <code>smooth</code> behavior."
@@ -70,6 +71,7 @@
         },
         "ie": {
           "version_added": "5",
+          "partial_implementation": true,
           "notes": [
             "Only supported for <a href='https://developer.mozilla.org/docs/Web/API/HTMLElement'><code>HTMLElement</code></a>, not all <code>Element</code> objects, such as <a href='https://developer.mozilla.org/docs/Web/API/SVGElement'><code>SVGElement</code></a>.",
             "No support for <code>smooth</code> behavior or <code>center</code> options."
@@ -196,6 +198,7 @@
       {
         "version_added": "12",
         "version_removed": "17",
+        "partial_implementation": true,
         "notes": [
           "Only supported for <a href='https://developer.mozilla.org/docs/Web/API/HTMLElement'><code>HTMLElement</code></a>, not all <code>Element</code> objects, such as <a href='https://developer.mozilla.org/docs/Web/API/SVGElement'><code>SVGElement</code></a>.",
           "No support for <code>smooth</code> behavior."
@@ -207,6 +210,7 @@
     },
     "ie": {
       "version_added": "5",
+      "partial_implementation": true,
       "notes": [
         "Only supported for <a href='https://developer.mozilla.org/docs/Web/API/HTMLElement'><code>HTMLElement</code></a>, not all <code>Element</code> objects, such as <a href='https://developer.mozilla.org/docs/Web/API/SVGElement'><code>SVGElement</code></a>.",
         "No support for <code>smooth</code> behavior or <code>center</code> options."
