@@ -718,7 +718,7 @@
               "version_added": "30"
             },
             "chrome_android": {
-              "version_added": true
+              "version_added": "30"
             },
             "edge": {
               "version_added": "12"
@@ -745,10 +745,10 @@
               "version_added": false
             },
             "samsunginternet_android": {
-              "version_added": true
+              "version_added": "2.0"
             },
             "webview_android": {
-              "version_added": true
+              "version_added": "4.4"
             }
           },
           "status": {
@@ -815,7 +815,7 @@
               "version_added": "1"
             },
             "chrome_android": {
-              "version_added": true
+              "version_added": "18"
             },
             "edge": {
               "version_added": "12"
@@ -842,10 +842,10 @@
               "version_added": false
             },
             "samsunginternet_android": {
-              "version_added": true
+              "version_added": "1.0"
             },
             "webview_android": {
-              "version_added": true
+              "version_added": "1"
             }
           },
           "status": {
@@ -4671,7 +4671,7 @@
             "version_added": false
           },
           "chrome_android": {
-            "version_added": true
+            "version_added": "18"
           },
           "edge": {
             "version_added": false
@@ -4689,7 +4689,7 @@
             "version_added": false
           },
           "opera_android": {
-            "version_added": true
+            "version_added": "≤14"
           },
           "safari": {
             "version_added": false
@@ -4698,10 +4698,10 @@
             "version_added": true
           },
           "samsunginternet_android": {
-            "version_added": true
+            "version_added": "1.0"
           },
           "webview_android": {
-            "version_added": true
+            "version_added": "≤37"
           }
         },
         "status": {
@@ -4907,11 +4907,7 @@
             ]
           },
           "chrome_android": {
-            "version_added": true,
-            "notes": [
-              "Chrome for Android 56 supports only Google Daydream View.",
-              "Chrome for Android 57 adds support for Google Cardboard."
-            ]
+            "version_added": false
           },
           "edge": {
             "version_added": "15",
@@ -5557,7 +5553,7 @@
             "version_added": false
           },
           "chrome_android": {
-            "version_added": true
+            "version_added": "18"
           },
           "edge": {
             "version_added": false
@@ -5575,7 +5571,7 @@
             "version_added": false
           },
           "opera_android": {
-            "version_added": true
+            "version_added": "≤14"
           },
           "safari": {
             "version_added": false
@@ -5584,10 +5580,10 @@
             "version_added": true
           },
           "samsunginternet_android": {
-            "version_added": true
+            "version_added": "1.0"
           },
           "webview_android": {
-            "version_added": true
+            "version_added": "≤37"
           }
         },
         "status": {
@@ -5607,7 +5603,7 @@
             "version_added": false
           },
           "chrome_android": {
-            "version_added": true
+            "version_added": "18"
           },
           "edge": {
             "version_added": false
@@ -5625,7 +5621,7 @@
             "version_added": false
           },
           "opera_android": {
-            "version_added": true
+            "version_added": "≤14"
           },
           "safari": {
             "version_added": false
@@ -5634,10 +5630,10 @@
             "version_added": true
           },
           "samsunginternet_android": {
-            "version_added": true
+            "version_added": "1.0"
           },
           "webview_android": {
-            "version_added": true
+            "version_added": "≤37"
           }
         },
         "status": {
@@ -5704,7 +5700,7 @@
             "version_added": "1"
           },
           "chrome_android": {
-            "version_added": true
+            "version_added": "18"
           },
           "edge": {
             "version_added": "12"
@@ -5731,10 +5727,10 @@
             "version_added": "3"
           },
           "samsunginternet_android": {
-            "version_added": true
+            "version_added": "1.0"
           },
           "webview_android": {
-            "version_added": true
+            "version_added": "1"
           }
         },
         "status": {
@@ -5753,7 +5749,7 @@
             "version_added": "1"
           },
           "chrome_android": {
-            "version_added": true
+            "version_added": "18"
           },
           "edge": {
             "version_added": "12"
@@ -5780,10 +5776,10 @@
             "version_added": "3"
           },
           "samsunginternet_android": {
-            "version_added": true
+            "version_added": "1.0"
           },
           "webview_android": {
-            "version_added": true
+            "version_added": "1"
           }
         },
         "status": {
@@ -6734,7 +6730,7 @@
             "prefix": "webkit"
           },
           "chrome_android": {
-            "version_added": true,
+            "version_added": "18",
             "prefix": "webkit"
           },
           "edge": {
@@ -6763,7 +6759,7 @@
             "version_added": false
           },
           "samsunginternet_android": {
-            "version_added": true,
+            "version_added": "1.0",
             "prefix": "webkit"
           },
           "webview_android": {
@@ -6995,7 +6991,7 @@
             "prefix": "webkit"
           },
           "chrome_android": {
-            "version_added": true,
+            "version_added": "18",
             "prefix": "webkit"
           },
           "edge": {
@@ -7024,11 +7020,11 @@
             "version_added": false
           },
           "samsunginternet_android": {
-            "version_added": true,
+            "version_added": "1.0",
             "prefix": "webkit"
           },
           "webview_android": {
-            "version_added": true,
+            "version_added": "1",
             "prefix": "webkit"
           }
         },
@@ -8993,7 +8989,7 @@
             "version_added": "33"
           },
           "chrome_android": {
-            "version_added": true
+            "version_added": "33"
           },
           "edge": {
             "version_added": "14"
@@ -9020,7 +9016,7 @@
             "version_added": "7"
           },
           "samsunginternet_android": {
-            "version_added": true
+            "version_added": "2.0"
           },
           "webview_android": {
             "version_added": false,
@@ -10062,11 +10058,7 @@
             ]
           },
           "chrome_android": {
-            "version_added": true,
-            "notes": [
-              "Chrome for Android 56 supports only Google Daydream View.",
-              "Chrome for Android 57 adds support for Google Cardboard."
-            ]
+            "version_added": false
           },
           "edge": {
             "version_added": "15",
