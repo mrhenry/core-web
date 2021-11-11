@@ -1,5 +1,5 @@
 (function(undefined) {
-if (!("document"in self
+if (!("document"in self&&"Document"in self
 )) {
 // document
 if ((typeof WorkerGlobalScope === "undefined") && (typeof importScripts !== "function")) {
