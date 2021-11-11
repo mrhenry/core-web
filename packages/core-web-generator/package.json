@@ -1,6 +1,6 @@
 {
   "name": "@mrhenry/core-web-generator",
-  "version": "0.6.4",
+  "version": "0.6.5",
   "private": true,
   "scripts": {
     "clean": "rm -rf ./lib/",
@@ -13,9 +13,9 @@
   },
   "dependencies": {
     "@babel/parser": "^7.16.2",
-    "@babel/traverse": "^7.16.0",
+    "@babel/traverse": "^7.16.3",
     "@babel/types": "^7.16.0",
-    "@mdn/browser-compat-data": "^4.0.9",
+    "@mdn/browser-compat-data": "^4.0.10",
     "@webcomponents/custom-elements": "^1.5.0",
     "@webcomponents/shadycss": "^1.11.0",
     "@webcomponents/shadydom": "^1.9.0",
