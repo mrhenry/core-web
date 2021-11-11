@@ -11,6 +11,7 @@ import { generateWebComponents } from "./generate-webcomponents";
 import { browsersToEngines } from "./browsers-to-engines/browsers-to-engines";
 import { generateMappings } from './generate-mappings';
 import { generateElementQsaScope } from './generate-element-qsa-scope';
+import * as semver from 'semver';
 
 genAll();
 
@@ -145,6 +146,19 @@ async function gen(feature: string, mapping: Array<Feature>, aliases: Array<Feat
 	let output = '';
 	const helperName = normalizeHelperName(feature);
 	const dependencies = await allDependencies(feature);
+
+	// until released : https://github.com/Financial-Times/polyfill-library/pull/1119
+	if (feature === 'DOMTokenList.prototype.@@iterator' && meta.browsers.ie === '9-12') {
+		meta.browsers.ie = '9 - 12';
+	}
+
+	if (meta.browsers) {
+		Object.keys(meta.browsers).forEach((browser) => {
+			// Must parse as a semver range.
+			// This throws on invalid ranges, which in turn fails the build, acting as a smell.
+			new semver.Range(meta.browsers[browser]);
+		});
+	}
 
 	if (!helperName) {
 		mapping.push({
