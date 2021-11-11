@@ -12,7 +12,7 @@
     "browsers": {
       "edge": "<16",
       "edge_mob": "<16",
-      "ie": "9-12",
+      "ie": "9 - 12",
       "ie_mob": "9 - 12",
       "safari": "<10.1",
       "chrome": "<50",
@@ -24,6 +24,7 @@
     },
     "engines": {
       "EdgeHTML": "12 - 15",
+      "Trident": ">= 5.0",
       "WebKit": "85 - 603.2.1",
       "Blink": "28 - 49",
       "Gecko": "1.7 - 49",
@@ -84,7 +85,7 @@
     "chrome": "<50",
     "edge": "<16",
     "firefox": "<50",
-    "ie": "9-12",
+    "ie": "9 - 12",
     "opera": "<50",
     "safari": "<10.1",
     "ios_saf": "10.3"
