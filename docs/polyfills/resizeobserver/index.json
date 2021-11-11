@@ -15,13 +15,13 @@
       "firefox": "<69",
       "ie": "9 - *",
       "opera": "<51",
-      "safari": "*",
+      "safari": "<13.1",
       "android": "<5",
       "firefox_mob": "*",
       "samsung_mob": "<9",
       "ie_mob": "*",
       "op_mob": "<47",
-      "ios_saf": "*"
+      "ios_saf": "<13.4"
     },
     "engines": {
       "Blink": "28 - 63",
@@ -29,7 +29,7 @@
       "Gecko": "1.7 - 68",
       "Trident": ">= 5.0",
       "Presto": ">= 1",
-      "WebKit": ">= 85"
+      "WebKit": "85 - 608.2.11"
     },
     "size": 8680,
     "isAlias": false,
@@ -345,8 +345,8 @@
     "firefox": "<69",
     "ie": "9 - *",
     "opera": "<51",
-    "safari": "*",
-    "ios_saf": "*"
+    "safari": "<13.1",
+    "ios_saf": "<13.4"
   },
   "native": {
     "android": {
@@ -392,13 +392,13 @@
       "firefox": "<69",
       "ie": "9 - *",
       "opera": "<51",
-      "safari": "*",
+      "safari": "<13.1",
       "android": "<5",
       "firefox_mob": "*",
       "samsung_mob": "<9",
       "ie_mob": "*",
       "op_mob": "<47",
-      "ios_saf": "*"
+      "ios_saf": "<13.4"
     },
     "install": {
       "module": "@juggle/resize-observer",

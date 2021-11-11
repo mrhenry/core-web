@@ -7,7 +7,10 @@
       "_ArrayIterator",
       "_Iterator",
       "DOMTokenList",
-      "_DOMTokenList"
+      "_DOMTokenList",
+      "Element.prototype.classList",
+      "Element",
+      "document"
     ],
     "browsers": {
       "edge": "<16",
@@ -120,14 +123,15 @@
     "dependencies": [
       "_ArrayIterator",
       "Symbol.iterator",
-      "DOMTokenList"
+      "DOMTokenList",
+      "Element.prototype.classList"
     ],
     "license": "MIT",
     "spec": "https://dom.spec.whatwg.org/#domtokenlist",
     "browsers": {
       "edge": "<16",
       "edge_mob": "<16",
-      "ie": "9-12",
+      "ie": "9 - 12",
       "ie_mob": "9 - 12",
       "safari": "<10.1",
       "chrome": "<50",

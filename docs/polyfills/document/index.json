@@ -13184,9 +13184,9 @@
     "browsers": {
       "ie": "6 - 8"
     },
-    "detectSource": "\"document\"in self\n",
+    "detectSource": "\"document\"in self&&\"Document\"in self\n",
     "baseDir": "document",
-    "hasTests": false,
+    "hasTests": true,
     "isTestable": true,
     "isPublic": true,
     "size": 261
