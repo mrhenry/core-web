@@ -69,8 +69,17 @@ export function required(targets: { browsers?: Record<string, string>, engines?:
 	return Array.from(new Set(all));
 };
 
+const semverCache: Map<string, semver.SemVer> = new Map();
+const semverRangeCache: Map<string, semver.Range> = new Map();
+
 function requiredForBrowser(browser: string, version: string): Array<string> {
 	const out: Array<string> = [];
+
+	const versionSemVer = semverCache.get(version) ?? semver.coerce(version);
+	if (!versionSemVer) {
+		return out;
+	}
+	semverCache.set(version, versionSemVer);
 
 	for (const feature of names()) {
 		const meta = get(feature);
@@ -83,17 +92,17 @@ function requiredForBrowser(browser: string, version: string): Array<string> {
 			continue;
 		}
 
-		const versionSemVer = semver.coerce(version);
-		if (!versionSemVer) {
-			continue;
+		if (!meta.browsers || !meta.browsers[browser]) {
+			continue
 		}
 
-		const isBrowserMatch =
-			meta.browsers &&
-			meta.browsers[browser] &&
-			semver.satisfies(versionSemVer, meta.browsers[browser]);
+		const rangeSemVer = semverRangeCache.get(meta.browsers[browser]) ?? new semver.Range(meta.browsers[browser]);
+		if (!rangeSemVer) {
+			continue;
+		}
+		semverRangeCache.set(meta.browsers[browser], rangeSemVer);
 
-		if (isBrowserMatch) {
+		if (semver.satisfies(versionSemVer, rangeSemVer)) {
 			out.push(feature);
 			continue;
 		}
@@ -105,6 +114,12 @@ function requiredForBrowser(browser: string, version: string): Array<string> {
 function requiredForEngine(engine: string, version: string): Array<string> {
 	const out: Array<string> = [];
 
+	const versionSemVer = semverCache.get(version) ?? semver.coerce(version);
+	if (!versionSemVer) {
+		return out;
+	}
+	semverCache.set(version, versionSemVer);
+	
 	for (const feature of names()) {
 		const meta = get(feature);
 		if (!meta) {
@@ -116,17 +131,17 @@ function requiredForEngine(engine: string, version: string): Array<string> {
 			continue;
 		}
 
-		const versionSemVer = semver.coerce(version);
-		if (!versionSemVer) {
+		if (!meta.engines || !meta.engines[engine]) {
 			continue;
 		}
 
-		const isEngineMatch =
-			meta.engines &&
-			meta.engines[engine] &&
-			semver.satisfies(versionSemVer, meta.engines[engine]);
+		const rangeSemVer = semverRangeCache.get(meta.engines[engine]) ?? new semver.Range(meta.engines[engine]);
+		if (!rangeSemVer) {
+			continue;
+		}
+		semverRangeCache.set(meta.engines[engine], rangeSemVer);
 
-		if (isEngineMatch) {
+		if (semver.satisfies(versionSemVer, rangeSemVer)) {
 			out.push(feature);
 			continue;
 		}
