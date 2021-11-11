@@ -23,6 +23,8 @@
     "safari_latest",
     "chrome_latest",
     "opera_latest",
-    "firefox_latest"
+    "firefox_latest",
+    "edge_17",
+    "edge_18"
   ]
 }
