@@ -22,7 +22,6 @@
         "https://html.spec.whatwg.org/multipage/dom.html#the-document-object",
         "https://drafts.csswg.org/cssom-view/#extensions-to-the-document-interface",
         "https://w3c.github.io/pointerlock/#extensions-to-the-document-interface",
-        "https://w3c.github.io/page-visibility/#extensions-to-the-document-interface",
         "https://w3c.github.io/selection-api/#extensions-to-document-interface"
       ],
       "support": {
@@ -6208,7 +6207,7 @@
     "hidden": {
       "__compat": {
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/Document/hidden",
-        "spec_url": "https://w3c.github.io/page-visibility/#dom-document-hidden",
+        "spec_url": "https://html.spec.whatwg.org/multipage/interaction.html#dom-document-hidden",
         "support": {
           "chrome": [
             {
@@ -7853,7 +7852,7 @@
     "onvisibilitychange": {
       "__compat": {
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/Document/onvisibilitychange",
-        "spec_url": "https://w3c.github.io/page-visibility/#dom-document-onvisibilitychange",
+        "spec_url": "https://html.spec.whatwg.org/multipage/webappapis.html#handler-onvisibilitychange",
         "support": {
           "chrome": {
             "version_added": "62",
@@ -10669,7 +10668,7 @@
             "version_added": false
           },
           "safari_ios": {
-            "version_added": true
+            "version_added": "≤3"
           },
           "samsunginternet_android": {
             "version_added": "1.5"
@@ -10719,7 +10718,7 @@
             "version_added": false
           },
           "safari_ios": {
-            "version_added": true
+            "version_added": "≤3"
           },
           "samsunginternet_android": {
             "version_added": "1.5"
@@ -10769,7 +10768,7 @@
             "version_added": false
           },
           "safari_ios": {
-            "version_added": true
+            "version_added": "≤3"
           },
           "samsunginternet_android": {
             "version_added": "1.5"
@@ -10819,7 +10818,7 @@
             "version_added": false
           },
           "safari_ios": {
-            "version_added": true
+            "version_added": "≤3"
           },
           "samsunginternet_android": {
             "version_added": "1.5"
@@ -11131,7 +11130,7 @@
     "visibilitychange_event": {
       "__compat": {
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/Document/visibilitychange_event",
-        "spec_url": "https://w3c.github.io/page-visibility/#reacting-to-visibilitychange",
+        "spec_url": "https://html.spec.whatwg.org/multipage/webappapis.html#handler-onvisibilitychange",
         "description": "<code>visibilitychange</code> event",
         "support": {
           "chrome": [
@@ -11245,7 +11244,7 @@
     "visibilityState": {
       "__compat": {
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/Document/visibilityState",
-        "spec_url": "https://w3c.github.io/page-visibility/#visibilitystate-attribute",
+        "spec_url": "https://html.spec.whatwg.org/multipage/interaction.html#dom-document-visibilitystate",
         "support": {
           "chrome": [
             {
