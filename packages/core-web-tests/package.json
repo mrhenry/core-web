@@ -1,6 +1,6 @@
 {
   "name": "@mrhenry/core-web-tests",
-  "version": "0.6.5",
+  "version": "0.6.6",
   "private": true,
   "scripts": {
     "build": "webpack",
@@ -11,8 +11,8 @@
   "devDependencies": {
     "@babel/core": "^7.16.0",
     "@babel/preset-env": "^7.16.4",
-    "@mrhenry/babel-plugin-core-web": "^0.6.5",
-    "@mrhenry/core-web": "^0.6.5",
+    "@mrhenry/babel-plugin-core-web": "^0.6.6",
+    "@mrhenry/core-web": "^0.6.6",
     "babel-loader": "^8.2.3",
     "browserstack-runner": "^0.9.4",
     "core-js": "^3.19.1",
