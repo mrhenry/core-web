@@ -4748,32 +4748,19 @@
           "edge": {
             "version_added": "79"
           },
-          "firefox": [
-            {
-              "version_added": "69",
-              "flags": [
-                {
-                  "type": "preference",
-                  "name": "dom.security.featurePolicy.webidl.enabled",
-                  "value_to_set": "true"
-                }
-              ]
-            },
-            {
-              "version_added": "65",
-              "version_removed": "69",
-              "alternative_name": "policy",
-              "flags": [
-                {
-                  "type": "preference",
-                  "name": "dom.security.featurePolicy.webidl.enabled",
-                  "value_to_set": "true"
-                }
-              ]
-            }
-          ],
+          "firefox": {
+            "version_added": "69",
+            "flags": [
+              {
+                "type": "preference",
+                "name": "dom.security.featurePolicy.webidl.enabled",
+                "value_to_set": "true"
+              }
+            ]
+          },
           "firefox_android": {
             "version_added": "65",
+            "version_removed": "79",
             "alternative_name": "policy",
             "flags": [
               {
@@ -11587,7 +11574,8 @@
             "version_added": "17"
           },
           "ie": {
-            "version_added": true
+            "version_added": "9",
+            "notes": "Internet Explorer only exposes the wheel event via <code>addEventListener</code>; there is no <code>onwheel</code> attribute on DOM objects. See <a href='https://connect.microsoft.com/IE/feedback/details/782835/missing-onwheel-attribute-for-the-wheel-event-although-its-supported-via-addeventlistener'>IE bug 782835</a>."
           },
           "opera": {
             "version_added": "48"

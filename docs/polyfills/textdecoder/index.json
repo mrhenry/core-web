@@ -45,7 +45,7 @@
           "version_added": "1.0"
         },
         "edge": {
-          "version_added": "≤79"
+          "version_added": "79"
         },
         "firefox": [
           {
@@ -191,7 +191,7 @@
             "notes": "Before Deno 1.11, passing <code>option.stream</code> is not supported and results in an error being thrown."
           },
           "edge": {
-            "version_added": "≤79"
+            "version_added": "79"
           },
           "firefox": [
             {
@@ -266,7 +266,7 @@
             "version_added": "1.0"
           },
           "edge": {
-            "version_added": "≤79"
+            "version_added": "79"
           },
           "firefox": [
             {
@@ -334,7 +334,7 @@
             "version_added": "1.0"
           },
           "edge": {
-            "version_added": "≤79"
+            "version_added": "79"
           },
           "firefox": {
             "version_added": "36"
@@ -388,7 +388,7 @@
             "version_added": "1.0"
           },
           "edge": {
-            "version_added": "≤79"
+            "version_added": "79"
           },
           "firefox": {
             "version_added": "63"
@@ -442,7 +442,7 @@
             "version_added": "1.0"
           },
           "edge": {
-            "version_added": "≤79"
+            "version_added": "79"
           },
           "firefox": {
             "version_added": "20"
@@ -501,7 +501,7 @@
       "version_added": "38"
     },
     "edge": {
-      "version_added": "≤79"
+      "version_added": "79"
     },
     "firefox": [
       {
