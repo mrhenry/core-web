@@ -13,7 +13,7 @@ module.exports = {
 			title: 'One less blocking http request',
 			content: html`
 <p>Most visitors use a modern browser which doesn't need any polyfills.</p>
-<p>Only your bundle(s) for older browsers will include polyfills, optimizing performance for modern browsers.</p>
+<p>Only your bundle(s) for older browsers will include polyfills, allowing you to optimize performance for modern browsers.</p>
 `.trim()
 		},
 		{
