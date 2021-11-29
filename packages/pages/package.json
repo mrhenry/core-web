@@ -34,7 +34,7 @@
     "core-js": "^3.19.1",
     "cssnano": "^5.0.11",
     "polyfill-library": "^3.105.0",
-    "postcss": "^8.4.1",
+    "postcss": "^8.4.4",
     "postcss-import": "^14.0.2",
     "postcss-preset-env": "^7.0.1",
     "postcss-split-by-media": "^0.2.0",
