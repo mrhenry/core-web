@@ -83,7 +83,7 @@
 	color: white;
 	font-family: monospace;
 	overflow-x: hidden;
-	overflow-y: auto;
+	overflow-y: hidden;
 	padding: 15px;
 	position: absolute;
 	height: 30px;
@@ -115,6 +115,7 @@
 
 #show-polyfill-content:checked ~ .polyfill-notification__content {
 	height: 180px;
+	overflow-y: auto;
 	width: 260px;
 }
 
