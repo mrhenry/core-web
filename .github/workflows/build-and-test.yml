@@ -5,7 +5,7 @@ on:
     - 'pages'
 
 concurrency: 
-  group: browserstack-test-a
+  group: browserstack-test
 jobs:
   build-and-test:
     name: 'Build & Test'
