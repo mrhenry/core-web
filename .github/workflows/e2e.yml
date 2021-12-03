@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
 
 concurrency: 
-  group: browserstack-test-b
+  group: browserstack-test
 jobs:
  e2e:
     name: 'E2E'
