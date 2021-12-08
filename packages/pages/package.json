@@ -33,7 +33,7 @@
     "canvas": "^2.8.0",
     "core-js": "^3.19.3",
     "cssnano": "^5.0.12",
-    "polyfill-library": "^3.105.0",
+    "polyfill-library": "^3.110.0",
     "postcss": "^8.4.4",
     "postcss-import": "^14.0.2",
     "postcss-preset-env": "^7.0.1",
