@@ -138,7 +138,7 @@
             "version_added": "6"
           },
           "firefox_android": {
-            "version_added": null
+            "version_added": "6"
           },
           "ie": {
             "version_added": "9"
@@ -349,12 +349,24 @@
           "ie": {
             "version_added": false
           },
-          "opera": {
-            "version_added": null
-          },
-          "opera_android": {
-            "version_added": null
-          },
+          "opera": [
+            {
+              "version_added": "30"
+            },
+            {
+              "version_added": "15",
+              "prefix": "webkit"
+            }
+          ],
+          "opera_android": [
+            {
+              "version_added": "30"
+            },
+            {
+              "version_added": "14",
+              "prefix": "webkit"
+            }
+          ],
           "safari": {
             "version_added": "9"
           },
@@ -429,12 +441,24 @@
           "ie": {
             "version_added": false
           },
-          "opera": {
-            "version_added": null
-          },
-          "opera_android": {
-            "version_added": null
-          },
+          "opera": [
+            {
+              "version_added": "30"
+            },
+            {
+              "version_added": "15",
+              "prefix": "webkit"
+            }
+          ],
+          "opera_android": [
+            {
+              "version_added": "30"
+            },
+            {
+              "version_added": "14",
+              "prefix": "webkit"
+            }
+          ],
           "safari": {
             "version_added": "9"
           },
@@ -509,12 +533,24 @@
           "ie": {
             "version_added": false
           },
-          "opera": {
-            "version_added": null
-          },
-          "opera_android": {
-            "version_added": null
-          },
+          "opera": [
+            {
+              "version_added": "30"
+            },
+            {
+              "version_added": "15",
+              "prefix": "webkit"
+            }
+          ],
+          "opera_android": [
+            {
+              "version_added": "30"
+            },
+            {
+              "version_added": "14",
+              "prefix": "webkit"
+            }
+          ],
           "safari": {
             "version_added": "9"
           },
@@ -678,7 +714,7 @@
             "version_added": "6"
           },
           "firefox_android": {
-            "version_added": null
+            "version_added": "6"
           },
           "ie": {
             "version_added": "9"
@@ -781,10 +817,10 @@
               "version_added": "9"
             },
             "opera": {
-              "version_added": null
+              "version_added": "17"
             },
             "opera_android": {
-              "version_added": true
+              "version_added": "18"
             },
             "safari": {
               "version_added": "8"
@@ -872,7 +908,7 @@
               "version_added": "1"
             },
             "firefox_android": {
-              "version_added": true
+              "version_added": "4"
             },
             "ie": {
               "version_added": "9"
@@ -881,7 +917,7 @@
               "version_added": "12"
             },
             "opera_android": {
-              "version_added": true
+              "version_added": "12"
             },
             "safari": {
               "version_added": "3"
@@ -1112,10 +1148,10 @@
             "version_added": false
           },
           "opera": {
-            "version_added": true
+            "version_added": "34"
           },
           "opera_android": {
-            "version_added": true
+            "version_added": "34"
           },
           "safari": {
             "version_added": false
@@ -1627,7 +1663,7 @@
             "version_added": "11"
           },
           "opera": {
-            "version_added": true
+            "version_added": "18"
           },
           "opera_android": {
             "version_added": false
@@ -2359,7 +2395,7 @@
             }
           ],
           "opera_android": {
-            "version_added": true
+            "version_added": "24"
           },
           "safari": {
             "version_added": "10.1"
@@ -2423,7 +2459,7 @@
             }
           ],
           "opera_android": {
-            "version_added": true
+            "version_added": "24"
           },
           "safari": {
             "version_added": "10.1"
@@ -4997,7 +5033,8 @@
             "version_added": false
           },
           "samsunginternet_android": {
-            "version_added": true,
+            "version_added": "6.0",
+            "version_removed": "13.0",
             "notes": "Supported on Samsung Internet for GearVR."
           },
           "webview_android": {
@@ -5122,6 +5159,7 @@
           },
           "samsunginternet_android": {
             "version_added": "6.0",
+            "version_removed": "13.0",
             "notes": "Supported on Samsung Internet for GearVR."
           },
           "webview_android": {
@@ -5338,6 +5376,7 @@
           },
           "samsunginternet_android": {
             "version_added": "6.0",
+            "version_removed": "13.0",
             "notes": "Supported on Samsung Internet for GearVR."
           },
           "webview_android": {
@@ -5573,10 +5612,10 @@
             "version_added": false
           },
           "opera": {
-            "version_added": null
+            "version_added": false
           },
           "opera_android": {
-            "version_added": null
+            "version_added": false
           },
           "safari": {
             "version_added": false
@@ -5917,10 +5956,10 @@
             "version_added": "11"
           },
           "opera": {
-            "version_added": true
+            "version_added": "≤15"
           },
           "opera_android": {
-            "version_added": true
+            "version_added": "≤14"
           },
           "safari": {
             "version_added": "5"
@@ -5967,10 +6006,10 @@
             "version_added": "11"
           },
           "opera": {
-            "version_added": true
+            "version_added": "≤15"
           },
           "opera_android": {
-            "version_added": true
+            "version_added": "≤14"
           },
           "safari": {
             "version_added": "5"
@@ -7797,10 +7836,10 @@
             "version_added": false
           },
           "opera": {
-            "version_added": null
+            "version_added": false
           },
           "opera_android": {
-            "version_added": null
+            "version_added": false
           },
           "safari": {
             "version_added": false
@@ -7845,10 +7884,10 @@
             "version_added": false
           },
           "opera": {
-            "version_added": null
+            "version_added": false
           },
           "opera_android": {
-            "version_added": null
+            "version_added": false
           },
           "safari": {
             "version_added": false
@@ -7893,10 +7932,10 @@
             "version_added": false
           },
           "opera": {
-            "version_added": null
+            "version_added": false
           },
           "opera_android": {
-            "version_added": null
+            "version_added": false
           },
           "safari": {
             "version_added": false
@@ -7941,10 +7980,10 @@
             "version_added": false
           },
           "opera": {
-            "version_added": null
+            "version_added": false
           },
           "opera_android": {
-            "version_added": null
+            "version_added": false
           },
           "safari": {
             "version_added": false
@@ -8611,10 +8650,10 @@
             "version_added": false
           },
           "opera": {
-            "version_added": null
+            "version_added": false
           },
           "opera_android": {
-            "version_added": null
+            "version_added": false
           },
           "safari": {
             "version_added": false
@@ -8714,10 +8753,10 @@
             "version_added": false
           },
           "opera": {
-            "version_added": null
+            "version_added": false
           },
           "opera_android": {
-            "version_added": null
+            "version_added": false
           },
           "safari": {
             "version_added": false
@@ -8961,10 +9000,10 @@
             "version_added": false
           },
           "opera": {
-            "version_added": null
+            "version_added": false
           },
           "opera_android": {
-            "version_added": null
+            "version_added": false
           },
           "safari": {
             "version_added": false
@@ -9010,10 +9049,10 @@
             "version_added": false
           },
           "opera": {
-            "version_added": null
+            "version_added": false
           },
           "opera_android": {
-            "version_added": null
+            "version_added": false
           },
           "safari": {
             "version_added": false
@@ -9059,7 +9098,7 @@
             "version_added": false
           },
           "opera": {
-            "version_added": true
+            "version_added": "20"
           },
           "opera_android": {
             "version_added": false
@@ -9453,10 +9492,10 @@
             "version_added": false
           },
           "opera": {
-            "version_added": null
+            "version_added": false
           },
           "opera_android": {
-            "version_added": null
+            "version_added": false
           },
           "safari": [
             {
@@ -9533,10 +9572,10 @@
             "version_added": false
           },
           "opera": {
-            "version_added": null
+            "version_added": false
           },
           "opera_android": {
-            "version_added": null
+            "version_added": false
           },
           "safari": [
             {
@@ -9613,10 +9652,10 @@
             "version_added": false
           },
           "opera": {
-            "version_added": null
+            "version_added": false
           },
           "opera_android": {
-            "version_added": null
+            "version_added": false
           },
           "safari": [
             {
@@ -9693,10 +9732,10 @@
             "version_added": false
           },
           "opera": {
-            "version_added": null
+            "version_added": false
           },
           "opera_android": {
-            "version_added": null
+            "version_added": false
           },
           "safari": [
             {
@@ -9893,10 +9932,10 @@
             "version_added": false
           },
           "opera": {
-            "version_added": null
+            "version_added": false
           },
           "opera_android": {
-            "version_added": null
+            "version_added": false
           },
           "safari": {
             "version_added": false
@@ -10148,7 +10187,8 @@
             "version_added": false
           },
           "samsunginternet_android": {
-            "version_added": true,
+            "version_added": "6.0",
+            "version_removed": "13.0",
             "notes": "Supported on Samsung Internet for GearVR."
           },
           "webview_android": {
@@ -10274,6 +10314,7 @@
           },
           "samsunginternet_android": {
             "version_added": "6.0",
+            "version_removed": "13.0",
             "notes": "Supported on Samsung Internet for GearVR."
           },
           "webview_android": {
@@ -10492,6 +10533,7 @@
           },
           "samsunginternet_android": {
             "version_added": "6.0",
+            "version_removed": "13.0",
             "notes": "Supported on Samsung Internet for GearVR."
           },
           "webview_android": {

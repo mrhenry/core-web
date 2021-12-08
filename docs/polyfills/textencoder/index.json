@@ -26,7 +26,7 @@
       "WebKit": "85 - 602.1.50",
       "Presto": ">= 1"
     },
-    "size": 3349,
+    "size": 3582,
     "isAlias": false,
     "providedByCoreWeb": false
   },
@@ -70,7 +70,7 @@
           "version_added": "25"
         },
         "opera_android": {
-          "version_added": true
+          "version_added": "25"
         },
         "safari": {
           "version_added": "10.1"
@@ -131,7 +131,7 @@
             "version_added": "25"
           },
           "opera_android": {
-            "version_added": null
+            "version_added": "25"
           },
           "safari": {
             "version_added": "10.1"
@@ -186,7 +186,7 @@
             "version_added": "25"
           },
           "opera_android": {
-            "version_added": true
+            "version_added": "25"
           },
           "safari": {
             "version_added": "10.1"
@@ -296,7 +296,7 @@
             "version_added": "25"
           },
           "opera_android": {
-            "version_added": true
+            "version_added": "25"
           },
           "safari": {
             "version_added": "10.1"
@@ -350,7 +350,7 @@
             "version_added": "25"
           },
           "opera_android": {
-            "version_added": null
+            "version_added": "25"
           },
           "safari": {
             "version_added": "10.1"
@@ -413,7 +413,9 @@
     "aliases": [
       "TextDecoder"
     ],
-    "dependencies": [],
+    "dependencies": [
+      "ArrayBuffer"
+    ],
     "license": "CC0-1.0",
     "spec": "https://encoding.spec.whatwg.org/#interface-textencoder",
     "docs": "https://developer.mozilla.org/en-US/docs/Web/API/TextEncoder",
@@ -437,6 +439,6 @@
     "hasTests": true,
     "isTestable": true,
     "isPublic": true,
-    "size": 3349
+    "size": 3582
   }
 }

@@ -16,7 +16,7 @@
     "engines": {
       "Trident": "4.0 - 6.0",
       "Gecko": "1.7 - 20",
-      "WebKit": "85 - 537.43",
+      "WebKit": "85 - 536.26",
       "Blink": "28"
     },
     "size": 346,
