@@ -1,8 +1,8 @@
 import * as fs from 'fs';
 import * as path from "path";
-import { browsersToEngines } from "./browsers-to-engines/browsers-to-engines";
+import { browsersToEngines } from "../browsers-to-engines/browsers-to-engines";
 
-const modulesDir = path.resolve(__dirname, "../../core-web/modules");
+const modulesDir = path.resolve(__dirname, "../../../core-web/modules");
 
 export async function generateWebComponents(mapping: Array<Feature>) {
 	await generateTemplate(mapping);

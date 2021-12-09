@@ -3,8 +3,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.generateWebComponents = void 0;
 const fs = require("fs");
 const path = require("path");
-const browsers_to_engines_1 = require("./browsers-to-engines/browsers-to-engines");
-const modulesDir = path.resolve(__dirname, "../../core-web/modules");
+const browsers_to_engines_1 = require("../browsers-to-engines/browsers-to-engines");
+const modulesDir = path.resolve(__dirname, "../../../core-web/modules");
 async function generateWebComponents(mapping) {
     await generateTemplate(mapping);
     await generateShadyDOM(mapping);

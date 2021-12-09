@@ -40,7 +40,7 @@ module.exports = function tableHTML(feature) {
 	}).join('');
 
 	return html`
-		<h3 id="${feature.key}" class="compat-table-header"><a href="#${feature.key}">${feature.key}</a></h3>
+		<h3 id="${feature.key}" class="compat-table-header"><a href="#${feature.key}">${cleanName(feature.key)}</a></h3>
 		${tables}
 	`;
 }
@@ -80,4 +80,34 @@ function lastVersionAdded(compat) {
 	}
 
 	return mapped;
+}
+
+
+function cleanName(str) {
+	let out = str;
+	if (out.indexOf('Console.') === 0) {
+		out = out.replace('Console.', 'console.');
+	}
+
+	if (out.indexOf('Window.') === 0 && out.indexOf('.prototype.') === -1) {
+		out = out.replace('Window.', 'window.');
+	}
+
+	if (out.indexOf('Document.') === 0 && out.indexOf('.prototype.') === -1) {
+		out = out.replace('Document.', 'document.');
+	}
+
+	if (out.indexOf('Navigator.') === 0 && out.indexOf('.prototype.') === -1) {
+		out = out.replace('Navigator.', 'navigator.');
+	}
+
+	if (out.indexOf('Performance.') === 0) {
+		out = out.replace('Performance.', 'performance.');
+	}
+
+	if (out.indexOf('Crypto.') === 0) {
+		out = out.replace('Crypto.', 'crypto.');
+	}
+
+	return out;
 }

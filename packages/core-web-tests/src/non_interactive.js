@@ -10,6 +10,7 @@ import "./test_URL.js";
 import "./test_WebAnimations.js";
 import "./test_atob.js";
 import "./test_console.js";
+import "./test_crypto.randomUUID.js";
 import "./test_customElements.attachShadow.js";
 import "./test_customElements.define.extends.js";
 import "./test_customElements.define.js";

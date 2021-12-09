@@ -146,5 +146,9 @@ function cleanName(str) {
 		out = out.replace('Performance.', 'performance.');
 	}
 
+	if (out.indexOf('Crypto.') === 0) {
+		out = out.replace('Crypto.', 'crypto.');
+	}
+
 	return out;
 }
