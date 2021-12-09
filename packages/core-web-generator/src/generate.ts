@@ -7,10 +7,11 @@ const coreWebDir = path.resolve(__dirname, "../../core-web");
 const modulesDir = path.resolve(__dirname, "../../core-web/modules");
 const helpersDir = path.resolve(__dirname, "../../core-web/helpers");
 
-import { generateWebComponents } from "./generate-webcomponents";
+import { generateWebComponents } from "./custom-polyfills/generate-webcomponents";
 import { browsersToEngines } from "./browsers-to-engines/browsers-to-engines";
 import { generateMappings } from './generate-mappings';
-import { generateElementQsaScope } from './generate-element-qsa-scope';
+import { generateElementQsaScope } from './custom-polyfills/generate-element-qsa-scope';
+import { generateCryptoRandomUUID } from './custom-polyfills/generate-crypto-randomuuid';
 import * as semver from 'semver';
 
 genAll();
@@ -53,9 +54,10 @@ async function genAll() {
 		});
 	}
 
-	// webcomponents
+	// custom polyfills
 	await generateWebComponents(mapping);
 	await generateElementQsaScope(mapping);
+	await generateCryptoRandomUUID(mapping);
 
 	// aliases
 	const inversedAliases: Record<string, Array<string>> = {};

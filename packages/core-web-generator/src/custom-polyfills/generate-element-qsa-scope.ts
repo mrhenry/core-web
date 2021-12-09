@@ -1,12 +1,12 @@
 import * as fs from 'fs';
 import * as path from "path";
-import { browsersToEngines } from "./browsers-to-engines/browsers-to-engines";
+import { browsersToEngines } from "../browsers-to-engines/browsers-to-engines";
 
-const modulesDir = path.resolve(__dirname, "../../core-web/modules");
+const modulesDir = path.resolve(__dirname, "../../../core-web/modules");
 
 export async function generateElementQsaScope(mapping: Array<Feature>) {
 	const src = fs.readFileSync(
-		path.join(__dirname, '../polyfills/~element-qsa-scope.js'),
+		path.join(__dirname, '../../polyfills/~element-qsa-scope.js'),
 		"utf-8"
 	);
 

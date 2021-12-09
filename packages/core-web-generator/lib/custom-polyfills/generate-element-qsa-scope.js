@@ -3,10 +3,10 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.generateElementQsaScope = void 0;
 const fs = require("fs");
 const path = require("path");
-const browsers_to_engines_1 = require("./browsers-to-engines/browsers-to-engines");
-const modulesDir = path.resolve(__dirname, "../../core-web/modules");
+const browsers_to_engines_1 = require("../browsers-to-engines/browsers-to-engines");
+const modulesDir = path.resolve(__dirname, "../../../core-web/modules");
 async function generateElementQsaScope(mapping) {
-    const src = fs.readFileSync(path.join(__dirname, '../polyfills/~element-qsa-scope.js'), "utf-8");
+    const src = fs.readFileSync(path.join(__dirname, '../../polyfills/~element-qsa-scope.js'), "utf-8");
     fs.writeFileSync(path.join(modulesDir, "~element-qsa-scope.js"), src);
     const browsers = {
         chrome: "<27",

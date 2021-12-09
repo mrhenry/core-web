@@ -7,10 +7,11 @@ const path = require("path");
 const coreWebDir = path.resolve(__dirname, "../../core-web");
 const modulesDir = path.resolve(__dirname, "../../core-web/modules");
 const helpersDir = path.resolve(__dirname, "../../core-web/helpers");
-const generate_webcomponents_1 = require("./generate-webcomponents");
+const generate_webcomponents_1 = require("./custom-polyfills/generate-webcomponents");
 const browsers_to_engines_1 = require("./browsers-to-engines/browsers-to-engines");
 const generate_mappings_1 = require("./generate-mappings");
-const generate_element_qsa_scope_1 = require("./generate-element-qsa-scope");
+const generate_element_qsa_scope_1 = require("./custom-polyfills/generate-element-qsa-scope");
+const generate_crypto_randomuuid_1 = require("./custom-polyfills/generate-crypto-randomuuid");
 const semver = require("semver");
 genAll();
 async function genAll() {
@@ -42,9 +43,10 @@ async function genAll() {
             encoding: "utf-8"
         });
     }
-    // webcomponents
+    // custom polyfills
     await (0, generate_webcomponents_1.generateWebComponents)(mapping);
     await (0, generate_element_qsa_scope_1.generateElementQsaScope)(mapping);
+    await (0, generate_crypto_randomuuid_1.generateCryptoRandomUUID)(mapping);
     // aliases
     const inversedAliases = {};
     aliases.forEach((alias) => {
