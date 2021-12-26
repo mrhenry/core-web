@@ -6,7 +6,7 @@ module.exports = function nativeRowHTML(feature) {
 	let row = '';
 	for (const browser of coreWebBrowsers) {
 		let native = '-';
-		if (Array.isArray(feature.native[browser])) {
+		if (feature.native && Array.isArray(feature.native[browser])) {
 			native = feature.native[browser].map((versionInfo) => {
 				let out = [];
 				if (versionInfo.version_added) {
@@ -27,7 +27,7 @@ module.exports = function nativeRowHTML(feature) {
 
 				return out.join(' - ');
 			}).filter((x) => { return !!x }).join('<br>');
-		} else if (feature.native[browser] && feature.native[browser].version_added) {
+		} else if (feature.native && feature.native[browser] && feature.native[browser].version_added) {
 			native = feature.native[browser].version_added;
 
 			if (feature.native[browser].notes || feature.native[browser].alternative_name) {
