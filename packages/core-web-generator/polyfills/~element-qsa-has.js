@@ -312,9 +312,9 @@
 					attrs.push(attr);
 
 					var selectorParts = splitSelector(inner);
-					var relativeQuery = false;
 					for (var x = 0; x < selectorParts.length; x++) {
 						var selectorPart = selectorParts[x].trim();
+						var scopedSelectorPart = selectorParts[x].trim();
 						
 						// TODO : still broken
 						if (
@@ -323,11 +323,11 @@
 							selectorPart[0] === '~' ||
 							selectorPart[0] === '|'
 						) {
-							selectorPart = ':scope' + selectorPart;
-							relativeQuery = true;
+							scopedSelectorPart = ':scope' + selectorPart;
+							selectorPart  = '*' + selectorPart;
 						} else if (!queryContainsScopePseudoClass(selectorPart)) {
-							selectorPart = ':scope' + ' ' + selectorPart;
-							relativeQuery = true;
+							scopedSelectorPart = ':scope' + ' ' + selectorPart;
+							selectorPart  = '*' + ' ' + selectorPart;
 						}
 
 						try {
@@ -345,23 +345,21 @@
 									var element = elements[j];
 									var parent = element.parentNode;
 
-									// Just selecting the parent is stupid here.
-									if (relativeQuery) {
-										if ('setAttribute' in parent) {
+									while (parent) {
+										if (!('setAttribute' in parent)) {
+											parent = parent.parentNode;
+											continue;
+										}
+
+										if (!!(parent.querySelector(scopedSelectorPart))) {
 											parent.setAttribute(attr, '');
 										}
-									} else {
-										while (parent) {
-											if ('setAttribute' in parent) {
-												parent.setAttribute(attr, '');
-											}
 
-											if (parent === scopeElement) {
-												break;
-											}
-
-											parent = parent.parentNode;
+										if (parent === scopeElement) {
+											break;
 										}
+
+										parent = parent.parentNode;
 									}
 								}
 							}
