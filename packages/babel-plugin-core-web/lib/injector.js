@@ -136,8 +136,7 @@ class Injector {
 			!path.node ||
 			!path.node.callee ||
 			!path.node.callee.property ||
-			path.node.callee.property.type !== 'Identifier' ||
-			path.node.callee.property.name !== 'querySelectorAll'
+			path.node.callee.property.type !== 'Identifier'
 		) {
 			return;
 		}

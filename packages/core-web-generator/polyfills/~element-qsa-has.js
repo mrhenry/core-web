@@ -130,6 +130,41 @@
 			return false;
 		}
 
+		function queryContainsScopePseudoClass(query) {
+			var current = '';
+			var escaped = false;
+			for (var i = 0; i < query.length; i++) {
+				var char = query[i];
+
+				if (escaped) {
+					current += char;
+					escaped = false;
+					continue;
+				}
+
+				if (current === ':scope' && !(/^\w/.test(query[i+1] || ''))) {
+					return true;
+				}
+
+				switch (char) {
+					case ':':
+						current = '';
+						current += char;
+						continue;
+					case '\\':
+						current += char;
+						escaped = true;
+						continue;
+
+					default:
+						current += char;
+						continue;
+				}
+			}
+
+			return false;
+		}
+
 		function charIsNestedMarkMirror(char, mark) {
 			if (mark === '(' && char === ')') {
 				return true;
@@ -253,8 +288,9 @@
 				innerQuery = replaceAllWithTempAttr(inner, callback);
 			}
 
+			var scopeQuery = x.split(':has(' + inner + ')')[0];
 			x = x.replace(':has(' + inner + ')', innerReplacement);
-			callback(innerQuery, attr);
+			callback(scopeQuery, innerQuery, attr);
 			if (x.indexOf(':has(') > -1) {
 				var y = replaceAllWithTempAttr(x, callback);
 				if (y) {
@@ -272,35 +308,64 @@
 				}
 
 				var attrs = [];
-				var newQuery = replaceAllWithTempAttr(selectors, function (inner, attr) {
+				var newQuery = replaceAllWithTempAttr(selectors, function (scope, inner, attr) {
 					attrs.push(attr);
 
 					var selectorParts = splitSelector(inner);
+					var relativeQuery = false;
 					for (var x = 0; x < selectorParts.length; x++) {
-						var selectorPart = selectorParts[x];
+						var selectorPart = selectorParts[x].trim();
+						
+						// TODO : still broken
 						if (
 							selectorPart[0] === '>' ||
 							selectorPart[0] === '+' ||
 							selectorPart[0] === '~' ||
 							selectorPart[0] === '|'
 						) {
-							selectorPart = '*' + selectorPart;
+							selectorPart = ':scope' + selectorPart;
+							relativeQuery = true;
+						} else if (!queryContainsScopePseudoClass(selectorPart)) {
+							selectorPart = ':scope' + ' ' + selectorPart;
+							relativeQuery = true;
 						}
 
 						try {
-							var elements = document.querySelectorAll(selectorPart);
-							for (var i = 0; i < elements.length; i++) {
-								var element = elements[i];
-								var parent = element.parentNode;
+							var scopeElements = [];
+							if (scope) {
+								scopeElements = document.querySelectorAll(scope);
+							} else {
+								scopeElements.push(document);
+							}
+							for (var i = 0; i < scopeElements.length; i++) {
+								var scopeElement = scopeElements[i];
 
-								while (parent) {
-									if ('setAttribute' in parent) {
-										parent.setAttribute(attr, '');
+								var elements = scopeElement.querySelectorAll(selectorPart);
+								for (var j = 0; j < elements.length; j++) {
+									var element = elements[j];
+									var parent = element.parentNode;
+
+									// Just selecting the parent is stupid here.
+									if (relativeQuery) {
+										if ('setAttribute' in parent) {
+											parent.setAttribute(attr, '');
+										}
+									} else {
+										while (parent) {
+											if ('setAttribute' in parent) {
+												parent.setAttribute(attr, '');
+											}
+
+											if (parent === scopeElement) {
+												break;
+											}
+
+											parent = parent.parentNode;
+										}
 									}
-
-									parent = parent.parentNode;
 								}
 							}
+							
 						} catch (_) {
 							// `:has` takes a forgiving selector list.
 						}
