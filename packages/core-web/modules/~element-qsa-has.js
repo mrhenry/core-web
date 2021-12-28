@@ -212,6 +212,7 @@
 
 						selectors.push(current);
 						current = '';
+						continue;
 					case '\\':
 						current += char;
 						escaped = true;
@@ -288,9 +289,8 @@
 				innerQuery = replaceAllWithTempAttr(inner, callback);
 			}
 
-			var scopeQuery = x.split(':has(' + inner + ')')[0];
 			x = x.replace(':has(' + inner + ')', innerReplacement);
-			callback(scopeQuery, innerQuery, attr);
+			callback(innerQuery, attr);
 			if (x.indexOf(':has(') > -1) {
 				var y = replaceAllWithTempAttr(x, callback);
 				if (y) {
@@ -301,71 +301,104 @@
 			return x;
 		}
 
+		function walkNode(rootNode, callback) {
+			if (('setAttribute' in (rootNode)) && ('querySelector' in (rootNode))) {
+				callback(rootNode);
+			}
+
+			if (rootNode.hasChildNodes()) {
+				var nodes = rootNode.childNodes;
+				for (var i = 0; i < nodes.length; ++i) {
+					walkNode(nodes[i], callback);
+				}
+			}
+		}
+
 		function polyfill(qsa) {
 			return function (selectors) {
 				if ((selectors.indexOf(':has(') === -1) || !pseudoClassHasInnerQuery(selectors)) {
 					return qsa.apply(this, arguments);
 				}
 
+				var rootNode;
+				if ('getRootNode' in this) {
+					rootNode = this.getRootNode();
+				} else {
+					var r = this.parentNode;
+					while (r) {
+						rootNode = r;
+						r = r.parentNode;
+					}
+				}
+
 				var attrs = [];
-				var newQuery = replaceAllWithTempAttr(selectors, function (scope, inner, attr) {
+				var newQuery = replaceAllWithTempAttr(selectors, function (inner, attr) {
 					attrs.push(attr);
 
 					var selectorParts = splitSelector(inner);
-					var relativeQuery = false;
 					for (var x = 0; x < selectorParts.length; x++) {
 						var selectorPart = selectorParts[x].trim();
+						var absoluteSelectorPart = selectorPart;
 						
 						// TODO : still broken
 						if (
 							selectorPart[0] === '>' ||
 							selectorPart[0] === '+' ||
-							selectorPart[0] === '~' ||
-							selectorPart[0] === '|'
+							selectorPart[0] === '~'
 						) {
-							selectorPart = ':scope' + selectorPart;
-							relativeQuery = true;
+							absoluteSelectorPart = selectorPart.slice(1).trim();
 						} else if (!queryContainsScopePseudoClass(selectorPart)) {
-							selectorPart = ':scope' + ' ' + selectorPart;
-							relativeQuery = true;
+							absoluteSelectorPart = ':scope ' + selectorPart;
 						}
 
 						try {
-							var scopeElements = [];
-							if (scope) {
-								scopeElements = document.querySelectorAll(scope);
-							} else {
-								scopeElements.push(document);
-							}
-							for (var i = 0; i < scopeElements.length; i++) {
-								var scopeElement = scopeElements[i];
-
-								var elements = scopeElement.querySelectorAll(selectorPart);
-								for (var j = 0; j < elements.length; j++) {
-									var element = elements[j];
-									var parent = element.parentNode;
-
-									// Just selecting the parent is stupid here.
-									if (relativeQuery) {
-										if ('setAttribute' in parent) {
-											parent.setAttribute(attr, '');
-										}
-									} else {
-										while (parent) {
-											if ('setAttribute' in parent) {
-												parent.setAttribute(attr, '');
-											}
-
-											if (parent === scopeElement) {
-												break;
-											}
-
-											parent = parent.parentNode;
-										}
-									}
+							walkNode(rootNode, function (node) {
+								if (!(node.querySelector(absoluteSelectorPart))) {
+									return;
 								}
-							}
-							
+								
+								switch (selectorPart[0]) {
+									case '~':
+									case '+':
+										{
+											var siblings = node.childNodes;
+											for (var i = 0; i < siblings.length; i++) {
+												var sibling = siblings[i];
+												if (!('setAttribute' in sibling)) {
+													continue;
+												}
+												
+												var idAttr = 'q-has-id' + Math.floor(Math.random() * 9000000) + 1000000;
+												sibling.setAttribute(idAttr, '');
+
+												if (node.querySelector(':scope [' + idAttr + ']' + ' ' + selectorPart)) {
+													sibling.setAttribute(attr, '');
+												}
+
+												sibling.removeAttribute(idAttr);
+											}
+										}
+										break;
+								
+									case '>':
+										{
+											var idAttr = 'q-has-id' + Math.floor(Math.random() * 9000000) + 1000000;
+											node.setAttribute(idAttr, '');
+
+											if (node.querySelector(':scope[' + idAttr + ']' + ' ' + selectorPart)) {
+												node.setAttribute(attr, '');
+											}
+
+											node.removeAttribute(idAttr);
+										}
+										break;
+									
+									default:
+										node.setAttribute(attr, '');
+
+										break;
+								}
+							});
 						} catch (_) {
 							// `:has` takes a forgiving selector list.
 						}
@@ -378,12 +411,16 @@
 				var elementOrNodeList = qsa.apply(this, arguments);
 
 				// remove the fallback attribute
+				var attrsForQuery = [];
 				for (var j = 0; j < attrs.length; j++) {
-					var attr = attrs[j];
-					var elements = document.querySelectorAll('[' + attr + ']');
-					for (var k = 0; k < elements.length; k++) {
-						var element = elements[k];
-						element.removeAttribute(attr);
+					attrsForQuery.push('[' + attrs[j] + ']');
+				}
+
+				var elements = document.querySelectorAll(attrsForQuery.join(','));
+				for (var k = 0; k < elements.length; k++) {
+					var element = elements[k];
+					for (var l = 0; l < attrs.length; l++) {
+						element.removeAttribute(attrs[l]);
 					}
 				}
 

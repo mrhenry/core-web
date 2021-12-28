@@ -35,7 +35,7 @@ module.exports = function (_, opts) {
 			CallExpression(path, state) {
 				injector.handleCallExpression(path, state);
 				injector.handleCallExpressionStringLiterals(path, state);
-				// injector.handleElementQsaCallExpression(path, state);
+				injector.handleElementQsaCallExpression(path, state);
 			},
 			NewExpression(path, state) {
 				injector.handleNewExpression(path, state);
