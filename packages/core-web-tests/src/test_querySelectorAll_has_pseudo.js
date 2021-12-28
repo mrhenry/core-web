@@ -38,15 +38,23 @@ function testMatches(assert, node, selector, expected) {
 function compareSelectorAll(assert, scope, selector1, selector2) {
 	let result1 = Array.from(scope.querySelectorAll(selector1));
 	let result2 = Array.from(scope.querySelectorAll(selector2));
-	assert.equal(formatElements(result1), formatElements(result2), `${selector1} and ${selector2} returns same elements on ${scope.id}`);
+	assert.step(`${selector1} and ${selector2} returns same elements on ${scope.id}`);
+	assert.equal(formatElements(result1), formatElements(result2));
 }
 
 // To test expected diffs from spec/wpt
 function compareSelectorAllNotEqual(assert, scope, selector1, selector2) {
 	let result1 = Array.from(scope.querySelectorAll(selector1));
 	let result2 = Array.from(scope.querySelectorAll(selector2));
-	assert.notEqual(formatElements(result1), formatElements(result2), `${selector1} and ${selector2} returns same elements on ${scope.id}`);
+	assert.step(`not : ${selector1} and ${selector2} returns same elements on ${scope.id}`);
+	assert.notEqual(formatElements(result1), formatElements(result2));
 }
+
+var supportsIsQueries = false;
+try {
+	document.body.querySelector(":is(div)");
+	supportsIsQueries = true;
+} catch (_) { /* noop */ }
 
 QUnit.module("querySelector with :has", function () {
 	QUnit.test("is valid selector", function (assert) {
@@ -97,8 +105,15 @@ QUnit.module("querySelector with :has", function () {
 		testSelectorAllFromMain(assert, ".parent:has(.target)", [b, f, h]);
 		testSelectorAllFromMain(assert, ":has(.sibling ~ .target)", [a, b]);
 		testSelectorAllFromMain(assert, ".parent:has(.sibling ~ .target)", [b]);
-		testSelectorAllFromMain(assert, ":has(:is(.target ~ .sibling .descendant))", [a, h, j]);
-		testSelectorAllFromMain(assert, ".parent:has(:is(.target ~ .sibling .descendant))", [h]);
+
+		if (supportsIsQueries) {
+			testSelectorAllFromMain(assert, ":has(:is(.target ~ .sibling .descendant))", [a, h, j]);
+			testSelectorAllFromMain(assert, ".parent:has(:is(.target ~ .sibling .descendant))", [h]);
+		} else {
+			assert.step(":has(:is(.target ~ .sibling .descendant)) matches expected elements from #main");
+			assert.step(".parent:has(:is(.target ~ .sibling .descendant)) matches expected elements from #main");
+		}
+
 		testSelectorAllFromMain(assert, ".sibling:has(.descendant) ~ .target", [e]);
 		testSelectorAllFromMain(assert, ":has(.sibling:has(.descendant) ~ .target)", [a, b]);
 		testSelectorAllFromMain(assert, 
@@ -173,15 +188,27 @@ QUnit.module("querySelector with :has", function () {
 
 		// there can be more simple and efficient alternative for a ':scope' in ':has'
 		testSelectorAllFromScope(assert, scope1, ".a:has(:scope) .c", []);
-		compareSelectorAllNotEqual(assert, scope1, ".a:has(:scope) .c", ":is(.a :scope .c)");
 		testSelectorAllFromScope(assert, scope2, ".a:has(:scope) .c", []);
-		compareSelectorAll(assert, scope2, ".a:has(:scope) .c", ":is(.a :scope .c)");
-		testSelectorAllFromScope(assert, scope1, ".c:has(:is(:scope .d))", [d02, d03]);
-		compareSelectorAll(assert, scope1, ".c:has(:is(:scope .d))", ":scope .c:has(.d)");
-		compareSelectorAll(assert, scope1, ".c:has(:is(:scope .d))", ".c:has(.d)");
-		testSelectorAllFromScope(assert, scope2, ".c:has(:is(:scope .d))", []);
-		compareSelectorAll(assert, scope2, ".c:has(:is(:scope .d))", ":scope .c:has(.d)");
-		compareSelectorAll(assert, scope2, ".c:has(:is(:scope .d))", ".c:has(.d)");
+
+		if (supportsIsQueries) {
+			compareSelectorAllNotEqual(assert, scope1, ".a:has(:scope) .c", ":is(.a :scope .c)");
+			compareSelectorAll(assert, scope2, ".a:has(:scope) .c", ":is(.a :scope .c)");
+			testSelectorAllFromScope(assert, scope1, ".c:has(:is(:scope .d))", [d02, d03]);
+			compareSelectorAll(assert, scope1, ".c:has(:is(:scope .d))", ":scope .c:has(.d)");
+			compareSelectorAll(assert, scope1, ".c:has(:is(:scope .d))", ".c:has(.d)");
+			testSelectorAllFromScope(assert, scope2, ".c:has(:is(:scope .d))", []);
+			compareSelectorAll(assert, scope2, ".c:has(:is(:scope .d))", ":scope .c:has(.d)");
+			compareSelectorAll(assert, scope2, ".c:has(:is(:scope .d))", ".c:has(.d)");
+		} else {
+			assert.step("not : .a:has(:scope) .c and :is(.a :scope .c) returns same elements on scope1");
+			assert.step(".a:has(:scope) .c and :is(.a :scope .c) returns same elements on scope2");
+			assert.step(".c:has(:is(:scope .d)) matches expected elements from scope scope1");
+			assert.step(".c:has(:is(:scope .d)) and :scope .c:has(.d) returns same elements on scope1");
+			assert.step(".c:has(:is(:scope .d)) and .c:has(.d) returns same elements on scope1");
+			assert.step(".c:has(:is(:scope .d)) matches expected elements from scope scope2");
+			assert.step(".c:has(:is(:scope .d)) and :scope .c:has(.d) returns same elements on scope2");
+			assert.step(".c:has(:is(:scope .d)) and .c:has(.d) returns same elements on scope2");
+		}
 
 		assert.verifySteps([
 			":has(:scope) matches expected elements from scope scope1",
@@ -189,8 +216,14 @@ QUnit.module("querySelector with :has", function () {
 			":has(.a :scope) matches expected elements from scope scope1",
 			".a:has(:scope) .c matches expected elements from scope scope1",
 			".a:has(:scope) .c matches expected elements from scope scope2",
+			"not : .a:has(:scope) .c and :is(.a :scope .c) returns same elements on scope1",
+			".a:has(:scope) .c and :is(.a :scope .c) returns same elements on scope2",
 			".c:has(:is(:scope .d)) matches expected elements from scope scope1",
-			".c:has(:is(:scope .d)) matches expected elements from scope scope2"
+			".c:has(:is(:scope .d)) and :scope .c:has(.d) returns same elements on scope1",
+			".c:has(:is(:scope .d)) and .c:has(.d) returns same elements on scope1",
+			".c:has(:is(:scope .d)) matches expected elements from scope scope2",
+			".c:has(:is(:scope .d)) and :scope .c:has(.d) returns same elements on scope2",
+			".c:has(:is(:scope .d)) and .c:has(.d) returns same elements on scope2"
 		] );
 	});
 
