@@ -340,7 +340,6 @@
 						var selectorPart = selectorParts[x].trim();
 						var absoluteSelectorPart = selectorPart;
 						
-						// TODO : still broken
 						if (
 							selectorPart[0] === '>' ||
 							selectorPart[0] === '+' ||
