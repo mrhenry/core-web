@@ -265,7 +265,7 @@ QUnit.module("querySelector with :has", function () {
 		] );
 	});
 
-	QUnit.test(":has relative argument", function (assert) {
+	QUnit.test(":has relative argument (a)", function (assert) {
 		const fixture = document.getElementById("qunit-fixture");
 		fixture.innerHTML = `<main id=main>
 			<div id=d01>
@@ -492,6 +492,228 @@ QUnit.module("querySelector with :has", function () {
 
 		testSelectorAllFromMain(assert, ".d ~ .x:has(~ .e)", [d57, d58]);
 
+		assert.verifySteps([
+			".x:has(.a) matches expected elements from #main",
+			".x:has(.a > .b) matches expected elements from #main",
+			".x:has(.a .b) matches expected elements from #main",
+			".x:has(.a + .b) matches expected elements from #main",
+			".x:has(.a ~ .b) matches expected elements from #main",
+			".x:has(> .a) matches expected elements from #main",
+			".x:has(> .a > .b) matches expected elements from #main",
+			".x:has(> .a .b) matches expected elements from #main",
+			".x:has(> .a + .b) matches expected elements from #main",
+			".x:has(> .a ~ .b) matches expected elements from #main",
+			".x:has(+ .a) matches expected elements from #main",
+			".x:has(+ .a > .b) matches expected elements from #main",
+			".x:has(+ .a .b) matches expected elements from #main",
+			".x:has(+ .a + .b) matches expected elements from #main",
+			".x:has(+ .a ~ .b) matches expected elements from #main",
+			".x:has(~ .a) matches expected elements from #main",
+			".x:has(~ .a > .b) matches expected elements from #main",
+			".x:has(~ .a .b) matches expected elements from #main",
+			".x:has(~ .a + .b) matches expected elements from #main",
+			".x:has(~ .a + .b > .c) matches expected elements from #main",
+			".x:has(~ .a + .b .c) matches expected elements from #main",
+			".x:has(.d .e) matches expected elements from #main",
+			".x:has(.d .e) .f matches expected elements from #main",
+			".x:has(> .d) matches expected elements from #main",
+			".x:has(> .d) .f matches expected elements from #main",
+			".x:has(~ .d ~ .e) matches expected elements from #main",
+			".x:has(~ .d ~ .e) ~ .f matches expected elements from #main",
+			".x:has(+ .d ~ .e) matches expected elements from #main",
+			".x:has(+ .d ~ .e) ~ .f matches expected elements from #main",
+			".y:has(> .g .h) matches expected elements from #main",
+			".y:has(.g .h) matches expected elements from #main",
+			".y:has(> .g .h) .i matches expected elements from #main",
+			".y:has(.g .h) .i matches expected elements from #main",
+			".x:has(+ .y:has(> .g .h) .i) matches expected elements from #main",
+			".x:has(+ .y:has(.g .h) .i) matches expected elements from #main",
+			".x:has(+ .y:has(> .g .h) .i) ~ .j matches expected elements from #main",
+			".x:has(+ .y:has(.g .h) .i) ~ .j matches expected elements from #main",
+			".x:has(~ .y:has(> .g .h) .i) matches expected elements from #main",
+			".x:has(~ .y:has(.g .h) .i) matches expected elements from #main",
+			".d .x:has(.e) matches expected elements from #main",
+			".d ~ .x:has(~ .e) matches expected elements from #main"
+		] );
+	});
+
+	QUnit.test(":has relative argument (b)", function (assert) {
+		const fixture = document.getElementById("qunit-fixture");
+		fixture.innerHTML = `<main id=main>
+			<div id=d01>
+				<div id=d02 class="x">
+					<div id=d03 class="a"></div>
+					<div id=d04></div>
+					<div id=d05 class="b"></div>
+				</div>
+				<div id=d06 class="x">
+					<div id=d07 class="x">
+						<div id=d08 class="a"></div>
+					</div>
+				</div>
+				<div id=d09 class="x">
+					<div id=d10 class="a">
+						<div id=d11 class="b"></div>
+					</div>
+				</div>
+				<div id=d12 class="x">
+					<div id=d13 class="a">
+						<div id=d14>
+							<div id=d15 class="b"></div>
+						</div>
+					</div>
+					<div id=d16 class="b"></div>
+				</div>
+			</div>
+			<div id=d17>
+				<div id=d18 class="x"></div>
+				<div id=d19 class="x"></div>
+				<div id=d20 class="a"></div>
+				<div id=d21 class="x"></div>
+				<div id=d22 class="a">
+					<div id=d23 class="b"></div>
+				</div>
+				<div id=d24 class="x"></div>
+				<div id=d25 class="a">
+					<div id=d26>
+						<div id=d27 class="b"></div>
+					</div>
+				</div>
+				<div id=d28 class="x"></div>
+				<div id=d29 class="a"></div>
+				<div id=d30 class="b">
+					<div id=d31 class="c"></div>
+				</div>
+				<div id=d32 class="x"></div>
+				<div id=d33 class="a"></div>
+				<div id=d34 class="b">
+					<div id=d35>
+						<div id=d36 class="c"></div>
+					</div>
+				</div>
+				<div id=d37 class="x"></div>
+				<div id=d38 class="a"></div>
+				<div id=d39 class="b"></div>
+				<div id=d40 class="x"></div>
+				<div id=d41 class="a"></div>
+				<div id=d42></div>
+				<div id=d43 class="b">
+					<div id=d44 class="x">
+						<div id=d45 class="c"></div>
+					</div>
+				</div>
+				<div id=d46 class="x"></div>
+				<div id=d47 class="a">
+				</div>
+			</div>
+			<div id="extra-d01">
+				<div id=d48 class="x">
+				<div id=d49 class="x">
+					<div id=d50 class="x d">
+						<div id=d51 class="x d">
+							<div id=d52 class="x">
+								<div id=d53 class="x e">
+									<div id=d54 class="f"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				</div>
+				<div id=d55 class="x"></div>
+				<div id=d56 class="x d"></div>
+				<div id=d57 class="x d"></div>
+				<div id=d58 class="x"></div>
+				<div id=d59 class="x e"></div>
+				<div id=d60 class="f"></div>
+			</div>
+			<div id="extra-d02">
+				<div id=d61 class="x"></div>
+				<div id=d62 class="x y"></div>
+				<div id=d63 class="x y">
+					<div id=d64 class="y g">
+						<div id=d65 class="y">
+							<div id=d66 class="y h">
+								<div id=d67 class="i"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div id=d68 class="x y">
+					<div id=d69 class="x"></div>
+					<div id=d70 class="x"></div>
+					<div id=d71 class="x y">
+						<div id=d72 class="y g">
+							<div id=d73 class="y">
+								<div id=d74 class="y h">
+									<div id=d75 class="i"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div id=d76 class="x"></div>
+					<div id=d77 class="j">
+						<div id=d78><div id=d79></div></div>
+					</div>
+				</div>
+				<div id=d80 class="j"></div>
+			</div>
+			</main>`;
+		
+		const d01 = document.getElementById("d01");
+		const d02 = document.getElementById("d02");
+		const d06 = document.getElementById("d06");
+		const d07 = document.getElementById("d07");
+		const d09 = document.getElementById("d09");
+		const d12 = document.getElementById("d12");
+		const d17 = document.getElementById("d17");
+		const d18 = document.getElementById("d18");
+		const d19 = document.getElementById("d19");
+		const d20 = document.getElementById("d20");
+		const d21 = document.getElementById("d21");
+		const d22 = document.getElementById("d22");
+		const d24 = document.getElementById("d24");
+		const d25 = document.getElementById("d25");
+		const d28 = document.getElementById("d28");
+		const d29 = document.getElementById("d29");
+		const d30 = document.getElementById("d30");
+		const d32 = document.getElementById("d32");
+		const d33 = document.getElementById("d33");
+		const d34 = document.getElementById("d34");
+		const d37 = document.getElementById("d37");
+		const d38 = document.getElementById("d38");
+		const d39 = document.getElementById("d39");
+		const d40 = document.getElementById("d40");
+		const d41 = document.getElementById("d41");
+		const d42 = document.getElementById("d42");
+		const d43 = document.getElementById("d43");
+		const d46 = document.getElementById("d46");
+		const d48 = document.getElementById("d48");
+		const d49 = document.getElementById("d49");
+		const d50 = document.getElementById("d50");
+		const d51 = document.getElementById("d51");
+		const d52 = document.getElementById("d52");
+		const d54 = document.getElementById("d54");
+		const d55 = document.getElementById("d55");
+		const d56 = document.getElementById("d56");
+		const d57 = document.getElementById("d57");
+		const d58 = document.getElementById("d58");
+		const d60 = document.getElementById("d60");
+		const d61 = document.getElementById("d61");
+		const d62 = document.getElementById("d62");
+		const d63 = document.getElementById("d63");
+		const d67 = document.getElementById("d67");
+		const d68 = document.getElementById("d68");
+		const d69 = document.getElementById("d69");
+		const d70 = document.getElementById("d70");
+		const d71 = document.getElementById("d71");
+		const d75 = document.getElementById("d75");
+		const d77 = document.getElementById("d77");
+		const d80 = document.getElementById("d80");
+
+		const extraD01 = document.getElementById("extra-d01");
+		const extraD02 = document.getElementById("extra-d02");
+		
 		// :has as simple selector part.
 		testSelectorAllFromMain(assert, ":has(.a)", [d01, d02, d06, d07, d09, d12, d17]);
 		testSelectorAllFromMain(assert, ":has(.a > .b)", [d01, d09, d17]);
@@ -567,47 +789,6 @@ QUnit.module("querySelector with :has", function () {
 		testSelectorAllFromMain(assert, ".d ~ :has(~ .e)", [d57, d58]);
 
 		assert.verifySteps([
-			".x:has(.a) matches expected elements from #main",
-			".x:has(.a > .b) matches expected elements from #main",
-			".x:has(.a .b) matches expected elements from #main",
-			".x:has(.a + .b) matches expected elements from #main",
-			".x:has(.a ~ .b) matches expected elements from #main",
-			".x:has(> .a) matches expected elements from #main",
-			".x:has(> .a > .b) matches expected elements from #main",
-			".x:has(> .a .b) matches expected elements from #main",
-			".x:has(> .a + .b) matches expected elements from #main",
-			".x:has(> .a ~ .b) matches expected elements from #main",
-			".x:has(+ .a) matches expected elements from #main",
-			".x:has(+ .a > .b) matches expected elements from #main",
-			".x:has(+ .a .b) matches expected elements from #main",
-			".x:has(+ .a + .b) matches expected elements from #main",
-			".x:has(+ .a ~ .b) matches expected elements from #main",
-			".x:has(~ .a) matches expected elements from #main",
-			".x:has(~ .a > .b) matches expected elements from #main",
-			".x:has(~ .a .b) matches expected elements from #main",
-			".x:has(~ .a + .b) matches expected elements from #main",
-			".x:has(~ .a + .b > .c) matches expected elements from #main",
-			".x:has(~ .a + .b .c) matches expected elements from #main",
-			".x:has(.d .e) matches expected elements from #main",
-			".x:has(.d .e) .f matches expected elements from #main",
-			".x:has(> .d) matches expected elements from #main",
-			".x:has(> .d) .f matches expected elements from #main",
-			".x:has(~ .d ~ .e) matches expected elements from #main",
-			".x:has(~ .d ~ .e) ~ .f matches expected elements from #main",
-			".x:has(+ .d ~ .e) matches expected elements from #main",
-			".x:has(+ .d ~ .e) ~ .f matches expected elements from #main",
-			".y:has(> .g .h) matches expected elements from #main",
-			".y:has(.g .h) matches expected elements from #main",
-			".y:has(> .g .h) .i matches expected elements from #main",
-			".y:has(.g .h) .i matches expected elements from #main",
-			".x:has(+ .y:has(> .g .h) .i) matches expected elements from #main",
-			".x:has(+ .y:has(.g .h) .i) matches expected elements from #main",
-			".x:has(+ .y:has(> .g .h) .i) ~ .j matches expected elements from #main",
-			".x:has(+ .y:has(.g .h) .i) ~ .j matches expected elements from #main",
-			".x:has(~ .y:has(> .g .h) .i) matches expected elements from #main",
-			".x:has(~ .y:has(.g .h) .i) matches expected elements from #main",
-			".d .x:has(.e) matches expected elements from #main",
-			".d ~ .x:has(~ .e) matches expected elements from #main",
 			":has(.a) matches expected elements from #main",
 			":has(.a > .b) matches expected elements from #main",
 			":has(.a .b) matches expected elements from #main",
