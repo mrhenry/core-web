@@ -520,7 +520,10 @@ QUnit.module("querySelector with :has", function () {
 				".d .x:has(.e) matches expected elements from #main",
 				".d ~ .x:has(~ .e) matches expected elements from #main"
 			]);
-			done();
+
+			setTimeout(() => {
+				done();
+			}, 250);
 		}, 250);
 	});
 
@@ -840,7 +843,10 @@ QUnit.module("querySelector with :has", function () {
 				".d :has(.e) matches expected elements from #main",
 				".d ~ :has(~ .e) matches expected elements from #main"
 			] );
-			done();
+
+			setTimeout(() => {
+				done();
+			}, 500);
 		}, 500);
 	});
 });
