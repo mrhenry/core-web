@@ -1,5 +1,7 @@
 // Do this first before we trash the garbage collector.
 import "./test_requestIdleCallback.js";
+import "./test_requestAnimationFrame.js";
+import "./test_setImmediate.js";
 
 import "./test_AbortController.js";
 import "./test_Blob.js";
@@ -24,6 +26,4 @@ import "./test_matchMedia.js";
 import "./test_querySelectorAll.js";
 import "./test_querySelectorAll_has_pseudo.js";
 import "./test_queueMicrotask.js";
-import "./test_requestAnimationFrame.js";
-import "./test_setImmediate.js";
 import "./test_viewport.js";
