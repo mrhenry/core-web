@@ -52,7 +52,8 @@ function configBuilder(opts) {
 			filename: `[name].bundle-${opts.name}.js`
 		},
 		entry: {
-			"non-interactive": "./non_interactive.js"
+			"non-interactive": "./non_interactive.js",
+			"non-interactive-qsa": "./non_interactive_qsa.js"
 		},
 		devtool: "source-map",
 		target: opts.target,
