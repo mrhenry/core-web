@@ -324,7 +324,7 @@
 				if ('getRootNode' in this) {
 					rootNode = this.getRootNode();
 				} else {
-					var r = this.parentNode;
+					var r = this;
 					while (r) {
 						rootNode = r;
 						r = r.parentNode;
