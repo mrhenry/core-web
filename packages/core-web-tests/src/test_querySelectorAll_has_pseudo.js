@@ -388,153 +388,140 @@ QUnit.module("querySelector with :has", function () {
 			</div>
 			</main>`;
 		
-		const d01 = document.getElementById("d01");
-		const d02 = document.getElementById("d02");
-		const d06 = document.getElementById("d06");
-		const d07 = document.getElementById("d07");
-		const d09 = document.getElementById("d09");
-		const d12 = document.getElementById("d12");
-		const d17 = document.getElementById("d17");
-		const d18 = document.getElementById("d18");
-		const d19 = document.getElementById("d19");
-		const d20 = document.getElementById("d20");
-		const d21 = document.getElementById("d21");
-		const d22 = document.getElementById("d22");
-		const d24 = document.getElementById("d24");
-		const d25 = document.getElementById("d25");
-		const d28 = document.getElementById("d28");
-		const d29 = document.getElementById("d29");
-		const d30 = document.getElementById("d30");
-		const d32 = document.getElementById("d32");
-		const d33 = document.getElementById("d33");
-		const d34 = document.getElementById("d34");
-		const d37 = document.getElementById("d37");
-		const d38 = document.getElementById("d38");
-		const d39 = document.getElementById("d39");
-		const d40 = document.getElementById("d40");
-		const d41 = document.getElementById("d41");
-		const d42 = document.getElementById("d42");
-		const d43 = document.getElementById("d43");
-		const d46 = document.getElementById("d46");
-		const d48 = document.getElementById("d48");
-		const d49 = document.getElementById("d49");
-		const d50 = document.getElementById("d50");
-		const d51 = document.getElementById("d51");
-		const d52 = document.getElementById("d52");
-		const d54 = document.getElementById("d54");
-		const d55 = document.getElementById("d55");
-		const d56 = document.getElementById("d56");
-		const d57 = document.getElementById("d57");
-		const d58 = document.getElementById("d58");
-		const d60 = document.getElementById("d60");
-		const d61 = document.getElementById("d61");
-		const d62 = document.getElementById("d62");
-		const d63 = document.getElementById("d63");
-		const d67 = document.getElementById("d67");
-		const d68 = document.getElementById("d68");
-		const d69 = document.getElementById("d69");
-		const d70 = document.getElementById("d70");
-		const d71 = document.getElementById("d71");
-		const d75 = document.getElementById("d75");
-		const d77 = document.getElementById("d77");
-		const d80 = document.getElementById("d80");
-
-		const extraD01 = document.getElementById("extra-d01");
-		const extraD02 = document.getElementById("extra-d02");
+		const done = assert.async();
+		setTimeout(() => {
+			const d02 = document.getElementById("d02");
+			const d06 = document.getElementById("d06");
+			const d07 = document.getElementById("d07");
+			const d09 = document.getElementById("d09");
+			const d12 = document.getElementById("d12");
+			const d18 = document.getElementById("d18");
+			const d19 = document.getElementById("d19");
+			const d21 = document.getElementById("d21");
+			const d24 = document.getElementById("d24");
+			const d28 = document.getElementById("d28");
+			const d32 = document.getElementById("d32");
+			const d37 = document.getElementById("d37");
+			const d40 = document.getElementById("d40");
+			const d46 = document.getElementById("d46");
+			const d48 = document.getElementById("d48");
+			const d49 = document.getElementById("d49");
+			const d50 = document.getElementById("d50");
+			const d51 = document.getElementById("d51");
+			const d52 = document.getElementById("d52");
+			const d54 = document.getElementById("d54");
+			const d55 = document.getElementById("d55");
+			const d56 = document.getElementById("d56");
+			const d57 = document.getElementById("d57");
+			const d58 = document.getElementById("d58");
+			const d60 = document.getElementById("d60");
+			const d61 = document.getElementById("d61");
+			const d62 = document.getElementById("d62");
+			const d63 = document.getElementById("d63");
+			const d67 = document.getElementById("d67");
+			const d68 = document.getElementById("d68");
+			const d69 = document.getElementById("d69");
+			const d70 = document.getElementById("d70");
+			const d71 = document.getElementById("d71");
+			const d75 = document.getElementById("d75");
+			const d77 = document.getElementById("d77");
+			const d80 = document.getElementById("d80");
 		
-		// :has as compound selector part.
-		testSelectorAllFromMain(assert, ".x:has(.a)", [d02, d06, d07, d09, d12]);
-		testSelectorAllFromMain(assert, ".x:has(.a > .b)", [d09]);
-		testSelectorAllFromMain(assert, ".x:has(.a .b)", [d09, d12]);
-		testSelectorAllFromMain(assert, ".x:has(.a + .b)", [d12]);
-		testSelectorAllFromMain(assert, ".x:has(.a ~ .b)", [d02, d12]);
+			// :has as compound selector part.
+			testSelectorAllFromMain(assert, ".x:has(.a)", [d02, d06, d07, d09, d12]);
+			testSelectorAllFromMain(assert, ".x:has(.a > .b)", [d09]);
+			testSelectorAllFromMain(assert, ".x:has(.a .b)", [d09, d12]);
+			testSelectorAllFromMain(assert, ".x:has(.a + .b)", [d12]);
+			testSelectorAllFromMain(assert, ".x:has(.a ~ .b)", [d02, d12]);
 
-		testSelectorAllFromMain(assert, ".x:has(> .a)", [d02, d07, d09, d12]);
-		testSelectorAllFromMain(assert, ".x:has(> .a > .b)", [d09]);
-		testSelectorAllFromMain(assert, ".x:has(> .a .b)", [d09, d12]);
-		testSelectorAllFromMain(assert, ".x:has(> .a + .b)", [d12]);
-		testSelectorAllFromMain(assert, ".x:has(> .a ~ .b)", [d02, d12]);
+			testSelectorAllFromMain(assert, ".x:has(> .a)", [d02, d07, d09, d12]);
+			testSelectorAllFromMain(assert, ".x:has(> .a > .b)", [d09]);
+			testSelectorAllFromMain(assert, ".x:has(> .a .b)", [d09, d12]);
+			testSelectorAllFromMain(assert, ".x:has(> .a + .b)", [d12]);
+			testSelectorAllFromMain(assert, ".x:has(> .a ~ .b)", [d02, d12]);
 
-		testSelectorAllFromMain(assert, ".x:has(+ .a)", [d19, d21, d24, d28, d32, d37, d40, d46]);
-		testSelectorAllFromMain(assert, ".x:has(+ .a > .b)", [d21]);
-		testSelectorAllFromMain(assert, ".x:has(+ .a .b)", [d21, d24]);
-		testSelectorAllFromMain(assert, ".x:has(+ .a + .b)", [d28, d32, d37]);
-		testSelectorAllFromMain(assert, ".x:has(+ .a ~ .b)", [d19, d21, d24, d28, d32, d37, d40]);
+			testSelectorAllFromMain(assert, ".x:has(+ .a)", [d19, d21, d24, d28, d32, d37, d40, d46]);
+			testSelectorAllFromMain(assert, ".x:has(+ .a > .b)", [d21]);
+			testSelectorAllFromMain(assert, ".x:has(+ .a .b)", [d21, d24]);
+			testSelectorAllFromMain(assert, ".x:has(+ .a + .b)", [d28, d32, d37]);
+			testSelectorAllFromMain(assert, ".x:has(+ .a ~ .b)", [d19, d21, d24, d28, d32, d37, d40]);
 
-		testSelectorAllFromMain(assert, ".x:has(~ .a)", [d18, d19, d21, d24, d28, d32, d37, d40, d46]);
-		testSelectorAllFromMain(assert, ".x:has(~ .a > .b)", [d18, d19, d21]);
-		testSelectorAllFromMain(assert, ".x:has(~ .a .b)", [d18, d19, d21, d24]);
-		testSelectorAllFromMain(assert, ".x:has(~ .a + .b)", [d18, d19, d21, d24, d28, d32, d37]);
-		testSelectorAllFromMain(assert, ".x:has(~ .a + .b > .c)", [d18, d19, d21, d24, d28]);
-		testSelectorAllFromMain(assert, ".x:has(~ .a + .b .c)", [d18, d19, d21, d24, d28, d32]);
+			testSelectorAllFromMain(assert, ".x:has(~ .a)", [d18, d19, d21, d24, d28, d32, d37, d40, d46]);
+			testSelectorAllFromMain(assert, ".x:has(~ .a > .b)", [d18, d19, d21]);
+			testSelectorAllFromMain(assert, ".x:has(~ .a .b)", [d18, d19, d21, d24]);
+			testSelectorAllFromMain(assert, ".x:has(~ .a + .b)", [d18, d19, d21, d24, d28, d32, d37]);
+			testSelectorAllFromMain(assert, ".x:has(~ .a + .b > .c)", [d18, d19, d21, d24, d28]);
+			testSelectorAllFromMain(assert, ".x:has(~ .a + .b .c)", [d18, d19, d21, d24, d28, d32]);
 
-		testSelectorAllFromMain(assert, ".x:has(.d .e)", [d48, d49, d50]);
-		testSelectorAllFromMain(assert, ".x:has(.d .e) .f", [d54]);
-		testSelectorAllFromMain(assert, ".x:has(> .d)", [d49, d50]);
-		testSelectorAllFromMain(assert, ".x:has(> .d) .f", [d54]);
-		testSelectorAllFromMain(assert, ".x:has(~ .d ~ .e)", [d48, d55, d56]);
-		testSelectorAllFromMain(assert, ".x:has(~ .d ~ .e) ~ .f", [d60]);
-		testSelectorAllFromMain(assert, ".x:has(+ .d ~ .e)", [d55, d56]);
-		testSelectorAllFromMain(assert, ".x:has(+ .d ~ .e) ~ .f", [d60]);
+			testSelectorAllFromMain(assert, ".x:has(.d .e)", [d48, d49, d50]);
+			testSelectorAllFromMain(assert, ".x:has(.d .e) .f", [d54]);
+			testSelectorAllFromMain(assert, ".x:has(> .d)", [d49, d50]);
+			testSelectorAllFromMain(assert, ".x:has(> .d) .f", [d54]);
+			testSelectorAllFromMain(assert, ".x:has(~ .d ~ .e)", [d48, d55, d56]);
+			testSelectorAllFromMain(assert, ".x:has(~ .d ~ .e) ~ .f", [d60]);
+			testSelectorAllFromMain(assert, ".x:has(+ .d ~ .e)", [d55, d56]);
+			testSelectorAllFromMain(assert, ".x:has(+ .d ~ .e) ~ .f", [d60]);
 
-		testSelectorAllFromMain(assert, ".y:has(> .g .h)", [d63, d71]);
-		testSelectorAllFromMain(assert, ".y:has(.g .h)", [d63, d68, d71]);
-		testSelectorAllFromMain(assert, ".y:has(> .g .h) .i", [d67, d75]);
-		testSelectorAllFromMain(assert, ".y:has(.g .h) .i", [d67, d75]);
-		testSelectorAllFromMain(assert, ".x:has(+ .y:has(> .g .h) .i)", [d62, d70]);
-		testSelectorAllFromMain(assert, ".x:has(+ .y:has(.g .h) .i)", [d62, d63, d70]);
-		testSelectorAllFromMain(assert, ".x:has(+ .y:has(> .g .h) .i) ~ .j", [d77, d80]);
-		testSelectorAllFromMain(assert, ".x:has(+ .y:has(.g .h) .i) ~ .j", [d77, d80]);
-		testSelectorAllFromMain(assert, ".x:has(~ .y:has(> .g .h) .i)", [d61, d62, d69, d70]);
-		testSelectorAllFromMain(assert, ".x:has(~ .y:has(.g .h) .i)", [d61, d62, d63, d69, d70]);
+			testSelectorAllFromMain(assert, ".y:has(> .g .h)", [d63, d71]);
+			testSelectorAllFromMain(assert, ".y:has(.g .h)", [d63, d68, d71]);
+			testSelectorAllFromMain(assert, ".y:has(> .g .h) .i", [d67, d75]);
+			testSelectorAllFromMain(assert, ".y:has(.g .h) .i", [d67, d75]);
+			testSelectorAllFromMain(assert, ".x:has(+ .y:has(> .g .h) .i)", [d62, d70]);
+			testSelectorAllFromMain(assert, ".x:has(+ .y:has(.g .h) .i)", [d62, d63, d70]);
+			testSelectorAllFromMain(assert, ".x:has(+ .y:has(> .g .h) .i) ~ .j", [d77, d80]);
+			testSelectorAllFromMain(assert, ".x:has(+ .y:has(.g .h) .i) ~ .j", [d77, d80]);
+			testSelectorAllFromMain(assert, ".x:has(~ .y:has(> .g .h) .i)", [d61, d62, d69, d70]);
+			testSelectorAllFromMain(assert, ".x:has(~ .y:has(.g .h) .i)", [d61, d62, d63, d69, d70]);
 
-		testSelectorAllFromMain(assert, ".d .x:has(.e)", [d51, d52]);
+			testSelectorAllFromMain(assert, ".d .x:has(.e)", [d51, d52]);
 
-		testSelectorAllFromMain(assert, ".d ~ .x:has(~ .e)", [d57, d58]);
+			testSelectorAllFromMain(assert, ".d ~ .x:has(~ .e)", [d57, d58]);
 
-		assert.verifySteps([
-			".x:has(.a) matches expected elements from #main",
-			".x:has(.a > .b) matches expected elements from #main",
-			".x:has(.a .b) matches expected elements from #main",
-			".x:has(.a + .b) matches expected elements from #main",
-			".x:has(.a ~ .b) matches expected elements from #main",
-			".x:has(> .a) matches expected elements from #main",
-			".x:has(> .a > .b) matches expected elements from #main",
-			".x:has(> .a .b) matches expected elements from #main",
-			".x:has(> .a + .b) matches expected elements from #main",
-			".x:has(> .a ~ .b) matches expected elements from #main",
-			".x:has(+ .a) matches expected elements from #main",
-			".x:has(+ .a > .b) matches expected elements from #main",
-			".x:has(+ .a .b) matches expected elements from #main",
-			".x:has(+ .a + .b) matches expected elements from #main",
-			".x:has(+ .a ~ .b) matches expected elements from #main",
-			".x:has(~ .a) matches expected elements from #main",
-			".x:has(~ .a > .b) matches expected elements from #main",
-			".x:has(~ .a .b) matches expected elements from #main",
-			".x:has(~ .a + .b) matches expected elements from #main",
-			".x:has(~ .a + .b > .c) matches expected elements from #main",
-			".x:has(~ .a + .b .c) matches expected elements from #main",
-			".x:has(.d .e) matches expected elements from #main",
-			".x:has(.d .e) .f matches expected elements from #main",
-			".x:has(> .d) matches expected elements from #main",
-			".x:has(> .d) .f matches expected elements from #main",
-			".x:has(~ .d ~ .e) matches expected elements from #main",
-			".x:has(~ .d ~ .e) ~ .f matches expected elements from #main",
-			".x:has(+ .d ~ .e) matches expected elements from #main",
-			".x:has(+ .d ~ .e) ~ .f matches expected elements from #main",
-			".y:has(> .g .h) matches expected elements from #main",
-			".y:has(.g .h) matches expected elements from #main",
-			".y:has(> .g .h) .i matches expected elements from #main",
-			".y:has(.g .h) .i matches expected elements from #main",
-			".x:has(+ .y:has(> .g .h) .i) matches expected elements from #main",
-			".x:has(+ .y:has(.g .h) .i) matches expected elements from #main",
-			".x:has(+ .y:has(> .g .h) .i) ~ .j matches expected elements from #main",
-			".x:has(+ .y:has(.g .h) .i) ~ .j matches expected elements from #main",
-			".x:has(~ .y:has(> .g .h) .i) matches expected elements from #main",
-			".x:has(~ .y:has(.g .h) .i) matches expected elements from #main",
-			".d .x:has(.e) matches expected elements from #main",
-			".d ~ .x:has(~ .e) matches expected elements from #main"
-		] );
+			assert.verifySteps([
+				".x:has(.a) matches expected elements from #main",
+				".x:has(.a > .b) matches expected elements from #main",
+				".x:has(.a .b) matches expected elements from #main",
+				".x:has(.a + .b) matches expected elements from #main",
+				".x:has(.a ~ .b) matches expected elements from #main",
+				".x:has(> .a) matches expected elements from #main",
+				".x:has(> .a > .b) matches expected elements from #main",
+				".x:has(> .a .b) matches expected elements from #main",
+				".x:has(> .a + .b) matches expected elements from #main",
+				".x:has(> .a ~ .b) matches expected elements from #main",
+				".x:has(+ .a) matches expected elements from #main",
+				".x:has(+ .a > .b) matches expected elements from #main",
+				".x:has(+ .a .b) matches expected elements from #main",
+				".x:has(+ .a + .b) matches expected elements from #main",
+				".x:has(+ .a ~ .b) matches expected elements from #main",
+				".x:has(~ .a) matches expected elements from #main",
+				".x:has(~ .a > .b) matches expected elements from #main",
+				".x:has(~ .a .b) matches expected elements from #main",
+				".x:has(~ .a + .b) matches expected elements from #main",
+				".x:has(~ .a + .b > .c) matches expected elements from #main",
+				".x:has(~ .a + .b .c) matches expected elements from #main",
+				".x:has(.d .e) matches expected elements from #main",
+				".x:has(.d .e) .f matches expected elements from #main",
+				".x:has(> .d) matches expected elements from #main",
+				".x:has(> .d) .f matches expected elements from #main",
+				".x:has(~ .d ~ .e) matches expected elements from #main",
+				".x:has(~ .d ~ .e) ~ .f matches expected elements from #main",
+				".x:has(+ .d ~ .e) matches expected elements from #main",
+				".x:has(+ .d ~ .e) ~ .f matches expected elements from #main",
+				".y:has(> .g .h) matches expected elements from #main",
+				".y:has(.g .h) matches expected elements from #main",
+				".y:has(> .g .h) .i matches expected elements from #main",
+				".y:has(.g .h) .i matches expected elements from #main",
+				".x:has(+ .y:has(> .g .h) .i) matches expected elements from #main",
+				".x:has(+ .y:has(.g .h) .i) matches expected elements from #main",
+				".x:has(+ .y:has(> .g .h) .i) ~ .j matches expected elements from #main",
+				".x:has(+ .y:has(.g .h) .i) ~ .j matches expected elements from #main",
+				".x:has(~ .y:has(> .g .h) .i) matches expected elements from #main",
+				".x:has(~ .y:has(.g .h) .i) matches expected elements from #main",
+				".d .x:has(.e) matches expected elements from #main",
+				".d ~ .x:has(~ .e) matches expected elements from #main"
+			]);
+			done();
+		}, 250);
 	});
 
 	QUnit.test(":has relative argument (b)", function (assert) {
@@ -660,196 +647,200 @@ QUnit.module("querySelector with :has", function () {
 			</div>
 			</main>`;
 		
-		const d01 = document.getElementById("d01");
-		const d02 = document.getElementById("d02");
-		const d06 = document.getElementById("d06");
-		const d07 = document.getElementById("d07");
-		const d09 = document.getElementById("d09");
-		const d12 = document.getElementById("d12");
-		const d17 = document.getElementById("d17");
-		const d18 = document.getElementById("d18");
-		const d19 = document.getElementById("d19");
-		const d20 = document.getElementById("d20");
-		const d21 = document.getElementById("d21");
-		const d22 = document.getElementById("d22");
-		const d24 = document.getElementById("d24");
-		const d25 = document.getElementById("d25");
-		const d28 = document.getElementById("d28");
-		const d29 = document.getElementById("d29");
-		const d30 = document.getElementById("d30");
-		const d32 = document.getElementById("d32");
-		const d33 = document.getElementById("d33");
-		const d34 = document.getElementById("d34");
-		const d37 = document.getElementById("d37");
-		const d38 = document.getElementById("d38");
-		const d39 = document.getElementById("d39");
-		const d40 = document.getElementById("d40");
-		const d41 = document.getElementById("d41");
-		const d42 = document.getElementById("d42");
-		const d43 = document.getElementById("d43");
-		const d46 = document.getElementById("d46");
-		const d48 = document.getElementById("d48");
-		const d49 = document.getElementById("d49");
-		const d50 = document.getElementById("d50");
-		const d51 = document.getElementById("d51");
-		const d52 = document.getElementById("d52");
-		const d54 = document.getElementById("d54");
-		const d55 = document.getElementById("d55");
-		const d56 = document.getElementById("d56");
-		const d57 = document.getElementById("d57");
-		const d58 = document.getElementById("d58");
-		const d60 = document.getElementById("d60");
-		const d61 = document.getElementById("d61");
-		const d62 = document.getElementById("d62");
-		const d63 = document.getElementById("d63");
-		const d67 = document.getElementById("d67");
-		const d68 = document.getElementById("d68");
-		const d69 = document.getElementById("d69");
-		const d70 = document.getElementById("d70");
-		const d71 = document.getElementById("d71");
-		const d75 = document.getElementById("d75");
-		const d77 = document.getElementById("d77");
-		const d80 = document.getElementById("d80");
+		const done = assert.async();
+		setTimeout(() => {
+			const d01 = document.getElementById("d01");
+			const d02 = document.getElementById("d02");
+			const d06 = document.getElementById("d06");
+			const d07 = document.getElementById("d07");
+			const d09 = document.getElementById("d09");
+			const d12 = document.getElementById("d12");
+			const d17 = document.getElementById("d17");
+			const d18 = document.getElementById("d18");
+			const d19 = document.getElementById("d19");
+			const d20 = document.getElementById("d20");
+			const d21 = document.getElementById("d21");
+			const d22 = document.getElementById("d22");
+			const d24 = document.getElementById("d24");
+			const d25 = document.getElementById("d25");
+			const d28 = document.getElementById("d28");
+			const d29 = document.getElementById("d29");
+			const d30 = document.getElementById("d30");
+			const d32 = document.getElementById("d32");
+			const d33 = document.getElementById("d33");
+			const d34 = document.getElementById("d34");
+			const d37 = document.getElementById("d37");
+			const d38 = document.getElementById("d38");
+			const d39 = document.getElementById("d39");
+			const d40 = document.getElementById("d40");
+			const d41 = document.getElementById("d41");
+			const d42 = document.getElementById("d42");
+			const d43 = document.getElementById("d43");
+			const d46 = document.getElementById("d46");
+			const d48 = document.getElementById("d48");
+			const d49 = document.getElementById("d49");
+			const d50 = document.getElementById("d50");
+			const d51 = document.getElementById("d51");
+			const d52 = document.getElementById("d52");
+			const d54 = document.getElementById("d54");
+			const d55 = document.getElementById("d55");
+			const d56 = document.getElementById("d56");
+			const d57 = document.getElementById("d57");
+			const d58 = document.getElementById("d58");
+			const d60 = document.getElementById("d60");
+			const d61 = document.getElementById("d61");
+			const d62 = document.getElementById("d62");
+			const d63 = document.getElementById("d63");
+			const d67 = document.getElementById("d67");
+			const d68 = document.getElementById("d68");
+			const d69 = document.getElementById("d69");
+			const d70 = document.getElementById("d70");
+			const d71 = document.getElementById("d71");
+			const d75 = document.getElementById("d75");
+			const d77 = document.getElementById("d77");
+			const d80 = document.getElementById("d80");
 
-		const extraD01 = document.getElementById("extra-d01");
-		const extraD02 = document.getElementById("extra-d02");
-		
-		// :has as simple selector part.
-		testSelectorAllFromMain(assert, ":has(.a)", [d01, d02, d06, d07, d09, d12, d17]);
-		testSelectorAllFromMain(assert, ":has(.a > .b)", [d01, d09, d17]);
-		testSelectorAllFromMain(assert, ":has(.a .b)", [d01, d09, d12, d17]);
-		testSelectorAllFromMain(assert, ":has(.a + .b)", [d01, d12, d17]);
-		testSelectorAllFromMain(assert, ":has(.a ~ .b)", [d01, d02, d12, d17]);
+			const extraD01 = document.getElementById("extra-d01");
+			const extraD02 = document.getElementById("extra-d02");
+			
+			// :has as simple selector part.
+			testSelectorAllFromMain(assert, ":has(.a)", [d01, d02, d06, d07, d09, d12, d17]);
+			testSelectorAllFromMain(assert, ":has(.a > .b)", [d01, d09, d17]);
+			testSelectorAllFromMain(assert, ":has(.a .b)", [d01, d09, d12, d17]);
+			testSelectorAllFromMain(assert, ":has(.a + .b)", [d01, d12, d17]);
+			testSelectorAllFromMain(assert, ":has(.a ~ .b)", [d01, d02, d12, d17]);
 
-		testSelectorAllFromMain(assert, ":has(> .a)", [d02, d07, d09, d12, d17]);
-		testSelectorAllFromMain(assert, ":has(> .a > .b)", [d09, d17]);
-		testSelectorAllFromMain(assert, ":has(> .a .b)", [d09, d12, d17]);
-		testSelectorAllFromMain(assert, ":has(> .a + .b)", [d12, d17]);
-		testSelectorAllFromMain(assert, ":has(> .a ~ .b)", [d02, d12, d17]);
+			testSelectorAllFromMain(assert, ":has(> .a)", [d02, d07, d09, d12, d17]);
+			testSelectorAllFromMain(assert, ":has(> .a > .b)", [d09, d17]);
+			testSelectorAllFromMain(assert, ":has(> .a .b)", [d09, d12, d17]);
+			testSelectorAllFromMain(assert, ":has(> .a + .b)", [d12, d17]);
+			testSelectorAllFromMain(assert, ":has(> .a ~ .b)", [d02, d12, d17]);
 
-		testSelectorAllFromScope(assert, document.body, ":has(> .a)", [d02, d07, d09, d12, d17]);
-		testSelectorAllFromScope(assert, document.body, ":has(> .a > .b)", [d09, d17]);
-		testSelectorAllFromScope(assert, document.body, ":has(> .a .b)", [d09, d12, d17]);
-		testSelectorAllFromScope(assert, document.body, ":has(> .a + .b)", [d12, d17]);
-		testSelectorAllFromScope(assert, document.body, ":has(> .a ~ .b)", [d02, d12, d17]);
+			testSelectorAllFromScope(assert, document.body, ":has(> .a)", [d02, d07, d09, d12, d17]);
+			testSelectorAllFromScope(assert, document.body, ":has(> .a > .b)", [d09, d17]);
+			testSelectorAllFromScope(assert, document.body, ":has(> .a .b)", [d09, d12, d17]);
+			testSelectorAllFromScope(assert, document.body, ":has(> .a + .b)", [d12, d17]);
+			testSelectorAllFromScope(assert, document.body, ":has(> .a ~ .b)", [d02, d12, d17]);
 
-		testSelectorAllFromScope(assert, document.getElementById("d01"), ":has(> .a)", [d02, d07, d09, d12]);
-		testSelectorAllFromScope(assert, document.getElementById("d01"), ":has(> .a > .b)", [d09]);
-		testSelectorAllFromScope(assert, document.getElementById("d01"), ":has(> .a .b)", [d09, d12]);
-		testSelectorAllFromScope(assert, document.getElementById("d01"), ":has(> .a + .b)", [d12]);
-		testSelectorAllFromScope(assert, document.getElementById("d01"), ":has(> .a ~ .b)", [d02, d12]);
+			testSelectorAllFromScope(assert, document.getElementById("d01"), ":has(> .a)", [d02, d07, d09, d12]);
+			testSelectorAllFromScope(assert, document.getElementById("d01"), ":has(> .a > .b)", [d09]);
+			testSelectorAllFromScope(assert, document.getElementById("d01"), ":has(> .a .b)", [d09, d12]);
+			testSelectorAllFromScope(assert, document.getElementById("d01"), ":has(> .a + .b)", [d12]);
+			testSelectorAllFromScope(assert, document.getElementById("d01"), ":has(> .a ~ .b)", [d02, d12]);
 
-		testSelectorAllFromScope(assert, document.getElementById("d12"), ":has(> .a)", []);
-		testSelectorAllFromScope(assert, document.getElementById("d12"), ":has(> .a > .b)", []);
-		testSelectorAllFromScope(assert, document.getElementById("d12"), ":has(> .a .b)", []);
-		testSelectorAllFromScope(assert, document.getElementById("d12"), ":has(> .a + .b)", []);
-		testSelectorAllFromScope(assert, document.getElementById("d12"), ":has(> .a ~ .b)", []);
+			testSelectorAllFromScope(assert, document.getElementById("d12"), ":has(> .a)", []);
+			testSelectorAllFromScope(assert, document.getElementById("d12"), ":has(> .a > .b)", []);
+			testSelectorAllFromScope(assert, document.getElementById("d12"), ":has(> .a .b)", []);
+			testSelectorAllFromScope(assert, document.getElementById("d12"), ":has(> .a + .b)", []);
+			testSelectorAllFromScope(assert, document.getElementById("d12"), ":has(> .a ~ .b)", []);
 
-		testSelectorAllFromScope(assert, document.getElementById("d17"), ":has(> .a)", []);
-		testSelectorAllFromScope(assert, document.getElementById("d17"), ":has(> .a > .b)", []);
-		testSelectorAllFromScope(assert, document.getElementById("d17"), ":has(> .a .b)", []);
-		testSelectorAllFromScope(assert, document.getElementById("d17"), ":has(> .a + .b)", []);
-		testSelectorAllFromScope(assert, document.getElementById("d17"), ":has(> .a ~ .b)", []);
+			testSelectorAllFromScope(assert, document.getElementById("d17"), ":has(> .a)", []);
+			testSelectorAllFromScope(assert, document.getElementById("d17"), ":has(> .a > .b)", []);
+			testSelectorAllFromScope(assert, document.getElementById("d17"), ":has(> .a .b)", []);
+			testSelectorAllFromScope(assert, document.getElementById("d17"), ":has(> .a + .b)", []);
+			testSelectorAllFromScope(assert, document.getElementById("d17"), ":has(> .a ~ .b)", []);
 
-		testSelectorAllFromMain(assert, ":has(+ .a)", [d19, d21, d24, d28, d32, d37, d40, d46]);
-		testSelectorAllFromMain(assert, ":has(+ .a > .b)", [d21]);
-		testSelectorAllFromMain(assert, ":has(+ .a .b)", [d21, d24]);
-		testSelectorAllFromMain(assert, ":has(+ .a + .b)", [d28, d32, d37]);
-		testSelectorAllFromMain(assert, ":has(+ .a ~ .b)", [d19, d21, d24, d28, d32, d37, d40]);
+			testSelectorAllFromMain(assert, ":has(+ .a)", [d19, d21, d24, d28, d32, d37, d40, d46]);
+			testSelectorAllFromMain(assert, ":has(+ .a > .b)", [d21]);
+			testSelectorAllFromMain(assert, ":has(+ .a .b)", [d21, d24]);
+			testSelectorAllFromMain(assert, ":has(+ .a + .b)", [d28, d32, d37]);
+			testSelectorAllFromMain(assert, ":has(+ .a ~ .b)", [d19, d21, d24, d28, d32, d37, d40]);
 
-		testSelectorAllFromMain(assert, ":has(~ .a)", [d18, d19, d20, d21, d22, d24, d25, d28, d29, d30, d32, d33, d34, d37, d38, d39, d40, d41, d42, d43, d46]);
-		testSelectorAllFromMain(assert, ":has(~ .a > .b)", [d18, d19, d20, d21]);
-		testSelectorAllFromMain(assert, ":has(~ .a .b)", [d18, d19, d20, d21, d22, d24]);
-		testSelectorAllFromMain(assert, ":has(~ .a + .b)", [d18, d19, d20, d21, d22, d24, d25, d28, d29, d30, d32, d33, d34, d37]);
-		testSelectorAllFromMain(assert, ":has(~ .a + .b > .c)", [d18, d19, d20, d21, d22, d24, d25, d28]);
-		testSelectorAllFromMain(assert, ":has(~ .a + .b .c)", [d18, d19, d20, d21, d22, d24, d25, d28, d29, d30, d32]);
+			testSelectorAllFromMain(assert, ":has(~ .a)", [d18, d19, d20, d21, d22, d24, d25, d28, d29, d30, d32, d33, d34, d37, d38, d39, d40, d41, d42, d43, d46]);
+			testSelectorAllFromMain(assert, ":has(~ .a > .b)", [d18, d19, d20, d21]);
+			testSelectorAllFromMain(assert, ":has(~ .a .b)", [d18, d19, d20, d21, d22, d24]);
+			testSelectorAllFromMain(assert, ":has(~ .a + .b)", [d18, d19, d20, d21, d22, d24, d25, d28, d29, d30, d32, d33, d34, d37]);
+			testSelectorAllFromMain(assert, ":has(~ .a + .b > .c)", [d18, d19, d20, d21, d22, d24, d25, d28]);
+			testSelectorAllFromMain(assert, ":has(~ .a + .b .c)", [d18, d19, d20, d21, d22, d24, d25, d28, d29, d30, d32]);
 
-		testSelectorAllFromMain(assert, ":has(.d .e)", [extraD01, d48, d49, d50]);
-		testSelectorAllFromMain(assert, ":has(.d .e) .f", [d54, d60]);
-		testSelectorAllFromMain(assert, ":has(> .d)", [extraD01, d49, d50]);
-		testSelectorAllFromMain(assert, ":has(> .d) .f", [d54, d60]);
-		testSelectorAllFromMain(assert, ":has(~ .d ~ .e)", [d48, d55, d56]);
-		testSelectorAllFromMain(assert, ":has(~ .d ~ .e) ~ .f", [d60]);
-		testSelectorAllFromMain(assert, ":has(+ .d ~ .e)", [d55, d56]);
-		testSelectorAllFromMain(assert, ":has(+ .d ~ .e) ~ .f", [d60]);
+			testSelectorAllFromMain(assert, ":has(.d .e)", [extraD01, d48, d49, d50]);
+			testSelectorAllFromMain(assert, ":has(.d .e) .f", [d54, d60]);
+			testSelectorAllFromMain(assert, ":has(> .d)", [extraD01, d49, d50]);
+			testSelectorAllFromMain(assert, ":has(> .d) .f", [d54, d60]);
+			testSelectorAllFromMain(assert, ":has(~ .d ~ .e)", [d48, d55, d56]);
+			testSelectorAllFromMain(assert, ":has(~ .d ~ .e) ~ .f", [d60]);
+			testSelectorAllFromMain(assert, ":has(+ .d ~ .e)", [d55, d56]);
+			testSelectorAllFromMain(assert, ":has(+ .d ~ .e) ~ .f", [d60]);
 
-		testSelectorAllFromMain(assert, ":has(> .g .h)", [d63, d71]);
-		testSelectorAllFromMain(assert, ":has(.g .h)", [extraD02, d63, d68, d71]);
-		testSelectorAllFromMain(assert, ":has(> .g .h) .i", [d67, d75]);
-		testSelectorAllFromMain(assert, ":has(.g .h) .i", [d67, d75]);
-		testSelectorAllFromMain(assert, ":has(+ :has(> .g .h) .i)", [d62, d70]);
-		testSelectorAllFromMain(assert, ":has(+ :has(.g .h) .i)", [extraD01, d62, d63, d70]);
-		testSelectorAllFromMain(assert, ":has(+ :has(> .g .h) .i) ~ .j", [d77, d80]);
-		testSelectorAllFromMain(assert, ":has(+ :has(.g .h) .i) ~ .j", [d77, d80]);
-		testSelectorAllFromMain(assert, ":has(~ :has(> .g .h) .i)", [d61, d62, d69, d70]);
-		testSelectorAllFromMain(assert, ":has(~ :has(.g .h) .i)", [extraD01, d01,d17,d61,d62,d63,d69,d70]);
+			testSelectorAllFromMain(assert, ":has(> .g .h)", [d63, d71]);
+			testSelectorAllFromMain(assert, ":has(.g .h)", [extraD02, d63, d68, d71]);
+			testSelectorAllFromMain(assert, ":has(> .g .h) .i", [d67, d75]);
+			testSelectorAllFromMain(assert, ":has(.g .h) .i", [d67, d75]);
+			testSelectorAllFromMain(assert, ":has(+ :has(> .g .h) .i)", [d62, d70]);
+			testSelectorAllFromMain(assert, ":has(+ :has(.g .h) .i)", [extraD01, d62, d63, d70]);
+			testSelectorAllFromMain(assert, ":has(+ :has(> .g .h) .i) ~ .j", [d77, d80]);
+			testSelectorAllFromMain(assert, ":has(+ :has(.g .h) .i) ~ .j", [d77, d80]);
+			testSelectorAllFromMain(assert, ":has(~ :has(> .g .h) .i)", [d61, d62, d69, d70]);
+			testSelectorAllFromMain(assert, ":has(~ :has(.g .h) .i)", [extraD01, d01,d17,d61,d62,d63,d69,d70]);
 
-		testSelectorAllFromMain(assert, ".d :has(.e)", [d51, d52]);
+			testSelectorAllFromMain(assert, ".d :has(.e)", [d51, d52]);
 
-		testSelectorAllFromMain(assert, ".d ~ :has(~ .e)", [d57, d58]);
+			testSelectorAllFromMain(assert, ".d ~ :has(~ .e)", [d57, d58]);
 
-		assert.verifySteps([
-			":has(.a) matches expected elements from #main",
-			":has(.a > .b) matches expected elements from #main",
-			":has(.a .b) matches expected elements from #main",
-			":has(.a + .b) matches expected elements from #main",
-			":has(.a ~ .b) matches expected elements from #main",
-			":has(> .a) matches expected elements from #main",
-			":has(> .a > .b) matches expected elements from #main",
-			":has(> .a .b) matches expected elements from #main",
-			":has(> .a + .b) matches expected elements from #main",
-			":has(> .a ~ .b) matches expected elements from #main",
-			":has(> .a) matches expected elements from scope BODY",
-			":has(> .a > .b) matches expected elements from scope BODY",
-			":has(> .a .b) matches expected elements from scope BODY",
-			":has(> .a + .b) matches expected elements from scope BODY",
-			":has(> .a ~ .b) matches expected elements from scope BODY",
-			":has(> .a) matches expected elements from scope d01",
-			":has(> .a > .b) matches expected elements from scope d01",
-			":has(> .a .b) matches expected elements from scope d01",
-			":has(> .a + .b) matches expected elements from scope d01",
-			":has(> .a ~ .b) matches expected elements from scope d01",
-			":has(> .a) matches expected elements from scope d12",
-			":has(> .a > .b) matches expected elements from scope d12",
-			":has(> .a .b) matches expected elements from scope d12",
-			":has(> .a + .b) matches expected elements from scope d12",
-			":has(> .a ~ .b) matches expected elements from scope d12",
-			":has(> .a) matches expected elements from scope d17",
-			":has(> .a > .b) matches expected elements from scope d17",
-			":has(> .a .b) matches expected elements from scope d17",
-			":has(> .a + .b) matches expected elements from scope d17",
-			":has(> .a ~ .b) matches expected elements from scope d17",
-			":has(+ .a) matches expected elements from #main",
-			":has(+ .a > .b) matches expected elements from #main",
-			":has(+ .a .b) matches expected elements from #main",
-			":has(+ .a + .b) matches expected elements from #main",
-			":has(+ .a ~ .b) matches expected elements from #main",
-			":has(~ .a) matches expected elements from #main",
-			":has(~ .a > .b) matches expected elements from #main",
-			":has(~ .a .b) matches expected elements from #main",
-			":has(~ .a + .b) matches expected elements from #main",
-			":has(~ .a + .b > .c) matches expected elements from #main",
-			":has(~ .a + .b .c) matches expected elements from #main",
-			":has(.d .e) matches expected elements from #main",
-			":has(.d .e) .f matches expected elements from #main",
-			":has(> .d) matches expected elements from #main",
-			":has(> .d) .f matches expected elements from #main",
-			":has(~ .d ~ .e) matches expected elements from #main",
-			":has(~ .d ~ .e) ~ .f matches expected elements from #main",
-			":has(+ .d ~ .e) matches expected elements from #main",
-			":has(+ .d ~ .e) ~ .f matches expected elements from #main",
-			":has(> .g .h) matches expected elements from #main",
-			":has(.g .h) matches expected elements from #main",
-			":has(> .g .h) .i matches expected elements from #main",
-			":has(.g .h) .i matches expected elements from #main",
-			":has(+ :has(> .g .h) .i) matches expected elements from #main",
-			":has(+ :has(.g .h) .i) matches expected elements from #main",
-			":has(+ :has(> .g .h) .i) ~ .j matches expected elements from #main",
-			":has(+ :has(.g .h) .i) ~ .j matches expected elements from #main",
-			":has(~ :has(> .g .h) .i) matches expected elements from #main",
-			":has(~ :has(.g .h) .i) matches expected elements from #main",
-			".d :has(.e) matches expected elements from #main",
-			".d ~ :has(~ .e) matches expected elements from #main"
-		] );
+			assert.verifySteps([
+				":has(.a) matches expected elements from #main",
+				":has(.a > .b) matches expected elements from #main",
+				":has(.a .b) matches expected elements from #main",
+				":has(.a + .b) matches expected elements from #main",
+				":has(.a ~ .b) matches expected elements from #main",
+				":has(> .a) matches expected elements from #main",
+				":has(> .a > .b) matches expected elements from #main",
+				":has(> .a .b) matches expected elements from #main",
+				":has(> .a + .b) matches expected elements from #main",
+				":has(> .a ~ .b) matches expected elements from #main",
+				":has(> .a) matches expected elements from scope BODY",
+				":has(> .a > .b) matches expected elements from scope BODY",
+				":has(> .a .b) matches expected elements from scope BODY",
+				":has(> .a + .b) matches expected elements from scope BODY",
+				":has(> .a ~ .b) matches expected elements from scope BODY",
+				":has(> .a) matches expected elements from scope d01",
+				":has(> .a > .b) matches expected elements from scope d01",
+				":has(> .a .b) matches expected elements from scope d01",
+				":has(> .a + .b) matches expected elements from scope d01",
+				":has(> .a ~ .b) matches expected elements from scope d01",
+				":has(> .a) matches expected elements from scope d12",
+				":has(> .a > .b) matches expected elements from scope d12",
+				":has(> .a .b) matches expected elements from scope d12",
+				":has(> .a + .b) matches expected elements from scope d12",
+				":has(> .a ~ .b) matches expected elements from scope d12",
+				":has(> .a) matches expected elements from scope d17",
+				":has(> .a > .b) matches expected elements from scope d17",
+				":has(> .a .b) matches expected elements from scope d17",
+				":has(> .a + .b) matches expected elements from scope d17",
+				":has(> .a ~ .b) matches expected elements from scope d17",
+				":has(+ .a) matches expected elements from #main",
+				":has(+ .a > .b) matches expected elements from #main",
+				":has(+ .a .b) matches expected elements from #main",
+				":has(+ .a + .b) matches expected elements from #main",
+				":has(+ .a ~ .b) matches expected elements from #main",
+				":has(~ .a) matches expected elements from #main",
+				":has(~ .a > .b) matches expected elements from #main",
+				":has(~ .a .b) matches expected elements from #main",
+				":has(~ .a + .b) matches expected elements from #main",
+				":has(~ .a + .b > .c) matches expected elements from #main",
+				":has(~ .a + .b .c) matches expected elements from #main",
+				":has(.d .e) matches expected elements from #main",
+				":has(.d .e) .f matches expected elements from #main",
+				":has(> .d) matches expected elements from #main",
+				":has(> .d) .f matches expected elements from #main",
+				":has(~ .d ~ .e) matches expected elements from #main",
+				":has(~ .d ~ .e) ~ .f matches expected elements from #main",
+				":has(+ .d ~ .e) matches expected elements from #main",
+				":has(+ .d ~ .e) ~ .f matches expected elements from #main",
+				":has(> .g .h) matches expected elements from #main",
+				":has(.g .h) matches expected elements from #main",
+				":has(> .g .h) .i matches expected elements from #main",
+				":has(.g .h) .i matches expected elements from #main",
+				":has(+ :has(> .g .h) .i) matches expected elements from #main",
+				":has(+ :has(.g .h) .i) matches expected elements from #main",
+				":has(+ :has(> .g .h) .i) ~ .j matches expected elements from #main",
+				":has(+ :has(.g .h) .i) ~ .j matches expected elements from #main",
+				":has(~ :has(> .g .h) .i) matches expected elements from #main",
+				":has(~ :has(.g .h) .i) matches expected elements from #main",
+				".d :has(.e) matches expected elements from #main",
+				".d ~ :has(~ .e) matches expected elements from #main"
+			] );
+			done();
+		}, 500);
 	});
 });
