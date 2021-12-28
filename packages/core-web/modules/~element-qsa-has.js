@@ -333,6 +333,7 @@
 
 				var attrs = [];
 				var newQuery = replaceAllWithTempAttr(selectors, function (inner, attr) {
+					console.log(inner);
 					attrs.push(attr);
 
 					var selectorParts = splitSelector(inner);
@@ -340,7 +341,6 @@
 						var selectorPart = selectorParts[x].trim();
 						var absoluteSelectorPart = selectorPart;
 						
-						// TODO : still broken
 						if (
 							selectorPart[0] === '>' ||
 							selectorPart[0] === '+' ||

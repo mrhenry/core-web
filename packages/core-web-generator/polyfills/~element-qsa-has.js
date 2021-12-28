@@ -333,6 +333,7 @@
 
 				var attrs = [];
 				var newQuery = replaceAllWithTempAttr(selectors, function (inner, attr) {
+					console.log(inner);
 					attrs.push(attr);
 
 					var selectorParts = splitSelector(inner);
