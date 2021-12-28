@@ -22,7 +22,6 @@ QUnit.module("querySelector", function() {
 		}
 	});
 
-	// ShadyDOM overrides querySelector and family and messes with the polyfill
 	QUnit.test("querySelectorAll with :scope", function(assert) {
 		const fixture = document.getElementById("qunit-fixture");
 
@@ -66,7 +65,6 @@ QUnit.module("querySelector", function() {
 		assert.equal(resultC.length, 0);
 	});
 
-	// ShadyDOM overrides querySelector and family and messes with the polyfill
 	QUnit.test("matches with :scope", function(assert) {
 		const fixture = document.getElementById("qunit-fixture");
 
@@ -91,7 +89,6 @@ QUnit.module("querySelector", function() {
 		assert.ok(div2.matches(".one :scope"));
 	});
 
-	// ShadyDOM overrides querySelector and family and messes with the polyfill
 	QUnit.test("closest with :scope", function(assert) {
 		const fixture = document.getElementById("qunit-fixture");
 

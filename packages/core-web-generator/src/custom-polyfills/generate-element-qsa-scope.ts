@@ -26,6 +26,8 @@ export async function generateElementQsaScope(mapping: Array<Feature>) {
 		deps: [
 			"document.querySelector",
 			"Element",
+			"Element.prototype.matches",
+			"Element.prototype.closest",
 		],
 		browsers: browsers,
 		engines: browsersToEngines(browsers),
