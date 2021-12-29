@@ -72,3 +72,7 @@ li:not([class]) a {
 a:not([class]) {
 	color: currentColor;
 }
+
+code {
+	white-space: normal;
+}
