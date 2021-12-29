@@ -1,28 +1,27 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.generateElementQsaScope = void 0;
+exports.generateElementQsaSHas = void 0;
 const fs = require("fs");
 const path = require("path");
 const browsers_to_engines_1 = require("../browsers-to-engines/browsers-to-engines");
 const modulesDir = path.resolve(__dirname, "../../../core-web/modules");
-async function generateElementQsaScope(mapping) {
-    const src = fs.readFileSync(path.join(__dirname, '../../polyfills/~element-qsa-scope.js'), "utf-8");
-    fs.writeFileSync(path.join(modulesDir, "~element-qsa-scope.js"), src);
+async function generateElementQsaSHas(mapping) {
+    const src = fs.readFileSync(path.join(__dirname, '../../polyfills/~element-qsa-has.js'), "utf-8");
+    fs.writeFileSync(path.join(modulesDir, "~element-qsa-has.js"), src);
     const browsers = {
-        chrome: "<27",
-        edge: "<79",
-        firefox: "<32",
-        safari: "<7",
+        chrome: "*",
+        edge: "*",
+        firefox: "*",
+        safari: "*",
         ie: "*",
-        opera: "<15"
+        opera: "*"
     };
     mapping.push({
-        name: "~element-qsa-scope",
+        name: "~element-qsa-has",
         deps: [
+            "~element-qsa-scope",
             "document.querySelector",
             "Element",
-            "Element.prototype.matches",
-            "Element.prototype.closest",
         ],
         browsers: browsers,
         engines: (0, browsers_to_engines_1.browsersToEngines)(browsers),
@@ -31,6 +30,6 @@ async function generateElementQsaScope(mapping) {
         providedByCoreWeb: true,
     });
 }
-exports.generateElementQsaScope = generateElementQsaScope;
+exports.generateElementQsaSHas = generateElementQsaSHas;
 ;
-//# sourceMappingURL=generate-element-qsa-scope.js.map
+//# sourceMappingURL=generate-element-qsa-has.js.map

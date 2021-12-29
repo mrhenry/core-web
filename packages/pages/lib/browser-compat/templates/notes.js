@@ -44,7 +44,7 @@ function nativeNotesToArray(versionInfo) {
 function nativeTableNotes(feature) {
 	let notes = '';
 	for (const browser of coreWebBrowsers) {
-		if (Array.isArray(feature.native[browser])) {
+		if (feature.native && Array.isArray(feature.native[browser])) {
 			notes = notes + feature.native[browser].map((versionInfo) => {
 				if (versionInfo.notes || versionInfo.alternative_name) {
 					const allNotes = nativeNotesToArray(versionInfo);
@@ -59,7 +59,7 @@ function nativeTableNotes(feature) {
 
 				return '';
 			}).join('');
-		} else if (feature.native[browser] && feature.native[browser].version_added) {
+		} else if (feature.native && feature.native[browser] && feature.native[browser].version_added) {
 			if (feature.native[browser].notes || feature.native[browser].alternative_name) {
 				const allNotes = nativeNotesToArray(feature.native[browser]);
 				notes = notes + allNotes.map((note) => {

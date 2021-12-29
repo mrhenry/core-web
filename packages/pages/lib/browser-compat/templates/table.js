@@ -49,16 +49,18 @@ function lastVersionAdded(compat) {
 	let out = {};
 
 	for (const browser of coreWebBrowsers) {
-		if (!Array.isArray(compat.native[browser])) {
-			out[browser] = compat.native[browser].version_added;
-			continue;
-		}
-
-		compat.native[browser].forEach((release) => {
-			if (release.version_added) {
-				out[browser] = release.version_added;
+		if (compat.native) {
+			if (!Array.isArray(compat.native[browser])) {
+				out[browser] = compat.native[browser].version_added;
+				continue;
 			}
-		});
+
+			compat.native[browser].forEach((release) => {
+				if (release.version_added) {
+					out[browser] = release.version_added;
+				}
+			});
+		}
 	}
 
 	// this function was not really intended for this use.

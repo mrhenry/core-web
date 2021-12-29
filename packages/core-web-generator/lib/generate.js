@@ -13,6 +13,7 @@ const generate_mappings_1 = require("./generate-mappings");
 const generate_element_qsa_scope_1 = require("./custom-polyfills/generate-element-qsa-scope");
 const generate_crypto_randomuuid_1 = require("./custom-polyfills/generate-crypto-randomuuid");
 const semver = require("semver");
+const generate_element_qsa_has_1 = require("./custom-polyfills/generate-element-qsa-has");
 genAll();
 async function genAll() {
     fs.rmSync(modulesDir, {
@@ -46,6 +47,7 @@ async function genAll() {
     // custom polyfills
     await (0, generate_webcomponents_1.generateWebComponents)(mapping);
     await (0, generate_element_qsa_scope_1.generateElementQsaScope)(mapping);
+    await (0, generate_element_qsa_has_1.generateElementQsaSHas)(mapping);
     await (0, generate_crypto_randomuuid_1.generateCryptoRandomUUID)(mapping);
     // aliases
     const inversedAliases = {};
