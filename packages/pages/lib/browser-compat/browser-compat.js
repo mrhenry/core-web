@@ -29,7 +29,10 @@ async function generate(assetMap) {
 
 		for (const entry of feature.data) {
 			entry.polyfillio = await polyfillLibrary.describePolyfill(entry.polyfillName);
-			sitemap[entry.name] = path.join('/polyfills/', entry.slug, '/');
+			sitemap[entry.polyfillName] = {
+				path: path.join('/polyfills/', entry.slug, '/'),
+				title: entry.name,
+			};
 		}
 
 		compatArray.push(compat[key]);
