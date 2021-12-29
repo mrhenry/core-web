@@ -1,5 +1,6 @@
 {
   "name": "console.timeStamp",
+  "slug": "console.timeStamp",
   "polyfillName": "console.timeStamp",
   "coreWeb": {
     "name": "console.timeStamp",

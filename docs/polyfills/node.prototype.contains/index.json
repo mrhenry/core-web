@@ -1,5 +1,6 @@
 {
   "name": "Node.prototype.contains",
+  "slug": "Node.prototype.contains",
   "polyfillName": "Node.prototype.contains",
   "coreWeb": {
     "name": "Node.prototype.contains",

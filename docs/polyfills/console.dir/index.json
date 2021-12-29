@@ -1,5 +1,6 @@
 {
   "name": "console.dir",
+  "slug": "console.dir",
   "polyfillName": "console.dir",
   "coreWeb": {
     "name": "console.dir",

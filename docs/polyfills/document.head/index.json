@@ -1,5 +1,6 @@
 {
   "name": "Document.head",
+  "slug": "Document.head",
   "polyfillName": "document.head",
   "coreWeb": {
     "name": "document.head",

@@ -1,5 +1,6 @@
 {
   "name": "ResizeObserver",
+  "slug": "ResizeObserver",
   "polyfillName": "ResizeObserver",
   "coreWeb": {
     "name": "ResizeObserver",

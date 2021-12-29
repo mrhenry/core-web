@@ -1,5 +1,6 @@
 {
   "name": "XMLHttpRequest",
+  "slug": "XMLHttpRequest",
   "polyfillName": "XMLHttpRequest",
   "coreWeb": {
     "name": "XMLHttpRequest",

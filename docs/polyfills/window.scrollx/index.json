@@ -1,5 +1,6 @@
 {
   "name": "Window.scrollX",
+  "slug": "Window.scrollX",
   "polyfillName": "~viewport",
   "coreWeb": {
     "name": "~viewport",

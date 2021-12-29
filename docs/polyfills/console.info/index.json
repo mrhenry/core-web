@@ -1,5 +1,6 @@
 {
   "name": "console.info",
+  "slug": "console.info",
   "polyfillName": "console.info",
   "coreWeb": {
     "name": "console.info",

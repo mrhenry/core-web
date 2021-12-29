@@ -1,5 +1,6 @@
 {
   "name": "DocumentFragment.prototype.prepend",
+  "slug": "DocumentFragment.prototype.prepend",
   "polyfillName": "DocumentFragment.prototype.prepend",
   "coreWeb": {
     "name": "DocumentFragment.prototype.prepend",

@@ -1,5 +1,6 @@
 {
   "name": "Element.prototype.animate",
+  "slug": "Element.prototype.animate",
   "polyfillName": "WebAnimations",
   "coreWeb": {
     "name": "WebAnimations",

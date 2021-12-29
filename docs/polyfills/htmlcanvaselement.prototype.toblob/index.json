@@ -1,5 +1,6 @@
 {
   "name": "HTMLCanvasElement.prototype.toBlob",
+  "slug": "HTMLCanvasElement.prototype.toBlob",
   "polyfillName": "HTMLCanvasElement.prototype.toBlob",
   "coreWeb": {
     "name": "HTMLCanvasElement.prototype.toBlob",

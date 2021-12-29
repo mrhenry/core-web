@@ -1,5 +1,6 @@
 {
   "name": "Window.scrollBy",
+  "slug": "Window.scrollBy",
   "polyfillName": "smoothscroll",
   "coreWeb": {
     "name": "smoothscroll",

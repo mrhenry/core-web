@@ -1,5 +1,6 @@
 {
   "name": "Event",
+  "slug": "Event",
   "polyfillName": "Event",
   "coreWeb": {
     "name": "Event",

@@ -1,5 +1,6 @@
 {
   "name": "DOMTokenList.prototype.forEach",
+  "slug": "DOMTokenList.prototype.forEach",
   "polyfillName": "DOMTokenList.prototype.forEach",
   "coreWeb": {
     "name": "DOMTokenList.prototype.forEach",

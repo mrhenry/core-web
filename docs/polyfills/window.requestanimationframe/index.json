@@ -1,5 +1,6 @@
 {
   "name": "Window.requestAnimationFrame",
+  "slug": "Window.requestAnimationFrame",
   "polyfillName": "requestAnimationFrame",
   "coreWeb": {
     "name": "requestAnimationFrame",

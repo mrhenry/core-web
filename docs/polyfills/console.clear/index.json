@@ -1,5 +1,6 @@
 {
   "name": "console.clear",
+  "slug": "console.clear",
   "polyfillName": "console.clear",
   "coreWeb": {
     "name": "console.clear",

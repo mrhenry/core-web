@@ -1,5 +1,6 @@
 {
   "name": "Element.prototype.getAttributeNames",
+  "slug": "Element.prototype.getAttributeNames",
   "polyfillName": "Element.prototype.getAttributeNames",
   "coreWeb": {
     "name": "Element.prototype.getAttributeNames",

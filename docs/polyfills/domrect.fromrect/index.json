@@ -1,5 +1,6 @@
 {
   "name": "DOMRect.fromRect",
+  "slug": "DOMRect.fromRect",
   "polyfillName": "DOMRect.fromRect",
   "coreWeb": {
     "name": "DOMRect.fromRect",

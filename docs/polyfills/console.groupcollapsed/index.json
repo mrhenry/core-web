@@ -1,5 +1,6 @@
 {
   "name": "console.groupCollapsed",
+  "slug": "console.groupCollapsed",
   "polyfillName": "console.groupCollapsed",
   "coreWeb": {
     "name": "console.groupCollapsed",

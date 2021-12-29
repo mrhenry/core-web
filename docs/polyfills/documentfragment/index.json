@@ -1,5 +1,6 @@
 {
   "name": "DocumentFragment",
+  "slug": "DocumentFragment",
   "polyfillName": "DocumentFragment",
   "coreWeb": {
     "name": "DocumentFragment",

@@ -1,0 +1,40 @@
+{
+  "name": "querySelector with :has pseudo class",
+  "slug": "querySelector-with-has-pseudo-class",
+  "polyfillName": "~element-qsa-has",
+  "coreWeb": {
+    "name": "~element-qsa-has",
+    "deps": [
+      "~element-qsa-scope",
+      "document.querySelector",
+      "Element"
+    ],
+    "browsers": {
+      "chrome": "*",
+      "edge": "*",
+      "firefox": "*",
+      "safari": "*",
+      "ie": "*",
+      "opera": "*"
+    },
+    "engines": {
+      "Blink": ">= 28",
+      "EdgeHTML": ">= 12",
+      "Gecko": ">= 1.7",
+      "WebKit": ">= 85",
+      "Trident": ">= 4.0",
+      "Presto": ">= 1"
+    },
+    "size": 9859,
+    "isAlias": false,
+    "providedByCoreWeb": true
+  },
+  "polyfilled": {
+    "chrome": "*",
+    "edge": "*",
+    "firefox": "*",
+    "ie": "*",
+    "opera": "*",
+    "safari": "*"
+  }
+}

@@ -1,5 +1,6 @@
 {
   "name": "Window.pageYOffset",
+  "slug": "Window.pageYOffset",
   "polyfillName": "~viewport",
   "coreWeb": {
     "name": "~viewport",

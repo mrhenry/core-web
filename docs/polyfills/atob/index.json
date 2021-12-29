@@ -1,5 +1,6 @@
 {
   "name": "atob",
+  "slug": "atob",
   "polyfillName": "atob",
   "coreWeb": {
     "name": "atob",

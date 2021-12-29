@@ -1,5 +1,6 @@
 {
   "name": "Window.customElements",
+  "slug": "Window.customElements",
   "polyfillName": "~custom-elements",
   "coreWeb": {
     "name": "~custom-elements",

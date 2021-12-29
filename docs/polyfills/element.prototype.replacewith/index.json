@@ -1,5 +1,6 @@
 {
   "name": "Element.prototype.replaceWith",
+  "slug": "Element.prototype.replaceWith",
   "polyfillName": "Element.prototype.replaceWith",
   "coreWeb": {
     "name": "Element.prototype.replaceWith",

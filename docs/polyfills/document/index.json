@@ -1,5 +1,6 @@
 {
   "name": "Document",
+  "slug": "Document",
   "polyfillName": "document",
   "coreWeb": {
     "name": "document",

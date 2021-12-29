@@ -1,5 +1,6 @@
 {
   "name": "Window",
+  "slug": "Window",
   "polyfillName": "Window",
   "coreWeb": {
     "name": "Window",

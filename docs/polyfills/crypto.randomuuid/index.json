@@ -1,5 +1,6 @@
 {
   "name": "Crypto.randomUUID",
+  "slug": "Crypto.randomUUID",
   "polyfillName": "crypto.randomUUID",
   "coreWeb": {
     "name": "crypto.randomUUID",

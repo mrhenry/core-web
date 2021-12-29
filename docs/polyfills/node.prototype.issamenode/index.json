@@ -1,5 +1,6 @@
 {
   "name": "Node.prototype.isSameNode",
+  "slug": "Node.prototype.isSameNode",
   "polyfillName": "Node.prototype.isSameNode",
   "coreWeb": {
     "name": "Node.prototype.isSameNode",

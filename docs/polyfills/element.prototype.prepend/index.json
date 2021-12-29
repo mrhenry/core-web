@@ -1,5 +1,6 @@
 {
   "name": "Element.prototype.prepend",
+  "slug": "Element.prototype.prepend",
   "polyfillName": "Element.prototype.prepend",
   "coreWeb": {
     "name": "Element.prototype.prepend",

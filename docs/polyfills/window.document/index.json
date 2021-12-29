@@ -1,5 +1,6 @@
 {
   "name": "Window.document",
+  "slug": "Window.document",
   "polyfillName": "document",
   "coreWeb": {
     "name": "document",

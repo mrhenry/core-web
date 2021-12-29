@@ -1,5 +1,6 @@
 {
   "name": "console.trace",
+  "slug": "console.trace",
   "polyfillName": "console.trace",
   "coreWeb": {
     "name": "console.trace",

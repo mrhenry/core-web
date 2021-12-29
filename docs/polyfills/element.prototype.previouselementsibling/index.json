@@ -1,5 +1,6 @@
 {
   "name": "Element.prototype.previousElementSibling",
+  "slug": "Element.prototype.previousElementSibling",
   "polyfillName": "Element.prototype.previousElementSibling",
   "coreWeb": {
     "name": "Element.prototype.previousElementSibling",

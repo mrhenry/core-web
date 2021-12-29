@@ -1,5 +1,6 @@
 {
   "name": "Location.origin",
+  "slug": "Location.origin",
   "polyfillName": "location.origin",
   "coreWeb": {
     "name": "location.origin",

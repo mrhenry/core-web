@@ -1,5 +1,6 @@
 {
   "name": "HTMLSelectElement.prototype.selectedOptions",
+  "slug": "HTMLSelectElement.prototype.selectedOptions",
   "polyfillName": "HTMLSelectElement.prototype.selectedOptions",
   "coreWeb": {
     "name": "HTMLSelectElement.prototype.selectedOptions",

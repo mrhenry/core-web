@@ -1,5 +1,6 @@
 {
   "name": "Element.prototype.closest",
+  "slug": "Element.prototype.closest",
   "polyfillName": "Element.prototype.closest",
   "coreWeb": {
     "name": "Element.prototype.closest",

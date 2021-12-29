@@ -1,5 +1,6 @@
 {
   "name": "Window.getComputedStyle",
+  "slug": "Window.getComputedStyle",
   "polyfillName": "getComputedStyle",
   "coreWeb": {
     "name": "getComputedStyle",

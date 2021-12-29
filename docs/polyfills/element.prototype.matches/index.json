@@ -1,5 +1,6 @@
 {
   "name": "Element.prototype.matches",
+  "slug": "Element.prototype.matches",
   "polyfillName": "Element.prototype.matches",
   "coreWeb": {
     "name": "Element.prototype.matches",

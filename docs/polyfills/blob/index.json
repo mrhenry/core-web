@@ -1,5 +1,6 @@
 {
   "name": "Blob",
+  "slug": "Blob",
   "polyfillName": "Blob",
   "coreWeb": {
     "name": "Blob",

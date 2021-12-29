@@ -1,5 +1,6 @@
 {
   "name": "HTMLTemplateElement",
+  "slug": "HTMLTemplateElement",
   "polyfillName": "HTMLTemplateElement",
   "coreWeb": {
     "name": "HTMLTemplateElement",

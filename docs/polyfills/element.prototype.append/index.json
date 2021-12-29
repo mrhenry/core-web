@@ -1,5 +1,6 @@
 {
   "name": "Element.prototype.append",
+  "slug": "Element.prototype.append",
   "polyfillName": "Element.prototype.append",
   "coreWeb": {
     "name": "Element.prototype.append",

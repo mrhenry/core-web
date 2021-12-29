@@ -1,5 +1,6 @@
 {
   "name": "Document.querySelector",
+  "slug": "Document.querySelector",
   "polyfillName": "document.querySelector",
   "coreWeb": {
     "name": "document.querySelector",

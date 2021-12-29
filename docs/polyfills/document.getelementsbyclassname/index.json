@@ -1,5 +1,6 @@
 {
   "name": "Document.getElementsByClassName",
+  "slug": "Document.getElementsByClassName",
   "polyfillName": "document.getElementsByClassName",
   "coreWeb": {
     "name": "document.getElementsByClassName",

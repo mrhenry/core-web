@@ -1,5 +1,6 @@
 {
   "name": "HTMLDocument",
+  "slug": "HTMLDocument",
   "polyfillName": "HTMLDocument",
   "coreWeb": {
     "name": "HTMLDocument",

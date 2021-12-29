@@ -1,5 +1,6 @@
 {
   "name": "console.debug",
+  "slug": "console.debug",
   "polyfillName": "console.debug",
   "coreWeb": {
     "name": "console.debug",

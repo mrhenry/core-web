@@ -1,5 +1,6 @@
 {
   "name": "MutationObserver",
+  "slug": "MutationObserver",
   "polyfillName": "MutationObserver",
   "coreWeb": {
     "name": "MutationObserver",

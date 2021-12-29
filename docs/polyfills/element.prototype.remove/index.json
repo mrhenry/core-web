@@ -1,5 +1,6 @@
 {
   "name": "Element.prototype.remove",
+  "slug": "Element.prototype.remove",
   "polyfillName": "Element.prototype.remove",
   "coreWeb": {
     "name": "Element.prototype.remove",

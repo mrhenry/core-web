@@ -1,5 +1,6 @@
 {
   "name": "console.group",
+  "slug": "console.group",
   "polyfillName": "console.group",
   "coreWeb": {
     "name": "console.group",

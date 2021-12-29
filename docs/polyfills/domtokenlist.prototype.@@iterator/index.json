@@ -1,5 +1,6 @@
 {
   "name": "DOMTokenList.prototype.@@iterator",
+  "slug": "DOMTokenList.prototype.@@iterator",
   "polyfillName": "DOMTokenList.prototype.@@iterator",
   "coreWeb": {
     "name": "DOMTokenList.prototype.@@iterator",

@@ -1,5 +1,6 @@
 {
   "name": "console.groupEnd",
+  "slug": "console.groupEnd",
   "polyfillName": "console.groupEnd",
   "coreWeb": {
     "name": "console.groupEnd",

@@ -1,5 +1,6 @@
 {
   "name": "console.exception",
+  "slug": "console.exception",
   "polyfillName": "console.exception",
   "coreWeb": {
     "name": "console.exception",

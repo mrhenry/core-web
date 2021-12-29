@@ -1,5 +1,6 @@
 {
   "name": "DocumentFragment.prototype.append",
+  "slug": "DocumentFragment.prototype.append",
   "polyfillName": "DocumentFragment.prototype.append",
   "coreWeb": {
     "name": "DocumentFragment.prototype.append",

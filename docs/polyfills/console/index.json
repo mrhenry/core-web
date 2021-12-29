@@ -1,5 +1,6 @@
 {
   "name": "console",
+  "slug": "console",
   "polyfillName": "console",
   "coreWeb": {
     "name": "console",

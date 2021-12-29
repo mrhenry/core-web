@@ -1,5 +1,6 @@
 {
   "name": "Navigator.geolocation",
+  "slug": "Navigator.geolocation",
   "polyfillName": "navigator.geolocation",
   "coreWeb": {
     "name": "navigator.geolocation",

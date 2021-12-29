@@ -1,5 +1,6 @@
 {
   "name": "console.profile",
+  "slug": "console.profile",
   "polyfillName": "console.profile",
   "coreWeb": {
     "name": "console.profile",

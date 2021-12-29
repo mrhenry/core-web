@@ -1,5 +1,6 @@
 {
   "name": "Window.devicePixelRatio",
+  "slug": "Window.devicePixelRatio",
   "polyfillName": "devicePixelRatio",
   "coreWeb": {
     "name": "devicePixelRatio",

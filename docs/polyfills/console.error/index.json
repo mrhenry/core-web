@@ -1,5 +1,6 @@
 {
   "name": "console.error",
+  "slug": "console.error",
   "polyfillName": "console.error",
   "coreWeb": {
     "name": "console.error",

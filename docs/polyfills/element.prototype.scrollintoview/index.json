@@ -1,5 +1,6 @@
 {
   "name": "Element.prototype.scrollIntoView",
+  "slug": "Element.prototype.scrollIntoView",
   "polyfillName": "smoothscroll",
   "coreWeb": {
     "name": "smoothscroll",

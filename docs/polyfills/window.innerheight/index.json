@@ -1,5 +1,6 @@
 {
   "name": "Window.innerHeight",
+  "slug": "Window.innerHeight",
   "polyfillName": "~viewport",
   "coreWeb": {
     "name": "~viewport",

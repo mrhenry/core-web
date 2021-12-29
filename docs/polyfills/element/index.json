@@ -1,5 +1,6 @@
 {
   "name": "Element",
+  "slug": "Element",
   "polyfillName": "Element",
   "coreWeb": {
     "name": "Element",

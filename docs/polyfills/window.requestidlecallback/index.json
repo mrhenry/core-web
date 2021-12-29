@@ -1,5 +1,6 @@
 {
   "name": "Window.requestIdleCallback",
+  "slug": "Window.requestIdleCallback",
   "polyfillName": "requestIdleCallback",
   "coreWeb": {
     "name": "requestIdleCallback",

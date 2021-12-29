@@ -1,5 +1,6 @@
 {
   "name": "console.log",
+  "slug": "console.log",
   "polyfillName": "console.log",
   "coreWeb": {
     "name": "console.log",

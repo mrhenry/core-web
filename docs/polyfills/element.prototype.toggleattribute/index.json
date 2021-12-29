@@ -1,5 +1,6 @@
 {
   "name": "Element.prototype.toggleAttribute",
+  "slug": "Element.prototype.toggleAttribute",
   "polyfillName": "Element.prototype.toggleAttribute",
   "coreWeb": {
     "name": "Element.prototype.toggleAttribute",

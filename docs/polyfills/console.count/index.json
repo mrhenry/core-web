@@ -1,5 +1,6 @@
 {
   "name": "console.count",
+  "slug": "console.count",
   "polyfillName": "console.count",
   "coreWeb": {
     "name": "console.count",

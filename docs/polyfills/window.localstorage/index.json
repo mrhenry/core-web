@@ -1,5 +1,6 @@
 {
   "name": "Window.localStorage",
+  "slug": "Window.localStorage",
   "polyfillName": "localStorage",
   "coreWeb": {
     "name": "localStorage",

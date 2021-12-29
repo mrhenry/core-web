@@ -1,5 +1,6 @@
 {
   "name": "DOMTokenList.prototype.replace",
+  "slug": "DOMTokenList.prototype.replace",
   "polyfillName": "DOMTokenList.prototype.replace",
   "coreWeb": {
     "name": "DOMTokenList.prototype.replace",

@@ -1,5 +1,6 @@
 {
   "name": "console.warn",
+  "slug": "console.warn",
   "polyfillName": "console.warn",
   "coreWeb": {
     "name": "console.warn",

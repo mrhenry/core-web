@@ -1,5 +1,6 @@
 {
   "name": "TextEncoder",
+  "slug": "TextEncoder",
   "polyfillName": "TextEncoder",
   "coreWeb": {
     "name": "TextEncoder",

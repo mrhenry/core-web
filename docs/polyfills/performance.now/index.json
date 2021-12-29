@@ -1,5 +1,6 @@
 {
   "name": "Performance.now",
+  "slug": "Performance.now",
   "polyfillName": "performance.now",
   "coreWeb": {
     "name": "performance.now",

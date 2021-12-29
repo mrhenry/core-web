@@ -1,5 +1,6 @@
 {
   "name": "IntersectionObserverEntry",
+  "slug": "IntersectionObserverEntry",
   "polyfillName": "IntersectionObserverEntry",
   "coreWeb": {
     "name": "IntersectionObserverEntry",

@@ -1,5 +1,6 @@
 {
   "name": "NodeList.prototype.forEach",
+  "slug": "NodeList.prototype.forEach",
   "polyfillName": "NodeList.prototype.forEach",
   "coreWeb": {
     "name": "NodeList.prototype.forEach",

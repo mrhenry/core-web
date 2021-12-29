@@ -1,5 +1,6 @@
 {
   "name": "HTMLInputElement.prototype.valueAsDate",
+  "slug": "HTMLInputElement.prototype.valueAsDate",
   "polyfillName": "HTMLInputElement.prototype.valueAsDate",
   "coreWeb": {
     "name": "HTMLInputElement.prototype.valueAsDate",

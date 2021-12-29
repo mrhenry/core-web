@@ -1,5 +1,6 @@
 {
   "name": "Document.visibilityState",
+  "slug": "Document.visibilityState",
   "polyfillName": "document.visibilityState",
   "coreWeb": {
     "name": "document.visibilityState",

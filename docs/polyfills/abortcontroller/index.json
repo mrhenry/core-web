@@ -1,5 +1,6 @@
 {
   "name": "AbortController",
+  "slug": "AbortController",
   "polyfillName": "AbortController",
   "coreWeb": {
     "name": "AbortController",

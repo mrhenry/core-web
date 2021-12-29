@@ -1,5 +1,6 @@
 {
   "name": "Element.prototype.after",
+  "slug": "Element.prototype.after",
   "polyfillName": "Element.prototype.after",
   "coreWeb": {
     "name": "Element.prototype.after",

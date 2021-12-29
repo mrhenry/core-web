@@ -1,5 +1,6 @@
 {
   "name": "Window.matchMedia",
+  "slug": "Window.matchMedia",
   "polyfillName": "matchMedia",
   "coreWeb": {
     "name": "matchMedia",

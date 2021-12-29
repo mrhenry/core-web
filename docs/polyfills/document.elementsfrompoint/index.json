@@ -1,5 +1,6 @@
 {
   "name": "Document.elementsFromPoint",
+  "slug": "Document.elementsFromPoint",
   "polyfillName": "document.elementsFromPoint",
   "coreWeb": {
     "name": "document.elementsFromPoint",

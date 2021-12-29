@@ -1,5 +1,6 @@
 {
   "name": "Element.prototype.classList",
+  "slug": "Element.prototype.classList",
   "polyfillName": "Element.prototype.classList",
   "coreWeb": {
     "name": "Element.prototype.classList",

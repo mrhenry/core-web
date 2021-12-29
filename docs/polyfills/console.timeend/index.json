@@ -1,5 +1,6 @@
 {
   "name": "console.timeEnd",
+  "slug": "console.timeEnd",
   "polyfillName": "console.timeEnd",
   "coreWeb": {
     "name": "console.timeEnd",

@@ -1,5 +1,6 @@
 {
   "name": "console.dirxml",
+  "slug": "console.dirxml",
   "polyfillName": "console.dirxml",
   "coreWeb": {
     "name": "console.dirxml",

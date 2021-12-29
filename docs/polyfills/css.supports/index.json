@@ -1,5 +1,6 @@
 {
   "name": "CSS.supports",
+  "slug": "CSS.supports",
   "polyfillName": "CSS.supports",
   "coreWeb": {
     "name": "CSS.supports",

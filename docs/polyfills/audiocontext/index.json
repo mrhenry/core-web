@@ -1,5 +1,6 @@
 {
   "name": "AudioContext",
+  "slug": "AudioContext",
   "polyfillName": "AudioContext",
   "coreWeb": {
     "name": "AudioContext",

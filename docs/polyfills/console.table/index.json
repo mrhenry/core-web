@@ -1,5 +1,6 @@
 {
   "name": "console.table",
+  "slug": "console.table",
   "polyfillName": "console.table",
   "coreWeb": {
     "name": "console.table",

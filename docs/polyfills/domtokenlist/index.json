@@ -1,5 +1,6 @@
 {
   "name": "DOMTokenList",
+  "slug": "DOMTokenList",
   "polyfillName": "DOMTokenList",
   "coreWeb": {
     "name": "DOMTokenList",

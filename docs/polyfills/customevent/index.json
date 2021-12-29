@@ -1,5 +1,6 @@
 {
   "name": "CustomEvent",
+  "slug": "CustomEvent",
   "polyfillName": "CustomEvent",
   "coreWeb": {
     "name": "CustomEvent",

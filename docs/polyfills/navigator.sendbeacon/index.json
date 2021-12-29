@@ -1,5 +1,6 @@
 {
   "name": "Navigator.sendBeacon",
+  "slug": "Navigator.sendBeacon",
   "polyfillName": "navigator.sendBeacon",
   "coreWeb": {
     "name": "navigator.sendBeacon",

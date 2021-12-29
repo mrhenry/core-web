@@ -1,5 +1,6 @@
 {
   "name": "Element.prototype.before",
+  "slug": "Element.prototype.before",
   "polyfillName": "Element.prototype.before",
   "coreWeb": {
     "name": "Element.prototype.before",

@@ -1,5 +1,6 @@
 {
   "name": "Screen.orientation",
+  "slug": "Screen.orientation",
   "polyfillName": "screen.orientation",
   "coreWeb": {
     "name": "screen.orientation",
