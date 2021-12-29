@@ -1,4 +1,4 @@
-// Do this first before we trash the garbage collector.
+// // Do this first before we trash the garbage collector.
 import "./test_requestIdleCallback.js";
 import "./test_requestAnimationFrame.js";
 import "./test_setImmediate.js";

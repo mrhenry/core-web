@@ -19,59 +19,6 @@
 			return querySelectorAllWithHasElement.apply(this, arguments);
 		};
 
-		// polyfill Element#matches
-		if (global.Element.prototype.matches) {
-			var matchesWithHasElement = polyfill(global.Element.prototype.matches);
-
-			global.Element.prototype.matches = function matches(selectors) {
-				return matchesWithHasElement.apply(this, arguments);
-			};
-		}
-
-		// polyfill Element#closest
-		if (global.Element.prototype.closest) {
-			var closestWithHasElement = polyfill(global.Element.prototype.closest);
-
-			global.Element.prototype.closest = function closest(selectors) {
-				return closestWithHasElement.apply(this, arguments);
-			};
-		}
-
-		// DOCUMENT
-		if ('Document' in global && 'prototype' in global.Document) {
-			// polyfill Document#querySelector
-			var querySelectorWithHasDocument = polyfill(global.Document.prototype.querySelector);
-
-			global.Document.prototype.querySelector = function querySelector(selectors) {
-				return querySelectorWithHasDocument.apply(this, arguments);
-			};
-
-			// polyfill Document#querySelectorAll
-			var querySelectorAllWithHasDocument = polyfill(global.Document.prototype.querySelectorAll);
-
-			global.Document.prototype.querySelectorAll = function querySelectorAll(selectors) {
-				return querySelectorAllWithHasDocument.apply(this, arguments);
-			};
-
-			// polyfill Document#matches
-			if (global.Document.prototype.matches) {
-				var matchesWithHasDocument = polyfill(global.Document.prototype.matches);
-
-				global.Document.prototype.matches = function matches(selectors) {
-					return matchesWithHasDocument.apply(this, arguments);
-				};
-			}
-
-			// polyfill Document#closest
-			if (global.Document.prototype.closest) {
-				var closestWithHasDocument = polyfill(global.Document.prototype.closest);
-
-				global.Document.prototype.closest = function closest(selectors) {
-					return closestWithHasDocument.apply(this, arguments);
-				};
-			}
-		}
-
 		function pseudoClassHasInnerQuery(query) {
 			var current = '';
 			var depth = 0;
@@ -314,7 +261,7 @@
 			}
 		}
 
-		function polyfill(qsa) {
+		function polyfill(qsa, returnAfterFirst) {
 			return function (selectors) {
 				if ((selectors.indexOf(':has(') === -1) || !pseudoClassHasInnerQuery(selectors)) {
 					return qsa.apply(this, arguments);
@@ -333,7 +280,6 @@
 
 				var attrs = [];
 				var newQuery = replaceAllWithTempAttr(selectors, function (inner, attr) {
-					console.log(inner);
 					attrs.push(attr);
 
 					var selectorParts = splitSelector(inner);
