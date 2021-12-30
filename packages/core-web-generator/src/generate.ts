@@ -13,6 +13,7 @@ import { generateMappings } from './generate-mappings';
 import { generateElementQsaScope } from './custom-polyfills/generate-element-qsa-scope';
 import { generateCryptoRandomUUID } from './custom-polyfills/generate-crypto-randomuuid';
 import * as semver from 'semver';
+import { generateElementQsaSHas } from './custom-polyfills/generate-element-qsa-has';
 
 genAll();
 
@@ -57,6 +58,7 @@ async function genAll() {
 	// custom polyfills
 	await generateWebComponents(mapping);
 	await generateElementQsaScope(mapping);
+	await generateElementQsaSHas(mapping);
 	await generateCryptoRandomUUID(mapping);
 
 	// aliases

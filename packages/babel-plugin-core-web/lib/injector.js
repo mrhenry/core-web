@@ -15,6 +15,7 @@ const newExpressionMatcherMap = require("./matchers/__new_expression_matcher_map
 const newExpressionMatcherStringLiterals = require("./matchers/__new_expression_matcher_string_literals");
 const newExpressionMatcherStringLiteralsMap = require("./matchers/__new_expression_matcher_string_literals_map.json");
 const elementQsaScopeMatchers = require("./matchers/element_qsa_scope_matchers.json");
+const elementQsaHasMatchers = require("./matchers/element_qsa_has_matchers.json");
 
 class Injector {
 	constructor(features, opts = {}) {
@@ -130,13 +131,12 @@ class Injector {
 		this._handleGeneric(path, state, matchers);
 	}
 
-	handleElementQsaScopeCallExpression(path, state) {
+	handleElementQsaCallExpression(path, state) {
 		if (
 			!path.node ||
 			!path.node.callee ||
 			!path.node.callee.property ||
-			path.node.callee.property.type !== 'Identifier' ||
-			path.node.callee.property.name !== 'querySelectorAll'
+			path.node.callee.property.type !== 'Identifier'
 		) {
 			return;
 		}
@@ -149,13 +149,23 @@ class Injector {
 		}
 
 		if (path.node.arguments[0].type === 'StringLiteral') {
-			if (/:scope(?![\w-])/i.test(path.node.arguments[0].value)) {
+			if (path.node.arguments[0].value.indexOf(':scope') > -1) {
 				this._handleGeneric(
 					{
 						node: path.node.callee
 					},
 					state,
 					elementQsaScopeMatchers
+				);
+			}
+
+			if (path.node.arguments[0].value.indexOf(':has(') > -1) {
+				this._handleGeneric(
+					{
+						node: path.node.callee
+					},
+					state,
+					elementQsaHasMatchers
 				);
 			}
 		}
@@ -174,7 +184,7 @@ class Injector {
 					return false;
 				}
 
-				if (/:scope(?![\w-])/i.test(x.value.cooked)) {
+				if (x.value.cooked.indexOf(':scope') > -1) {
 					return true;
 				}
 
@@ -188,6 +198,32 @@ class Injector {
 					},
 					state,
 					elementQsaScopeMatchers
+				);
+			}
+
+			const quasisElWithHas = path.node.arguments[0].quasis.find((x) => {
+				if (!x.value) {
+					return false;
+				}
+
+				if (!x.value.cooked) {
+					return false;
+				}
+
+				if (x.value.cooked.indexOf(':has(') > -1) {
+					return true;
+				}
+
+				return false;
+			});
+
+			if (!!quasisElWithHas) {
+				this._handleGeneric(
+					{
+						node: path.node.callee
+					},
+					state,
+					elementQsaHasMatchers
 				);
 			}
 		}

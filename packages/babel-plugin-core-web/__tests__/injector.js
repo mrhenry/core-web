@@ -34,6 +34,7 @@ function main() {
 	testNewExpressions();
 	testNewExpressionsWithStringLiterals();
 	testQSAScope();
+	testQSAHas();
 }
 
 function testIdentifiers() {
@@ -176,7 +177,51 @@ function testQSAScope() {
 
 		const parsed = parser.parseExpression(testCase.expression);
 
-		injector.handleElementQsaScopeCallExpression({ node: parsed }, {});
+		injector.handleElementQsaCallExpression({ node: parsed }, {});
+		assert.ok(injector.importSet.has(testCase.feature), `expected import set to have : ${testCase.feature}, got : ${JSON.stringify(Array.from(injector.importSet))}`);
+	}
+}
+
+function testQSAHas() {
+	const testCases = [
+		{
+			expression: "document.querySelectorAll(`:has(${'p:last-child'})`)",
+			feature: '~element-qsa-has',
+			featureSet: featureSetChrome17,
+		},
+		{
+			expression: "document.querySelectorAll(':has(div)')",
+			feature: '~element-qsa-has',
+			featureSet: featureSetChrome17,
+		},
+		{
+			expression: "document.querySelectorAll(':has(.foo)')",
+			feature: '~element-qsa-has',
+			featureSet: featureSetChrome17,
+		},
+		{
+			expression: "document.querySelectorAll('.foo:has()')",
+			feature: '~element-qsa-has',
+			featureSet: featureSetChrome17,
+		},
+		{
+			expression: "document.querySelectorAll('div :has()')",
+			feature: '~element-qsa-has',
+			featureSet: featureSetChrome17,
+		},
+	];
+
+	for (const testCase of testCases) {
+		const injector = new Injector(
+			testCase.featureSet,
+			{
+				debug: false,
+			}
+		);
+
+		const parsed = parser.parseExpression(testCase.expression);
+
+		injector.handleElementQsaCallExpression({ node: parsed }, {});
 		assert.ok(injector.importSet.has(testCase.feature), `expected import set to have : ${testCase.feature}, got : ${JSON.stringify(Array.from(injector.importSet))}`);
 	}
 }

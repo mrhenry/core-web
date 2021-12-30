@@ -102,10 +102,10 @@ ${cssTags(assetMap, 'index')}
 
 function allPolyfills(features, sitemap) {
 	const list = features.map((feature) => {
-		if (sitemap && sitemap[feature.name]) {
+		if (sitemap && sitemap[feature.polyfillName]) {
 			return html`
 		<li>
-			<a href="${sitemap[feature.name].toLowerCase()}">${dotsWBR(cleanName(feature.name))}</a>
+			<a href="${sitemap[feature.polyfillName].path.toLowerCase()}">${dotsWBR(cleanName(feature.name))}</a>
 		</li>
 	`;
 		}
