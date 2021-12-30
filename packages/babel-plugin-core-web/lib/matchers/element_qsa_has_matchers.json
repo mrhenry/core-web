@@ -1,0 +1,66 @@
+[
+    {
+        "feature": "~element-qsa-has",
+        "matcher": {
+            "type": "MemberExpression",
+            "object": {
+                "type": "Identifier",
+                "name": "$1",
+                "isVariable": true
+            },
+            "computed": false,
+            "property": {
+                "type": "Identifier",
+                "name": "querySelector"
+            }
+        }
+    },
+    {
+        "feature": "~element-qsa-has",
+        "matcher": {
+            "type": "MemberExpression",
+            "object": {
+                "type": "Identifier",
+                "name": "$1",
+                "isVariable": true
+            },
+            "computed": false,
+            "property": {
+                "type": "Identifier",
+                "name": "querySelectorAll"
+            }
+        }
+    },
+	{
+        "feature": "~element-qsa-has",
+        "matcher": {
+            "type": "MemberExpression",
+            "object": {
+                "type": "Identifier",
+                "name": "$1",
+                "isVariable": true
+            },
+            "computed": false,
+            "property": {
+                "type": "Identifier",
+                "name": "matches"
+            }
+        }
+    },
+	{
+        "feature": "~element-qsa-has",
+        "matcher": {
+            "type": "MemberExpression",
+            "object": {
+                "type": "Identifier",
+                "name": "$1",
+                "isVariable": true
+            },
+            "computed": false,
+            "property": {
+                "type": "Identifier",
+                "name": "closest"
+            }
+        }
+    }
+]

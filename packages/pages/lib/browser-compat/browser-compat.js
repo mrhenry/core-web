@@ -29,7 +29,10 @@ async function generate(assetMap) {
 
 		for (const entry of feature.data) {
 			entry.polyfillio = await polyfillLibrary.describePolyfill(entry.polyfillName);
-			sitemap[entry.name] = path.join('/polyfills/', entry.name, '/');
+			sitemap[entry.polyfillName] = {
+				path: path.join('/polyfills/', entry.slug, '/'),
+				title: entry.name,
+			};
 		}
 
 		compatArray.push(compat[key]);
@@ -63,24 +66,24 @@ async function generate(assetMap) {
 			}
 
 			allPolyfills.push(entry);
-			if (!fs.existsSync(path.join(__dirname, '../../dist/polyfills/', entry.name.toLowerCase() ))) {
-				fs.mkdirSync(path.join(__dirname, '../../dist/polyfills/', entry.name.toLowerCase()), {
+			if (!fs.existsSync(path.join(__dirname, '../../dist/polyfills/', entry.slug.toLowerCase() ))) {
+				fs.mkdirSync(path.join(__dirname, '../../dist/polyfills/', entry.slug.toLowerCase()), {
 					recursive: true
 				});
 			}
 
 			fs.writeFileSync(
-				path.join(__dirname, '../../dist/polyfills/', entry.name.toLowerCase(), 'index.json'),
+				path.join(__dirname, '../../dist/polyfills/', entry.slug.toLowerCase(), 'index.json'),
 				JSON.stringify(entry, null, 2)
 			);
 
 			fs.writeFileSync(
-				path.join(__dirname, '../../dist/polyfills/', entry.name.toLowerCase(), 'index.html'),
+				path.join(__dirname, '../../dist/polyfills/', entry.slug.toLowerCase(), 'index.html'),
 				polyfillCardHTML(assetMap, entry, sitemap)
 			);
 
 			fs.writeFileSync(
-				path.join(__dirname, '../../dist/polyfills/', entry.name.toLowerCase(), 'og-image.jpg'),
+				path.join(__dirname, '../../dist/polyfills/', entry.slug.toLowerCase(), 'og-image.jpg'),
 				await polyfillCardOGImage(entry)
 			);
 		}
@@ -147,6 +150,16 @@ function handleFeature(compat, name, feature) {
 			return;
 		}
 
+		if (name === '~element-qsa-has') {
+			mapQuerySelectorFeature(compat, `querySelector with :has pseudo class`, feature.name, feature);
+			return;
+		}
+
+		if (name === '~element-qsa-scope') {
+			mapQuerySelectorFeature(compat, `querySelector with :scope pseudo class`, feature.name, feature);
+			return;
+		}
+
 		console.log('skipped', feature.name);
 	}	
 }
@@ -178,6 +191,7 @@ function mapWindowFeatureAPI(compat, featureName, polyfillName, feature) {
 
 	compat['Window.' + featureName].data.push({
 		name: 'Window.' + featureName,
+		slug: 'Window.' + featureName,
 		polyfillName: polyfillName,
 		coreWeb: feature,
 		mdn: bcd.api.Window[featureName],
@@ -211,6 +225,7 @@ function mapWorkerGlobalScopeFeatureAPI(compat, featureName, polyfillName, featu
 
 	compat['self.' + featureName].data.push({
 		name: 'self.' + featureName,
+		slug: 'self.' + featureName,
 		polyfillName: polyfillName,
 		coreWeb: feature,
 		mdn: bcd.api.WorkerGlobalScope[featureName],
@@ -256,6 +271,7 @@ function mapPrototypeFeatureAPI(compat, featureName, polyfillName, feature) {
 
 	compat[featureName].data.push({
 		name: featureName,
+		slug: featureName,
 		polyfillName: polyfillName,
 		coreWeb: feature,
 		mdn: bcd.api[mainFeature][subFeature],
@@ -300,6 +316,7 @@ function mapPropertyFeatureAPI(compat, featureName, polyfillName, feature) {
 
 	compat[featureName].data.push({
 		name: featureName,
+		slug: featureName,
 		polyfillName: polyfillName,
 		coreWeb: feature,
 		mdn: bcd.api[mainFeature][subFeature],
@@ -333,6 +350,7 @@ function mapMainFeatureAPI(compat, featureName, polyfillName, feature) {
 
 	compat[featureName].data.push({
 		name: featureName,
+		slug: featureName,
 		polyfillName: polyfillName,
 		coreWeb: feature,
 		mdn: bcd.api[featureName],
@@ -377,6 +395,7 @@ function mapPrototypeFeatureBuiltin(compat, featureName, polyfillName, feature) 
 
 	compat[featureName].data.push({
 		name: featureName,
+		slug: featureName,
 		polyfillName: polyfillName,
 		coreWeb: feature,
 		mdn: bcd.javascript.builtins[mainFeature][subFeature],
@@ -421,6 +440,7 @@ function mapPropertyFeatureBuiltin(compat, featureName, polyfillName, feature) {
 
 	compat[featureName].data.push({
 		name: featureName,
+		slug: featureName,
 		polyfillName: polyfillName,
 		coreWeb: feature,
 		mdn: bcd.javascript.builtins[mainFeature][subFeature],
@@ -454,11 +474,39 @@ function mapMainFeatureBuiltin(compat, featureName, polyfillName, feature) {
 
 	compat[featureName].data.push({
 		name: featureName,
+		slug: featureName,
 		polyfillName: polyfillName,
 		coreWeb: feature,
 		mdn: bcd.javascript.builtins[featureName],
 		polyfilled: polyfilled,
 		native: native,
+	});
+
+	return true;
+}
+
+function mapQuerySelectorFeature(compat, prettyName, polyfillName, feature) {
+	let polyfilled = {};
+	for (const browser of coreWebBrowsers) {
+		const mdnBrowser = browsersCoreWebToMDN(browser);
+		if (
+			mdnBrowser
+		) {
+			polyfilled[browser] = (feature.browsers || {})[browser];
+		}
+	}
+
+	compat[prettyName] = compat[prettyName] || {
+		key: prettyName,
+		data: [],
+	};
+
+	compat[prettyName].data.push({
+		name: prettyName,
+		slug: prettyName.replaceAll(' ', '-').replaceAll(':', ''),
+		polyfillName: polyfillName,
+		coreWeb: feature,
+		polyfilled: polyfilled,
 	});
 
 	return true;

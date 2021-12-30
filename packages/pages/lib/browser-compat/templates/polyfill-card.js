@@ -20,10 +20,10 @@ module.exports = function polyfillCardHTML(assetMap, feature, sitemap) {
 	<meta name="distribution" content="Global">
 	<meta property="og:type" content="website">
 	<meta property="og:title" content="${dotsZeroWidthSpace(cleanName(feature.name))} | core-web">
-	<meta property="og:url" content="https://core-web.mrhenry.studio${sitemap[feature.name].toLowerCase()}">
+	<meta property="og:url" content="https://core-web.mrhenry.studio${sitemap[feature.polyfillName].path.toLowerCase()}">
 	<meta property="og:image:width" content="1200">
 	<meta property="og:image:height" content="628">
-	<meta property="og:image" content="https://core-web.mrhenry.studio${sitemap[feature.name].toLowerCase()}og-image.jpg">
+	<meta property="og:image" content="https://core-web.mrhenry.studio${sitemap[feature.polyfillName].path.toLowerCase()}og-image.jpg">
 	<meta property="og:image:alt" content="core-web : ${cleanName(feature.name)}">
 	<meta property="og:site_name" content="core-web">
 	<meta property="og:description" content="Polyfill for ${cleanName(feature.name)}">
@@ -31,7 +31,7 @@ module.exports = function polyfillCardHTML(assetMap, feature, sitemap) {
 	<meta name="twitter:site" content="@wearemrhenry">
 	<meta name="twitter:title" content="${dotsZeroWidthSpace(cleanName(feature.name))} | core-web">
 	<meta name="twitter:description" content="Polyfill for ${cleanName(feature.name)}">
-	<meta name="twitter:image" content="https://core-web.mrhenry.studio${sitemap[feature.name].toLowerCase()}og-image.jpg">
+	<meta name="twitter:image" content="https://core-web.mrhenry.studio${sitemap[feature.polyfillName].path.toLowerCase()}og-image.jpg">
 	<meta name="twitter:image:alt" content="core-web : ${cleanName(feature.name)}">
 
 	<meta name="theme-color" content="#ffdc45" media="(prefers-color-scheme: light)">
@@ -75,6 +75,8 @@ module.exports = function polyfillCardHTML(assetMap, feature, sitemap) {
 				<h1>
 					${dotsWBR(cleanName(feature.name))} <span style="font-family: monospace; font-size: 0.8em;">polyfill</span>
 				</h1>
+
+				<pre><code>import "@mrhenry/core-web/modules/${feature.polyfillName}";</code></pre>
 			</div>
 		</div>
 
@@ -113,7 +115,7 @@ function dependencies(feature, sitemap) {
 		if (sitemap && sitemap[dep]) {
 			return html`
 		<li>
-			<a href="${sitemap[dep].toLowerCase()}">${dotsWBR(cleanName(dep))}</a>
+			<a href="${sitemap[dep].path.toLowerCase()}">${dotsWBR(cleanName(sitemap[dep].title))}</a>
 		</li>
 	`;
 		}
