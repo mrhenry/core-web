@@ -45,14 +45,6 @@ if ("Proxy" in self) {
 			assert.equal(formatElements(result1), formatElements(result2));
 		}
 
-		// To test expected diffs from spec/wpt
-		function compareSelectorAllNotEqual(assert, scope, selector1, selector2) {
-			let result1 = Array.from(scope.querySelectorAll(selector1));
-			let result2 = Array.from(scope.querySelectorAll(selector2));
-			assert.step(`not : ${selector1} and ${selector2} returns same elements on ${scope.id}`);
-			assert.notEqual(formatElements(result1), formatElements(result2));
-		}
-
 		var supportsIsQueries = false;
 		try {
 			document.body.querySelector(":is(div)");
@@ -65,6 +57,49 @@ if ("Proxy" in self) {
 
 		QUnit.test("accepts broken selector lists", function (assert) {
 			assert.ok(document.body.querySelector(":has(*, :does-not-exist)"));
+		});
+
+		QUnit.test("escaped", function (assert) {
+			assert.ok(!document.body.querySelector("\\\\:has(*)"));
+			assert.throws(() => {
+				document.body.querySelector("\\:has(*)");
+			});
+
+			assert.ok(!document.body.querySelector(":has(\\\\:scope)"));
+			assert.ok(!document.body.querySelector(":has(\\:scope)"));
+
+			const fixture = document.getElementById("qunit-fixture");
+			fixture.innerHTML = "<div :scope></div>";
+
+			assert.ok(document.body.querySelector(":has([\\:scope])"));
+			fixture.innerHTML = "<div :has()></div>";
+			assert.ok(document.body.querySelector(":has([\\:has\\(\\)])"));
+			assert.ok(document.body.querySelector("[\\:has\\(\\)]"));
+		});
+
+		QUnit.test("quoted", function (assert) {
+			const fixture = document.getElementById("qunit-fixture");
+
+			assert.throws(() => {
+				document.body.querySelector("':has(*)'");
+			});
+			assert.throws(() => {
+				document.body.querySelector("\":has(*)\"");
+			});
+
+			
+			fixture.innerHTML = "<div foo=':scope'></div>";
+			assert.ok(document.body.querySelector(":has([foo=':scope'])"));
+
+			fixture.innerHTML = "<div foo=':has()'></div>";
+			assert.ok(document.body.querySelector(":has([foo=':has()'])"));
+			assert.ok(document.body.querySelector("[foo=':has()']"));
+
+			assert.ok(!document.body.querySelector(":has(foo=':has()')"));
+
+			assert.throws(() => {
+				document.body.querySelector("foo=':has()'");
+			});
 		});
 
 		QUnit.test(":has basic", function (assert) {
@@ -185,15 +220,15 @@ if ("Proxy" in self) {
 		
 			// descendants of a scope element cannot have the scope element as its descendant
 			testSelectorAllFromScope(assert, scope1, ":has(:scope)", []);
-			testSelectorAllFromScope(assert, scope1, ":has(:scope .c)", [d02]);
+			testSelectorAllFromScope(assert, scope1, ":has(:scope .c)", []);
 			testSelectorAllFromScope(assert, scope1, ":has(.a :scope)", []);
 
 			// there can be more simple and efficient alternative for a ':scope' in ':has'
-			testSelectorAllFromScope(assert, scope1, ".a:has(:scope) .c", []);
+			testSelectorAllFromScope(assert, scope1, ".a:has(:scope) .c", [d02, d03]);
 			testSelectorAllFromScope(assert, scope2, ".a:has(:scope) .c", []);
 
 			if (supportsIsQueries) {
-				compareSelectorAllNotEqual(assert, scope1, ".a:has(:scope) .c", ":is(.a :scope .c)");
+				compareSelectorAll(assert, scope1, ".a:has(:scope) .c", ":is(.a :scope .c)");
 				compareSelectorAll(assert, scope2, ".a:has(:scope) .c", ":is(.a :scope .c)");
 				testSelectorAllFromScope(assert, scope1, ".c:has(:is(:scope .d))", [d02, d03]);
 				compareSelectorAll(assert, scope1, ".c:has(:is(:scope .d))", ":scope .c:has(.d)");
@@ -202,7 +237,7 @@ if ("Proxy" in self) {
 				compareSelectorAll(assert, scope2, ".c:has(:is(:scope .d))", ":scope .c:has(.d)");
 				compareSelectorAll(assert, scope2, ".c:has(:is(:scope .d))", ".c:has(.d)");
 			} else {
-				assert.step("not : .a:has(:scope) .c and :is(.a :scope .c) returns same elements on scope1");
+				assert.step(".a:has(:scope) .c and :is(.a :scope .c) returns same elements on scope1");
 				assert.step(".a:has(:scope) .c and :is(.a :scope .c) returns same elements on scope2");
 				assert.step(".c:has(:is(:scope .d)) matches expected elements from scope scope1");
 				assert.step(".c:has(:is(:scope .d)) and :scope .c:has(.d) returns same elements on scope1");
@@ -218,7 +253,7 @@ if ("Proxy" in self) {
 				":has(.a :scope) matches expected elements from scope scope1",
 				".a:has(:scope) .c matches expected elements from scope scope1",
 				".a:has(:scope) .c matches expected elements from scope scope2",
-				"not : .a:has(:scope) .c and :is(.a :scope .c) returns same elements on scope1",
+				".a:has(:scope) .c and :is(.a :scope .c) returns same elements on scope1",
 				".a:has(:scope) .c and :is(.a :scope .c) returns same elements on scope2",
 				".c:has(:is(:scope .d)) matches expected elements from scope scope1",
 				".c:has(:is(:scope .d)) and :scope .c:has(.d) returns same elements on scope1",
