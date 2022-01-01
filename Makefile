@@ -1,4 +1,4 @@
-packages := ./ ./packages/babel-plugin-core-web ./packages/core-web ./packages/core-web-example ./packages/core-web-generator ./packages/core-web-tests ./packages/pages
+packages := ./ ./packages/babel-plugin-core-web ./packages/core-web ./packages/core-web-example ./packages/core-web-generator ./packages/core-web-tests ./packages/pages ./packages/pages-worker
 
 node_modules: ./package-lock.json
 	rm -rf ./node_modules
