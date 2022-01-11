@@ -13,7 +13,7 @@
   },
   "dependencies": {
     "@babel/parser": "^7.16.6",
-    "@babel/traverse": "^7.16.5",
+    "@babel/traverse": "^7.16.8",
     "@babel/types": "^7.16.0",
     "@mdn/browser-compat-data": "^4.1.2",
     "@webcomponents/custom-elements": "^1.5.0",
