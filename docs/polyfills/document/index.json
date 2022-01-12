@@ -548,13 +548,19 @@
         "spec_url": "https://drafts.csswg.org/css-animations/#eventdef-animationevent-animationcancel",
         "support": {
           "chrome": {
-            "version_added": false
+            "version_added": "83",
+            "partial_implementation": true,
+            "notes": "The <code>onanimationcancel</code> property is not supported. To listen to this event, use <code>document.addEventListener('animationcancel', function() {});</code>. See <a href='https://crbug.com/868224'>bug 868224</a>."
           },
           "chrome_android": {
-            "version_added": false
+            "version_added": "83",
+            "partial_implementation": true,
+            "notes": "The <code>onanimationcancel</code> property is not supported. To listen to this event, use <code>document.addEventListener('animationcancel', function() {});</code>. See <a href='https://crbug.com/868224'>bug 868224</a>."
           },
           "edge": {
-            "version_added": false
+            "version_added": "83",
+            "partial_implementation": true,
+            "notes": "The <code>onanimationcancel</code> property is not supported. To listen to this event, use <code>document.addEventListener('animationcancel', function() {});</code>. See <a href='https://crbug.com/868224'>bug 868224</a>."
           },
           "firefox": {
             "version_added": "54"
@@ -566,10 +572,14 @@
             "version_added": false
           },
           "opera": {
-            "version_added": false
+            "version_added": "69",
+            "partial_implementation": true,
+            "notes": "The <code>onanimationcancel</code> property is not supported. To listen to this event, use <code>document.addEventListener('animationcancel', function() {});</code>. See <a href='https://crbug.com/868224'>bug 868224</a>."
           },
           "opera_android": {
-            "version_added": false
+            "version_added": "59",
+            "partial_implementation": true,
+            "notes": "The <code>onanimationcancel</code> property is not supported. To listen to this event, use <code>document.addEventListener('animationcancel', function() {});</code>. See <a href='https://crbug.com/868224'>bug 868224</a>."
           },
           "safari": [
             {
@@ -608,10 +618,14 @@
             }
           ],
           "samsunginternet_android": {
-            "version_added": false
+            "version_added": "13.0",
+            "partial_implementation": true,
+            "notes": "The <code>onanimationcancel</code> property is not supported. To listen to this event, use <code>document.addEventListener('animationcancel', function() {});</code>. See <a href='https://crbug.com/868224'>bug 868224</a>."
           },
           "webview_android": {
-            "version_added": false
+            "version_added": "83",
+            "partial_implementation": true,
+            "notes": "The <code>onanimationcancel</code> property is not supported. To listen to this event, use <code>document.addEventListener('animationcancel', function() {});</code>. See <a href='https://crbug.com/868224'>bug 868224</a>."
           }
         },
         "status": {
@@ -1765,7 +1779,7 @@
             "version_added": "18"
           },
           "edge": {
-            "version_added": "≤18"
+            "version_added": "12"
           },
           "firefox": {
             "version_added": "6"
@@ -1774,7 +1788,7 @@
             "version_added": "6"
           },
           "ie": {
-            "version_added": false
+            "version_added": "9"
           },
           "opera": {
             "version_added": "15"
@@ -2421,7 +2435,7 @@
             "version_added": "1.0"
           },
           "webview_android": {
-            "version_added": "≤37"
+            "version_added": "3"
           }
         },
         "status": {
@@ -2519,7 +2533,7 @@
             "version_added": "1.0"
           },
           "webview_android": {
-            "version_added": "≤37"
+            "version_added": "3"
           }
         },
         "status": {
@@ -3002,7 +3016,7 @@
             "version_added": "18"
           },
           "edge": {
-            "version_added": "≤18"
+            "version_added": "12"
           },
           "firefox": {
             "version_added": "6"
@@ -3011,7 +3025,7 @@
             "version_added": "6"
           },
           "ie": {
-            "version_added": false
+            "version_added": "9"
           },
           "opera": {
             "version_added": "15"
@@ -4059,7 +4073,7 @@
             "version_added": "1.0"
           },
           "webview_android": {
-            "version_added": "≤37"
+            "version_added": "3"
           }
         },
         "status": {
@@ -6023,7 +6037,8 @@
                 "name": "#storage-access-api",
                 "value_to_set": "Enabled"
               }
-            ]
+            ],
+            "notes": "See <a href='https://crbug.com/989663'>bug 989663</a>."
           },
           "chrome_android": {
             "version_added": "78",
@@ -6033,7 +6048,8 @@
                 "name": "#storage-access-api",
                 "value_to_set": "Enabled"
               }
-            ]
+            ],
+            "notes": "See <a href='https://crbug.com/989663'>bug 989663</a>."
           },
           "edge": {
             "version_added": "85"
@@ -6081,7 +6097,7 @@
           }
         },
         "status": {
-          "experimental": true,
+          "experimental": false,
           "standard_track": false,
           "deprecated": false
         }
@@ -6223,7 +6239,7 @@
           "firefox": [
             {
               "version_added": "18",
-              "notes": "Since Firefox 56 it also returns <code>true</code> on Mac when the window is completely hidden by another non-translucent application."
+              "notes": "Since Firefox 56 it also returns <code>true</code> on macOS when the window is completely hidden by another non-translucent application."
             },
             {
               "version_added": "10",
@@ -6234,7 +6250,7 @@
           "firefox_android": [
             {
               "version_added": "18",
-              "notes": "Since Firefox 56 it also returns <code>true</code> on Mac when the window is completely hidden by another non-translucent application."
+              "notes": "Since Firefox 56 it also returns <code>true</code> on macOS when the window is completely hidden by another non-translucent application."
             },
             {
               "version_added": "10",
@@ -7781,7 +7797,7 @@
             "version_added": "1.0"
           },
           "webview_android": {
-            "version_added": "≤37"
+            "version_added": "3"
           }
         },
         "status": {
@@ -10035,7 +10051,8 @@
                 "name": "#storage-access-api",
                 "value_to_set": "Enabled"
               }
-            ]
+            ],
+            "notes": "See <a href='https://crbug.com/989663'>bug 989663</a>."
           },
           "chrome_android": {
             "version_added": "78",
@@ -10045,7 +10062,8 @@
                 "name": "#storage-access-api",
                 "value_to_set": "Enabled"
               }
-            ]
+            ],
+            "notes": "See <a href='https://crbug.com/989663'>bug 989663</a>."
           },
           "edge": {
             "version_added": "85"
@@ -10093,7 +10111,7 @@
           }
         },
         "status": {
-          "experimental": true,
+          "experimental": false,
           "standard_track": false,
           "deprecated": false
         }
@@ -10859,13 +10877,13 @@
         "spec_url": "https://drafts.csswg.org/css-transitions/#transitioncancel",
         "support": {
           "chrome": {
-            "version_added": false
+            "version_added": "74"
           },
           "chrome_android": {
-            "version_added": false
+            "version_added": "74"
           },
           "edge": {
-            "version_added": false
+            "version_added": "79"
           },
           "firefox": {
             "version_added": "53"
@@ -10877,10 +10895,10 @@
             "version_added": false
           },
           "opera": {
-            "version_added": false
+            "version_added": "62"
           },
           "opera_android": {
-            "version_added": false
+            "version_added": "53"
           },
           "safari": [
             {
@@ -10919,10 +10937,10 @@
             }
           ],
           "samsunginternet_android": {
-            "version_added": false
+            "version_added": "11.0"
           },
           "webview_android": {
-            "version_added": false
+            "version_added": "74"
           }
         },
         "status": {
