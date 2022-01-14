@@ -41,7 +41,7 @@ fs.readFile('./lib/css/index.css', async (err, css) => {
 				root: './lib/css'
 			}),
 			postcssPresetEnv({
-				stage: 1,
+				stage: 2,
 				browsers: target.presetEnvBrowsers,
 				autoprefixer: {
 					grid: true,
@@ -52,6 +52,7 @@ fs.readFile('./lib/css/index.css', async (err, css) => {
 					'focus-visible-pseudo-class': false, // requires JS
 					'focus-within-pseudo-class': false, // requires JS
 					'has-pseudo-class': false, //  requires JS
+					'prefers-color-scheme-query': false, // requires JS
 				},
 			}),
 			postcssSplitByMedia({
