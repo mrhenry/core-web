@@ -13,8 +13,8 @@ async function generateCryptoRandomUUID(mapping) {
         chrome: "<92",
         edge: "<92",
         firefox: "<95",
-        safari: "*",
-        ios_saf: "*",
+        safari: "<15.3",
+        ios_saf: "<15.3",
         ie: ">10",
         opera: "<78"
     };
