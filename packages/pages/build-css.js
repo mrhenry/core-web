@@ -41,19 +41,14 @@ fs.readFile('./lib/css/index.css', async (err, css) => {
 				root: './lib/css'
 			}),
 			postcssPresetEnv({
-				stage: 2,
+				stage: 1,
+				minimumVendorImplementations: 2,
 				browsers: target.presetEnvBrowsers,
 				autoprefixer: {
 					grid: true,
 					supports: false,
 				},
-				features: {
-					'blank-pseudo-class': false, // requires JS
-					'focus-visible-pseudo-class': false, // requires JS
-					'focus-within-pseudo-class': false, // requires JS
-					'has-pseudo-class': false, //  requires JS
-					'prefers-color-scheme-query': false, // requires JS
-				},
+				enableClientSidePolyfills: false,
 			}),
 			postcssSplitByMedia({
 				onManifest: (m) => {

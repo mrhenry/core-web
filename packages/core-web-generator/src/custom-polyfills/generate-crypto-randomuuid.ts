@@ -17,8 +17,8 @@ export async function generateCryptoRandomUUID(mapping: Array<Feature>) {
 		chrome: "<92",
 		edge: "<92",
 		firefox: "<95",
-		safari: "*", // TODO : set this when shipped in Safari
-		ios_saf: "*", // TODO : set this when shipped in Safari
+		safari: "<15.3",
+		ios_saf: "<15.3",
 		ie: ">10",
 		opera: "<78"
 	};
