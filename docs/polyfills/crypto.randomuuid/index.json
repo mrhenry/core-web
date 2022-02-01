@@ -10,8 +10,8 @@
       "chrome": "<92",
       "edge": "<92",
       "firefox": "<95",
-      "safari": "*",
-      "ios_saf": "*",
+      "safari": "<15.3",
+      "ios_saf": "<15.3",
       "ie": ">10",
       "opera": "<78"
     },
@@ -91,8 +91,8 @@
     "firefox": "<95",
     "ie": ">10",
     "opera": "<78",
-    "safari": "*",
-    "ios_saf": "*"
+    "safari": "<15.3",
+    "ios_saf": "<15.3"
   },
   "native": {
     "android": {
