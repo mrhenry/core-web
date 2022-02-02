@@ -19,7 +19,7 @@
       "Blink": "28 - 91",
       "EdgeHTML": ">= 12",
       "Gecko": "1.7 - 94",
-      "WebKit": ">= 85",
+      "WebKit": "85 - 612.3.6",
       "Trident": ">= 7.0",
       "Presto": ">= 1"
     },
@@ -30,7 +30,7 @@
   "mdn": {
     "__compat": {
       "mdn_url": "https://developer.mozilla.org/docs/Web/API/Crypto/randomUUID",
-      "spec_url": "https://wicg.github.io/uuid/#extensions-to-the-crypto-interface",
+      "spec_url": "https://w3c.github.io/webcrypto/#Crypto-method-randomUUID",
       "description": "<code>randomUUID()</code>",
       "support": {
         "chrome": {
