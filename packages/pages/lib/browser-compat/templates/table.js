@@ -32,7 +32,7 @@ module.exports = function tableHTML(feature) {
 				<tr><th></th>${engines.map((engine) => { return html`<th>${engine}</th>` }).join('')}</tr>
 			</thead>
 			<tbody>
-				<tr><td>polyfill-library</td>${engines.map((engine) => { return html`<td>${(!!compat.coreWeb.engines[engine]) ? compat.coreWeb.engines[engine] : '-'}</td>` }).join('')}</tr>
+				<tr><td>${ compat.coreWeb.providedByCoreWeb ? 'core-web' : 'polyfill-library' }</td>${engines.map((engine) => { return html`<td>${(!!compat.coreWeb.engines[engine]) ? compat.coreWeb.engines[engine] : '-'}</td>` }).join('')}</tr>
 				<tr><td>native</td>${engines.map((engine) => { return html`<td>${(!!engineMappingNative[engine]) ? engineMappingNative[engine] : '-'}</td>` }).join('')}</tr>
 			</tbody>
 		</table>
