@@ -42,13 +42,14 @@ fs.readFile('./lib/css/index.css', async (err, css) => {
 			}),
 			postcssPresetEnv({
 				stage: 1,
-				minimumVendorImplementations: 2,
+				minimumVendorImplementations: 0,
 				browsers: target.presetEnvBrowsers,
 				autoprefixer: {
 					grid: true,
 					supports: false,
 				},
 				enableClientSidePolyfills: false,
+				preserve: true,
 			}),
 			postcssSplitByMedia({
 				onManifest: (m) => {

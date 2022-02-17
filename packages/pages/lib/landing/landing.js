@@ -51,7 +51,8 @@ async function generate(assetMap) {
 	<meta name="twitter:image" content="https://core-web.mrhenry.studio/og-image.jpg">
 	<meta name="twitter:image:alt" content="core-web : Automatically import polyfills">
 
-	<meta name="theme-color" content="#ffdc45" media="(prefers-color-scheme: light)">
+	<meta name="theme-color" content="color(display-p3 0.99981 0.84371 0.15828)" media="(prefers-color-scheme: light) and (color-gamut: p3)">
+	<meta name="theme-color" content="#ffd73c" media="(prefers-color-scheme: light) and not (color-gamut: p3)">
 	<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)">
 
 	<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🕸</text></svg>">

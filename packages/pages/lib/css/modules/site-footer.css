@@ -1,5 +1,7 @@
 .site-footer {
 	background-color: #ff5d10;
+	background-color: color(display-p3 .96996 .43434 .15587);
+	background-color: oklch(71% 0.219 42.53);
 	box-sizing: border-box;
 	color: black;
 	padding-bottom: 5rem;
@@ -65,4 +67,8 @@
 		flex-basis: 50%;
 		flex-shrink: 0;
 	}
+}
+
+.site-footer__logo svg circle {
+	fill: var(--color-yellow);
 }
