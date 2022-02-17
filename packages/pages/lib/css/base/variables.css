@@ -1,5 +1,6 @@
 :root {
-	--color-background: #ffdc45;
+	--color-yellow: oklch(88.9% 0.201 93.72);
+	--color-background: oklch(88.9% 0.201 93.72);
 	--color-foreground: black;
 	--color-card-background: white;
 }

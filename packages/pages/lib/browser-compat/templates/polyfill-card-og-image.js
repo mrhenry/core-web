@@ -20,7 +20,7 @@ async function polyfillCardOGImage(feature) {
 	const canvas = createCanvas(1200, 628);
 	const ctx = canvas.getContext('2d');
 
-	ctx.fillStyle = '#ffd41b';
+	ctx.fillStyle = '#ffd73c';
 	ctx.fillRect(0, 0, 1200, 628);
 
 	ctx.strokeStyle = '#000';
@@ -58,7 +58,7 @@ async function allPolyfillsCardOGImage() {
 
 	const title = 'All polyfills'
 
-	ctx.fillStyle = '#ffd41b';
+	ctx.fillStyle = '#ffd73c';
 	ctx.fillRect(0, 0, 1200, 628);
 
 	ctx.strokeStyle = '#000';
@@ -83,7 +83,7 @@ async function coreWebCardOGImage() {
 
 	const title = 'Automatically import polyfills'
 
-	ctx.fillStyle = '#ffd41b';
+	ctx.fillStyle = '#ffd73c';
 	ctx.fillRect(0, 0, 1200, 628);
 
 	ctx.strokeStyle = '#000';
