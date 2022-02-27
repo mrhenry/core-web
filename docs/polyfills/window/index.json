@@ -1886,6 +1886,82 @@
         }
       }
     },
+    "dump": {
+      "__compat": {
+        "mdn_url": "https://developer.mozilla.org/docs/Web/API/Window/dump",
+        "support": {
+          "chrome": {
+            "version_added": false
+          },
+          "chrome_android": {
+            "version_added": false
+          },
+          "edge": {
+            "version_added": false
+          },
+          "firefox": [
+            {
+              "version_added": "1.5",
+              "partial_implementation": true,
+              "notes": "By default, this method exists and can be called, but does nothing unless enabled in the browser's preferences."
+            },
+            {
+              "version_added": "1.5",
+              "flags": [
+                {
+                  "type": "preference",
+                  "name": "browser.dom.window.dump.enabled",
+                  "value_to_set": "true"
+                }
+              ]
+            }
+          ],
+          "firefox_android": [
+            {
+              "version_added": "4",
+              "partial_implementation": true,
+              "notes": "By default, this method exists and can be called, but does nothing unless enabled in the browser's preferences."
+            },
+            {
+              "version_added": "4",
+              "flags": [
+                {
+                  "type": "preference",
+                  "name": "browser.dom.window.dump.enabled",
+                  "value_to_set": "true"
+                }
+              ]
+            }
+          ],
+          "ie": {
+            "version_added": false
+          },
+          "opera": {
+            "version_added": false
+          },
+          "opera_android": {
+            "version_added": false
+          },
+          "safari": {
+            "version_added": false
+          },
+          "safari_ios": {
+            "version_added": false
+          },
+          "samsunginternet_android": {
+            "version_added": false
+          },
+          "webview_android": {
+            "version_added": false
+          }
+        },
+        "status": {
+          "experimental": false,
+          "standard_track": false,
+          "deprecated": false
+        }
+      }
+    },
     "error_event": {
       "__compat": {
         "description": "<code>error</code> event",
@@ -2344,24 +2420,23 @@
     "gamepadconnected_event": {
       "__compat": {
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/Window/gamepadconnected_event",
-        "spec_url": "https://w3c.github.io/gamepad/#the-gamepadconnected-event",
+        "spec_url": "https://w3c.github.io/gamepad/#event-gamepadconnected",
         "description": "<code>gamepadconnected</code> event",
         "support": {
-          "chrome": [
-            {
-              "version_added": "35"
-            },
-            {
-              "version_added": "21",
-              "version_removed": "35",
-              "prefix": "webkit"
-            }
-          ],
+          "chrome": {
+            "version_added": "35",
+            "partial_implementation": true,
+            "notes": "The event handler property (<code>ongamepadconnected</code>) is not supported; see <a href='https://crbug.com/1192878'>bug 1192878</a>."
+          },
           "chrome_android": {
-            "version_added": "37"
+            "version_added": "37",
+            "partial_implementation": true,
+            "notes": "The event handler property (<code>ongamepadconnected</code>) is not supported; see <a href='https://crbug.com/1192878'>bug 1192878</a>."
           },
           "edge": {
-            "version_added": "≤18"
+            "version_added": "≤18",
+            "partial_implementation": true,
+            "notes": "The event handler property (<code>ongamepadconnected</code>) is not supported; see <a href='https://crbug.com/1192878'>bug 1192878</a>."
           },
           "firefox": {
             "version_added": "29"
@@ -2372,18 +2447,15 @@
           "ie": {
             "version_added": false
           },
-          "opera": [
-            {
-              "version_added": "22"
-            },
-            {
-              "version_added": "15",
-              "version_removed": "22",
-              "prefix": "webkit"
-            }
-          ],
+          "opera": {
+            "version_added": "22",
+            "partial_implementation": true,
+            "notes": "The event handler property (<code>ongamepadconnected</code>) is not supported; see <a href='https://crbug.com/1192878'>bug 1192878</a>."
+          },
           "opera_android": {
-            "version_added": "24"
+            "version_added": "24",
+            "partial_implementation": true,
+            "notes": "The event handler property (<code>ongamepadconnected</code>) is not supported; see <a href='https://crbug.com/1192878'>bug 1192878</a>."
           },
           "safari": {
             "version_added": "10.1"
@@ -2392,10 +2464,14 @@
             "version_added": false
           },
           "samsunginternet_android": {
-            "version_added": "3.0"
+            "version_added": "3.0",
+            "partial_implementation": true,
+            "notes": "The event handler property (<code>ongamepadconnected</code>) is not supported; see <a href='https://crbug.com/1192878'>bug 1192878</a>."
           },
           "webview_android": {
-            "version_added": "37"
+            "version_added": "37",
+            "partial_implementation": true,
+            "notes": "The event handler property (<code>ongamepadconnected</code>) is not supported; see <a href='https://crbug.com/1192878'>bug 1192878</a>."
           }
         },
         "status": {
@@ -2408,24 +2484,23 @@
     "gamepaddisconnected_event": {
       "__compat": {
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/Window/gamepaddisconnected_event",
-        "spec_url": "https://w3c.github.io/gamepad/#the-gamepaddisconnected-event",
+        "spec_url": "https://w3c.github.io/gamepad/#event-gamepaddisconnected",
         "description": "<code>gamepaddisconnected</code> event",
         "support": {
-          "chrome": [
-            {
-              "version_added": "35"
-            },
-            {
-              "version_added": "21",
-              "version_removed": "35",
-              "prefix": "webkit"
-            }
-          ],
+          "chrome": {
+            "version_added": "35",
+            "partial_implementation": true,
+            "notes": "The event handler property (<code>ongamepaddisconnected</code>) is not supported; see <a href='https://crbug.com/1192878'>bug 1192878</a>."
+          },
           "chrome_android": {
-            "version_added": "37"
+            "version_added": "37",
+            "partial_implementation": true,
+            "notes": "The event handler property (<code>ongamepaddisconnected</code>) is not supported; see <a href='https://crbug.com/1192878'>bug 1192878</a>."
           },
           "edge": {
-            "version_added": "≤18"
+            "version_added": "≤18",
+            "partial_implementation": true,
+            "notes": "The event handler property (<code>ongamepaddisconnected</code>) is not supported; see <a href='https://crbug.com/1192878'>bug 1192878</a>."
           },
           "firefox": {
             "version_added": "29"
@@ -2436,18 +2511,15 @@
           "ie": {
             "version_added": false
           },
-          "opera": [
-            {
-              "version_added": "22"
-            },
-            {
-              "version_added": "15",
-              "version_removed": "22",
-              "prefix": "webkit"
-            }
-          ],
+          "opera": {
+            "version_added": "22",
+            "partial_implementation": true,
+            "notes": "The event handler property (<code>ongamepaddisconnected</code>) is not supported; see <a href='https://crbug.com/1192878'>bug 1192878</a>."
+          },
           "opera_android": {
-            "version_added": "24"
+            "version_added": "24",
+            "partial_implementation": true,
+            "notes": "The event handler property (<code>ongamepaddisconnected</code>) is not supported; see <a href='https://crbug.com/1192878'>bug 1192878</a>."
           },
           "safari": {
             "version_added": "10.1"
@@ -2456,10 +2528,14 @@
             "version_added": false
           },
           "samsunginternet_android": {
-            "version_added": "3.0"
+            "version_added": "3.0",
+            "partial_implementation": true,
+            "notes": "The event handler property (<code>ongamepaddisconnected</code>) is not supported; see <a href='https://crbug.com/1192878'>bug 1192878</a>."
           },
           "webview_android": {
-            "version_added": "37"
+            "version_added": "37",
+            "partial_implementation": true,
+            "notes": "The event handler property (<code>ongamepaddisconnected</code>) is not supported; see <a href='https://crbug.com/1192878'>bug 1192878</a>."
           }
         },
         "status": {
@@ -4359,340 +4435,6 @@
         }
       }
     },
-    "ongamepadconnected": {
-      "__compat": {
-        "mdn_url": "https://developer.mozilla.org/docs/Web/API/Window/ongamepadconnected",
-        "spec_url": "https://w3c.github.io/gamepad/#event-gamepadconnected",
-        "support": {
-          "chrome": [
-            {
-              "version_added": "35"
-            },
-            {
-              "version_added": "21",
-              "version_removed": "35",
-              "prefix": "webkit"
-            }
-          ],
-          "chrome_android": [
-            {
-              "version_added": "35"
-            },
-            {
-              "version_added": "25",
-              "version_removed": "35",
-              "prefix": "webkit"
-            }
-          ],
-          "edge": {
-            "version_added": "≤18"
-          },
-          "firefox": {
-            "version_added": "29"
-          },
-          "firefox_android": {
-            "version_added": "32"
-          },
-          "ie": {
-            "version_added": false
-          },
-          "opera": [
-            {
-              "version_added": "22"
-            },
-            {
-              "version_added": "15",
-              "version_removed": "22",
-              "prefix": "webkit"
-            }
-          ],
-          "opera_android": [
-            {
-              "version_added": "22"
-            },
-            {
-              "version_added": "14",
-              "version_removed": "22",
-              "prefix": "webkit"
-            }
-          ],
-          "safari": {
-            "version_added": "10.1"
-          },
-          "safari_ios": {
-            "version_added": false
-          },
-          "samsunginternet_android": [
-            {
-              "version_added": "3.0"
-            },
-            {
-              "prefix": "webkit",
-              "version_added": "1.5",
-              "version_removed": "3.0"
-            }
-          ],
-          "webview_android": {
-            "version_added": false
-          }
-        },
-        "status": {
-          "experimental": false,
-          "standard_track": true,
-          "deprecated": false
-        }
-      },
-      "secure_context_required": {
-        "__compat": {
-          "description": "Secure context required",
-          "support": {
-            "chrome": {
-              "version_added": "86",
-              "flags": [
-                {
-                  "type": "preference",
-                  "name": "#restrict-gamepad-access",
-                  "value_to_set": "Enabled"
-                }
-              ]
-            },
-            "chrome_android": {
-              "version_added": "86",
-              "flags": [
-                {
-                  "type": "preference",
-                  "name": "#restrict-gamepad-access",
-                  "value_to_set": "Enabled"
-                }
-              ]
-            },
-            "edge": {
-              "version_added": "86",
-              "flags": [
-                {
-                  "type": "preference",
-                  "name": "#restrict-gamepad-access",
-                  "value_to_set": "Enabled"
-                }
-              ]
-            },
-            "firefox": {
-              "version_added": "91"
-            },
-            "firefox_android": {
-              "version_added": "91"
-            },
-            "ie": {
-              "version_added": false
-            },
-            "opera": {
-              "version_added": "72",
-              "flags": [
-                {
-                  "type": "preference",
-                  "name": "#restrict-gamepad-access",
-                  "value_to_set": "Enabled"
-                }
-              ]
-            },
-            "opera_android": {
-              "version_added": "61",
-              "flags": [
-                {
-                  "type": "preference",
-                  "name": "#restrict-gamepad-access",
-                  "value_to_set": "Enabled"
-                }
-              ]
-            },
-            "safari": {
-              "version_added": false
-            },
-            "safari_ios": {
-              "version_added": false
-            },
-            "samsunginternet_android": {
-              "version_added": false
-            },
-            "webview_android": {
-              "version_added": false
-            }
-          },
-          "status": {
-            "experimental": true,
-            "standard_track": true,
-            "deprecated": false
-          }
-        }
-      }
-    },
-    "ongamepaddisconnected": {
-      "__compat": {
-        "mdn_url": "https://developer.mozilla.org/docs/Web/API/Window/ongamepaddisconnected",
-        "spec_url": "https://w3c.github.io/gamepad/#event-gamepaddisconnected",
-        "support": {
-          "chrome": [
-            {
-              "version_added": "35"
-            },
-            {
-              "version_added": "21",
-              "version_removed": "35",
-              "prefix": "webkit"
-            }
-          ],
-          "chrome_android": [
-            {
-              "version_added": "35"
-            },
-            {
-              "version_added": "25",
-              "version_removed": "35",
-              "prefix": "webkit"
-            }
-          ],
-          "edge": {
-            "version_added": "≤18"
-          },
-          "firefox": {
-            "version_added": "29"
-          },
-          "firefox_android": {
-            "version_added": "32"
-          },
-          "ie": {
-            "version_added": false
-          },
-          "opera": [
-            {
-              "version_added": "22"
-            },
-            {
-              "version_added": "15",
-              "version_removed": "22",
-              "prefix": "webkit"
-            }
-          ],
-          "opera_android": [
-            {
-              "version_added": "22"
-            },
-            {
-              "version_added": "14",
-              "version_removed": "22",
-              "prefix": "webkit"
-            }
-          ],
-          "safari": {
-            "version_added": "10.1"
-          },
-          "safari_ios": {
-            "version_added": false
-          },
-          "samsunginternet_android": [
-            {
-              "version_added": "3.0"
-            },
-            {
-              "prefix": "webkit",
-              "version_added": "1.5",
-              "version_removed": "3.0"
-            }
-          ],
-          "webview_android": {
-            "version_added": false
-          }
-        },
-        "status": {
-          "experimental": false,
-          "standard_track": true,
-          "deprecated": false
-        }
-      },
-      "secure_context_required": {
-        "__compat": {
-          "description": "Secure context required",
-          "support": {
-            "chrome": {
-              "version_added": "86",
-              "flags": [
-                {
-                  "type": "preference",
-                  "name": "#restrict-gamepad-access",
-                  "value_to_set": "Enabled"
-                }
-              ]
-            },
-            "chrome_android": {
-              "version_added": "86",
-              "flags": [
-                {
-                  "type": "preference",
-                  "name": "#restrict-gamepad-access",
-                  "value_to_set": "Enabled"
-                }
-              ]
-            },
-            "edge": {
-              "version_added": "86",
-              "flags": [
-                {
-                  "type": "preference",
-                  "name": "#restrict-gamepad-access",
-                  "value_to_set": "Enabled"
-                }
-              ]
-            },
-            "firefox": {
-              "version_added": "91"
-            },
-            "firefox_android": {
-              "version_added": "91"
-            },
-            "ie": {
-              "version_added": false
-            },
-            "opera": {
-              "version_added": "72",
-              "flags": [
-                {
-                  "type": "preference",
-                  "name": "#restrict-gamepad-access",
-                  "value_to_set": "Enabled"
-                }
-              ]
-            },
-            "opera_android": {
-              "version_added": "61",
-              "flags": [
-                {
-                  "type": "preference",
-                  "name": "#restrict-gamepad-access",
-                  "value_to_set": "Enabled"
-                }
-              ]
-            },
-            "safari": {
-              "version_added": false
-            },
-            "safari_ios": {
-              "version_added": false
-            },
-            "samsunginternet_android": {
-              "version_added": false
-            },
-            "webview_android": {
-              "version_added": false
-            }
-          },
-          "status": {
-            "experimental": true,
-            "standard_track": true,
-            "deprecated": false
-          }
-        }
-      }
-    },
     "online_event": {
       "__compat": {
         "description": "<code>online</code> event",
@@ -4882,11 +4624,23 @@
           },
           "firefox": [
             {
+              "version_added": "98",
+              "flags": [
+                {
+                  "type": "preference",
+                  "name": "dom.vr.enabled",
+                  "value_to_set": "true"
+                }
+              ]
+            },
+            {
               "version_added": "55",
+              "version_removed": "98",
               "notes": "Windows support was enabled in Firefox 55."
             },
             {
               "version_added": "64",
+              "version_removed": "98",
               "notes": "macOS support was enabled in Firefox 64."
             }
           ],
@@ -4917,7 +4671,7 @@
         },
         "status": {
           "experimental": true,
-          "standard_track": true,
+          "standard_track": false,
           "deprecated": true
         }
       }
@@ -4966,7 +4720,7 @@
         },
         "status": {
           "experimental": true,
-          "standard_track": true,
+          "standard_track": false,
           "deprecated": true
         }
       }
@@ -4994,11 +4748,23 @@
           },
           "firefox": [
             {
+              "version_added": "98",
+              "flags": [
+                {
+                  "type": "preference",
+                  "name": "dom.vr.enabled",
+                  "value_to_set": "true"
+                }
+              ]
+            },
+            {
               "version_added": "55",
+              "version_removed": "98",
               "notes": "Windows support was enabled in Firefox 55."
             },
             {
               "version_added": "64",
+              "version_removed": "98",
               "notes": "macOS support was enabled in Firefox 64."
             }
           ],
@@ -5031,7 +4797,7 @@
         },
         "status": {
           "experimental": true,
-          "standard_track": true,
+          "standard_track": false,
           "deprecated": true
         }
       }
@@ -5052,11 +4818,23 @@
           },
           "firefox": [
             {
+              "version_added": "98",
+              "flags": [
+                {
+                  "type": "preference",
+                  "name": "dom.vr.enabled",
+                  "value_to_set": "true"
+                }
+              ]
+            },
+            {
               "version_added": "55",
+              "version_removed": "98",
               "notes": "Windows support was enabled in Firefox 55."
             },
             {
               "version_added": "64",
+              "version_removed": "98",
               "notes": "macOS support was enabled in Firefox 64."
             }
           ],
@@ -5087,7 +4865,7 @@
         },
         "status": {
           "experimental": true,
-          "standard_track": true,
+          "standard_track": false,
           "deprecated": true
         }
       }
@@ -5119,11 +4897,23 @@
           },
           "firefox": [
             {
+              "version_added": "98",
+              "flags": [
+                {
+                  "type": "preference",
+                  "name": "dom.vr.enabled",
+                  "value_to_set": "true"
+                }
+              ]
+            },
+            {
               "version_added": "55",
+              "version_removed": "98",
               "notes": "Windows support was enabled in Firefox 55."
             },
             {
               "version_added": "64",
+              "version_removed": "98",
               "notes": "macOS support was enabled in Firefox 64."
             }
           ],
@@ -5156,7 +4946,7 @@
         },
         "status": {
           "experimental": true,
-          "standard_track": true,
+          "standard_track": false,
           "deprecated": true
         }
       }
@@ -5205,7 +4995,7 @@
         },
         "status": {
           "experimental": true,
-          "standard_track": true,
+          "standard_track": false,
           "deprecated": true
         }
       }
@@ -5254,7 +5044,7 @@
         },
         "status": {
           "experimental": true,
-          "standard_track": true,
+          "standard_track": false,
           "deprecated": true
         }
       }
@@ -5303,7 +5093,7 @@
         },
         "status": {
           "experimental": true,
-          "standard_track": true,
+          "standard_track": false,
           "deprecated": true
         }
       }
@@ -5336,11 +5126,23 @@
           },
           "firefox": [
             {
+              "version_added": "98",
+              "flags": [
+                {
+                  "type": "preference",
+                  "name": "dom.vr.enabled",
+                  "value_to_set": "true"
+                }
+              ]
+            },
+            {
               "version_added": "55",
+              "version_removed": "98",
               "notes": "Windows support was enabled in Firefox 55."
             },
             {
               "version_added": "64",
+              "version_removed": "98",
               "notes": "macOS support was enabled in Firefox 64."
             }
           ],
@@ -5373,7 +5175,7 @@
         },
         "status": {
           "experimental": true,
-          "standard_track": true,
+          "standard_track": false,
           "deprecated": true
         }
       }
@@ -9920,11 +9722,23 @@
           },
           "firefox": [
             {
+              "version_added": "98",
+              "flags": [
+                {
+                  "type": "preference",
+                  "name": "dom.vr.enabled",
+                  "value_to_set": "true"
+                }
+              ]
+            },
+            {
               "version_added": "55",
+              "version_removed": "98",
               "notes": "Windows support was enabled in Firefox 55."
             },
             {
               "version_added": "64",
+              "version_removed": "98",
               "notes": "macOS support was enabled in Firefox 64."
             }
           ],
@@ -9955,7 +9769,7 @@
         },
         "status": {
           "experimental": true,
-          "standard_track": true,
+          "standard_track": false,
           "deprecated": true
         }
       }
@@ -10005,7 +9819,7 @@
         },
         "status": {
           "experimental": true,
-          "standard_track": true,
+          "standard_track": false,
           "deprecated": true
         }
       }
@@ -10034,11 +9848,23 @@
           },
           "firefox": [
             {
+              "version_added": "98",
+              "flags": [
+                {
+                  "type": "preference",
+                  "name": "dom.vr.enabled",
+                  "value_to_set": "true"
+                }
+              ]
+            },
+            {
               "version_added": "55",
+              "version_removed": "98",
               "notes": "Windows support was enabled in Firefox 55."
             },
             {
               "version_added": "64",
+              "version_removed": "98",
               "notes": "macOS support was enabled in Firefox 64."
             }
           ],
@@ -10071,7 +9897,7 @@
         },
         "status": {
           "experimental": true,
-          "standard_track": true,
+          "standard_track": false,
           "deprecated": true
         }
       }
@@ -10092,11 +9918,23 @@
           },
           "firefox": [
             {
+              "version_added": "98",
+              "flags": [
+                {
+                  "type": "preference",
+                  "name": "dom.vr.enabled",
+                  "value_to_set": "true"
+                }
+              ]
+            },
+            {
               "version_added": "55",
+              "version_removed": "98",
               "notes": "Windows support was enabled in Firefox 55."
             },
             {
               "version_added": "64",
+              "version_removed": "98",
               "notes": "macOS support was enabled in Firefox 64."
             }
           ],
@@ -10127,7 +9965,7 @@
         },
         "status": {
           "experimental": true,
-          "standard_track": true,
+          "standard_track": false,
           "deprecated": true
         }
       }
@@ -10160,11 +9998,23 @@
           },
           "firefox": [
             {
+              "version_added": "98",
+              "flags": [
+                {
+                  "type": "preference",
+                  "name": "dom.vr.enabled",
+                  "value_to_set": "true"
+                }
+              ]
+            },
+            {
               "version_added": "55",
+              "version_removed": "98",
               "notes": "Windows support was enabled in Firefox 55."
             },
             {
               "version_added": "64",
+              "version_removed": "98",
               "notes": "macOS support was enabled in Firefox 64."
             }
           ],
@@ -10197,7 +10047,7 @@
         },
         "status": {
           "experimental": true,
-          "standard_track": true,
+          "standard_track": false,
           "deprecated": true
         }
       }
@@ -10247,7 +10097,7 @@
         },
         "status": {
           "experimental": true,
-          "standard_track": true,
+          "standard_track": false,
           "deprecated": true
         }
       }
@@ -10297,7 +10147,7 @@
         },
         "status": {
           "experimental": true,
-          "standard_track": true,
+          "standard_track": false,
           "deprecated": true
         }
       }
@@ -10347,7 +10197,7 @@
         },
         "status": {
           "experimental": true,
-          "standard_track": true,
+          "standard_track": false,
           "deprecated": true
         }
       }
@@ -10379,11 +10229,23 @@
           },
           "firefox": [
             {
+              "version_added": "98",
+              "flags": [
+                {
+                  "type": "preference",
+                  "name": "dom.vr.enabled",
+                  "value_to_set": "true"
+                }
+              ]
+            },
+            {
               "version_added": "55",
+              "version_removed": "98",
               "notes": "Windows support was enabled in Firefox 55."
             },
             {
               "version_added": "64",
+              "version_removed": "98",
               "notes": "macOS support was enabled in Firefox 64."
             }
           ],
@@ -10416,7 +10278,7 @@
         },
         "status": {
           "experimental": true,
-          "standard_track": true,
+          "standard_track": false,
           "deprecated": true
         }
       }
