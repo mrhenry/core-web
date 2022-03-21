@@ -30,7 +30,7 @@
     "@mrhenry/core-web": "*",
     "babel-loader": "^8.2.3",
     "browserstack-runner": "^0.9.4",
-    "canvas": "^2.9.0",
+    "canvas": "^2.9.1",
     "core-js": "^3.21.0",
     "cssnano": "^5.1.4",
     "polyfill-library": "^3.105.0",
