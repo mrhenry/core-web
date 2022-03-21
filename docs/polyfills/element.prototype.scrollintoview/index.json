@@ -19,7 +19,7 @@
       "safari": "*",
       "chrome": "* - 60",
       "ios_saf": "*",
-      "android": "*"
+      "android": "<61"
     },
     "engines": {
       "EdgeHTML": ">= 12",
@@ -170,7 +170,7 @@
     }
   },
   "polyfilled": {
-    "android": "*",
+    "android": "<61",
     "chrome": "* - 60",
     "edge": "<79",
     "firefox": "4 - 36",
@@ -260,7 +260,7 @@
       "safari": "*",
       "chrome": "* - 60",
       "ios_saf": "*",
-      "android": "*"
+      "android": "<61"
     },
     "install": {
       "module": "seamless-scroll-polyfill",

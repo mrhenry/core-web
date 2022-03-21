@@ -13,7 +13,7 @@
       "performance.now"
     ],
     "browsers": {
-      "android": "*",
+      "android": "<51",
       "bb": "*",
       "chrome": "< 51",
       "edge": "< 16",
@@ -26,7 +26,7 @@
       "op_mini": "*",
       "op_mob": "< 46",
       "opera": "< 45",
-      "safari": "< 12.2",
+      "safari": "< 12.1",
       "samsung_mob": "< 7"
     },
     "engines": {
@@ -538,13 +538,13 @@
     }
   },
   "polyfilled": {
-    "android": "*",
+    "android": "<51",
     "chrome": "< 51",
     "edge": "< 16",
     "firefox": "< 55",
     "ie": "*",
     "opera": "< 45",
-    "safari": "< 12.2",
+    "safari": "< 12.1",
     "ios_saf": "*"
   },
   "native": {
@@ -587,12 +587,12 @@
       "Function.prototype.bind",
       "performance.now"
     ],
-    "docs": "https://github.com/w3c/IntersectionObserver/blob/master/explainer.md",
+    "docs": "https://developer.mozilla.org/en-US/docs/Web/API/IntersectionObserver",
     "spec": "http://rawgit.com/w3c/IntersectionObserver/master/index.html",
     "notes": [],
     "repo": "https://github.com/w3c/IntersectionObserver",
     "browsers": {
-      "android": "*",
+      "android": "<51",
       "bb": "*",
       "chrome": "< 51",
       "edge": "< 16",
@@ -605,7 +605,7 @@
       "op_mini": "*",
       "op_mob": "< 46",
       "opera": "< 45",
-      "safari": "< 12.2",
+      "safari": "< 12.1",
       "samsung_mob": "< 7"
     },
     "detectSource": "\"IntersectionObserver\"in window&&\"IntersectionObserverEntry\"in window&&\"intersectionRatio\"in window.IntersectionObserverEntry.prototype\n",

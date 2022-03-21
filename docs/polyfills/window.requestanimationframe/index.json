@@ -6,7 +6,7 @@
     "name": "requestAnimationFrame",
     "deps": [],
     "browsers": {
-      "android": "*",
+      "android": "<37",
       "bb": "7",
       "chrome": "<46",
       "ie": "6 - 9",
@@ -149,7 +149,7 @@
     }
   },
   "polyfilled": {
-    "android": "*",
+    "android": "<37",
     "chrome": "<46",
     "firefox": "3.6 - 22",
     "ie": "6 - 9",
@@ -244,7 +244,7 @@
     "license": "MIT",
     "docs": "https://developer.mozilla.org/en-US/docs/Web/API/window/requestAnimationFrame",
     "browsers": {
-      "android": "*",
+      "android": "<37",
       "bb": "7",
       "chrome": "<46",
       "ie": "6 - 9",

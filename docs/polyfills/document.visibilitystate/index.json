@@ -14,7 +14,7 @@
     "browsers": {
       "firefox": "10 - 17",
       "safari": "4",
-      "android": "4.4 - *",
+      "android": "<4.4.3",
       "opera": "15 - 19",
       "chrome": "14 - 32"
     },
@@ -193,7 +193,7 @@
     }
   },
   "polyfilled": {
-    "android": "4.4 - *",
+    "android": "<4.4.3",
     "chrome": "14 - 32",
     "firefox": "10 - 17",
     "opera": "15 - 19",
@@ -277,7 +277,7 @@
     "browsers": {
       "firefox": "10 - 17",
       "safari": "4",
-      "android": "4.4 - *",
+      "android": "<4.4.3",
       "opera": "15 - 19",
       "chrome": "14 - 32"
     },

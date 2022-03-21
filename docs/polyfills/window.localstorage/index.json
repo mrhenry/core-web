@@ -5,6 +5,7 @@
   "coreWeb": {
     "name": "localStorage",
     "deps": [
+      "atob",
       "Window"
     ],
     "browsers": {
@@ -12,7 +13,7 @@
       "op_mini": "*"
     },
     "engines": {},
-    "size": 1241,
+    "size": 1480,
     "isAlias": false,
     "providedByCoreWeb": false
   },
@@ -118,6 +119,8 @@
     ],
     "dependencies": [
       "Array.prototype.forEach",
+      "Array.prototype.map",
+      "atob",
       "Window"
     ],
     "docs": "https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage",
@@ -128,9 +131,9 @@
     },
     "detectSource": "(function(){try{return self.localStorage.setItem(\"storage_test\",1),self.localStorage.removeItem(\"storage_test\"),!0}catch(t){return!1}})()\n",
     "baseDir": "localStorage",
-    "hasTests": false,
+    "hasTests": true,
     "isTestable": true,
     "isPublic": true,
-    "size": 1241
+    "size": 1480
   }
 }
