@@ -59,7 +59,7 @@ if ("Proxy" in self) {
 			assert.ok(document.body.querySelector(":has(*, :does-not-exist)"));
 		});
 
-		// Edge does not support this. Manually enable this when needed.
+		// Edge does not support this test. Manually enable this when needed.
 		QUnit.skip("escaped", function (assert) {
 			assert.ok(!document.body.querySelector("\\\\:has(*)"));
 			assert.throws(() => {
@@ -78,7 +78,7 @@ if ("Proxy" in self) {
 			assert.ok(document.body.querySelector("[\\:has\\(\\)]"));
 		});
 
-		// Edge does not support this. Manually enable this when needed.
+		// Edge does not support this test. Manually enable this when needed.
 		QUnit.skip("quoted", function (assert) {
 			const fixture = document.getElementById("qunit-fixture");
 
@@ -131,9 +131,9 @@ if ("Proxy" in self) {
 			const c = document.getElementById("c");
 			const e = document.getElementById("e");
 			const f = document.getElementById("f");
-			const g = document.getElementById("g");
+			// const g = document.getElementById("g");
 			const h = document.getElementById("h");
-			const i = document.getElementById("i");
+			// const i = document.getElementById("i");
 			const j = document.getElementById("j");
 			const k = document.getElementById("k");
 
@@ -154,10 +154,8 @@ if ("Proxy" in self) {
 			}
 
 			testSelectorAllFromMain(assert, ".sibling:has(.descendant) ~ .target", [e]);
-			testSelectorAllFromMain(assert, ":has(.sibling:has(.descendant) ~ .target)", [a, b]);
-			testSelectorAllFromMain(assert,
-				":has(.sibling:has(.descendant) ~ .target) ~ .parent > .descendant",
-				[g, i, j]);
+			// testSelectorAllFromMain(assert, ":has(.sibling:has(.descendant) ~ .target)", [a, b]);
+			// testSelectorAllFromMain(assert, ":has(.sibling:has(.descendant) ~ .target) ~ .parent > .descendant", [g, i, j]);
 			testSelectorAllFromMain(assert, ":has(> .parent)", [a]);
 			testSelectorAllFromMain(assert, ":has(> .target)", [b, f, h]);
 			testSelectorAllFromMain(assert, ":has(> .parent, > .target)", [a, b, f, h]);
@@ -178,8 +176,8 @@ if ("Proxy" in self) {
 				":has(:is(.target ~ .sibling .descendant)) matches expected elements from #main",
 				".parent:has(:is(.target ~ .sibling .descendant)) matches expected elements from #main",
 				".sibling:has(.descendant) ~ .target matches expected elements from #main",
-				":has(.sibling:has(.descendant) ~ .target) matches expected elements from #main",
-				":has(.sibling:has(.descendant) ~ .target) ~ .parent > .descendant matches expected elements from #main",
+				// ":has(.sibling:has(.descendant) ~ .target) matches expected elements from #main",
+				// ":has(.sibling:has(.descendant) ~ .target) ~ .parent > .descendant matches expected elements from #main",
 				":has(> .parent) matches expected elements from #main",
 				":has(> .target) matches expected elements from #main",
 				":has(> .parent, > .target) matches expected elements from #main",
@@ -452,17 +450,17 @@ if ("Proxy" in self) {
 			const d57 = document.getElementById("d57");
 			const d58 = document.getElementById("d58");
 			const d60 = document.getElementById("d60");
-			const d61 = document.getElementById("d61");
-			const d62 = document.getElementById("d62");
+			// const d61 = document.getElementById("d61");
+			// const d62 = document.getElementById("d62");
 			const d63 = document.getElementById("d63");
 			const d67 = document.getElementById("d67");
 			const d68 = document.getElementById("d68");
-			const d69 = document.getElementById("d69");
-			const d70 = document.getElementById("d70");
+			// const d69 = document.getElementById("d69");
+			// const d70 = document.getElementById("d70");
 			const d71 = document.getElementById("d71");
 			const d75 = document.getElementById("d75");
-			const d77 = document.getElementById("d77");
-			const d80 = document.getElementById("d80");
+			// const d77 = document.getElementById("d77");
+			// const d80 = document.getElementById("d80");
 	
 			// :has as compound selector part.
 			testSelectorAllFromMain(assert, ".x:has(.a)", [d02, d06, d07, d09, d12]);
@@ -503,12 +501,12 @@ if ("Proxy" in self) {
 			testSelectorAllFromMain(assert, ".y:has(.g .h)", [d63, d68, d71]);
 			testSelectorAllFromMain(assert, ".y:has(> .g .h) .i", [d67, d75]);
 			testSelectorAllFromMain(assert, ".y:has(.g .h) .i", [d67, d75]);
-			testSelectorAllFromMain(assert, ".x:has(+ .y:has(> .g .h) .i)", [d62, d70]);
-			testSelectorAllFromMain(assert, ".x:has(+ .y:has(.g .h) .i)", [d62, d63, d70]);
-			testSelectorAllFromMain(assert, ".x:has(+ .y:has(> .g .h) .i) ~ .j", [d77, d80]);
-			testSelectorAllFromMain(assert, ".x:has(+ .y:has(.g .h) .i) ~ .j", [d77, d80]);
-			testSelectorAllFromMain(assert, ".x:has(~ .y:has(> .g .h) .i)", [d61, d62, d69, d70]);
-			testSelectorAllFromMain(assert, ".x:has(~ .y:has(.g .h) .i)", [d61, d62, d63, d69, d70]);
+			// testSelectorAllFromMain(assert, ".x:has(+ .y:has(> .g .h) .i)", [d62, d70]);
+			// testSelectorAllFromMain(assert, ".x:has(+ .y:has(.g .h) .i)", [d62, d63, d70]);
+			// testSelectorAllFromMain(assert, ".x:has(+ .y:has(> .g .h) .i) ~ .j", [d77, d80]);
+			// testSelectorAllFromMain(assert, ".x:has(+ .y:has(.g .h) .i) ~ .j", [d77, d80]);
+			// testSelectorAllFromMain(assert, ".x:has(~ .y:has(> .g .h) .i)", [d61, d62, d69, d70]);
+			// testSelectorAllFromMain(assert, ".x:has(~ .y:has(.g .h) .i)", [d61, d62, d63, d69, d70]);
 
 			testSelectorAllFromMain(assert, ".d .x:has(.e)", [d51, d52]);
 
@@ -548,12 +546,12 @@ if ("Proxy" in self) {
 				".y:has(.g .h) matches expected elements from #main",
 				".y:has(> .g .h) .i matches expected elements from #main",
 				".y:has(.g .h) .i matches expected elements from #main",
-				".x:has(+ .y:has(> .g .h) .i) matches expected elements from #main",
-				".x:has(+ .y:has(.g .h) .i) matches expected elements from #main",
-				".x:has(+ .y:has(> .g .h) .i) ~ .j matches expected elements from #main",
-				".x:has(+ .y:has(.g .h) .i) ~ .j matches expected elements from #main",
-				".x:has(~ .y:has(> .g .h) .i) matches expected elements from #main",
-				".x:has(~ .y:has(.g .h) .i) matches expected elements from #main",
+				// ".x:has(+ .y:has(> .g .h) .i) matches expected elements from #main",
+				// ".x:has(+ .y:has(.g .h) .i) matches expected elements from #main",
+				// ".x:has(+ .y:has(> .g .h) .i) ~ .j matches expected elements from #main",
+				// ".x:has(+ .y:has(.g .h) .i) ~ .j matches expected elements from #main",
+				// ".x:has(~ .y:has(> .g .h) .i) matches expected elements from #main",
+				// ".x:has(~ .y:has(.g .h) .i) matches expected elements from #main",
 				".d .x:has(.e) matches expected elements from #main",
 				".d ~ .x:has(~ .e) matches expected elements from #main"
 			]);
@@ -721,17 +719,17 @@ if ("Proxy" in self) {
 			const d57 = document.getElementById("d57");
 			const d58 = document.getElementById("d58");
 			const d60 = document.getElementById("d60");
-			const d61 = document.getElementById("d61");
-			const d62 = document.getElementById("d62");
+			// const d61 = document.getElementById("d61");
+			// const d62 = document.getElementById("d62");
 			const d63 = document.getElementById("d63");
 			const d67 = document.getElementById("d67");
 			const d68 = document.getElementById("d68");
-			const d69 = document.getElementById("d69");
-			const d70 = document.getElementById("d70");
+			// const d69 = document.getElementById("d69");
+			// const d70 = document.getElementById("d70");
 			const d71 = document.getElementById("d71");
 			const d75 = document.getElementById("d75");
-			const d77 = document.getElementById("d77");
-			const d80 = document.getElementById("d80");
+			// const d77 = document.getElementById("d77");
+			// const d80 = document.getElementById("d80");
 
 			const extraD01 = document.getElementById("extra-d01");
 			const extraD02 = document.getElementById("extra-d02");
@@ -799,12 +797,12 @@ if ("Proxy" in self) {
 			testSelectorAllFromMain(assert, ":has(.g .h)", [extraD02, d63, d68, d71]);
 			testSelectorAllFromMain(assert, ":has(> .g .h) .i", [d67, d75]);
 			testSelectorAllFromMain(assert, ":has(.g .h) .i", [d67, d75]);
-			testSelectorAllFromMain(assert, ":has(+ :has(> .g .h) .i)", [d62, d70]);
-			testSelectorAllFromMain(assert, ":has(+ :has(.g .h) .i)", [extraD01, d62, d63, d70]);
-			testSelectorAllFromMain(assert, ":has(+ :has(> .g .h) .i) ~ .j", [d77, d80]);
-			testSelectorAllFromMain(assert, ":has(+ :has(.g .h) .i) ~ .j", [d77, d80]);
-			testSelectorAllFromMain(assert, ":has(~ :has(> .g .h) .i)", [d61, d62, d69, d70]);
-			testSelectorAllFromMain(assert, ":has(~ :has(.g .h) .i)", [extraD01, d01, d17, d61, d62, d63, d69, d70]);
+			// testSelectorAllFromMain(assert, ":has(+ :has(> .g .h) .i)", [d62, d70]);
+			// testSelectorAllFromMain(assert, ":has(+ :has(.g .h) .i)", [extraD01, d62, d63, d70]);
+			// testSelectorAllFromMain(assert, ":has(+ :has(> .g .h) .i) ~ .j", [d77, d80]);
+			// testSelectorAllFromMain(assert, ":has(+ :has(.g .h) .i) ~ .j", [d77, d80]);
+			// testSelectorAllFromMain(assert, ":has(~ :has(> .g .h) .i)", [d61, d62, d69, d70]);
+			// testSelectorAllFromMain(assert, ":has(~ :has(.g .h) .i)", [extraD01, d01, d17, d61, d62, d63, d69, d70]);
 
 			testSelectorAllFromMain(assert, ".d :has(.e)", [d51, d52]);
 
@@ -864,15 +862,25 @@ if ("Proxy" in self) {
 				":has(.g .h) matches expected elements from #main",
 				":has(> .g .h) .i matches expected elements from #main",
 				":has(.g .h) .i matches expected elements from #main",
-				":has(+ :has(> .g .h) .i) matches expected elements from #main",
-				":has(+ :has(.g .h) .i) matches expected elements from #main",
-				":has(+ :has(> .g .h) .i) ~ .j matches expected elements from #main",
-				":has(+ :has(.g .h) .i) ~ .j matches expected elements from #main",
-				":has(~ :has(> .g .h) .i) matches expected elements from #main",
-				":has(~ :has(.g .h) .i) matches expected elements from #main",
+				// ":has(+ :has(> .g .h) .i) matches expected elements from #main",
+				// ":has(+ :has(.g .h) .i) matches expected elements from #main",
+				// ":has(+ :has(> .g .h) .i) ~ .j matches expected elements from #main",
+				// ":has(+ :has(.g .h) .i) ~ .j matches expected elements from #main",
+				// ":has(~ :has(> .g .h) .i) matches expected elements from #main",
+				// ":has(~ :has(.g .h) .i) matches expected elements from #main",
 				".d :has(.e) matches expected elements from #main",
 				".d ~ :has(~ .e) matches expected elements from #main"
 			]);
+		});
+
+		QUnit.test(":has nested as forgiven list", function (assert) {
+			assert.ok(!document.querySelector(":has(.does-not-exist, :has(#qunit-fixture))"), "nested :has is ignored in forgiving selector lists");
+		});
+
+		QUnit.test(":has nested as only item in list", function (assert) {
+			assert.throws(() => {
+				document.querySelector(":has(:has(#qunit-fixture))");	
+			}, "nested :has throws when it is the only item in the selector list");
 		});
 	});
 }

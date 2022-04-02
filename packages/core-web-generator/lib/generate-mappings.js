@@ -5,7 +5,6 @@ const fs = require("fs");
 const path = require("path");
 const parser = require("@babel/parser");
 const traverse_1 = require("@babel/traverse");
-const generate_intl_timezone_mapping_candidates_1 = require("./generate-intl-timezone-mapping-candidates");
 const coreWebBabelPluginDir = path.resolve(__dirname, "../../babel-plugin-core-web");
 function customMatcherSources() {
     return {
@@ -123,8 +122,6 @@ function customMatcherSources() {
     };
 }
 async function generateMappings(featureMapping) {
-    const intlLocaleRegExp = /^Intl\.~locale\.(.*?)$/;
-    const intlSubFeatureRegExp = /^Intl\.([a-zA-Z]+)\.~locale\.(.*?)$/;
     const identifierMatchers = {};
     const memberExpressionMatchers = {};
     const callExpressionMatchersWithStringLiterals = {};
@@ -132,7 +129,6 @@ async function generateMappings(featureMapping) {
     const newExpressionMatchersWithStringLiterals = {};
     const newExpressionMatchers = {};
     const customMatchers = customMatcherSources();
-    const intlTimeZoneOptionsExpressionsCandidates = await (0, generate_intl_timezone_mapping_candidates_1.getIntlTimeZoneOptionsExpressionCandidates)();
     featureMapping.forEach((feature) => {
         let matchCandidates = [];
         if (feature.name === "Event.hashchange") {
@@ -172,45 +168,7 @@ async function generateMappings(featureMapping) {
             matchCandidates.push(...customMatchers[feature.name]);
         }
         matchCandidates = matchCandidates.flatMap((candidate) => {
-            if ('Intl.DateTimeFormat.~timeZone.golden' === candidate) {
-                return intlTimeZoneOptionsExpressionsCandidates;
-            }
-            if (intlSubFeatureRegExp.test(candidate)) {
-                let intlCandidates = {};
-                const matches = candidate.match(intlSubFeatureRegExp);
-                if (matches && matches.length === 3) {
-                    intlCandidates[`new Intl.${matches[1]}('${matches[2]}')`] = true;
-                    intlCandidates[`new Intl.${matches[1]}('${matches[2]}', $1)`] = true;
-                    intlCandidates[`new Intl.${matches[1]}(['${matches[2]}'])`] = true;
-                    intlCandidates[`new Intl.${matches[1]}(['${matches[2]}'], $1)`] = true;
-                    intlCandidates[`new Intl.${matches[1]}([$1, '${matches[2]}'])`] = true;
-                    intlCandidates[`new Intl.${matches[1]}([$1, '${matches[2]}'], $2)`] = true;
-                    intlCandidates[`new Intl.${matches[1]}(['${matches[2]}', $1])`] = true;
-                    intlCandidates[`new Intl.${matches[1]}(['${matches[2]}', $1], $2)`] = true;
-                    if (matches[1] === 'NumberFormat' || matches[1] === 'DateTimeFormat') {
-                        intlCallExpressionCandidates('toLocaleString', matches[2]).forEach((x) => {
-                            intlCandidates[x] = true;
-                        });
-                    }
-                    if (matches[1] === 'DateTimeFormat') {
-                        intlCallExpressionCandidates('toLocaleDateString', matches[2]).forEach((x) => {
-                            intlCandidates[x] = true;
-                        });
-                        intlCallExpressionCandidates('toLocaleTimeString', matches[2]).forEach((x) => {
-                            intlCandidates[x] = true;
-                        });
-                    }
-                }
-                return Object.keys(intlCandidates);
-            }
-            else if (intlLocaleRegExp.test(candidate) && !feature.isAlias) {
-                // TODO!
-                console.log('TODO : ' + candidate);
-                return [];
-            }
-            else {
-                return [candidate];
-            }
+            return [candidate];
         }).filter((candidate) => {
             return !!candidate;
         });
@@ -519,17 +477,5 @@ function matcherAST_JSONReplacer(key, value) {
         default:
             return value;
     }
-}
-function intlCallExpressionCandidates(name, locale) {
-    const out = [];
-    out.push(`$_instance.${name}('${locale}')`);
-    out.push(`$_instance.${name}('${locale}', $1)`);
-    out.push(`$_instance.${name}(['${locale}'])`);
-    out.push(`$_instance.${name}(['${locale}'], $1)`);
-    out.push(`$_instance.${name}(['${locale}', $1])`);
-    out.push(`$_instance.${name}(['${locale}', $1], $2)`);
-    out.push(`$_instance.${name}([$1, '${locale}'])`);
-    out.push(`$_instance.${name}([$1, '${locale}'], $2)`);
-    return out;
 }
 //# sourceMappingURL=generate-mappings.js.map

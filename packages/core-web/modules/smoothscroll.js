@@ -4,7 +4,7 @@ if(Element.prototype.scrollTo&&Element.prototype.scrollTo.toString().indexOf("[n
 try{var e=!1,t={top:1,left:0}
 Object.defineProperty(t,"behavior",{get:function(){return e=!0,"smooth"},enumerable:!0})
 var o=document.createElement("DIV"),n=document.createElement("DIV")
-return o.setAttribute("style","height: 1px; overflow: scroll;"),n.setAttribute("style","height: 2px; overflow: scroll;"),o.appendChild(n),o.scrollTo(t),e}catch(r){return!1}})()
+return o.setAttribute("style","height: 1px; overflow: scroll;"),n.setAttribute("style","height: 2px; overflow: scroll;"),o.appendChild(n),o.scrollTo(t),e}catch(e){return!1}})()
 )) {
 // smoothscroll
 (function (global, factory) {

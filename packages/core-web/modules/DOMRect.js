@@ -1,5 +1,5 @@
 (function(undefined) {
-if (!("DOMRect"in self&&function(e){try{return new e}catch(t){return!1}}(self.DOMRect)
+if (!("DOMRect"in self&&function(e){try{return new e}catch(e){return!1}}(self.DOMRect)
 )) {
 // DOMRect
 (function (global) {

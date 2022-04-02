@@ -1,5 +1,5 @@
 (function(undefined) {
-if (!("HTMLPictureElement"in self||"picturefill"in self
+if (!("HTMLSourceElement"in self&&"srcset"in self.HTMLSourceElement.prototype
 )) {
 // HTMLPictureElement
 /*! picturefill - v3.0.2 - 2016-02-12

@@ -337,10 +337,14 @@
 		return selectors;
 	}
 
-	function replaceAllWithTempAttr(query, callback) {
+	function replaceAllWithTempAttr(query, nested, callback) {
 		var inner = pseudoClassHasInnerQuery(query);
 		if (!inner) {
 			return query;
+		}
+
+		if (nested) {
+			return query.replace(":has(" + inner + ")", "[does-not-exist]");
 		}
 
 		var innerQuery = inner;
@@ -350,14 +354,32 @@
 		var x = query;
 
 		if (inner.indexOf(':has(') > -1) {
-			innerQuery = replaceAllWithTempAttr(inner, callback);
+			var innerParts = splitSelector(inner);
+			var newInnerParts = [];
+			var validInnerPartsCounter = 0;
+			for (var i = 0; i < innerParts.length; i++) {
+				var innerPart = innerParts[i];
+				var innerPartReplaced = replaceAllWithTempAttr(innerPart, true, function () { });
+				if (innerPartReplaced !== innerPart) {
+					newInnerParts.push(':not(*)');
+				} else {
+					newInnerParts.push(innerPart);
+					validInnerPartsCounter++;
+				}
+			}
+
+			if (!validInnerPartsCounter) {
+				return query;
+			}
+			
+			return x.replace(':has(' + inner + ')', newInnerParts.join(', '));
 		}
 
 		x = x.replace(':has(' + inner + ')', innerReplacement);
 
 		callback(innerQuery, attr);
 		if (x.indexOf(':has(') > -1) {
-			var y = replaceAllWithTempAttr(x, callback);
+			var y = replaceAllWithTempAttr(x, false, callback);
 			if (y) {
 				return y;
 			}
@@ -406,7 +428,7 @@
 			selectors = replaceScopeWithAttr(selectors, scopeAttr);
 
 			var attrs = [];
-			var newQuery = replaceAllWithTempAttr(selectors, function (inner, attr) {
+			var newQuery = replaceAllWithTempAttr(selectors, false, function (inner, attr) {
 				attrs.push(attr);
 
 				var selectorParts = splitSelector(inner);
