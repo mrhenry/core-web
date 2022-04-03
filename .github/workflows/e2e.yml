@@ -18,7 +18,7 @@ jobs:
           fetch-depth: 1
 
       - name: setup node
-        uses: actions/setup-node@v3.0.0
+        uses: actions/setup-node@v3.1.0
         with:
           node-version: 17
           cache: 'npm'
