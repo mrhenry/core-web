@@ -1,7 +1,7 @@
 (function(undefined) {
 if (!((function(){if(!("HTMLInputElement"in self&&"valueAsDate"in HTMLInputElement.prototype))return!1
 try{for(var e=document.createElement("INPUT"),t=[["date","2006-01-02",new Date("2006-01-02T00:00:00.000Z")],["month","2019-12",new Date("2019-12-01T00:00:00.000Z")],["week","2015-W53",new Date("2015-12-28T00:00:00.000Z")],["time","21:59",new Date("1970-01-01T21:59:00.000Z")]],n=0;n<t.length;n++){var r=t[n]
-try{e.type=r[0]}catch(a){}if(e.setAttribute("type",r[0]),e.value=r[1],e.valueAsDate.getTime()!==r[2].getTime())return!1}}catch(u){return!1}return!0})()
+try{e.type=r[0]}catch(e){}if(e.setAttribute("type",r[0]),e.value=r[1],e.valueAsDate.getTime()!==r[2].getTime())return!1}}catch(e){return!1}return!0})()
 )) {
 // HTMLInputElement.prototype.valueAsDate
 (function (global) {

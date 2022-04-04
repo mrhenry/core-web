@@ -37,7 +37,7 @@ async function genAll() {
 
 	const features = await polyfillLibrary.listAllPolyfills();
 	for (const feature of features) {
-		if (providedByBabel(feature)) {
+		if (providedByBabel(feature) || ignoredByCoreWeb(feature)) {
 			continue;
 		}
 
@@ -130,14 +130,6 @@ async function genAll() {
 // Override meta data from polyfill-library
 async function patchedMeta(feature: string, meta: Record<string, unknown>) : Promise<unknown> {
 	switch (feature) {
-		case 'Intl.DateTimeFormat.~timeZone.all':
-		case 'Intl.DateTimeFormat.~timeZone.golden':
-			const dateTimeFormatMeta = await polyfillLibrary.describePolyfill('Intl.DateTimeFormat');
-			return {
-				...meta,
-				browsers: dateTimeFormatMeta.browsers
-			};
-	
 		default:
 			return meta;
 	}
@@ -162,7 +154,7 @@ async function gen(feature: string, mapping: Array<Feature>, aliases: Array<Feat
 	if (!helperName) {
 		mapping.push({
 			name: feature,
-			deps: Array.from(dependencies).filter(n => !providedByBabel(n)),
+			deps: Array.from(dependencies).filter(n => !(providedByBabel(n) || ignoredByCoreWeb(n))),
 			browsers: meta.browsers,
 			engines: browsersToEngines(meta.browsers),
 			size: meta.size,
@@ -180,7 +172,7 @@ async function gen(feature: string, mapping: Array<Feature>, aliases: Array<Feat
 
 	dependencies.forEach(dep => {
 		const name = normalizeHelperName(dep);
-		if (name && !providedByBabel(dep)) {
+		if (name && !(providedByBabel(dep) || ignoredByCoreWeb(dep))) {
 			output += `import ${name} from "@mrhenry/core-web/helpers/${dep}";\n`;
 		}
 	});
@@ -227,7 +219,7 @@ async function allDependencies(feature: string): Promise<Set<string>> {
 			continue;
 		}
 
-		if (providedByBabel(dep)) {
+		if (providedByBabel(dep) || ignoredByCoreWeb(dep)) {
 			continue;
 		}
 
@@ -240,6 +232,10 @@ async function allDependencies(feature: string): Promise<Set<string>> {
 	}
 
 	return dependencies;
+}
+
+function ignoredByCoreWeb(f: string): boolean {
+	return f.startsWith('Intl.');
 }
 
 function providedByBabel(f: string): boolean {

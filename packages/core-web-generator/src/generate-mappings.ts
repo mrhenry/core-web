@@ -3,7 +3,6 @@ import * as path from "path";
 import * as parser from '@babel/parser';
 import traverse from '@babel/traverse';
 import { StringLiteral, Expression, SpreadElement, JSXNamespacedName, ArgumentPlaceholder } from '@babel/types';
-import { getIntlTimeZoneOptionsExpressionCandidates } from './generate-intl-timezone-mapping-candidates';
 
 const coreWebBabelPluginDir = path.resolve(__dirname, "../../babel-plugin-core-web");
 
@@ -144,9 +143,6 @@ function customMatcherSources(): Record<string, Array<string>> {
 }
 
 export async function generateMappings(featureMapping: Array<Feature>) {
-	const intlLocaleRegExp = /^Intl\.~locale\.(.*?)$/;
-	const intlSubFeatureRegExp = /^Intl\.([a-zA-Z]+)\.~locale\.(.*?)$/;
-
 	const identifierMatchers: Record<string, Array<{
 		matcher: any,
 		feature: string
@@ -178,8 +174,6 @@ export async function generateMappings(featureMapping: Array<Feature>) {
 	}>> = {}
 
 	const customMatchers = customMatcherSources();
-
-	const intlTimeZoneOptionsExpressionsCandidates = await getIntlTimeZoneOptionsExpressionCandidates();
 
 	featureMapping.forEach((feature) => {
 		let matchCandidates = [];
@@ -217,47 +211,7 @@ export async function generateMappings(featureMapping: Array<Feature>) {
 		}
 
 		matchCandidates = matchCandidates.flatMap((candidate) => {
-			if ('Intl.DateTimeFormat.~timeZone.golden' === candidate) {
-				return intlTimeZoneOptionsExpressionsCandidates;
-			}
-
-			if (intlSubFeatureRegExp.test(candidate)) {
-				let intlCandidates: Record<string, true> = {};
-				const matches = candidate.match(intlSubFeatureRegExp);
-				if (matches && matches.length === 3) {
-					intlCandidates[`new Intl.${matches[1]}('${matches[2]}')`] = true;
-					intlCandidates[`new Intl.${matches[1]}('${matches[2]}', $1)`] = true;
-					intlCandidates[`new Intl.${matches[1]}(['${matches[2]}'])`] = true;
-					intlCandidates[`new Intl.${matches[1]}(['${matches[2]}'], $1)`] = true;
-					intlCandidates[`new Intl.${matches[1]}([$1, '${matches[2]}'])`] = true;
-					intlCandidates[`new Intl.${matches[1]}([$1, '${matches[2]}'], $2)`] = true;
-					intlCandidates[`new Intl.${matches[1]}(['${matches[2]}', $1])`] = true;
-					intlCandidates[`new Intl.${matches[1]}(['${matches[2]}', $1], $2)`] = true;
-
-					if (matches[1] === 'NumberFormat' || matches[1] === 'DateTimeFormat') {
-						intlCallExpressionCandidates('toLocaleString', matches[2]).forEach((x) => {
-							intlCandidates[x] = true;
-						})
-					}
-					
-					if (matches[1] === 'DateTimeFormat') {
-						intlCallExpressionCandidates('toLocaleDateString', matches[2]).forEach((x) => {
-							intlCandidates[x] = true;
-						})
-						intlCallExpressionCandidates('toLocaleTimeString', matches[2]).forEach((x) => {
-							intlCandidates[x] = true;
-						})
-					}
-				}
-
-				return Object.keys(intlCandidates);
-			} else if (intlLocaleRegExp.test(candidate) && !feature.isAlias) {
-				// TODO!
-				console.log('TODO : ' + candidate);
-				return [];
-			} else {
-				return [candidate];
-			}
+			return [candidate];
 		}).filter((candidate) => {
 			return !!candidate;
 		});
@@ -647,19 +601,3 @@ function matcherAST_JSONReplacer(key: string, value: unknown): unknown {
 			return value;
 	}
 }
-
-function intlCallExpressionCandidates(name: string, locale: string): Array<string> {
-	const out: Array<string> = [];
-
-	out.push(`$_instance.${name}('${locale}')`);
-	out.push(`$_instance.${name}('${locale}', $1)`);
-	out.push(`$_instance.${name}(['${locale}'])`);
-	out.push(`$_instance.${name}(['${locale}'], $1)`);
-	out.push(`$_instance.${name}(['${locale}', $1])`);
-	out.push(`$_instance.${name}(['${locale}', $1], $2)`);
-	out.push(`$_instance.${name}([$1, '${locale}'])`);
-	out.push(`$_instance.${name}([$1, '${locale}'], $2)`);
-
-	return out;
-}
-

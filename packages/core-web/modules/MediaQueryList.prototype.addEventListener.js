@@ -5,23 +5,6 @@ if (!("matchMedia"in self&&"addEventListener"in self.matchMedia("all")
 (function(global) {
 	"use strict";
 
-	var _supportsSetters = (function () {
-		// supports setters (not IE8)
-		try {
-			var a = {};
-			global.Object.defineProperty(a, 't', {
-				configurable: true,
-				enumerable: false,
-				get: function () { return this._v; },
-				set: function (v) { this._v = v + v; }
-			});
-			a.t = 1;
-			return (a.t === 2);
-		} catch (e) {
-			return false;
-		}
-	}());
-
 	function addEventListener(type, listener) {
 		if (type === 'change') {
 			this.addListener(listener);
@@ -93,11 +76,7 @@ if (!("matchMedia"in self&&"addEventListener"in self.matchMedia("all")
 
 		global.MediaQueryList.prototype.removeEventListener = removeEventListener;
 
-		// Best effort.
-		// Some browsers don't support setters.
-		if (_supportsSetters) {
-			global.Object.defineProperty(global.MediaQueryList.prototype, "onchange", onchangeDescriptor);
-		}
+		global.Object.defineProperty(global.MediaQueryList.prototype, "onchange", onchangeDescriptor);
 	} else { /* Safari does not expose "MediaQueryList" globally */
 		var _matchMedia = self.matchMedia;
 
@@ -129,11 +108,7 @@ if (!("matchMedia"in self&&"addEventListener"in self.matchMedia("all")
 
 			_mql.removeEventListener = removeEventListener;
 
-			// Best effort.
-			// Some browsers don't support setters.
-			if (_supportsSetters) {
-				global.Object.defineProperty(_mql, "onchange", onchangeDescriptor);
-			}
+			global.Object.defineProperty(_mql, "onchange", onchangeDescriptor);
 
 			return _mql;
 		}

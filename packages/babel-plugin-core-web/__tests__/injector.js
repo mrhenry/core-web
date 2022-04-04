@@ -18,9 +18,9 @@ const featureSetChrome28 = required({
 	engines: {},
 });
 
-const featureSetIE8 = required({
+const featureSetIE9 = required({
 	browsers: {
-		'ie': '8'
+		'ie': '9'
 	},
 	engines: {},
 });
@@ -32,7 +32,6 @@ function main() {
 	testIdentifiers();
 	testMemberExpressions();
 	testNewExpressions();
-	testNewExpressionsWithStringLiterals();
 	testQSAScope();
 	testQSAHas();
 }
@@ -45,9 +44,9 @@ function testIdentifiers() {
 			featureSet: featureSetChrome17,
 		},
 		{
-			expression: 'innerHeight',
-			feature: '~viewport',
-			featureSet: featureSetIE8,
+			expression: 'devicePixelRatio',
+			feature: 'devicePixelRatio',
+			featureSet: featureSetIE9,
 		}
 	];
 
@@ -110,30 +109,6 @@ function testNewExpressions() {
 		const parsed = parser.parseExpression(testCase.expression);
 
 		injector.handleNewExpression({ node: parsed }, {});
-		assert.ok(injector.importSet.has(testCase.feature), `expected import set to have : ${testCase.feature}, got : ${JSON.stringify(Array.from(injector.importSet))}`);
-	}
-}
-
-function testNewExpressionsWithStringLiterals() {
-	const testCases = [
-		{
-			expression: 'new Intl.NumberFormat("es", { style: "currency", currency: "EUR" })',
-			feature: 'Intl.NumberFormat.~locale.es',
-			featureSet: featureSetChrome28,
-		}
-	];
-
-	for (const testCase of testCases) {
-		const injector = new Injector(
-			testCase.featureSet,
-			{
-				debug: false,
-			}
-		);
-
-		const parsed = parser.parseExpression(testCase.expression);
-
-		injector.handleNewExpressionStringLiterals({ node: parsed }, {});
 		assert.ok(injector.importSet.has(testCase.feature), `expected import set to have : ${testCase.feature}, got : ${JSON.stringify(Array.from(injector.importSet))}`);
 	}
 }
