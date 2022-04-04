@@ -121,9 +121,7 @@
       "default-3.6",
       "default"
     ],
-    "dependencies": [
-      "Object.defineProperties"
-    ],
+    "dependencies": [],
     "browsers": {
       "ie": "6 - 10",
       "ie_mob": "10",

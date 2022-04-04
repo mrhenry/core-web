@@ -5,7 +5,6 @@
   "coreWeb": {
     "name": "console.info",
     "deps": [
-      "Window",
       "console",
       "console.log"
     ],
@@ -179,7 +178,6 @@
       "caniuse:console-basic"
     ],
     "dependencies": [
-      "Window",
       "console",
       "console.log"
     ],

@@ -6,11 +6,7 @@
     "name": "AbortController",
     "deps": [
       "fetch",
-      "XMLHttpRequest",
-      "Event",
-      "Window",
-      "document",
-      "Element"
+      "Event"
     ],
     "browsers": {
       "edge": "12 - 15",
@@ -34,7 +30,7 @@
       "WebKit": "525.13 - 607.1.40",
       "Blink": "28 - 65"
     },
-    "size": 9074,
+    "size": 9029,
     "isAlias": false,
     "providedByCoreWeb": false
   },
@@ -368,9 +364,7 @@
   "polyfillio": {
     "dependencies": [
       "fetch",
-      "Object.defineProperty",
       "Object.getOwnPropertyDescriptor",
-      "Object.getPrototypeOf",
       "Object.setPrototypeOf",
       "Event",
       "Map",
@@ -407,6 +401,6 @@
     "hasTests": true,
     "isTestable": true,
     "isPublic": true,
-    "size": 9074
+    "size": 9029
   }
 }

@@ -5,8 +5,6 @@
   "coreWeb": {
     "name": "Element.prototype.replaceWith",
     "deps": [
-      "document",
-      "Element",
       "_mutation"
     ],
     "browsers": {
@@ -131,8 +129,6 @@
       "default"
     ],
     "dependencies": [
-      "document",
-      "Element",
       "_mutation"
     ],
     "spec": "http://dom.spec.whatwg.org/#dom-childnode-replacewith",

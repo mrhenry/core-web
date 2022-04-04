@@ -4,11 +4,7 @@
   "polyfillName": "Event",
   "coreWeb": {
     "name": "Event",
-    "deps": [
-      "Window",
-      "document",
-      "Element"
-    ],
+    "deps": [],
     "browsers": {
       "firefox": "6 - 10",
       "ie": "6 - 11",
@@ -23,7 +19,7 @@
       "Presto": "2.2 - 2.9",
       "WebKit": "530.17 - 537.71"
     },
-    "size": 3340,
+    "size": 2951,
     "isAlias": false,
     "providedByCoreWeb": false
   },
@@ -1396,11 +1392,6 @@
       "default"
     ],
     "dependencies": [
-      "Window",
-      "document",
-      "Element",
-      "Object.defineProperty",
-      "Array.prototype.indexOf",
       "Array.prototype.includes"
     ],
     "docs": "https://developer.mozilla.org/en/docs/Web/API/Event",
@@ -1415,11 +1406,11 @@
       "safari": "4 - 7",
       "firefox_mob": "6 - 10"
     },
-    "detectSource": "(function(n){if(!(\"Event\"in n))return!1\ntry{return new Event(\"click\"),!0}catch(t){return!1}})(self)\n",
+    "detectSource": "(function(n){if(!(\"Event\"in n))return!1\ntry{return new Event(\"click\"),!0}catch(n){return!1}})(self)\n",
     "baseDir": "Event",
     "hasTests": true,
     "isTestable": true,
     "isPublic": true,
-    "size": 3340
+    "size": 2951
   }
 }

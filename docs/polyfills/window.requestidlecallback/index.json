@@ -7,10 +7,7 @@
     "deps": [
       "requestAnimationFrame",
       "performance.now",
-      "Event",
-      "Window",
-      "document",
-      "Element"
+      "Event"
     ],
     "browsers": {
       "android": "*",
@@ -38,7 +35,7 @@
       "Trident": ">= 4.0",
       "Presto": ">= 1"
     },
-    "size": 2164,
+    "size": 2152,
     "isAlias": false,
     "providedByCoreWeb": false
   },
@@ -130,8 +127,6 @@
   "polyfillio": {
     "aliases": [],
     "dependencies": [
-      "Object.defineProperty",
-      "Array.prototype.filter",
       "Array.prototype.includes",
       "requestAnimationFrame",
       "performance.now",
@@ -162,6 +157,6 @@
     "hasTests": true,
     "isTestable": true,
     "isPublic": true,
-    "size": 2164
+    "size": 2152
   }
 }

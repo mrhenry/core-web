@@ -6,10 +6,7 @@
     "name": "document.visibilityState",
     "deps": [
       "CustomEvent",
-      "Event",
-      "Window",
-      "document",
-      "Element"
+      "Event"
     ],
     "browsers": {
       "firefox": "10 - 17",

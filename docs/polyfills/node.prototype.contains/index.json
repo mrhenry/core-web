@@ -4,10 +4,7 @@
   "polyfillName": "Node.prototype.contains",
   "coreWeb": {
     "name": "Node.prototype.contains",
-    "deps": [
-      "Element",
-      "document"
-    ],
+    "deps": [],
     "browsers": {
       "firefox": "* - 8",
       "safari": "* - 2",
@@ -120,9 +117,7 @@
       "default-3.6",
       "default"
     ],
-    "dependencies": [
-      "Element"
-    ],
+    "dependencies": [],
     "docs": "https://developer.mozilla.org/en-US/docs/Web/API/Node/contains",
     "browsers": {
       "firefox": "* - 8",

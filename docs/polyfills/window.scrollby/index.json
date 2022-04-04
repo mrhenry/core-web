@@ -5,9 +5,7 @@
   "coreWeb": {
     "name": "smoothscroll",
     "deps": [
-      "requestAnimationFrame",
-      "getComputedStyle",
-      "Window"
+      "requestAnimationFrame"
     ],
     "browsers": {
       "edge": "<79",
@@ -29,7 +27,7 @@
       "WebKit": ">= 85",
       "Blink": ">= 28"
     },
-    "size": 9772,
+    "size": 9748,
     "isAlias": false,
     "providedByCoreWeb": false
   },
@@ -276,10 +274,7 @@
       "window.scrollBy"
     ],
     "dependencies": [
-      "requestAnimationFrame",
-      "Function.prototype.bind",
-      "getComputedStyle",
-      "Object.defineProperty"
+      "requestAnimationFrame"
     ],
     "license": "MIT",
     "spec": "https://drafts.csswg.org/cssom-view/#smooth-scrolling",
@@ -301,11 +296,11 @@
       "module": "seamless-scroll-polyfill",
       "postinstall": "update.task.js"
     },
-    "detectSource": "(function(){if(\"document\"in self&&\"documentElement\"in self.document&&\"style\"in self.document.documentElement&&\"scrollBehavior\"in document.documentElement.style)return!0\nif(Element.prototype.scrollTo&&Element.prototype.scrollTo.toString().indexOf(\"[native code]\")>-1)return!1\ntry{var e=!1,t={top:1,left:0}\nObject.defineProperty(t,\"behavior\",{get:function(){return e=!0,\"smooth\"},enumerable:!0})\nvar o=document.createElement(\"DIV\"),n=document.createElement(\"DIV\")\nreturn o.setAttribute(\"style\",\"height: 1px; overflow: scroll;\"),n.setAttribute(\"style\",\"height: 2px; overflow: scroll;\"),o.appendChild(n),o.scrollTo(t),e}catch(r){return!1}})()\n",
+    "detectSource": "(function(){if(\"document\"in self&&\"documentElement\"in self.document&&\"style\"in self.document.documentElement&&\"scrollBehavior\"in document.documentElement.style)return!0\nif(Element.prototype.scrollTo&&Element.prototype.scrollTo.toString().indexOf(\"[native code]\")>-1)return!1\ntry{var e=!1,t={top:1,left:0}\nObject.defineProperty(t,\"behavior\",{get:function(){return e=!0,\"smooth\"},enumerable:!0})\nvar o=document.createElement(\"DIV\"),n=document.createElement(\"DIV\")\nreturn o.setAttribute(\"style\",\"height: 1px; overflow: scroll;\"),n.setAttribute(\"style\",\"height: 2px; overflow: scroll;\"),o.appendChild(n),o.scrollTo(t),e}catch(e){return!1}})()\n",
     "baseDir": "smoothscroll",
     "hasTests": true,
     "isTestable": true,
     "isPublic": true,
-    "size": 9772
+    "size": 9748
   }
 }

@@ -6,9 +6,7 @@
     "name": "Element.prototype.classList",
     "deps": [
       "DOMTokenList",
-      "_DOMTokenList",
-      "Element",
-      "document"
+      "_DOMTokenList"
     ],
     "browsers": {
       "ie": "8 - 11",
@@ -18,7 +16,7 @@
       "Trident": ">= 4.0",
       "WebKit": "530.17"
     },
-    "size": 800,
+    "size": 481,
     "isAlias": false,
     "providedByCoreWeb": false
   },
@@ -212,9 +210,7 @@
       "blissfuljs"
     ],
     "dependencies": [
-      "DOMTokenList",
-      "Element",
-      "Object.defineProperty"
+      "DOMTokenList"
     ],
     "spec": "https://html.spec.whatwg.org/multipage/dom.html#dom-classlist",
     "docs": "https://developer.mozilla.org/en-US/docs/Web/API/Element/classList",
@@ -229,6 +225,6 @@
     "hasTests": true,
     "isTestable": true,
     "isPublic": true,
-    "size": 800
+    "size": 481
   }
 }

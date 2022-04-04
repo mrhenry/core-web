@@ -5,10 +5,7 @@
   "coreWeb": {
     "name": "matchMedia",
     "deps": [
-      "Event",
-      "Window",
-      "document",
-      "Element"
+      "Event"
     ],
     "browsers": {
       "android": "2.1 - 2.3",
@@ -26,7 +23,7 @@
       "WebKit": "530.17 - 534.48",
       "Blink": "28 - 36"
     },
-    "size": 1196,
+    "size": 1144,
     "isAlias": false,
     "providedByCoreWeb": false
   },
@@ -137,6 +134,6 @@
     "hasTests": true,
     "isTestable": true,
     "isPublic": true,
-    "size": 1196
+    "size": 1144
   }
 }

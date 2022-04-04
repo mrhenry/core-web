@@ -5,8 +5,6 @@
   "coreWeb": {
     "name": "Element.prototype.after",
     "deps": [
-      "document",
-      "Element",
       "_mutation"
     ],
     "browsers": {
@@ -131,9 +129,6 @@
       "default"
     ],
     "dependencies": [
-      "document",
-      "Element",
-      "Array.prototype.indexOf",
       "_mutation"
     ],
     "spec": "http://dom.spec.whatwg.org/#dom-childnode-after",

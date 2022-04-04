@@ -5,9 +5,7 @@
   "coreWeb": {
     "name": "DocumentFragment.prototype.prepend",
     "deps": [
-      "document",
       "DocumentFragment",
-      "Element",
       "_mutation"
     ],
     "browsers": {
@@ -132,9 +130,7 @@
       "default"
     ],
     "dependencies": [
-      "document",
       "DocumentFragment",
-      "Element",
       "_mutation"
     ],
     "spec": "https://dom.spec.whatwg.org/#dom-parentnode-prepend",

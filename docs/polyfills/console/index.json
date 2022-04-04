@@ -4,9 +4,7 @@
   "polyfillName": "console",
   "coreWeb": {
     "name": "console",
-    "deps": [
-      "Window"
-    ],
+    "deps": [],
     "browsers": {
       "ie": "*",
       "firefox": "1 - 4"
@@ -1860,9 +1858,7 @@
     "aliases": [
       "caniuse:console-basic"
     ],
-    "dependencies": [
-      "Window"
-    ],
+    "dependencies": [],
     "spec": "https://console.spec.whatwg.org",
     "docs": "https://developer.mozilla.org/en/docs/Web/API/console",
     "browsers": {

@@ -4,11 +4,7 @@
   "polyfillName": "HTMLSelectElement.prototype.selectedOptions",
   "coreWeb": {
     "name": "HTMLSelectElement.prototype.selectedOptions",
-    "deps": [
-      "document.querySelector",
-      "Element",
-      "document"
-    ],
+    "deps": [],
     "browsers": {
       "android": "<38",
       "bb": "*",
@@ -120,12 +116,8 @@
   },
   "polyfillio": {
     "aliases": [],
-    "dependencies": [
-      "Object.defineProperty",
-      "document.querySelector"
-    ],
+    "dependencies": [],
     "notes": [
-      "Polyfill requires Object getters so fails in IE < 8",
       "Polyfill does not return a live HTMLCollection, only a static NodeList that has the same methods as an HTMLCollection"
     ],
     "spec": "https://html.spec.whatwg.org/multipage/form-elements.html#dom-select-selectedoptions",

@@ -5,8 +5,7 @@
   "coreWeb": {
     "name": "HTMLPictureElement",
     "deps": [
-      "~html5-elements",
-      "document"
+      "~html5-elements"
     ],
     "browsers": {
       "edge": "<13",
@@ -30,7 +29,7 @@
       "WebKit": "522.11 - 601.5.17",
       "Blink": "28 - 38"
     },
-    "size": 17185,
+    "size": 17183,
     "isAlias": false,
     "providedByCoreWeb": false
   },
@@ -148,11 +147,11 @@
         "dist/plugins/mutation/pf.mutation.min.js"
       ]
     },
-    "detectSource": "\"HTMLPictureElement\"in self||\"picturefill\"in self\n",
+    "detectSource": "\"HTMLSourceElement\"in self&&\"srcset\"in self.HTMLSourceElement.prototype\n",
     "baseDir": "HTMLPictureElement",
     "hasTests": false,
     "isTestable": true,
     "isPublic": true,
-    "size": 17185
+    "size": 17183
   }
 }

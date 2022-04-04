@@ -4,10 +4,7 @@
   "polyfillName": "Element.prototype.toggleAttribute",
   "coreWeb": {
     "name": "Element.prototype.toggleAttribute",
-    "deps": [
-      "Element",
-      "document"
-    ],
+    "deps": [],
     "browsers": {
       "android": "<69",
       "bb": "*",
@@ -34,7 +31,7 @@
       "Trident": ">= 4.0",
       "Presto": ">= 1"
     },
-    "size": 180,
+    "size": 177,
     "isAlias": false,
     "providedByCoreWeb": false
   },
@@ -125,9 +122,7 @@
   },
   "polyfillio": {
     "aliases": [],
-    "dependencies": [
-      "Element"
-    ],
+    "dependencies": [],
     "spec": "https://dom.spec.whatwg.org/#dom-element-toggleattribute",
     "docs": "https://developer.mozilla.org/en-US/docs/Web/API/Element/toggleAttribute",
     "browsers": {
@@ -153,6 +148,6 @@
     "hasTests": true,
     "isTestable": true,
     "isPublic": true,
-    "size": 180
+    "size": 177
   }
 }

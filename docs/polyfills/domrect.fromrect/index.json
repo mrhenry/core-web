@@ -30,7 +30,7 @@
       "WebKit": "85 - 602.1.50",
       "Presto": ">= 1"
     },
-    "size": 202,
+    "size": 199,
     "isAlias": false,
     "providedByCoreWeb": false
   },
@@ -146,6 +146,6 @@
     "hasTests": true,
     "isTestable": true,
     "isPublic": true,
-    "size": 202
+    "size": 199
   }
 }

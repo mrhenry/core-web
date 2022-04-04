@@ -672,9 +672,7 @@
   },
   "polyfillio": {
     "aliases": [],
-    "dependencies": [
-      "Object.create"
-    ],
+    "dependencies": [],
     "docs": "https://developer.mozilla.org/en-US/docs/Web/API/DocumentFragment",
     "spec": "https://dom.spec.whatwg.org/#interface-documentfragment",
     "notes": [],

@@ -6,11 +6,7 @@
     "name": "IntersectionObserverEntry",
     "deps": [
       "IntersectionObserver",
-      "getComputedStyle",
-      "Window",
       "Event",
-      "document",
-      "Element",
       "performance.now"
     ],
     "browsers": {
@@ -497,8 +493,7 @@
   "polyfillio": {
     "aliases": [],
     "dependencies": [
-      "IntersectionObserver",
-      "Object.defineProperty"
+      "IntersectionObserver"
     ],
     "docs": "https://github.com/w3c/IntersectionObserver/blob/master/explainer.md",
     "spec": "http://rawgit.com/w3c/IntersectionObserver/master/index.html",

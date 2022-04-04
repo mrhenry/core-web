@@ -238,9 +238,7 @@
       "caniuse:requestanimationframe",
       "modernizr:requestanimationframe"
     ],
-    "dependencies": [
-      "Date.now"
-    ],
+    "dependencies": [],
     "license": "MIT",
     "docs": "https://developer.mozilla.org/en-US/docs/Web/API/window/requestAnimationFrame",
     "browsers": {

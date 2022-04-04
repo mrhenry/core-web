@@ -172,10 +172,7 @@
   "polyfillio": {
     "dependencies": [
       "DocumentFragment",
-      "document.querySelector",
-      "Object.defineProperties",
       "Object.getOwnPropertyDescriptor",
-      "Object.defineProperty",
       "Event"
     ],
     "license": "BSD-3-Clause",
@@ -207,6 +204,6 @@
     "hasTests": true,
     "isTestable": true,
     "isPublic": true,
-    "size": 7434
+    "size": 7418
   }
 }

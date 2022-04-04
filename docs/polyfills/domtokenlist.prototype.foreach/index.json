@@ -7,9 +7,7 @@
     "deps": [
       "DOMTokenList",
       "_DOMTokenList",
-      "Element.prototype.classList",
-      "Element",
-      "document"
+      "Element.prototype.classList"
     ],
     "browsers": {
       "edge": "<16",
@@ -125,7 +123,6 @@
   "polyfillio": {
     "dependencies": [
       "DOMTokenList",
-      "Array.prototype.forEach",
       "Element.prototype.classList"
     ],
     "spec": "https://dom.spec.whatwg.org/#interface-domtokenlist",

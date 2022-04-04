@@ -30,7 +30,7 @@
       "Trident": ">= 4.0",
       "Presto": ">= 1"
     },
-    "size": 799,
+    "size": 778,
     "isAlias": false,
     "providedByCoreWeb": false
   },
@@ -147,9 +147,7 @@
   },
   "polyfillio": {
     "aliases": [],
-    "dependencies": [
-      "Array.prototype.map"
-    ],
+    "dependencies": [],
     "spec": "https://drafts.csswg.org/cssom-view/#dom-document-elementsfrompoint",
     "docs": "https://developer.mozilla.org/en-US/docs/Web/API/Document/elementsFromPoint",
     "license": "MIT",
@@ -175,6 +173,6 @@
     "hasTests": true,
     "isTestable": true,
     "isPublic": true,
-    "size": 799
+    "size": 778
   }
 }

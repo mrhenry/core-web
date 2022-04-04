@@ -5,7 +5,6 @@
   "coreWeb": {
     "name": "console.timeStamp",
     "deps": [
-      "Window",
       "console"
     ],
     "browsers": {
@@ -120,7 +119,6 @@
       "caniuse:console-basic"
     ],
     "dependencies": [
-      "Window",
       "console"
     ],
     "spec": "https://console.spec.whatwg.org",

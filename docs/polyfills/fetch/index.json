@@ -4,13 +4,7 @@
   "polyfillName": "fetch",
   "coreWeb": {
     "name": "fetch",
-    "deps": [
-      "XMLHttpRequest",
-      "Event",
-      "Window",
-      "document",
-      "Element"
-    ],
+    "deps": [],
     "browsers": {
       "android": "<67",
       "bb": "10 - *",
@@ -33,7 +27,7 @@
       "WebKit": "85 - 605.1.33",
       "Blink": "28 - 65"
     },
-    "size": 9606,
+    "size": 9583,
     "isAlias": false,
     "providedByCoreWeb": false
   },
@@ -332,11 +326,8 @@
   },
   "polyfillio": {
     "dependencies": [
-      "Array.prototype.forEach",
-      "Array.isArray",
       "Object.getOwnPropertyNames",
       "Promise",
-      "XMLHttpRequest",
       "Symbol.iterator",
       "URL"
     ],
@@ -370,6 +361,6 @@
     "hasTests": true,
     "isTestable": true,
     "isPublic": true,
-    "size": 9606
+    "size": 9583
   }
 }

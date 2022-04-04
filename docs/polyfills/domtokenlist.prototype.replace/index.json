@@ -7,9 +7,7 @@
     "deps": [
       "Element.prototype.classList",
       "DOMTokenList",
-      "_DOMTokenList",
-      "Element",
-      "document"
+      "_DOMTokenList"
     ],
     "browsers": {
       "android": "<67",

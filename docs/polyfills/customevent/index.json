@@ -5,10 +5,7 @@
   "coreWeb": {
     "name": "CustomEvent",
     "deps": [
-      "Event",
-      "Window",
-      "document",
-      "Element"
+      "Event"
     ],
     "browsers": {
       "edge": "<14",
@@ -29,7 +26,7 @@
       "Presto": "2.2 - 2.9",
       "WebKit": "530.17 - 537.71"
     },
-    "size": 499,
+    "size": 422,
     "isAlias": false,
     "providedByCoreWeb": false
   },
@@ -359,6 +356,6 @@
     "hasTests": true,
     "isTestable": true,
     "isPublic": true,
-    "size": 499
+    "size": 422
   }
 }

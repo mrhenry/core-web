@@ -5,10 +5,7 @@
   "coreWeb": {
     "name": "Element.prototype.closest",
     "deps": [
-      "Element.prototype.matches",
-      "Element",
-      "document",
-      "document.querySelector"
+      "Element.prototype.matches"
     ],
     "browsers": {
       "bb": "*",

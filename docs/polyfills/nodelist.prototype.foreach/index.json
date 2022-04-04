@@ -117,9 +117,7 @@
     }
   },
   "polyfillio": {
-    "dependencies": [
-      "Array.prototype.forEach"
-    ],
+    "dependencies": [],
     "spec": "https://heycam.github.io/webidl/#es-forEach",
     "docs": "https://developer.mozilla.org/en-US/docs/Web/API/NodeList/forEach",
     "browsers": {

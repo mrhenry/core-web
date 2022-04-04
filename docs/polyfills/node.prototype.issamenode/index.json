@@ -4,10 +4,7 @@
   "polyfillName": "Node.prototype.isSameNode",
   "coreWeb": {
     "name": "Node.prototype.isSameNode",
-    "deps": [
-      "Element",
-      "document"
-    ],
+    "deps": [],
     "browsers": {
       "chrome": "<1",
       "firefox": "<48",
@@ -146,9 +143,7 @@
       "default-3.6",
       "default"
     ],
-    "dependencies": [
-      "Element"
-    ],
+    "dependencies": [],
     "docs": "https://developer.mozilla.org/en-US/docs/Web/API/Node/isSameNode",
     "browsers": {
       "chrome": "<1",

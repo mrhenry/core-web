@@ -4,11 +4,7 @@
   "polyfillName": "Element.prototype.matches",
   "coreWeb": {
     "name": "Element.prototype.matches",
-    "deps": [
-      "Element",
-      "document",
-      "document.querySelector"
-    ],
+    "deps": [],
     "browsers": {
       "edge": "<15",
       "edge_mob": "<15",
@@ -286,10 +282,7 @@
       "caniuse:matchesselector",
       "blissfuljs"
     ],
-    "dependencies": [
-      "Element",
-      "document.querySelector"
-    ],
+    "dependencies": [],
     "docs": "https://developer.mozilla.org/en-US/docs/Web/API/Element/matches",
     "spec": "http://dom.spec.whatwg.org/#dom-element-matches",
     "browsers": {

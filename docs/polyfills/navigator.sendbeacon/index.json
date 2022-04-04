@@ -4,13 +4,7 @@
   "polyfillName": "navigator.sendBeacon",
   "coreWeb": {
     "name": "navigator.sendBeacon",
-    "deps": [
-      "XMLHttpRequest",
-      "Event",
-      "Window",
-      "document",
-      "Element"
-    ],
+    "deps": [],
     "browsers": {
       "chrome": "<39",
       "edge": "<14",
@@ -134,9 +128,7 @@
   },
   "polyfillio": {
     "aliases": [],
-    "dependencies": [
-      "XMLHttpRequest"
-    ],
+    "dependencies": [],
     "docs": "https://developer.mozilla.org/en-US/docs/Web/API/Navigator/sendBeacon",
     "spec": "https://w3c.github.io/beacon/#sec-sendBeacon-method",
     "repo": "https://github.com/miguelmota/Navigator.sendBeacon",
