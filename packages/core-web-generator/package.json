@@ -12,7 +12,7 @@
     "test": "__tests__"
   },
   "dependencies": {
-    "@babel/parser": "^7.16.6",
+    "@babel/parser": "^7.17.9",
     "@babel/traverse": "^7.16.10",
     "@babel/types": "^7.16.0",
     "@mdn/browser-compat-data": "^4.1.11",
