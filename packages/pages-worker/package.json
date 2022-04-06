@@ -9,7 +9,7 @@
     "install-wrangler": "npm install -g @cloudflare/wrangler"
   },
   "dependencies": {
-    "semver": "^7.3.5"
+    "semver": "^7.3.6"
   },
   "devDependencies": {},
   "volta": {
