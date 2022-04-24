@@ -17,11 +17,13 @@
 		{
 			"browser": "safari",
 			"browser_version": "8",
+			"os": "OS X",
 			"cli_key": 1
 		},
 		{
 			"browser": "safari",
 			"browser_version": "12.1",
+			"os": "OS X",
 			"cli_key": 1
 		},
 		{
@@ -92,6 +94,7 @@
 		{
 			"browser": "safari",
 			"browser_version": "latest",
+			"os": "OS X",
 			"cli_key": 5
 		},
 		{
