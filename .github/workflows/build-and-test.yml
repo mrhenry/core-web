@@ -36,10 +36,9 @@ jobs:
 
       - run: make build
         if: steps.cache-core-web-tests.outputs.cache-hit != 'true'
-
-      - run: |
-          cd packages/core-web-generator && npm run test
-          cd packages/babel-plugin-core-web && npm run test
+      - run: cd packages/core-web-generator && npm run test
+        if: steps.cache-core-web-tests.outputs.cache-hit != 'true'
+      - run: cd packages/babel-plugin-core-web && npm run test
         if: steps.cache-core-web-tests.outputs.cache-hit != 'true'
 
       - name: 'BrowserStack Env Setup'
