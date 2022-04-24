@@ -10,6 +10,11 @@ jobs:
   build-and-test:
     name: 'Build & Test'
     runs-on: ubuntu-latest
+    strategy:
+      max-parallel: 1
+      fail-fast: false
+      matrix:
+        test_groups: [ 1, 2, 3, 4, 5 ]
     steps:
       - name: check out
         uses: actions/checkout@v3
@@ -22,7 +27,21 @@ jobs:
           node-version: 17
           cache: 'npm'
 
+      - name: cache core-web-tests
+        id: cache-core-web-tests
+        uses: actions/cache@v2.1.5
+        with:
+          path: packages/core-web-tests/dist
+          key: cache--core-web-tests--${{ env.commit-sha }}
+
       - run: make build
+        if: steps.cache-core-web-tests.outputs.cache-hit != 'true'
+      - run: make install
+        if: steps.cache-core-web-tests.outputs.cache-hit == 'true'
+      - run: cd packages/core-web-generator && npm run test
+        if: steps.cache-core-web-tests.outputs.cache-hit != 'true'
+      - run: cd packages/babel-plugin-core-web && npm run test
+        if: steps.cache-core-web-tests.outputs.cache-hit != 'true'
 
       - name: 'BrowserStack Env Setup'
         uses: 'browserstack/github-actions/setup-env@master'
@@ -38,7 +57,7 @@ jobs:
           local-testing: start
           local-identifier: random
 
-      - run: make run-tests
+      - run: cd packages/core-web-tests && npm run browserstack-runner -- --browsers ${{ matrix.test_groups }}
 
       - name: 'Stop BrowserStack Local'
         uses: 'browserstack/github-actions/setup-local@master'
