@@ -56,7 +56,7 @@ jobs:
           local-testing: start
           local-identifier: random
 
-      - run: cd packages/core-web-tests && npm run browserstack-runner --browsers ${{ matrix.browser }}
+      - run: cd packages/core-web-tests && npm run browserstack-runner --browsers ${{ matrix.test_groups }}
 
       - name: 'Stop BrowserStack Local'
         uses: 'browserstack/github-actions/setup-local@master'
