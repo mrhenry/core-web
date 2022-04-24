@@ -95,6 +95,7 @@
 			"browser": "safari",
 			"browser_version": "latest",
 			"os": "OS X",
+			"os_version": "latest",
 			"cli_key": 5
 		},
 		{
