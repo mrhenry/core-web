@@ -1,32 +1,108 @@
 {
-  "exit_with_fail": true,
-  "test_framework": "qunit",
-  "test_path": [
-    "index-browsers.html",
-    "index-engines.html",
-    "qsa-browsers.html",
-    "qsa-engines.html"
-  ],
-  "test_server_port": "8899",
-  "browsers": [
-    "ie_11",
-    "safari_8",
-    "safari_12.1",
-    "chrome_41",
-    "chrome_43",
-    "chrome_44",
-    "chrome_55",
-    "chrome_56",
-    "chrome_57",
-    "chrome_63",
-    "chrome_64",
-    "chrome_65",
-    "chrome_73",
-    "chrome_79",
-    "safari_latest",
-    "chrome_latest",
-    "firefox_latest",
-    "edge_17",
-    "edge_18"
-  ]
+	"exit_with_fail": true,
+	"test_framework": "qunit",
+	"test_path": [
+		"index-browsers.html",
+		"index-engines.html",
+		"qsa-browsers.html",
+		"qsa-engines.html"
+	],
+	"test_server_port": "8899",
+	"browsers": [
+		{
+			"browser": "ie",
+			"browser_version": "11",
+			"cli_key": 1
+		},
+		{
+			"browser": "safari",
+			"browser_version": "8",
+			"cli_key": 1
+		},
+		{
+			"browser": "safari",
+			"browser_version": "12.1",
+			"cli_key": 1
+		},
+		{
+			"browser": "edge",
+			"browser_version": "17",
+			"cli_key": 1
+		},
+		{
+			"browser": "edge",
+			"browser_version": "18",
+			"cli_key": 1
+		},
+		{
+			"browser": "chrome",
+			"browser_version": "41",
+			"cli_key": 2
+		},
+		{
+			"browser": "chrome",
+			"browser_version": "43",
+			"cli_key": 2
+		},
+		{
+			"browser": "chrome",
+			"browser_version": "44",
+			"cli_key": 2
+		},
+		{
+			"browser": "chrome",
+			"browser_version": "55",
+			"cli_key": 2
+		},
+		{
+			"browser": "chrome",
+			"browser_version": "56",
+			"cli_key": 3
+		},
+		{
+			"browser": "chrome",
+			"browser_version": "57",
+			"cli_key": 3
+		},
+		{
+			"browser": "chrome",
+			"browser_version": "63",
+			"cli_key": 3
+		},
+		{
+			"browser": "chrome",
+			"browser_version": "64",
+			"cli_key": 3
+		},
+		{
+			"browser": "chrome",
+			"browser_version": "65",
+			"cli_key": 4
+		},
+		{
+			"browser": "chrome",
+			"browser_version": "73",
+			"cli_key": 4
+		},
+		{
+			"browser": "chrome",
+			"browser_version": "79",
+			"cli_key": 4
+		},
+		{
+			"browser": "safari",
+			"browser_version": "latest",
+			"cli_key": 5
+		},
+		{
+			"browser": "chrome",
+			"browser_version": "latest",
+			"cli_key": 5
+		},
+		{
+			"browser": "firefox",
+			"browser_version": "latest",
+			"cli_key": 5
+		}
+	]
 }
