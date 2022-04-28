@@ -61,7 +61,7 @@
 
 				if (hasScope) {
 					// fallback attribute
-					var attr = 'q' + Math.floor(Math.random() * 9000000) + 1000000;
+					var attr = 'q' + (Math.floor(Math.random() * 9000000) + 2000000);
 
 					// replace :scope with the fallback attribute
 					arguments[0] = selectors.replace(scopeReplacer, '[' + attr + ']');
