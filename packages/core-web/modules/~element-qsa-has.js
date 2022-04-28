@@ -348,7 +348,7 @@
 		}
 
 		var innerQuery = inner;
-		var attr = 'q-has' + Math.floor(Math.random() * 9000000) + 1000000;
+		var attr = 'q-has' + (Math.floor(Math.random() * 9000000) + 1000000);
 		var innerReplacement = '[' + attr + ']';
 
 		var x = query;
@@ -423,7 +423,7 @@
 				_focus = global.document.documentElement;
 			}
 
-			var scopeAttr = 'q-has-scope' + Math.floor(Math.random() * 9000000) + 1000000;
+			var scopeAttr = 'q-has-scope' + (Math.floor(Math.random() * 9000000) + 1000000);
 			_focus.setAttribute(scopeAttr, '');
 			
 			try {
@@ -465,7 +465,7 @@
 													continue;
 												}
 
-												var idAttr = 'q-has-id' + Math.floor(Math.random() * 9000000) + 1000000;
+												var idAttr = 'q-has-id' + (Math.floor(Math.random() * 9000000) + 1000000);
 												sibling.setAttribute(idAttr, '');
 
 												if (node.querySelector(':scope [' + idAttr + ']' + ' ' + selectorPart)) {
@@ -479,7 +479,7 @@
 
 									case '>':
 										{
-											var idAttr = 'q-has-id' + Math.floor(Math.random() * 9000000) + 1000000;
+											var idAttr = 'q-has-id' + (Math.floor(Math.random() * 9000000) + 1000000);
 											node.setAttribute(idAttr, '');
 
 											if (node.querySelector(':scope[' + idAttr + ']' + ' ' + selectorPart)) {
