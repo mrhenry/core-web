@@ -27,6 +27,9 @@ jobs:
           node-version: 17
           cache: 'npm'
 
+      - name: env
+        run: echo "commit-sha=$(echo ${GITHUB_SHA})" >> $GITHUB_ENV
+
       - name: cache core-web-tests
         id: cache-core-web-tests
         uses: actions/cache@v3.0.2
