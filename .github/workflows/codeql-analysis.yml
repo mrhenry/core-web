@@ -27,7 +27,7 @@ jobs:
     - name: setup node
       uses: actions/setup-node@v3.2.0
       with:
-        node-version: 18
+        node-version: 17
         cache: 'npm'
 
     - run: make build
