@@ -25,9 +25,9 @@ jobs:
         languages: ${{ matrix.language }}
 
     - name: setup node
-      uses: actions/setup-node@v3.1.0
+      uses: actions/setup-node@v3.2.0
       with:
-        node-version: 17
+        node-version: 18
         cache: 'npm'
 
     - run: make build
