@@ -1,0 +1,16 @@
+{
+	"exit_with_fail": true,
+	"test_framework": "qunit",
+	"test_path": [
+		"index-browsers.html",
+		"index-engines.html",
+		"qsa-browsers.html",
+		"qsa-engines.html"
+	],
+	"test_server_port": "8899",
+	"browsers": [
+		"safari_latest",
+		"chrome_latest",
+		"firefox_99"
+	]
+}
