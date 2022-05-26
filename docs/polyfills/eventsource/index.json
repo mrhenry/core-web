@@ -23,66 +23,21 @@
       "Presto": "1 - 2.10",
       "Trident": ">= 4.0"
     },
-    "size": 12085,
+    "size": 12027,
     "isAlias": false,
     "providedByCoreWeb": false
   },
   "mdn": {
-    "__compat": {
-      "mdn_url": "https://developer.mozilla.org/docs/Web/API/EventSource",
-      "spec_url": "https://html.spec.whatwg.org/multipage/server-sent-events.html#the-eventsource-interface",
-      "support": {
-        "chrome": {
-          "version_added": "6"
-        },
-        "chrome_android": {
-          "version_added": "18"
-        },
-        "deno": {
-          "version_added": false
-        },
-        "edge": {
-          "version_added": "79"
-        },
-        "firefox": {
-          "version_added": "6"
-        },
-        "firefox_android": {
-          "version_added": "45"
-        },
-        "ie": {
-          "version_added": false
-        },
-        "opera": {
-          "version_added": "11"
-        },
-        "opera_android": {
-          "version_added": "11"
-        },
-        "safari": {
-          "version_added": "5"
-        },
-        "safari_ios": {
-          "version_added": "5"
-        },
-        "samsunginternet_android": {
-          "version_added": "1.0"
-        },
-        "webview_android": {
-          "version_added": "4.4"
-        }
-      },
-      "status": {
-        "experimental": false,
-        "standard_track": true,
-        "deprecated": false
-      }
-    },
     "EventSource": {
       "__compat": {
+        "description": "<code>EventSource()</code> constructor",
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/EventSource/EventSource",
         "spec_url": "https://html.spec.whatwg.org/multipage/server-sent-events.html#dom-eventsource-dev",
-        "description": "<code>EventSource()</code> constructor",
+        "status": {
+          "deprecated": false,
+          "experimental": false,
+          "standard_track": true
+        },
         "support": {
           "chrome": {
             "version_added": "6"
@@ -123,16 +78,16 @@
           "webview_android": {
             "version_added": "4.4"
           }
-        },
-        "status": {
-          "experimental": false,
-          "standard_track": true,
-          "deprecated": false
         }
       },
       "cors_support": {
         "__compat": {
           "description": "CORS support (<code>withCredentials</code>)",
+          "status": {
+            "deprecated": false,
+            "experimental": false,
+            "standard_track": true
+          },
           "support": {
             "chrome": {
               "version_added": "26"
@@ -173,12 +128,57 @@
             "webview_android": {
               "version_added": "≤37"
             }
-          },
-          "status": {
-            "experimental": false,
-            "standard_track": true,
-            "deprecated": false
           }
+        }
+      }
+    },
+    "__compat": {
+      "mdn_url": "https://developer.mozilla.org/docs/Web/API/EventSource",
+      "spec_url": "https://html.spec.whatwg.org/multipage/server-sent-events.html#the-eventsource-interface",
+      "status": {
+        "deprecated": false,
+        "experimental": false,
+        "standard_track": true
+      },
+      "support": {
+        "chrome": {
+          "version_added": "6"
+        },
+        "chrome_android": {
+          "version_added": "18"
+        },
+        "deno": {
+          "version_added": false
+        },
+        "edge": {
+          "version_added": "79"
+        },
+        "firefox": {
+          "version_added": "6"
+        },
+        "firefox_android": {
+          "version_added": "45"
+        },
+        "ie": {
+          "version_added": false
+        },
+        "opera": {
+          "version_added": "11"
+        },
+        "opera_android": {
+          "version_added": "11"
+        },
+        "safari": {
+          "version_added": "5"
+        },
+        "safari_ios": {
+          "version_added": "5"
+        },
+        "samsunginternet_android": {
+          "version_added": "1.0"
+        },
+        "webview_android": {
+          "version_added": "4.4"
         }
       }
     },
@@ -186,6 +186,11 @@
       "__compat": {
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/EventSource/close",
         "spec_url": "https://html.spec.whatwg.org/multipage/server-sent-events.html#dom-eventsource-close-dev",
+        "status": {
+          "deprecated": false,
+          "experimental": false,
+          "standard_track": true
+        },
         "support": {
           "chrome": {
             "version_added": "6"
@@ -226,11 +231,6 @@
           "webview_android": {
             "version_added": "4.4"
           }
-        },
-        "status": {
-          "experimental": false,
-          "standard_track": true,
-          "deprecated": false
         }
       }
     },
@@ -242,6 +242,11 @@
           "https://html.spec.whatwg.org/multipage/indices.html#event-error",
           "https://html.spec.whatwg.org/multipage/server-sent-events.html#handler-eventsource-onerror"
         ],
+        "status": {
+          "deprecated": false,
+          "experimental": false,
+          "standard_track": true
+        },
         "support": {
           "chrome": {
             "version_added": "6"
@@ -282,11 +287,6 @@
           "webview_android": {
             "version_added": "4.4"
           }
-        },
-        "status": {
-          "experimental": false,
-          "standard_track": true,
-          "deprecated": false
         }
       }
     },
@@ -298,6 +298,11 @@
           "https://html.spec.whatwg.org/multipage/indices.html#event-message",
           "https://html.spec.whatwg.org/multipage/server-sent-events.html#handler-eventsource-onmessage"
         ],
+        "status": {
+          "deprecated": false,
+          "experimental": false,
+          "standard_track": true
+        },
         "support": {
           "chrome": {
             "version_added": "6"
@@ -338,11 +343,6 @@
           "webview_android": {
             "version_added": "4.4"
           }
-        },
-        "status": {
-          "experimental": false,
-          "standard_track": true,
-          "deprecated": false
         }
       }
     },
@@ -354,6 +354,11 @@
           "https://html.spec.whatwg.org/multipage/indices.html#event-open",
           "https://html.spec.whatwg.org/multipage/server-sent-events.html#handler-eventsource-onopen"
         ],
+        "status": {
+          "deprecated": false,
+          "experimental": false,
+          "standard_track": true
+        },
         "support": {
           "chrome": {
             "version_added": "6"
@@ -394,11 +399,6 @@
           "webview_android": {
             "version_added": "4.4"
           }
-        },
-        "status": {
-          "experimental": false,
-          "standard_track": true,
-          "deprecated": false
         }
       }
     },
@@ -406,6 +406,11 @@
       "__compat": {
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/EventSource/readyState",
         "spec_url": "https://html.spec.whatwg.org/multipage/server-sent-events.html#dom-eventsource-readystate-dev",
+        "status": {
+          "deprecated": false,
+          "experimental": false,
+          "standard_track": true
+        },
         "support": {
           "chrome": {
             "version_added": "6"
@@ -446,11 +451,6 @@
           "webview_android": {
             "version_added": "4.4"
           }
-        },
-        "status": {
-          "experimental": false,
-          "standard_track": true,
-          "deprecated": false
         }
       }
     },
@@ -458,6 +458,11 @@
       "__compat": {
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/EventSource/url",
         "spec_url": "https://html.spec.whatwg.org/multipage/server-sent-events.html#dom-eventsource-url-dev",
+        "status": {
+          "deprecated": false,
+          "experimental": false,
+          "standard_track": true
+        },
         "support": {
           "chrome": {
             "version_added": "6"
@@ -498,11 +503,6 @@
           "webview_android": {
             "version_added": "4.4"
           }
-        },
-        "status": {
-          "experimental": false,
-          "standard_track": true,
-          "deprecated": false
         }
       }
     },
@@ -510,6 +510,11 @@
       "__compat": {
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/EventSource/withCredentials",
         "spec_url": "https://html.spec.whatwg.org/multipage/server-sent-events.html#dom-eventsource-withcredentials-dev",
+        "status": {
+          "deprecated": false,
+          "experimental": false,
+          "standard_track": true
+        },
         "support": {
           "chrome": {
             "version_added": "6"
@@ -550,17 +555,17 @@
           "webview_android": {
             "version_added": "4.4"
           }
-        },
-        "status": {
-          "experimental": false,
-          "standard_track": true,
-          "deprecated": false
         }
       }
     },
     "worker_support": {
       "__compat": {
         "description": "Available in workers",
+        "status": {
+          "deprecated": false,
+          "experimental": false,
+          "standard_track": true
+        },
         "support": {
           "chrome": {
             "version_added": "6"
@@ -601,11 +606,6 @@
           "webview_android": {
             "version_added": "≤37"
           }
-        },
-        "status": {
-          "experimental": false,
-          "standard_track": true,
-          "deprecated": false
         }
       }
     }
@@ -663,17 +663,11 @@
       "ie_mob": "*",
       "android": "<4.4"
     },
-    "install": {
-      "module": "event-source-polyfill",
-      "paths": [
-        "./src/eventsource.js"
-      ]
-    },
     "detectSource": "\"EventSource\"in self&&\"function\"==typeof self.EventSource\n",
     "baseDir": "EventSource",
     "hasTests": false,
     "isTestable": true,
     "isPublic": true,
-    "size": 12085
+    "size": 12027
   }
 }

@@ -23,6 +23,11 @@
     "__compat": {
       "mdn_url": "https://developer.mozilla.org/docs/Web/API/console/group",
       "spec_url": "https://console.spec.whatwg.org/#group",
+      "status": {
+        "deprecated": false,
+        "experimental": false,
+        "standard_track": true
+      },
       "support": {
         "chrome": {
           "version_added": "1"
@@ -66,11 +71,6 @@
         "webview_android": {
           "version_added": "37"
         }
-      },
-      "status": {
-        "experimental": false,
-        "standard_track": true,
-        "deprecated": false
       }
     }
   },

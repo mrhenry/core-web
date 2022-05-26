@@ -35,6 +35,11 @@
     "__compat": {
       "mdn_url": "https://developer.mozilla.org/docs/Web/API/Window/scroll",
       "spec_url": "https://drafts.csswg.org/cssom-view/#dom-window-scroll",
+      "status": {
+        "deprecated": false,
+        "experimental": false,
+        "standard_track": true
+      },
       "support": {
         "chrome": {
           "version_added": "1"
@@ -72,16 +77,16 @@
         "webview_android": {
           "version_added": "1"
         }
-      },
-      "status": {
-        "experimental": false,
-        "standard_track": true,
-        "deprecated": false
       }
     },
     "options_behavior_parameter": {
       "__compat": {
         "description": "<code>options.behavior</code> parameter",
+        "status": {
+          "deprecated": false,
+          "experimental": false,
+          "standard_track": true
+        },
         "support": {
           "chrome": {
             "version_added": "61"
@@ -108,12 +113,12 @@
             "version_added": "45"
           },
           "safari": {
-            "version_added": "14",
-            "notes": "Safari does not have support for the <code>smooth</code> scroll behavior."
+            "notes": "Safari does not have support for the <code>smooth</code> scroll behavior.",
+            "version_added": "14"
           },
           "safari_ios": {
-            "version_added": "14",
-            "notes": "Safari does not have support for the <code>smooth</code> scroll behavior."
+            "notes": "Safari does not have support for the <code>smooth</code> scroll behavior.",
+            "version_added": "14"
           },
           "samsunginternet_android": {
             "version_added": "8.0"
@@ -121,17 +126,17 @@
           "webview_android": {
             "version_added": "61"
           }
-        },
-        "status": {
-          "experimental": false,
-          "standard_track": true,
-          "deprecated": false
         }
       }
     },
     "options_left_parameter": {
       "__compat": {
         "description": "<code>options.left</code> parameter",
+        "status": {
+          "deprecated": false,
+          "experimental": false,
+          "standard_track": true
+        },
         "support": {
           "chrome": {
             "version_added": "41"
@@ -169,17 +174,17 @@
           "webview_android": {
             "version_added": "41"
           }
-        },
-        "status": {
-          "experimental": false,
-          "standard_track": true,
-          "deprecated": false
         }
       }
     },
     "options_top_parameter": {
       "__compat": {
         "description": "<code>options.top</code> parameter",
+        "status": {
+          "deprecated": false,
+          "experimental": false,
+          "standard_track": true
+        },
         "support": {
           "chrome": {
             "version_added": "41"
@@ -217,11 +222,6 @@
           "webview_android": {
             "version_added": "41"
           }
-        },
-        "status": {
-          "experimental": false,
-          "standard_track": true,
-          "deprecated": false
         }
       }
     }

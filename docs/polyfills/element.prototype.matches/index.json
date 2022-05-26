@@ -37,14 +37,19 @@
     "__compat": {
       "mdn_url": "https://developer.mozilla.org/docs/Web/API/Element/matches",
       "spec_url": "https://dom.spec.whatwg.org/#ref-for-dom-element-matches①",
+      "status": {
+        "deprecated": false,
+        "experimental": false,
+        "standard_track": true
+      },
       "support": {
         "chrome": [
           {
             "version_added": "33"
           },
           {
-            "version_added": "4",
-            "alternative_name": "webkitMatchesSelector"
+            "alternative_name": "webkitMatchesSelector",
+            "version_added": "4"
           }
         ],
         "chrome_android": [
@@ -52,8 +57,8 @@
             "version_added": "33"
           },
           {
-            "version_added": "18",
-            "alternative_name": "webkitMatchesSelector"
+            "alternative_name": "webkitMatchesSelector",
+            "version_added": "18"
           }
         ],
         "edge": [
@@ -61,12 +66,12 @@
             "version_added": "15"
           },
           {
-            "version_added": "12",
-            "alternative_name": "webkitMatchesSelector"
+            "alternative_name": "webkitMatchesSelector",
+            "version_added": "12"
           },
           {
-            "version_added": "12",
-            "alternative_name": "msMatchesSelector"
+            "alternative_name": "msMatchesSelector",
+            "version_added": "12"
           }
         ],
         "firefox": [
@@ -74,16 +79,16 @@
             "version_added": "34"
           },
           {
-            "version_added": "44",
-            "alternative_name": "webkitMatchesSelector"
+            "alternative_name": "webkitMatchesSelector",
+            "version_added": "44"
           },
           {
-            "version_added": "3.6",
             "alternative_name": "mozMatchesSelector",
             "notes": [
               "Before Firefox 4, invalid selector strings caused false to be returned instead of throwing an exception.",
               "See <a href='https://bugzil.la/1119718'>bug 1119718</a> for removal."
-            ]
+            ],
+            "version_added": "3.6"
           }
         ],
         "firefox_android": [
@@ -91,31 +96,31 @@
             "version_added": "34"
           },
           {
-            "version_added": "44",
-            "alternative_name": "webkitMatchesSelector"
+            "alternative_name": "webkitMatchesSelector",
+            "version_added": "44"
           },
           {
-            "version_added": "4",
             "alternative_name": "mozMatchesSelector",
-            "notes": "See <a href='https://bugzil.la/1119718'>bug 1119718</a> for removal."
+            "notes": "See <a href='https://bugzil.la/1119718'>bug 1119718</a> for removal.",
+            "version_added": "4"
           }
         ],
         "ie": {
-          "version_added": "9",
-          "alternative_name": "msMatchesSelector"
+          "alternative_name": "msMatchesSelector",
+          "version_added": "9"
         },
         "opera": [
           {
             "version_added": "21"
           },
           {
-            "version_added": "15",
-            "alternative_name": "webkitMatchesSelector"
+            "alternative_name": "webkitMatchesSelector",
+            "version_added": "15"
           },
           {
+            "alternative_name": "oMatchesSelector",
             "version_added": "11.5",
-            "version_removed": "15",
-            "alternative_name": "oMatchesSelector"
+            "version_removed": "15"
           }
         ],
         "opera_android": [
@@ -123,13 +128,13 @@
             "version_added": "21"
           },
           {
-            "version_added": "14",
-            "alternative_name": "webkitMatchesSelector"
+            "alternative_name": "webkitMatchesSelector",
+            "version_added": "14"
           },
           {
+            "alternative_name": "oMatchesSelector",
             "version_added": "11.5",
-            "version_removed": "14",
-            "alternative_name": "oMatchesSelector"
+            "version_removed": "14"
           }
         ],
         "safari": [
@@ -137,8 +142,8 @@
             "version_added": "7"
           },
           {
-            "version_added": "5",
-            "alternative_name": "webkitMatchesSelector"
+            "alternative_name": "webkitMatchesSelector",
+            "version_added": "5"
           }
         ],
         "safari_ios": [
@@ -146,8 +151,8 @@
             "version_added": "8"
           },
           {
-            "version_added": "4.2",
-            "alternative_name": "webkitMatchesSelector"
+            "alternative_name": "webkitMatchesSelector",
+            "version_added": "4.2"
           }
         ],
         "samsunginternet_android": [
@@ -155,8 +160,8 @@
             "version_added": "2.0"
           },
           {
-            "version_added": "1.0",
-            "alternative_name": "webkitMatchesSelector"
+            "alternative_name": "webkitMatchesSelector",
+            "version_added": "1.0"
           }
         ],
         "webview_android": [
@@ -164,15 +169,10 @@
             "version_added": "4.4"
           },
           {
-            "version_added": "≤37",
-            "alternative_name": "webkitMatchesSelector"
+            "alternative_name": "webkitMatchesSelector",
+            "version_added": "≤37"
           }
         ]
-      },
-      "status": {
-        "experimental": false,
-        "standard_track": true,
-        "deprecated": false
       }
     }
   },
@@ -192,8 +192,8 @@
         "version_added": "4.4"
       },
       {
-        "version_added": "≤37",
-        "alternative_name": "webkitMatchesSelector"
+        "alternative_name": "webkitMatchesSelector",
+        "version_added": "≤37"
       }
     ],
     "chrome": [
@@ -201,8 +201,8 @@
         "version_added": "33"
       },
       {
-        "version_added": "4",
-        "alternative_name": "webkitMatchesSelector"
+        "alternative_name": "webkitMatchesSelector",
+        "version_added": "4"
       }
     ],
     "edge": [
@@ -210,12 +210,12 @@
         "version_added": "15"
       },
       {
-        "version_added": "12",
-        "alternative_name": "webkitMatchesSelector"
+        "alternative_name": "webkitMatchesSelector",
+        "version_added": "12"
       },
       {
-        "version_added": "12",
-        "alternative_name": "msMatchesSelector"
+        "alternative_name": "msMatchesSelector",
+        "version_added": "12"
       }
     ],
     "firefox": [
@@ -223,34 +223,34 @@
         "version_added": "34"
       },
       {
-        "version_added": "44",
-        "alternative_name": "webkitMatchesSelector"
+        "alternative_name": "webkitMatchesSelector",
+        "version_added": "44"
       },
       {
-        "version_added": "3.6",
         "alternative_name": "mozMatchesSelector",
         "notes": [
           "Before Firefox 4, invalid selector strings caused false to be returned instead of throwing an exception.",
           "See <a href='https://bugzil.la/1119718'>bug 1119718</a> for removal."
-        ]
+        ],
+        "version_added": "3.6"
       }
     ],
     "ie": {
-      "version_added": "9",
-      "alternative_name": "msMatchesSelector"
+      "alternative_name": "msMatchesSelector",
+      "version_added": "9"
     },
     "opera": [
       {
         "version_added": "21"
       },
       {
-        "version_added": "15",
-        "alternative_name": "webkitMatchesSelector"
+        "alternative_name": "webkitMatchesSelector",
+        "version_added": "15"
       },
       {
+        "alternative_name": "oMatchesSelector",
         "version_added": "11.5",
-        "version_removed": "15",
-        "alternative_name": "oMatchesSelector"
+        "version_removed": "15"
       }
     ],
     "safari": [
@@ -258,8 +258,8 @@
         "version_added": "7"
       },
       {
-        "version_added": "5",
-        "alternative_name": "webkitMatchesSelector"
+        "alternative_name": "webkitMatchesSelector",
+        "version_added": "5"
       }
     ],
     "ios_saf": [
@@ -267,8 +267,8 @@
         "version_added": "8"
       },
       {
-        "version_added": "4.2",
-        "alternative_name": "webkitMatchesSelector"
+        "alternative_name": "webkitMatchesSelector",
+        "version_added": "4.2"
       }
     ]
   },

@@ -37,9 +37,64 @@
     "providedByCoreWeb": false
   },
   "mdn": {
+    "ResizeObserver": {
+      "__compat": {
+        "description": "<code>ResizeObserver()</code> constructor",
+        "mdn_url": "https://developer.mozilla.org/docs/Web/API/ResizeObserver/ResizeObserver",
+        "spec_url": "https://drafts.csswg.org/resize-observer/#dom-resizeobserver-resizeobserver",
+        "status": {
+          "deprecated": false,
+          "experimental": false,
+          "standard_track": true
+        },
+        "support": {
+          "chrome": {
+            "version_added": "64"
+          },
+          "chrome_android": {
+            "version_added": "64"
+          },
+          "edge": {
+            "version_added": "79"
+          },
+          "firefox": {
+            "version_added": "69"
+          },
+          "firefox_android": {
+            "version_added": "79"
+          },
+          "ie": {
+            "version_added": false
+          },
+          "opera": {
+            "version_added": "51"
+          },
+          "opera_android": {
+            "version_added": "47"
+          },
+          "safari": {
+            "version_added": "13.1"
+          },
+          "safari_ios": {
+            "version_added": "13.4"
+          },
+          "samsunginternet_android": {
+            "version_added": "9.0"
+          },
+          "webview_android": {
+            "version_added": "64"
+          }
+        }
+      }
+    },
     "__compat": {
       "mdn_url": "https://developer.mozilla.org/docs/Web/API/ResizeObserver",
       "spec_url": "https://drafts.csswg.org/resize-observer/#resize-observer-interface",
+      "status": {
+        "deprecated": false,
+        "experimental": false,
+        "standard_track": true
+      },
       "support": {
         "chrome": {
           "version_added": "64"
@@ -77,67 +132,17 @@
         "webview_android": {
           "version_added": "64"
         }
-      },
-      "status": {
-        "experimental": false,
-        "standard_track": true,
-        "deprecated": false
-      }
-    },
-    "ResizeObserver": {
-      "__compat": {
-        "mdn_url": "https://developer.mozilla.org/docs/Web/API/ResizeObserver/ResizeObserver",
-        "spec_url": "https://drafts.csswg.org/resize-observer/#dom-resizeobserver-resizeobserver",
-        "description": "<code>ResizeObserver()</code> constructor",
-        "support": {
-          "chrome": {
-            "version_added": "64"
-          },
-          "chrome_android": {
-            "version_added": "64"
-          },
-          "edge": {
-            "version_added": "79"
-          },
-          "firefox": {
-            "version_added": "69"
-          },
-          "firefox_android": {
-            "version_added": "79"
-          },
-          "ie": {
-            "version_added": false
-          },
-          "opera": {
-            "version_added": "51"
-          },
-          "opera_android": {
-            "version_added": "47"
-          },
-          "safari": {
-            "version_added": "13.1"
-          },
-          "safari_ios": {
-            "version_added": "13.4"
-          },
-          "samsunginternet_android": {
-            "version_added": "9.0"
-          },
-          "webview_android": {
-            "version_added": "64"
-          }
-        },
-        "status": {
-          "experimental": false,
-          "standard_track": true,
-          "deprecated": false
-        }
       }
     },
     "disconnect": {
       "__compat": {
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/ResizeObserver/disconnect",
         "spec_url": "https://drafts.csswg.org/resize-observer/#dom-resizeobserver-disconnect",
+        "status": {
+          "deprecated": false,
+          "experimental": false,
+          "standard_track": true
+        },
         "support": {
           "chrome": {
             "version_added": "64"
@@ -175,11 +180,6 @@
           "webview_android": {
             "version_added": "64"
           }
-        },
-        "status": {
-          "experimental": false,
-          "standard_track": true,
-          "deprecated": false
         }
       }
     },
@@ -187,6 +187,11 @@
       "__compat": {
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/ResizeObserver/observe",
         "spec_url": "https://drafts.csswg.org/resize-observer/#dom-resizeobserver-observe",
+        "status": {
+          "deprecated": false,
+          "experimental": false,
+          "standard_track": true
+        },
         "support": {
           "chrome": {
             "version_added": "64"
@@ -224,47 +229,47 @@
           "webview_android": {
             "version_added": "64"
           }
-        },
-        "status": {
-          "experimental": false,
-          "standard_track": true,
-          "deprecated": false
         }
       },
       "options_box_parameter": {
         "__compat": {
           "description": "<code>options.box</code> parameter",
+          "status": {
+            "deprecated": false,
+            "experimental": false,
+            "standard_track": true
+          },
           "support": {
             "chrome": {
-              "version_added": "64",
-              "notes": "Before version 84, the <code>device-pixel-content-box</code> value is not supported."
+              "notes": "Before version 84, the <code>device-pixel-content-box</code> value is not supported.",
+              "version_added": "64"
             },
             "chrome_android": {
-              "version_added": "64",
-              "notes": "Before version 84, the <code>device-pixel-content-box</code> value is not supported."
+              "notes": "Before version 84, the <code>device-pixel-content-box</code> value is not supported.",
+              "version_added": "64"
             },
             "edge": {
-              "version_added": "79",
-              "notes": "Before version 84, the <code>device-pixel-content-box</code> value is not supported."
+              "notes": "Before version 84, the <code>device-pixel-content-box</code> value is not supported.",
+              "version_added": "79"
             },
             "firefox": {
-              "version_added": "69",
-              "notes": "Before version 93, the <code>device-pixel-content-box</code> value is not supported."
+              "notes": "Before version 93, the <code>device-pixel-content-box</code> value is not supported.",
+              "version_added": "69"
             },
             "firefox_android": {
-              "version_added": "79",
-              "notes": "Before version 93, the <code>device-pixel-content-box</code> value is not supported."
+              "notes": "Before version 93, the <code>device-pixel-content-box</code> value is not supported.",
+              "version_added": "79"
             },
             "ie": {
               "version_added": false
             },
             "opera": {
-              "version_added": "51",
-              "notes": "Before version 70, the <code>device-pixel-content-box</code> value is not supported."
+              "notes": "Before version 70, the <code>device-pixel-content-box</code> value is not supported.",
+              "version_added": "51"
             },
             "opera_android": {
-              "version_added": "47",
-              "notes": "Before version 60, the <code>device-pixel-content-box</code> value is not supported."
+              "notes": "Before version 60, the <code>device-pixel-content-box</code> value is not supported.",
+              "version_added": "47"
             },
             "safari": {
               "version_added": "13.1"
@@ -273,18 +278,13 @@
               "version_added": "13.4"
             },
             "samsunginternet_android": {
-              "version_added": "9.0",
-              "notes": "Before version 14.0, the <code>device-pixel-content-box</code> value is not supported."
+              "notes": "Before version 14.0, the <code>device-pixel-content-box</code> value is not supported.",
+              "version_added": "9.0"
             },
             "webview_android": {
-              "version_added": "64",
-              "notes": "Before version 84, the <code>device-pixel-content-box</code> value is not supported."
+              "notes": "Before version 84, the <code>device-pixel-content-box</code> value is not supported.",
+              "version_added": "64"
             }
-          },
-          "status": {
-            "experimental": false,
-            "standard_track": true,
-            "deprecated": false
           }
         }
       }
@@ -293,6 +293,11 @@
       "__compat": {
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/ResizeObserver/unobserve",
         "spec_url": "https://drafts.csswg.org/resize-observer/#dom-resizeobserver-unobserve",
+        "status": {
+          "deprecated": false,
+          "experimental": false,
+          "standard_track": true
+        },
         "support": {
           "chrome": {
             "version_added": "64"
@@ -330,11 +335,6 @@
           "webview_android": {
             "version_added": "64"
           }
-        },
-        "status": {
-          "experimental": false,
-          "standard_track": true,
-          "deprecated": false
         }
       }
     }

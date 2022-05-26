@@ -19,6 +19,11 @@
     "__compat": {
       "mdn_url": "https://developer.mozilla.org/docs/Web/API/HTMLDocument",
       "spec_url": "https://html.spec.whatwg.org/multipage/window-object.html#htmldocument",
+      "status": {
+        "deprecated": false,
+        "experimental": false,
+        "standard_track": true
+      },
       "support": {
         "chrome": {
           "version_added": "1"
@@ -56,11 +61,6 @@
         "webview_android": {
           "version_added": "1"
         }
-      },
-      "status": {
-        "experimental": false,
-        "standard_track": true,
-        "deprecated": false
       }
     }
   },

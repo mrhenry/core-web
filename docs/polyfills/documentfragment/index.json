@@ -33,9 +33,64 @@
     "providedByCoreWeb": false
   },
   "mdn": {
+    "DocumentFragment": {
+      "__compat": {
+        "description": "<code>DocumentFragment()</code> constructor",
+        "mdn_url": "https://developer.mozilla.org/docs/Web/API/DocumentFragment/DocumentFragment",
+        "spec_url": "https://dom.spec.whatwg.org/#ref-for-dom-documentfragment-documentfragment①",
+        "status": {
+          "deprecated": false,
+          "experimental": false,
+          "standard_track": true
+        },
+        "support": {
+          "chrome": {
+            "version_added": "29"
+          },
+          "chrome_android": {
+            "version_added": "29"
+          },
+          "edge": {
+            "version_added": "17"
+          },
+          "firefox": {
+            "version_added": "24"
+          },
+          "firefox_android": {
+            "version_added": "24"
+          },
+          "ie": {
+            "version_added": false
+          },
+          "opera": {
+            "version_added": "16"
+          },
+          "opera_android": {
+            "version_added": "16"
+          },
+          "safari": {
+            "version_added": "8"
+          },
+          "safari_ios": {
+            "version_added": "8"
+          },
+          "samsunginternet_android": {
+            "version_added": "2.0"
+          },
+          "webview_android": {
+            "version_added": "4.4"
+          }
+        }
+      }
+    },
     "__compat": {
       "mdn_url": "https://developer.mozilla.org/docs/Web/API/DocumentFragment",
       "spec_url": "https://dom.spec.whatwg.org/#interface-documentfragment",
+      "status": {
+        "deprecated": false,
+        "experimental": false,
+        "standard_track": true
+      },
       "support": {
         "chrome": {
           "version_added": "1"
@@ -73,18 +128,66 @@
         "webview_android": {
           "version_added": "1"
         }
-      },
-      "status": {
-        "experimental": false,
-        "standard_track": true,
-        "deprecated": false
       }
     },
-    "DocumentFragment": {
+    "append": {
       "__compat": {
-        "description": "<code>DocumentFragment()</code> constructor",
-        "mdn_url": "https://developer.mozilla.org/docs/Web/API/DocumentFragment/DocumentFragment",
-        "spec_url": "https://dom.spec.whatwg.org/#ref-for-dom-documentfragment-documentfragment①",
+        "mdn_url": "https://developer.mozilla.org/docs/Web/API/DocumentFragment/append",
+        "spec_url": "https://dom.spec.whatwg.org/#ref-for-dom-parentnode-append①",
+        "status": {
+          "deprecated": false,
+          "experimental": false,
+          "standard_track": true
+        },
+        "support": {
+          "chrome": {
+            "version_added": "54"
+          },
+          "chrome_android": {
+            "version_added": "54"
+          },
+          "edge": {
+            "version_added": "17"
+          },
+          "firefox": {
+            "version_added": "49"
+          },
+          "firefox_android": {
+            "version_added": "49"
+          },
+          "ie": {
+            "version_added": false
+          },
+          "opera": {
+            "version_added": "41"
+          },
+          "opera_android": {
+            "version_added": "41"
+          },
+          "safari": {
+            "version_added": "10"
+          },
+          "safari_ios": {
+            "version_added": "10"
+          },
+          "samsunginternet_android": {
+            "version_added": "6.0"
+          },
+          "webview_android": {
+            "version_added": "54"
+          }
+        }
+      }
+    },
+    "childElementCount": {
+      "__compat": {
+        "mdn_url": "https://developer.mozilla.org/docs/Web/API/DocumentFragment/childElementCount",
+        "spec_url": "https://dom.spec.whatwg.org/#dom-parentnode-childelementcount",
+        "status": {
+          "deprecated": false,
+          "experimental": false,
+          "standard_track": true
+        },
         "support": {
           "chrome": {
             "version_added": "29"
@@ -96,10 +199,10 @@
             "version_added": "17"
           },
           "firefox": {
-            "version_added": "24"
+            "version_added": "25"
           },
           "firefox_android": {
-            "version_added": "24"
+            "version_added": "25"
           },
           "ie": {
             "version_added": false
@@ -111,10 +214,10 @@
             "version_added": "16"
           },
           "safari": {
-            "version_added": "8"
+            "version_added": "9"
           },
           "safari_ios": {
-            "version_added": "8"
+            "version_added": "9"
           },
           "samsunginternet_android": {
             "version_added": "2.0"
@@ -122,17 +225,115 @@
           "webview_android": {
             "version_added": "4.4"
           }
-        },
+        }
+      }
+    },
+    "children": {
+      "__compat": {
+        "mdn_url": "https://developer.mozilla.org/docs/Web/API/DocumentFragment/children",
+        "spec_url": "https://dom.spec.whatwg.org/#ref-for-dom-parentnode-children①",
         "status": {
-          "experimental": true,
-          "standard_track": true,
-          "deprecated": false
+          "deprecated": false,
+          "experimental": false,
+          "standard_track": true
+        },
+        "support": {
+          "chrome": {
+            "version_added": "29"
+          },
+          "chrome_android": {
+            "version_added": "29"
+          },
+          "edge": {
+            "version_added": "16"
+          },
+          "firefox": {
+            "version_added": "25"
+          },
+          "firefox_android": {
+            "version_added": "25"
+          },
+          "ie": {
+            "version_added": false
+          },
+          "opera": {
+            "version_added": "16"
+          },
+          "opera_android": {
+            "version_added": "16"
+          },
+          "safari": {
+            "version_added": "9"
+          },
+          "safari_ios": {
+            "version_added": "9"
+          },
+          "samsunginternet_android": {
+            "version_added": "2.0"
+          },
+          "webview_android": {
+            "version_added": "4.4"
+          }
+        }
+      }
+    },
+    "firstElementChild": {
+      "__compat": {
+        "mdn_url": "https://developer.mozilla.org/docs/Web/API/DocumentFragment/firstElementChild",
+        "spec_url": "https://dom.spec.whatwg.org/#ref-for-dom-parentnode-firstelementchild①",
+        "status": {
+          "deprecated": false,
+          "experimental": false,
+          "standard_track": true
+        },
+        "support": {
+          "chrome": {
+            "version_added": "29"
+          },
+          "chrome_android": {
+            "version_added": "29"
+          },
+          "edge": {
+            "version_added": "17"
+          },
+          "firefox": {
+            "version_added": "25"
+          },
+          "firefox_android": {
+            "version_added": "25"
+          },
+          "ie": {
+            "version_added": false
+          },
+          "opera": {
+            "version_added": "16"
+          },
+          "opera_android": {
+            "version_added": "16"
+          },
+          "safari": {
+            "version_added": "9"
+          },
+          "safari_ios": {
+            "version_added": "9"
+          },
+          "samsunginternet_android": {
+            "version_added": "2.0"
+          },
+          "webview_android": {
+            "version_added": "4.4"
+          }
         }
       }
     },
     "getElementById": {
       "__compat": {
         "spec_url": "https://dom.spec.whatwg.org/#dom-nonelementparentnode-getelementbyid",
+        "status": {
+          "deprecated": false,
+          "experimental": false,
+          "standard_track": true
+        },
         "support": {
           "chrome": {
             "version_added": "36"
@@ -170,207 +371,6 @@
           "webview_android": {
             "version_added": "37"
           }
-        },
-        "status": {
-          "experimental": false,
-          "standard_track": true,
-          "deprecated": false
-        }
-      }
-    },
-    "append": {
-      "__compat": {
-        "mdn_url": "https://developer.mozilla.org/docs/Web/API/DocumentFragment/append",
-        "spec_url": "https://dom.spec.whatwg.org/#ref-for-dom-parentnode-append①",
-        "support": {
-          "chrome": {
-            "version_added": "54"
-          },
-          "chrome_android": {
-            "version_added": "54"
-          },
-          "edge": {
-            "version_added": "17"
-          },
-          "firefox": {
-            "version_added": "49"
-          },
-          "firefox_android": {
-            "version_added": "49"
-          },
-          "ie": {
-            "version_added": false
-          },
-          "opera": {
-            "version_added": "41"
-          },
-          "opera_android": {
-            "version_added": "41"
-          },
-          "safari": {
-            "version_added": "10"
-          },
-          "safari_ios": {
-            "version_added": "10"
-          },
-          "samsunginternet_android": {
-            "version_added": "6.0"
-          },
-          "webview_android": {
-            "version_added": "54"
-          }
-        },
-        "status": {
-          "experimental": false,
-          "standard_track": true,
-          "deprecated": false
-        }
-      }
-    },
-    "childElementCount": {
-      "__compat": {
-        "mdn_url": "https://developer.mozilla.org/docs/Web/API/DocumentFragment/childElementCount",
-        "spec_url": "https://dom.spec.whatwg.org/#dom-parentnode-childelementcount",
-        "support": {
-          "chrome": {
-            "version_added": "29"
-          },
-          "chrome_android": {
-            "version_added": "29"
-          },
-          "edge": {
-            "version_added": "17"
-          },
-          "firefox": {
-            "version_added": "25"
-          },
-          "firefox_android": {
-            "version_added": "25"
-          },
-          "ie": {
-            "version_added": false
-          },
-          "opera": {
-            "version_added": "16"
-          },
-          "opera_android": {
-            "version_added": "16"
-          },
-          "safari": {
-            "version_added": "9"
-          },
-          "safari_ios": {
-            "version_added": "9"
-          },
-          "samsunginternet_android": {
-            "version_added": "2.0"
-          },
-          "webview_android": {
-            "version_added": "4.4"
-          }
-        },
-        "status": {
-          "experimental": false,
-          "standard_track": true,
-          "deprecated": false
-        }
-      }
-    },
-    "children": {
-      "__compat": {
-        "mdn_url": "https://developer.mozilla.org/docs/Web/API/DocumentFragment/children",
-        "spec_url": "https://dom.spec.whatwg.org/#ref-for-dom-parentnode-children①",
-        "support": {
-          "chrome": {
-            "version_added": "29"
-          },
-          "chrome_android": {
-            "version_added": "29"
-          },
-          "edge": {
-            "version_added": "16"
-          },
-          "firefox": {
-            "version_added": "25"
-          },
-          "firefox_android": {
-            "version_added": "25"
-          },
-          "ie": {
-            "version_added": false
-          },
-          "opera": {
-            "version_added": "16"
-          },
-          "opera_android": {
-            "version_added": "16"
-          },
-          "safari": {
-            "version_added": "9"
-          },
-          "safari_ios": {
-            "version_added": "9"
-          },
-          "samsunginternet_android": {
-            "version_added": "2.0"
-          },
-          "webview_android": {
-            "version_added": "4.4"
-          }
-        },
-        "status": {
-          "experimental": false,
-          "standard_track": true,
-          "deprecated": false
-        }
-      }
-    },
-    "firstElementChild": {
-      "__compat": {
-        "mdn_url": "https://developer.mozilla.org/docs/Web/API/DocumentFragment/firstElementChild",
-        "spec_url": "https://dom.spec.whatwg.org/#ref-for-dom-parentnode-firstelementchild①",
-        "support": {
-          "chrome": {
-            "version_added": "29"
-          },
-          "chrome_android": {
-            "version_added": "29"
-          },
-          "edge": {
-            "version_added": "17"
-          },
-          "firefox": {
-            "version_added": "25"
-          },
-          "firefox_android": {
-            "version_added": "25"
-          },
-          "ie": {
-            "version_added": false
-          },
-          "opera": {
-            "version_added": "16"
-          },
-          "opera_android": {
-            "version_added": "16"
-          },
-          "safari": {
-            "version_added": "9"
-          },
-          "safari_ios": {
-            "version_added": "9"
-          },
-          "samsunginternet_android": {
-            "version_added": "2.0"
-          },
-          "webview_android": {
-            "version_added": "4.4"
-          }
-        },
-        "status": {
-          "experimental": false,
-          "standard_track": true,
-          "deprecated": false
         }
       }
     },
@@ -378,6 +378,11 @@
       "__compat": {
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/DocumentFragment/lastElementChild",
         "spec_url": "https://dom.spec.whatwg.org/#ref-for-dom-parentnode-lastelementchild①",
+        "status": {
+          "deprecated": false,
+          "experimental": false,
+          "standard_track": true
+        },
         "support": {
           "chrome": {
             "version_added": "29"
@@ -415,11 +420,6 @@
           "webview_android": {
             "version_added": "4.4"
           }
-        },
-        "status": {
-          "experimental": false,
-          "standard_track": true,
-          "deprecated": false
         }
       }
     },
@@ -427,6 +427,11 @@
       "__compat": {
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/DocumentFragment/prepend",
         "spec_url": "https://dom.spec.whatwg.org/#ref-for-dom-parentnode-prepend①",
+        "status": {
+          "deprecated": false,
+          "experimental": false,
+          "standard_track": true
+        },
         "support": {
           "chrome": {
             "version_added": "54"
@@ -464,11 +469,6 @@
           "webview_android": {
             "version_added": "54"
           }
-        },
-        "status": {
-          "experimental": false,
-          "standard_track": true,
-          "deprecated": false
         }
       }
     },
@@ -476,6 +476,11 @@
       "__compat": {
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/DocumentFragment/querySelector",
         "spec_url": "https://dom.spec.whatwg.org/#ref-for-dom-parentnode-queryselector①",
+        "status": {
+          "deprecated": false,
+          "experimental": false,
+          "standard_track": true
+        },
         "support": {
           "chrome": {
             "version_added": "1"
@@ -497,9 +502,9 @@
               "version_added": "9"
             },
             {
-              "version_added": "8",
+              "notes": "<code>querySelectorAll()</code> is supported, but only for CSS 2.1 selectors.",
               "partial_implementation": true,
-              "notes": "<code>querySelectorAll()</code> is supported, but only for CSS 2.1 selectors."
+              "version_added": "8"
             }
           ],
           "opera": {
@@ -520,11 +525,6 @@
           "webview_android": {
             "version_added": "≤37"
           }
-        },
-        "status": {
-          "experimental": false,
-          "standard_track": true,
-          "deprecated": false
         }
       }
     },
@@ -532,6 +532,11 @@
       "__compat": {
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/DocumentFragment/querySelectorAll",
         "spec_url": "https://dom.spec.whatwg.org/#ref-for-dom-parentnode-queryselectorall①",
+        "status": {
+          "deprecated": false,
+          "experimental": false,
+          "standard_track": true
+        },
         "support": {
           "chrome": {
             "version_added": "1"
@@ -553,9 +558,9 @@
               "version_added": "9"
             },
             {
-              "version_added": "8",
+              "notes": "<code>querySelectorAll()</code> is supported, but only for CSS 2.1 selectors.",
               "partial_implementation": true,
-              "notes": "<code>querySelectorAll()</code> is supported, but only for CSS 2.1 selectors."
+              "version_added": "8"
             }
           ],
           "opera": {
@@ -576,11 +581,6 @@
           "webview_android": {
             "version_added": "≤37"
           }
-        },
-        "status": {
-          "experimental": false,
-          "standard_track": true,
-          "deprecated": false
         }
       }
     },
@@ -588,6 +588,11 @@
       "__compat": {
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/DocumentFragment/replaceChildren",
         "spec_url": "https://dom.spec.whatwg.org/#ref-for-dom-parentnode-replacechildren①",
+        "status": {
+          "deprecated": false,
+          "experimental": false,
+          "standard_track": true
+        },
         "support": {
           "chrome": {
             "version_added": "86"
@@ -625,11 +630,6 @@
           "webview_android": {
             "version_added": "86"
           }
-        },
-        "status": {
-          "experimental": false,
-          "standard_track": true,
-          "deprecated": false
         }
       }
     }

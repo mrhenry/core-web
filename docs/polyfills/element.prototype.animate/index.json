@@ -36,6 +36,11 @@
     "__compat": {
       "mdn_url": "https://developer.mozilla.org/docs/Web/API/Element/animate",
       "spec_url": "https://drafts.csswg.org/web-animations-1/#dom-animatable-animate",
+      "status": {
+        "deprecated": false,
+        "experimental": false,
+        "standard_track": true
+      },
       "support": {
         "chrome": {
           "version_added": "36"
@@ -73,17 +78,17 @@
         "webview_android": {
           "version_added": "37"
         }
-      },
-      "status": {
-        "experimental": false,
-        "standard_track": true,
-        "deprecated": false
       }
     },
     "implicit_tofrom": {
       "__compat": {
         "description": "Implicit to/from keyframes are supported",
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/Element/animate#Implicit_tofrom_keyframes",
+        "status": {
+          "deprecated": false,
+          "experimental": false,
+          "standard_track": true
+        },
         "support": {
           "chrome": {
             "version_added": "84"
@@ -110,14 +115,14 @@
             "version_added": "60"
           },
           "safari": {
-            "version_added": "13.1",
+            "notes": "Implementation seems somewhat buggy. More information will follow when available.",
             "partial_implementation": true,
-            "notes": "Implementation seems somewhat buggy. More information will follow when available."
+            "version_added": "13.1"
           },
           "safari_ios": {
-            "version_added": "13.4",
+            "notes": "Implementation seems somewhat buggy. More information will follow when available.",
             "partial_implementation": true,
-            "notes": "Implementation seems somewhat buggy. More information will follow when available."
+            "version_added": "13.4"
           },
           "samsunginternet_android": {
             "version_added": "14.0"
@@ -125,11 +130,6 @@
           "webview_android": {
             "version_added": "84"
           }
-        },
-        "status": {
-          "experimental": true,
-          "standard_track": true,
-          "deprecated": false
         }
       }
     },
@@ -137,47 +137,52 @@
       "__compat": {
         "description": "<code>options.composite</code> parameter",
         "spec_url": "https://drafts.csswg.org/web-animations-1/#dom-keyframeeffectoptions-composite",
+        "status": {
+          "deprecated": false,
+          "experimental": true,
+          "standard_track": true
+        },
         "support": {
           "chrome": {
-            "version_added": "79",
             "flags": [
               {
-                "type": "preference",
-                "name": "#enable-experimental-web-platform-features"
+                "name": "#enable-experimental-web-platform-features",
+                "type": "preference"
               }
-            ]
+            ],
+            "version_added": "79"
           },
           "chrome_android": {
-            "version_added": "79",
             "flags": [
               {
-                "type": "preference",
-                "name": "#enable-experimental-web-platform-features"
+                "name": "#enable-experimental-web-platform-features",
+                "type": "preference"
               }
-            ]
+            ],
+            "version_added": "79"
           },
           "edge": {
-            "version_added": "79",
             "flags": [
               {
-                "type": "preference",
-                "name": "#enable-experimental-web-platform-features"
+                "name": "#enable-experimental-web-platform-features",
+                "type": "preference"
               }
-            ]
+            ],
+            "version_added": "79"
           },
           "firefox": [
             {
               "version_added": "80"
             },
             {
-              "version_added": "63",
-              "version_removed": "79",
               "flags": [
                 {
-                  "type": "preference",
-                  "name": "dom.animations-api.compositing.enabled"
+                  "name": "dom.animations-api.compositing.enabled",
+                  "type": "preference"
                 }
-              ]
+              ],
+              "version_added": "63",
+              "version_removed": "79"
             }
           ],
           "firefox_android": {
@@ -187,13 +192,13 @@
             "version_added": false
           },
           "opera": {
-            "version_added": "66",
             "flags": [
               {
-                "type": "preference",
-                "name": "#enable-experimental-web-platform-features"
+                "name": "#enable-experimental-web-platform-features",
+                "type": "preference"
               }
-            ]
+            ],
+            "version_added": "66"
           },
           "opera_android": {
             "version_added": false
@@ -210,11 +215,6 @@
           "webview_android": {
             "version_added": false
           }
-        },
-        "status": {
-          "experimental": true,
-          "standard_track": true,
-          "deprecated": false
         }
       }
     },
@@ -222,6 +222,11 @@
       "__compat": {
         "description": "<code>options.id</code> parameter",
         "spec_url": "https://drafts.csswg.org/web-animations-1/#dom-keyframeanimationoptions-id",
+        "status": {
+          "deprecated": false,
+          "experimental": false,
+          "standard_track": true
+        },
         "support": {
           "chrome": {
             "version_added": "50"
@@ -259,11 +264,6 @@
           "webview_android": {
             "version_added": "50"
           }
-        },
-        "status": {
-          "experimental": false,
-          "standard_track": true,
-          "deprecated": false
         }
       }
     },
@@ -271,6 +271,11 @@
       "__compat": {
         "description": "<code>options.iterationComposite</code> parameter",
         "spec_url": "https://drafts.csswg.org/web-animations-2/#dom-keyframeeffectoptions-iterationcomposite",
+        "status": {
+          "deprecated": false,
+          "experimental": true,
+          "standard_track": true
+        },
         "support": {
           "chrome": {
             "version_added": false
@@ -286,14 +291,14 @@
               "version_added": "80"
             },
             {
-              "version_added": "63",
-              "version_removed": "79",
               "flags": [
                 {
-                  "type": "preference",
-                  "name": "dom.animations-api.compositing.enabled"
+                  "name": "dom.animations-api.compositing.enabled",
+                  "type": "preference"
                 }
-              ]
+              ],
+              "version_added": "63",
+              "version_removed": "79"
             }
           ],
           "firefox_android": {
@@ -320,11 +325,6 @@
           "webview_android": {
             "version_added": false
           }
-        },
-        "status": {
-          "experimental": true,
-          "standard_track": true,
-          "deprecated": false
         }
       }
     },
@@ -332,39 +332,44 @@
       "__compat": {
         "description": "<code>options.pseudoElement</code> parameter",
         "spec_url": "https://drafts.csswg.org/web-animations-1/#dom-keyframeeffectoptions-pseudoelement",
+        "status": {
+          "deprecated": false,
+          "experimental": true,
+          "standard_track": true
+        },
         "support": {
           "chrome": {
-            "version_added": "81",
-            "partial_implementation": true,
-            "notes": "A valid animation object is returned but the targeted pseudoelement is not visually animated.",
             "flags": [
               {
-                "type": "preference",
-                "name": "#enable-experimental-web-platform-features"
+                "name": "#enable-experimental-web-platform-features",
+                "type": "preference"
               }
-            ]
+            ],
+            "notes": "A valid animation object is returned but the targeted pseudoelement is not visually animated.",
+            "partial_implementation": true,
+            "version_added": "81"
           },
           "chrome_android": {
-            "version_added": "81",
-            "partial_implementation": true,
-            "notes": "A valid animation object is returned but the targeted pseudoelement is not visually animated.",
             "flags": [
               {
-                "type": "preference",
-                "name": "#enable-experimental-web-platform-features"
+                "name": "#enable-experimental-web-platform-features",
+                "type": "preference"
               }
-            ]
+            ],
+            "notes": "A valid animation object is returned but the targeted pseudoelement is not visually animated.",
+            "partial_implementation": true,
+            "version_added": "81"
           },
           "edge": {
-            "version_added": "81",
-            "partial_implementation": true,
-            "notes": "A valid animation object is returned but the targeted pseudoelement is not visually animated.",
             "flags": [
               {
-                "type": "preference",
-                "name": "#enable-experimental-web-platform-features"
+                "name": "#enable-experimental-web-platform-features",
+                "type": "preference"
               }
-            ]
+            ],
+            "notes": "A valid animation object is returned but the targeted pseudoelement is not visually animated.",
+            "partial_implementation": true,
+            "version_added": "81"
           },
           "firefox": {
             "version_added": "75"
@@ -376,15 +381,15 @@
             "version_added": false
           },
           "opera": {
-            "version_added": "68",
-            "partial_implementation": true,
-            "notes": "A valid animation object is returned but the targeted pseudoelement is not visually animated.",
             "flags": [
               {
-                "type": "preference",
-                "name": "#enable-experimental-web-platform-features"
+                "name": "#enable-experimental-web-platform-features",
+                "type": "preference"
               }
-            ]
+            ],
+            "notes": "A valid animation object is returned but the targeted pseudoelement is not visually animated.",
+            "partial_implementation": true,
+            "version_added": "68"
           },
           "opera_android": {
             "version_added": false
@@ -401,11 +406,6 @@
           "webview_android": {
             "version_added": false
           }
-        },
-        "status": {
-          "experimental": true,
-          "standard_track": true,
-          "deprecated": false
         }
       }
     }

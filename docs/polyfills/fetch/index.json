@@ -35,6 +35,11 @@
     "__compat": {
       "mdn_url": "https://developer.mozilla.org/docs/Web/API/fetch",
       "spec_url": "https://fetch.spec.whatwg.org/#fetch-method",
+      "status": {
+        "deprecated": false,
+        "experimental": false,
+        "standard_track": true
+      },
       "support": {
         "chrome": {
           "version_added": "42"
@@ -43,8 +48,8 @@
           "version_added": "42"
         },
         "deno": {
-          "version_added": "1.0",
-          "notes": "Fetching with a <code>\"manual\"</code> redirect mode does not result in a <code>\"opaqueredirect\"</code> response, but a regular response."
+          "notes": "Fetching with a <code>\"manual\"</code> redirect mode does not result in a <code>\"opaqueredirect\"</code> response, but a regular response.",
+          "version_added": "1.0"
         },
         "edge": {
           "version_added": "14"
@@ -63,13 +68,22 @@
             "version_added": "18.0.0"
           },
           {
-            "version_added": "17.5.0",
             "flags": [
               {
                 "name": "--experimental-fetch",
                 "type": "runtime_flag"
               }
-            ]
+            ],
+            "version_added": "17.5.0"
+          },
+          {
+            "flags": [
+              {
+                "name": "--experimental-fetch",
+                "type": "runtime_flag"
+              }
+            ],
+            "version_added": "16.15.0"
           }
         ],
         "opera": {
@@ -90,16 +104,16 @@
         "webview_android": {
           "version_added": "42"
         }
-      },
-      "status": {
-        "experimental": false,
-        "standard_track": true,
-        "deprecated": false
       }
     },
     "blob_data_support": {
       "__compat": {
         "description": "Support for blob: and data:",
+        "status": {
+          "deprecated": false,
+          "experimental": false,
+          "standard_track": true
+        },
         "support": {
           "chrome": {
             "version_added": "48"
@@ -140,17 +154,17 @@
           "webview_android": {
             "version_added": "43"
           }
-        },
-        "status": {
-          "experimental": false,
-          "standard_track": true,
-          "deprecated": false
         }
       }
     },
     "referrerpolicy": {
       "__compat": {
         "description": "referrerPolicy",
+        "status": {
+          "deprecated": false,
+          "experimental": false,
+          "standard_track": true
+        },
         "support": {
           "chrome": {
             "version_added": "52"
@@ -191,17 +205,17 @@
           "webview_android": {
             "version_added": "52"
           }
-        },
-        "status": {
-          "experimental": false,
-          "standard_track": true,
-          "deprecated": false
         }
       }
     },
     "signal": {
       "__compat": {
         "description": "signal",
+        "status": {
+          "deprecated": false,
+          "experimental": false,
+          "standard_track": true
+        },
         "support": {
           "chrome": {
             "version_added": "66"
@@ -242,17 +256,17 @@
           "webview_android": {
             "version_added": "66"
           }
-        },
-        "status": {
-          "experimental": false,
-          "standard_track": true,
-          "deprecated": false
         }
       }
     },
     "worker_support": {
       "__compat": {
         "description": "Available in workers",
+        "status": {
+          "deprecated": false,
+          "experimental": false,
+          "standard_track": true
+        },
         "support": {
           "chrome": {
             "version_added": "42"
@@ -293,11 +307,6 @@
           "webview_android": {
             "version_added": "42"
           }
-        },
-        "status": {
-          "experimental": false,
-          "standard_track": true,
-          "deprecated": false
         }
       }
     }

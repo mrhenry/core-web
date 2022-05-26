@@ -24,9 +24,76 @@
     "providedByCoreWeb": false
   },
   "mdn": {
+    "Event": {
+      "__compat": {
+        "description": "<code>Event()</code> constructor",
+        "mdn_url": "https://developer.mozilla.org/docs/Web/API/Event/Event",
+        "spec_url": "https://dom.spec.whatwg.org/#ref-for-dom-event-event",
+        "status": {
+          "deprecated": false,
+          "experimental": false,
+          "standard_track": true
+        },
+        "support": {
+          "chrome": {
+            "version_added": "15"
+          },
+          "chrome_android": {
+            "version_added": "18"
+          },
+          "deno": {
+            "version_added": "1.0"
+          },
+          "edge": {
+            "version_added": "12"
+          },
+          "firefox": {
+            "version_added": "11"
+          },
+          "firefox_android": {
+            "version_added": "14"
+          },
+          "ie": {
+            "version_added": false
+          },
+          "nodejs": [
+            {
+              "version_added": "15.0.0"
+            },
+            {
+              "notes": "Only available from the <code>events</code> module",
+              "version_added": "14.5.0"
+            }
+          ],
+          "opera": {
+            "version_added": "11.6"
+          },
+          "opera_android": {
+            "version_added": "12"
+          },
+          "safari": {
+            "version_added": "6"
+          },
+          "safari_ios": {
+            "version_added": "6"
+          },
+          "samsunginternet_android": {
+            "version_added": "1.0"
+          },
+          "webview_android": {
+            "version_added": "4.4"
+          }
+        }
+      }
+    },
     "__compat": {
       "mdn_url": "https://developer.mozilla.org/docs/Web/API/Event",
       "spec_url": "https://dom.spec.whatwg.org/#interface-event",
+      "status": {
+        "deprecated": false,
+        "experimental": false,
+        "standard_track": true
+      },
       "support": {
         "chrome": {
           "version_added": "1"
@@ -70,79 +137,17 @@
         "webview_android": {
           "version_added": "1"
         }
-      },
-      "status": {
-        "experimental": false,
-        "standard_track": true,
-        "deprecated": false
-      }
-    },
-    "Event": {
-      "__compat": {
-        "mdn_url": "https://developer.mozilla.org/docs/Web/API/Event/Event",
-        "spec_url": "https://dom.spec.whatwg.org/#ref-for-dom-event-event",
-        "description": "<code>Event()</code> constructor",
-        "support": {
-          "chrome": {
-            "version_added": "15"
-          },
-          "chrome_android": {
-            "version_added": "18"
-          },
-          "deno": {
-            "version_added": "1.0"
-          },
-          "edge": {
-            "version_added": "12"
-          },
-          "firefox": {
-            "version_added": "11"
-          },
-          "firefox_android": {
-            "version_added": "14"
-          },
-          "ie": {
-            "version_added": false
-          },
-          "nodejs": [
-            {
-              "version_added": "15.0.0"
-            },
-            {
-              "version_added": "14.5.0",
-              "notes": "Only available from the <code>events</code> module"
-            }
-          ],
-          "opera": {
-            "version_added": "11.6"
-          },
-          "opera_android": {
-            "version_added": "12"
-          },
-          "safari": {
-            "version_added": "6"
-          },
-          "safari_ios": {
-            "version_added": "6"
-          },
-          "samsunginternet_android": {
-            "version_added": "1.0"
-          },
-          "webview_android": {
-            "version_added": "4.4"
-          }
-        },
-        "status": {
-          "experimental": false,
-          "standard_track": true,
-          "deprecated": false
-        }
       }
     },
     "bubbles": {
       "__compat": {
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/Event/bubbles",
         "spec_url": "https://dom.spec.whatwg.org/#ref-for-dom-event-bubbles③",
+        "status": {
+          "deprecated": false,
+          "experimental": false,
+          "standard_track": true
+        },
         "support": {
           "chrome": {
             "version_added": "1"
@@ -166,8 +171,8 @@
             "version_added": "9"
           },
           "nodejs": {
-            "version_added": "14.5.0",
-            "notes": "This is not used in Node.js and is provided purely for completeness."
+            "notes": "This is not used in Node.js and is provided purely for completeness.",
+            "version_added": "14.5.0"
           },
           "opera": {
             "version_added": "≤12.1"
@@ -187,11 +192,84 @@
           "webview_android": {
             "version_added": "≤37"
           }
-        },
+        }
+      }
+    },
+    "cancelBubble": {
+      "__compat": {
+        "mdn_url": "https://developer.mozilla.org/docs/Web/API/Event/cancelBubble",
+        "spec_url": "https://dom.spec.whatwg.org/#ref-for-dom-event-cancelbubble①",
         "status": {
+          "deprecated": false,
           "experimental": false,
-          "standard_track": true,
-          "deprecated": false
+          "standard_track": true
+        },
+        "support": {
+          "chrome": {
+            "notes": "Starting with Chrome 58 and Opera 45, setting this property to false does nothing, as per <a href='https://github.com/whatwg/dom/issues/211'>spec discussion</a>.",
+            "version_added": "1"
+          },
+          "chrome_android": {
+            "notes": "Starting with Chrome 58 and Opera 45, setting this property to false does nothing, as per <a href='https://github.com/whatwg/dom/issues/211'>spec discussion</a>.",
+            "version_added": "18"
+          },
+          "deno": {
+            "version_added": "1.0"
+          },
+          "edge": {
+            "version_added": "12"
+          },
+          "firefox": [
+            {
+              "version_added": "53"
+            },
+            {
+              "notes": "Only supported for <a href='https://developer.mozilla.org/docs/Web/API/UIEvent'><code>UIEvent</code></a>, not all <code>Event</code> objects.",
+              "partial_implementation": true,
+              "version_added": "1",
+              "version_removed": "53"
+            }
+          ],
+          "firefox_android": [
+            {
+              "version_added": "53"
+            },
+            {
+              "notes": "Only supported for <a href='https://developer.mozilla.org/docs/Web/API/UIEvent'><code>UIEvent</code></a>, not all <code>Event</code> objects.",
+              "partial_implementation": true,
+              "version_added": "4",
+              "version_removed": "53"
+            }
+          ],
+          "ie": {
+            "version_added": "9"
+          },
+          "nodejs": {
+            "notes": "This is not used in Node.js and is provided purely for completeness.",
+            "version_added": "14.5.0"
+          },
+          "opera": {
+            "notes": "Starting with Chrome 58 and Opera 45, setting this property to false does nothing, as per <a href='https://github.com/whatwg/dom/issues/211'>spec discussion</a>.",
+            "version_added": "≤12.1"
+          },
+          "opera_android": {
+            "notes": "Starting with Chrome 58 and Opera 45, setting this property to false does nothing, as per <a href='https://github.com/whatwg/dom/issues/211'>spec discussion</a>.",
+            "version_added": "≤12.1"
+          },
+          "safari": {
+            "version_added": "1"
+          },
+          "safari_ios": {
+            "version_added": "1"
+          },
+          "samsunginternet_android": {
+            "notes": "Starting with Samsung Internet 7.0 and Opera 45, setting this property to false does nothing, as per <a href='https://github.com/whatwg/dom/issues/211'>spec discussion</a>.",
+            "version_added": "1.0"
+          },
+          "webview_android": {
+            "notes": "Starting with Chrome 58 and Opera 45, setting this property to false does nothing, as per <a href='https://github.com/whatwg/dom/issues/211'>spec discussion</a>.",
+            "version_added": "≤37"
+          }
         }
       }
     },
@@ -199,6 +277,11 @@
       "__compat": {
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/Event/cancelable",
         "spec_url": "https://dom.spec.whatwg.org/#ref-for-dom-event-cancelable②",
+        "status": {
+          "deprecated": false,
+          "experimental": false,
+          "standard_track": true
+        },
         "support": {
           "chrome": {
             "version_added": "1"
@@ -242,89 +325,6 @@
           "webview_android": {
             "version_added": "≤37"
           }
-        },
-        "status": {
-          "experimental": false,
-          "standard_track": true,
-          "deprecated": false
-        }
-      }
-    },
-    "cancelBubble": {
-      "__compat": {
-        "mdn_url": "https://developer.mozilla.org/docs/Web/API/Event/cancelBubble",
-        "spec_url": "https://dom.spec.whatwg.org/#ref-for-dom-event-cancelbubble①",
-        "support": {
-          "chrome": {
-            "version_added": "1",
-            "notes": "Starting with Chrome 58 and Opera 45, setting this property to false does nothing, as per <a href='https://github.com/whatwg/dom/issues/211'>spec discussion</a>."
-          },
-          "chrome_android": {
-            "version_added": "18",
-            "notes": "Starting with Chrome 58 and Opera 45, setting this property to false does nothing, as per <a href='https://github.com/whatwg/dom/issues/211'>spec discussion</a>."
-          },
-          "deno": {
-            "version_added": "1.0"
-          },
-          "edge": {
-            "version_added": "12"
-          },
-          "firefox": [
-            {
-              "version_added": "53"
-            },
-            {
-              "version_removed": "53",
-              "version_added": "1",
-              "partial_implementation": true,
-              "notes": "Only supported for <a href='https://developer.mozilla.org/docs/Web/API/UIEvent'><code>UIEvent</code></a>, not all <code>Event</code> objects."
-            }
-          ],
-          "firefox_android": [
-            {
-              "version_added": "53"
-            },
-            {
-              "version_removed": "53",
-              "version_added": "4",
-              "partial_implementation": true,
-              "notes": "Only supported for <a href='https://developer.mozilla.org/docs/Web/API/UIEvent'><code>UIEvent</code></a>, not all <code>Event</code> objects."
-            }
-          ],
-          "ie": {
-            "version_added": "9"
-          },
-          "nodejs": {
-            "version_added": "14.5.0",
-            "notes": "This is not used in Node.js and is provided purely for completeness."
-          },
-          "opera": {
-            "version_added": "≤12.1",
-            "notes": "Starting with Chrome 58 and Opera 45, setting this property to false does nothing, as per <a href='https://github.com/whatwg/dom/issues/211'>spec discussion</a>."
-          },
-          "opera_android": {
-            "version_added": "≤12.1",
-            "notes": "Starting with Chrome 58 and Opera 45, setting this property to false does nothing, as per <a href='https://github.com/whatwg/dom/issues/211'>spec discussion</a>."
-          },
-          "safari": {
-            "version_added": "1"
-          },
-          "safari_ios": {
-            "version_added": "1"
-          },
-          "samsunginternet_android": {
-            "version_added": "1.0",
-            "notes": "Starting with Samsung Internet 7.0 and Opera 45, setting this property to false does nothing, as per <a href='https://github.com/whatwg/dom/issues/211'>spec discussion</a>."
-          },
-          "webview_android": {
-            "version_added": "≤37",
-            "notes": "Starting with Chrome 58 and Opera 45, setting this property to false does nothing, as per <a href='https://github.com/whatwg/dom/issues/211'>spec discussion</a>."
-          }
-        },
-        "status": {
-          "experimental": false,
-          "standard_track": true,
-          "deprecated": false
         }
       }
     },
@@ -332,6 +332,11 @@
       "__compat": {
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/Event/composed",
         "spec_url": "https://dom.spec.whatwg.org/#ref-for-dom-event-composed①",
+        "status": {
+          "deprecated": false,
+          "experimental": false,
+          "standard_track": true
+        },
         "support": {
           "chrome": {
             "version_added": "53"
@@ -355,8 +360,8 @@
             "version_added": false
           },
           "nodejs": {
-            "version_added": "14.5.0",
-            "notes": "This is not used in Node.js and is provided purely for completeness."
+            "notes": "This is not used in Node.js and is provided purely for completeness.",
+            "version_added": "14.5.0"
           },
           "opera": {
             "version_added": "40"
@@ -376,11 +381,6 @@
           "webview_android": {
             "version_added": "53"
           }
-        },
-        "status": {
-          "experimental": false,
-          "standard_track": true,
-          "deprecated": false
         }
       }
     },
@@ -388,15 +388,20 @@
       "__compat": {
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/Event/composedPath",
         "spec_url": "https://dom.spec.whatwg.org/#ref-for-dom-event-composedpath①",
+        "status": {
+          "deprecated": false,
+          "experimental": false,
+          "standard_track": true
+        },
         "support": {
           "chrome": [
             {
               "version_added": "53"
             },
             {
+              "alternative_name": "deepPath",
               "version_added": "50",
-              "version_removed": "53",
-              "alternative_name": "deepPath"
+              "version_removed": "53"
             }
           ],
           "chrome_android": [
@@ -404,9 +409,9 @@
               "version_added": "53"
             },
             {
+              "alternative_name": "deepPath",
               "version_added": "50",
-              "version_removed": "53",
-              "alternative_name": "deepPath"
+              "version_removed": "53"
             }
           ],
           "deno": {
@@ -425,17 +430,17 @@
             "version_added": false
           },
           "nodejs": {
-            "version_added": "14.5.0",
-            "notes": "Returns an array with either the event itself or no contents."
+            "notes": "Returns an array with either the event itself or no contents.",
+            "version_added": "14.5.0"
           },
           "opera": [
             {
               "version_added": "40"
             },
             {
+              "alternative_name": "deepPath",
               "version_added": "37",
-              "version_removed": "40",
-              "alternative_name": "deepPath"
+              "version_removed": "40"
             }
           ],
           "opera_android": [
@@ -443,9 +448,9 @@
               "version_added": "41"
             },
             {
+              "alternative_name": "deepPath",
               "version_added": "37",
-              "version_removed": "41",
-              "alternative_name": "deepPath"
+              "version_removed": "41"
             }
           ],
           "safari": {
@@ -469,16 +474,11 @@
               "version_added": "53"
             },
             {
+              "alternative_name": "deepPath",
               "version_added": "50",
-              "version_removed": "53",
-              "alternative_name": "deepPath"
+              "version_removed": "53"
             }
           ]
-        },
-        "status": {
-          "experimental": false,
-          "standard_track": true,
-          "deprecated": false
         }
       }
     },
@@ -486,6 +486,11 @@
       "__compat": {
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/Event/currentTarget",
         "spec_url": "https://dom.spec.whatwg.org/#ref-for-dom-event-currenttarget②",
+        "status": {
+          "deprecated": false,
+          "experimental": false,
+          "standard_track": true
+        },
         "support": {
           "chrome": {
             "version_added": "1"
@@ -510,10 +515,10 @@
               "version_added": "9"
             },
             {
-              "version_added": "6",
-              "version_removed": "9",
+              "notes": "On Internet Explorer 6 through 8, the event model is different. Event listeners are attached with the non-standard <a href='https://developer.mozilla.org/docs/Web/API/EventTarget/attachEvent'><code>EventTarget.attachEvent</code></a> method. In this model, there is no equivalent to <code>event.currentTarget</code> and <code>this</code> is the global object. One solution to emulate the <code>event.currentTarget</code> feature is to wrap your handler in a function calling the handler using <code>Function.prototype.call</code> with the element as a first argument. This way, <code>this</code> will be the expected value.",
               "partial_implementation": true,
-              "notes": "On Internet Explorer 6 through 8, the event model is different. Event listeners are attached with the non-standard <a href='https://developer.mozilla.org/docs/Web/API/EventTarget/attachEvent'><code>EventTarget.attachEvent</code></a> method. In this model, there is no equivalent to <code>event.currentTarget</code> and <code>this</code> is the global object. One solution to emulate the <code>event.currentTarget</code> feature is to wrap your handler in a function calling the handler using <code>Function.prototype.call</code> with the element as a first argument. This way, <code>this</code> will be the expected value."
+              "version_added": "6",
+              "version_removed": "9"
             }
           ],
           "nodejs": {
@@ -537,11 +542,6 @@
           "webview_android": {
             "version_added": "1"
           }
-        },
-        "status": {
-          "experimental": false,
-          "standard_track": true,
-          "deprecated": false
         }
       }
     },
@@ -549,6 +549,11 @@
       "__compat": {
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/Event/defaultPrevented",
         "spec_url": "https://dom.spec.whatwg.org/#ref-for-dom-event-defaultprevented①",
+        "status": {
+          "deprecated": false,
+          "experimental": false,
+          "standard_track": true
+        },
         "support": {
           "chrome": {
             "version_added": "5"
@@ -592,11 +597,6 @@
           "webview_android": {
             "version_added": "3"
           }
-        },
-        "status": {
-          "experimental": false,
-          "standard_track": true,
-          "deprecated": false
         }
       }
     },
@@ -604,6 +604,11 @@
       "__compat": {
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/Event/eventPhase",
         "spec_url": "https://dom.spec.whatwg.org/#ref-for-dom-event-eventphase③",
+        "status": {
+          "deprecated": false,
+          "experimental": false,
+          "standard_track": true
+        },
         "support": {
           "chrome": {
             "version_added": "1"
@@ -647,17 +652,17 @@
           "webview_android": {
             "version_added": "1"
           }
-        },
-        "status": {
-          "experimental": false,
-          "standard_track": true,
-          "deprecated": false
         }
       }
     },
     "explicitOriginalTarget": {
       "__compat": {
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/Event/explicitOriginalTarget",
+        "status": {
+          "deprecated": false,
+          "experimental": false,
+          "standard_track": false
+        },
         "support": {
           "chrome": {
             "version_added": false
@@ -701,11 +706,6 @@
           "webview_android": {
             "version_added": false
           }
-        },
-        "status": {
-          "experimental": false,
-          "standard_track": false,
-          "deprecated": false
         }
       }
     },
@@ -713,6 +713,11 @@
       "__compat": {
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/Event/initEvent",
         "spec_url": "https://dom.spec.whatwg.org/#ref-for-dom-event-initevent①",
+        "status": {
+          "deprecated": true,
+          "experimental": false,
+          "standard_track": true
+        },
         "support": {
           "chrome": {
             "version_added": "1"
@@ -731,10 +736,10 @@
               "version_added": "17"
             },
             {
-              "version_added": "1",
-              "version_removed": "17",
+              "notes": "Before Firefox 17, a call to this method after the dispatching of the event raised an exception instead of doing nothing.",
               "partial_implementation": true,
-              "notes": "Before Firefox 17, a call to this method after the dispatching of the event raised an exception instead of doing nothing."
+              "version_added": "1",
+              "version_removed": "17"
             }
           ],
           "firefox_android": [
@@ -742,10 +747,10 @@
               "version_added": "17"
             },
             {
-              "version_added": "4",
-              "version_removed": "17",
+              "notes": "Before Firefox 17, a call to this method after the dispatching of the event raised an exception instead of doing nothing.",
               "partial_implementation": true,
-              "notes": "Before Firefox 17, a call to this method after the dispatching of the event raised an exception instead of doing nothing."
+              "version_added": "4",
+              "version_removed": "17"
             }
           ],
           "ie": {
@@ -772,11 +777,6 @@
           "webview_android": {
             "version_added": "≤37"
           }
-        },
-        "status": {
-          "experimental": false,
-          "standard_track": true,
-          "deprecated": true
         }
       }
     },
@@ -784,14 +784,19 @@
       "__compat": {
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/Event/isTrusted",
         "spec_url": "https://dom.spec.whatwg.org/#ref-for-dom-event-istrusted①",
+        "status": {
+          "deprecated": false,
+          "experimental": false,
+          "standard_track": true
+        },
         "support": {
           "chrome": {
-            "version_added": "46",
-            "notes": "Starting with Chrome 53 and Opera 40, untrusted events do not invoke the default action."
+            "notes": "Starting with Chrome 53 and Opera 40, untrusted events do not invoke the default action.",
+            "version_added": "46"
           },
           "chrome_android": {
-            "version_added": "46",
-            "notes": "Starting with Chrome 53 and Opera 40, untrusted events do not invoke the default action."
+            "notes": "Starting with Chrome 53 and Opera 40, untrusted events do not invoke the default action.",
+            "version_added": "46"
           },
           "deno": {
             "version_added": "1.0"
@@ -806,20 +811,20 @@
             "version_added": "4"
           },
           "ie": {
-            "version_added": "9",
-            "notes": "In Internet Explorer, all events are trusted except those that are created with the <code>createEvent()</code> method."
+            "notes": "In Internet Explorer, all events are trusted except those that are created with the <code>createEvent()</code> method.",
+            "version_added": "9"
           },
           "nodejs": {
-            "version_added": "14.5.0",
-            "notes": "This is not used in Node.js and is provided purely for completeness."
+            "notes": "This is not used in Node.js and is provided purely for completeness.",
+            "version_added": "14.5.0"
           },
           "opera": {
-            "version_added": "33",
-            "notes": "Starting with Chrome 53 and Opera 40, untrusted events do not invoke the default action."
+            "notes": "Starting with Chrome 53 and Opera 40, untrusted events do not invoke the default action.",
+            "version_added": "33"
           },
           "opera_android": {
-            "version_added": "33",
-            "notes": "Starting with Chrome 53 and Opera 40, untrusted events do not invoke the default action."
+            "notes": "Starting with Chrome 53 and Opera 40, untrusted events do not invoke the default action.",
+            "version_added": "33"
           },
           "safari": {
             "version_added": "10"
@@ -828,24 +833,24 @@
             "version_added": "10"
           },
           "samsunginternet_android": {
-            "version_added": "5.0",
-            "notes": "Starting with Samsung Internet 6.0 and Opera 40, untrusted events do not invoke the default action."
+            "notes": "Starting with Samsung Internet 6.0 and Opera 40, untrusted events do not invoke the default action.",
+            "version_added": "5.0"
           },
           "webview_android": {
-            "version_added": "46",
-            "notes": "Starting with version 53, untrusted events do not invoke the default action."
+            "notes": "Starting with version 53, untrusted events do not invoke the default action.",
+            "version_added": "46"
           }
-        },
-        "status": {
-          "experimental": false,
-          "standard_track": true,
-          "deprecated": false
         }
       }
     },
     "originalTarget": {
       "__compat": {
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/Event/originalTarget",
+        "status": {
+          "deprecated": false,
+          "experimental": false,
+          "standard_track": false
+        },
         "support": {
           "chrome": {
             "version_added": false
@@ -889,11 +894,6 @@
           "webview_android": {
             "version_added": false
           }
-        },
-        "status": {
-          "experimental": false,
-          "standard_track": false,
-          "deprecated": false
         }
       }
     },
@@ -901,6 +901,11 @@
       "__compat": {
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/Event/preventDefault",
         "spec_url": "https://dom.spec.whatwg.org/#ref-for-dom-event-preventdefault③",
+        "status": {
+          "deprecated": false,
+          "experimental": false,
+          "standard_track": true
+        },
         "support": {
           "chrome": {
             "version_added": "1"
@@ -944,11 +949,6 @@
           "webview_android": {
             "version_added": "1"
           }
-        },
-        "status": {
-          "experimental": false,
-          "standard_track": true,
-          "deprecated": false
         }
       }
     },
@@ -956,6 +956,11 @@
       "__compat": {
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/Event/returnValue",
         "spec_url": "https://dom.spec.whatwg.org/#dom-event-returnvalue",
+        "status": {
+          "deprecated": true,
+          "experimental": false,
+          "standard_track": true
+        },
         "support": {
           "chrome": {
             "version_added": "1"
@@ -970,12 +975,12 @@
             "version_added": "12"
           },
           "firefox": {
-            "version_added": false,
-            "notes": "Temporarily added in 63, removed in 64, briefly added in 65, then removed again while related compatibility issues are sorted out (see <a href='https://bugzil.la/1520756'>bug 1520756</a>)."
+            "notes": "Temporarily added in 63, removed in 64, briefly added in 65, then removed again while related compatibility issues are sorted out (see <a href='https://bugzil.la/1520756'>bug 1520756</a>).",
+            "version_added": false
           },
           "firefox_android": {
-            "version_added": false,
-            "notes": "Temporarily added in 63, removed in 64, briefly added in 65, then removed again while related compatibility issues are sorted out (see <a href='https://bugzil.la/1520756'>bug 1520756</a>)."
+            "notes": "Temporarily added in 63, removed in 64, briefly added in 65, then removed again while related compatibility issues are sorted out (see <a href='https://bugzil.la/1520756'>bug 1520756</a>).",
+            "version_added": false
           },
           "ie": {
             "version_added": "6"
@@ -1001,11 +1006,6 @@
           "webview_android": {
             "version_added": "≤37"
           }
-        },
-        "status": {
-          "experimental": false,
-          "standard_track": true,
-          "deprecated": true
         }
       }
     },
@@ -1013,6 +1013,11 @@
       "__compat": {
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/Event/srcElement",
         "spec_url": "https://dom.spec.whatwg.org/#dom-event-srcelement",
+        "status": {
+          "deprecated": true,
+          "experimental": false,
+          "standard_track": true
+        },
         "support": {
           "chrome": {
             "version_added": "1"
@@ -1056,11 +1061,6 @@
           "webview_android": {
             "version_added": "≤37"
           }
-        },
-        "status": {
-          "experimental": false,
-          "standard_track": true,
-          "deprecated": true
         }
       }
     },
@@ -1068,6 +1068,11 @@
       "__compat": {
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/Event/stopImmediatePropagation",
         "spec_url": "https://dom.spec.whatwg.org/#ref-for-dom-event-stopimmediatepropagation①",
+        "status": {
+          "deprecated": false,
+          "experimental": false,
+          "standard_track": true
+        },
         "support": {
           "chrome": {
             "version_added": "5"
@@ -1111,11 +1116,6 @@
           "webview_android": {
             "version_added": "≤37"
           }
-        },
-        "status": {
-          "experimental": false,
-          "standard_track": true,
-          "deprecated": false
         }
       }
     },
@@ -1123,6 +1123,11 @@
       "__compat": {
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/Event/stopPropagation",
         "spec_url": "https://dom.spec.whatwg.org/#ref-for-dom-event-stoppropagation①",
+        "status": {
+          "deprecated": false,
+          "experimental": false,
+          "standard_track": true
+        },
         "support": {
           "chrome": {
             "version_added": "1"
@@ -1146,8 +1151,8 @@
             "version_added": "9"
           },
           "nodejs": {
-            "version_added": "14.5.0",
-            "notes": "This is not used in Node.js and is provided purely for completeness."
+            "notes": "This is not used in Node.js and is provided purely for completeness.",
+            "version_added": "14.5.0"
           },
           "opera": {
             "version_added": "7"
@@ -1167,11 +1172,6 @@
           "webview_android": {
             "version_added": "1"
           }
-        },
-        "status": {
-          "experimental": false,
-          "standard_track": true,
-          "deprecated": false
         }
       }
     },
@@ -1179,6 +1179,11 @@
       "__compat": {
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/Event/target",
         "spec_url": "https://dom.spec.whatwg.org/#ref-for-dom-event-target③",
+        "status": {
+          "deprecated": false,
+          "experimental": false,
+          "standard_track": true
+        },
         "support": {
           "chrome": {
             "version_added": "1"
@@ -1222,11 +1227,6 @@
           "webview_android": {
             "version_added": "1"
           }
-        },
-        "status": {
-          "experimental": false,
-          "standard_track": true,
-          "deprecated": false
         }
       }
     },
@@ -1234,44 +1234,49 @@
       "__compat": {
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/Event/timeStamp",
         "spec_url": "https://dom.spec.whatwg.org/#ref-for-dom-event-timestamp①",
+        "status": {
+          "deprecated": false,
+          "experimental": false,
+          "standard_track": true
+        },
         "support": {
           "chrome": {
-            "version_added": "1",
-            "notes": "Starting with Chrome 49, Firefox 54 and Opera 36, this property returns <a href='https://developer.mozilla.org/docs/Web/API/DOMHighResTimeStamp'><code>DOMHighResTimeStamp</code></a> instead of <a href='https://developer.mozilla.org/docs/Web/API/DOMTimeStamp'><code>DOMTimeStamp</code></a>."
+            "notes": "Starting with Chrome 49, Firefox 54 and Opera 36, this property returns <a href='https://developer.mozilla.org/docs/Web/API/DOMHighResTimeStamp'><code>DOMHighResTimeStamp</code></a> instead of <a href='https://developer.mozilla.org/docs/Web/API/DOMTimeStamp'><code>DOMTimeStamp</code></a>.",
+            "version_added": "1"
           },
           "chrome_android": {
-            "version_added": "18",
-            "notes": "Starting with Chrome 49, Firefox 54 and Opera 36, this property returns <a href='https://developer.mozilla.org/docs/Web/API/DOMHighResTimeStamp'><code>DOMHighResTimeStamp</code></a> instead of <a href='https://developer.mozilla.org/docs/Web/API/DOMTimeStamp'><code>DOMTimeStamp</code></a>."
+            "notes": "Starting with Chrome 49, Firefox 54 and Opera 36, this property returns <a href='https://developer.mozilla.org/docs/Web/API/DOMHighResTimeStamp'><code>DOMHighResTimeStamp</code></a> instead of <a href='https://developer.mozilla.org/docs/Web/API/DOMTimeStamp'><code>DOMTimeStamp</code></a>.",
+            "version_added": "18"
           },
           "deno": {
-            "version_added": "1.0",
-            "notes": "In Deno this represents the time since UNIX epoch, not since startup. This is considerd a bug, see <a href='https://github.com/denoland/deno/issues/10835'>#10835</a>."
+            "notes": "In Deno this represents the time since UNIX epoch, not since startup. This is considerd a bug, see <a href='https://github.com/denoland/deno/issues/10835'>#10835</a>.",
+            "version_added": "1.0"
           },
           "edge": {
             "version_added": "12"
           },
           "firefox": {
-            "version_added": "1.5",
-            "notes": "Starting with Chrome 49, Firefox 54 and Opera 36, this property returns <a href='https://developer.mozilla.org/docs/Web/API/DOMHighResTimeStamp'><code>DOMHighResTimeStamp</code></a> instead of <a href='https://developer.mozilla.org/docs/Web/API/DOMTimeStamp'><code>DOMTimeStamp</code></a>."
+            "notes": "Starting with Chrome 49, Firefox 54 and Opera 36, this property returns <a href='https://developer.mozilla.org/docs/Web/API/DOMHighResTimeStamp'><code>DOMHighResTimeStamp</code></a> instead of <a href='https://developer.mozilla.org/docs/Web/API/DOMTimeStamp'><code>DOMTimeStamp</code></a>.",
+            "version_added": "1.5"
           },
           "firefox_android": {
-            "version_added": "4",
-            "notes": "Starting with Chrome 49, Firefox 54 and Opera 36, this property returns <a href='https://developer.mozilla.org/docs/Web/API/DOMHighResTimeStamp'><code>DOMHighResTimeStamp</code></a> instead of <a href='https://developer.mozilla.org/docs/Web/API/DOMTimeStamp'><code>DOMTimeStamp</code></a>."
+            "notes": "Starting with Chrome 49, Firefox 54 and Opera 36, this property returns <a href='https://developer.mozilla.org/docs/Web/API/DOMHighResTimeStamp'><code>DOMHighResTimeStamp</code></a> instead of <a href='https://developer.mozilla.org/docs/Web/API/DOMTimeStamp'><code>DOMTimeStamp</code></a>.",
+            "version_added": "4"
           },
           "ie": {
-            "version_added": "9",
-            "notes": "Starting with Chrome 49, Firefox 54 and Opera 36, this property returns <a href='https://developer.mozilla.org/docs/Web/API/DOMHighResTimeStamp'><code>DOMHighResTimeStamp</code></a> instead of <a href='https://developer.mozilla.org/docs/Web/API/DOMTimeStamp'><code>DOMTimeStamp</code></a>."
+            "notes": "Starting with Chrome 49, Firefox 54 and Opera 36, this property returns <a href='https://developer.mozilla.org/docs/Web/API/DOMHighResTimeStamp'><code>DOMHighResTimeStamp</code></a> instead of <a href='https://developer.mozilla.org/docs/Web/API/DOMTimeStamp'><code>DOMTimeStamp</code></a>.",
+            "version_added": "9"
           },
           "nodejs": {
             "version_added": "14.5.0"
           },
           "opera": {
-            "version_added": "≤12.1",
-            "notes": "Starting with Chrome 49, Firefox 54 and Opera 36, this property returns <a href='https://developer.mozilla.org/docs/Web/API/DOMHighResTimeStamp'><code>DOMHighResTimeStamp</code></a> instead of <a href='https://developer.mozilla.org/docs/Web/API/DOMTimeStamp'><code>DOMTimeStamp</code></a>."
+            "notes": "Starting with Chrome 49, Firefox 54 and Opera 36, this property returns <a href='https://developer.mozilla.org/docs/Web/API/DOMHighResTimeStamp'><code>DOMHighResTimeStamp</code></a> instead of <a href='https://developer.mozilla.org/docs/Web/API/DOMTimeStamp'><code>DOMTimeStamp</code></a>.",
+            "version_added": "≤12.1"
           },
           "opera_android": {
-            "version_added": "≤12.1",
-            "notes": "Starting with Chrome 49, Firefox 54 and Opera 36, this property returns <a href='https://developer.mozilla.org/docs/Web/API/DOMHighResTimeStamp'><code>DOMHighResTimeStamp</code></a> instead of <a href='https://developer.mozilla.org/docs/Web/API/DOMTimeStamp'><code>DOMTimeStamp</code></a>."
+            "notes": "Starting with Chrome 49, Firefox 54 and Opera 36, this property returns <a href='https://developer.mozilla.org/docs/Web/API/DOMHighResTimeStamp'><code>DOMHighResTimeStamp</code></a> instead of <a href='https://developer.mozilla.org/docs/Web/API/DOMTimeStamp'><code>DOMTimeStamp</code></a>.",
+            "version_added": "≤12.1"
           },
           "safari": {
             "version_added": "1"
@@ -1280,18 +1285,13 @@
             "version_added": "1"
           },
           "samsunginternet_android": {
-            "version_added": "1.0",
-            "notes": "Starting with Samsung Internet 5.0, Firefox 54 and Opera 36, this property returns <a href='https://developer.mozilla.org/docs/Web/API/DOMHighResTimeStamp'><code>DOMHighResTimeStamp</code></a> instead of <a href='https://developer.mozilla.org/docs/Web/API/DOMTimeStamp'><code>DOMTimeStamp</code></a>."
+            "notes": "Starting with Samsung Internet 5.0, Firefox 54 and Opera 36, this property returns <a href='https://developer.mozilla.org/docs/Web/API/DOMHighResTimeStamp'><code>DOMHighResTimeStamp</code></a> instead of <a href='https://developer.mozilla.org/docs/Web/API/DOMTimeStamp'><code>DOMTimeStamp</code></a>.",
+            "version_added": "1.0"
           },
           "webview_android": {
-            "version_added": "1",
-            "notes": "Starting with version 49, this property returns <a href='https://developer.mozilla.org/docs/Web/API/DOMHighResTimeStamp'><code>DOMHighResTimeStamp</code></a> instead of <a href='https://developer.mozilla.org/docs/Web/API/DOMTimeStamp'><code>DOMTimeStamp</code></a>."
+            "notes": "Starting with version 49, this property returns <a href='https://developer.mozilla.org/docs/Web/API/DOMHighResTimeStamp'><code>DOMHighResTimeStamp</code></a> instead of <a href='https://developer.mozilla.org/docs/Web/API/DOMTimeStamp'><code>DOMTimeStamp</code></a>.",
+            "version_added": "1"
           }
-        },
-        "status": {
-          "experimental": false,
-          "standard_track": true,
-          "deprecated": false
         }
       }
     },
@@ -1299,6 +1299,11 @@
       "__compat": {
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/Event/type",
         "spec_url": "https://dom.spec.whatwg.org/#ref-for-dom-event-type④",
+        "status": {
+          "deprecated": false,
+          "experimental": false,
+          "standard_track": true
+        },
         "support": {
           "chrome": {
             "version_added": "1"
@@ -1342,11 +1347,6 @@
           "webview_android": {
             "version_added": "1"
           }
-        },
-        "status": {
-          "experimental": false,
-          "standard_track": true,
-          "deprecated": false
         }
       }
     }

@@ -29,9 +29,73 @@
     "providedByCoreWeb": false
   },
   "mdn": {
+    "Blob": {
+      "__compat": {
+        "description": "<code>Blob()</code> constructor",
+        "mdn_url": "https://developer.mozilla.org/docs/Web/API/Blob/Blob",
+        "spec_url": "https://w3c.github.io/FileAPI/#constructorBlob",
+        "status": {
+          "deprecated": false,
+          "experimental": false,
+          "standard_track": true
+        },
+        "support": {
+          "chrome": {
+            "version_added": "20"
+          },
+          "chrome_android": {
+            "version_added": "25"
+          },
+          "deno": {
+            "version_added": "1.0"
+          },
+          "edge": {
+            "version_added": "12"
+          },
+          "firefox": {
+            "notes": "Before Firefox 16, the second parameter, when set to <code>null</code> or <code>undefined</code>, leads to an error instead of being handled as an empty dictionary.",
+            "version_added": "13"
+          },
+          "firefox_android": {
+            "notes": "Before Firefox 16, the second parameter, when set to <code>null</code> or <code>undefined</code>, leads to an error instead of being handled as an empty dictionary.",
+            "version_added": "14"
+          },
+          "ie": {
+            "notes": "IE10 throws <code>InvalidStateError</code> with a <code>TypedArray</code> argument. Consider using <code>MSBuilder</code> as an alternative.",
+            "version_added": "10"
+          },
+          "nodejs": {
+            "version_added": "15.7.0"
+          },
+          "opera": {
+            "version_added": "12"
+          },
+          "opera_android": {
+            "version_added": "12"
+          },
+          "safari": {
+            "version_added": "6"
+          },
+          "safari_ios": {
+            "version_added": "6"
+          },
+          "samsunginternet_android": {
+            "version_added": "1.5"
+          },
+          "webview_android": {
+            "version_added": "4.4"
+          }
+        }
+      }
+    },
     "__compat": {
       "mdn_url": "https://developer.mozilla.org/docs/Web/API/Blob",
       "spec_url": "https://w3c.github.io/FileAPI/#blob-section",
+      "status": {
+        "deprecated": false,
+        "experimental": false,
+        "standard_track": true
+      },
       "support": {
         "chrome": {
           "version_added": "5"
@@ -55,12 +119,12 @@
           "version_added": "10"
         },
         "nodejs": {
-          "version_added": "15.7.0",
           "alternative_name": "buffer.Blob",
           "notes": [
             "Experimental implementation.",
             "Must be imported using <code>require('buffer').Blob</code> or <code>import { Blob } from 'buffer'</code>."
-          ]
+          ],
+          "version_added": "15.7.0"
         },
         "opera": {
           "version_added": "11"
@@ -80,77 +144,18 @@
         "webview_android": {
           "version_added": "4.4"
         }
-      },
-      "status": {
-        "experimental": false,
-        "standard_track": true,
-        "deprecated": false
-      }
-    },
-    "Blob": {
-      "__compat": {
-        "mdn_url": "https://developer.mozilla.org/docs/Web/API/Blob/Blob",
-        "spec_url": "https://w3c.github.io/FileAPI/#constructorBlob",
-        "description": "<code>Blob()</code> constructor",
-        "support": {
-          "chrome": {
-            "version_added": "20"
-          },
-          "chrome_android": {
-            "version_added": "25"
-          },
-          "deno": {
-            "version_added": "1.0"
-          },
-          "edge": {
-            "version_added": "12"
-          },
-          "firefox": {
-            "version_added": "13",
-            "notes": "Before Firefox 16, the second parameter, when set to <code>null</code> or <code>undefined</code>, leads to an error instead of being handled as an empty dictionary."
-          },
-          "firefox_android": {
-            "version_added": "14",
-            "notes": "Before Firefox 16, the second parameter, when set to <code>null</code> or <code>undefined</code>, leads to an error instead of being handled as an empty dictionary."
-          },
-          "ie": {
-            "version_added": "10",
-            "notes": "IE10 throws <code>InvalidStateError</code> with a <code>TypedArray</code> argument. Consider using <code>MSBuilder</code> as an alternative."
-          },
-          "nodejs": {
-            "version_added": "15.7.0"
-          },
-          "opera": {
-            "version_added": "12"
-          },
-          "opera_android": {
-            "version_added": "12"
-          },
-          "safari": {
-            "version_added": "6"
-          },
-          "safari_ios": {
-            "version_added": "6"
-          },
-          "samsunginternet_android": {
-            "version_added": "1.5"
-          },
-          "webview_android": {
-            "version_added": "4.4"
-          }
-        },
-        "status": {
-          "experimental": false,
-          "standard_track": true,
-          "deprecated": false
-        }
       }
     },
     "arrayBuffer": {
       "__compat": {
+        "description": "<code>arrayBuffer()</code>",
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/Blob/arrayBuffer",
         "spec_url": "https://w3c.github.io/FileAPI/#dom-blob-arraybuffer",
-        "description": "<code>arrayBuffer()</code>",
+        "status": {
+          "deprecated": false,
+          "experimental": false,
+          "standard_track": true
+        },
         "support": {
           "chrome": {
             "version_added": "76"
@@ -194,11 +199,6 @@
           "webview_android": {
             "version_added": "76"
           }
-        },
-        "status": {
-          "experimental": false,
-          "standard_track": true,
-          "deprecated": false
         }
       }
     },
@@ -206,6 +206,11 @@
       "__compat": {
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/Blob/size",
         "spec_url": "https://w3c.github.io/FileAPI/#dfn-size",
+        "status": {
+          "deprecated": false,
+          "experimental": false,
+          "standard_track": true
+        },
         "support": {
           "chrome": {
             "version_added": "5"
@@ -249,28 +254,28 @@
           "webview_android": {
             "version_added": "4.4"
           }
-        },
-        "status": {
-          "experimental": false,
-          "standard_track": true,
-          "deprecated": false
         }
       }
     },
     "slice": {
       "__compat": {
+        "description": "<code>slice()</code>",
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/Blob/slice",
         "spec_url": "https://w3c.github.io/FileAPI/#dfn-slice",
-        "description": "<code>slice()</code>",
+        "status": {
+          "deprecated": false,
+          "experimental": false,
+          "standard_track": true
+        },
         "support": {
           "chrome": [
             {
               "version_added": "21"
             },
             {
+              "prefix": "webkit",
               "version_added": "5",
-              "version_removed": "25",
-              "prefix": "webkit"
+              "version_removed": "25"
             }
           ],
           "chrome_android": [
@@ -278,9 +283,9 @@
               "version_added": "25"
             },
             {
+              "prefix": "webkit",
               "version_added": "18",
-              "version_removed": "25",
-              "prefix": "webkit"
+              "version_removed": "25"
             }
           ],
           "deno": {
@@ -291,24 +296,24 @@
           },
           "firefox": [
             {
-              "version_added": "13",
-              "notes": "Before Firefox 12, there was a bug that affected the behavior of <code>Blob.slice()</code>; it did not work for <code>start</code> and <code>end</code> positions outside the range of signed 64-bit values; it has now been fixed to support unsigned 64-bit values."
+              "notes": "Before Firefox 12, there was a bug that affected the behavior of <code>Blob.slice()</code>; it did not work for <code>start</code> and <code>end</code> positions outside the range of signed 64-bit values; it has now been fixed to support unsigned 64-bit values.",
+              "version_added": "13"
             },
             {
+              "prefix": "moz",
               "version_added": "5",
-              "version_removed": "13",
-              "prefix": "moz"
+              "version_removed": "13"
             }
           ],
           "firefox_android": [
             {
-              "version_added": "14",
-              "notes": "Before Firefox 12, there was a bug that affected the behavior of <code>Blob.slice()</code>; it did not work for <code>start</code> and <code>end</code> positions outside the range of signed 64-bit values; it has now been fixed to support unsigned 64-bit values."
+              "notes": "Before Firefox 12, there was a bug that affected the behavior of <code>Blob.slice()</code>; it did not work for <code>start</code> and <code>end</code> positions outside the range of signed 64-bit values; it has now been fixed to support unsigned 64-bit values.",
+              "version_added": "14"
             },
             {
+              "prefix": "moz",
               "version_added": "5",
-              "version_removed": "14",
-              "prefix": "moz"
+              "version_removed": "14"
             }
           ],
           "ie": {
@@ -328,9 +333,9 @@
               "version_added": "7"
             },
             {
+              "prefix": "webkit",
               "version_added": "6",
-              "version_removed": "7",
-              "prefix": "webkit"
+              "version_removed": "7"
             }
           ],
           "safari_ios": [
@@ -338,9 +343,9 @@
               "version_added": "7"
             },
             {
+              "prefix": "webkit",
               "version_added": "6",
-              "version_removed": "7",
-              "prefix": "webkit"
+              "version_removed": "7"
             }
           ],
           "samsunginternet_android": [
@@ -356,19 +361,19 @@
           "webview_android": {
             "version_added": "4.4"
           }
-        },
-        "status": {
-          "experimental": false,
-          "standard_track": true,
-          "deprecated": false
         }
       }
     },
     "stream": {
       "__compat": {
+        "description": "<code>stream()</code>",
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/Blob/stream",
         "spec_url": "https://w3c.github.io/FileAPI/#dom-blob-stream",
-        "description": "<code>stream()</code>",
+        "status": {
+          "deprecated": false,
+          "experimental": false,
+          "standard_track": true
+        },
         "support": {
           "chrome": {
             "version_added": "76"
@@ -412,19 +417,19 @@
           "webview_android": {
             "version_added": "76"
           }
-        },
-        "status": {
-          "experimental": false,
-          "standard_track": true,
-          "deprecated": false
         }
       }
     },
     "text": {
       "__compat": {
+        "description": "<code>text()</code>",
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/Blob/text",
         "spec_url": "https://w3c.github.io/FileAPI/#dom-blob-text",
-        "description": "<code>text()</code>",
+        "status": {
+          "deprecated": false,
+          "experimental": false,
+          "standard_track": true
+        },
         "support": {
           "chrome": {
             "version_added": "76"
@@ -468,11 +473,6 @@
           "webview_android": {
             "version_added": "76"
           }
-        },
-        "status": {
-          "experimental": false,
-          "standard_track": true,
-          "deprecated": false
         }
       }
     },
@@ -480,6 +480,11 @@
       "__compat": {
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/Blob/type",
         "spec_url": "https://w3c.github.io/FileAPI/#dfn-type",
+        "status": {
+          "deprecated": false,
+          "experimental": false,
+          "standard_track": true
+        },
         "support": {
           "chrome": {
             "version_added": "5"
@@ -523,11 +528,6 @@
           "webview_android": {
             "version_added": "4.4"
           }
-        },
-        "status": {
-          "experimental": false,
-          "standard_track": true,
-          "deprecated": false
         }
       }
     }

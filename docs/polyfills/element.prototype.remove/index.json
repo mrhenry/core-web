@@ -31,7 +31,7 @@
       "Trident": ">= 4.0",
       "Presto": ">= 1"
     },
-    "size": 180,
+    "size": 364,
     "isAlias": false,
     "providedByCoreWeb": false
   },
@@ -39,6 +39,11 @@
     "__compat": {
       "mdn_url": "https://developer.mozilla.org/docs/Web/API/Element/remove",
       "spec_url": "https://dom.spec.whatwg.org/#ref-for-dom-childnode-remove①",
+      "status": {
+        "deprecated": false,
+        "experimental": false,
+        "standard_track": true
+      },
       "support": {
         "chrome": {
           "version_added": "24"
@@ -76,11 +81,6 @@
         "webview_android": {
           "version_added": "4.4"
         }
-      },
-      "status": {
-        "experimental": false,
-        "standard_track": true,
-        "deprecated": false
       }
     }
   },
@@ -153,6 +153,6 @@
     "hasTests": true,
     "isTestable": true,
     "isPublic": true,
-    "size": 180
+    "size": 364
   }
 }

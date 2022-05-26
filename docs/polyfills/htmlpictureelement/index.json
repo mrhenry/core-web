@@ -37,6 +37,11 @@
     "__compat": {
       "mdn_url": "https://developer.mozilla.org/docs/Web/API/HTMLPictureElement",
       "spec_url": "https://html.spec.whatwg.org/multipage/embedded-content.html#htmlpictureelement",
+      "status": {
+        "deprecated": false,
+        "experimental": false,
+        "standard_track": true
+      },
       "support": {
         "chrome": {
           "version_added": "38"
@@ -74,11 +79,6 @@
         "webview_android": {
           "version_added": "38"
         }
-      },
-      "status": {
-        "experimental": true,
-        "standard_track": true,
-        "deprecated": false
       }
     }
   },

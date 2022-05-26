@@ -33,14 +33,19 @@
     "__compat": {
       "mdn_url": "https://developer.mozilla.org/docs/Web/API/Window/requestAnimationFrame",
       "spec_url": "https://html.spec.whatwg.org/multipage/imagebitmap-and-animations.html#dom-animationframeprovider-requestanimationframe",
+      "status": {
+        "deprecated": false,
+        "experimental": false,
+        "standard_track": true
+      },
       "support": {
         "chrome": [
           {
             "version_added": "24"
           },
           {
-            "version_added": "10",
-            "prefix": "webkit"
+            "prefix": "webkit",
+            "version_added": "10"
           }
         ],
         "chrome_android": [
@@ -48,8 +53,8 @@
             "version_added": "25"
           },
           {
-            "version_added": "18",
-            "prefix": "webkit"
+            "prefix": "webkit",
+            "version_added": "18"
           }
         ],
         "edge": {
@@ -57,20 +62,20 @@
         },
         "firefox": [
           {
-            "version_added": "23",
-            "notes": "Callback parameter is a <code>DOMHighResTimestamp</code>. This means ten microsecond precision and zero time as <code>performance.now()</code>."
+            "notes": "Callback parameter is a <code>DOMHighResTimestamp</code>. This means ten microsecond precision and zero time as <code>performance.now()</code>.",
+            "version_added": "23"
           },
           {
+            "notes": "Callback parameter is a <code>DOMTimestamp</code>. This means millisecond precision and zero time as <code>Date.now()</code>.",
+            "prefix": "moz",
             "version_added": "11",
-            "version_removed": "42",
-            "prefix": "moz",
-            "notes": "Callback parameter is a <code>DOMTimestamp</code>. This means millisecond precision and zero time as <code>Date.now()</code>."
+            "version_removed": "42"
           },
           {
-            "version_added": "4",
-            "version_removed": "11",
+            "notes": "Could be called with no input parameters.",
             "prefix": "moz",
-            "notes": "Could be called with no input parameters."
+            "version_added": "4",
+            "version_removed": "11"
           }
         ],
         "firefox_android": [
@@ -78,9 +83,9 @@
             "version_added": "23"
           },
           {
+            "prefix": "moz",
             "version_added": "14",
-            "version_removed": "42",
-            "prefix": "moz"
+            "version_removed": "42"
           }
         ],
         "ie": {
@@ -91,8 +96,8 @@
             "version_added": "15"
           },
           {
-            "version_added": "15",
-            "prefix": "webkit"
+            "prefix": "webkit",
+            "version_added": "15"
           }
         ],
         "opera_android": [
@@ -100,8 +105,8 @@
             "version_added": "14"
           },
           {
-            "version_added": "14",
-            "prefix": "webkit"
+            "prefix": "webkit",
+            "version_added": "14"
           }
         ],
         "safari": [
@@ -109,8 +114,8 @@
             "version_added": "7"
           },
           {
-            "version_added": "6",
-            "prefix": "webkit"
+            "prefix": "webkit",
+            "version_added": "6"
           }
         ],
         "safari_ios": [
@@ -118,8 +123,8 @@
             "version_added": "7"
           },
           {
-            "version_added": "6",
-            "prefix": "webkit"
+            "prefix": "webkit",
+            "version_added": "6"
           }
         ],
         "samsunginternet_android": [
@@ -136,15 +141,10 @@
             "version_added": "4.4"
           },
           {
-            "version_added": "≤37",
-            "prefix": "webkit"
+            "prefix": "webkit",
+            "version_added": "≤37"
           }
         ]
-      },
-      "status": {
-        "experimental": false,
-        "standard_track": true,
-        "deprecated": false
       }
     }
   },
@@ -163,8 +163,8 @@
         "version_added": "4.4"
       },
       {
-        "version_added": "≤37",
-        "prefix": "webkit"
+        "prefix": "webkit",
+        "version_added": "≤37"
       }
     ],
     "chrome": [
@@ -172,8 +172,8 @@
         "version_added": "24"
       },
       {
-        "version_added": "10",
-        "prefix": "webkit"
+        "prefix": "webkit",
+        "version_added": "10"
       }
     ],
     "edge": {
@@ -181,20 +181,20 @@
     },
     "firefox": [
       {
-        "version_added": "23",
-        "notes": "Callback parameter is a <code>DOMHighResTimestamp</code>. This means ten microsecond precision and zero time as <code>performance.now()</code>."
+        "notes": "Callback parameter is a <code>DOMHighResTimestamp</code>. This means ten microsecond precision and zero time as <code>performance.now()</code>.",
+        "version_added": "23"
       },
       {
+        "notes": "Callback parameter is a <code>DOMTimestamp</code>. This means millisecond precision and zero time as <code>Date.now()</code>.",
+        "prefix": "moz",
         "version_added": "11",
-        "version_removed": "42",
-        "prefix": "moz",
-        "notes": "Callback parameter is a <code>DOMTimestamp</code>. This means millisecond precision and zero time as <code>Date.now()</code>."
+        "version_removed": "42"
       },
       {
-        "version_added": "4",
-        "version_removed": "11",
+        "notes": "Could be called with no input parameters.",
         "prefix": "moz",
-        "notes": "Could be called with no input parameters."
+        "version_added": "4",
+        "version_removed": "11"
       }
     ],
     "ie": {
@@ -205,8 +205,8 @@
         "version_added": "15"
       },
       {
-        "version_added": "15",
-        "prefix": "webkit"
+        "prefix": "webkit",
+        "version_added": "15"
       }
     ],
     "safari": [
@@ -214,8 +214,8 @@
         "version_added": "7"
       },
       {
-        "version_added": "6",
-        "prefix": "webkit"
+        "prefix": "webkit",
+        "version_added": "6"
       }
     ],
     "ios_saf": [
@@ -223,8 +223,8 @@
         "version_added": "7"
       },
       {
-        "version_added": "6",
-        "prefix": "webkit"
+        "prefix": "webkit",
+        "version_added": "6"
       }
     ]
   },

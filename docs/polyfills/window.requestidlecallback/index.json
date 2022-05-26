@@ -43,6 +43,11 @@
     "__compat": {
       "mdn_url": "https://developer.mozilla.org/docs/Web/API/Window/requestIdleCallback",
       "spec_url": "https://w3c.github.io/requestidlecallback/#the-requestidlecallback-method",
+      "status": {
+        "deprecated": false,
+        "experimental": false,
+        "standard_track": true
+      },
       "support": {
         "chrome": {
           "version_added": "47"
@@ -80,11 +85,6 @@
         "webview_android": {
           "version_added": "47"
         }
-      },
-      "status": {
-        "experimental": true,
-        "standard_track": true,
-        "deprecated": false
       }
     }
   },

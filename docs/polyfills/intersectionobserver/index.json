@@ -38,58 +38,16 @@
     "providedByCoreWeb": false
   },
   "mdn": {
-    "__compat": {
-      "mdn_url": "https://developer.mozilla.org/docs/Web/API/IntersectionObserver",
-      "spec_url": "https://w3c.github.io/IntersectionObserver/#intersection-observer-interface",
-      "support": {
-        "chrome": {
-          "version_added": "51"
-        },
-        "chrome_android": {
-          "version_added": "51"
-        },
-        "edge": {
-          "version_added": "15"
-        },
-        "firefox": {
-          "version_added": "55"
-        },
-        "firefox_android": {
-          "version_added": "55"
-        },
-        "ie": {
-          "version_added": false
-        },
-        "opera": {
-          "version_added": "38"
-        },
-        "opera_android": {
-          "version_added": "41"
-        },
-        "safari": {
-          "version_added": "12.1"
-        },
-        "safari_ios": {
-          "version_added": "12.2"
-        },
-        "samsunginternet_android": {
-          "version_added": "5.0"
-        },
-        "webview_android": {
-          "version_added": "51"
-        }
-      },
-      "status": {
-        "experimental": false,
-        "standard_track": true,
-        "deprecated": false
-      }
-    },
     "IntersectionObserver": {
       "__compat": {
+        "description": "<code>IntersectionObserver()</code> constructor",
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/IntersectionObserver/IntersectionObserver",
         "spec_url": "https://w3c.github.io/IntersectionObserver/#dom-intersectionobserver-intersectionobserver",
-        "description": "<code>IntersectionObserver()</code> constructor",
+        "status": {
+          "deprecated": false,
+          "experimental": false,
+          "standard_track": true
+        },
         "support": {
           "chrome": {
             "version_added": "51"
@@ -101,8 +59,8 @@
             "version_added": "15"
           },
           "firefox": {
-            "version_added": "55",
-            "notes": "Before version 96, the constructor throws a <code>DOMException</code> if the <code>options.rootMargin</code> option is passed an empty string (see <a href='https://bugzil.la/1738791'>bug 1738791</a>)."
+            "notes": "Before version 96, the constructor throws a <code>DOMException</code> if the <code>options.rootMargin</code> option is passed an empty string (see <a href='https://bugzil.la/1738791'>bug 1738791</a>).",
+            "version_added": "55"
           },
           "firefox_android": {
             "version_added": "55"
@@ -128,16 +86,16 @@
           "webview_android": {
             "version_added": "51"
           }
-        },
-        "status": {
-          "experimental": false,
-          "standard_track": true,
-          "deprecated": false
         }
       },
       "options_root_parameter_Document": {
         "__compat": {
           "description": "<code>options.root</code> parameter can be a <code>Document</code>",
+          "status": {
+            "deprecated": false,
+            "experimental": false,
+            "standard_track": true
+          },
           "support": {
             "chrome": {
               "version_added": "81"
@@ -175,12 +133,54 @@
             "webview_android": {
               "version_added": "81"
             }
-          },
-          "status": {
-            "experimental": false,
-            "standard_track": true,
-            "deprecated": false
           }
+        }
+      }
+    },
+    "__compat": {
+      "mdn_url": "https://developer.mozilla.org/docs/Web/API/IntersectionObserver",
+      "spec_url": "https://w3c.github.io/IntersectionObserver/#intersection-observer-interface",
+      "status": {
+        "deprecated": false,
+        "experimental": false,
+        "standard_track": true
+      },
+      "support": {
+        "chrome": {
+          "version_added": "51"
+        },
+        "chrome_android": {
+          "version_added": "51"
+        },
+        "edge": {
+          "version_added": "15"
+        },
+        "firefox": {
+          "version_added": "55"
+        },
+        "firefox_android": {
+          "version_added": "55"
+        },
+        "ie": {
+          "version_added": false
+        },
+        "opera": {
+          "version_added": "38"
+        },
+        "opera_android": {
+          "version_added": "41"
+        },
+        "safari": {
+          "version_added": "12.1"
+        },
+        "safari_ios": {
+          "version_added": "12.2"
+        },
+        "samsunginternet_android": {
+          "version_added": "5.0"
+        },
+        "webview_android": {
+          "version_added": "51"
         }
       }
     },
@@ -188,6 +188,11 @@
       "__compat": {
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/IntersectionObserver/disconnect",
         "spec_url": "https://w3c.github.io/IntersectionObserver/#dom-intersectionobserver-disconnect",
+        "status": {
+          "deprecated": false,
+          "experimental": false,
+          "standard_track": true
+        },
         "support": {
           "chrome": {
             "version_added": "51"
@@ -196,8 +201,8 @@
             "version_added": "51"
           },
           "edge": {
-            "version_added": "15",
-            "notes": "Available since <a href='https://developer.microsoft.com/microsoft-edge/platform/status/intersectionobserver/'>Windows Insider Preview Build 14986</a>."
+            "notes": "Available since <a href='https://developer.microsoft.com/microsoft-edge/platform/status/intersectionobserver/'>Windows Insider Preview Build 14986</a>.",
+            "version_added": "15"
           },
           "firefox": {
             "version_added": "55"
@@ -226,11 +231,6 @@
           "webview_android": {
             "version_added": "51"
           }
-        },
-        "status": {
-          "experimental": false,
-          "standard_track": true,
-          "deprecated": false
         }
       }
     },
@@ -238,6 +238,11 @@
       "__compat": {
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/IntersectionObserver/observe",
         "spec_url": "https://w3c.github.io/IntersectionObserver/#dom-intersectionobserver-observe",
+        "status": {
+          "deprecated": false,
+          "experimental": false,
+          "standard_track": true
+        },
         "support": {
           "chrome": {
             "version_added": "51"
@@ -275,11 +280,6 @@
           "webview_android": {
             "version_added": "51"
           }
-        },
-        "status": {
-          "experimental": false,
-          "standard_track": true,
-          "deprecated": false
         }
       }
     },
@@ -287,6 +287,11 @@
       "__compat": {
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/IntersectionObserver/root",
         "spec_url": "https://w3c.github.io/IntersectionObserver/#dom-intersectionobserver-root",
+        "status": {
+          "deprecated": false,
+          "experimental": false,
+          "standard_track": true
+        },
         "support": {
           "chrome": {
             "version_added": "51"
@@ -324,11 +329,6 @@
           "webview_android": {
             "version_added": "51"
           }
-        },
-        "status": {
-          "experimental": false,
-          "standard_track": true,
-          "deprecated": false
         }
       }
     },
@@ -336,6 +336,11 @@
       "__compat": {
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/IntersectionObserver/rootMargin",
         "spec_url": "https://w3c.github.io/IntersectionObserver/#dom-intersectionobserver-rootmargin",
+        "status": {
+          "deprecated": false,
+          "experimental": false,
+          "standard_track": true
+        },
         "support": {
           "chrome": {
             "version_added": "51"
@@ -362,12 +367,12 @@
             "version_added": "41"
           },
           "safari": {
-            "version_added": "12.1",
-            "notes": "<code>rootMargin</code> does not work with <code>&lt;iframe&gt;</code>s."
+            "notes": "<code>rootMargin</code> does not work with <code>&lt;iframe&gt;</code>s.",
+            "version_added": "12.1"
           },
           "safari_ios": {
-            "version_added": "12.2",
-            "notes": "<code>rootMargin</code> does not work with <code>&lt;iframe&gt;</code>s."
+            "notes": "<code>rootMargin</code> does not work with <code>&lt;iframe&gt;</code>s.",
+            "version_added": "12.2"
           },
           "samsunginternet_android": {
             "version_added": "5.0"
@@ -375,11 +380,6 @@
           "webview_android": {
             "version_added": "51"
           }
-        },
-        "status": {
-          "experimental": false,
-          "standard_track": true,
-          "deprecated": false
         }
       }
     },
@@ -387,6 +387,11 @@
       "__compat": {
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/IntersectionObserver/takeRecords",
         "spec_url": "https://w3c.github.io/IntersectionObserver/#dom-intersectionobserver-takerecords",
+        "status": {
+          "deprecated": false,
+          "experimental": false,
+          "standard_track": true
+        },
         "support": {
           "chrome": {
             "version_added": "51"
@@ -395,8 +400,8 @@
             "version_added": "51"
           },
           "edge": {
-            "version_added": "15",
-            "notes": "Available since <a href='https://developer.microsoft.com/microsoft-edge/platform/status/intersectionobserver/'>Windows Insider Preview Build 14986</a>."
+            "notes": "Available since <a href='https://developer.microsoft.com/microsoft-edge/platform/status/intersectionobserver/'>Windows Insider Preview Build 14986</a>.",
+            "version_added": "15"
           },
           "firefox": {
             "version_added": "55"
@@ -425,11 +430,6 @@
           "webview_android": {
             "version_added": "51"
           }
-        },
-        "status": {
-          "experimental": false,
-          "standard_track": true,
-          "deprecated": false
         }
       }
     },
@@ -437,6 +437,11 @@
       "__compat": {
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/IntersectionObserver/thresholds",
         "spec_url": "https://w3c.github.io/IntersectionObserver/#dom-intersectionobserver-thresholds",
+        "status": {
+          "deprecated": false,
+          "experimental": false,
+          "standard_track": true
+        },
         "support": {
           "chrome": {
             "version_added": "51"
@@ -474,11 +479,6 @@
           "webview_android": {
             "version_added": "51"
           }
-        },
-        "status": {
-          "experimental": false,
-          "standard_track": true,
-          "deprecated": false
         }
       }
     },
@@ -486,6 +486,11 @@
       "__compat": {
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/IntersectionObserver/unobserve",
         "spec_url": "https://w3c.github.io/IntersectionObserver/#dom-intersectionobserver-unobserve",
+        "status": {
+          "deprecated": false,
+          "experimental": false,
+          "standard_track": true
+        },
         "support": {
           "chrome": {
             "version_added": "51"
@@ -494,8 +499,8 @@
             "version_added": "51"
           },
           "edge": {
-            "version_added": "15",
-            "notes": "Available since <a href='https://developer.microsoft.com/microsoft-edge/platform/status/intersectionobserver/'>Windows Insider Preview Build 14986</a>."
+            "notes": "Available since <a href='https://developer.microsoft.com/microsoft-edge/platform/status/intersectionobserver/'>Windows Insider Preview Build 14986</a>.",
+            "version_added": "15"
           },
           "firefox": {
             "version_added": "55"
@@ -524,11 +529,6 @@
           "webview_android": {
             "version_added": "51"
           }
-        },
-        "status": {
-          "experimental": false,
-          "standard_track": true,
-          "deprecated": false
         }
       }
     }

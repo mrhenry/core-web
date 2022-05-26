@@ -36,8 +36,13 @@
   },
   "mdn": {
     "__compat": {
-      "spec_url": "https://drafts.fxtf.org/geometry/#dom-domrect-fromrect",
       "description": "<code>fromRect()</code> static method",
+      "spec_url": "https://drafts.fxtf.org/geometry/#dom-domrect-fromrect",
+      "status": {
+        "deprecated": false,
+        "experimental": false,
+        "standard_track": true
+      },
       "support": {
         "chrome": {
           "version_added": "61"
@@ -75,11 +80,6 @@
         "webview_android": {
           "version_added": "61"
         }
-      },
-      "status": {
-        "experimental": false,
-        "standard_track": true,
-        "deprecated": false
       }
     }
   },

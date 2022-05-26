@@ -28,14 +28,19 @@
     "__compat": {
       "mdn_url": "https://developer.mozilla.org/docs/Web/API/Document/visibilityState",
       "spec_url": "https://html.spec.whatwg.org/multipage/interaction.html#dom-document-visibilitystate",
+      "status": {
+        "deprecated": false,
+        "experimental": false,
+        "standard_track": true
+      },
       "support": {
         "chrome": [
           {
             "version_added": "33"
           },
           {
-            "version_added": "13",
-            "prefix": "webkit"
+            "prefix": "webkit",
+            "version_added": "13"
           }
         ],
         "chrome_android": [
@@ -43,8 +48,8 @@
             "version_added": "33"
           },
           {
-            "version_added": "18",
-            "prefix": "webkit"
+            "prefix": "webkit",
+            "version_added": "18"
           }
         ],
         "edge": {
@@ -55,9 +60,9 @@
             "version_added": "18"
           },
           {
+            "prefix": "moz",
             "version_added": "10",
-            "version_removed": "52",
-            "prefix": "moz"
+            "version_removed": "52"
           }
         ],
         "firefox_android": [
@@ -65,9 +70,9 @@
             "version_added": "18"
           },
           {
+            "prefix": "moz",
             "version_added": "10",
-            "version_removed": "52",
-            "prefix": "moz"
+            "version_removed": "52"
           }
         ],
         "ie": {
@@ -78,8 +83,8 @@
             "version_added": "20"
           },
           {
-            "version_added": "15",
-            "prefix": "webkit"
+            "prefix": "webkit",
+            "version_added": "15"
           },
           {
             "version_added": "12.1",
@@ -91,8 +96,8 @@
             "version_added": "20"
           },
           {
-            "version_added": "14",
-            "prefix": "webkit"
+            "prefix": "webkit",
+            "version_added": "14"
           },
           {
             "version_added": "12.1",
@@ -110,8 +115,8 @@
             "version_added": "2.0"
           },
           {
-            "version_added": "1.0",
-            "prefix": "webkit"
+            "prefix": "webkit",
+            "version_added": "1.0"
           }
         ],
         "webview_android": [
@@ -119,20 +124,20 @@
             "version_added": "4.4.3"
           },
           {
-            "version_added": "≤37",
-            "prefix": "webkit"
+            "prefix": "webkit",
+            "version_added": "≤37"
           }
         ]
-      },
-      "status": {
-        "experimental": false,
-        "standard_track": true,
-        "deprecated": false
       }
     },
     "prerender": {
       "__compat": {
         "description": "<code>prerender</code> value",
+        "status": {
+          "deprecated": true,
+          "experimental": false,
+          "standard_track": false
+        },
         "support": {
           "chrome": {
             "version_added": "14",
@@ -180,11 +185,6 @@
             "version_added": "≤37",
             "version_removed": "73"
           }
-        },
-        "status": {
-          "experimental": false,
-          "standard_track": false,
-          "deprecated": true
         }
       }
     }
@@ -202,8 +202,8 @@
         "version_added": "4.4.3"
       },
       {
-        "version_added": "≤37",
-        "prefix": "webkit"
+        "prefix": "webkit",
+        "version_added": "≤37"
       }
     ],
     "chrome": [
@@ -211,8 +211,8 @@
         "version_added": "33"
       },
       {
-        "version_added": "13",
-        "prefix": "webkit"
+        "prefix": "webkit",
+        "version_added": "13"
       }
     ],
     "edge": {
@@ -223,9 +223,9 @@
         "version_added": "18"
       },
       {
+        "prefix": "moz",
         "version_added": "10",
-        "version_removed": "52",
-        "prefix": "moz"
+        "version_removed": "52"
       }
     ],
     "ie": {
@@ -236,8 +236,8 @@
         "version_added": "20"
       },
       {
-        "version_added": "15",
-        "prefix": "webkit"
+        "prefix": "webkit",
+        "version_added": "15"
       },
       {
         "version_added": "12.1",

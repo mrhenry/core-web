@@ -38,6 +38,11 @@
   },
   "mdn": {
     "__compat": {
+      "status": {
+        "deprecated": false,
+        "experimental": false,
+        "standard_track": true
+      },
       "support": {
         "chrome": {
           "version_added": "42"
@@ -75,11 +80,6 @@
         "webview_android": {
           "version_added": "42"
         }
-      },
-      "status": {
-        "experimental": false,
-        "standard_track": true,
-        "deprecated": false
       }
     }
   },
