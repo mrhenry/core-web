@@ -1,8 +1,8 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.browsersToEngines = void 0;
-const bcd = require("@mdn/browser-compat-data");
 const semver = require("semver");
+const bcd = require('@mdn/browser-compat-data');
 function browsersToEngines(browsers) {
     const engineFeatureMapping = {};
     const lastVersionForEngine = {};

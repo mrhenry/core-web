@@ -45,8 +45,8 @@ fs.readFile('./lib/css/index.css', async (err, css) => {
 				minimumVendorImplementations: 0,
 				browsers: target.presetEnvBrowsers,
 				autoprefixer: {
-					grid: true,
-					supports: false,
+					grid: false,
+					supports: true,
 				},
 				enableClientSidePolyfills: false,
 				preserve: true,
