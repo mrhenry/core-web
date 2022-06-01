@@ -698,13 +698,13 @@
         },
         "support": {
           "chrome": {
-            "version_added": false
+            "version_added": "102"
           },
           "chrome_android": {
-            "version_added": false
+            "version_added": "102"
           },
           "edge": {
-            "version_added": false
+            "version_added": "102"
           },
           "firefox": {
             "version_added": "70"
@@ -716,7 +716,7 @@
             "version_added": false
           },
           "opera": {
-            "version_added": false
+            "version_added": "88"
           },
           "opera_android": {
             "version_added": false
@@ -731,7 +731,7 @@
             "version_added": false
           },
           "webview_android": {
-            "version_added": false
+            "version_added": "102"
           }
         }
       }
