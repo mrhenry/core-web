@@ -693,7 +693,7 @@
         "spec_url": "https://webaudio.github.io/web-audio-api/#dom-audiocontext-outputlatency",
         "status": {
           "deprecated": false,
-          "experimental": true,
+          "experimental": false,
           "standard_track": true
         },
         "support": {
