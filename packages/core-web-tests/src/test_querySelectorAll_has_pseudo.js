@@ -189,7 +189,7 @@ if ("Proxy" in self) {
 			]);
 		});
 
-		QUnit.test(":has argument with explicit scope (tentative)", function (assert) {
+		QUnit.test(":has argument with explicit scope", function (assert) {
 			const fixture = document.getElementById("qunit-fixture");
 			fixture.innerHTML = `<main>
 			<div id=d01 class="a">
