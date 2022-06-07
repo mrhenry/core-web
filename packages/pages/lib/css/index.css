@@ -1,26 +1,27 @@
 /* Base */
-@import './base/variables.css';
-@import './base/base.css';
-@import './base/fonts.css';
-@import './base/typography.css';
-@import './base/utilities.css';
+@layer base, components;
 
-/* Layouts */
-@import './layouts/section.css';
-@import './layouts/wrapper.css';
+@import './base/variables.css' layer(base);
+@import './base/base.css' layer(base);
+@import './base/fonts.css' layer(base);
+@import './base/typography.css' layer(base);
+@import './base/utilities.css' layer(base);
+
+@import './layouts/section.css' layer(base);
+@import './layouts/wrapper.css' layer(base);
 
 /* Modules */
-@import './modules/card.css';
-@import './modules/compat-table.css';
-@import './modules/hero.css';
-@import './modules/logo.css';
-@import './modules/milestone.css';
-@import './modules/navigation.css';
-@import './modules/polyfill-info.css';
-@import './modules/polyfill-notification.css';
-@import './modules/requirements.css';
-@import './modules/roadmap.css';
-@import './modules/site-footer.css';
-@import './modules/site-header.css';
-@import './modules/skip-to-main-content-link.css';
-@import './modules/why.css';
+@import './modules/card.css' layer(components);
+@import './modules/compat-table.css' layer(components);
+@import './modules/hero.css' layer(components);
+@import './modules/logo.css' layer(components);
+@import './modules/milestone.css' layer(components);
+@import './modules/navigation.css' layer(components);
+@import './modules/polyfill-info.css' layer(components);
+@import './modules/polyfill-notification.css' layer(components);
+@import './modules/requirements.css' layer(components);
+@import './modules/roadmap.css' layer(components);
+@import './modules/site-footer.css' layer(components);
+@import './modules/site-header.css' layer(components);
+@import './modules/skip-to-main-content-link.css' layer(components);
+@import './modules/why.css' layer(components);

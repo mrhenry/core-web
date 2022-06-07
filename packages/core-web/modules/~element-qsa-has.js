@@ -3,6 +3,7 @@
 	try {
 		// test for scope support
 		global.document.querySelector(':has(*, :does-not-exist, > *)');
+		global.document.querySelector(':has(:has(any))');
 		if (!global.document.querySelector(':has(:scope *)')) {
 			return;
 		}
@@ -344,7 +345,7 @@
 		}
 
 		if (nested) {
-			return query.replace(":has(" + inner + ")", "[does-not-exist]");
+			return false;
 		}
 
 		var innerQuery = inner;
@@ -356,20 +357,17 @@
 		if (inner.indexOf(':has(') > -1) {
 			var innerParts = splitSelector(inner);
 			var newInnerParts = [];
-			var validInnerPartsCounter = 0;
 			for (var i = 0; i < innerParts.length; i++) {
 				var innerPart = innerParts[i];
+
+				// Nested has is not supported.
+				// If a recursive/nested call returns "false" we replace with ":not(*)"
 				var innerPartReplaced = replaceAllWithTempAttr(innerPart, true, function () { });
-				if (innerPartReplaced !== innerPart) {
+				if (!innerPartReplaced) {
 					newInnerParts.push(':not(*)');
 				} else {
 					newInnerParts.push(innerPart);
-					validInnerPartsCounter++;
 				}
-			}
-
-			if (!validInnerPartsCounter) {
-				return query;
 			}
 			
 			return x.replace(':has(' + inner + ')', newInnerParts.join(', '));

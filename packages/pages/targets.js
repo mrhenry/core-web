@@ -1,18 +1,35 @@
 if (process.env.GITHUB_ACTIONS) {
 	module.exports = [
 		{
+			name: '2022',
+			webpackTarget: [
+				'web',
+				'browserslist:Chrome 102 or Firefox 101'
+			],
+			presetEnvBrowsers: [
+				'chrome >= 102',
+				'firefox >= 101',
+			],
+			coreWebBrowsers: {
+				'chrome': '102',
+				'firefox': '101',
+			},
+		},
+		{
 			name: '2021',
 			webpackTarget: [
 				'web',
-				'browserslist:Chrome 94 or Firefox 93'
+				'browserslist:Chrome 94 or Firefox 93 or Safari 15'
 			],
 			presetEnvBrowsers: [
 				'chrome >= 94',
 				'firefox >= 93',
+				'safari >= 15',
 			],
 			coreWebBrowsers: {
 				'chrome': '94',
 				'firefox': '93',
+				'safari': '15',
 			},
 		},
 
@@ -149,18 +166,18 @@ if (process.env.GITHUB_ACTIONS) {
 } else {
 	module.exports = [
 		{
-			name: '2021',
+			name: '2022',
 			webpackTarget: [
 				'web',
-				'browserslist:Chrome 94 or Firefox 93'
+				'browserslist:Chrome 102 or Firefox 101'
 			],
 			presetEnvBrowsers: [
-				'chrome >= 94',
-				'firefox >= 93',
+				'chrome >= 102',
+				'firefox >= 101',
 			],
 			coreWebBrowsers: {
-				'chrome': '94',
-				'firefox': '93',
+				'chrome': '102',
+				'firefox': '101',
 			},
 		},
 	];
