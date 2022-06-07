@@ -189,7 +189,7 @@ if ("Proxy" in self) {
 			]);
 		});
 
-		QUnit.test(":has argument with explicit scope (tentative)", function (assert) {
+		QUnit.test(":has argument with explicit scope", function (assert) {
 			const fixture = document.getElementById("qunit-fixture");
 			fixture.innerHTML = `<main>
 			<div id=d01 class="a">
@@ -874,13 +874,8 @@ if ("Proxy" in self) {
 		});
 
 		QUnit.test(":has nested as forgiven list", function (assert) {
+			assert.ok(!document.querySelector(":has(:has(#qunit-fixture))"), "nested :has is ignored in forgiving selector lists");
 			assert.ok(!document.querySelector(":has(.does-not-exist, :has(#qunit-fixture))"), "nested :has is ignored in forgiving selector lists");
-		});
-
-		QUnit.test(":has nested as only item in list", function (assert) {
-			assert.throws(() => {
-				document.querySelector(":has(:has(#qunit-fixture))");	
-			}, "nested :has throws when it is the only item in the selector list");
 		});
 	});
 }
