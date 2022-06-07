@@ -109,10 +109,18 @@ async function handleRequest(request) {
 
 const targets = [
 	{
+		name: '2022',
+		browsers: {
+			'CHROME': '102',
+			'FIREFOX': '101',
+		},
+	},
+	{
 		name: '2021',
 		browsers: {
 			'CHROME': '94',
 			'FIREFOX': '93',
+			'SAFARI': '15',
 		},
 	},
 	{
