@@ -132,7 +132,8 @@ async function generate(assetMap) {
 			class="polyfill-notification__label"
 			for="show-polyfill-content"
 		>
-			<span ua-target="2021">0 polyfills</span>
+			<span ua-target="2022">0 polyfills</span>
+			<span ua-target="2021">1 polyfills</span>
 			<span ua-target="2020">1 polyfill</span>
 			<span ua-target="2018">1 polyfill</span>
 			<span ua-target="2016">3 polyfill</span>
@@ -151,7 +152,11 @@ async function generate(assetMap) {
 		></label>
 
 		<div class="polyfill-notification__content">
-			${polyfillNotificationContent('2021', '0', [])}
+			${polyfillNotificationContent('2022', '0', [])}
+
+			${polyfillNotificationContent('2021', '7', [
+			'IntersectionObserver'
+			])}
 
 			${polyfillNotificationContent('2020', '7', [
 				'IntersectionObserver'
@@ -206,7 +211,8 @@ async function generate(assetMap) {
 
 function indexJsAndCss(assetMap) {
 	if (process.env.GITHUB_ACTIONS) {
-		return html`<meta name="ua-targets" content="2021 2020 2018 2016 2014 2013 2011">
+		return html`<meta name="ua-targets" content="2022 2021 2020 2018 2016 2014 2013 2011">
+<script src="/js/${assetMap.js['index']['2022'].fullName}" ua-target="2022" async></script>
 <script src="/js/${assetMap.js['index']['2021'].fullName}" ua-target="2021" async></script>
 <script src="/js/${assetMap.js['index']['2020'].fullName}" ua-target="2020" async></script>
 <script src="/js/${assetMap.js['index']['2018'].fullName}" ua-target="2018" async></script>
@@ -220,7 +226,7 @@ ${cssTags(assetMap, 'index')}
 	}
 
 	return html`
-<script src="/js/${assetMap.js['index']['2021'].fullName}" async></script>
+<script src="/js/${assetMap.js['index']['2022'].fullName}" async></script>
 
 ${cssTags(assetMap, 'index')}
 `;
