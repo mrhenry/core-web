@@ -36,6 +36,7 @@
       "__compat": {
         "description": "<code>TextEncoder()</code> constructor",
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/TextEncoder/TextEncoder",
+        "source_file": "api/TextEncoder.json",
         "spec_url": "https://encoding.spec.whatwg.org/#ref-for-dom-textencoder①",
         "status": {
           "deprecated": false,
@@ -96,6 +97,7 @@
     },
     "__compat": {
       "mdn_url": "https://developer.mozilla.org/docs/Web/API/TextEncoder",
+      "source_file": "api/TextEncoder.json",
       "spec_url": "https://encoding.spec.whatwg.org/#interface-textencoder",
       "status": {
         "deprecated": false,
@@ -157,6 +159,7 @@
     "encode": {
       "__compat": {
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/TextEncoder/encode",
+        "source_file": "api/TextEncoder.json",
         "spec_url": "https://encoding.spec.whatwg.org/#ref-for-dom-textencoder-encode①",
         "status": {
           "deprecated": false,
@@ -212,6 +215,7 @@
     "encodeInto": {
       "__compat": {
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/TextEncoder/encodeInto",
+        "source_file": "api/TextEncoder.json",
         "spec_url": "https://encoding.spec.whatwg.org/#ref-for-dom-textencoder-encodeinto①",
         "status": {
           "deprecated": false,
@@ -267,6 +271,7 @@
     "encoding": {
       "__compat": {
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/TextEncoder/encoding",
+        "source_file": "api/TextEncoder.json",
         "spec_url": "https://encoding.spec.whatwg.org/#dom-textencoder-encoding",
         "status": {
           "deprecated": false,
@@ -322,6 +327,7 @@
     "worker_support": {
       "__compat": {
         "description": "Available in workers",
+        "source_file": "api/TextEncoder.json",
         "status": {
           "deprecated": false,
           "experimental": false,

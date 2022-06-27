@@ -32,6 +32,7 @@
       "__compat": {
         "description": "<code>EventSource()</code> constructor",
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/EventSource/EventSource",
+        "source_file": "api/EventSource.json",
         "spec_url": "https://html.spec.whatwg.org/multipage/server-sent-events.html#dom-eventsource-dev",
         "status": {
           "deprecated": false,
@@ -83,6 +84,7 @@
       "cors_support": {
         "__compat": {
           "description": "CORS support (<code>withCredentials</code>)",
+          "source_file": "api/EventSource.json",
           "status": {
             "deprecated": false,
             "experimental": false,
@@ -126,7 +128,7 @@
               "version_added": "2.0"
             },
             "webview_android": {
-              "version_added": "≤37"
+              "version_added": "4.4"
             }
           }
         }
@@ -134,6 +136,7 @@
     },
     "__compat": {
       "mdn_url": "https://developer.mozilla.org/docs/Web/API/EventSource",
+      "source_file": "api/EventSource.json",
       "spec_url": "https://html.spec.whatwg.org/multipage/server-sent-events.html#the-eventsource-interface",
       "status": {
         "deprecated": false,
@@ -185,6 +188,7 @@
     "close": {
       "__compat": {
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/EventSource/close",
+        "source_file": "api/EventSource.json",
         "spec_url": "https://html.spec.whatwg.org/multipage/server-sent-events.html#dom-eventsource-close-dev",
         "status": {
           "deprecated": false,
@@ -238,6 +242,7 @@
       "__compat": {
         "description": "<code>error</code> event",
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/EventSource/error_event",
+        "source_file": "api/EventSource.json",
         "spec_url": [
           "https://html.spec.whatwg.org/multipage/indices.html#event-error",
           "https://html.spec.whatwg.org/multipage/server-sent-events.html#handler-eventsource-onerror"
@@ -294,6 +299,7 @@
       "__compat": {
         "description": "<code>message</code> event",
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/EventSource/message_event",
+        "source_file": "api/EventSource.json",
         "spec_url": [
           "https://html.spec.whatwg.org/multipage/indices.html#event-message",
           "https://html.spec.whatwg.org/multipage/server-sent-events.html#handler-eventsource-onmessage"
@@ -350,6 +356,7 @@
       "__compat": {
         "description": "<code>open</code> event",
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/EventSource/open_event",
+        "source_file": "api/EventSource.json",
         "spec_url": [
           "https://html.spec.whatwg.org/multipage/indices.html#event-open",
           "https://html.spec.whatwg.org/multipage/server-sent-events.html#handler-eventsource-onopen"
@@ -405,6 +412,7 @@
     "readyState": {
       "__compat": {
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/EventSource/readyState",
+        "source_file": "api/EventSource.json",
         "spec_url": "https://html.spec.whatwg.org/multipage/server-sent-events.html#dom-eventsource-readystate-dev",
         "status": {
           "deprecated": false,
@@ -457,6 +465,7 @@
     "url": {
       "__compat": {
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/EventSource/url",
+        "source_file": "api/EventSource.json",
         "spec_url": "https://html.spec.whatwg.org/multipage/server-sent-events.html#dom-eventsource-url-dev",
         "status": {
           "deprecated": false,
@@ -509,6 +518,7 @@
     "withCredentials": {
       "__compat": {
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/EventSource/withCredentials",
+        "source_file": "api/EventSource.json",
         "spec_url": "https://html.spec.whatwg.org/multipage/server-sent-events.html#dom-eventsource-withcredentials-dev",
         "status": {
           "deprecated": false,
@@ -561,6 +571,7 @@
     "worker_support": {
       "__compat": {
         "description": "Available in workers",
+        "source_file": "api/EventSource.json",
         "status": {
           "deprecated": false,
           "experimental": false,

@@ -34,6 +34,7 @@
   "mdn": {
     "__compat": {
       "mdn_url": "https://developer.mozilla.org/docs/Web/API/HTMLCanvasElement/toBlob",
+      "source_file": "api/HTMLCanvasElement.json",
       "spec_url": "https://html.spec.whatwg.org/multipage/canvas.html#dom-canvas-toblob-dev",
       "status": {
         "deprecated": false,
@@ -90,6 +91,7 @@
     "quality_parameter": {
       "__compat": {
         "description": "<code>quality</code> parameter",
+        "source_file": "api/HTMLCanvasElement.json",
         "status": {
           "deprecated": false,
           "experimental": false,
@@ -138,6 +140,7 @@
     "type_parameter_webp": {
       "__compat": {
         "description": "<code>type</code> parameter supports <code>\"image/webp\"</code>",
+        "source_file": "api/HTMLCanvasElement.json",
         "status": {
           "deprecated": false,
           "experimental": false,

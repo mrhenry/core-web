@@ -27,6 +27,7 @@
   "mdn": {
     "__compat": {
       "mdn_url": "https://developer.mozilla.org/docs/Web/API/Node/contains",
+      "source_file": "api/Node.json",
       "spec_url": "https://dom.spec.whatwg.org/#ref-for-dom-node-contains①",
       "status": {
         "deprecated": false,

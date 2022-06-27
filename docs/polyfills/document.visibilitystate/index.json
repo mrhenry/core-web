@@ -27,6 +27,7 @@
   "mdn": {
     "__compat": {
       "mdn_url": "https://developer.mozilla.org/docs/Web/API/Document/visibilityState",
+      "source_file": "api/Document.json",
       "spec_url": "https://html.spec.whatwg.org/multipage/interaction.html#dom-document-visibilitystate",
       "status": {
         "deprecated": false,
@@ -133,6 +134,7 @@
     "prerender": {
       "__compat": {
         "description": "<code>prerender</code> value",
+        "source_file": "api/Document.json",
         "status": {
           "deprecated": true,
           "experimental": false,

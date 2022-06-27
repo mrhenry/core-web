@@ -37,6 +37,7 @@
       "__compat": {
         "description": "<code>DocumentFragment()</code> constructor",
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/DocumentFragment/DocumentFragment",
+        "source_file": "api/DocumentFragment.json",
         "spec_url": "https://dom.spec.whatwg.org/#ref-for-dom-documentfragment-documentfragment①",
         "status": {
           "deprecated": false,
@@ -85,6 +86,7 @@
     },
     "__compat": {
       "mdn_url": "https://developer.mozilla.org/docs/Web/API/DocumentFragment",
+      "source_file": "api/DocumentFragment.json",
       "spec_url": "https://dom.spec.whatwg.org/#interface-documentfragment",
       "status": {
         "deprecated": false,
@@ -126,13 +128,14 @@
           "version_added": "1.0"
         },
         "webview_android": {
-          "version_added": "1"
+          "version_added": "4.4"
         }
       }
     },
     "append": {
       "__compat": {
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/DocumentFragment/append",
+        "source_file": "api/_mixins/ParentNode__DocumentFragment.json",
         "spec_url": "https://dom.spec.whatwg.org/#ref-for-dom-parentnode-append①",
         "status": {
           "deprecated": false,
@@ -182,6 +185,7 @@
     "childElementCount": {
       "__compat": {
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/DocumentFragment/childElementCount",
+        "source_file": "api/_mixins/ParentNode__DocumentFragment.json",
         "spec_url": "https://dom.spec.whatwg.org/#dom-parentnode-childelementcount",
         "status": {
           "deprecated": false,
@@ -231,6 +235,7 @@
     "children": {
       "__compat": {
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/DocumentFragment/children",
+        "source_file": "api/_mixins/ParentNode__DocumentFragment.json",
         "spec_url": "https://dom.spec.whatwg.org/#ref-for-dom-parentnode-children①",
         "status": {
           "deprecated": false,
@@ -280,6 +285,7 @@
     "firstElementChild": {
       "__compat": {
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/DocumentFragment/firstElementChild",
+        "source_file": "api/_mixins/ParentNode__DocumentFragment.json",
         "spec_url": "https://dom.spec.whatwg.org/#ref-for-dom-parentnode-firstelementchild①",
         "status": {
           "deprecated": false,
@@ -328,6 +334,7 @@
     },
     "getElementById": {
       "__compat": {
+        "source_file": "api/DocumentFragment.json",
         "spec_url": "https://dom.spec.whatwg.org/#dom-nonelementparentnode-getelementbyid",
         "status": {
           "deprecated": false,
@@ -377,6 +384,7 @@
     "lastElementChild": {
       "__compat": {
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/DocumentFragment/lastElementChild",
+        "source_file": "api/_mixins/ParentNode__DocumentFragment.json",
         "spec_url": "https://dom.spec.whatwg.org/#ref-for-dom-parentnode-lastelementchild①",
         "status": {
           "deprecated": false,
@@ -426,6 +434,7 @@
     "prepend": {
       "__compat": {
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/DocumentFragment/prepend",
+        "source_file": "api/_mixins/ParentNode__DocumentFragment.json",
         "spec_url": "https://dom.spec.whatwg.org/#ref-for-dom-parentnode-prepend①",
         "status": {
           "deprecated": false,
@@ -475,6 +484,7 @@
     "querySelector": {
       "__compat": {
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/DocumentFragment/querySelector",
+        "source_file": "api/_mixins/ParentNode__DocumentFragment.json",
         "spec_url": "https://dom.spec.whatwg.org/#ref-for-dom-parentnode-queryselector①",
         "status": {
           "deprecated": false,
@@ -531,6 +541,7 @@
     "querySelectorAll": {
       "__compat": {
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/DocumentFragment/querySelectorAll",
+        "source_file": "api/_mixins/ParentNode__DocumentFragment.json",
         "spec_url": "https://dom.spec.whatwg.org/#ref-for-dom-parentnode-queryselectorall①",
         "status": {
           "deprecated": false,
@@ -587,6 +598,7 @@
     "replaceChildren": {
       "__compat": {
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/DocumentFragment/replaceChildren",
+        "source_file": "api/_mixins/ParentNode__DocumentFragment.json",
         "spec_url": "https://dom.spec.whatwg.org/#ref-for-dom-parentnode-replacechildren①",
         "status": {
           "deprecated": false,
@@ -646,7 +658,7 @@
   },
   "native": {
     "android": {
-      "version_added": "1"
+      "version_added": "4.4"
     },
     "chrome": {
       "version_added": "1"

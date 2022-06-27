@@ -35,6 +35,7 @@
       "__compat": {
         "description": "<code>CustomEvent()</code> constructor",
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/CustomEvent/CustomEvent",
+        "source_file": "api/CustomEvent.json",
         "spec_url": "https://dom.spec.whatwg.org/#ref-for-dom-customevent-customevent",
         "status": {
           "deprecated": false,
@@ -86,6 +87,7 @@
     },
     "__compat": {
       "mdn_url": "https://developer.mozilla.org/docs/Web/API/CustomEvent",
+      "source_file": "api/CustomEvent.json",
       "spec_url": "https://dom.spec.whatwg.org/#interface-customevent",
       "status": {
         "deprecated": false,
@@ -137,6 +139,7 @@
     "detail": {
       "__compat": {
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/CustomEvent/detail",
+        "source_file": "api/CustomEvent.json",
         "spec_url": "https://dom.spec.whatwg.org/#ref-for-dom-customevent-detail②",
         "status": {
           "deprecated": false,
@@ -189,6 +192,7 @@
     "initCustomEvent": {
       "__compat": {
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/CustomEvent/initCustomEvent",
+        "source_file": "api/CustomEvent.json",
         "spec_url": "https://dom.spec.whatwg.org/#dom-customevent-initcustomevent",
         "status": {
           "deprecated": true,
@@ -241,6 +245,7 @@
     "worker_support": {
       "__compat": {
         "description": "Available in workers",
+        "source_file": "api/CustomEvent.json",
         "status": {
           "deprecated": false,
           "experimental": false,

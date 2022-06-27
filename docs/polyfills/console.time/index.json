@@ -24,6 +24,7 @@
   "mdn": {
     "__compat": {
       "mdn_url": "https://developer.mozilla.org/docs/Web/API/console/time",
+      "source_file": "api/Console.json",
       "spec_url": "https://console.spec.whatwg.org/#time",
       "status": {
         "deprecated": false,

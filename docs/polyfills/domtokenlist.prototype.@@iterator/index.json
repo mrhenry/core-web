@@ -38,6 +38,7 @@
   },
   "mdn": {
     "__compat": {
+      "source_file": "api/DOMTokenList.json",
       "status": {
         "deprecated": false,
         "experimental": false,

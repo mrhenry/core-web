@@ -31,6 +31,7 @@
   "mdn": {
     "__compat": {
       "mdn_url": "https://developer.mozilla.org/docs/Web/API/Performance/now",
+      "source_file": "api/Performance.json",
       "spec_url": "https://w3c.github.io/hr-time/#dom-performance-now",
       "status": {
         "deprecated": false,

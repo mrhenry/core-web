@@ -26,6 +26,7 @@
   "mdn": {
     "@@iterator": {
       "__compat": {
+        "source_file": "api/DOMTokenList.json",
         "status": {
           "deprecated": false,
           "experimental": false,
@@ -73,6 +74,7 @@
     },
     "__compat": {
       "mdn_url": "https://developer.mozilla.org/docs/Web/API/DOMTokenList",
+      "source_file": "api/DOMTokenList.json",
       "spec_url": "https://dom.spec.whatwg.org/#interface-domtokenlist",
       "status": {
         "deprecated": false,
@@ -121,6 +123,7 @@
     "add": {
       "__compat": {
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/DOMTokenList/add",
+        "source_file": "api/DOMTokenList.json",
         "spec_url": "https://dom.spec.whatwg.org/#ref-for-dom-domtokenlist-add①",
         "status": {
           "deprecated": false,
@@ -169,6 +172,7 @@
       "multiple_parameters": {
         "__compat": {
           "description": "Multiple parameters for <code>add()</code>",
+          "source_file": "api/DOMTokenList.json",
           "status": {
             "deprecated": false,
             "experimental": false,
@@ -209,7 +213,7 @@
               "version_added": "1.5"
             },
             "webview_android": {
-              "version_added": "≤37"
+              "version_added": "4.4"
             }
           }
         }
@@ -218,6 +222,7 @@
     "contains": {
       "__compat": {
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/DOMTokenList/contains",
+        "source_file": "api/DOMTokenList.json",
         "spec_url": "https://dom.spec.whatwg.org/#ref-for-dom-domtokenlist-contains①",
         "status": {
           "deprecated": false,
@@ -267,6 +272,7 @@
     "entries": {
       "__compat": {
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/DOMTokenList/entries",
+        "source_file": "api/DOMTokenList.json",
         "status": {
           "deprecated": false,
           "experimental": false,
@@ -315,6 +321,7 @@
     "forEach": {
       "__compat": {
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/DOMTokenList/forEach",
+        "source_file": "api/DOMTokenList.json",
         "status": {
           "deprecated": false,
           "experimental": false,
@@ -363,6 +370,7 @@
     "item": {
       "__compat": {
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/DOMTokenList/item",
+        "source_file": "api/DOMTokenList.json",
         "spec_url": "https://dom.spec.whatwg.org/#ref-for-dom-domtokenlist-item①",
         "status": {
           "deprecated": false,
@@ -412,6 +420,7 @@
     "keys": {
       "__compat": {
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/DOMTokenList/keys",
+        "source_file": "api/DOMTokenList.json",
         "status": {
           "deprecated": false,
           "experimental": false,
@@ -460,6 +469,7 @@
     "length": {
       "__compat": {
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/DOMTokenList/length",
+        "source_file": "api/DOMTokenList.json",
         "spec_url": "https://dom.spec.whatwg.org/#ref-for-dom-domtokenlist-length①",
         "status": {
           "deprecated": false,
@@ -509,6 +519,7 @@
     "remove": {
       "__compat": {
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/DOMTokenList/remove",
+        "source_file": "api/DOMTokenList.json",
         "spec_url": "https://dom.spec.whatwg.org/#ref-for-dom-domtokenlist-remove①",
         "status": {
           "deprecated": false,
@@ -557,6 +568,7 @@
       "multiple_parameters": {
         "__compat": {
           "description": "Multiple parameters for <code>remove()</code>",
+          "source_file": "api/DOMTokenList.json",
           "status": {
             "deprecated": false,
             "experimental": false,
@@ -597,7 +609,7 @@
               "version_added": "1.5"
             },
             "webview_android": {
-              "version_added": "≤37"
+              "version_added": "4.4"
             }
           }
         }
@@ -607,6 +619,7 @@
       "__compat": {
         "description": "Removes duplicates",
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/DOMTokenList#Trimming_of_whitespace_and_removal_of_duplicates",
+        "source_file": "api/DOMTokenList.json",
         "status": {
           "deprecated": false,
           "experimental": false,
@@ -655,6 +668,7 @@
     "replace": {
       "__compat": {
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/DOMTokenList/replace",
+        "source_file": "api/DOMTokenList.json",
         "spec_url": "https://dom.spec.whatwg.org/#ref-for-dom-domtokenlist-replace①",
         "status": {
           "deprecated": false,
@@ -703,6 +717,7 @@
       "boolean_value": {
         "__compat": {
           "description": "<code>return()</code>'s value is a boolean, not void as it used to be.",
+          "source_file": "api/DOMTokenList.json",
           "status": {
             "deprecated": false,
             "experimental": false,
@@ -752,6 +767,7 @@
     "supports": {
       "__compat": {
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/DOMTokenList/supports",
+        "source_file": "api/DOMTokenList.json",
         "spec_url": "https://dom.spec.whatwg.org/#ref-for-dom-domtokenlist-supports①",
         "status": {
           "deprecated": false,
@@ -801,6 +817,7 @@
     "toggle": {
       "__compat": {
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/DOMTokenList/toggle",
+        "source_file": "api/DOMTokenList.json",
         "spec_url": "https://dom.spec.whatwg.org/#ref-for-dom-domtokenlist-toggle①",
         "status": {
           "deprecated": false,
@@ -849,6 +866,7 @@
       "force_parameter": {
         "__compat": {
           "description": "<code>force</code> parameter",
+          "source_file": "api/DOMTokenList.json",
           "status": {
             "deprecated": false,
             "experimental": false,
@@ -899,6 +917,7 @@
       "__compat": {
         "description": "Trims whitespace",
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/DOMTokenList#Trimming_of_whitespace_and_removal_of_duplicates",
+        "source_file": "api/DOMTokenList.json",
         "status": {
           "deprecated": false,
           "experimental": false,
@@ -947,6 +966,7 @@
     "value": {
       "__compat": {
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/DOMTokenList/value",
+        "source_file": "api/DOMTokenList.json",
         "spec_url": "https://dom.spec.whatwg.org/#ref-for-dom-domtokenlist-value②",
         "status": {
           "deprecated": false,
@@ -1002,6 +1022,7 @@
     "values": {
       "__compat": {
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/DOMTokenList/values",
+        "source_file": "api/DOMTokenList.json",
         "status": {
           "deprecated": false,
           "experimental": false,

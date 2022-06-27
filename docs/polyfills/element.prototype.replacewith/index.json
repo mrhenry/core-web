@@ -39,6 +39,7 @@
   "mdn": {
     "__compat": {
       "mdn_url": "https://developer.mozilla.org/docs/Web/API/Element/replaceWith",
+      "source_file": "api/Element.json",
       "spec_url": "https://dom.spec.whatwg.org/#ref-for-dom-childnode-replacewith①",
       "status": {
         "deprecated": false,

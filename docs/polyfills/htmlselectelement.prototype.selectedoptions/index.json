@@ -33,6 +33,7 @@
   "mdn": {
     "__compat": {
       "mdn_url": "https://developer.mozilla.org/docs/Web/API/HTMLSelectElement/selectedOptions",
+      "source_file": "api/HTMLSelectElement.json",
       "spec_url": "https://html.spec.whatwg.org/multipage/form-elements.html#dom-select-selectedoptions-dev",
       "status": {
         "deprecated": false,

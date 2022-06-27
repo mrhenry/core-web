@@ -41,6 +41,7 @@
       "__compat": {
         "description": "<code>ResizeObserver()</code> constructor",
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/ResizeObserver/ResizeObserver",
+        "source_file": "api/ResizeObserver.json",
         "spec_url": "https://drafts.csswg.org/resize-observer/#dom-resizeobserver-resizeobserver",
         "status": {
           "deprecated": false,
@@ -89,6 +90,7 @@
     },
     "__compat": {
       "mdn_url": "https://developer.mozilla.org/docs/Web/API/ResizeObserver",
+      "source_file": "api/ResizeObserver.json",
       "spec_url": "https://drafts.csswg.org/resize-observer/#resize-observer-interface",
       "status": {
         "deprecated": false,
@@ -137,6 +139,7 @@
     "disconnect": {
       "__compat": {
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/ResizeObserver/disconnect",
+        "source_file": "api/ResizeObserver.json",
         "spec_url": "https://drafts.csswg.org/resize-observer/#dom-resizeobserver-disconnect",
         "status": {
           "deprecated": false,
@@ -186,6 +189,7 @@
     "observe": {
       "__compat": {
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/ResizeObserver/observe",
+        "source_file": "api/ResizeObserver.json",
         "spec_url": "https://drafts.csswg.org/resize-observer/#dom-resizeobserver-observe",
         "status": {
           "deprecated": false,
@@ -234,6 +238,7 @@
       "options_box_parameter": {
         "__compat": {
           "description": "<code>options.box</code> parameter",
+          "source_file": "api/ResizeObserver.json",
           "status": {
             "deprecated": false,
             "experimental": false,
@@ -292,6 +297,7 @@
     "unobserve": {
       "__compat": {
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/ResizeObserver/unobserve",
+        "source_file": "api/ResizeObserver.json",
         "spec_url": "https://drafts.csswg.org/resize-observer/#dom-resizeobserver-unobserve",
         "status": {
           "deprecated": false,

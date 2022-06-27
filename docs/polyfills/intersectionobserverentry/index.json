@@ -24,6 +24,7 @@
     "IntersectionObserverEntry": {
       "__compat": {
         "description": "<code>IntersectionObserverEntry()</code> constructor",
+        "source_file": "api/IntersectionObserverEntry.json",
         "status": {
           "deprecated": false,
           "experimental": true,
@@ -72,6 +73,7 @@
     },
     "__compat": {
       "mdn_url": "https://developer.mozilla.org/docs/Web/API/IntersectionObserverEntry",
+      "source_file": "api/IntersectionObserverEntry.json",
       "spec_url": "https://w3c.github.io/IntersectionObserver/#intersection-observer-entry",
       "status": {
         "deprecated": false,
@@ -120,6 +122,7 @@
     "boundingClientRect": {
       "__compat": {
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/IntersectionObserverEntry/boundingClientRect",
+        "source_file": "api/IntersectionObserverEntry.json",
         "spec_url": "https://w3c.github.io/IntersectionObserver/#dom-intersectionobserverentry-boundingclientrect",
         "status": {
           "deprecated": false,
@@ -169,6 +172,7 @@
     "intersectionRatio": {
       "__compat": {
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/IntersectionObserverEntry/intersectionRatio",
+        "source_file": "api/IntersectionObserverEntry.json",
         "spec_url": "https://w3c.github.io/IntersectionObserver/#dom-intersectionobserverentry-intersectionratio",
         "status": {
           "deprecated": false,
@@ -218,6 +222,7 @@
     "intersectionRect": {
       "__compat": {
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/IntersectionObserverEntry/intersectionRect",
+        "source_file": "api/IntersectionObserverEntry.json",
         "spec_url": "https://w3c.github.io/IntersectionObserver/#dom-intersectionobserverentry-intersectionrect",
         "status": {
           "deprecated": false,
@@ -267,6 +272,7 @@
     "isIntersecting": {
       "__compat": {
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/IntersectionObserverEntry/isIntersecting",
+        "source_file": "api/IntersectionObserverEntry.json",
         "spec_url": "https://w3c.github.io/IntersectionObserver/#dom-intersectionobserverentry-isintersecting",
         "status": {
           "deprecated": false,
@@ -316,6 +322,7 @@
     "rootBounds": {
       "__compat": {
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/IntersectionObserverEntry/rootBounds",
+        "source_file": "api/IntersectionObserverEntry.json",
         "spec_url": "https://w3c.github.io/IntersectionObserver/#dom-intersectionobserverentry-rootbounds",
         "status": {
           "deprecated": false,
@@ -365,6 +372,7 @@
     "target": {
       "__compat": {
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/IntersectionObserverEntry/target",
+        "source_file": "api/IntersectionObserverEntry.json",
         "spec_url": "https://w3c.github.io/IntersectionObserver/#dom-intersectionobserverentry-target",
         "status": {
           "deprecated": false,
@@ -414,6 +422,7 @@
     "time": {
       "__compat": {
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/IntersectionObserverEntry/time",
+        "source_file": "api/IntersectionObserverEntry.json",
         "spec_url": "https://w3c.github.io/IntersectionObserver/#dom-intersectionobserverentry-time",
         "status": {
           "deprecated": false,

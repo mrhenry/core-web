@@ -42,6 +42,7 @@
       "__compat": {
         "description": "<code>IntersectionObserver()</code> constructor",
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/IntersectionObserver/IntersectionObserver",
+        "source_file": "api/IntersectionObserver.json",
         "spec_url": "https://w3c.github.io/IntersectionObserver/#dom-intersectionobserver-intersectionobserver",
         "status": {
           "deprecated": false,
@@ -91,6 +92,7 @@
       "options_root_parameter_Document": {
         "__compat": {
           "description": "<code>options.root</code> parameter can be a <code>Document</code>",
+          "source_file": "api/IntersectionObserver.json",
           "status": {
             "deprecated": false,
             "experimental": false,
@@ -139,6 +141,7 @@
     },
     "__compat": {
       "mdn_url": "https://developer.mozilla.org/docs/Web/API/IntersectionObserver",
+      "source_file": "api/IntersectionObserver.json",
       "spec_url": "https://w3c.github.io/IntersectionObserver/#intersection-observer-interface",
       "status": {
         "deprecated": false,
@@ -187,6 +190,7 @@
     "disconnect": {
       "__compat": {
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/IntersectionObserver/disconnect",
+        "source_file": "api/IntersectionObserver.json",
         "spec_url": "https://w3c.github.io/IntersectionObserver/#dom-intersectionobserver-disconnect",
         "status": {
           "deprecated": false,
@@ -237,6 +241,7 @@
     "observe": {
       "__compat": {
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/IntersectionObserver/observe",
+        "source_file": "api/IntersectionObserver.json",
         "spec_url": "https://w3c.github.io/IntersectionObserver/#dom-intersectionobserver-observe",
         "status": {
           "deprecated": false,
@@ -286,6 +291,7 @@
     "root": {
       "__compat": {
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/IntersectionObserver/root",
+        "source_file": "api/IntersectionObserver.json",
         "spec_url": "https://w3c.github.io/IntersectionObserver/#dom-intersectionobserver-root",
         "status": {
           "deprecated": false,
@@ -335,6 +341,7 @@
     "rootMargin": {
       "__compat": {
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/IntersectionObserver/rootMargin",
+        "source_file": "api/IntersectionObserver.json",
         "spec_url": "https://w3c.github.io/IntersectionObserver/#dom-intersectionobserver-rootmargin",
         "status": {
           "deprecated": false,
@@ -386,6 +393,7 @@
     "takeRecords": {
       "__compat": {
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/IntersectionObserver/takeRecords",
+        "source_file": "api/IntersectionObserver.json",
         "spec_url": "https://w3c.github.io/IntersectionObserver/#dom-intersectionobserver-takerecords",
         "status": {
           "deprecated": false,
@@ -436,6 +444,7 @@
     "thresholds": {
       "__compat": {
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/IntersectionObserver/thresholds",
+        "source_file": "api/IntersectionObserver.json",
         "spec_url": "https://w3c.github.io/IntersectionObserver/#dom-intersectionobserver-thresholds",
         "status": {
           "deprecated": false,
@@ -485,6 +494,7 @@
     "unobserve": {
       "__compat": {
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/IntersectionObserver/unobserve",
+        "source_file": "api/IntersectionObserver.json",
         "spec_url": "https://w3c.github.io/IntersectionObserver/#dom-intersectionobserver-unobserve",
         "status": {
           "deprecated": false,

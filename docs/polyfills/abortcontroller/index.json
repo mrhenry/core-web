@@ -39,6 +39,7 @@
       "__compat": {
         "description": "<code>AbortController()</code> constructor",
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/AbortController/AbortController",
+        "source_file": "api/AbortController.json",
         "spec_url": "https://dom.spec.whatwg.org/#ref-for-dom-abortcontroller-abortcontroller①",
         "status": {
           "deprecated": false,
@@ -107,6 +108,7 @@
     },
     "__compat": {
       "mdn_url": "https://developer.mozilla.org/docs/Web/API/AbortController",
+      "source_file": "api/AbortController.json",
       "spec_url": "https://dom.spec.whatwg.org/#interface-abortcontroller",
       "status": {
         "deprecated": false,
@@ -175,6 +177,7 @@
     "abort": {
       "__compat": {
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/AbortController/abort",
+        "source_file": "api/AbortController.json",
         "spec_url": "https://dom.spec.whatwg.org/#ref-for-dom-abortcontroller-abortcontroller①",
         "status": {
           "deprecated": false,
@@ -244,6 +247,7 @@
     "signal": {
       "__compat": {
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/AbortController/signal",
+        "source_file": "api/AbortController.json",
         "spec_url": "https://dom.spec.whatwg.org/#ref-for-dom-abortcontroller-signal②",
         "status": {
           "deprecated": false,

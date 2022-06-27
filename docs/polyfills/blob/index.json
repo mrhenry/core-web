@@ -33,6 +33,7 @@
       "__compat": {
         "description": "<code>Blob()</code> constructor",
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/Blob/Blob",
+        "source_file": "api/Blob.json",
         "spec_url": "https://w3c.github.io/FileAPI/#constructorBlob",
         "status": {
           "deprecated": false,
@@ -90,6 +91,7 @@
     },
     "__compat": {
       "mdn_url": "https://developer.mozilla.org/docs/Web/API/Blob",
+      "source_file": "api/Blob.json",
       "spec_url": "https://w3c.github.io/FileAPI/#blob-section",
       "status": {
         "deprecated": false,
@@ -150,6 +152,7 @@
       "__compat": {
         "description": "<code>arrayBuffer()</code>",
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/Blob/arrayBuffer",
+        "source_file": "api/Blob.json",
         "spec_url": "https://w3c.github.io/FileAPI/#dom-blob-arraybuffer",
         "status": {
           "deprecated": false,
@@ -205,6 +208,7 @@
     "size": {
       "__compat": {
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/Blob/size",
+        "source_file": "api/Blob.json",
         "spec_url": "https://w3c.github.io/FileAPI/#dfn-size",
         "status": {
           "deprecated": false,
@@ -261,6 +265,7 @@
       "__compat": {
         "description": "<code>slice()</code>",
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/Blob/slice",
+        "source_file": "api/Blob.json",
         "spec_url": "https://w3c.github.io/FileAPI/#dfn-slice",
         "status": {
           "deprecated": false,
@@ -368,6 +373,7 @@
       "__compat": {
         "description": "<code>stream()</code>",
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/Blob/stream",
+        "source_file": "api/Blob.json",
         "spec_url": "https://w3c.github.io/FileAPI/#dom-blob-stream",
         "status": {
           "deprecated": false,
@@ -424,6 +430,7 @@
       "__compat": {
         "description": "<code>text()</code>",
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/Blob/text",
+        "source_file": "api/Blob.json",
         "spec_url": "https://w3c.github.io/FileAPI/#dom-blob-text",
         "status": {
           "deprecated": false,
@@ -479,6 +486,7 @@
     "type": {
       "__compat": {
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/Blob/type",
+        "source_file": "api/Blob.json",
         "spec_url": "https://w3c.github.io/FileAPI/#dfn-type",
         "status": {
           "deprecated": false,

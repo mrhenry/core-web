@@ -15,6 +15,7 @@
       "__compat": {
         "description": "<code>AudioContext()</code> constructor",
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/AudioContext/AudioContext",
+        "source_file": "api/AudioContext.json",
         "spec_url": "https://webaudio.github.io/web-audio-api/#dom-audiocontext-audiocontext",
         "status": {
           "deprecated": false,
@@ -141,6 +142,7 @@
       "options_latencyHint_parameter": {
         "__compat": {
           "description": "<code>options.latencyHint</code> parameter",
+          "source_file": "api/AudioContext.json",
           "spec_url": "https://webaudio.github.io/web-audio-api/#dom-audiocontextoptions-latencyhint",
           "status": {
             "deprecated": false,
@@ -192,6 +194,7 @@
       "options_sampleRate_parameter": {
         "__compat": {
           "description": "<code>options.sampleRate</code> parameter",
+          "source_file": "api/AudioContext.json",
           "spec_url": "https://webaudio.github.io/web-audio-api/#dom-audiocontextoptions-samplerate",
           "status": {
             "deprecated": false,
@@ -241,6 +244,7 @@
     },
     "__compat": {
       "mdn_url": "https://developer.mozilla.org/docs/Web/API/AudioContext",
+      "source_file": "api/AudioContext.json",
       "spec_url": "https://webaudio.github.io/web-audio-api/#AudioContext",
       "status": {
         "deprecated": false,
@@ -336,7 +340,7 @@
           },
           {
             "prefix": "webkit",
-            "version_added": "≤37",
+            "version_added": "4.4",
             "version_removed": "57"
           }
         ]
@@ -345,6 +349,7 @@
     "baseLatency": {
       "__compat": {
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/AudioContext/baseLatency",
+        "source_file": "api/AudioContext.json",
         "spec_url": "https://webaudio.github.io/web-audio-api/#dom-audiocontext-baselatency",
         "status": {
           "deprecated": false,
@@ -394,6 +399,7 @@
     "close": {
       "__compat": {
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/AudioContext/close",
+        "source_file": "api/AudioContext.json",
         "spec_url": "https://webaudio.github.io/web-audio-api/#dom-audiocontext-close",
         "status": {
           "deprecated": false,
@@ -443,6 +449,7 @@
     "createMediaElementSource": {
       "__compat": {
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/AudioContext/createMediaElementSource",
+        "source_file": "api/AudioContext.json",
         "spec_url": "https://webaudio.github.io/web-audio-api/#dom-audiocontext-createmediaelementsource",
         "status": {
           "deprecated": false,
@@ -492,6 +499,7 @@
     "createMediaStreamDestination": {
       "__compat": {
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/AudioContext/createMediaStreamDestination",
+        "source_file": "api/AudioContext.json",
         "spec_url": "https://webaudio.github.io/web-audio-api/#dom-audiocontext-createmediastreamdestination",
         "status": {
           "deprecated": false,
@@ -541,6 +549,7 @@
     "createMediaStreamSource": {
       "__compat": {
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/AudioContext/createMediaStreamSource",
+        "source_file": "api/AudioContext.json",
         "spec_url": "https://webaudio.github.io/web-audio-api/#dom-audiocontext-createmediastreamsource",
         "status": {
           "deprecated": false,
@@ -590,6 +599,7 @@
     "createMediaStreamTrackSource": {
       "__compat": {
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/AudioContext/createMediaStreamTrackSource",
+        "source_file": "api/AudioContext.json",
         "spec_url": "https://webaudio.github.io/web-audio-api/#dom-audiocontext-createmediastreamtracksource",
         "status": {
           "deprecated": false,
@@ -641,6 +651,7 @@
     "getOutputTimestamp": {
       "__compat": {
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/AudioContext/getOutputTimestamp",
+        "source_file": "api/AudioContext.json",
         "spec_url": "https://webaudio.github.io/web-audio-api/#dom-audiocontext-getoutputtimestamp",
         "status": {
           "deprecated": false,
@@ -690,6 +701,7 @@
     "outputLatency": {
       "__compat": {
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/AudioContext/outputLatency",
+        "source_file": "api/AudioContext.json",
         "spec_url": "https://webaudio.github.io/web-audio-api/#dom-audiocontext-outputlatency",
         "status": {
           "deprecated": false,
@@ -739,6 +751,7 @@
     "resume": {
       "__compat": {
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/AudioContext/resume",
+        "source_file": "api/AudioContext.json",
         "spec_url": "https://webaudio.github.io/web-audio-api/#dom-audiocontext-resume",
         "status": {
           "deprecated": false,
@@ -788,6 +801,7 @@
     "suspend": {
       "__compat": {
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/AudioContext/suspend",
+        "source_file": "api/AudioContext.json",
         "spec_url": "https://webaudio.github.io/web-audio-api/#dom-audiocontext-suspend",
         "status": {
           "deprecated": false,
@@ -843,7 +857,7 @@
       },
       {
         "prefix": "webkit",
-        "version_added": "≤37",
+        "version_added": "4.4",
         "version_removed": "57"
       }
     ],

@@ -38,6 +38,7 @@
   "mdn": {
     "__compat": {
       "mdn_url": "https://developer.mozilla.org/docs/Web/API/Element/toggleAttribute",
+      "source_file": "api/Element.json",
       "spec_url": "https://dom.spec.whatwg.org/#ref-for-dom-element-toggleattribute①",
       "status": {
         "deprecated": false,

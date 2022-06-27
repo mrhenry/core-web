@@ -34,6 +34,7 @@
   "mdn": {
     "__compat": {
       "mdn_url": "https://developer.mozilla.org/docs/Web/API/fetch",
+      "source_file": "api/_globals/fetch.json",
       "spec_url": "https://fetch.spec.whatwg.org/#fetch-method",
       "status": {
         "deprecated": false,
@@ -109,6 +110,7 @@
     "blob_data_support": {
       "__compat": {
         "description": "Support for blob: and data:",
+        "source_file": "api/_globals/fetch.json",
         "status": {
           "deprecated": false,
           "experimental": false,
@@ -160,6 +162,7 @@
     "referrerpolicy": {
       "__compat": {
         "description": "referrerPolicy",
+        "source_file": "api/_globals/fetch.json",
         "status": {
           "deprecated": false,
           "experimental": false,
@@ -211,6 +214,7 @@
     "signal": {
       "__compat": {
         "description": "signal",
+        "source_file": "api/_globals/fetch.json",
         "status": {
           "deprecated": false,
           "experimental": false,
@@ -262,6 +266,7 @@
     "worker_support": {
       "__compat": {
         "description": "Available in workers",
+        "source_file": "api/_globals/fetch.json",
         "status": {
           "deprecated": false,
           "experimental": false,

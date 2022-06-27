@@ -31,6 +31,7 @@
     "__compat": {
       "description": "<code>randomUUID()</code>",
       "mdn_url": "https://developer.mozilla.org/docs/Web/API/Crypto/randomUUID",
+      "source_file": "api/Crypto.json",
       "spec_url": "https://w3c.github.io/webcrypto/#Crypto-method-randomUUID",
       "status": {
         "deprecated": false,

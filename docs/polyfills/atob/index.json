@@ -18,6 +18,7 @@
   "mdn": {
     "__compat": {
       "mdn_url": "https://developer.mozilla.org/docs/Web/API/atob",
+      "source_file": "api/_globals/atob.json",
       "spec_url": "https://html.spec.whatwg.org/multipage/webappapis.html#dom-atob-dev",
       "status": {
         "deprecated": false,
@@ -84,6 +85,7 @@
     "worker_support": {
       "__compat": {
         "description": "Available in workers",
+        "source_file": "api/_globals/atob.json",
         "status": {
           "deprecated": false,
           "experimental": false,

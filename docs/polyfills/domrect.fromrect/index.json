@@ -37,6 +37,7 @@
   "mdn": {
     "__compat": {
       "description": "<code>fromRect()</code> static method",
+      "source_file": "api/DOMRect.json",
       "spec_url": "https://drafts.fxtf.org/geometry/#dom-domrect-fromrect",
       "status": {
         "deprecated": false,

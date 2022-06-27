@@ -18,6 +18,7 @@
   "mdn": {
     "__compat": {
       "mdn_url": "https://developer.mozilla.org/docs/Web/API/Document/currentScript",
+      "source_file": "api/Document.json",
       "spec_url": "https://html.spec.whatwg.org/multipage/dom.html#dom-document-currentscript-dev",
       "status": {
         "deprecated": false,

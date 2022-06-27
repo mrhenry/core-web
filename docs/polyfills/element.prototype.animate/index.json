@@ -35,6 +35,7 @@
   "mdn": {
     "__compat": {
       "mdn_url": "https://developer.mozilla.org/docs/Web/API/Element/animate",
+      "source_file": "api/Element.json",
       "spec_url": "https://drafts.csswg.org/web-animations-1/#dom-animatable-animate",
       "status": {
         "deprecated": false,
@@ -84,6 +85,7 @@
       "__compat": {
         "description": "Implicit to/from keyframes are supported",
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/Element/animate#Implicit_tofrom_keyframes",
+        "source_file": "api/Element.json",
         "status": {
           "deprecated": false,
           "experimental": false,
@@ -136,6 +138,7 @@
     "options_composite_parameter": {
       "__compat": {
         "description": "<code>options.composite</code> parameter",
+        "source_file": "api/Element.json",
         "spec_url": "https://drafts.csswg.org/web-animations-1/#dom-keyframeeffectoptions-composite",
         "status": {
           "deprecated": false,
@@ -221,6 +224,7 @@
     "options_id_parameter": {
       "__compat": {
         "description": "<code>options.id</code> parameter",
+        "source_file": "api/Element.json",
         "spec_url": "https://drafts.csswg.org/web-animations-1/#dom-keyframeanimationoptions-id",
         "status": {
           "deprecated": false,
@@ -270,6 +274,7 @@
     "options_iterationComposite_parameter": {
       "__compat": {
         "description": "<code>options.iterationComposite</code> parameter",
+        "source_file": "api/Element.json",
         "spec_url": "https://drafts.csswg.org/web-animations-2/#dom-keyframeeffectoptions-iterationcomposite",
         "status": {
           "deprecated": false,
@@ -331,6 +336,7 @@
     "options_pseudoElement_parameter": {
       "__compat": {
         "description": "<code>options.pseudoElement</code> parameter",
+        "source_file": "api/Element.json",
         "spec_url": "https://drafts.csswg.org/web-animations-1/#dom-keyframeeffectoptions-pseudoelement",
         "status": {
           "deprecated": false,

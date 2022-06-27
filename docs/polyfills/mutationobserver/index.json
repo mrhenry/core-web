@@ -34,6 +34,7 @@
       "__compat": {
         "description": "<code>MutationObserver()</code> constructor",
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/MutationObserver/MutationObserver",
+        "source_file": "api/MutationObserver.json",
         "spec_url": "https://dom.spec.whatwg.org/#ref-for-dom-mutationobserver-mutationobserver①",
         "status": {
           "deprecated": false,
@@ -118,6 +119,7 @@
     },
     "__compat": {
       "mdn_url": "https://developer.mozilla.org/docs/Web/API/MutationObserver",
+      "source_file": "api/MutationObserver.json",
       "spec_url": "https://dom.spec.whatwg.org/#interface-mutationobserver",
       "status": {
         "deprecated": false,
@@ -202,6 +204,7 @@
     "disconnect": {
       "__compat": {
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/MutationObserver/disconnect",
+        "source_file": "api/MutationObserver.json",
         "spec_url": "https://dom.spec.whatwg.org/#ref-for-dom-mutationobserver-disconnect①",
         "status": {
           "deprecated": false,
@@ -251,6 +254,7 @@
     "observe": {
       "__compat": {
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/MutationObserver/observe",
+        "source_file": "api/MutationObserver.json",
         "spec_url": "https://dom.spec.whatwg.org/#ref-for-dom-mutationobserver-observe②",
         "status": {
           "deprecated": false,
@@ -312,6 +316,7 @@
     "takeRecords": {
       "__compat": {
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/MutationObserver/takeRecords",
+        "source_file": "api/MutationObserver.json",
         "spec_url": "https://dom.spec.whatwg.org/#ref-for-dom-mutationobserver-takerecords①",
         "status": {
           "deprecated": false,

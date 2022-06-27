@@ -34,6 +34,7 @@
   "mdn": {
     "__compat": {
       "mdn_url": "https://developer.mozilla.org/docs/Web/API/Element/scrollIntoView",
+      "source_file": "api/Element.json",
       "spec_url": "https://drafts.csswg.org/cssom-view/#dom-element-scrollintoview",
       "status": {
         "deprecated": false,
@@ -105,13 +106,14 @@
           "version_added": "1.0"
         },
         "webview_android": {
-          "version_added": "1"
+          "version_added": "4.4"
         }
       }
     },
     "options_parameter": {
       "__compat": {
         "description": "<code>options</code> parameter",
+        "source_file": "api/Element.json",
         "status": {
           "deprecated": false,
           "experimental": false,
@@ -185,7 +187,7 @@
   },
   "native": {
     "android": {
-      "version_added": "1"
+      "version_added": "4.4"
     },
     "chrome": {
       "version_added": "1"

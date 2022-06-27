@@ -36,6 +36,7 @@
   "mdn": {
     "__compat": {
       "mdn_url": "https://developer.mozilla.org/docs/Web/API/Element/matches",
+      "source_file": "api/Element.json",
       "spec_url": "https://dom.spec.whatwg.org/#ref-for-dom-element-matches①",
       "status": {
         "deprecated": false,

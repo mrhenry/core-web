@@ -28,6 +28,7 @@
       "__compat": {
         "description": "<code>Event()</code> constructor",
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/Event/Event",
+        "source_file": "api/Event.json",
         "spec_url": "https://dom.spec.whatwg.org/#ref-for-dom-event-event",
         "status": {
           "deprecated": false,
@@ -88,6 +89,7 @@
     },
     "__compat": {
       "mdn_url": "https://developer.mozilla.org/docs/Web/API/Event",
+      "source_file": "api/Event.json",
       "spec_url": "https://dom.spec.whatwg.org/#interface-event",
       "status": {
         "deprecated": false,
@@ -135,13 +137,14 @@
           "version_added": "1.0"
         },
         "webview_android": {
-          "version_added": "1"
+          "version_added": "≤37"
         }
       }
     },
     "bubbles": {
       "__compat": {
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/Event/bubbles",
+        "source_file": "api/Event.json",
         "spec_url": "https://dom.spec.whatwg.org/#ref-for-dom-event-bubbles③",
         "status": {
           "deprecated": false,
@@ -198,6 +201,7 @@
     "cancelBubble": {
       "__compat": {
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/Event/cancelBubble",
+        "source_file": "api/Event.json",
         "spec_url": "https://dom.spec.whatwg.org/#ref-for-dom-event-cancelbubble①",
         "status": {
           "deprecated": false,
@@ -276,6 +280,7 @@
     "cancelable": {
       "__compat": {
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/Event/cancelable",
+        "source_file": "api/Event.json",
         "spec_url": "https://dom.spec.whatwg.org/#ref-for-dom-event-cancelable②",
         "status": {
           "deprecated": false,
@@ -331,6 +336,7 @@
     "composed": {
       "__compat": {
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/Event/composed",
+        "source_file": "api/Event.json",
         "spec_url": "https://dom.spec.whatwg.org/#ref-for-dom-event-composed①",
         "status": {
           "deprecated": false,
@@ -387,6 +393,7 @@
     "composedPath": {
       "__compat": {
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/Event/composedPath",
+        "source_file": "api/Event.json",
         "spec_url": "https://dom.spec.whatwg.org/#ref-for-dom-event-composedpath①",
         "status": {
           "deprecated": false,
@@ -485,6 +492,7 @@
     "currentTarget": {
       "__compat": {
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/Event/currentTarget",
+        "source_file": "api/Event.json",
         "spec_url": "https://dom.spec.whatwg.org/#ref-for-dom-event-currenttarget②",
         "status": {
           "deprecated": false,
@@ -540,7 +548,7 @@
             "version_added": "1.0"
           },
           "webview_android": {
-            "version_added": "1"
+            "version_added": "4.4"
           }
         }
       }
@@ -548,6 +556,7 @@
     "defaultPrevented": {
       "__compat": {
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/Event/defaultPrevented",
+        "source_file": "api/Event.json",
         "spec_url": "https://dom.spec.whatwg.org/#ref-for-dom-event-defaultprevented①",
         "status": {
           "deprecated": false,
@@ -603,6 +612,7 @@
     "eventPhase": {
       "__compat": {
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/Event/eventPhase",
+        "source_file": "api/Event.json",
         "spec_url": "https://dom.spec.whatwg.org/#ref-for-dom-event-eventphase③",
         "status": {
           "deprecated": false,
@@ -650,7 +660,7 @@
             "version_added": "1.0"
           },
           "webview_android": {
-            "version_added": "1"
+            "version_added": "4.4"
           }
         }
       }
@@ -658,6 +668,7 @@
     "explicitOriginalTarget": {
       "__compat": {
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/Event/explicitOriginalTarget",
+        "source_file": "api/Event.json",
         "status": {
           "deprecated": false,
           "experimental": false,
@@ -712,6 +723,7 @@
     "initEvent": {
       "__compat": {
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/Event/initEvent",
+        "source_file": "api/Event.json",
         "spec_url": "https://dom.spec.whatwg.org/#ref-for-dom-event-initevent①",
         "status": {
           "deprecated": true,
@@ -783,6 +795,7 @@
     "isTrusted": {
       "__compat": {
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/Event/isTrusted",
+        "source_file": "api/Event.json",
         "spec_url": "https://dom.spec.whatwg.org/#ref-for-dom-event-istrusted①",
         "status": {
           "deprecated": false,
@@ -846,6 +859,7 @@
     "originalTarget": {
       "__compat": {
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/Event/originalTarget",
+        "source_file": "api/Event.json",
         "status": {
           "deprecated": false,
           "experimental": false,
@@ -900,6 +914,7 @@
     "preventDefault": {
       "__compat": {
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/Event/preventDefault",
+        "source_file": "api/Event.json",
         "spec_url": "https://dom.spec.whatwg.org/#ref-for-dom-event-preventdefault③",
         "status": {
           "deprecated": false,
@@ -947,7 +962,7 @@
             "version_added": "1.0"
           },
           "webview_android": {
-            "version_added": "1"
+            "version_added": "4.4"
           }
         }
       }
@@ -955,6 +970,7 @@
     "returnValue": {
       "__compat": {
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/Event/returnValue",
+        "source_file": "api/Event.json",
         "spec_url": "https://dom.spec.whatwg.org/#dom-event-returnvalue",
         "status": {
           "deprecated": true,
@@ -1012,6 +1028,7 @@
     "srcElement": {
       "__compat": {
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/Event/srcElement",
+        "source_file": "api/Event.json",
         "spec_url": "https://dom.spec.whatwg.org/#dom-event-srcelement",
         "status": {
           "deprecated": true,
@@ -1067,6 +1084,7 @@
     "stopImmediatePropagation": {
       "__compat": {
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/Event/stopImmediatePropagation",
+        "source_file": "api/Event.json",
         "spec_url": "https://dom.spec.whatwg.org/#ref-for-dom-event-stopimmediatepropagation①",
         "status": {
           "deprecated": false,
@@ -1122,6 +1140,7 @@
     "stopPropagation": {
       "__compat": {
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/Event/stopPropagation",
+        "source_file": "api/Event.json",
         "spec_url": "https://dom.spec.whatwg.org/#ref-for-dom-event-stoppropagation①",
         "status": {
           "deprecated": false,
@@ -1170,7 +1189,7 @@
             "version_added": "1.0"
           },
           "webview_android": {
-            "version_added": "1"
+            "version_added": "4.4"
           }
         }
       }
@@ -1178,6 +1197,7 @@
     "target": {
       "__compat": {
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/Event/target",
+        "source_file": "api/Event.json",
         "spec_url": "https://dom.spec.whatwg.org/#ref-for-dom-event-target③",
         "status": {
           "deprecated": false,
@@ -1225,7 +1245,7 @@
             "version_added": "1.0"
           },
           "webview_android": {
-            "version_added": "1"
+            "version_added": "4.4"
           }
         }
       }
@@ -1233,6 +1253,7 @@
     "timeStamp": {
       "__compat": {
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/Event/timeStamp",
+        "source_file": "api/Event.json",
         "spec_url": "https://dom.spec.whatwg.org/#ref-for-dom-event-timestamp①",
         "status": {
           "deprecated": false,
@@ -1298,6 +1319,7 @@
     "type": {
       "__compat": {
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/Event/type",
+        "source_file": "api/Event.json",
         "spec_url": "https://dom.spec.whatwg.org/#ref-for-dom-event-type④",
         "status": {
           "deprecated": false,
@@ -1345,7 +1367,7 @@
             "version_added": "1.0"
           },
           "webview_android": {
-            "version_added": "1"
+            "version_added": "4.4"
           }
         }
       }
@@ -1359,7 +1381,7 @@
   },
   "native": {
     "android": {
-      "version_added": "1"
+      "version_added": "≤37"
     },
     "chrome": {
       "version_added": "1"
