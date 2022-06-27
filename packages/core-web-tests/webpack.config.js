@@ -73,7 +73,7 @@ function configBuilder(opts) {
 								[
 									"@babel/preset-env",
 									{
-										corejs: "^3.6.3",
+										corejs: "3.999999.999999",
 										targets: {
 											browsers: opts.coreJsBrowsers
 										},
@@ -109,7 +109,7 @@ function configBuilder(opts) {
 								[
 									"@babel/preset-env",
 									{
-										corejs: "^3.6.3",
+										corejs: "3.999999.999999",
 										targets: {
 											browsers: opts.coreJsBrowsers
 										},
