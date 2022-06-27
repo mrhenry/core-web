@@ -66,3 +66,4 @@ jobs:
         apiToken: ${{ secrets.CF_API_TOKEN }}
         wranglerVersion: '1.13.0'
         workingDirectory: 'packages/pages-worker'
+        command: publish
