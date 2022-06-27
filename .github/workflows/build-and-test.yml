@@ -22,7 +22,7 @@ jobs:
           fetch-depth: 1
 
       - name: setup node
-        uses: actions/setup-node@v3.1.0
+        uses: actions/setup-node@v3.3.0
         with:
           node-version: 17
           cache: 'npm'
@@ -32,7 +32,7 @@ jobs:
 
       - name: cache core-web-tests
         id: cache-core-web-tests
-        uses: actions/cache@v3.0.2
+        uses: actions/cache@v3.0.3
         with:
           path: packages/core-web-tests/dist
           key: cache--core-web-tests--${{ env.commit-sha }}
@@ -60,7 +60,9 @@ jobs:
           local-testing: start
           local-identifier: random
 
-      - run: cd packages/core-web-tests && npm run browserstack-runner -- --browsers ${{ matrix.test_groups }}
+      - run: cd packages/core-web-tests && npm run browserstack-runner
+        env:
+          BROWSERSTACK_JSON: ./browserstack/${{ matrix.test_groups }}.json
 
       - name: 'Stop BrowserStack Local'
         uses: 'browserstack/github-actions/setup-local@master'

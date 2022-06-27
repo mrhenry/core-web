@@ -1,6 +1,6 @@
 {
   "name": "@mrhenry/pages",
-  "version": "0.7.1",
+  "version": "0.7.2",
   "description": "generator for GitHub pages.",
   "license": "MIT",
   "main": "lib/pages.js",
@@ -20,12 +20,12 @@
     "build-images": "cp -r ./lib/images/ ./dist/images/",
     "build-qunit": "cp -r ./lib/js/qunit-2.9.2.js ./dist/js/qunit-2.9.2.js && cp -r ./lib/css/qunit-2.9.2.css ./dist/css/qunit-2.9.2.css",
     "build": "rm -rf ./dist/* && mkdir -p ./dist/ && npm run build-css && npm run build-js && npm run build-fonts && npm run build-images && npm run build-qunit && npm run build-html",
-    "dev-server": "cd ./dist && npx http-server"
+    "dev-server": "cd ./dist && npx http-server -p 3080"
   },
   "dependencies": {
     "@babel/core": "^7.16.10",
     "@babel/preset-env": "^7.16.11",
-    "@mdn/browser-compat-data": "^4.1.18",
+    "@mdn/browser-compat-data": "^5.0.0",
     "@mrhenry/babel-plugin-core-web": "*",
     "@mrhenry/core-web": "*",
     "babel-loader": "^8.2.3",
@@ -37,7 +37,7 @@
     "postcss": "^8.4.6",
     "postcss-import": "^14.0.2",
     "postcss-preset-env": "^7.4.4",
-    "postcss-split-by-media": "^0.2.0",
+    "postcss-split-by-media": "^0.3.0",
     "webpack": "^5.66.0",
     "webpack-cli": "^4.9.2"
   },

@@ -1,5 +1,5 @@
-import * as bcd from '@mdn/browser-compat-data';
 import * as semver from "semver";
+const bcd = require('@mdn/browser-compat-data');
 
 export function browsersToEngines(browsers: Record<string, string>) {
 	const engineFeatureMapping: Record<string, { engine: string, versions: Array<string> }> = {};

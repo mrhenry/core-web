@@ -5,7 +5,6 @@
 @import './base/typography.css';
 @import './base/utilities.css';
 
-/* Layouts */
 @import './layouts/section.css';
 @import './layouts/wrapper.css';
 
