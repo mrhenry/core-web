@@ -41,7 +41,7 @@ module.exports = [
 										[
 											'@babel/preset-env',
 											{
-												corejs: '^3.6.3',
+												corejs: '3.999999.999999',
 												targets: {
 													browsers: target.presetEnvBrowsers
 												},
@@ -77,7 +77,7 @@ module.exports = [
 										[
 											'@babel/preset-env',
 											{
-												corejs: '^3.6.3',
+												corejs: '3.999999.999999',
 												targets: {
 													browsers: target.presetEnvBrowsers
 												},
