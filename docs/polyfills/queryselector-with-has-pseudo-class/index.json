@@ -10,7 +10,7 @@
       "Element"
     ],
     "browsers": {
-      "chrome": "*",
+      "chrome": "<105",
       "edge": "*",
       "firefox": "*",
       "safari": "*",
@@ -30,7 +30,7 @@
     "providedByCoreWeb": true
   },
   "polyfilled": {
-    "chrome": "*",
+    "chrome": "<105",
     "edge": "*",
     "firefox": "*",
     "ie": "*",
