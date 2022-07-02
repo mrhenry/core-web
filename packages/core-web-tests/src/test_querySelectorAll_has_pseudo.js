@@ -139,6 +139,7 @@ if ("Proxy" in self) {
 
 			testSelectorAllFromMain(assert, ":has(#a)", []);
 			testSelectorAllFromMain(assert, ":has(.ancestor)", [a]);
+			testSelectorAllFromMain(assert, ":HAS(.ancestor)", [a]);
 			testSelectorAllFromMain(assert, ":has(.target)", [a, b, f, h]);
 			testSelectorAllFromMain(assert, ":has(.descendant)", [a, b, c, f, h, j]);
 			testSelectorAllFromMain(assert, ".parent:has(.target)", [b, f, h]);
@@ -168,6 +169,7 @@ if ("Proxy" in self) {
 			assert.verifySteps([
 				":has(#a) matches expected elements from #main",
 				":has(.ancestor) matches expected elements from #main",
+				":HAS(.ancestor) matches expected elements from #main",
 				":has(.target) matches expected elements from #main",
 				":has(.descendant) matches expected elements from #main",
 				".parent:has(.target) matches expected elements from #main",

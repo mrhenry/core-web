@@ -1,13 +1,14 @@
 /* eslint-disable */
 (function (global) {
 	try {
-		// test for scope support
+		// test for has support
 		global.document.querySelector(':has(*, :does-not-exist, > *)');
 		global.document.querySelector(':has(:has(any))');
+
 		if (!global.document.querySelector(':has(:scope *)')) {
 			return;
 		}
-	} catch (_) {}
+	} catch (_) { }
 
 	// ELEMENT
 	// polyfill Element#querySelector
@@ -79,6 +80,7 @@
 
 	function pseudoClassHasInnerQuery(query) {
 		var current = '';
+		var start = 0;
 		var depth = 0;
 
 		var escaped = false;
@@ -97,8 +99,9 @@
 				continue;
 			}
 
-			if (current === ':has(' && !inHas) {
+			if (current.toLowerCase() === ':has(' && !inHas) {
 				inHas = true;
+				start = i;
 				current = '';
 			}
 
@@ -126,9 +129,13 @@
 				case ')':
 					if (inHas) {
 						if (depth === 0) {
-							return current;
+							return {
+								innerQuery: current,
+								start: start,
+								end: i-1
+							};
 						}
-						
+
 						depth--;
 					}
 					current += char;
@@ -138,7 +145,7 @@
 					current += char;
 					escaped = true;
 					continue;
-				
+
 				case '"':
 				case "'":
 					if (quoted && char === quotedMark) {
@@ -179,7 +186,7 @@
 				continue;
 			}
 
-			if (current === ':scope' && !(/^[\w|\\]/.test(char || ''))) {
+			if (current.toLowerCase() === ':scope' && !(/^[\w|\\]/.test(char || ''))) {
 				parts.push(current.slice(0, current.length - 6));
 				parts.push('[' + attr + ']');
 				current = '';
@@ -201,7 +208,7 @@
 					current += char;
 					escaped = true;
 					continue;
-				
+
 				case '"':
 				case "'":
 					if (quoted && char === quotedMark) {
@@ -281,7 +288,7 @@
 					current += char;
 					escaped = true;
 					continue;
-				
+
 				case '"':
 				case "'":
 					if (quoted && char === quotedMark) {
@@ -294,7 +301,7 @@
 					quoted = true;
 					quotedMark = char;
 					continue;
-				
+
 				case '(':
 				case ')':
 				case '[':
@@ -348,14 +355,14 @@
 			return false;
 		}
 
-		var innerQuery = inner;
+		var innerQuery = inner.innerQuery;
 		var attr = 'q-has' + (Math.floor(Math.random() * 9000000) + 1000000);
 		var innerReplacement = '[' + attr + ']';
 
 		var x = query;
 
-		if (inner.indexOf(':has(') > -1) {
-			var innerParts = splitSelector(inner);
+		if (inner.innerQuery.toLowerCase().indexOf(':has(') > -1) {
+			var innerParts = splitSelector(inner.innerQuery);
 			var newInnerParts = [];
 			for (var i = 0; i < innerParts.length; i++) {
 				var innerPart = innerParts[i];
@@ -369,14 +376,20 @@
 					newInnerParts.push(innerPart);
 				}
 			}
-			
-			return x.replace(':has(' + inner + ')', newInnerParts.join(', '));
+
+			var _prefix = x.substring(0, inner.start - 5); // ':has('.length === 5
+			var _suffix = x.substring(inner.end + 2); // ')'.length === 1
+
+			return _prefix + newInnerParts.join(', ') + _suffix;
 		}
 
-		x = x.replace(':has(' + inner + ')', innerReplacement);
+		var _prefix = x.substring(0, inner.start - 5); // ':has('.length === 5
+		var _suffix = x.substring(inner.end + 2); // ')'.length === 1
+
+		x = _prefix + innerReplacement + _suffix;
 
 		callback(innerQuery, attr);
-		if (x.indexOf(':has(') > -1) {
+		if (x.toLowerCase().indexOf(':has(') > -1) {
 			var y = replaceAllWithTempAttr(x, false, callback);
 			if (y) {
 				return y;
@@ -401,7 +414,7 @@
 
 	function polyfill(qsa) {
 		return function (selectors) {
-			if ((selectors.indexOf(':has(') === -1) || !pseudoClassHasInnerQuery(selectors)) {
+			if ((selectors.toLowerCase().indexOf(':has(') === -1) || !pseudoClassHasInnerQuery(selectors)) {
 				return qsa.apply(this, arguments);
 			}
 
@@ -423,7 +436,7 @@
 
 			var scopeAttr = 'q-has-scope' + (Math.floor(Math.random() * 9000000) + 1000000);
 			_focus.setAttribute(scopeAttr, '');
-			
+
 			try {
 				selectors = replaceScopeWithAttr(selectors, scopeAttr);
 
@@ -504,7 +517,7 @@
 
 				// results of the qsa
 				var elementOrNodeList = qsa.apply(this, arguments);
-				
+
 				_focus.removeAttribute(scopeAttr);
 
 				if (attrs.length > 0) {
