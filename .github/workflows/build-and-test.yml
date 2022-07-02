@@ -46,28 +46,11 @@ jobs:
       - run: cd packages/babel-plugin-core-web && npm run test
         if: steps.cache-core-web-tests.outputs.cache-hit != 'true'
 
-      - name: 'BrowserStack Env Setup'
-        uses: 'browserstack/github-actions/setup-env@master'
-        with:
-          username:  ${{ secrets.BROWSERSTACK_USERNAME }}
-          access-key: ${{ secrets.BROWSERSTACK_ACCESS_KEY }}
-          build-name: BUILD_INFO
-          project-name: REPO_NAME
-
-      - name: 'BrowserStack Local Setup'
-        uses: 'browserstack/github-actions/setup-local@master'
-        with:
-          local-testing: start
-          local-identifier: random
-
       - run: cd packages/core-web-tests && npm run browserstack-runner
         env:
           BROWSERSTACK_JSON: ./browserstack/${{ matrix.test_groups }}.json
-
-      - name: 'Stop BrowserStack Local'
-        uses: 'browserstack/github-actions/setup-local@master'
-        with:
-          local-testing: 'stop'
+          BROWSERSTACK_USERNAME:  ${{ secrets.BROWSERSTACK_USERNAME }}
+          BROWSERSTACK_ACCESS_KEY:  ${{ secrets.BROWSERSTACK_ACCESS_KEY }}
 
   validate-pages-worker:
     name: Validate Pages Worker

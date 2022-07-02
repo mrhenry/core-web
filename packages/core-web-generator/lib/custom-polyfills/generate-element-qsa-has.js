@@ -9,7 +9,7 @@ async function generateElementQsaSHas(mapping) {
     const src = fs.readFileSync(path.join(__dirname, '../../polyfills/~element-qsa-has.js'), "utf-8");
     fs.writeFileSync(path.join(modulesDir, "~element-qsa-has.js"), src);
     const browsers = {
-        chrome: "*",
+        chrome: "<105",
         edge: "*",
         firefox: "*",
         safari: "*",
