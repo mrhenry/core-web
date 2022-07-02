@@ -13,7 +13,7 @@ export async function generateElementQsaSHas(mapping: Array<Feature>) {
 	fs.writeFileSync(path.join(modulesDir, "~element-qsa-has.js"), src);
 
 	const browsers = {
-		chrome: "*",
+		chrome: "<105",
 		edge: "*",
 		firefox: "*",
 		safari: "*",
