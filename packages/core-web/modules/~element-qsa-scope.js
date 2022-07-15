@@ -82,7 +82,7 @@
 					continue;
 				}
 	
-				if (current.toLowerCase() === ':scope' && !bracketed && (/^[\[\.\:\\"\s|+>~#]/.test(char || ''))) {
+				if (current.toLowerCase() === ':scope' && !bracketed && (/^[\[\.\:\\"\s|+>~#&,)]/.test(char || ''))) {
 					parts.push(current.slice(0, current.length - 6));
 					parts.push('[' + attr + ']');
 					current = '';
