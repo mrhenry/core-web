@@ -90,12 +90,23 @@
 
 		var inHas = false;
 
+		var bracketed = 0;
+
 		for (var i = 0; i < query.length; i++) {
 			var char = query[i];
 
 			if (escaped) {
 				current += char;
 				escaped = false;
+				continue;
+			}
+
+			if (quoted) {
+				if (char === quotedMark) {
+					quoted = false;
+				}
+
+				current += char;
 				continue;
 			}
 
@@ -107,11 +118,6 @@
 
 			switch (char) {
 				case ':':
-					if (quoted) {
-						current += char;
-						continue;
-					}
-
 					if (!inHas) {
 						current = '';
 					}
@@ -148,17 +154,24 @@
 
 				case '"':
 				case "'":
-					if (quoted && char === quotedMark) {
-						current += char;
-						quoted = false;
-						continue;
-					}
-
 					current += char;
 					quoted = true;
 					quotedMark = char;
 					continue;
 
+				case '[':
+					current += char;
+					bracketed++;
+					continue;
+
+				case "]":
+					current += char;
+					if (bracketed > 0) {
+						bracketed--
+					}
+
+					continue;
+			
 				default:
 					current += char;
 					continue;
@@ -177,6 +190,8 @@
 		var quoted = false;
 		var quotedMark = false;
 
+		var bracketed = 0;
+
 		for (var i = 0; i < query.length; i++) {
 			var char = query[i];
 
@@ -186,7 +201,16 @@
 				continue;
 			}
 
-			if (current.toLowerCase() === ':scope' && !(/^[\w|\\]/.test(char || ''))) {
+			if (quoted) {
+				if (char === quotedMark) {
+					quoted = false;
+				}
+
+				current += char;
+				continue;
+			}
+
+			if (current.toLowerCase() === ':scope' && !bracketed && (/^[\[\.\:\\"\s|+>~#&,)]/.test(char || ''))) {
 				parts.push(current.slice(0, current.length - 6));
 				parts.push('[' + attr + ']');
 				current = '';
@@ -194,11 +218,6 @@
 
 			switch (char) {
 				case ':':
-					if (quoted) {
-						current += char;
-						continue;
-					}
-
 					parts.push(current);
 					current = '';
 					current += char;
@@ -211,21 +230,34 @@
 
 				case '"':
 				case "'":
-					if (quoted && char === quotedMark) {
-						current += char;
-						quoted = false;
-						continue;
-					}
-
 					current += char;
 					quoted = true;
 					quotedMark = char;
+					continue;
+
+				case '[':
+					current += char;
+					bracketed++;
+					continue;
+
+				case "]":
+					current += char;
+					if (bracketed > 0) {
+						bracketed--
+					}
+
 					continue;
 
 				default:
 					current += char;
 					continue;
 			}
+		}
+
+		if (current.toLowerCase() === ':scope') {
+			parts.push(current.slice(0, current.length - 6));
+			parts.push('[' + attr + ']');
+			current = '';
 		}
 
 		if (parts.length === 0) {
