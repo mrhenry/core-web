@@ -177,6 +177,8 @@
 		var quoted = false;
 		var quotedMark = false;
 
+		var bracketed = 0;
+
 		for (var i = 0; i < query.length; i++) {
 			var char = query[i];
 
@@ -186,7 +188,7 @@
 				continue;
 			}
 
-			if (current.toLowerCase() === ':scope' && !(/^[\w|\\]/.test(char || ''))) {
+			if (current.toLowerCase() === ':scope' && !bracketed && !(/^[\w\\]/.test(char || ''))) {
 				parts.push(current.slice(0, current.length - 6));
 				parts.push('[' + attr + ']');
 				current = '';
@@ -220,6 +222,19 @@
 					current += char;
 					quoted = true;
 					quotedMark = char;
+					continue;
+
+				case '[':
+					current += char;
+					bracketed++;
+					continue;
+				case "]":
+					current += char;
+
+					if (bracketed > 0) {
+						bracketed--
+					}
+
 					continue;
 
 				default:
