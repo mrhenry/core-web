@@ -1,7 +1,7 @@
 const { addSideEffect } = require("@babel/helper-module-imports");
 const { get, has } = require("@mrhenry/core-web");
 const { matchNode } = require("./ast-matcher");
-const toposort = require('toposort');
+// const toposort = require('toposort');
 
 const identifierMatcher = require("./matchers/__identifier_matcher");
 const identifierMatcherMap = require("./matchers/__identifier_matcher_map.json");
