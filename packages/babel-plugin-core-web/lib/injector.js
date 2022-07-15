@@ -71,23 +71,6 @@ class Injector {
 			return true;
 		});
 
-		// Some polyfills need a custom order but do not have a direct dependency relationship.
-		all.sort((a, b) => {
-			if (a === '~shadydom' && b === '~element-qsa-scope') {
-				return -1;
-			} else if (a === '~element-qsa-scope' && b === '~shadydom') {
-				return 1;
-			}
-
-			if (a === '~shadydom' && b === '~element-qsa-has') {
-				return -1;
-			} else if (a === '~element-qsa-has' && b === '~shadydom') {
-				return 1;
-			}
-
-			return 0;
-		});
-
 		while (all.length) {
 			const importName = all.pop();
 			addSideEffect(path, `@mrhenry/core-web/modules/${importName}`);

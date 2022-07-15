@@ -76,6 +76,8 @@ async function generateShadyDOM(mapping: Array<Feature>) {
 			"CustomEvent",
 			"document.head",
 			"document.querySelector",
+			"~element-qsa-scope",
+			"~element-qsa-has",
 			"document",
 			"DocumentFragment",
 			"Element.prototype.cloneNode",
