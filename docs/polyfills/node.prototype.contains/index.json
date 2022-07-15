@@ -55,6 +55,9 @@
           "partial_implementation": true,
           "version_added": "9"
         },
+        "oculus": {
+          "version_added": "5.0"
+        },
         "opera": {
           "version_added": "7"
         },

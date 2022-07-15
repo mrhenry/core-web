@@ -56,6 +56,9 @@
           "notes": "Alias for <code>console.error</code>",
           "version_added": "0.10.0"
         },
+        "oculus": {
+          "version_added": "5.0"
+        },
         "opera": {
           "version_added": "10.5"
         },
@@ -121,6 +124,9 @@
           },
           "nodejs": {
             "version_added": "0.10.0"
+          },
+          "oculus": {
+            "version_added": "5.0"
           },
           "opera": {
             "version_added": "15"

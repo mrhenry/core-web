@@ -64,6 +64,9 @@
           "notes": "From version 14.17.0, a similar method is available as <a href='https://nodejs.org/docs/latest-v14.x/api/crypto.html#crypto_crypto'><code>crypto.randomUUID()</code></a>.",
           "version_added": "16.7.0"
         },
+        "oculus": {
+          "version_added": "17.0"
+        },
         "opera": {
           "version_added": "78"
         },

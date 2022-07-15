@@ -88,6 +88,9 @@
               "version_added": "8.3.0"
             }
           ],
+          "oculus": {
+            "version_added": "5.0"
+          },
           "opera": {
             "version_added": "25"
           },
@@ -164,6 +167,9 @@
             "version_added": "8.3.0"
           }
         ],
+        "oculus": {
+          "version_added": "5.0"
+        },
         "opera": {
           "version_added": "25"
         },
@@ -240,6 +246,9 @@
               "version_added": "8.3.0"
             }
           ],
+          "oculus": {
+            "version_added": "5.0"
+          },
           "opera": {
             "version_added": "25"
           },
@@ -310,6 +319,9 @@
           "nodejs": {
             "version_added": "8.3.0"
           },
+          "oculus": {
+            "version_added": "5.0"
+          },
           "opera": {
             "version_added": "25"
           },
@@ -335,6 +347,7 @@
       "__compat": {
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/TextDecoder/fatal",
         "source_file": "api/TextDecoder.json",
+        "spec_url": "https://encoding.spec.whatwg.org/#ref-for-dom-textdecoder-fatal①",
         "status": {
           "deprecated": false,
           "experimental": false,
@@ -364,6 +377,9 @@
           },
           "nodejs": {
             "version_added": "8.3.0"
+          },
+          "oculus": {
+            "version_added": "5.0"
           },
           "opera": {
             "version_added": "25"
@@ -390,6 +406,7 @@
       "__compat": {
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/TextDecoder/ignoreBOM",
         "source_file": "api/TextDecoder.json",
+        "spec_url": "https://encoding.spec.whatwg.org/#ref-for-dom-textdecoder-ignorebom①",
         "status": {
           "deprecated": false,
           "experimental": false,
@@ -419,6 +436,9 @@
           },
           "nodejs": {
             "version_added": "8.3.0"
+          },
+          "oculus": {
+            "version_added": "5.0"
           },
           "opera": {
             "version_added": "25"
@@ -474,6 +494,9 @@
           },
           "nodejs": {
             "version_added": "10.5.0"
+          },
+          "oculus": {
+            "version_added": "5.0"
           },
           "opera": {
             "version_added": "25"

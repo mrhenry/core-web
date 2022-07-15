@@ -79,6 +79,15 @@
         "ie": {
           "version_added": "10"
         },
+        "oculus": [
+          {
+            "version_added": "5.0"
+          },
+          {
+            "prefix": "webkit",
+            "version_added": "5.0"
+          }
+        ],
         "opera": [
           {
             "version_added": "20"
@@ -162,6 +171,10 @@
           },
           "ie": {
             "version_added": false
+          },
+          "oculus": {
+            "version_added": "5.0",
+            "version_removed": "6.0"
           },
           "opera": {
             "version_added": "≤15",

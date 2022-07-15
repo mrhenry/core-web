@@ -14,14 +14,14 @@
       "firefox": "<13",
       "firefox_mob": "<14",
       "safari": "<6",
-      "ie": "<10",
+      "ie": "*",
       "opera": "<12"
     },
     "engines": {
       "EdgeHTML": ">= 12",
       "Gecko": "1.7 - 12",
       "WebKit": "85 - 534.48",
-      "Trident": "4.0 - 5.0",
+      "Trident": ">= 4.0",
       "Presto": "1 - 2.10"
     },
     "size": 3466,
@@ -67,6 +67,9 @@
           },
           "nodejs": {
             "version_added": "15.7.0"
+          },
+          "oculus": {
+            "version_added": "5.0"
           },
           "opera": {
             "version_added": "12"
@@ -128,6 +131,9 @@
           ],
           "version_added": "15.7.0"
         },
+        "oculus": {
+          "version_added": "5.0"
+        },
         "opera": {
           "version_added": "11"
         },
@@ -184,6 +190,9 @@
           "nodejs": {
             "version_added": "15.7.0"
           },
+          "oculus": {
+            "version_added": "7.0"
+          },
           "opera": {
             "version_added": "63"
           },
@@ -239,6 +248,9 @@
           },
           "nodejs": {
             "version_added": "15.7.0"
+          },
+          "oculus": {
+            "version_added": "5.0"
           },
           "opera": {
             "version_added": "11"
@@ -327,6 +339,9 @@
           "nodejs": {
             "version_added": "15.7.0"
           },
+          "oculus": {
+            "version_added": "5.0"
+          },
           "opera": {
             "version_added": "12"
           },
@@ -405,6 +420,9 @@
           "nodejs": {
             "version_added": "15.7.0"
           },
+          "oculus": {
+            "version_added": "7.0"
+          },
           "opera": {
             "version_added": "63"
           },
@@ -462,6 +480,9 @@
           "nodejs": {
             "version_added": "15.7.0"
           },
+          "oculus": {
+            "version_added": "7.0"
+          },
           "opera": {
             "version_added": "63"
           },
@@ -518,6 +539,9 @@
           "nodejs": {
             "version_added": "15.7.0"
           },
+          "oculus": {
+            "version_added": "5.0"
+          },
           "opera": {
             "version_added": "11"
           },
@@ -544,7 +568,7 @@
     "chrome": "<20",
     "edge": "<79",
     "firefox": "<13",
-    "ie": "<10",
+    "ie": "*",
     "opera": "<12",
     "safari": "<6"
   },
@@ -589,7 +613,7 @@
       "firefox": "<13",
       "firefox_mob": "<14",
       "safari": "<6",
-      "ie": "<10",
+      "ie": "*",
       "opera": "<12"
     },
     "detectSource": "\"Blob\"in self&&function(){try{return new Blob,!0}catch(n){return!1}}()&&function(){try{return Blob(),!1}catch(n){return!0}}()\n",

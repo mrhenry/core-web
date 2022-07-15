@@ -54,6 +54,9 @@
         "nodejs": {
           "version_added": "0.10.0"
         },
+        "oculus": {
+          "version_added": "5.0"
+        },
         "opera": {
           "version_added": "10.5"
         },
@@ -121,6 +124,10 @@
           },
           "nodejs": {
             "version_added": "0.10.0"
+          },
+          "oculus": {
+            "notes": "In version 28, if a negative value is passed to %d, it will be rounded down to the closest negative integer, so -0.1 becomes -1.",
+            "version_added": "5.0"
           },
           "opera": {
             "version_added": "15"

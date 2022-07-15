@@ -54,6 +54,9 @@
         "nodejs": {
           "version_added": "8.3.0"
         },
+        "oculus": {
+          "version_added": "5.0"
+        },
         "opera": {
           "version_added": "11"
         },

@@ -87,6 +87,9 @@
             "version_added": "16.15.0"
           }
         ],
+        "oculus": {
+          "version_added": "5.0"
+        },
         "opera": {
           "version_added": "29"
         },
@@ -138,6 +141,9 @@
           "ie": {
             "version_added": false
           },
+          "oculus": {
+            "version_added": "5.0"
+          },
           "opera": {
             "version_added": "35"
           },
@@ -159,9 +165,9 @@
         }
       }
     },
-    "referrerpolicy": {
+    "init_referrerPolicy_parameter": {
       "__compat": {
-        "description": "referrerPolicy",
+        "description": "<code>init.referrerPolicy</code> parameter",
         "source_file": "api/_globals/fetch.json",
         "status": {
           "deprecated": false,
@@ -190,6 +196,9 @@
           "ie": {
             "version_added": false
           },
+          "oculus": {
+            "version_added": "5.0"
+          },
           "opera": {
             "version_added": "39"
           },
@@ -211,9 +220,9 @@
         }
       }
     },
-    "signal": {
+    "init_signal_parameter": {
       "__compat": {
-        "description": "signal",
+        "description": "<code>init.signal</code> parameter",
         "source_file": "api/_globals/fetch.json",
         "status": {
           "deprecated": false,
@@ -241,6 +250,9 @@
           },
           "ie": {
             "version_added": false
+          },
+          "oculus": {
+            "version_added": "5.0"
           },
           "opera": {
             "version_added": "53"
@@ -293,6 +305,9 @@
           },
           "ie": {
             "version_added": false
+          },
+          "oculus": {
+            "version_added": "5.0"
           },
           "opera": {
             "version_added": "29"

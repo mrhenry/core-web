@@ -82,6 +82,9 @@
           "partial_implementation": true,
           "version_added": "5"
         },
+        "oculus": {
+          "version_added": "5.0"
+        },
         "opera": {
           "version_added": "≤12.1"
         },
@@ -148,6 +151,10 @@
           },
           "ie": {
             "version_added": false
+          },
+          "oculus": {
+            "notes": "The <code>block</code> and <code>inline</code> options support the values <code>start</code>, <code>center</code>, <code>end</code>, <code>nearest</code>.",
+            "version_added": "5.0"
           },
           "opera": {
             "notes": "The <code>block</code> and <code>inline</code> options support the values <code>start</code>, <code>center</code>, <code>end</code>, <code>nearest</code>.",

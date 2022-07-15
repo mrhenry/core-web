@@ -71,6 +71,9 @@
           "nodejs": {
             "version_added": "15.0.0"
           },
+          "oculus": {
+            "version_added": "5.0"
+          },
           "opera": {
             "version_added": "53"
           },
@@ -139,6 +142,9 @@
         },
         "nodejs": {
           "version_added": "15.0.0"
+        },
+        "oculus": {
+          "version_added": "5.0"
         },
         "opera": {
           "version_added": "53"
@@ -209,6 +215,9 @@
           "nodejs": {
             "version_added": "15.0.0"
           },
+          "oculus": {
+            "version_added": "5.0"
+          },
           "opera": {
             "version_added": "53"
           },
@@ -278,6 +287,9 @@
           },
           "nodejs": {
             "version_added": "15.0.0"
+          },
+          "oculus": {
+            "version_added": "5.0"
           },
           "opera": {
             "version_added": "53"

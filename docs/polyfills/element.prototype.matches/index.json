@@ -110,6 +110,15 @@
           "alternative_name": "msMatchesSelector",
           "version_added": "9"
         },
+        "oculus": [
+          {
+            "version_added": "5.0"
+          },
+          {
+            "alternative_name": "webkitMatchesSelector",
+            "version_added": "5.0"
+          }
+        ],
         "opera": [
           {
             "version_added": "21"

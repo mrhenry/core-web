@@ -61,6 +61,9 @@
         "ie": {
           "version_added": false
         },
+        "oculus": {
+          "version_added": "5.0"
+        },
         "opera": {
           "version_added": "23"
         },
@@ -109,6 +112,9 @@
           },
           "ie": {
             "version_added": false
+          },
+          "oculus": {
+            "version_added": "11.0"
           },
           "opera": {
             "version_added": "70"
@@ -194,6 +200,15 @@
           "ie": {
             "version_added": false
           },
+          "oculus": {
+            "flags": [
+              {
+                "name": "#enable-experimental-web-platform-features",
+                "type": "preference"
+              }
+            ],
+            "version_added": "8.0"
+          },
           "opera": {
             "flags": [
               {
@@ -249,6 +264,9 @@
           },
           "ie": {
             "version_added": false
+          },
+          "oculus": {
+            "version_added": "5.0"
           },
           "opera": {
             "version_added": "37"
@@ -310,6 +328,9 @@
             "version_added": "80"
           },
           "ie": {
+            "version_added": false
+          },
+          "oculus": {
             "version_added": false
           },
           "opera": {
@@ -385,6 +406,17 @@
           },
           "ie": {
             "version_added": false
+          },
+          "oculus": {
+            "flags": [
+              {
+                "name": "#enable-experimental-web-platform-features",
+                "type": "preference"
+              }
+            ],
+            "notes": "A valid animation object is returned but the targeted pseudoelement is not visually animated.",
+            "partial_implementation": true,
+            "version_added": "9.0"
           },
           "opera": {
             "flags": [

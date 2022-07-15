@@ -59,6 +59,9 @@
           "notes": "Intranet sites are set to Compatibility View, which will emulate IE7 and omit <code>window.location.origin</code>.",
           "version_added": "11"
         },
+        "oculus": {
+          "version_added": "5.0"
+        },
         "opera": {
           "version_added": "15"
         },

@@ -62,6 +62,9 @@
         "nodejs": {
           "version_added": "16.0.0"
         },
+        "oculus": {
+          "version_added": "5.0"
+        },
         "opera": {
           "version_added": "10.5"
         },
@@ -115,6 +118,9 @@
           },
           "nodejs": {
             "version_added": "16.0.0"
+          },
+          "oculus": {
+            "version_added": "5.0"
           },
           "opera": {
             "version_added": "17"

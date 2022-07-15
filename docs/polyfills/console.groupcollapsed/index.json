@@ -55,6 +55,9 @@
           "notes": "Alias for <code>console.group</code>",
           "version_added": "8.5.0"
         },
+        "oculus": {
+          "version_added": "5.0"
+        },
         "opera": {
           "version_added": "11"
         },

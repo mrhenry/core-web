@@ -72,6 +72,15 @@
           "ie": {
             "version_added": "11"
           },
+          "oculus": [
+            {
+              "version_added": "5.0"
+            },
+            {
+              "prefix": "WebKit",
+              "version_added": "5.0"
+            }
+          ],
           "opera": {
             "version_added": "15"
           },
@@ -157,6 +166,15 @@
         "ie": {
           "version_added": "11"
         },
+        "oculus": [
+          {
+            "version_added": "5.0"
+          },
+          {
+            "prefix": "WebKit",
+            "version_added": "5.0"
+          }
+        ],
         "opera": {
           "version_added": "15"
         },
@@ -230,6 +248,9 @@
           "ie": {
             "version_added": "11"
           },
+          "oculus": {
+            "version_added": "5.0"
+          },
           "opera": {
             "version_added": "15"
           },
@@ -286,6 +307,10 @@
             "notes": "Internet Explorer requires <code>attributes: true</code> when using <code>attributeFilter</code> or <code>attributeOldValue</code>. If <code>attributes: true</code> is not present, then Internet Explorer throws a syntax error.",
             "version_added": "11"
           },
+          "oculus": {
+            "notes": "Before Chrome 33, <code>attributes: true</code> is required when using <code>attributeFilter</code> or <code>attributeOldValue</code>. If <code>attributes: true</code> is not present, then Chrome throws a syntax error.",
+            "version_added": "5.0"
+          },
           "opera": {
             "notes": "Before Opera 20, <code>attributes: true</code> is required when using <code>attributeFilter</code> or <code>attributeOldValue</code>. If <code>attributes: true</code> is not present, then Opera throws a syntax error.",
             "version_added": "15"
@@ -341,6 +366,9 @@
           },
           "ie": {
             "version_added": "11"
+          },
+          "oculus": {
+            "version_added": "5.0"
           },
           "opera": {
             "version_added": "15"
