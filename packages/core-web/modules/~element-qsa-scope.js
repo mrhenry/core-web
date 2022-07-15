@@ -20,7 +20,6 @@
 	} catch (_) {
 		// scope regex
 		var scopeTest = /:scope(?![\w-])/i;
-		var scopeReplacer = /:scope(?![\w-])/gi;
 
 		// polyfill Element#querySelector
 		var querySelectorWithScope = polyfill(global.Element.prototype.querySelector);
@@ -54,6 +53,92 @@
 			};
 		}
 
+		function replaceScopeWithAttr(query, attr) {
+			var parts = [];
+			var current = '';
+	
+			var escaped = false;
+	
+			var quoted = false;
+			var quotedMark = false;
+	
+			var bracketed = 0;
+	
+			for (var i = 0; i < query.length; i++) {
+				var char = query[i];
+	
+				if (escaped) {
+					current += char;
+					escaped = false;
+					continue;
+				}
+	
+				if (quoted) {
+					if (char === quotedMark) {
+						quoted = false;
+					}
+	
+					current += char;
+					continue;
+				}
+	
+				if (current.toLowerCase() === ':scope' && !bracketed && (/^[\[\.\:\\"\s|+>~#]/.test(char || ''))) {
+					parts.push(current.slice(0, current.length - 6));
+					parts.push('[' + attr + ']');
+					current = '';
+				}
+	
+				switch (char) {
+					case ':':
+						parts.push(current);
+						current = '';
+						current += char;
+						continue;
+	
+					case '\\':
+						current += char;
+						escaped = true;
+						continue;
+	
+					case '"':
+					case "'":
+						current += char;
+						quoted = true;
+						quotedMark = char;
+						continue;
+	
+					case '[':
+						current += char;
+						bracketed++;
+						continue;
+	
+					case "]":
+						current += char;
+						if (bracketed > 0) {
+							bracketed--
+						}
+	
+						continue;
+	
+					default:
+						current += char;
+						continue;
+				}
+			}
+
+			if (current.toLowerCase() === ':scope') {
+				parts.push(current.slice(0, current.length - 6));
+				parts.push('[' + attr + ']');
+				current = '';
+			}
+	
+			if (parts.length === 0) {
+				return query;
+			}
+	
+			return parts.join('') + current;
+		}
+
 		function polyfill(qsa) {
 			return function (selectors) {
 				// whether the selectors contain :scope
@@ -64,7 +149,7 @@
 					var attr = 'q' + (Math.floor(Math.random() * 9000000) + 2000000);
 
 					// replace :scope with the fallback attribute
-					arguments[0] = selectors.replace(scopeReplacer, '[' + attr + ']');
+					arguments[0] = replaceScopeWithAttr(selectors, attr);
 
 					// add the fallback attribute
 					this.setAttribute(attr, '');
