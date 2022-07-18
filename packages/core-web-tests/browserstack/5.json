@@ -11,6 +11,6 @@
 	"browsers": [
 		"safari_latest",
 		"chrome_latest",
-		"firefox_99"
+		"firefox_latest"
 	]
 }
