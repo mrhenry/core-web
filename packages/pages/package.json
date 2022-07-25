@@ -38,7 +38,7 @@
     "postcss-import": "^14.0.2",
     "postcss-preset-env": "^7.4.4",
     "postcss-split-by-media": "^0.3.0",
-    "webpack": "^5.66.0",
+    "webpack": "^5.74.0",
     "webpack-cli": "^4.9.2"
   },
   "volta": {
