@@ -1,7 +1,7 @@
 (function(undefined) {
-if (!("Element"in self&&"inert"in Element.prototype
+if (!("HTMLElement"in self&&"inert"in HTMLElement.prototype
 )) {
-// Element.prototype.inert
+// HTMLElement.prototype.inert
 /* global Set, Map */
 (function (global, factory) {
 	typeof exports === 'object' && typeof module !== 'undefined' ? factory() :
@@ -18,6 +18,12 @@ if (!("Element"in self&&"inert"in Element.prototype
 	* This work is licensed under the W3C Software and Document License
 	* (http://www.w3.org/Consortium/Legal/2015/copyright-software-and-document).
 	*/
+
+	(function () {
+	// Return early if we're not running inside of the browser.
+	if (typeof window === 'undefined') {
+		return;
+	}
 
 	// Convenience function for converting NodeLists.
 	/** @type {typeof Array.prototype.slice} */
@@ -51,7 +57,7 @@ if (!("Element"in self&&"inert"in Element.prototype
 
 	var InertRoot = function () {
 		/**
-		* @param {!Element} rootElement The Element at the root of the inert subtree.
+		* @param {!HTMLElement} rootElement The HTMLElement at the root of the inert subtree.
 		* @param {!InertManager} inertManager The global singleton InertManager object.
 		*/
 		function InertRoot(rootElement, inertManager) {
@@ -60,7 +66,7 @@ if (!("Element"in self&&"inert"in Element.prototype
 			/** @type {!InertManager} */
 			this._inertManager = inertManager;
 
-			/** @type {!Element} */
+			/** @type {!HTMLElement} */
 			this._rootElement = rootElement;
 
 			/**
@@ -182,7 +188,7 @@ if (!("Element"in self&&"inert"in Element.prototype
 				if (node.nodeType !== Node.ELEMENT_NODE) {
 					return;
 				}
-				var element = /** @type {!Element} */node;
+				var element = /** @type {!HTMLElement} */node;
 
 				// If a descendant inert root becomes un-inert, its descendants will still be inert because of
 				// this inert root, so all of its managed nodes need to be adopted by this InertRoot.
@@ -238,7 +244,7 @@ if (!("Element"in self&&"inert"in Element.prototype
 
 			/**
 			* If a descendant node is found with an `inert` attribute, adopt its managed nodes.
-			* @param {!Element} node
+			* @param {!HTMLElement} node
 			*/
 
 		}, {
@@ -268,7 +274,7 @@ if (!("Element"in self&&"inert"in Element.prototype
 			key: '_onMutation',
 			value: function _onMutation(records, _self) {
 				records.forEach(function (record) {
-					var target = /** @type {!Element} */record.target;
+					var target = /** @type {!HTMLElement} */record.target;
 					if (record.type === 'childList') {
 						// Manage added nodes
 						slice.call(record.addedNodes).forEach(function (node) {
@@ -387,7 +393,7 @@ if (!("Element"in self&&"inert"in Element.prototype
 				this._throwIfDestroyed();
 
 				if (this._node && this._node.nodeType === Node.ELEMENT_NODE) {
-					var element = /** @type {!Element} */this._node;
+					var element = /** @type {!HTMLElement} */this._node;
 					if (this._savedTabIndex !== null) {
 						element.setAttribute('tabindex', this._savedTabIndex);
 					} else {
@@ -435,7 +441,7 @@ if (!("Element"in self&&"inert"in Element.prototype
 				if (this.node.nodeType !== Node.ELEMENT_NODE) {
 					return;
 				}
-				var element = /** @type {!Element} */this.node;
+				var element = /** @type {!HTMLElement} */this.node;
 				if (matches.call(element, _focusableElementsString)) {
 					if ( /** @type {!HTMLElement} */element.tabIndex === -1 && this.hasSavedTabIndex) {
 						return;
@@ -580,7 +586,7 @@ if (!("Element"in self&&"inert"in Element.prototype
 
 		/**
 		* Set whether the given element should be an inert root or not.
-		* @param {!Element} root
+		* @param {!HTMLElement} root
 		* @param {boolean} inert
 		*/
 
@@ -698,7 +704,7 @@ if (!("Element"in self&&"inert"in Element.prototype
 				}, this);
 
 				// Comment this out to use programmatic API only.
-				this._observer.observe(this._document.body || this._document.documentElement, {attributes: true, subtree: true, childList: true});
+				this._observer.observe(this._document.body || this._document.documentElement, { attributes: true, subtree: true, childList: true });
 			}
 
 			/**
@@ -731,7 +737,7 @@ if (!("Element"in self&&"inert"in Element.prototype
 							if (record.attributeName !== 'inert') {
 								return;
 							}
-							var target = /** @type {!Element} */record.target;
+							var target = /** @type {!HTMLElement} */record.target;
 							var inert = target.hasAttribute('inert');
 							_this.setInert(target, inert);
 							break;
@@ -746,7 +752,7 @@ if (!("Element"in self&&"inert"in Element.prototype
 	/**
 	* Recursively walk the composed tree from |node|.
 	* @param {!Node} node
-	* @param {(function (!Element))=} callback Callback to be called for each element traversed,
+	* @param {(function (!HTMLElement))=} callback Callback to be called for each element traversed,
 	*     before descending into child nodes.
 	* @param {?ShadowRoot=} shadowRootAncestor The nearest ShadowRoot ancestor, if any.
 	*/
@@ -754,7 +760,7 @@ if (!("Element"in self&&"inert"in Element.prototype
 
 	function composedTreeWalk(node, callback, shadowRootAncestor) {
 		if (node.nodeType == Node.ELEMENT_NODE) {
-			var element = /** @type {!Element} */node;
+			var element = /** @type {!HTMLElement} */node;
 			if (callback) {
 				callback(element);
 			}
@@ -810,32 +816,33 @@ if (!("Element"in self&&"inert"in Element.prototype
 	* @param {!Node} node
 	*/
 	function addInertStyle(node) {
-		if (node.querySelector('style#inert-style')) {
+		if (node.querySelector('style#inert-style, link#inert-style')) {
 			return;
 		}
 		var style = document.createElement('style');
 		style.setAttribute('id', 'inert-style');
-		style.textContent = '\n' + '[inert] {\n' + '  pointer-events: none;\n' + '  cursor: default;\n' + '}\n' + '\n' + '[inert], [inert] * {\n' + '  user-select: none;\n' + '  -webkit-user-select: none;\n' + '  -moz-user-select: none;\n' + '  -ms-user-select: none;\n' + '}\n';
+		style.textContent = '\n' + '[inert] {\n' + '  pointer-events: none;\n' + '  cursor: default;\n' + '}\n' + '\n' + '[inert], [inert] * {\n' + '  -webkit-user-select: none;\n' + '  -moz-user-select: none;\n' + '  -ms-user-select: none;\n' + '  user-select: none;\n' + '}\n';
 		node.appendChild(style);
 	}
 
-	/** @type {!InertManager} */
-	var inertManager = new InertManager(document);
-
 	// eslint-disable-next-line no-prototype-builtins
-	if (!Element.prototype.hasOwnProperty('inert')) {
-		Object.defineProperty(Element.prototype, 'inert', {
+	if (!HTMLElement.prototype.hasOwnProperty('inert')) {
+		/** @type {!InertManager} */
+		var inertManager = new InertManager(document);
+
+		Object.defineProperty(HTMLElement.prototype, 'inert', {
 			enumerable: true,
-			/** @this {!Element} */
+			/** @this {!HTMLElement} */
 			get: function get() {
 				return this.hasAttribute('inert');
 			},
-			/** @this {!Element} */
+			/** @this {!HTMLElement} */
 			set: function set(inert) {
 				inertManager.setInert(this, inert);
 			}
 		});
 	}
+	})();
 
 })));
 }}).call('object' === typeof window && window || 'object' === typeof self && self || 'object' === typeof global && global || {});

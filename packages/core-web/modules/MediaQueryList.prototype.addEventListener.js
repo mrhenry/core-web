@@ -7,6 +7,7 @@ if (!("matchMedia"in self&&"addEventListener"in self.matchMedia("all")
 
 	function addEventListener(type, listener) {
 		if (type === 'change') {
+			this.removeListener(listener);
 			this.addListener(listener);
 		}
 
