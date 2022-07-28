@@ -4,6 +4,7 @@ export declare function has(name: string): boolean;
 export declare function required(targets: {
     browsers?: Record<string, string>;
     engines?: Record<string, string>;
+    browserslist?: string;
 }, opts?: {
     debug?: boolean;
 }): string[];

@@ -3,18 +3,19 @@ const { required } = require("@mrhenry/core-web");
 
 module.exports = function (_, opts) {
 	const featureSet = required({
-		browsers: opts.browsers || {},
-		engines: opts.engines || {},
+		browsers: Object(opts).browsers || {},
+		engines: Object(opts).engines || {},
+		browserslist: Object(opts).browserslist || null,
 		},
 		{
-			debug: opts.debug || false,
+			debug: Object(opts).debug || false,
 		}
 	);
 
 	const injector = new Injector(
 		featureSet,
 		{
-			debug: opts.debug || false,
+			debug: Object(opts).debug || false,
 		}
 	);
 

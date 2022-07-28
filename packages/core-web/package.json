@@ -1,6 +1,6 @@
 {
   "name": "@mrhenry/core-web",
-  "version": "0.7.5",
+  "version": "0.7.6",
   "description": "browser feature polyfills as a babel plugin",
   "main": "lib/index.js",
   "author": "Simon Menke <simon.menke@gmail.com>",
@@ -29,6 +29,7 @@
     "tsc": "tsc"
   },
   "dependencies": {
+    "browserslist": "^4.21.3",
     "semver": "^7.3.5"
   },
   "devDependencies": {

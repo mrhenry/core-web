@@ -1,6 +1,7 @@
 import { mapping as mappingJS } from "./__mapping.js";
 import { browsers as knownBrowsersJS } from "./__browsers.js";
 import { engines as knownEnginesJS } from "./__engines.js";
+import * as browserslist from "browserslist";
 import * as semver from "semver";
 
 const mapping = mappingJS as Array<Feature>;
@@ -34,14 +35,19 @@ export function has(name: string): boolean {
 	return map.has(name);
 };
 
-export function required(targets: { browsers?: Record<string, string>, engines?: Record<string, string> }, opts: { debug?: boolean } = {}) {
+export function required(targets: { browsers?: Record<string, string>, engines?: Record<string, string>, browserslist?: string }, opts: { debug?: boolean } = {}) {
 	if (opts && opts.debug) {
 		logUsedTargets(targets);
 	}
 
+	let hasBrowsers = false;
+	let hasEngines = false;
+
 	let all: Array<string> = [];
 	if (targets.browsers) {
 		for (const browser of Object.keys(targets.browsers)) {
+			hasBrowsers = true;
+
 			if (!browsers.has(browser)) {
 				console.log(`@mrhenry/core-web - unknown target: "${browser}"`);
 				console.log(`@mrhenry/core-web - known targets:`);
@@ -55,6 +61,8 @@ export function required(targets: { browsers?: Record<string, string>, engines?:
 
 	if (targets.engines) {
 		for (const engine of Object.keys(targets.engines)) {
+			hasEngines = true;
+
 			if (!engines.has(engine)) {
 				console.log(`@mrhenry/core-web - unknown target: "${engine}"`);
 				console.log(`@mrhenry/core-web - known targets:`);
@@ -64,6 +72,48 @@ export function required(targets: { browsers?: Record<string, string>, engines?:
 
 			all = all.concat(requiredForEngine(engine, targets.engines[engine]));
 		}
+	}
+
+	if (!hasBrowsers && !hasEngines) {
+		browserslist(targets.browserslist ?? null).map(x => parseRange(x)).forEach((x => {
+			if (x.browser === 'op_mini') {
+				// TODO : decide what to do with op_mini
+				return;
+			}
+
+			switch (x.browser) {
+				case 'edge':
+					x.versions = x.versions.filter((y) => {
+						return semver.satisfies(semver.coerce(y)!, '<=18');
+					});
+
+					break;
+
+				case 'android':
+					x.versions = x.versions.filter((y) => {
+						return semver.satisfies(semver.coerce(y)!, '<=6');
+					});
+
+					break;
+
+				case 'and_ff':
+					x.browser = 'firefox_mob';
+					break;
+
+				case 'samsung':
+					x.browser = 'samsung_mob';
+					break;
+
+				default:
+					break;
+			}
+
+			for (const version of x.versions) {
+				if (browsers.has(x.browser)) {
+					all = all.concat(requiredForBrowser(x.browser, version));
+				}
+			}
+		}));
 	}
 
 	return Array.from(new Set(all));
@@ -150,11 +200,16 @@ function requiredForEngine(engine: string, version: string): Array<string> {
 	return out;
 }
 
-function logUsedTargets(targets: { browsers?: Record<string, string>, engines?: Record<string, string> }) {
+function logUsedTargets(targets: { browsers?: Record<string, string>, engines?: Record<string, string>, browserslist?: string }) {
 	let all: Array<string> = [];
+
+	let hasBrowsers = false;
+	let hasEngines = false;
 
 	if (targets.browsers) {
 		for (const browser of Object.keys(targets.browsers)) {
+			hasBrowsers = true;
+
 			if (!browsers.has(browser)) {
 				continue
 			}
@@ -165,6 +220,8 @@ function logUsedTargets(targets: { browsers?: Record<string, string>, engines?: 
 
 	if (targets.engines) {
 		for (const engine of Object.keys(targets.engines)) {
+			hasEngines = true;
+
 			if (!engines.has(engine)) {
 				continue
 			}
@@ -173,6 +230,163 @@ function logUsedTargets(targets: { browsers?: Record<string, string>, engines?: 
 		}
 	}
 
+	if (!hasBrowsers && !hasEngines) {
+		browserslist(targets.browserslist ?? null).map(x => parseRange(x)).forEach((x => {
+			if (x.browser === 'op_mini') {
+				// TODO : decide what to do with op_mini
+				return;
+			}
+
+			switch (x.browser) {
+				case 'edge':
+					x.versions = x.versions.filter((y) => {
+						return semver.satisfies(semver.coerce(y)!, '<=18');
+					});
+
+					break;
+
+				case 'android':
+					x.versions = x.versions.filter((y) => {
+						return semver.satisfies(semver.coerce(y)!, '<=6');
+					});
+
+					break;
+
+				case 'and_ff':
+					x.browser = 'firefox_mob';
+					break;
+
+				case 'samsung':
+					x.browser = 'samsung_mob';
+					break;
+
+				default:
+					break;
+			}
+
+			for (const version of x.versions) {
+				if (browsers.has(x.browser)) {
+					all.push(`${x.browser}/${semver.coerce(version)}`);
+				}
+			}
+		}));
+	}
+
+
 	console.log("@mrhenry/core-web - using targets:");
 	console.log(JSON.stringify(all, null, 2) + '\n');
+}
+
+function parseRange(range: string) {
+	if (range === 'op_mini all') {
+		return {
+			browser: 'op_mini',
+			versions: ['*'],
+			operators: [],
+		};
+	}
+
+	let browser = '';
+	let versions = [];
+	let operators = [];
+
+	let buffer = '';
+
+	for (let index = 0; index < range.length; index++) {
+		const char = range[index];
+
+		switch (char) {
+			case ' ':
+				if (!browser) {
+					browser = buffer;
+					buffer = '';
+				} else {
+					buffer += char;
+				}
+				break;
+			case '|':
+			case '<':
+			case '>':
+			case '=':
+			case '-':
+				buffer += char;
+				break;
+			case '1':
+			case '2':
+			case '3':
+			case '4':
+			case '5':
+			case '6':
+			case '7':
+			case '8':
+			case '9':
+			case '0':
+			case '*':
+				{
+					if (buffer.length > 0) {
+						operators.push(buffer)
+						buffer = '';
+					}
+
+					const version = consumeVersionToken(range.slice(index));
+					index += version.length - 1;
+
+					if (version !== '*') {
+						versions.push(version);
+					}
+					break;
+				}
+
+			default:
+				buffer += char;
+		}
+	}
+
+	if (buffer.length > 0) {
+		operators.push(buffer)
+		buffer = '';
+	}
+
+	operators = operators.filter(operator => operator.trim().length > 0);
+
+	if (
+		(
+			operators.length === 1 &&
+			operators[0] === '-' &&
+			versions.length === 2
+		) ||
+		operators.length === 0
+	) {
+		return {
+			browser: browser.trim(),
+			versions: versions,
+			operators: operators,
+		};
+	}
+
+	throw new Error(`Unexpected browserslist result ${range}\nplease file an issue at https://github.com/mrhenry/core-web/issues`);
+}
+
+function consumeVersionToken(x: string) {
+	let buffer = '';
+
+	for (const char of x) {
+		switch (char) {
+			case '<':
+			case '>':
+			case '=':
+			case '|':
+			case '-': // only an operator when versions are coming from browserslist, in semver this could be part of a single version
+			case ' ':
+			case '~':
+			case '^':
+				return buffer;
+
+			default:
+				buffer += char;
+				break;
+		}
+	}
+
+	return buffer;
 }
