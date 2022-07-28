@@ -6,26 +6,26 @@
     "name": "TextEncoder",
     "deps": [],
     "browsers": {
+      "android": "*",
       "chrome": "<38",
+      "edge": "*",
+      "edge_mob": "*",
       "firefox": "<19",
       "firefox_mob": "<19",
-      "edge": "<79",
-      "edge_mob": "<79",
       "ie": "*",
       "ie_mob": "*",
+      "opera": "<25",
       "safari": "<10.1",
       "ios_saf": "<10.3",
-      "opera": "<25",
-      "android": "38",
-      "samsung_mob": "<3.0"
+      "samsung_mob": "<3"
     },
     "engines": {
-      "Blink": "28 - 37",
-      "Gecko": "1.7 - 18",
+      "Blink": ">= 28",
       "EdgeHTML": ">= 12",
+      "Gecko": "1.7 - 18",
       "Trident": ">= 4.0",
-      "WebKit": "85 - 602.1.50",
-      "Presto": ">= 1"
+      "Presto": ">= 1",
+      "WebKit": "85 - 602.1.50"
     },
     "size": 3349,
     "isAlias": false,
@@ -521,9 +521,9 @@
     }
   },
   "polyfilled": {
-    "android": "38",
+    "android": "*",
     "chrome": "<38",
-    "edge": "<79",
+    "edge": "*",
     "firefox": "<19",
     "ie": "*",
     "opera": "<25",
@@ -575,18 +575,18 @@
     "docs": "https://developer.mozilla.org/en-US/docs/Web/API/TextEncoder",
     "repo": "https://github.com/anonyco/FastestSmallestTextEncoderDecoder",
     "browsers": {
+      "android": "*",
       "chrome": "<38",
+      "edge": "*",
+      "edge_mob": "*",
       "firefox": "<19",
       "firefox_mob": "<19",
-      "edge": "<79",
-      "edge_mob": "<79",
       "ie": "*",
       "ie_mob": "*",
+      "opera": "<25",
       "safari": "<10.1",
       "ios_saf": "<10.3",
-      "opera": "<25",
-      "android": "38",
-      "samsung_mob": "<3.0"
+      "samsung_mob": "<3"
     },
     "detectSource": "\"TextEncoder\"in self&&\"TextDecoder\"in self\n",
     "baseDir": "TextEncoder",

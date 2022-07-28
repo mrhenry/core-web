@@ -11,13 +11,12 @@
       "edge": "<17",
       "firefox": "<24",
       "firefox_mob": "<24",
-      "ie": "<=11",
-      "ie_mob": "<=11",
-      "ios_chr": "<8",
-      "ios_saf": "<8",
-      "op_mini": "<16",
+      "ie": "*",
+      "ie_mob": "*",
       "opera": "<16",
-      "safari": "<8",
+      "op_mini": "<16",
+      "safari": "<8.0",
+      "ios_saf": "<8.0",
       "samsung_mob": "<2"
     },
     "engines": {
@@ -25,8 +24,8 @@
       "EdgeHTML": "12 - 16",
       "Gecko": "1.7 - 23",
       "Trident": ">= 4.0",
-      "WebKit": "85 - 537.71",
-      "Presto": ">= 1"
+      "Presto": ">= 1",
+      "WebKit": "85 - 537.71"
     },
     "size": 202,
     "isAlias": false,
@@ -687,10 +686,10 @@
     "chrome": "<29",
     "edge": "<17",
     "firefox": "<24",
-    "ie": "<=11",
+    "ie": "*",
     "opera": "<16",
-    "safari": "<8",
-    "ios_saf": "<8"
+    "safari": "<8.0",
+    "ios_saf": "<8.0"
   },
   "native": {
     "android": {
@@ -730,13 +729,12 @@
       "edge": "<17",
       "firefox": "<24",
       "firefox_mob": "<24",
-      "ie": "<=11",
-      "ie_mob": "<=11",
-      "ios_chr": "<8",
-      "ios_saf": "<8",
-      "op_mini": "<16",
+      "ie": "*",
+      "ie_mob": "*",
       "opera": "<16",
-      "safari": "<8",
+      "op_mini": "<16",
+      "safari": "<8.0",
+      "ios_saf": "<8.0",
       "samsung_mob": "<2"
     },
     "detectSource": "\"DocumentFragment\"in self&&function(){try{return new DocumentFragment,!0}catch(n){return!1}}()\n",

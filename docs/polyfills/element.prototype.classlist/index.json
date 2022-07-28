@@ -9,12 +9,13 @@
       "_DOMTokenList"
     ],
     "browsers": {
-      "ie": "8 - 11",
-      "safari": "4 - 4.1"
+      "ie": ">=8",
+      "safari": "4.0 - 4.1",
+      "ios_saf": "3.2 - 4.2"
     },
     "engines": {
       "Trident": ">= 4.0",
-      "WebKit": "530.17"
+      "WebKit": "530.17 - 533.17"
     },
     "size": 481,
     "isAlias": false,
@@ -132,8 +133,9 @@
     }
   },
   "polyfilled": {
-    "ie": "8 - 11",
-    "safari": "4 - 4.1"
+    "ie": ">=8",
+    "safari": "4.0 - 4.1",
+    "ios_saf": "3.2 - 4.2"
   },
   "native": {
     "android": [
@@ -221,8 +223,9 @@
     "license": "ISC",
     "repo": "https://github.com/Alhadis/DOMTokenList",
     "browsers": {
-      "ie": "8 - 11",
-      "safari": "4 - 4.1"
+      "ie": ">=8",
+      "safari": "4.0 - 4.1",
+      "ios_saf": "3.2 - 4.2"
     },
     "detectSource": "\"document\"in self&&\"classList\"in document.documentElement&&\"Element\"in self&&\"classList\"in Element.prototype&&function(){var e=document.createElement(\"span\")\nreturn e.classList.add(\"a\",\"b\"),e.classList.contains(\"b\")}()\n",
     "baseDir": "Element/prototype/classList",

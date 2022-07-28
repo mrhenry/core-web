@@ -6,24 +6,25 @@
     "name": "requestAnimationFrame",
     "deps": [],
     "browsers": {
-      "android": "<37",
+      "android": "*",
       "bb": "7",
       "chrome": "<46",
-      "ie": "6 - 9",
-      "ios_saf": "3.2 - 6",
       "firefox": "3.6 - 22",
+      "firefox_mob": "3.6",
+      "ie": "6 - 9",
       "opera": "<15",
+      "op_mob": "<14",
       "op_mini": "5 - *",
-      "op_mob": "10 - 12.1",
-      "safari": "3.1 - 6",
-      "firefox_mob": "3.6"
+      "safari": "3.1 - 6.0",
+      "ios_saf": "3.2 - 6.0",
+      "samsung_mob": "<5"
     },
     "engines": {
       "Blink": "28 - 45",
-      "Trident": "4.0 - 5.0",
-      "WebKit": "525.13 - 536.26",
       "Gecko": "1.9.2 - 22",
-      "Presto": ">= 1"
+      "Trident": "4.0 - 5.0",
+      "Presto": ">= 1",
+      "WebKit": "525.13 - 536.26"
     },
     "size": 655,
     "isAlias": false,
@@ -159,13 +160,13 @@
     }
   },
   "polyfilled": {
-    "android": "<37",
+    "android": "*",
     "chrome": "<46",
     "firefox": "3.6 - 22",
     "ie": "6 - 9",
     "opera": "<15",
-    "safari": "3.1 - 6",
-    "ios_saf": "3.2 - 6"
+    "safari": "3.1 - 6.0",
+    "ios_saf": "3.2 - 6.0"
   },
   "native": {
     "android": [
@@ -252,17 +253,18 @@
     "license": "MIT",
     "docs": "https://developer.mozilla.org/en-US/docs/Web/API/window/requestAnimationFrame",
     "browsers": {
-      "android": "<37",
+      "android": "*",
       "bb": "7",
       "chrome": "<46",
-      "ie": "6 - 9",
-      "ios_saf": "3.2 - 6",
       "firefox": "3.6 - 22",
+      "firefox_mob": "3.6",
+      "ie": "6 - 9",
       "opera": "<15",
+      "op_mob": "<14",
       "op_mini": "5 - *",
-      "op_mob": "10 - 12.1",
-      "safari": "3.1 - 6",
-      "firefox_mob": "3.6"
+      "safari": "3.1 - 6.0",
+      "ios_saf": "3.2 - 6.0",
+      "samsung_mob": "<5"
     },
     "detectSource": "\"requestAnimationFrame\"in self\n",
     "baseDir": "requestAnimationFrame",

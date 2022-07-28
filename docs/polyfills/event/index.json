@@ -7,11 +7,12 @@
     "deps": [],
     "browsers": {
       "firefox": "6 - 10",
-      "ie": "6 - 11",
-      "ie_mob": "10",
+      "firefox_mob": "6 - 10",
+      "ie": ">=6",
+      "ie_mob": "<11",
       "opera": "10 - 11.5",
-      "safari": "4 - 7",
-      "firefox_mob": "6 - 10"
+      "safari": "4.0 - 7.0",
+      "ios_saf": "3.2 - 7.0"
     },
     "engines": {
       "Gecko": "6 - 10",
@@ -1444,9 +1445,10 @@
   },
   "polyfilled": {
     "firefox": "6 - 10",
-    "ie": "6 - 11",
+    "ie": ">=6",
     "opera": "10 - 11.5",
-    "safari": "4 - 7"
+    "safari": "4.0 - 7.0",
+    "ios_saf": "3.2 - 7.0"
   },
   "native": {
     "android": {
@@ -1491,11 +1493,12 @@
     ],
     "browsers": {
       "firefox": "6 - 10",
-      "ie": "6 - 11",
-      "ie_mob": "10",
+      "firefox_mob": "6 - 10",
+      "ie": ">=6",
+      "ie_mob": "<11",
       "opera": "10 - 11.5",
-      "safari": "4 - 7",
-      "firefox_mob": "6 - 10"
+      "safari": "4.0 - 7.0",
+      "ios_saf": "3.2 - 7.0"
     },
     "detectSource": "(function(n){if(!(\"Event\"in n))return!1\ntry{return new Event(\"click\"),!0}catch(n){return!1}})(self)\n",
     "baseDir": "Event",

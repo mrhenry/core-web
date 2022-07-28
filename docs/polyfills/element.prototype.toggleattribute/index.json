@@ -6,30 +6,29 @@
     "name": "Element.prototype.toggleAttribute",
     "deps": [],
     "browsers": {
-      "android": "<69",
+      "android": "*",
       "bb": "*",
       "chrome": "<69",
       "edge": "<18",
       "edge_mob": "<18",
       "firefox": "<63",
-      "ios_chr": "<12",
-      "ios_saf": "<12",
+      "firefox_mob": "<63",
       "ie": "*",
       "ie_mob": "*",
       "opera": "<56",
-      "op_mini": "*",
       "op_mob": "<51",
-      "safari": "<12",
-      "firefox_mob": "<63",
-      "samsung_mob": "*"
+      "op_mini": "*",
+      "safari": "<12.0",
+      "ios_saf": "<12.0",
+      "samsung_mob": "<10"
     },
     "engines": {
       "Blink": "28 - 68",
       "EdgeHTML": "12 - 17",
       "Gecko": "1.7 - 62",
-      "WebKit": "85 - 605.1.33",
       "Trident": ">= 4.0",
-      "Presto": ">= 1"
+      "Presto": ">= 1",
+      "WebKit": "85 - 605.1.33"
     },
     "size": 177,
     "isAlias": false,
@@ -89,14 +88,14 @@
     }
   },
   "polyfilled": {
-    "android": "<69",
+    "android": "*",
     "chrome": "<69",
     "edge": "<18",
     "firefox": "<63",
     "ie": "*",
     "opera": "<56",
-    "safari": "<12",
-    "ios_saf": "<12"
+    "safari": "<12.0",
+    "ios_saf": "<12.0"
   },
   "native": {
     "android": {
@@ -130,22 +129,21 @@
     "spec": "https://dom.spec.whatwg.org/#dom-element-toggleattribute",
     "docs": "https://developer.mozilla.org/en-US/docs/Web/API/Element/toggleAttribute",
     "browsers": {
-      "android": "<69",
+      "android": "*",
       "bb": "*",
       "chrome": "<69",
       "edge": "<18",
       "edge_mob": "<18",
       "firefox": "<63",
-      "ios_chr": "<12",
-      "ios_saf": "<12",
+      "firefox_mob": "<63",
       "ie": "*",
       "ie_mob": "*",
       "opera": "<56",
-      "op_mini": "*",
       "op_mob": "<51",
-      "safari": "<12",
-      "firefox_mob": "<63",
-      "samsung_mob": "*"
+      "op_mini": "*",
+      "safari": "<12.0",
+      "ios_saf": "<12.0",
+      "samsung_mob": "<10"
     },
     "detectSource": "\"document\"in self&&\"toggleAttribute\"in document.documentElement\n",
     "baseDir": "Element/prototype/toggleAttribute",

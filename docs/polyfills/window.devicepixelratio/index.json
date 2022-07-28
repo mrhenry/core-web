@@ -6,15 +6,15 @@
     "name": "devicePixelRatio",
     "deps": [],
     "browsers": {
-      "safari": "4 - 9.1",
+      "firefox": "<18",
       "ie": "6 - 10",
-      "firefox": "<=17",
+      "safari": "4.0 - 9.1",
       "ios_saf": "<9.3"
     },
     "engines": {
-      "WebKit": "522.11 - 601.5.17",
+      "Gecko": "1.7 - 17",
       "Trident": "4.0 - 6.0",
-      "Gecko": "1.7 - 17"
+      "WebKit": "522.11 - 601.5.17"
     },
     "size": 24,
     "isAlias": false,
@@ -74,9 +74,9 @@
     }
   },
   "polyfilled": {
-    "firefox": "<=17",
+    "firefox": "<18",
     "ie": "6 - 10",
-    "safari": "4 - 9.1",
+    "safari": "4.0 - 9.1",
     "ios_saf": "<9.3"
   },
   "native": {
@@ -113,9 +113,9 @@
       "Older versions of Firefox are known to incorrectly alter the DPR on user zoom, but we don't (currently) correct for this"
     ],
     "browsers": {
-      "safari": "4 - 9.1",
+      "firefox": "<18",
       "ie": "6 - 10",
-      "firefox": "<=17",
+      "safari": "4.0 - 9.1",
       "ios_saf": "<9.3"
     },
     "detectSource": "\"devicePixelRatio\"in self\n",

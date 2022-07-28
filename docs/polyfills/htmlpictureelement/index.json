@@ -8,26 +8,27 @@
       "~html5-elements"
     ],
     "browsers": {
+      "android": "*",
+      "bb": "7 - 10",
+      "chrome": "<38",
       "edge": "<13",
       "edge_mob": "<13",
+      "firefox": "<38",
+      "firefox_mob": "<38",
       "ie": "*",
-      "ie_mob": "10 - *",
-      "firefox": "4 - 37",
+      "ie_mob": ">=10",
       "opera": "11.6 - 29",
-      "safari": "6 - 9",
-      "chrome": "* - 38",
-      "ios_saf": "* - 9.2",
-      "firefox_mob": "4 - 37",
-      "bb": "7 - 10",
-      "android": "<52"
+      "safari": "<9.1",
+      "ios_saf": "<9.3",
+      "samsung_mob": "<3"
     },
     "engines": {
+      "Blink": "28 - 37",
       "EdgeHTML": "12",
+      "Gecko": "1.7 - 37",
       "Trident": ">= 4.0",
-      "Gecko": "2 - 37",
       "Presto": ">= 2.10",
-      "WebKit": "522.11 - 601.5.17",
-      "Blink": "28 - 38"
+      "WebKit": "85 - 601.1.56"
     },
     "size": 17183,
     "isAlias": false,
@@ -87,14 +88,14 @@
     }
   },
   "polyfilled": {
-    "android": "<52",
-    "chrome": "* - 38",
+    "android": "*",
+    "chrome": "<38",
     "edge": "<13",
-    "firefox": "4 - 37",
+    "firefox": "<38",
     "ie": "*",
     "opera": "11.6 - 29",
-    "safari": "6 - 9",
-    "ios_saf": "* - 9.2"
+    "safari": "<9.1",
+    "ios_saf": "<9.3"
   },
   "native": {
     "android": {
@@ -131,18 +132,19 @@
     "repo": "https://github.com/scottjehl/picturefill",
     "docs": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/picture",
     "browsers": {
+      "android": "*",
+      "bb": "7 - 10",
+      "chrome": "<38",
       "edge": "<13",
       "edge_mob": "<13",
+      "firefox": "<38",
+      "firefox_mob": "<38",
       "ie": "*",
-      "ie_mob": "10 - *",
-      "firefox": "4 - 37",
+      "ie_mob": ">=10",
       "opera": "11.6 - 29",
-      "safari": "6 - 9",
-      "chrome": "* - 38",
-      "ios_saf": "* - 9.2",
-      "firefox_mob": "4 - 37",
-      "bb": "7 - 10",
-      "android": "<52"
+      "safari": "<9.1",
+      "ios_saf": "<9.3",
+      "samsung_mob": "<3"
     },
     "install": {
       "module": "picturefill",

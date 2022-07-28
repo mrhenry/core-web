@@ -8,24 +8,26 @@
       "requestAnimationFrame"
     ],
     "browsers": {
-      "edge": "<79",
+      "android": "*",
+      "chrome": "<61",
+      "edge": "*",
       "edge_mob": "*",
-      "ie": "9 - *",
-      "ie_mob": "9 - *",
       "firefox": "4 - 36",
-      "opera": "*",
+      "ie": ">=9",
+      "ie_mob": ">=9",
+      "opera": "<48",
+      "op_mob": "<45",
       "safari": "*",
-      "chrome": "* - 60",
       "ios_saf": "*",
-      "android": "<61"
+      "samsung_mob": "<8"
     },
     "engines": {
+      "Blink": ">= 28",
       "EdgeHTML": ">= 12",
-      "Trident": ">= 5.0",
       "Gecko": "2 - 36",
+      "Trident": ">= 5.0",
       "Presto": ">= 1",
-      "WebKit": ">= 85",
-      "Blink": ">= 28"
+      "WebKit": ">= 85"
     },
     "size": 9748,
     "isAlias": false,
@@ -243,12 +245,12 @@
     }
   },
   "polyfilled": {
-    "android": "<61",
-    "chrome": "* - 60",
-    "edge": "<79",
+    "android": "*",
+    "chrome": "<61",
+    "edge": "*",
     "firefox": "4 - 36",
-    "ie": "9 - *",
-    "opera": "*",
+    "ie": ">=9",
+    "opera": "<48",
     "safari": "*",
     "ios_saf": "*"
   },
@@ -297,16 +299,18 @@
     "repo": "https://github.com/magic-akari/seamless-scroll-polyfill",
     "docs": "https://developer.mozilla.org/en/docs/Web/CSS/scroll-behavior",
     "browsers": {
-      "edge": "<79",
+      "android": "*",
+      "chrome": "<61",
+      "edge": "*",
       "edge_mob": "*",
-      "ie": "9 - *",
-      "ie_mob": "9 - *",
       "firefox": "4 - 36",
-      "opera": "*",
+      "ie": ">=9",
+      "ie_mob": ">=9",
+      "opera": "<48",
+      "op_mob": "<45",
       "safari": "*",
-      "chrome": "* - 60",
       "ios_saf": "*",
-      "android": "<61"
+      "samsung_mob": "<8"
     },
     "install": {
       "module": "seamless-scroll-polyfill",

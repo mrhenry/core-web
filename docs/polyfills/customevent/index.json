@@ -8,16 +8,18 @@
       "Event"
     ],
     "browsers": {
+      "android": "<4.4",
+      "chrome": "<15",
       "edge": "<14",
       "edge_mob": "<14",
       "firefox": "6 - 10",
+      "firefox_mob": "6 - 10",
       "ie": "*",
-      "ie_mob": "10 - *",
+      "ie_mob": ">=10",
       "opera": "10 - 11.5",
-      "safari": "4 - 7",
-      "chrome": "1 - 14",
-      "android": "<=4.3",
-      "firefox_mob": "6 - 10"
+      "op_mob": "<12",
+      "safari": "4.0 - 7.0",
+      "ios_saf": "3.2 - 7.0"
     },
     "engines": {
       "EdgeHTML": "12 - 13",
@@ -311,13 +313,14 @@
     }
   },
   "polyfilled": {
-    "android": "<=4.3",
-    "chrome": "1 - 14",
+    "android": "<4.4",
+    "chrome": "<15",
     "edge": "<14",
     "firefox": "6 - 10",
     "ie": "*",
     "opera": "10 - 11.5",
-    "safari": "4 - 7"
+    "safari": "4.0 - 7.0",
+    "ios_saf": "3.2 - 7.0"
   },
   "native": {
     "android": {
@@ -360,16 +363,18 @@
     "spec": "http://dom.spec.whatwg.org/#interface-customevent",
     "docs": "https://developer.mozilla.org/en/docs/Web/API/CustomEvent",
     "browsers": {
+      "android": "<4.4",
+      "chrome": "<15",
       "edge": "<14",
       "edge_mob": "<14",
       "firefox": "6 - 10",
+      "firefox_mob": "6 - 10",
       "ie": "*",
-      "ie_mob": "10 - *",
+      "ie_mob": ">=10",
       "opera": "10 - 11.5",
-      "safari": "4 - 7",
-      "chrome": "1 - 14",
-      "android": "<=4.3",
-      "firefox_mob": "6 - 10"
+      "op_mob": "<12",
+      "safari": "4.0 - 7.0",
+      "ios_saf": "3.2 - 7.0"
     },
     "detectSource": "\"CustomEvent\"in self&&(\"function\"==typeof self.CustomEvent||self.CustomEvent.toString().indexOf(\"CustomEventConstructor\")>-1)\n",
     "baseDir": "CustomEvent",

@@ -9,20 +9,23 @@
     ],
     "browsers": {
       "chrome": "<20",
-      "edge": "<79",
+      "edge": "*",
       "edge_mob": "*",
       "firefox": "<13",
       "firefox_mob": "<14",
-      "safari": "<6",
       "ie": "*",
-      "opera": "<12"
+      "opera": "<12",
+      "op_mob": "<12",
+      "safari": "<6.0",
+      "ios_saf": "<6.0",
+      "samsung_mob": "<1.5"
     },
     "engines": {
       "EdgeHTML": ">= 12",
       "Gecko": "1.7 - 12",
-      "WebKit": "85 - 534.48",
       "Trident": ">= 4.0",
-      "Presto": "1 - 2.10"
+      "Presto": "1 - 2.10",
+      "WebKit": "85 - 534.48"
     },
     "size": 3466,
     "isAlias": false,
@@ -566,11 +569,12 @@
   },
   "polyfilled": {
     "chrome": "<20",
-    "edge": "<79",
+    "edge": "*",
     "firefox": "<13",
     "ie": "*",
     "opera": "<12",
-    "safari": "<6"
+    "safari": "<6.0",
+    "ios_saf": "<6.0"
   },
   "native": {
     "android": {
@@ -608,13 +612,16 @@
     "repo": "https://github.com/eligrey/Blob.js/blob",
     "browsers": {
       "chrome": "<20",
-      "edge": "<79",
+      "edge": "*",
       "edge_mob": "*",
       "firefox": "<13",
       "firefox_mob": "<14",
-      "safari": "<6",
       "ie": "*",
-      "opera": "<12"
+      "opera": "<12",
+      "op_mob": "<12",
+      "safari": "<6.0",
+      "ios_saf": "<6.0",
+      "samsung_mob": "<1.5"
     },
     "detectSource": "\"Blob\"in self&&function(){try{return new Blob,!0}catch(n){return!1}}()&&function(){try{return Blob(),!1}catch(n){return!0}}()\n",
     "baseDir": "Blob",

@@ -8,15 +8,15 @@
       "console"
     ],
     "browsers": {
+      "chrome": "*",
+      "firefox": "<5",
       "ie": "*",
-      "firefox": "1 - 4",
-      "samsung_mob": "*",
-      "chrome": "*"
+      "samsung_mob": "*"
     },
     "engines": {
-      "Trident": ">= 4.0",
+      "Blink": ">= 28",
       "Gecko": "1.7 - 2",
-      "Blink": ">= 28"
+      "Trident": ">= 4.0"
     },
     "size": 33,
     "isAlias": false,
@@ -142,7 +142,7 @@
   },
   "polyfilled": {
     "chrome": "*",
-    "firefox": "1 - 4",
+    "firefox": "<5",
     "ie": "*"
   },
   "native": {
@@ -182,10 +182,10 @@
     "spec": "https://console.spec.whatwg.org",
     "docs": "https://developer.mozilla.org/en/docs/Web/API/console",
     "browsers": {
+      "chrome": "*",
+      "firefox": "<5",
       "ie": "*",
-      "firefox": "1 - 4",
-      "samsung_mob": "*",
-      "chrome": "*"
+      "samsung_mob": "*"
     },
     "detectSource": "\"console\"in self&&\"exception\"in self.console\n",
     "baseDir": "console/exception",

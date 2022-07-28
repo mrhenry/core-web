@@ -6,28 +6,28 @@
     "name": "Element.prototype.matches",
     "deps": [],
     "browsers": {
+      "android": "<4.4.4",
+      "bb": "*",
+      "chrome": "<34",
       "edge": "<15",
       "edge_mob": "<15",
-      "ie": "6 - *",
-      "ie_mob": "10 - 11",
-      "chrome": "* - 33",
-      "firefox": "* - 33",
-      "safari": "4 - 7.0",
-      "opera": "* - 20",
+      "firefox": "<34",
+      "ie": ">=6",
+      "ie_mob": ">=10",
+      "opera": "<21",
+      "op_mob": "<33",
       "op_mini": "*",
-      "op_mob": "* - 32",
-      "android": "* - 4.4.4",
-      "bb": "*",
-      "ios_chr": "*",
-      "ios_saf": "* - 7"
+      "safari": "<8.0",
+      "ios_saf": "<8.0",
+      "samsung_mob": "<2"
     },
     "engines": {
-      "EdgeHTML": "12 - 14",
-      "Trident": ">= 4.0",
       "Blink": "28 - 33",
+      "EdgeHTML": "12 - 14",
       "Gecko": "1.7 - 33",
-      "WebKit": "522.11 - 537.71",
-      "Presto": ">= 1"
+      "Trident": ">= 4.0",
+      "Presto": ">= 1",
+      "WebKit": "85 - 537.71"
     },
     "size": 297,
     "isAlias": false,
@@ -72,7 +72,8 @@
           },
           {
             "alternative_name": "msMatchesSelector",
-            "version_added": "12"
+            "version_added": "12",
+            "version_removed": "79"
           }
         ],
         "firefox": [
@@ -149,7 +150,7 @@
         ],
         "safari": [
           {
-            "version_added": "7"
+            "version_added": "8"
           },
           {
             "alternative_name": "webkitMatchesSelector",
@@ -187,14 +188,14 @@
     }
   },
   "polyfilled": {
-    "android": "* - 4.4.4",
-    "chrome": "* - 33",
+    "android": "<4.4.4",
+    "chrome": "<34",
     "edge": "<15",
-    "firefox": "* - 33",
-    "ie": "6 - *",
-    "opera": "* - 20",
-    "safari": "4 - 7.0",
-    "ios_saf": "* - 7"
+    "firefox": "<34",
+    "ie": ">=6",
+    "opera": "<21",
+    "safari": "<8.0",
+    "ios_saf": "<8.0"
   },
   "native": {
     "android": [
@@ -225,7 +226,8 @@
       },
       {
         "alternative_name": "msMatchesSelector",
-        "version_added": "12"
+        "version_added": "12",
+        "version_removed": "79"
       }
     ],
     "firefox": [
@@ -265,7 +267,7 @@
     ],
     "safari": [
       {
-        "version_added": "7"
+        "version_added": "8"
       },
       {
         "alternative_name": "webkitMatchesSelector",
@@ -296,20 +298,20 @@
     "docs": "https://developer.mozilla.org/en-US/docs/Web/API/Element/matches",
     "spec": "http://dom.spec.whatwg.org/#dom-element-matches",
     "browsers": {
+      "android": "<4.4.4",
+      "bb": "*",
+      "chrome": "<34",
       "edge": "<15",
       "edge_mob": "<15",
-      "ie": "6 - *",
-      "ie_mob": "10 - 11",
-      "chrome": "* - 33",
-      "firefox": "* - 33",
-      "safari": "4 - 7.0",
-      "opera": "* - 20",
+      "firefox": "<34",
+      "ie": ">=6",
+      "ie_mob": ">=10",
+      "opera": "<21",
+      "op_mob": "<33",
       "op_mini": "*",
-      "op_mob": "* - 32",
-      "android": "* - 4.4.4",
-      "bb": "*",
-      "ios_chr": "*",
-      "ios_saf": "* - 7"
+      "safari": "<8.0",
+      "ios_saf": "<8.0",
+      "samsung_mob": "<2"
     },
     "detectSource": "\"document\"in self&&\"matches\"in document.documentElement\n",
     "baseDir": "Element/prototype/matches",

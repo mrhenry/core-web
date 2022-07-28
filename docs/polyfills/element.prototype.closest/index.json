@@ -8,28 +8,29 @@
       "Element.prototype.matches"
     ],
     "browsers": {
-      "bb": "*",
       "android": "<5",
+      "bb": "*",
       "chrome": "<41",
       "edge": "<15",
       "edge_mob": "<15",
+      "firefox": "<35",
+      "firefox_mob": "<35",
       "ie": "*",
       "ie_mob": "*",
-      "ios_saf": "<9",
-      "firefox": "<35",
       "opera": "<28",
-      "op_mini": "*",
       "op_mob": "<33",
-      "safari": "<9",
-      "firefox_mob": "<35"
+      "op_mini": "*",
+      "safari": "<9.0",
+      "ios_saf": "<9.0",
+      "samsung_mob": "<4"
     },
     "engines": {
       "Blink": "28 - 40",
       "EdgeHTML": "12 - 14",
-      "Trident": ">= 4.0",
-      "WebKit": "85 - 600.1.4",
       "Gecko": "1.7 - 34",
-      "Presto": ">= 1"
+      "Trident": ">= 4.0",
+      "Presto": ">= 1",
+      "WebKit": "85 - 600.1.4"
     },
     "size": 175,
     "isAlias": false,
@@ -95,8 +96,8 @@
     "firefox": "<35",
     "ie": "*",
     "opera": "<28",
-    "safari": "<9",
-    "ios_saf": "<9"
+    "safari": "<9.0",
+    "ios_saf": "<9.0"
   },
   "native": {
     "android": {
@@ -139,20 +140,21 @@
     "docs": "https://developer.mozilla.org/en-US/docs/Web/API/Element/closest",
     "spec": "http://dom.spec.whatwg.org/#dom-element-closest",
     "browsers": {
-      "bb": "*",
       "android": "<5",
+      "bb": "*",
       "chrome": "<41",
       "edge": "<15",
       "edge_mob": "<15",
+      "firefox": "<35",
+      "firefox_mob": "<35",
       "ie": "*",
       "ie_mob": "*",
-      "ios_saf": "<9",
-      "firefox": "<35",
       "opera": "<28",
-      "op_mini": "*",
       "op_mob": "<33",
-      "safari": "<9",
-      "firefox_mob": "<35"
+      "op_mini": "*",
+      "safari": "<9.0",
+      "ios_saf": "<9.0",
+      "samsung_mob": "<4"
     },
     "detectSource": "\"document\"in self&&\"closest\"in document.documentElement\n",
     "baseDir": "Element/prototype/closest",

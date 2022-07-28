@@ -6,27 +6,20 @@
     "name": "Node.prototype.isSameNode",
     "deps": [],
     "browsers": {
-      "chrome": "<1",
+      "bb": "*",
       "firefox": "<48",
-      "safari": "<3",
-      "edge": "<12",
-      "edge_mob": "<12",
+      "firefox_mob": "<48",
       "ie": "<9",
       "ie_mob": "<9",
-      "firefox_mob": "<48",
       "opera": "<12.1",
-      "opera_mini": "<12.1",
-      "ios_saf": "<1",
-      "ios_chr": "<1",
-      "samsung_mob": "<1",
-      "bb": "*",
-      "android": "<1"
+      "op_mob": "<12.1",
+      "safari": "<3.0"
     },
     "engines": {
       "Gecko": "1.7 - 47",
-      "WebKit": "85 - 412",
       "Trident": "4.0",
-      "Presto": "1 - 2.10"
+      "Presto": "1 - 2.10",
+      "WebKit": "85 - 412"
     },
     "size": 321,
     "isAlias": false,
@@ -98,14 +91,10 @@
     }
   },
   "polyfilled": {
-    "android": "<1",
-    "chrome": "<1",
-    "edge": "<12",
     "firefox": "<48",
     "ie": "<9",
     "opera": "<12.1",
-    "safari": "<3",
-    "ios_saf": "<1"
+    "safari": "<3.0"
   },
   "native": {
     "android": {
@@ -150,21 +139,14 @@
     "dependencies": [],
     "docs": "https://developer.mozilla.org/en-US/docs/Web/API/Node/isSameNode",
     "browsers": {
-      "chrome": "<1",
+      "bb": "*",
       "firefox": "<48",
-      "safari": "<3",
-      "edge": "<12",
-      "edge_mob": "<12",
+      "firefox_mob": "<48",
       "ie": "<9",
       "ie_mob": "<9",
-      "firefox_mob": "<48",
       "opera": "<12.1",
-      "opera_mini": "<12.1",
-      "ios_saf": "<1",
-      "ios_chr": "<1",
-      "samsung_mob": "<1",
-      "bb": "*",
-      "android": "<1"
+      "op_mob": "<12.1",
+      "safari": "<3.0"
     },
     "detectSource": "document.isSameNode\n",
     "baseDir": "Node/prototype/isSameNode",

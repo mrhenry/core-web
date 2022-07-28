@@ -12,25 +12,25 @@
       "Element.prototype.classList"
     ],
     "browsers": {
+      "bb": "10 - *",
+      "chrome": "<50",
       "edge": "<16",
       "edge_mob": "<16",
-      "ie": "9 - 12",
-      "ie_mob": "9 - 12",
-      "safari": "<10.1",
-      "chrome": "<50",
       "firefox": "<50",
-      "ios_saf": "10.3",
+      "ie": ">=9",
+      "ie_mob": ">=9",
       "opera": "<50",
-      "samsung_mob": "<5",
-      "bb": "10 - *"
+      "safari": "<10.1",
+      "ios_saf": "<10.3",
+      "samsung_mob": "<5"
     },
     "engines": {
-      "EdgeHTML": "12 - 15",
-      "Trident": ">= 5.0",
-      "WebKit": "85 - 603.2.1",
       "Blink": "28 - 49",
+      "EdgeHTML": "12 - 15",
       "Gecko": "1.7 - 49",
-      "Presto": ">= 1"
+      "Trident": ">= 5.0",
+      "Presto": ">= 1",
+      "WebKit": "85 - 602.1.50"
     },
     "size": 370,
     "isAlias": false,
@@ -91,10 +91,10 @@
     "chrome": "<50",
     "edge": "<16",
     "firefox": "<50",
-    "ie": "9 - 12",
+    "ie": ">=9",
     "opera": "<50",
     "safari": "<10.1",
-    "ios_saf": "10.3"
+    "ios_saf": "<10.3"
   },
   "native": {
     "android": {
@@ -132,17 +132,17 @@
     "license": "MIT",
     "spec": "https://dom.spec.whatwg.org/#domtokenlist",
     "browsers": {
+      "bb": "10 - *",
+      "chrome": "<50",
       "edge": "<16",
       "edge_mob": "<16",
-      "ie": "9 - 12",
-      "ie_mob": "9 - 12",
-      "safari": "<10.1",
-      "chrome": "<50",
       "firefox": "<50",
-      "ios_saf": "10.3",
+      "ie": ">=9",
+      "ie_mob": ">=9",
       "opera": "<50",
-      "samsung_mob": "<5",
-      "bb": "10 - *"
+      "safari": "<10.1",
+      "ios_saf": "<10.3",
+      "samsung_mob": "<5"
     },
     "detectSource": "\"Symbol\"in self&&\"iterator\"in self.Symbol&&function(){try{var t=document.createElement(\"div\")\nreturn!(!t.classList||!t.classList[self.Symbol.iterator])}catch(t){return!1}}()\n",
     "baseDir": "DOMTokenList/prototype/@@iterator",

@@ -9,16 +9,20 @@
       "Event"
     ],
     "browsers": {
-      "firefox": "10 - 17",
-      "safari": "4",
       "android": "<4.4.3",
-      "opera": "15 - 19",
-      "chrome": "14 - 32"
+      "chrome": "<33",
+      "firefox": "<18",
+      "opera": "<20",
+      "op_mob": "<20",
+      "safari": "<7.0",
+      "ios_saf": "<7.0",
+      "samsung_mob": "<2"
     },
     "engines": {
-      "Gecko": "10 - 17",
-      "WebKit": "530.17",
-      "Blink": "28 - 32"
+      "Blink": "28 - 32",
+      "Gecko": "1.7 - 17",
+      "Presto": ">= 1",
+      "WebKit": "85 - 536.26"
     },
     "size": 338,
     "isAlias": false,
@@ -206,10 +210,11 @@
   },
   "polyfilled": {
     "android": "<4.4.3",
-    "chrome": "14 - 32",
-    "firefox": "10 - 17",
-    "opera": "15 - 19",
-    "safari": "4"
+    "chrome": "<33",
+    "firefox": "<18",
+    "opera": "<20",
+    "safari": "<7.0",
+    "ios_saf": "<7.0"
   },
   "native": {
     "android": [
@@ -287,11 +292,14 @@
       "The alias `PageVisibility` works for this feature for backwards compatibility with the name under which it was previously (erroneously) available"
     ],
     "browsers": {
-      "firefox": "10 - 17",
-      "safari": "4",
       "android": "<4.4.3",
-      "opera": "15 - 19",
-      "chrome": "14 - 32"
+      "chrome": "<33",
+      "firefox": "<18",
+      "opera": "<20",
+      "op_mob": "<20",
+      "safari": "<7.0",
+      "ios_saf": "<7.0",
+      "samsung_mob": "<2"
     },
     "detectSource": "\"document\"in self&&\"hidden\"in document&&\"visibilityState\"in document\n",
     "baseDir": "document/visibilityState",

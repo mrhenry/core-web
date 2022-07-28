@@ -430,7 +430,7 @@
             "version_added": "42"
           },
           "chrome_android": {
-            "version_added": "43"
+            "version_added": "42"
           },
           "edge": {
             "version_added": "14"
@@ -451,7 +451,7 @@
             "version_added": "29"
           },
           "opera_android": {
-            "version_added": "30"
+            "version_added": "29"
           },
           "safari": {
             "version_added": "9"
@@ -463,7 +463,7 @@
             "version_added": "4.0"
           },
           "webview_android": {
-            "version_added": "43"
+            "version_added": "42"
           }
         }
       }

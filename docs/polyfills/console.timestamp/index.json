@@ -9,15 +9,14 @@
     ],
     "browsers": {
       "edge": "<16.15063",
-      "edge_mob": "<12",
-      "ie": "<11",
       "firefox": "<39",
-      "firefox_mob": "<10"
+      "firefox_mob": "<10",
+      "ie": "<11"
     },
     "engines": {
       "EdgeHTML": "12 - 16",
-      "Trident": "4.0 - 6.0",
-      "Gecko": "1.7 - 38"
+      "Gecko": "1.7 - 38",
+      "Trident": "4.0 - 6.0"
     },
     "size": 33,
     "isAlias": false,
@@ -129,10 +128,9 @@
     "docs": "https://developer.mozilla.org/en-US/docs/Web/API/Console/timeStamp",
     "browsers": {
       "edge": "<16.15063",
-      "edge_mob": "<12",
-      "ie": "<11",
       "firefox": "<39",
-      "firefox_mob": "<10"
+      "firefox_mob": "<10",
+      "ie": "<11"
     },
     "detectSource": "\"console\"in self&&\"timeStamp\"in self.console\n",
     "baseDir": "console/timeStamp",

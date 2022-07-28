@@ -6,25 +6,25 @@
     "name": "NodeList.prototype.forEach",
     "deps": [],
     "browsers": {
+      "android": "*",
+      "chrome": "<51",
       "edge": "<16",
       "edge_mob": "<16",
+      "firefox": "<50",
+      "firefox_mob": "<50",
       "ie": "*",
       "ie_mob": "*",
-      "chrome": "<51",
-      "firefox": "<50",
       "opera": "<38",
       "op_mob": "<38",
-      "safari": "<10",
-      "android": "<51",
-      "firefox_mob": "<50",
-      "ios_saf": "<10",
+      "safari": "<10.0",
+      "ios_saf": "<10.0",
       "samsung_mob": "<5"
     },
     "engines": {
-      "EdgeHTML": "12 - 15",
-      "Trident": ">= 4.0",
       "Blink": "28 - 50",
+      "EdgeHTML": "12 - 15",
       "Gecko": "1.7 - 49",
+      "Trident": ">= 4.0",
       "Presto": ">= 1",
       "WebKit": "85 - 601.5.17"
     },
@@ -85,14 +85,14 @@
     }
   },
   "polyfilled": {
-    "android": "<51",
+    "android": "*",
     "chrome": "<51",
     "edge": "<16",
     "firefox": "<50",
     "ie": "*",
     "opera": "<38",
-    "safari": "<10",
-    "ios_saf": "<10"
+    "safari": "<10.0",
+    "ios_saf": "<10.0"
   },
   "native": {
     "android": {
@@ -125,18 +125,18 @@
     "spec": "https://heycam.github.io/webidl/#es-forEach",
     "docs": "https://developer.mozilla.org/en-US/docs/Web/API/NodeList/forEach",
     "browsers": {
+      "android": "*",
+      "chrome": "<51",
       "edge": "<16",
       "edge_mob": "<16",
+      "firefox": "<50",
+      "firefox_mob": "<50",
       "ie": "*",
       "ie_mob": "*",
-      "chrome": "<51",
-      "firefox": "<50",
       "opera": "<38",
       "op_mob": "<38",
-      "safari": "<10",
-      "android": "<51",
-      "firefox_mob": "<50",
-      "ios_saf": "<10",
+      "safari": "<10.0",
+      "ios_saf": "<10.0",
       "samsung_mob": "<5"
     },
     "detectSource": "\"forEach\"in NodeList.prototype\n",

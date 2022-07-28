@@ -11,21 +11,22 @@
     ],
     "browsers": {
       "chrome": "<50",
-      "edge": "<79",
+      "edge": "*",
       "edge_mob": "*",
       "firefox": "<19",
-      "safari": "<11",
       "ie": ">=10",
       "opera": "<37",
-      "ios_saf": "<11"
+      "safari": "<11.0",
+      "ios_saf": "<11.0",
+      "samsung_mob": "<5"
     },
     "engines": {
-      "Blink": "28 - 49",
+      "Blink": ">= 28",
       "EdgeHTML": ">= 12",
       "Gecko": "1.7 - 18",
-      "WebKit": "85 - 603.2.1",
       "Trident": ">= 6.0",
-      "Presto": ">= 1"
+      "Presto": ">= 1",
+      "WebKit": "85 - 603.2.1"
     },
     "size": 261,
     "isAlias": false,
@@ -198,12 +199,12 @@
   },
   "polyfilled": {
     "chrome": "<50",
-    "edge": "<79",
+    "edge": "*",
     "firefox": "<19",
     "ie": ">=10",
     "opera": "<37",
-    "safari": "<11",
-    "ios_saf": "<11"
+    "safari": "<11.0",
+    "ios_saf": "<11.0"
   },
   "native": {
     "android": {
@@ -253,13 +254,14 @@
     "license": "MIT",
     "browsers": {
       "chrome": "<50",
-      "edge": "<79",
+      "edge": "*",
       "edge_mob": "*",
       "firefox": "<19",
-      "safari": "<11",
       "ie": ">=10",
       "opera": "<37",
-      "ios_saf": "<11"
+      "safari": "<11.0",
+      "ios_saf": "<11.0",
+      "samsung_mob": "<5"
     },
     "detectSource": "\"toBlob\"in HTMLCanvasElement.prototype\n",
     "baseDir": "HTMLCanvasElement/prototype/toBlob",

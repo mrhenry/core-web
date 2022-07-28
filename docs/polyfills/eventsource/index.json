@@ -6,22 +6,24 @@
     "name": "EventSource",
     "deps": [],
     "browsers": {
-      "firefox": "<36",
+      "android": "<4.4",
       "chrome": "<26",
-      "edge": "<79",
+      "edge": "*",
       "edge_mob": "*",
-      "safari": "<7",
-      "opera": "<12",
+      "firefox": "<36",
       "ie": "*",
       "ie_mob": "*",
-      "android": "<4.4"
+      "opera": "<12",
+      "safari": "<7.0",
+      "ios_saf": "<7.0",
+      "samsung_mob": "<2"
     },
     "engines": {
-      "Gecko": "1.7 - 35",
       "EdgeHTML": ">= 12",
-      "WebKit": "85 - 536.25",
+      "Gecko": "1.7 - 35",
+      "Trident": ">= 4.0",
       "Presto": "1 - 2.10",
-      "Trident": ">= 4.0"
+      "WebKit": "85 - 536.26"
     },
     "size": 12027,
     "isAlias": false,
@@ -657,11 +659,12 @@
   "polyfilled": {
     "android": "<4.4",
     "chrome": "<26",
-    "edge": "<79",
+    "edge": "*",
     "firefox": "<36",
     "ie": "*",
     "opera": "<12",
-    "safari": "<7"
+    "safari": "<7.0",
+    "ios_saf": "<7.0"
   },
   "native": {
     "android": {
@@ -697,15 +700,17 @@
     "license": "MIT",
     "repo": "https://github.com/Yaffle/EventSource",
     "browsers": {
-      "firefox": "<36",
+      "android": "<4.4",
       "chrome": "<26",
-      "edge": "<79",
+      "edge": "*",
       "edge_mob": "*",
-      "safari": "<7",
-      "opera": "<12",
+      "firefox": "<36",
       "ie": "*",
       "ie_mob": "*",
-      "android": "<4.4"
+      "opera": "<12",
+      "safari": "<7.0",
+      "ios_saf": "<7.0",
+      "samsung_mob": "<2"
     },
     "detectSource": "\"EventSource\"in self&&\"function\"==typeof self.EventSource\n",
     "baseDir": "EventSource",

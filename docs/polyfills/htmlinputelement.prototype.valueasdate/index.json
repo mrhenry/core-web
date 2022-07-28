@@ -6,26 +6,25 @@
     "name": "HTMLInputElement.prototype.valueAsDate",
     "deps": [],
     "browsers": {
-      "android": "<43",
+      "android": "*",
       "bb": "*",
       "chrome": "<43",
       "firefox": "*",
-      "ios_chr": "<4",
-      "ios_saf": "<4",
-      "ie": "9 - *",
-      "ie_mob": "9 - *",
+      "firefox_mob": "*",
+      "ie": ">=9",
+      "ie_mob": ">=9",
       "opera": "<12.1",
       "op_mini": "<12.1",
       "safari": ">=10.1",
-      "firefox_mob": "*",
+      "ios_saf": "<4.0",
       "samsung_mob": "<4"
     },
     "engines": {
       "Blink": "28 - 42",
       "Gecko": ">= 1.7",
-      "WebKit": ">= 522.11",
       "Trident": ">= 5.0",
-      "Presto": "1 - 2.10"
+      "Presto": "1 - 2.10",
+      "WebKit": ">= 522.11"
     },
     "size": 3348,
     "isAlias": false,
@@ -96,13 +95,13 @@
     }
   },
   "polyfilled": {
-    "android": "<43",
+    "android": "*",
     "chrome": "<43",
     "firefox": "*",
-    "ie": "9 - *",
+    "ie": ">=9",
     "opera": "<12.1",
     "safari": ">=10.1",
-    "ios_saf": "<4"
+    "ios_saf": "<4.0"
   },
   "native": {
     "android": {
@@ -149,18 +148,17 @@
       "Browsers that do not support date|month|week|time also won't have type property support. This implies we have to look at the attribute of the element. Setting the property without updating the attribute will have unexpected behaviour."
     ],
     "browsers": {
-      "android": "<43",
+      "android": "*",
       "bb": "*",
       "chrome": "<43",
       "firefox": "*",
-      "ios_chr": "<4",
-      "ios_saf": "<4",
-      "ie": "9 - *",
-      "ie_mob": "9 - *",
+      "firefox_mob": "*",
+      "ie": ">=9",
+      "ie_mob": ">=9",
       "opera": "<12.1",
       "op_mini": "<12.1",
       "safari": ">=10.1",
-      "firefox_mob": "*",
+      "ios_saf": "<4.0",
       "samsung_mob": "<4"
     },
     "detectSource": "(function(){if(!(\"HTMLInputElement\"in self&&\"valueAsDate\"in HTMLInputElement.prototype))return!1\ntry{for(var e=document.createElement(\"INPUT\"),t=[[\"date\",\"2006-01-02\",new Date(\"2006-01-02T00:00:00.000Z\")],[\"month\",\"2019-12\",new Date(\"2019-12-01T00:00:00.000Z\")],[\"week\",\"2015-W53\",new Date(\"2015-12-28T00:00:00.000Z\")],[\"time\",\"21:59\",new Date(\"1970-01-01T21:59:00.000Z\")]],n=0;n<t.length;n++){var r=t[n]\ntry{e.type=r[0]}catch(e){}if(e.setAttribute(\"type\",r[0]),e.value=r[1],e.valueAsDate.getTime()!==r[2].getTime())return!1}}catch(e){return!1}return!0})()\n",

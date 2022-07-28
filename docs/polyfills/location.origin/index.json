@@ -6,19 +6,22 @@
     "name": "location.origin",
     "deps": [],
     "browsers": {
+      "chrome": "<29",
+      "firefox": "<21",
+      "firefox_mob": "<21",
       "ie": "6 - 10",
       "ie_mob": "10",
-      "firefox": "<=20",
-      "safari": "<=6",
-      "ios_saf": "<=6",
-      "chrome": "<29.0.0",
-      "firefox_mob": "<=20"
+      "opera": "<16",
+      "op_mob": "<16",
+      "safari": "<7.0",
+      "ios_saf": "<7.0"
     },
     "engines": {
-      "Trident": "4.0 - 6.0",
+      "Blink": "28",
       "Gecko": "1.7 - 20",
-      "WebKit": "85 - 536.26",
-      "Blink": "28"
+      "Trident": "4.0 - 6.0",
+      "Presto": ">= 1",
+      "WebKit": "85 - 536.26"
     },
     "size": 346,
     "isAlias": false,
@@ -84,11 +87,12 @@
     }
   },
   "polyfilled": {
-    "chrome": "<29.0.0",
-    "firefox": "<=20",
+    "chrome": "<29",
+    "firefox": "<21",
     "ie": "6 - 10",
-    "safari": "<=6",
-    "ios_saf": "<=6"
+    "opera": "<16",
+    "safari": "<7.0",
+    "ios_saf": "<7.0"
   },
   "native": {
     "android": {
@@ -126,14 +130,17 @@
       "default"
     ],
     "dependencies": [],
+    "docs": "https://developer.mozilla.org/en-US/docs/Web/API/Location/origin",
     "browsers": {
+      "chrome": "<29",
+      "firefox": "<21",
+      "firefox_mob": "<21",
       "ie": "6 - 10",
       "ie_mob": "10",
-      "firefox": "<=20",
-      "safari": "<=6",
-      "ios_saf": "<=6",
-      "chrome": "<29.0.0",
-      "firefox_mob": "<=20"
+      "opera": "<16",
+      "op_mob": "<16",
+      "safari": "<7.0",
+      "ios_saf": "<7.0"
     },
     "detectSource": "\"location\"in self&&\"origin\"in self.location\n",
     "baseDir": "location/origin",

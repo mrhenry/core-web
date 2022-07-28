@@ -8,25 +8,26 @@
       "requestAnimationFrame"
     ],
     "browsers": {
-      "edge": "<79",
+      "android": "*",
+      "chrome": "<47",
+      "edge": "*",
       "edge_mob": "*",
-      "ie": "10 - *",
-      "ie_mob": "10 - *",
       "firefox": "27 - 50",
+      "firefox_mob": "27 - 50",
+      "ie": ">=10",
+      "ie_mob": ">=10",
       "opera": "11.6 - 42",
       "safari": "<13.1",
-      "chrome": "<47",
       "ios_saf": "<13.4",
-      "firefox_mob": "27 - 50",
-      "android": "<53"
+      "samsung_mob": "<5"
     },
     "engines": {
+      "Blink": ">= 28",
       "EdgeHTML": ">= 12",
-      "Trident": ">= 6.0",
       "Gecko": "27 - 50",
+      "Trident": ">= 6.0",
       "Presto": ">= 2.10",
-      "WebKit": "85 - 608.2.11",
-      "Blink": "28 - 46"
+      "WebKit": "85 - 608.2.11"
     },
     "size": 47131,
     "isAlias": false,
@@ -449,11 +450,11 @@
     }
   },
   "polyfilled": {
-    "android": "<53",
+    "android": "*",
     "chrome": "<47",
-    "edge": "<79",
+    "edge": "*",
     "firefox": "27 - 50",
-    "ie": "10 - *",
+    "ie": ">=10",
     "opera": "11.6 - 42",
     "safari": "<13.1",
     "ios_saf": "<13.4"
@@ -496,17 +497,18 @@
     "repo": "https://github.com/web-animations/web-animations-js",
     "docs": "https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API",
     "browsers": {
-      "edge": "<79",
+      "android": "*",
+      "chrome": "<47",
+      "edge": "*",
       "edge_mob": "*",
-      "ie": "10 - *",
-      "ie_mob": "10 - *",
       "firefox": "27 - 50",
+      "firefox_mob": "27 - 50",
+      "ie": ">=10",
+      "ie_mob": ">=10",
       "opera": "11.6 - 42",
       "safari": "<13.1",
-      "chrome": "<47",
       "ios_saf": "<13.4",
-      "firefox_mob": "27 - 50",
-      "android": "<53"
+      "samsung_mob": "<5"
     },
     "install": {
       "module": "web-animations-js",

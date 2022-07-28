@@ -9,29 +9,29 @@
       "performance.now"
     ],
     "browsers": {
-      "android": "<51",
+      "android": "*",
       "bb": "*",
-      "chrome": "< 51",
-      "edge": "< 16",
-      "edge_mob": "< 16",
-      "firefox": "< 55",
-      "firefox_mob": "< 55",
+      "chrome": "<51",
+      "edge": "<16",
+      "edge_mob": "<16",
+      "firefox": "<55",
+      "firefox_mob": "<55",
       "ie": "*",
       "ie_mob": "*",
-      "ios_saf": "<16",
+      "opera": "<45",
+      "op_mob": "<46",
       "op_mini": "*",
-      "op_mob": "< 46",
-      "opera": "< 45",
-      "safari": "<16",
-      "samsung_mob": "< 7"
+      "safari": "<16.0",
+      "ios_saf": "<16.0",
+      "samsung_mob": "<7"
     },
     "engines": {
       "Blink": "28 - 50",
       "EdgeHTML": "12 - 15",
       "Gecko": "1.7 - 54",
       "Trident": ">= 4.0",
-      "WebKit": ">= 85",
-      "Presto": ">= 1"
+      "Presto": ">= 1",
+      "WebKit": ">= 85"
     },
     "size": 6661,
     "isAlias": false,
@@ -574,14 +574,14 @@
     }
   },
   "polyfilled": {
-    "android": "<51",
-    "chrome": "< 51",
-    "edge": "< 16",
-    "firefox": "< 55",
+    "android": "*",
+    "chrome": "<51",
+    "edge": "<16",
+    "firefox": "<55",
     "ie": "*",
-    "opera": "< 45",
-    "safari": "<16",
-    "ios_saf": "<16"
+    "opera": "<45",
+    "safari": "<16.0",
+    "ios_saf": "<16.0"
   },
   "native": {
     "android": {
@@ -620,21 +620,21 @@
     "notes": [],
     "repo": "https://github.com/w3c/IntersectionObserver",
     "browsers": {
-      "android": "<51",
+      "android": "*",
       "bb": "*",
-      "chrome": "< 51",
-      "edge": "< 16",
-      "edge_mob": "< 16",
-      "firefox": "< 55",
-      "firefox_mob": "< 55",
+      "chrome": "<51",
+      "edge": "<16",
+      "edge_mob": "<16",
+      "firefox": "<55",
+      "firefox_mob": "<55",
       "ie": "*",
       "ie_mob": "*",
-      "ios_saf": "<16",
+      "opera": "<45",
+      "op_mob": "<46",
       "op_mini": "*",
-      "op_mob": "< 46",
-      "opera": "< 45",
-      "safari": "<16",
-      "samsung_mob": "< 7"
+      "safari": "<16.0",
+      "ios_saf": "<16.0",
+      "samsung_mob": "<7"
     },
     "detectSource": "\"IntersectionObserver\"in window&&\"IntersectionObserverEntry\"in window&&\"intersectionRatio\"in window.IntersectionObserverEntry.prototype\n",
     "baseDir": "IntersectionObserver",

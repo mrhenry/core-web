@@ -8,14 +8,14 @@
       "console"
     ],
     "browsers": {
-      "ie": "*",
-      "firefox": "1 - 4",
-      "chrome": "<31"
+      "chrome": "<31",
+      "firefox": "<5",
+      "ie": "*"
     },
     "engines": {
-      "Trident": ">= 4.0",
+      "Blink": "28 - 30",
       "Gecko": "1.7 - 2",
-      "Blink": "28 - 30"
+      "Trident": ">= 4.0"
     },
     "size": 28,
     "isAlias": false,
@@ -82,7 +82,7 @@
   },
   "polyfilled": {
     "chrome": "<31",
-    "firefox": "1 - 4",
+    "firefox": "<5",
     "ie": "*"
   },
   "native": {
@@ -121,9 +121,9 @@
     "spec": "https://console.spec.whatwg.org",
     "docs": "https://developer.mozilla.org/en/docs/Web/API/console",
     "browsers": {
-      "ie": "*",
-      "firefox": "1 - 4",
-      "chrome": "<31"
+      "chrome": "<31",
+      "firefox": "<5",
+      "ie": "*"
     },
     "detectSource": "\"console\"in self&&\"time\"in self.console\n",
     "baseDir": "console/time",

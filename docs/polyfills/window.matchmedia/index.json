@@ -9,19 +9,20 @@
     ],
     "browsers": {
       "android": "2.1 - 2.3",
-      "blackberry": "7",
+      "bb": "7",
+      "chrome": "<37",
       "ie": "<10",
       "opera": "11.5 - 12.1",
-      "op_mini": "*",
       "op_mob": "10 - 12",
-      "safari": "4 - 5",
-      "chrome": "<37"
+      "op_mini": "*",
+      "safari": "<5.1",
+      "ios_saf": "<5.0"
     },
     "engines": {
+      "Blink": "28 - 36",
       "Trident": "4.0 - 5.0",
       "Presto": ">= 2.9",
-      "WebKit": "530.17 - 534.48",
-      "Blink": "28 - 36"
+      "WebKit": "85 - 533.17"
     },
     "size": 1144,
     "isAlias": false,
@@ -85,7 +86,8 @@
     "chrome": "<37",
     "ie": "<10",
     "opera": "11.5 - 12.1",
-    "safari": "4 - 5"
+    "safari": "<5.1",
+    "ios_saf": "<5.0"
   },
   "native": {
     "android": {
@@ -125,13 +127,14 @@
     "spec": "http://dev.w3.org/csswg/cssom-view/#the-mediaquerylist-interface",
     "browsers": {
       "android": "2.1 - 2.3",
-      "blackberry": "7",
+      "bb": "7",
+      "chrome": "<37",
       "ie": "<10",
       "opera": "11.5 - 12.1",
-      "op_mini": "*",
       "op_mob": "10 - 12",
-      "safari": "4 - 5",
-      "chrome": "<37"
+      "op_mini": "*",
+      "safari": "<5.1",
+      "ios_saf": "<5.0"
     },
     "detectSource": "\"matchMedia\"in self&&\"MediaQueryList\"in self\n",
     "baseDir": "matchMedia",

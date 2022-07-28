@@ -8,12 +8,12 @@
       "console"
     ],
     "browsers": {
-      "ie": "*",
-      "firefox": "1 - 4"
+      "firefox": "<5",
+      "ie": "*"
     },
     "engines": {
-      "Trident": ">= 4.0",
-      "Gecko": "1.7 - 2"
+      "Gecko": "1.7 - 2",
+      "Trident": ">= 4.0"
     },
     "size": 27,
     "isAlias": false,
@@ -154,7 +154,7 @@
     }
   },
   "polyfilled": {
-    "firefox": "1 - 4",
+    "firefox": "<5",
     "ie": "*"
   },
   "native": {
@@ -193,8 +193,8 @@
     "spec": "https://console.spec.whatwg.org",
     "docs": "https://developer.mozilla.org/en/docs/Web/API/console",
     "browsers": {
-      "ie": "*",
-      "firefox": "1 - 4"
+      "firefox": "<5",
+      "ie": "*"
     },
     "detectSource": "\"console\"in self&&\"log\"in self.console\n",
     "baseDir": "console/log",
