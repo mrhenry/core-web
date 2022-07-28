@@ -5,6 +5,7 @@ module.exports = function (_, opts) {
 	const featureSet = required({
 		browsers: opts.browsers || {},
 		engines: opts.engines || {},
+		browserslist: opts.browserslist || null,
 		},
 		{
 			debug: opts.debug || false,
