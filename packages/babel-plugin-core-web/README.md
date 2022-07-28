@@ -51,6 +51,34 @@ module.exports = function(api) {
 };
 ```
 
+```js
+module.exports = function(api) {
+	api.cache(true);
+	return {
+		plugins: [
+			// Use browserslist default :
+			["@mrhenry/core-web"]
+		]
+	};
+};
+```
+
+```js
+module.exports = function(api) {
+	api.cache(true);
+	return {
+		plugins: [
+			// A custom browserslist config :
+			["@mrhenry/core-web", {
+				browserslist: [
+					"last 2 versions",
+					">0.5%"
+				]
+			}]
+		]
+	};
+};
+```
 
 ## webpack config
 

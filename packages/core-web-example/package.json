@@ -1,6 +1,6 @@
 {
   "name": "@mrhenry/core-web-example",
-  "version": "0.7.5",
+  "version": "0.7.6",
   "private": true,
   "scripts": {
     "build": "babel src -d lib"
@@ -11,11 +11,6 @@
     "@mrhenry/babel-plugin-core-web": "*",
     "@mrhenry/core-web": "*"
   },
-  "browserslist": [
-    "last 1 version",
-    "> 1%",
-    "IE 10"
-  ],
   "volta": {
     "extends": "../../package.json"
   }

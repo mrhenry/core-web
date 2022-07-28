@@ -66,9 +66,37 @@ function required(targets, opts = {}) {
         }
     }
     if (!hasBrowsers && !hasEngines) {
-        console.log(targets.browserslist);
-        const browsers = browserslist(targets.browserslist ?? null);
-        console.log(browsers.map(x => parseRange(x)));
+        browserslist(targets.browserslist ?? null).map(x => parseRange(x)).forEach((x => {
+            if (x.browser === 'op_mini') {
+                // TODO : decide what to do with op_mini
+                return;
+            }
+            switch (x.browser) {
+                case 'edge':
+                    x.versions = x.versions.filter((y) => {
+                        return semver.satisfies(semver.coerce(y), '<=18');
+                    });
+                    break;
+                case 'android':
+                    x.versions = x.versions.filter((y) => {
+                        return semver.satisfies(semver.coerce(y), '<=6');
+                    });
+                    break;
+                case 'and_ff':
+                    x.browser = 'firefox_mob';
+                    break;
+                case 'samsung':
+                    x.browser = 'samsung_mob';
+                    break;
+                default:
+                    break;
+            }
+            for (const version of x.versions) {
+                if (browsers.has(x.browser)) {
+                    all = all.concat(requiredForBrowser(x.browser, version));
+                }
+            }
+        }));
     }
     return Array.from(new Set(all));
 }
@@ -140,8 +168,11 @@ function requiredForEngine(engine, version) {
 }
 function logUsedTargets(targets) {
     let all = [];
+    let hasBrowsers = false;
+    let hasEngines = false;
     if (targets.browsers) {
         for (const browser of Object.keys(targets.browsers)) {
+            hasBrowsers = true;
             if (!browsers.has(browser)) {
                 continue;
             }
@@ -150,16 +181,57 @@ function logUsedTargets(targets) {
     }
     if (targets.engines) {
         for (const engine of Object.keys(targets.engines)) {
+            hasEngines = true;
             if (!engines.has(engine)) {
                 continue;
             }
             all.push(`${engine}/${semver.coerce(targets.engines[engine])}`);
         }
     }
+    if (!hasBrowsers && !hasEngines) {
+        browserslist(targets.browserslist ?? null).map(x => parseRange(x)).forEach((x => {
+            if (x.browser === 'op_mini') {
+                // TODO : decide what to do with op_mini
+                return;
+            }
+            switch (x.browser) {
+                case 'edge':
+                    x.versions = x.versions.filter((y) => {
+                        return semver.satisfies(semver.coerce(y), '<=18');
+                    });
+                    break;
+                case 'android':
+                    x.versions = x.versions.filter((y) => {
+                        return semver.satisfies(semver.coerce(y), '<=6');
+                    });
+                    break;
+                case 'and_ff':
+                    x.browser = 'firefox_mob';
+                    break;
+                case 'samsung':
+                    x.browser = 'samsung_mob';
+                    break;
+                default:
+                    break;
+            }
+            for (const version of x.versions) {
+                if (browsers.has(x.browser)) {
+                    all.push(`${x.browser}/${semver.coerce(version)}`);
+                }
+            }
+        }));
+    }
     console.log("@mrhenry/core-web - using targets:");
     console.log(JSON.stringify(all, null, 2) + '\n');
 }
 function parseRange(range) {
+    if (range === 'op_mini all') {
+        return {
+            browser: 'op_mini',
+            versions: ['*'],
+            operators: [],
+        };
+    }
     let browser = '';
     let versions = [];
     let operators = [];
@@ -215,23 +287,19 @@ function parseRange(range) {
         buffer = '';
     }
     operators = operators.filter(operator => operator.trim().length > 0);
-    if (operators.length === 1 &&
+    if ((operators.length === 1 &&
         operators[0] === '-' &&
-        versions.length === 2) {
-        versions = [versions[1]];
-        operators = [];
+        versions.length === 2) ||
+        operators.length === 0) {
+        return {
+            browser: browser.trim(),
+            versions: versions,
+            operators: operators,
+        };
     }
-    return {
-        browser: browser.trim(),
-        versions: versions,
-        isRanged: operators.length > 0,
-        hasBoundary: true,
-    };
+    throw new Error(`Unexpected browserslist result ${range}\nplease file an issue at https://github.com/mrhenry/core-web/issues`);
 }
 function consumeVersionToken(x) {
-    if (x === 'all') {
-        return '*';
-    }
     let buffer = '';
     for (const char of x) {
         switch (char) {
@@ -239,6 +307,7 @@ function consumeVersionToken(x) {
             case '>':
             case '=':
             case '|':
+            case '-': // only an operator when versions are coming from browserslist, in semver this could be part of a single version
             case ' ':
             case '~':
             case '^':
