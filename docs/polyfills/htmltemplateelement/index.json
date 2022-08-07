@@ -205,7 +205,7 @@
     "install": {
       "module": "@webcomponents/template",
       "paths": [
-        "template.js"
+        "template.min.js"
       ]
     },
     "detectSource": "\"HTMLTemplateElement\"in self\n",
@@ -213,6 +213,6 @@
     "hasTests": true,
     "isTestable": true,
     "isPublic": true,
-    "size": 7418
+    "size": 7114
   }
 }

@@ -71,7 +71,9 @@
             },
             {
               "notes": "Available as a part of the <code>util</code> module.",
-              "version_added": "8.3.0"
+              "partial_implementation": true,
+              "version_added": "8.3.0",
+              "version_removed": "11.0.0"
             }
           ],
           "oculus": {
@@ -136,7 +138,8 @@
           {
             "notes": "Available as a part of the <code>util</code> module.",
             "partial_implementation": true,
-            "version_added": "8.3.0"
+            "version_added": "8.3.0",
+            "version_removed": "11.0.0"
           }
         ],
         "oculus": {

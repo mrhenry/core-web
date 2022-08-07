@@ -39,7 +39,7 @@
   "mdn": {
     "__compat": {
       "mdn_url": "https://developer.mozilla.org/docs/Web/API/DocumentFragment/prepend",
-      "source_file": "api/_mixins/ParentNode__DocumentFragment.json",
+      "source_file": "api/DocumentFragment.json",
       "spec_url": "https://dom.spec.whatwg.org/#ref-for-dom-parentnode-prepend①",
       "status": {
         "deprecated": false,

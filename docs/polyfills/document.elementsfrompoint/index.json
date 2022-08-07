@@ -36,7 +36,7 @@
   "mdn": {
     "__compat": {
       "mdn_url": "https://developer.mozilla.org/docs/Web/API/Document/elementsFromPoint",
-      "source_file": "api/_mixins/DocumentOrShadowRoot__Document.json",
+      "source_file": "api/Document.json",
       "spec_url": "https://drafts.csswg.org/cssom-view/#dom-document-elementsfrompoint",
       "status": {
         "deprecated": false,
