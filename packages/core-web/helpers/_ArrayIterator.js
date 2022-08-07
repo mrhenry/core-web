@@ -1,7 +1,7 @@
 import Iterator from "@mrhenry/core-web/helpers/_Iterator";
 
 // _ArrayIterator
-/* global Iterator */
+/* global Iterator, Symbol */
 // A modification of https://github.com/medikoo/es6-iterator
 // Copyright (C) 2013-2015 Mariusz Nowak (www.medikoo.com)
 
@@ -48,6 +48,13 @@ var ArrayIterator = (function() { // eslint-disable-line no-unused-vars
 			enumerable: false,
 			writable: true
 		}
+	});
+
+	Object.defineProperty(ArrayIterator.prototype, Symbol.toStringTag, {
+		value: 'Array Iterator',
+		writable: false,
+		enumerable: false,
+		configurable: true
 	});
 
 	return ArrayIterator;
