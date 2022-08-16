@@ -16,8 +16,8 @@
       "opera": "<48",
       "op_mob": "<45",
       "safari": "<10.1",
-      "ios_saf": "<10.1",
-      "samsung_mob": "<8"
+      "ios_saf": "<10.3",
+      "samsung_mob": "<8.0"
     },
     "engines": {
       "Blink": ">= 28",
@@ -537,7 +537,7 @@
     "ie": ">=9",
     "opera": "<48",
     "safari": "<10.1",
-    "ios_saf": "<10.1"
+    "ios_saf": "<10.3"
   },
   "native": {
     "android": [
@@ -631,8 +631,8 @@
       "opera": "<48",
       "op_mob": "<45",
       "safari": "<10.1",
-      "ios_saf": "<10.1",
-      "samsung_mob": "<8"
+      "ios_saf": "<10.3",
+      "samsung_mob": "<8.0"
     },
     "detectSource": "\"DOMRect\"in self&&function(e){try{return new e}catch(e){return!1}}(self.DOMRect)\n",
     "baseDir": "DOMRect",

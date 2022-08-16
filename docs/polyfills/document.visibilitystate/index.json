@@ -12,11 +12,12 @@
       "android": "<4.4.3",
       "chrome": "<33",
       "firefox": "<18",
+      "firefox_mob": "<18",
       "opera": "<20",
       "op_mob": "<20",
       "safari": "<7.0",
       "ios_saf": "<7.0",
-      "samsung_mob": "<2"
+      "samsung_mob": "<2.0"
     },
     "engines": {
       "Blink": "28 - 32",
@@ -295,11 +296,12 @@
       "android": "<4.4.3",
       "chrome": "<33",
       "firefox": "<18",
+      "firefox_mob": "<18",
       "opera": "<20",
       "op_mob": "<20",
       "safari": "<7.0",
       "ios_saf": "<7.0",
-      "samsung_mob": "<2"
+      "samsung_mob": "<2.0"
     },
     "detectSource": "\"document\"in self&&\"hidden\"in document&&\"visibilityState\"in document\n",
     "baseDir": "document/visibilityState",

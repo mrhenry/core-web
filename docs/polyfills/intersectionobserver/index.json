@@ -23,7 +23,7 @@
       "op_mini": "*",
       "safari": "<16.0",
       "ios_saf": "<16.0",
-      "samsung_mob": "<7"
+      "samsung_mob": "<7.0"
     },
     "engines": {
       "Blink": "28 - 50",
@@ -33,7 +33,7 @@
       "Presto": ">= 1",
       "WebKit": ">= 85"
     },
-    "size": 6661,
+    "size": 6733,
     "isAlias": false,
     "providedByCoreWeb": false
   },
@@ -634,13 +634,13 @@
       "op_mini": "*",
       "safari": "<16.0",
       "ios_saf": "<16.0",
-      "samsung_mob": "<7"
+      "samsung_mob": "<7.0"
     },
     "detectSource": "\"IntersectionObserver\"in window&&\"IntersectionObserverEntry\"in window&&\"intersectionRatio\"in window.IntersectionObserverEntry.prototype\n",
     "baseDir": "IntersectionObserver",
     "hasTests": false,
     "isTestable": true,
     "isPublic": true,
-    "size": 6661
+    "size": 6733
   }
 }

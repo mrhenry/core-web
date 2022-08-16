@@ -24,7 +24,7 @@
       "op_mini": "*",
       "safari": "<12.0",
       "ios_saf": "<12.0",
-      "samsung_mob": "<9"
+      "samsung_mob": "<9.0"
     },
     "engines": {
       "Blink": "28 - 66",
@@ -200,7 +200,7 @@
       "op_mini": "*",
       "safari": "<12.0",
       "ios_saf": "<12.0",
-      "samsung_mob": "<9"
+      "samsung_mob": "<9.0"
     },
     "detectSource": "\"replace\"in(document.createElement(\"div\").classList||{})\n",
     "baseDir": "DOMTokenList/prototype/replace",

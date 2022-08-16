@@ -20,7 +20,7 @@
       "op_mini": "<45",
       "safari": "<10.1",
       "ios_saf": "<10.3",
-      "samsung_mob": "<8"
+      "samsung_mob": "<8.0"
     },
     "engines": {
       "Blink": "28 - 60",
@@ -144,7 +144,7 @@
       "op_mini": "<45",
       "safari": "<10.1",
       "ios_saf": "<10.3",
-      "samsung_mob": "<8"
+      "samsung_mob": "<8.0"
     },
     "detectSource": "\"document\"in self&&\"getAttributeNames\"in document.documentElement\n",
     "baseDir": "Element/prototype/getAttributeNames",

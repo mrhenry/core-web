@@ -1,0 +1,153 @@
+{
+  "name": "CharacterData.prototype.remove",
+  "slug": "CharacterData.prototype.remove",
+  "polyfillName": "CharacterData.prototype.remove",
+  "coreWeb": {
+    "name": "CharacterData.prototype.remove",
+    "deps": [
+      "Element.prototype.remove",
+      "_mutation"
+    ],
+    "browsers": {
+      "android": "<4.4",
+      "bb": "*",
+      "chrome": "<24",
+      "firefox": "<23",
+      "firefox_mob": "<23",
+      "ie": "*",
+      "ie_mob": "*",
+      "opera": "<15",
+      "op_mob": "<14",
+      "op_mini": "*",
+      "safari": "<7.0",
+      "ios_saf": "<7.0",
+      "samsung_mob": "<1.5"
+    },
+    "engines": {
+      "Gecko": "1.7 - 22",
+      "Trident": ">= 4.0",
+      "Presto": ">= 1",
+      "WebKit": "85 - 536.26"
+    },
+    "size": 56,
+    "isAlias": false,
+    "providedByCoreWeb": false
+  },
+  "mdn": {
+    "__compat": {
+      "mdn_url": "https://developer.mozilla.org/docs/Web/API/CharacterData/remove",
+      "source_file": "api/CharacterData.json",
+      "spec_url": "https://dom.spec.whatwg.org/#ref-for-dom-childnode-remove①",
+      "status": {
+        "deprecated": false,
+        "experimental": false,
+        "standard_track": true
+      },
+      "support": {
+        "chrome": {
+          "version_added": "24"
+        },
+        "chrome_android": {
+          "version_added": "25"
+        },
+        "edge": {
+          "version_added": "12"
+        },
+        "firefox": {
+          "version_added": "23"
+        },
+        "firefox_android": {
+          "version_added": "23"
+        },
+        "ie": {
+          "version_added": false
+        },
+        "oculus": {
+          "version_added": "5.0"
+        },
+        "opera": {
+          "version_added": "15"
+        },
+        "opera_android": {
+          "version_added": "14"
+        },
+        "safari": {
+          "version_added": "7"
+        },
+        "safari_ios": {
+          "version_added": "7"
+        },
+        "samsunginternet_android": {
+          "version_added": "1.5"
+        },
+        "webview_android": {
+          "version_added": "4.4"
+        }
+      }
+    }
+  },
+  "polyfilled": {
+    "android": "<4.4",
+    "chrome": "<24",
+    "firefox": "<23",
+    "ie": "*",
+    "opera": "<15",
+    "safari": "<7.0",
+    "ios_saf": "<7.0"
+  },
+  "native": {
+    "android": {
+      "version_added": "4.4"
+    },
+    "chrome": {
+      "version_added": "24"
+    },
+    "edge": {
+      "version_added": "12"
+    },
+    "firefox": {
+      "version_added": "23"
+    },
+    "ie": {
+      "version_added": false
+    },
+    "opera": {
+      "version_added": "15"
+    },
+    "safari": {
+      "version_added": "7"
+    },
+    "ios_saf": {
+      "version_added": "7"
+    }
+  },
+  "polyfillio": {
+    "aliases": [],
+    "dependencies": [
+      "Element.prototype.remove"
+    ],
+    "spec": "https://dom.spec.whatwg.org/#dom-childnode-remove",
+    "docs": "https://developer.mozilla.org/en-US/docs/Web/API/CharacterData/remove",
+    "browsers": {
+      "android": "<4.4",
+      "bb": "*",
+      "chrome": "<24",
+      "firefox": "<23",
+      "firefox_mob": "<23",
+      "ie": "*",
+      "ie_mob": "*",
+      "opera": "<15",
+      "op_mob": "<14",
+      "op_mini": "*",
+      "safari": "<7.0",
+      "ios_saf": "<7.0",
+      "samsung_mob": "<1.5"
+    },
+    "detectSource": "\"remove\"in CharacterData.prototype\n",
+    "baseDir": "CharacterData/prototype/remove",
+    "hasTests": false,
+    "isTestable": true,
+    "isPublic": true,
+    "size": 56
+  }
+}

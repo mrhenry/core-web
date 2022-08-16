@@ -16,10 +16,11 @@
       "ie": "*",
       "ie_mob": "*",
       "opera": "<40",
+      "op_mob": "<30",
       "op_mini": "<41",
       "safari": "<11.1",
       "ios_saf": "<11.3",
-      "samsung_mob": "<6"
+      "samsung_mob": "<6.0"
     },
     "engines": {
       "Blink": ">= 28",
@@ -166,10 +167,11 @@
       "ie": "*",
       "ie_mob": "*",
       "opera": "<40",
+      "op_mob": "<30",
       "op_mini": "<41",
       "safari": "<11.1",
       "ios_saf": "<11.3",
-      "samsung_mob": "<6"
+      "samsung_mob": "<6.0"
     },
     "detectSource": "\"document\"in self&&\"elementsFromPoint\"in self.document\n",
     "baseDir": "document/elementsFromPoint",

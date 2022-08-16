@@ -13,13 +13,14 @@
       "edge": "*",
       "edge_mob": "*",
       "firefox": "4 - 36",
+      "firefox_mob": "<37",
       "ie": ">=9",
       "ie_mob": ">=9",
       "opera": "<48",
       "op_mob": "<45",
-      "safari": "*",
-      "ios_saf": "*",
-      "samsung_mob": "<8"
+      "safari": "<15.4",
+      "ios_saf": "<15.4",
+      "samsung_mob": "<8.0"
     },
     "engines": {
       "Blink": ">= 28",
@@ -27,7 +28,7 @@
       "Gecko": "2 - 36",
       "Trident": ">= 5.0",
       "Presto": ">= 1",
-      "WebKit": ">= 85"
+      "WebKit": "85 - 612.4.9"
     },
     "size": 9748,
     "isAlias": false,
@@ -251,8 +252,8 @@
     "firefox": "4 - 36",
     "ie": ">=9",
     "opera": "<48",
-    "safari": "*",
-    "ios_saf": "*"
+    "safari": "<15.4",
+    "ios_saf": "<15.4"
   },
   "native": {
     "android": {
@@ -304,13 +305,14 @@
       "edge": "*",
       "edge_mob": "*",
       "firefox": "4 - 36",
+      "firefox_mob": "<37",
       "ie": ">=9",
       "ie_mob": ">=9",
       "opera": "<48",
       "op_mob": "<45",
-      "safari": "*",
-      "ios_saf": "*",
-      "samsung_mob": "<8"
+      "safari": "<15.4",
+      "ios_saf": "<15.4",
+      "samsung_mob": "<8.0"
     },
     "install": {
       "module": "seamless-scroll-polyfill",

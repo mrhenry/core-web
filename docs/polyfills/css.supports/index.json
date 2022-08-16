@@ -9,12 +9,13 @@
       "android": "<4.4",
       "chrome": "<28",
       "firefox": "<22",
+      "firefox_mob": "<22",
       "ie": "*",
       "opera": "<15",
       "op_mini": "*",
       "safari": "<9.0",
       "ios_saf": "<9.0",
-      "samsung_mob": "<8"
+      "samsung_mob": "<8.0"
     },
     "engines": {
       "Gecko": "1.7 - 21",
@@ -200,12 +201,13 @@
       "android": "<4.4",
       "chrome": "<28",
       "firefox": "<22",
+      "firefox_mob": "<22",
       "ie": "*",
       "opera": "<15",
       "op_mini": "*",
       "safari": "<9.0",
       "ios_saf": "<9.0",
-      "samsung_mob": "<8"
+      "samsung_mob": "<8.0"
     },
     "detectSource": "(\"function\"==typeof self.CSS||\"object\"==typeof self.CSS)&&\"function\"==typeof self.CSS.supports\n",
     "baseDir": "CSS/supports",

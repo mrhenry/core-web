@@ -15,10 +15,10 @@
       "ie": "*",
       "ie_mob": "*",
       "opera": "<26",
-      "op_mob": "*",
+      "op_mob": "<26",
       "safari": "<11.1",
       "ios_saf": "<11.3",
-      "samsung_mob": "<4"
+      "samsung_mob": "<4.0"
     },
     "engines": {
       "Blink": "28 - 38",
@@ -148,10 +148,10 @@
       "ie": "*",
       "ie_mob": "*",
       "opera": "<26",
-      "op_mob": "*",
+      "op_mob": "<26",
       "safari": "<11.1",
       "ios_saf": "<11.3",
-      "samsung_mob": "<4"
+      "samsung_mob": "<4.0"
     },
     "detectSource": "\"navigator\"in self&&\"sendBeacon\"in navigator\n",
     "baseDir": "navigator/sendBeacon",

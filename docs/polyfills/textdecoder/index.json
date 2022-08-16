@@ -15,9 +15,10 @@
       "ie": "*",
       "ie_mob": "*",
       "opera": "<25",
+      "op_mob": "<25",
       "safari": "<10.1",
       "ios_saf": "<10.3",
-      "samsung_mob": "<3"
+      "samsung_mob": "<3.0"
     },
     "engines": {
       "Blink": ">= 28",
@@ -589,9 +590,10 @@
       "ie": "*",
       "ie_mob": "*",
       "opera": "<25",
+      "op_mob": "<25",
       "safari": "<10.1",
       "ios_saf": "<10.3",
-      "samsung_mob": "<3"
+      "samsung_mob": "<3.0"
     },
     "detectSource": "\"TextEncoder\"in self&&\"TextDecoder\"in self\n",
     "baseDir": "TextEncoder",

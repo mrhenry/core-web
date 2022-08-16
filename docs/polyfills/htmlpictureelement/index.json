@@ -18,9 +18,10 @@
       "ie": "*",
       "ie_mob": ">=10",
       "opera": "11.6 - 29",
+      "op_mob": "<25",
       "safari": "<9.1",
       "ios_saf": "<9.3",
-      "samsung_mob": "<3"
+      "samsung_mob": "<3.0"
     },
     "engines": {
       "Blink": "28 - 37",
@@ -142,9 +143,10 @@
       "ie": "*",
       "ie_mob": ">=10",
       "opera": "11.6 - 29",
+      "op_mob": "<25",
       "safari": "<9.1",
       "ios_saf": "<9.3",
-      "samsung_mob": "<3"
+      "samsung_mob": "<3.0"
     },
     "install": {
       "module": "picturefill",

@@ -14,10 +14,11 @@
       "ie": "*",
       "ie_mob": "*",
       "opera": "<16",
-      "op_mini": "<16",
+      "op_mob": "<16",
+      "op_mini": "*",
       "safari": "<8.0",
       "ios_saf": "<8.0",
-      "samsung_mob": "<2"
+      "samsung_mob": "<2.0"
     },
     "engines": {
       "Blink": "28",
@@ -732,10 +733,11 @@
       "ie": "*",
       "ie_mob": "*",
       "opera": "<16",
-      "op_mini": "<16",
+      "op_mob": "<16",
+      "op_mini": "*",
       "safari": "<8.0",
       "ios_saf": "<8.0",
-      "samsung_mob": "<2"
+      "samsung_mob": "<2.0"
     },
     "detectSource": "\"DocumentFragment\"in self&&function(){try{return new DocumentFragment,!0}catch(n){return!1}}()\n",
     "baseDir": "DocumentFragment",

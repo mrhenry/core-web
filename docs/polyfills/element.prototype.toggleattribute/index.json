@@ -20,7 +20,7 @@
       "op_mini": "*",
       "safari": "<12.0",
       "ios_saf": "<12.0",
-      "samsung_mob": "<10"
+      "samsung_mob": "<10.0"
     },
     "engines": {
       "Blink": "28 - 68",
@@ -143,7 +143,7 @@
       "op_mini": "*",
       "safari": "<12.0",
       "ios_saf": "<12.0",
-      "samsung_mob": "<10"
+      "samsung_mob": "<10.0"
     },
     "detectSource": "\"document\"in self&&\"toggleAttribute\"in document.documentElement\n",
     "baseDir": "Element/prototype/toggleAttribute",

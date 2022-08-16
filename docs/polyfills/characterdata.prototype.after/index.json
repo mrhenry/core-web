@@ -1,0 +1,160 @@
+{
+  "name": "CharacterData.prototype.after",
+  "slug": "CharacterData.prototype.after",
+  "polyfillName": "CharacterData.prototype.after",
+  "coreWeb": {
+    "name": "CharacterData.prototype.after",
+    "deps": [
+      "Element.prototype.after",
+      "_mutation"
+    ],
+    "browsers": {
+      "android": "*",
+      "bb": "*",
+      "chrome": "<54",
+      "edge": "<17",
+      "edge_mob": "<17",
+      "firefox": "<49",
+      "firefox_mob": "<49",
+      "ie": "*",
+      "ie_mob": "*",
+      "opera": "<39",
+      "op_mob": "<41",
+      "op_mini": "*",
+      "safari": "<10.0",
+      "ios_saf": "<10.0",
+      "samsung_mob": "<6.0"
+    },
+    "engines": {
+      "Blink": "28 - 53",
+      "EdgeHTML": "12 - 16",
+      "Gecko": "1.7 - 48",
+      "Trident": ">= 4.0",
+      "Presto": ">= 1",
+      "WebKit": "85 - 601.5.17"
+    },
+    "size": 54,
+    "isAlias": false,
+    "providedByCoreWeb": false
+  },
+  "mdn": {
+    "__compat": {
+      "mdn_url": "https://developer.mozilla.org/docs/Web/API/CharacterData/after",
+      "source_file": "api/CharacterData.json",
+      "spec_url": "https://dom.spec.whatwg.org/#ref-for-dom-childnode-after①",
+      "status": {
+        "deprecated": false,
+        "experimental": false,
+        "standard_track": true
+      },
+      "support": {
+        "chrome": {
+          "version_added": "54"
+        },
+        "chrome_android": {
+          "version_added": "54"
+        },
+        "edge": {
+          "version_added": "17"
+        },
+        "firefox": {
+          "version_added": "49"
+        },
+        "firefox_android": {
+          "version_added": "49"
+        },
+        "ie": {
+          "version_added": false
+        },
+        "oculus": {
+          "version_added": "5.0"
+        },
+        "opera": {
+          "version_added": "39"
+        },
+        "opera_android": {
+          "version_added": "41"
+        },
+        "safari": {
+          "version_added": "10"
+        },
+        "safari_ios": {
+          "version_added": "10"
+        },
+        "samsunginternet_android": {
+          "version_added": "6.0"
+        },
+        "webview_android": {
+          "version_added": "54"
+        }
+      }
+    }
+  },
+  "polyfilled": {
+    "android": "*",
+    "chrome": "<54",
+    "edge": "<17",
+    "firefox": "<49",
+    "ie": "*",
+    "opera": "<39",
+    "safari": "<10.0",
+    "ios_saf": "<10.0"
+  },
+  "native": {
+    "android": {
+      "version_added": "54"
+    },
+    "chrome": {
+      "version_added": "54"
+    },
+    "edge": {
+      "version_added": "17"
+    },
+    "firefox": {
+      "version_added": "49"
+    },
+    "ie": {
+      "version_added": false
+    },
+    "opera": {
+      "version_added": "39"
+    },
+    "safari": {
+      "version_added": "10"
+    },
+    "ios_saf": {
+      "version_added": "10"
+    }
+  },
+  "polyfillio": {
+    "aliases": [],
+    "dependencies": [
+      "Element.prototype.after"
+    ],
+    "spec": "https://dom.spec.whatwg.org/#dom-childnode-after",
+    "docs": "https://developer.mozilla.org/en-US/docs/Web/API/CharacterData/after",
+    "browsers": {
+      "android": "*",
+      "bb": "*",
+      "chrome": "<54",
+      "edge": "<17",
+      "edge_mob": "<17",
+      "firefox": "<49",
+      "firefox_mob": "<49",
+      "ie": "*",
+      "ie_mob": "*",
+      "opera": "<39",
+      "op_mob": "<41",
+      "op_mini": "*",
+      "safari": "<10.0",
+      "ios_saf": "<10.0",
+      "samsung_mob": "<6.0"
+    },
+    "detectSource": "\"after\"in CharacterData.prototype\n",
+    "baseDir": "CharacterData/prototype/after",
+    "hasTests": false,
+    "isTestable": true,
+    "isPublic": true,
+    "size": 54
+  }
+}

@@ -22,7 +22,7 @@
       "op_mini": "*",
       "safari": "<9.0",
       "ios_saf": "<9.0",
-      "samsung_mob": "<4"
+      "samsung_mob": "<4.0"
     },
     "engines": {
       "Blink": "28 - 40",
@@ -154,7 +154,7 @@
       "op_mini": "*",
       "safari": "<9.0",
       "ios_saf": "<9.0",
-      "samsung_mob": "<4"
+      "samsung_mob": "<4.0"
     },
     "detectSource": "\"document\"in self&&\"closest\"in document.documentElement\n",
     "baseDir": "Element/prototype/closest",

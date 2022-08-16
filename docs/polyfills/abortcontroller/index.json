@@ -20,8 +20,8 @@
       "opera": "10 - 52",
       "op_mob": "<47",
       "safari": "3.1 - 12.0",
-      "ios_saf": "3.2 - 11.2",
-      "samsung_mob": "<9"
+      "ios_saf": "3.2 - 12.0",
+      "samsung_mob": "<9.0"
     },
     "engines": {
       "Blink": "28 - 65",
@@ -336,7 +336,7 @@
     "ie": ">=10",
     "opera": "10 - 52",
     "safari": "3.1 - 12.0",
-    "ios_saf": "3.2 - 11.2"
+    "ios_saf": "3.2 - 12.0"
   },
   "native": {
     "android": {
@@ -405,8 +405,8 @@
       "opera": "10 - 52",
       "op_mob": "<47",
       "safari": "3.1 - 12.0",
-      "ios_saf": "3.2 - 11.2",
-      "samsung_mob": "<9"
+      "ios_saf": "3.2 - 12.0",
+      "samsung_mob": "<9.0"
     },
     "install": {
       "module": "abort-controller",

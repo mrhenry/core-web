@@ -1,0 +1,155 @@
+{
+  "name": "Node.prototype.getRootNode",
+  "slug": "Node.prototype.getRootNode",
+  "polyfillName": "Node.prototype.getRootNode",
+  "coreWeb": {
+    "name": "Node.prototype.getRootNode",
+    "deps": [],
+    "browsers": {
+      "android": "<6",
+      "bb": "*",
+      "chrome": "<54",
+      "edge": "*",
+      "edge_mob": "*",
+      "firefox": "<53",
+      "firefox_mob": "<53",
+      "ie": "*",
+      "ie_mob": "*",
+      "opera": "<41",
+      "op_mob": "<41",
+      "op_mini": "*",
+      "safari": "<10.1",
+      "ios_saf": "<10.3",
+      "samsung_mob": "<6.0"
+    },
+    "engines": {
+      "Blink": ">= 28",
+      "EdgeHTML": ">= 12",
+      "Gecko": "1.7 - 52",
+      "Trident": ">= 4.0",
+      "Presto": ">= 1",
+      "WebKit": "85 - 602.1.50"
+    },
+    "size": 532,
+    "isAlias": false,
+    "providedByCoreWeb": false
+  },
+  "mdn": {
+    "__compat": {
+      "mdn_url": "https://developer.mozilla.org/docs/Web/API/Node/getRootNode",
+      "source_file": "api/Node.json",
+      "spec_url": "https://dom.spec.whatwg.org/#ref-for-dom-node-getrootnode①",
+      "status": {
+        "deprecated": false,
+        "experimental": false,
+        "standard_track": true
+      },
+      "support": {
+        "chrome": {
+          "version_added": "54"
+        },
+        "chrome_android": {
+          "version_added": "54"
+        },
+        "edge": {
+          "version_added": "79"
+        },
+        "firefox": {
+          "version_added": "53"
+        },
+        "firefox_android": {
+          "version_added": "53"
+        },
+        "ie": {
+          "version_added": false
+        },
+        "oculus": {
+          "version_added": "5.0"
+        },
+        "opera": {
+          "version_added": "41"
+        },
+        "opera_android": {
+          "version_added": "41"
+        },
+        "safari": {
+          "version_added": "10.1"
+        },
+        "safari_ios": {
+          "version_added": "10.3"
+        },
+        "samsunginternet_android": {
+          "version_added": "6.0"
+        },
+        "webview_android": {
+          "version_added": "54"
+        }
+      }
+    }
+  },
+  "polyfilled": {
+    "android": "<6",
+    "chrome": "<54",
+    "edge": "*",
+    "firefox": "<53",
+    "ie": "*",
+    "opera": "<41",
+    "safari": "<10.1",
+    "ios_saf": "<10.3"
+  },
+  "native": {
+    "android": {
+      "version_added": "54"
+    },
+    "chrome": {
+      "version_added": "54"
+    },
+    "edge": {
+      "version_added": "79"
+    },
+    "firefox": {
+      "version_added": "53"
+    },
+    "ie": {
+      "version_added": false
+    },
+    "opera": {
+      "version_added": "41"
+    },
+    "safari": {
+      "version_added": "10.1"
+    },
+    "ios_saf": {
+      "version_added": "10.3"
+    }
+  },
+  "polyfillio": {
+    "aliases": [],
+    "dependencies": [],
+    "docs": "https://developer.mozilla.org/en-US/docs/Web/API/Node/getRootNode",
+    "spec": "https://dom.spec.whatwg.org/#dom-node-getrootnode",
+    "browsers": {
+      "android": "<6",
+      "bb": "*",
+      "chrome": "<54",
+      "edge": "*",
+      "edge_mob": "*",
+      "firefox": "<53",
+      "firefox_mob": "<53",
+      "ie": "*",
+      "ie_mob": "*",
+      "opera": "<41",
+      "op_mob": "<41",
+      "op_mini": "*",
+      "safari": "<10.1",
+      "ios_saf": "<10.3",
+      "samsung_mob": "<6.0"
+    },
+    "detectSource": "document.getRootNode\n",
+    "baseDir": "Node/prototype/getRootNode",
+    "hasTests": true,
+    "isTestable": true,
+    "isPublic": true,
+    "size": 532
+  }
+}

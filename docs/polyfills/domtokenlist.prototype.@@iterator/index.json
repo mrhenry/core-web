@@ -17,12 +17,14 @@
       "edge": "<16",
       "edge_mob": "<16",
       "firefox": "<50",
+      "firefox_mob": "<50",
       "ie": ">=9",
       "ie_mob": ">=9",
       "opera": "<50",
+      "op_mob": "<46",
       "safari": "<10.1",
       "ios_saf": "<10.3",
-      "samsung_mob": "<5"
+      "samsung_mob": "<5.0"
     },
     "engines": {
       "Blink": "28 - 49",
@@ -137,12 +139,14 @@
       "edge": "<16",
       "edge_mob": "<16",
       "firefox": "<50",
+      "firefox_mob": "<50",
       "ie": ">=9",
       "ie_mob": ">=9",
       "opera": "<50",
+      "op_mob": "<46",
       "safari": "<10.1",
       "ios_saf": "<10.3",
-      "samsung_mob": "<5"
+      "samsung_mob": "<5.0"
     },
     "detectSource": "\"Symbol\"in self&&\"iterator\"in self.Symbol&&function(){try{var t=document.createElement(\"div\")\nreturn!(!t.classList||!t.classList[self.Symbol.iterator])}catch(t){return!1}}()\n",
     "baseDir": "DOMTokenList/prototype/@@iterator",

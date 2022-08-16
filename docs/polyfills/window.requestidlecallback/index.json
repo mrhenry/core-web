@@ -20,11 +20,11 @@
       "ie": "*",
       "ie_mob": "*",
       "opera": "<34",
-      "op_mob": "*",
+      "op_mob": "<34",
       "op_mini": "*",
       "safari": ">=9.0",
       "ios_saf": ">=9.0",
-      "samsung_mob": "<5"
+      "samsung_mob": "<5.0"
     },
     "engines": {
       "Blink": ">= 28",
@@ -148,11 +148,11 @@
       "ie": "*",
       "ie_mob": "*",
       "opera": "<34",
-      "op_mob": "*",
+      "op_mob": "<34",
       "op_mini": "*",
       "safari": ">=9.0",
       "ios_saf": ">=9.0",
-      "samsung_mob": "<5"
+      "samsung_mob": "<5.0"
     },
     "detectSource": "\"requestIdleCallback\"in self\n",
     "baseDir": "requestIdleCallback",
