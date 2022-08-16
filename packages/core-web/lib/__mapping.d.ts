@@ -82,6 +82,7 @@ export const mapping: ({
         android: string;
         chrome: string;
         firefox: string;
+        firefox_mob: string;
         ie: string;
         opera: string;
         op_mini: string;
@@ -90,10 +91,71 @@ export const mapping: ({
         samsung_mob: string;
         edge?: undefined;
         edge_mob?: undefined;
-        firefox_mob?: undefined;
         ie_mob?: undefined;
         op_mob?: undefined;
         bb?: undefined;
+    };
+    engines: {
+        Gecko: string;
+        Trident: string;
+        Presto: string;
+        WebKit: string;
+        Blink?: undefined;
+        EdgeHTML?: undefined;
+    };
+    size: number;
+    isAlias: boolean;
+    providedByCoreWeb: boolean;
+} | {
+    name: string;
+    deps: string[];
+    browsers: {
+        android: string;
+        bb: string;
+        chrome: string;
+        edge: string;
+        edge_mob: string;
+        firefox: string;
+        firefox_mob: string;
+        ie: string;
+        ie_mob: string;
+        opera: string;
+        op_mob: string;
+        op_mini: string;
+        safari: string;
+        ios_saf: string;
+        samsung_mob: string;
+    };
+    engines: {
+        Blink: string;
+        EdgeHTML: string;
+        Gecko: string;
+        Trident: string;
+        Presto: string;
+        WebKit: string;
+    };
+    size: number;
+    isAlias: boolean;
+    providedByCoreWeb: boolean;
+} | {
+    name: string;
+    deps: string[];
+    browsers: {
+        android: string;
+        bb: string;
+        chrome: string;
+        firefox: string;
+        firefox_mob: string;
+        ie: string;
+        ie_mob: string;
+        opera: string;
+        op_mob: string;
+        op_mini: string;
+        safari: string;
+        ios_saf: string;
+        samsung_mob: string;
+        edge?: undefined;
+        edge_mob?: undefined;
     };
     engines: {
         Gecko: string;
@@ -208,47 +270,16 @@ export const mapping: ({
         edge: string;
         edge_mob: string;
         firefox: string;
-        ie: string;
-        ie_mob: string;
-        opera: string;
-        safari: string;
-        ios_saf: string;
-        samsung_mob: string;
-        android?: undefined;
-        firefox_mob?: undefined;
-        op_mob?: undefined;
-        op_mini?: undefined;
-    };
-    engines: {
-        Blink: string;
-        EdgeHTML: string;
-        Gecko: string;
-        Trident: string;
-        Presto: string;
-        WebKit: string;
-    };
-    size: number;
-    isAlias: boolean;
-    providedByCoreWeb: boolean;
-} | {
-    name: string;
-    deps: string[];
-    browsers: {
-        android: string;
-        bb: string;
-        chrome: string;
-        edge: string;
-        edge_mob: string;
-        firefox: string;
         firefox_mob: string;
         ie: string;
         ie_mob: string;
         opera: string;
         op_mob: string;
-        op_mini: string;
         safari: string;
         ios_saf: string;
         samsung_mob: string;
+        android?: undefined;
+        op_mini?: undefined;
     };
     engines: {
         Blink: string;
@@ -273,44 +304,13 @@ export const mapping: ({
         ie: string;
         ie_mob: string;
         opera: string;
+        op_mob: string;
         op_mini: string;
         safari: string;
         ios_saf: string;
         samsung_mob: string;
         edge_mob?: undefined;
-        op_mob?: undefined;
         bb?: undefined;
-    };
-    engines: {
-        Blink: string;
-        EdgeHTML: string;
-        Gecko: string;
-        Trident: string;
-        Presto: string;
-        WebKit: string;
-    };
-    size: number;
-    isAlias: boolean;
-    providedByCoreWeb: boolean;
-} | {
-    name: string;
-    deps: string[];
-    browsers: {
-        android: string;
-        bb: string;
-        chrome: string;
-        edge: string;
-        edge_mob: string;
-        firefox: string;
-        firefox_mob: string;
-        ie: string;
-        ie_mob: string;
-        opera: string;
-        op_mini: string;
-        safari: string;
-        ios_saf: string;
-        samsung_mob: string;
-        op_mob?: undefined;
     };
     engines: {
         Blink: string;
@@ -381,37 +381,6 @@ export const mapping: ({
         WebKit: string;
         Blink?: undefined;
         EdgeHTML?: undefined;
-    };
-    size: number;
-    isAlias: boolean;
-    providedByCoreWeb: boolean;
-} | {
-    name: string;
-    deps: never[];
-    browsers: {
-        android: string;
-        bb: string;
-        chrome: string;
-        edge: string;
-        edge_mob: string;
-        firefox: string;
-        ie: string;
-        ie_mob: string;
-        opera: string;
-        op_mob: string;
-        op_mini: string;
-        safari: string;
-        ios_saf: string;
-        samsung_mob: string;
-        firefox_mob?: undefined;
-    };
-    engines: {
-        Blink: string;
-        EdgeHTML: string;
-        Gecko: string;
-        Trident: string;
-        Presto: string;
-        WebKit: string;
     };
     size: number;
     isAlias: boolean;
@@ -515,6 +484,7 @@ export const mapping: ({
     browsers: {
         chrome: string;
         firefox: string;
+        firefox_mob: string;
         ie: string;
         opera: string;
         op_mob: string;
@@ -524,7 +494,6 @@ export const mapping: ({
         android?: undefined;
         edge?: undefined;
         edge_mob?: undefined;
-        firefox_mob?: undefined;
         ie_mob?: undefined;
         op_mini?: undefined;
         bb?: undefined;
@@ -549,14 +518,14 @@ export const mapping: ({
         edge: string;
         edge_mob: string;
         firefox: string;
+        firefox_mob: string;
         ie: string;
         ie_mob: string;
         opera: string;
+        op_mob: string;
         safari: string;
         ios_saf: string;
         samsung_mob: string;
-        firefox_mob?: undefined;
-        op_mob?: undefined;
         op_mini?: undefined;
         bb?: undefined;
     };
@@ -579,15 +548,15 @@ export const mapping: ({
         edge: string;
         edge_mob: string;
         firefox: string;
+        firefox_mob: string;
         ie: string;
         opera: string;
+        op_mob: string;
         safari: string;
         ios_saf: string;
         samsung_mob: string;
         android?: undefined;
-        firefox_mob?: undefined;
         ie_mob?: undefined;
-        op_mob?: undefined;
         op_mini?: undefined;
         bb?: undefined;
     };
@@ -614,13 +583,13 @@ export const mapping: ({
         ie: string;
         ie_mob: string;
         opera: string;
+        op_mob: string;
         op_mini: string;
         safari: string;
         ios_saf: string;
         samsung_mob: string;
         edge?: undefined;
         edge_mob?: undefined;
-        op_mob?: undefined;
     };
     engines: {
         Blink: string;
@@ -647,10 +616,10 @@ export const mapping: ({
         ie: string;
         ie_mob: string;
         opera: string;
+        op_mob: string;
         safari: string;
         ios_saf: string;
         samsung_mob: string;
-        op_mob?: undefined;
         op_mini?: undefined;
     };
     engines: {
@@ -734,6 +703,7 @@ export const mapping: ({
         chrome: string;
         edge: string;
         firefox: string;
+        firefox_mob: string;
         ie: string;
         opera: string;
         op_mob: string;
@@ -742,7 +712,6 @@ export const mapping: ({
         ios_saf: string;
         samsung_mob: string;
         edge_mob?: undefined;
-        firefox_mob?: undefined;
         ie_mob?: undefined;
         bb?: undefined;
     };
@@ -885,37 +854,6 @@ export const mapping: ({
     name: string;
     deps: string[];
     browsers: {
-        android: string;
-        chrome: string;
-        edge: string;
-        edge_mob: string;
-        firefox: string;
-        firefox_mob: string;
-        ie: string;
-        ie_mob: string;
-        opera: string;
-        safari: string;
-        ios_saf: string;
-        samsung_mob: string;
-        op_mob?: undefined;
-        op_mini?: undefined;
-        bb?: undefined;
-    };
-    engines: {
-        Blink: string;
-        EdgeHTML: string;
-        Gecko: string;
-        Trident: string;
-        Presto: string;
-        WebKit: string;
-    };
-    size: number;
-    isAlias: boolean;
-    providedByCoreWeb: boolean;
-} | {
-    name: string;
-    deps: string[];
-    browsers: {
         firefox: string;
         ie: string;
         android?: undefined;
@@ -1103,6 +1041,7 @@ export const mapping: ({
     deps: never[];
     browsers: {
         firefox: string;
+        firefox_mob: string;
         ie: string;
         safari: string;
         ios_saf: string;
@@ -1110,7 +1049,6 @@ export const mapping: ({
         chrome?: undefined;
         edge?: undefined;
         edge_mob?: undefined;
-        firefox_mob?: undefined;
         ie_mob?: undefined;
         opera?: undefined;
         op_mob?: undefined;
@@ -1136,6 +1074,7 @@ export const mapping: ({
         android: string;
         chrome: string;
         firefox: string;
+        firefox_mob: string;
         opera: string;
         op_mob: string;
         safari: string;
@@ -1143,7 +1082,6 @@ export const mapping: ({
         samsung_mob: string;
         edge?: undefined;
         edge_mob?: undefined;
-        firefox_mob?: undefined;
         ie?: undefined;
         ie_mob?: undefined;
         op_mini?: undefined;
@@ -1164,37 +1102,6 @@ export const mapping: ({
     name: string;
     deps: never[];
     browsers: {
-        android: string;
-        bb: string;
-        chrome: string;
-        edge: string;
-        edge_mob: string;
-        firefox: string;
-        firefox_mob: string;
-        ie: string;
-        ie_mob: string;
-        opera: string;
-        op_mob: string;
-        safari: string;
-        ios_saf: string;
-        samsung_mob: string;
-        op_mini?: undefined;
-    };
-    engines: {
-        Blink: string;
-        EdgeHTML: string;
-        Gecko: string;
-        Trident: string;
-        Presto: string;
-        WebKit: string;
-    };
-    size: number;
-    isAlias: boolean;
-    providedByCoreWeb: boolean;
-} | {
-    name: string;
-    deps: never[];
-    browsers: {
         chrome: string;
         firefox: string;
         firefox_mob: string;
@@ -1311,68 +1218,6 @@ export const mapping: ({
         Presto: string;
         WebKit: string;
         EdgeHTML?: undefined;
-    };
-    size: number;
-    isAlias: boolean;
-    providedByCoreWeb: boolean;
-} | {
-    name: string;
-    deps: string[];
-    browsers: {
-        android: string;
-        chrome: string;
-        edge: string;
-        edge_mob: string;
-        firefox: string;
-        ie: string;
-        ie_mob: string;
-        opera: string;
-        op_mob: string;
-        safari: string;
-        ios_saf: string;
-        samsung_mob: string;
-        firefox_mob?: undefined;
-        op_mini?: undefined;
-        bb?: undefined;
-    };
-    engines: {
-        Blink: string;
-        EdgeHTML: string;
-        Gecko: string;
-        Trident: string;
-        Presto: string;
-        WebKit: string;
-    };
-    size: number;
-    isAlias: boolean;
-    providedByCoreWeb: boolean;
-} | {
-    name: string;
-    deps: never[];
-    browsers: {
-        ie: string;
-        safari: string;
-        android?: undefined;
-        chrome?: undefined;
-        edge?: undefined;
-        edge_mob?: undefined;
-        firefox?: undefined;
-        firefox_mob?: undefined;
-        ie_mob?: undefined;
-        opera?: undefined;
-        op_mob?: undefined;
-        ios_saf?: undefined;
-        samsung_mob?: undefined;
-        op_mini?: undefined;
-        bb?: undefined;
-    };
-    engines: {
-        Trident: string;
-        WebKit: string;
-        Blink?: undefined;
-        EdgeHTML?: undefined;
-        Gecko?: undefined;
-        Presto?: undefined;
     };
     size: number;
     isAlias: boolean;
