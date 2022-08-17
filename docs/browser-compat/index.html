@@ -2724,12 +2724,12 @@ In Firefox 60 the accuracy was increased to 1 millisecond.">15 ⓘ</span></td><t
 			</thead>
 			<tbody>
 				<tr><td><span title="requestAnimationFrame">polyfill-library</span></td><td>*</td><td><46</td><td>-</td><td>3.6 - 22</td><td>6 - 9</td><td><15</td><td>3.1 - 6.0</td><td>3.2 - 6.0</td></tr>
-				<tr><td><span title="Window.requestAnimationFrame">native</span></td><td><span>4.4</span><br><span>≤37</span></td><td><span>24</span><br><span>10</span></td><td>12</td><td><span title="Callback parameter is a <code>DOMHighResTimestamp</code>. This means ten microsecond precision and zero time as <code>performance.now()</code>."><span>23</span> ⓘ</span><br><span title="Callback parameter is a <code>DOMTimestamp</code>. This means millisecond precision and zero time as <code>Date.now()</code>."><span>11</span> - <span style="color:red;">42</span> ⓘ</span><br><span title="Could be called with no input parameters."><span>4</span> - <span style="color:red;">11</span> ⓘ</span></td><td>10</td><td><span>15</span><br><span>15</span></td><td><span>7</span><br><span>6</span></td><td><span>7</span><br><span>6</span></td></tr>
+				<tr><td><span title="Window.requestAnimationFrame">native</span></td><td><span>4.4</span><br><span>≤37</span></td><td><span>24</span><br><span>10</span></td><td><span title="Before version 17, Edge does not reliably fire <code>requestAnimationFrame</code> before the paint cycle.">12 ⓘ</span></td><td><span title="Callback parameter is a <code>DOMHighResTimestamp</code>. This means ten microsecond precision and zero time as <code>performance.now()</code>."><span>23</span> ⓘ</span><br><span title="Callback parameter is a <code>DOMTimestamp</code>. This means millisecond precision and zero time as <code>Date.now()</code>."><span>11</span> - <span style="color:red;">42</span> ⓘ</span><br><span title="Could be called with no input parameters."><span>4</span> - <span style="color:red;">11</span> ⓘ</span></td><td><span title="Internet Explorer does not reliably fire <code>requestAnimationFrame</code> before the paint cycle.">10 ⓘ</span></td><td><span>15</span><br><span>15</span></td><td><span>7</span><br><span>6</span></td><td><span>7</span><br><span>6</span></td></tr>
 			</tbody>
 		</table>
 
 		<div class="compat-table-notes">
-			<h3>mdn notes : </h3><p>firefox 23 : Callback parameter is a <code>DOMHighResTimestamp</code>. This means ten microsecond precision and zero time as <code>performance.now()</code>.</p><p>firefox 11 : Callback parameter is a <code>DOMTimestamp</code>. This means millisecond precision and zero time as <code>Date.now()</code>.</p><p>firefox 4 : Could be called with no input parameters.</p>
+			<h3>mdn notes : </h3><p>edge 12 : Before version 17, Edge does not reliably fire <code>requestAnimationFrame</code> before the paint cycle.</p><p>firefox 23 : Callback parameter is a <code>DOMHighResTimestamp</code>. This means ten microsecond precision and zero time as <code>performance.now()</code>.</p><p>firefox 11 : Callback parameter is a <code>DOMTimestamp</code>. This means millisecond precision and zero time as <code>Date.now()</code>.</p><p>firefox 4 : Could be called with no input parameters.</p><p>ie 10 : Internet Explorer does not reliably fire <code>requestAnimationFrame</code> before the paint cycle.</p>
 			
 		</div>
 
@@ -2829,7 +2829,7 @@ In Firefox 60 the accuracy was increased to 1 millisecond.">15 ⓘ</span></td><t
 		
 	
 
-				<pre><code style="font-size:10px;">Last updated : Tue Aug 16 2022 11:33:06 GMT+0000 (Coordinated Universal Time)</code></pre>
+				<pre><code style="font-size:10px;">Last updated : Wed Aug 17 2022 07:07:48 GMT+0000 (Coordinated Universal Time)</code></pre>
 			</div>
 		</div>
 	</main>

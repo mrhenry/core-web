@@ -216,7 +216,7 @@
         "source_file": "api/Event.json",
         "spec_url": "https://dom.spec.whatwg.org/#ref-for-dom-event-cancelbubble①",
         "status": {
-          "deprecated": false,
+          "deprecated": true,
           "experimental": false,
           "standard_track": true
         },
@@ -450,10 +450,10 @@
             "version_added": "79"
           },
           "firefox": {
-            "version_added": "52"
+            "version_added": "59"
           },
           "firefox_android": {
-            "version_added": "52"
+            "version_added": "59"
           },
           "ie": {
             "version_added": false
