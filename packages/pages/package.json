@@ -35,7 +35,7 @@
     "cssnano": "^5.1.4",
     "polyfill-library": "^4.0.0",
     "postcss": "^8.4.16",
-    "postcss-import": "^14.0.2",
+    "postcss-import": "^15.0.0",
     "postcss-preset-env": "^7.4.4",
     "postcss-split-by-media": "^0.3.0",
     "webpack": "^5.66.0",
