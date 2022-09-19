@@ -49,54 +49,15 @@
         "standard_track": true
       },
       "support": {
-        "chrome": [
-          {
-            "version_added": "102"
-          },
-          {
-            "flags": [
-              {
-                "name": "#enable-experimental-web-platform-features",
-                "type": "preference",
-                "value_to_set": "Enabled"
-              }
-            ],
-            "version_added": "60",
-            "version_removed": "102"
-          }
-        ],
-        "chrome_android": [
-          {
-            "version_added": "102"
-          },
-          {
-            "flags": [
-              {
-                "name": "#enable-experimental-web-platform-features",
-                "type": "preference",
-                "value_to_set": "Enabled"
-              }
-            ],
-            "version_added": "60",
-            "version_removed": "102"
-          }
-        ],
-        "edge": [
-          {
-            "version_added": "102"
-          },
-          {
-            "flags": [
-              {
-                "name": "#enable-experimental-web-platform-features",
-                "type": "preference",
-                "value_to_set": "Enabled"
-              }
-            ],
-            "version_added": "79",
-            "version_removed": "102"
-          }
-        ],
+        "chrome": {
+          "version_added": "102"
+        },
+        "chrome_android": {
+          "version_added": "102"
+        },
+        "edge": {
+          "version_added": "102"
+        },
         "firefox": {
           "version_added": "preview"
         },
@@ -106,38 +67,12 @@
         "ie": {
           "version_added": false
         },
-        "oculus": [
-          {
-            "version_added": "22.0"
-          },
-          {
-            "flags": [
-              {
-                "name": "#enable-experimental-web-platform-features",
-                "type": "preference",
-                "value_to_set": "Enabled"
-              }
-            ],
-            "version_added": "5.0",
-            "version_removed": "22.0"
-          }
-        ],
-        "opera": [
-          {
-            "version_added": "88"
-          },
-          {
-            "flags": [
-              {
-                "name": "#enable-experimental-web-platform-features",
-                "type": "preference",
-                "value_to_set": "Enabled"
-              }
-            ],
-            "version_added": "47",
-            "version_removed": "88"
-          }
-        ],
+        "oculus": {
+          "version_added": "22.0"
+        },
+        "opera": {
+          "version_added": "88"
+        },
         "opera_android": {
           "version_added": "70"
         },
@@ -170,60 +105,21 @@
     "android": {
       "version_added": "102"
     },
-    "chrome": [
-      {
-        "version_added": "102"
-      },
-      {
-        "flags": [
-          {
-            "name": "#enable-experimental-web-platform-features",
-            "type": "preference",
-            "value_to_set": "Enabled"
-          }
-        ],
-        "version_added": "60",
-        "version_removed": "102"
-      }
-    ],
-    "edge": [
-      {
-        "version_added": "102"
-      },
-      {
-        "flags": [
-          {
-            "name": "#enable-experimental-web-platform-features",
-            "type": "preference",
-            "value_to_set": "Enabled"
-          }
-        ],
-        "version_added": "79",
-        "version_removed": "102"
-      }
-    ],
+    "chrome": {
+      "version_added": "102"
+    },
+    "edge": {
+      "version_added": "102"
+    },
     "firefox": {
       "version_added": "preview"
     },
     "ie": {
       "version_added": false
     },
-    "opera": [
-      {
-        "version_added": "88"
-      },
-      {
-        "flags": [
-          {
-            "name": "#enable-experimental-web-platform-features",
-            "type": "preference",
-            "value_to_set": "Enabled"
-          }
-        ],
-        "version_added": "47",
-        "version_removed": "88"
-      }
-    ],
+    "opera": {
+      "version_added": "88"
+    },
     "safari": {
       "version_added": "15.5"
     },
