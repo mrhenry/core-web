@@ -6,8 +6,9 @@ const targets = require('./targets');
 const fs = require('fs');
 const path = require('path');
 const postcssSplitByMedia = require('postcss-split-by-media');
-
 const { createHash } = require('crypto');
+
+const cwd = process.cwd();
 
 fs.readFile('./lib/css/index.css', async (err, css) => {
 	if (err) {
@@ -16,8 +17,9 @@ fs.readFile('./lib/css/index.css', async (err, css) => {
 	}
 
 	const contentHash = await postcss([
-		postcssImport({
-				root: './lib/css'
+			postcssImport({
+				root: './lib/css',
+				nameLayer: hashLayerName,
 			}),
 		]).process(css, {
 			map: false,
@@ -38,7 +40,8 @@ fs.readFile('./lib/css/index.css', async (err, css) => {
 
 		const mainResult = await postcss([
 			postcssImport({
-				root: './lib/css'
+				root: './lib/css',
+				nameLayer: hashLayerName,
 			}),
 			postcssPresetEnv({
 				stage: 1,
@@ -92,3 +95,17 @@ fs.readFile('./lib/css/index.css', async (err, css) => {
 
 	}
 });
+
+function hashLayerName(index, rootFilename) {
+	if (!rootFilename) {
+		return `import-anon-layer-${index}`;
+	}
+
+	// A stable, deterministic and unique layer name:
+	// - layer index
+	// - relative rootFilename to current working directory
+	return `import-anon-layer-${createHash('sha256')
+		.update(`${index}-${rootFilename.split(cwd)[1]}`)
+		.digest('hex')
+		.slice(0, 12)}`;
+}
