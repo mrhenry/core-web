@@ -5,16 +5,16 @@ module.exports = function requirements() {
 		<section class="requirements">
 			<header class="requirements__header">
 				<h2>
-					Requirements
+					Supported
 				</h2>
 			</header>
 
 			<ul>
 				<li>
-					Babel
+					<a href="https://www.npmjs.com/package/@mrhenry/babel-plugin-core-web" target="_blank">Babel</a>
 				</li>
 				<li>
-					User Agent based content negotiation
+					<i><a href="https://github.com/mrhenry/core-web/issues/new/choose" target="_blank">(open an issue to request other platforms)</a></i>
 				</li>
 			</ul>
 		</section>

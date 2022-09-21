@@ -5,11 +5,6 @@ module.exports = [
 	...targets.flatMap((target) => {
 		return [
 			{
-				entry: { 'index': './js/index.js' },
-				filename: `[name].[contenthash].${target.name}.js`,
-				debug: true,
-			},
-			{
 				entry: { 'e2e': './js/e2e.js' },
 				filename: `[name].${target.name}.js`,
 				debug: false,

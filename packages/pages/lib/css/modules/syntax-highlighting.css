@@ -1,0 +1,79 @@
+.code-a {
+	color: rgb(98, 69, 6);
+}
+
+@media (prefers-color-scheme: dark) {
+	.code-a {
+		color: rgb(237, 219, 17);
+	}
+}
+
+.code-b {
+	color: rgb(12, 82, 77);
+}
+
+@media (prefers-color-scheme: dark) {
+	.code-b {
+		color: rgb(17, 237, 222);
+	}
+}
+
+.code-c {
+	color: rgb(92, 32, 85);
+}
+
+@media (prefers-color-scheme: dark) {
+	.code-c {
+		color: rgb(188, 79, 175);
+	}
+}
+
+.code-d {
+	color: rgb(145, 18, 18);
+}
+
+@media (prefers-color-scheme: dark) {
+	.code-d {
+		color: rgb(214, 60, 60);
+	}
+}
+
+.code-e {
+	color: rgb(37, 70, 126);
+}
+
+@media (prefers-color-scheme: dark) {
+	.code-e {
+		color: rgb(54, 125, 247);
+	}
+}
+
+.code-f {
+	color: rgb(131, 82, 8);
+}
+
+@media (prefers-color-scheme: dark) {
+	.code-f {
+		color: rgb(237, 189, 17);
+	}
+}
+
+.code-g {
+	color: rgb(78, 78, 78);
+}
+
+@media (prefers-color-scheme: dark) {
+	.code-g {
+		color: rgb(152, 152, 152);
+	}
+}
+
+.code-h {
+	color: rgb(31, 136, 15);
+}
+
+@media (prefers-color-scheme: dark) {
+	.code-h {
+		color: rgb(123, 250, 103);
+	}
+}

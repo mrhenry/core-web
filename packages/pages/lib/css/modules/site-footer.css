@@ -41,13 +41,13 @@
 	width: 100%;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 47.999375rem) {
 	.site-footer__logo-container {
 		margin-bottom: 3rem;
 	}
 }
 
-@media (min-width: 768px) {
+@media (min-width: 48rem) {
 	.site-footer {
 		padding-bottom: 3rem;
 		padding-top: 3rem;
@@ -60,7 +60,7 @@
 
 	.site-footer__logo-container {
 		flex-grow: 1;
-		margin-right: 3rem;
+		margin-right: 36px;
 	}
 
 	.site-footer__content-container {
