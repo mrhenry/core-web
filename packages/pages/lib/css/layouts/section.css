@@ -4,14 +4,14 @@
 	position: relative;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 48rem) {
 	.section {
 		margin-bottom: 3rem;
 		margin-top: 3rem;
 	}
 }
 
-@media (min-width: 1280px) {
+@media (min-width: 80rem) {
 	.section {
 		margin-bottom: 5rem;
 		margin-top: 5rem;

@@ -1,9 +1,9 @@
 .card {
-	border-radius: 0.5rem;
+	border-radius: 8px;
 	box-sizing: border-box;
 	color: currentColor;
 	overflow: hidden;
-	padding: 1.25rem;
+	padding: 1.25rem 20px;
 	position: relative;
 }
 

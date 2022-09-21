@@ -16,7 +16,12 @@ yarn add --dev @mrhenry/babel-plugin-core-web
 
 ```js
 module.exports = function(api) {
+	/*
+		Optionally cache the babel config
+		https://babeljs.io/docs/en/config-files#apicache
+	*/
 	api.cache(true);
+
 	return {
 		plugins: [
 			["@mrhenry/core-web"]
@@ -27,7 +32,12 @@ module.exports = function(api) {
 
 ```js
 module.exports = function(api) {
+	/*
+		Optionally cache the babel config
+		https://babeljs.io/docs/en/config-files#apicache
+	*/
 	api.cache(true);
+
 	return {
 		plugins: [
 			["@mrhenry/core-web", {

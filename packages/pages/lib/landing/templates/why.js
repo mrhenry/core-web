@@ -11,9 +11,9 @@ function renderWhyItems(items) {
 						${item.title}
 					</h3>
 
-					<p class="why__item__content">
+					<div class="why__item__content">
 						${item.content}
-					</p>
+					</div>
 				</div>
 			</article>
 		`;

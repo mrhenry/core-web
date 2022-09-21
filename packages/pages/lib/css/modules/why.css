@@ -11,7 +11,7 @@
 	margin-bottom: 0;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 48rem) {
 	.why__header {
 		margin-bottom: 2rem;
 	}
@@ -22,8 +22,8 @@
 	}
 
 	.why__item {
-		flex-basis: calc(50% - 1rem);
-		margin-right: 1rem;
+		flex-basis: calc(50% - 16px);
+		margin-right: 16px;
 		margin-top: 2rem;
 	}
 
@@ -37,16 +37,16 @@
 	}
 }
 
-@media (min-width: 768px) and (max-width: 1023px) {
+@media (min-width: 48rem) and (max-width: 63.9999375rem) {
 	.why__item:nth-child(even) {
 		margin-right: 0;
 	}
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 64rem) {
 	.why__item {
-		flex-basis: calc(33.3333% - 1rem);
-		margin-right: 1.5rem;
+		flex-basis: calc(33.3333% - 16px);
+		margin-right: 24px;
 	}
 
 	.why__item:nth-child(3n+3) {

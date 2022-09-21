@@ -2,13 +2,12 @@
 
 .polyfill-info__list {
 	background-color: var(--color-card-background);
-	border-radius: 0.5rem;
-	padding: 0.5rem 2rem;
+	border-radius: 8px;
+	padding: 0.5rem 24px;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 48rem) {
 	.polyfill-info__list {
-		border-radius: 0.5rem;
-		padding: 1.5rem 3rem;
+		padding: 1.5rem 36px;
 	}
 }

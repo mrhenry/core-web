@@ -1,4 +1,4 @@
-# babel-plugin-core-web
+# @mrhenry/babel-plugin-core-web
 
 > Babel plugin that polyfills browser features.
 >
@@ -9,10 +9,7 @@
 
 ## why
 
-Maintaining a correct but minimal polyfill bundle from [polyfill.io](https://polyfill.io/v3/) is a manual process and prone to errors. Babel however knows which features you actually used and the environment you are targetting. Bringing the two together works for us, we hope it does for you too.
-
-What is not included is a way to serve different bundles to different browsers. There are many ways to do this and we are working on some recipes for this.
-
+Maintaining a correct but minimal polyfill bundle from [polyfill.io](https://polyfill.io/v3/) is a manual process and prone to errors. Babel however knows which features you actually used and the environment you are targeting. Bringing the two together works for us, we hope it does for you too.
 
 ## install
 
@@ -24,16 +21,16 @@ npm install --save-dev @mrhenry/babel-plugin-core-web
 yarn add --dev @mrhenry/babel-plugin-core-web
 ```
 
-## Example with script tags (`module` vs `nomodules`)
-
-[example migration](https://github.com/mrhenry/core-web-example-script-tag)
-
-
 ## babel.config.js
 
 ```js
 module.exports = function(api) {
+	/*
+		Optionally cache the babel config
+		https://babeljs.io/docs/en/config-files#apicache
+	*/
 	api.cache(true);
+
 	return {
 		plugins: [
 			["@mrhenry/core-web", {
@@ -53,7 +50,12 @@ module.exports = function(api) {
 
 ```js
 module.exports = function(api) {
+	/*
+		Optionally cache the babel config
+		https://babeljs.io/docs/en/config-files#apicache
+	*/
 	api.cache(true);
+
 	return {
 		plugins: [
 			// Use browserslist default :
@@ -65,7 +67,12 @@ module.exports = function(api) {
 
 ```js
 module.exports = function(api) {
+	/*
+		Optionally cache the babel config
+		https://babeljs.io/docs/en/config-files#apicache
+	*/
 	api.cache(true);
+
 	return {
 		plugins: [
 			// A custom browserslist config :
@@ -126,10 +133,13 @@ const babelPresetEnv = require( '@babel/preset-env' );
 }
 ```
 
+## Example with script tags (`module` vs `nomodules`)
+
+[example migration](https://github.com/mrhenry/core-web-example-script-tag)
 
 ## issues
 
-If have any trouble using `babel-plugin-core-web` please [open an issue here](https://github.com/mrhenry/core-web/issues/new?assignees=&labels=bug&template=report-a-bug.md&title=). We will try to get back to you as soon as possible.
+If have any trouble using `@mrhenry/babel-plugin-core-web` please [open an issue here](https://github.com/mrhenry/core-web/issues/new?assignees=&labels=bug&template=report-a-bug.md&title=). We will try to get back to you as soon as possible.
 
 
 ## missing polyfills
