@@ -8,9 +8,11 @@
   "publishConfig": {
     "access": "public"
   },
+  "homepage": "https://core-web.mrhenry.studio/",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/mrhenry/core-web.git"
+    "url": "git+https://github.com/mrhenry/core-web.git",
+    "directory": "packages/babel-plugin-core-web"
   },
   "keywords": [
     "babel",
