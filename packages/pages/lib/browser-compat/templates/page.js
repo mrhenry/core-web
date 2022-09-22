@@ -30,16 +30,16 @@ module.exports = function pageHTML(assetMap, tables) {
 
 	${siteHeader([
 		{
+			title: 'installation',
+			url: '/#installation'
+		},
+		{
 			title: 'what',
 			url: '/#what'
 		},
 		{
 			title: 'why',
 			url: '/#why'
-		},
-		{
-			title: 'installation',
-			url: '/#installation'
 		},
 		{
 			title: 'polyfills',
