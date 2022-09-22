@@ -56,9 +56,9 @@ module.exports = function polyfillCardHTML(assetMap, feature, sitemap) {
 
 			<nav class="navigation">
 				<ul class="navigation__list">
+					<li class="navigation__list-item"><a href="/#installation" class="navigation__link">installation</a></li>
 					<li class="navigation__list-item"><a href="/#what" class="navigation__link">what</a></li>
 					<li class="navigation__list-item"><a href="/#why" class="navigation__link">why</a></li>
-					<li class="navigation__list-item"><a href="/#installation" class="navigation__link">installation</a></li>
 					<li class="navigation__list-item"><a href="/polyfills/" class="navigation__link">polyfills</a></li>
 					<li class="navigation__list-item"><a href="https://github.com/mrhenry/core-web" class="navigation__link" target="_blank" rel="noopener">github</a></li>
 				</ul>
