@@ -70,9 +70,25 @@ li:not([class]) a {
 }
 
 a:not([class]) {
+	color: #0000a1;
+}
+
+a:not([class]):hover {
 	color: currentColor;
 }
 
+@media (prefers-color-scheme: dark) {
+	a:not([class]) {
+		color: #8989ff;
+	}
+}
+
 code {
-	white-space: normal;
+	white-space: pre-wrap;
+	tab-size: 2;
+}
+
+pre {
+	white-space: pre-wrap;
+	tab-size: 2;
 }

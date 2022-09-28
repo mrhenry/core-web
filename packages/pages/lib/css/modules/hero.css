@@ -9,7 +9,7 @@
 }
 
 .hero__text {
-	max-width: 300px;
+	max-width: 18.75rem;
 }
 
 .hero__picture-wrapper {
@@ -17,7 +17,7 @@
 	flex-grow: 0;
 	flex-shrink: 1;
 	margin-top: 1.5rem;
-	max-width: 200px;
+	max-width: 12.5rem;
 	padding: 0.75rem;
 	width: 100%;
 }
@@ -35,7 +35,7 @@
 	width: 100%;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 48rem) {
 	.hero__header {
 		margin-bottom: 2rem;
 	}
@@ -48,7 +48,7 @@
 		flex-basis: 50%;
 		flex-grow: 0;
 		flex-shrink: 0;
-		max-width: 420px;
+		max-width: 26.25rem;
 	}
 
 	.hero__picture-wrapper {

@@ -13,10 +13,7 @@ module.exports = function hero() {
 				<div class="hero__text">
 					<p>
 						<strong>core-web</strong> is a set of tools to bundle polyfills together with your javascript code.
-						Just define a set of browsers and automatically receive everything you need.
-					</p>
-					<p>
-						Optimize for modern browsers without sacrificing support for older browsers.
+						Just define a browsers list and automatically receive everything you need.
 					</p>
 				</div>
 

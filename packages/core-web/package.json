@@ -1,6 +1,6 @@
 {
   "name": "@mrhenry/core-web",
-  "version": "0.7.8",
+  "version": "1.0.0",
   "description": "browser feature polyfills as a babel plugin",
   "main": "lib/index.js",
   "author": "Simon Menke <simon.menke@gmail.com>",
@@ -8,9 +8,11 @@
   "publishConfig": {
     "access": "public"
   },
+  "homepage": "https://core-web.mrhenry.studio/",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/mrhenry/core-web.git"
+    "url": "git+https://github.com/mrhenry/core-web.git",
+    "directory": "packages/core-web"
   },
   "keywords": [
     "babel",

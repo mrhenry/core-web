@@ -30,6 +30,10 @@ module.exports = function pageHTML(assetMap, tables) {
 
 	${siteHeader([
 		{
+			title: 'installation',
+			url: '/#installation'
+		},
+		{
 			title: 'what',
 			url: '/#what'
 		},
@@ -38,8 +42,12 @@ module.exports = function pageHTML(assetMap, tables) {
 			url: '/#why'
 		},
 		{
-			title: 'roadmap to v1',
-			url: '/#roadmap'
+			title: 'polyfills',
+			url: '/polyfills/'
+		},
+		{
+			title: 'github',
+			url: 'https://github.com/mrhenry/core-web'
 		}
 	])}
 
@@ -54,7 +62,7 @@ module.exports = function pageHTML(assetMap, tables) {
 			<div class="wrapper">
 				${tables}
 
-				<pre><code style="font-size:10px;">Last updated : ${ (new Date()).toString() }</code></pre>
+				<pre><code style="font-size:10px; word-break: break-all;">Last updated : ${ (new Date()).toString() }</code></pre>
 			</div>
 		</div>
 	</main>
