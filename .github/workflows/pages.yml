@@ -22,8 +22,11 @@ jobs:
         node-version: 18
         cache: 'npm'
 
-    - run: sudo apt-get update 
-    - run: sudo apt-get install build-essential libcairo2-dev libpango1.0-dev libjpeg-dev libgif-dev librsvg2-dev 
+    # https://github.com/Automattic/node-canvas/wiki/Installation:-Arch-based-distributions
+    - run: |
+        sudo apt-get update
+        sudo apt-get install build-essential libcairo2-dev libpango1.0-dev libjpeg-dev libgif-dev librsvg2-dev
+
     - run: make generate
     - run: make build-pages
 

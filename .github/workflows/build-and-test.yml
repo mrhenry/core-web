@@ -39,6 +39,11 @@ jobs:
           path: packages/core-web-tests/dist
           key: cache--core-web-tests--${{ env.commit-sha }}
 
+      # https://github.com/Automattic/node-canvas/wiki/Installation:-Arch-based-distributions
+      - run: |
+          sudo apt-get update
+          sudo apt-get install build-essential libcairo2-dev libpango1.0-dev libjpeg-dev libgif-dev librsvg2-dev
+
       - run: make build
         if: steps.cache-core-web-tests.outputs.cache-hit != 'true'
       - run: make install
