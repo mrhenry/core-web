@@ -19,9 +19,11 @@ jobs:
     - name: setup node
       uses: actions/setup-node@v3.5.0
       with:
-        node-version: 17
+        node-version: 18
         cache: 'npm'
 
+    - run: sudo apt-get update 
+    - run: sudo apt-get install build-essential libcairo2-dev libpango1.0-dev libjpeg-dev libgif-dev librsvg2-dev 
     - run: make generate
     - run: make build-pages
 
