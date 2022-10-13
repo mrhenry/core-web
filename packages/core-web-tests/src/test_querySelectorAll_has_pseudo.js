@@ -876,8 +876,11 @@ if ("Proxy" in self) {
 		});
 
 		QUnit.test(":has nested as forgiven list", function (assert) {
-			assert.ok(!document.querySelector(":has(:has(#qunit-fixture))"), "nested :has is ignored in forgiving selector lists");
 			assert.ok(!document.querySelector(":has(.does-not-exist, :has(#qunit-fixture))"), "nested :has is ignored in forgiving selector lists");
+		});
+
+		QUnit.skip(":has nested as forgiven list with a fully invalid list", function (assert) {
+			assert.ok(!document.querySelector(":has(:has(#qunit-fixture))"), "nested :has is ignored in forgiving selector lists");
 		});
 	});
 }

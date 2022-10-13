@@ -3,9 +3,16 @@
 	try {
 		// test for has support
 		global.document.querySelector(':has(*, :does-not-exist, > *)');
-		global.document.querySelector(':has(:has(any))');
 
-		if (!global.document.querySelector(':has(:scope *)')) {
+		// see : https://github.com/w3c/csswg-drafts/issues/7676
+		// Fully invalid lists are not forgiving because of jQuery :has()
+		// We do not match the shipped behavior of Chrome and Safari because it conflicts with the specification.
+		global.document.querySelector(':has(:has(any), div)');
+
+		if (
+			!global.document.querySelector(':has(:scope *)') &&
+			CSS.supports('selector(:has(div))')
+		) {
 			return;
 		}
 	} catch (_) { }
