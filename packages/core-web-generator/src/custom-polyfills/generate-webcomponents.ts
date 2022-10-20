@@ -15,7 +15,8 @@ async function generateTemplate(mapping: Array<Feature>) {
 	const src = fs.readFileSync(
 		require.resolve("@webcomponents/template"),
 		"utf-8"
-	);
+	).toString().replace(/\/\/# sourceMappingURL.*?\n/, '');
+
 	fs.writeFileSync(path.join(modulesDir, "HTMLTemplateElement.js"), src);
 
 	const browsers = {
@@ -51,11 +52,14 @@ async function generateTemplate(mapping: Array<Feature>) {
 }
 
 async function generateShadyDOM(mapping: Array<Feature>) {
+	const nativeQSA = `\n;(function(){ try { ShadyDOM.querySelectorImplementation = 'native'; } catch(err) {} })();\n`;
+
 	const src = fs.readFileSync(
 		require.resolve("@webcomponents/shadydom/shadydom.min.js"),
 		"utf-8"
-	);
-	fs.writeFileSync(path.join(modulesDir, "~shadydom.js"), src);
+	).toString().replace(/\/\/# sourceMappingURL.*?\n/, '');
+
+	fs.writeFileSync(path.join(modulesDir, "~shadydom.js"), src + nativeQSA);
 
 	const browsers = {
 		chrome: "<53",
@@ -101,7 +105,8 @@ async function generateShadyCSS(mapping: Array<Feature>) {
 	const scopingShim = fs.readFileSync(
 		require.resolve("@webcomponents/shadycss/scoping-shim.min.js"),
 		"utf-8"
-	);
+	).toString().replace(/\/\/# sourceMappingURL.*?\n/, '');
+
 	fs.writeFileSync(
 		path.join(modulesDir, "~shadycss-scoping-shim.js"),
 		scopingShim
@@ -110,13 +115,15 @@ async function generateShadyCSS(mapping: Array<Feature>) {
 	const applyShim = fs.readFileSync(
 		require.resolve("@webcomponents/shadycss/apply-shim.min.js"),
 		"utf-8"
-	);
+	).toString().replace(/\/\/# sourceMappingURL.*?\n/, '');
+
 	fs.writeFileSync(path.join(modulesDir, "~shadycss-apply-shim.js"), applyShim);
 
 	const customStyleInterface = fs.readFileSync(
 		require.resolve("@webcomponents/shadycss/custom-style-interface.min.js"),
 		"utf-8"
-	);
+	).toString().replace(/\/\/# sourceMappingURL.*?\n/, '');
+	
 	fs.writeFileSync(
 		path.join(modulesDir, "~shadycss-custom-style-interface.js"),
 		customStyleInterface
@@ -265,7 +272,7 @@ async function generateCustomElements(mapping: Array<Feature>) {
 	let src = fs.readFileSync(
 		require.resolve("@webcomponents/custom-elements"),
 		"utf-8"
-	);
+	).toString().replace(/\/\/# sourceMappingURL.*?\n/, '');
 
 	// Reflect.construct is a dependency from core-js needed when Sub/Superclasses are transpiled by Babel.
 	// Babel does not detect this correctly.

@@ -29,4 +29,3 @@ W.prototype.styleElement=function(a){X(this);var b=a.localName,c;b?-1<b.indexOf(
 if(!window.ShadyCSS||!window.ShadyCSS.ScopingShim){var Y=new W,va=window.ShadyCSS&&window.ShadyCSS.CustomStyleInterface;window.ShadyCSS={prepareTemplate:function(a,b){Y.flushCustomStyles();Y.prepareTemplate(a,b)},prepareTemplateStyles:function(a,b,c){window.ShadyCSS.prepareTemplate(a,b,c)},prepareTemplateDom:function(){},styleSubtree:function(a,b){Y.flushCustomStyles();Y.styleSubtree(a,b)},styleElement:function(a){Y.flushCustomStyles();Y.styleElement(a)},styleDocument:function(a){Y.flushCustomStyles();
 Y.styleDocument(a)},getComputedStyleValue:function(a,b){return(a=window.getComputedStyle(a).getPropertyValue(b))?a.trim():""},flushCustomStyles:function(){Y.flushCustomStyles()},nativeCss:u,nativeShadow:k,cssBuild:t,disableRuntime:aa};va&&(window.ShadyCSS.CustomStyleInterface=va)}window.ShadyCSS.ApplyShim=V;}).call(this);
 
-//# sourceMappingURL=apply-shim.min.js.map

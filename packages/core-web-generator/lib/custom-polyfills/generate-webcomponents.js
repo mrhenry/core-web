@@ -14,7 +14,7 @@ async function generateWebComponents(mapping) {
 exports.generateWebComponents = generateWebComponents;
 ;
 async function generateTemplate(mapping) {
-    const src = fs.readFileSync(require.resolve("@webcomponents/template"), "utf-8");
+    const src = fs.readFileSync(require.resolve("@webcomponents/template"), "utf-8").toString().replace(/\/\/# sourceMappingURL.*?\n/, '');
     fs.writeFileSync(path.join(modulesDir, "HTMLTemplateElement.js"), src);
     const browsers = {
         chrome: "<35",
@@ -47,8 +47,9 @@ async function generateTemplate(mapping) {
     });
 }
 async function generateShadyDOM(mapping) {
-    const src = fs.readFileSync(require.resolve("@webcomponents/shadydom/shadydom.min.js"), "utf-8");
-    fs.writeFileSync(path.join(modulesDir, "~shadydom.js"), src);
+    const nativeQSA = `\n;(function(){ try { ShadyDOM.querySelectorImplementation = 'native'; } catch(err) {} })();\n`;
+    const src = fs.readFileSync(require.resolve("@webcomponents/shadydom/shadydom.min.js"), "utf-8").toString().replace(/\/\/# sourceMappingURL.*?\n/, '');
+    fs.writeFileSync(path.join(modulesDir, "~shadydom.js"), src + nativeQSA);
     const browsers = {
         chrome: "<53",
         edge: "<79",
@@ -88,11 +89,11 @@ async function generateShadyDOM(mapping) {
     });
 }
 async function generateShadyCSS(mapping) {
-    const scopingShim = fs.readFileSync(require.resolve("@webcomponents/shadycss/scoping-shim.min.js"), "utf-8");
+    const scopingShim = fs.readFileSync(require.resolve("@webcomponents/shadycss/scoping-shim.min.js"), "utf-8").toString().replace(/\/\/# sourceMappingURL.*?\n/, '');
     fs.writeFileSync(path.join(modulesDir, "~shadycss-scoping-shim.js"), scopingShim);
-    const applyShim = fs.readFileSync(require.resolve("@webcomponents/shadycss/apply-shim.min.js"), "utf-8");
+    const applyShim = fs.readFileSync(require.resolve("@webcomponents/shadycss/apply-shim.min.js"), "utf-8").toString().replace(/\/\/# sourceMappingURL.*?\n/, '');
     fs.writeFileSync(path.join(modulesDir, "~shadycss-apply-shim.js"), applyShim);
-    const customStyleInterface = fs.readFileSync(require.resolve("@webcomponents/shadycss/custom-style-interface.min.js"), "utf-8");
+    const customStyleInterface = fs.readFileSync(require.resolve("@webcomponents/shadycss/custom-style-interface.min.js"), "utf-8").toString().replace(/\/\/# sourceMappingURL.*?\n/, '');
     fs.writeFileSync(path.join(modulesDir, "~shadycss-custom-style-interface.js"), customStyleInterface);
     const scopingShimBrowsers = {
         chrome: "<53",
@@ -228,7 +229,7 @@ async function generateShadyCSS(mapping) {
     });
 }
 async function generateCustomElements(mapping) {
-    let src = fs.readFileSync(require.resolve("@webcomponents/custom-elements"), "utf-8");
+    let src = fs.readFileSync(require.resolve("@webcomponents/custom-elements"), "utf-8").toString().replace(/\/\/# sourceMappingURL.*?\n/, '');
     // Reflect.construct is a dependency from core-js needed when Sub/Superclasses are transpiled by Babel.
     // Babel does not detect this correctly.
     // Injecting usage of Reflect.construct fixes this.

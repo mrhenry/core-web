@@ -58,4 +58,3 @@ X.prototype.flushCustomStyles=X.prototype.flushCustomStyles;X.prototype.scopeNod
 window.ShadyCSS={ScopingShim:Z,prepareTemplate:function(a,b,c){Z.flushCustomStyles();Z.prepareTemplate(a,b,c)},prepareTemplateDom:function(a,b){Z.prepareTemplateDom(a,b)},prepareTemplateStyles:function(a,b,c){Z.flushCustomStyles();Z.prepareTemplateStyles(a,b,c)},styleSubtree:function(a,b){Z.flushCustomStyles();Z.styleSubtree(a,b)},styleElement:function(a){Z.flushCustomStyles();Z.styleElement(a)},styleDocument:function(a){Z.flushCustomStyles();Z.styleDocument(a)},flushCustomStyles:function(){Z.flushCustomStyles()},
 getComputedStyleValue:function(a,b){return Z.getComputedStyleValue(a,b)},nativeCss:w,nativeShadow:r,cssBuild:u,disableRuntime:v};Mb&&(window.ShadyCSS.ApplyShim=Mb);Nb&&(window.ShadyCSS.CustomStyleInterface=Nb);}).call(this);
 
-//# sourceMappingURL=scoping-shim.min.js.map
