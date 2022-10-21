@@ -22,5 +22,3 @@ import "./test_json.js";
 import "./test_localStorage.js";
 import "./test_location.origin.js";
 import "./test_matchMedia.js";
-import "./test_querySelectorAll.js";
-import "./test_querySelectorAll_has_pseudo.js";
