@@ -1,4 +1,4 @@
-QUnit.test("customElements.attachShadow", function(assert) {
+QUnit.test("customElements.attachShadow", function (assert) {
 	class TestElementShadow extends HTMLElement {
 		connectedCallback() {
 			// Create a shadow root

@@ -1,3 +1,5 @@
+
+;(function(){ try { window['ShadyDOM'] = window['ShadyDOM'] || {}; window['ShadyDOM']['querySelectorImplementation'] = window['ShadyDOM']['querySelectorImplementation'] || 'native'; } catch(err) {} })();
 (function(){/*
 
 Copyright (c) 2016 The Polymer Project Authors. All rights reserved.
@@ -124,5 +126,3 @@ enumerable:!0,get:function(){return this.node.__shady_innerHTML},set:function(a)
 a}}});function ad(a){Object.defineProperty(Z.prototype,a,{get:function(){return this.node["__shady_"+a]},set:function(b){this.node["__shady_"+a]=b},configurable:!0})}Db.forEach(function(a){return ad(a)});Eb.forEach(function(a){return ad(a)});var bd=new WeakMap;function cd(a){if(x(a)||a instanceof Z)return a;var b=bd.get(a);b||(b=new Z(a),bd.set(a,b));return b};if(v.N){var dd=v.i?function(a){return a}:function(a){bb(a);ab(a);return a};window.ShadyDOM={inUse:v.N,patch:dd,isShadyRoot:x,enqueue:Ba,flush:F,flushInitial:function(a){!a.P&&a.s&&bc(a)},settings:v,filterMutations:Ga,observeChildren:Ea,unobserveChildren:Fa,deferConnectionCallbacks:v.deferConnectionCallbacks,preferPerformance:v.preferPerformance,handlesDynamicScoping:!0,wrap:v.l?cd:dd,wrapIfNeeded:!0===v.l?cd:function(a){return a},Wrapper:Z,composedPath:ib,noPatch:v.l,patchOnDemand:v.O,nativeMethods:Oa,
 nativeTree:Pa,patchElementProto:Lc,querySelectorImplementation:v.querySelectorImplementation};Va();Kc("__shady_");Object.defineProperty(document,"_activeElement",Fc.activeElement);A(Window.prototype,Ic,"__shady_");v.l?v.O&&A(Element.prototype,wc):(Kc(),Cb());xb();window.Event=zb;window.CustomEvent=Ab;window.MouseEvent=Bb;window.ShadowRoot=uc};}).call(this);
 
-
-;(function(){ try { ShadyDOM.querySelectorImplementation = 'native'; } catch(err) {} })();

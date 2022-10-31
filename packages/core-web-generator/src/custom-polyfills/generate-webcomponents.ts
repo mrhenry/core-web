@@ -59,14 +59,14 @@ async function generateTemplate(mapping: Array<Feature>) {
 }
 
 async function generateShadyDOM(mapping: Array<Feature>) {
-	const nativeQSA = `\n;(function(){ try { ShadyDOM.querySelectorImplementation = 'native'; } catch(err) {} })();\n`;
+	const nativeQSA = `\n;(function(){ try { window['ShadyDOM'] = window['ShadyDOM'] || {}; window['ShadyDOM']['querySelectorImplementation'] = window['ShadyDOM']['querySelectorImplementation'] || 'native'; } catch(err) {} })();\n`;
 
 	const src = fs.readFileSync(
 		require.resolve("@webcomponents/shadydom/shadydom.min.js"),
 		"utf-8"
 	).toString().replace(/\/\/# sourceMappingURL.*?\n/, '');
 
-	fs.writeFileSync(path.join(modulesDir, "~shadydom.js"), src + nativeQSA);
+	fs.writeFileSync(path.join(modulesDir, "~shadydom.js"), nativeQSA + src);
 
 	const browsers = {
 		chrome: "<53",
