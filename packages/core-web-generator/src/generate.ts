@@ -144,11 +144,26 @@ async function gen(feature: string, mapping: Array<Feature>, aliases: Array<Feat
 	const dependencies = await allDependencies(feature);
 
 	if (meta.browsers) {
-		Object.keys(meta.browsers).forEach((browser) => {
+		for (let browser in meta.browsers) {
+			let version = meta.browsers[browser];
+
+			browser = browser.trim();
+			version = version.trim();
+
+			if ((browser === 'edge' || browser === 'edge_mob') && version === '*') {
+				version = '<79'
+			}
+
+			if (browser === 'android' && version === '*') {
+				version = '<4.4'
+			}
+
 			// Must parse as a semver range.
 			// This throws on invalid ranges, which in turn fails the build, acting as a smell.
-			new semver.Range(meta.browsers[browser]);
-		});
+			new semver.Range(version);
+			
+			meta.browsers[browser] = version;
+		}
 	}
 
 	if (!helperName) {

@@ -1,7 +1,6 @@
 const { addSideEffect } = require("@babel/helper-module-imports");
 const { get, has } = require("@mrhenry/core-web");
 const { matchNode } = require("./ast-matcher");
-// const toposort = require('toposort');
 
 const identifierMatcher = require("./matchers/__identifier_matcher");
 const identifierMatcherMap = require("./matchers/__identifier_matcher_map.json");
@@ -61,54 +60,6 @@ class Injector {
 
 		// insert in reverse order
 		let all = [...this.importSet];
-
-		// const graph = all.flatMap((name) => {
-		// 	const edges = get(name).deps.map((dep) => {
-		// 		return [
-		// 			dep,
-		// 			name
-		// 		];
-		// 	});
-
-		// 	edges.push([name, '~~bundle']);
-		// 	return edges;
-		// });
-
-		// // Some polyfills do not have direct dependency - dependant relationship, but still require a fixed loading order.
-		// if (this.importSet.has('~shadydom')) {
-		// 	if (this.importSet.has('~element-qsa-scope')) {
-		// 		graph.push([
-		// 			'~shadydom',
-		// 			'~element-qsa-scope',
-		// 		]);
-		// 	}
-
-		// 	if (this.importSet.has('~element-qsa-has')) {
-		// 		graph.push([
-		// 			'~shadydom',
-		// 			'~element-qsa-has',
-		// 		]);
-		// 	}
-		// }
-
-		// all = toposort(graph);
-		
-		all = all.filter((importName) => {
-			// if (!this.importSet.has(importName)) {
-			// 	// "~~bundle" was inserted to create the directed acyclic graph
-			// 	// All dependencies and aliases have been added
-			// 	// Filtering by the original `importSet` contents restores the intended imports.
-			// 	return false;
-			// }
-			
-			// Some polyfills can't coexist.
-			// "golden" should only be imported if "all" doesn't exist.
-			if (importName === 'Intl.DateTimeFormat.~timeZone.golden') {
-				return all.indexOf('Intl.DateTimeFormat.~timeZone.all') === -1;
-			}
-
-			return true;
-		});
 
 		while (all.length) {
 			const importName = all.pop();

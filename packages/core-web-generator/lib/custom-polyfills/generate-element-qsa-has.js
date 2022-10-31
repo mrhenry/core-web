@@ -10,11 +10,11 @@ async function generateElementQsaSHas(mapping) {
     fs.writeFileSync(path.join(modulesDir, "~element-qsa-has.js"), src);
     const browsers = {
         chrome: "<105",
-        edge: "*",
+        edge: "<105",
         firefox: "*",
-        safari: "*",
+        safari: "15.4",
         ie: "*",
-        opera: "*"
+        opera: "<91"
     };
     mapping.push({
         name: "~element-qsa-has",
