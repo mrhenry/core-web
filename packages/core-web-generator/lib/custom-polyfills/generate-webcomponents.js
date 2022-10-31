@@ -17,13 +17,20 @@ async function generateTemplate(mapping) {
     const src = fs.readFileSync(require.resolve("@webcomponents/template"), "utf-8").toString().replace(/\/\/# sourceMappingURL.*?\n/, '');
     fs.writeFileSync(path.join(modulesDir, "HTMLTemplateElement.js"), src);
     const browsers = {
-        chrome: "<35",
-        edge: "<15",
-        edge_mob: "<15",
+        chrome: "<26",
+        edge: "<13",
+        edge_mob: "<13",
         firefox: "<22",
-        safari: "<9",
+        firefox_mob: "<22",
+        opera: "<15",
+        op_mob: "<14",
+        op_mini: "*",
+        safari: "<8.0",
+        ios_saf: "<8.0",
+        android: "<4.4",
+        samsung_mob: "<1.5",
         ie: "*",
-        opera: "<22"
+        ie_mob: "*",
     };
     mapping.push({
         name: "HTMLTemplateElement",
@@ -53,11 +60,18 @@ async function generateShadyDOM(mapping) {
     const browsers = {
         chrome: "<53",
         edge: "<79",
-        edge_mob: "*",
+        edge_mob: "<79",
         firefox: "<63",
-        safari: "*",
+        firefox_mob: "<63",
+        opera: "<40",
+        op_mob: "<41",
+        op_mini: "*",
+        safari: "<10.0",
+        ios_saf: "<10.0",
+        android: "<53",
+        samsung_mob: "<6.0",
         ie: "*",
-        opera: "<40"
+        ie_mob: "*",
     };
     mapping.push({
         name: "~shadydom",
@@ -88,17 +102,16 @@ async function generateShadyDOM(mapping) {
         providedByCoreWeb: true,
     });
 }
+// TODO : evaluate ShadyCSS
 async function generateShadyCSS(mapping) {
     const scopingShim = fs.readFileSync(require.resolve("@webcomponents/shadycss/scoping-shim.min.js"), "utf-8").toString().replace(/\/\/# sourceMappingURL.*?\n/, '');
     fs.writeFileSync(path.join(modulesDir, "~shadycss-scoping-shim.js"), scopingShim);
-    const applyShim = fs.readFileSync(require.resolve("@webcomponents/shadycss/apply-shim.min.js"), "utf-8").toString().replace(/\/\/# sourceMappingURL.*?\n/, '');
-    fs.writeFileSync(path.join(modulesDir, "~shadycss-apply-shim.js"), applyShim);
     const customStyleInterface = fs.readFileSync(require.resolve("@webcomponents/shadycss/custom-style-interface.min.js"), "utf-8").toString().replace(/\/\/# sourceMappingURL.*?\n/, '');
     fs.writeFileSync(path.join(modulesDir, "~shadycss-custom-style-interface.js"), customStyleInterface);
     const scopingShimBrowsers = {
         chrome: "<53",
         edge: "<79",
-        edge_mob: "*",
+        edge_mob: "<79",
         firefox: "<63",
         safari: "*",
         ie: "*",
@@ -139,52 +152,10 @@ async function generateShadyCSS(mapping) {
         isAlias: false,
         providedByCoreWeb: true,
     });
-    const applyShimBrowsers = {
-        chrome: "<53",
-        edge: "<79",
-        edge_mob: "*",
-        firefox: "<63",
-        safari: "*",
-        ie: "*",
-        opera: "<40"
-    };
-    mapping.push({
-        name: "~shadycss-apply-shim",
-        deps: [
-            "~shadycss-scoping-shim",
-            "~shadydom",
-            "console.error",
-            "console.log",
-            "console",
-            "CustomEvent",
-            "document.head",
-            "document.querySelector",
-            "document",
-            "DocumentFragment",
-            "Element.prototype.cloneNode",
-            "Element.prototype.matches",
-            "Element",
-            "Event",
-            "getComputedStyle",
-            "HTMLDocument",
-            "HTMLTemplateElement",
-            "matchMedia",
-            "MutationObserver",
-            "Node.prototype.contains",
-            "NodeList.prototype.forEach",
-            "requestAnimationFrame",
-            "Window"
-        ],
-        browsers: applyShimBrowsers,
-        engines: (0, browsers_to_engines_1.browsersToEngines)(applyShimBrowsers),
-        size: applyShim.length,
-        isAlias: false,
-        providedByCoreWeb: true,
-    });
     const customStyleInterfaceBrowsers = {
         chrome: "<53",
         edge: "<79",
-        edge_mob: "*",
+        edge_mob: "<79",
         firefox: "<63",
         safari: "*",
         ie: "*",
@@ -239,14 +210,18 @@ async function generateCustomElements(mapping) {
     const browsers = {
         chrome: "<67",
         edge: "<79",
-        edge_mob: "*",
+        edge_mob: "<79",
         firefox: "<63",
-        safari: "<11",
-        ie: "*",
-        opera: "<64",
-        op_mob: "<46",
+        firefox_mob: "<63",
+        opera: "<54",
+        op_mob: "<48",
         op_mini: "*",
-        samsung_mob: '<8'
+        safari: "<10.1",
+        ios_saf: "<10.3",
+        android: "<4.4",
+        samsung_mob: "<9.0",
+        ie: "*",
+        ie_mob: "*"
     };
     mapping.push({
         name: "~custom-elements",
