@@ -10,7 +10,7 @@
   "prettier": {
     "useTabs": true
   },
-  "version": "1.0.1",
+  "version": "1.0.2",
   "volta": {
     "node": "18.10.0"
   }
