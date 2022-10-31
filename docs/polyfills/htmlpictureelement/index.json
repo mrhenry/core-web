@@ -8,7 +8,7 @@
       "~html5-elements"
     ],
     "browsers": {
-      "android": "*",
+      "android": "<4.4",
       "bb": "7 - 10",
       "chrome": "<38",
       "edge": "<13",
@@ -89,7 +89,7 @@
     }
   },
   "polyfilled": {
-    "android": "*",
+    "android": "<4.4",
     "chrome": "<38",
     "edge": "<13",
     "firefox": "<38",

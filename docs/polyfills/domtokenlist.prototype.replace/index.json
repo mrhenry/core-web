@@ -10,7 +10,7 @@
       "_DOMTokenList"
     ],
     "browsers": {
-      "android": "*",
+      "android": "<4.4",
       "bb": "*",
       "chrome": "<67",
       "edge": "<18",
@@ -144,7 +144,7 @@
     }
   },
   "polyfilled": {
-    "android": "*",
+    "android": "<4.4",
     "chrome": "<67",
     "edge": "<18",
     "firefox": "<61",

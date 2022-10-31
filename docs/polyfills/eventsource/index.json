@@ -8,8 +8,8 @@
     "browsers": {
       "android": "<4.4",
       "chrome": "<26",
-      "edge": "*",
-      "edge_mob": "*",
+      "edge": "<79",
+      "edge_mob": "<79",
       "firefox": "<36",
       "firefox_mob": "<36",
       "ie": "*",
@@ -661,7 +661,7 @@
   "polyfilled": {
     "android": "<4.4",
     "chrome": "<26",
-    "edge": "*",
+    "edge": "<79",
     "firefox": "<36",
     "ie": "*",
     "opera": "<12",

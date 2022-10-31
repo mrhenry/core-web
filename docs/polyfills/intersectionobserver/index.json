@@ -9,7 +9,7 @@
       "performance.now"
     ],
     "browsers": {
-      "android": "*",
+      "android": "<4.4",
       "bb": "*",
       "chrome": "<51",
       "edge": "<16",
@@ -574,7 +574,7 @@
     }
   },
   "polyfilled": {
-    "android": "*",
+    "android": "<4.4",
     "chrome": "<51",
     "edge": "<16",
     "firefox": "<55",

@@ -6,7 +6,7 @@
     "name": "requestAnimationFrame",
     "deps": [],
     "browsers": {
-      "android": "*",
+      "android": "<4.4",
       "bb": "7",
       "chrome": "<46",
       "firefox": "3.6 - 22",
@@ -162,7 +162,7 @@
     }
   },
   "polyfilled": {
-    "android": "*",
+    "android": "<4.4",
     "chrome": "<46",
     "firefox": "3.6 - 22",
     "ie": "6 - 9",

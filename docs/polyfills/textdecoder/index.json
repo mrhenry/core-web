@@ -6,10 +6,10 @@
     "name": "TextEncoder",
     "deps": [],
     "browsers": {
-      "android": "*",
+      "android": "<4.4",
       "chrome": "<38",
-      "edge": "*",
-      "edge_mob": "*",
+      "edge": "<79",
+      "edge_mob": "<79",
       "firefox": "<19",
       "firefox_mob": "<19",
       "ie": "*",
@@ -21,7 +21,7 @@
       "samsung_mob": "<3.0"
     },
     "engines": {
-      "Blink": ">= 28",
+      "Blink": "28 - 37",
       "EdgeHTML": ">= 12",
       "Gecko": "1.7 - 18",
       "Trident": ">= 4.0",
@@ -527,9 +527,9 @@
     }
   },
   "polyfilled": {
-    "android": "*",
+    "android": "<4.4",
     "chrome": "<38",
-    "edge": "*",
+    "edge": "<79",
     "firefox": "<19",
     "ie": "*",
     "opera": "<25",

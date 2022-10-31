@@ -8,10 +8,10 @@
       "requestAnimationFrame"
     ],
     "browsers": {
-      "android": "*",
+      "android": "<4.4",
       "chrome": "<61",
-      "edge": "*",
-      "edge_mob": "*",
+      "edge": "<79",
+      "edge_mob": "<79",
       "firefox": "4 - 36",
       "firefox_mob": "<37",
       "ie": ">=9",
@@ -23,7 +23,7 @@
       "samsung_mob": "<8.0"
     },
     "engines": {
-      "Blink": ">= 28",
+      "Blink": "28 - 60",
       "EdgeHTML": ">= 12",
       "Gecko": "2 - 36",
       "Trident": ">= 5.0",
@@ -246,9 +246,9 @@
     }
   },
   "polyfilled": {
-    "android": "*",
+    "android": "<4.4",
     "chrome": "<61",
-    "edge": "*",
+    "edge": "<79",
     "firefox": "4 - 36",
     "ie": ">=9",
     "opera": "<48",

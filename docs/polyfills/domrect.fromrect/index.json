@@ -8,9 +8,9 @@
       "DOMRect"
     ],
     "browsers": {
-      "android": "*",
+      "android": "<4.4",
       "chrome": "<61",
-      "edge": "*",
+      "edge": "<79",
       "firefox": "<69",
       "firefox_mob": "<79",
       "ie": ">=9",
@@ -22,7 +22,7 @@
       "samsung_mob": "<8.0"
     },
     "engines": {
-      "Blink": ">= 28",
+      "Blink": "28 - 60",
       "EdgeHTML": ">= 12",
       "Gecko": "1.7 - 68",
       "Trident": ">= 5.0",
@@ -87,9 +87,9 @@
     }
   },
   "polyfilled": {
-    "android": "*",
+    "android": "<4.4",
     "chrome": "<61",
-    "edge": "*",
+    "edge": "<79",
     "firefox": "<69",
     "ie": ">=9",
     "opera": "<48",

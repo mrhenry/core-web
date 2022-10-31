@@ -6,7 +6,7 @@
     "name": "fetch",
     "deps": [],
     "browsers": {
-      "android": "*",
+      "android": "<4.4",
       "bb": "10 - *",
       "chrome": "<66",
       "edge": "<16",
@@ -359,7 +359,7 @@
     }
   },
   "polyfilled": {
-    "android": "*",
+    "android": "<4.4",
     "chrome": "<66",
     "edge": "<16",
     "firefox": "<57",

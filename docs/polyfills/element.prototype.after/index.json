@@ -8,7 +8,7 @@
       "_mutation"
     ],
     "browsers": {
-      "android": "*",
+      "android": "<4.4",
       "bb": "*",
       "chrome": "<54",
       "edge": "<17",
@@ -90,7 +90,7 @@
     }
   },
   "polyfilled": {
-    "android": "*",
+    "android": "<4.4",
     "chrome": "<54",
     "edge": "<17",
     "firefox": "<49",

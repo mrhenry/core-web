@@ -36,24 +36,28 @@
     "browsers": {
       "chrome": "<67",
       "edge": "<79",
-      "edge_mob": "*",
+      "edge_mob": "<79",
       "firefox": "<63",
-      "safari": "<11",
-      "ie": "*",
-      "opera": "<64",
-      "op_mob": "<46",
+      "firefox_mob": "<63",
+      "opera": "<54",
+      "op_mob": "<48",
       "op_mini": "*",
-      "samsung_mob": "<8"
+      "safari": "<10.1",
+      "ios_saf": "<10.3",
+      "android": "<4.4",
+      "samsung_mob": "<9.0",
+      "ie": "*",
+      "ie_mob": "*"
     },
     "engines": {
       "Blink": "28 - 66",
       "EdgeHTML": ">= 12",
       "Gecko": "1.7 - 62",
-      "WebKit": "85 - 603.2.1",
-      "Trident": ">= 4.0",
-      "Presto": ">= 1"
+      "Presto": ">= 1",
+      "WebKit": "85 - 602.1.50",
+      "Trident": ">= 4.0"
     },
-    "size": 19000,
+    "size": 19019,
     "isAlias": false,
     "providedByCoreWeb": true
   },
@@ -111,12 +115,14 @@
     }
   },
   "polyfilled": {
+    "android": "<4.4",
     "chrome": "<67",
     "edge": "<79",
     "firefox": "<63",
     "ie": "*",
-    "opera": "<64",
-    "safari": "<11"
+    "opera": "<54",
+    "safari": "<10.1",
+    "ios_saf": "<10.3"
   },
   "native": {
     "android": {

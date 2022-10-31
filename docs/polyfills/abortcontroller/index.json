@@ -9,10 +9,10 @@
       "Event"
     ],
     "browsers": {
-      "android": "*",
+      "android": "<4.4",
       "chrome": "4 - 65",
       "edge": "<16",
-      "edge_mob": "*",
+      "edge_mob": "<79",
       "firefox": "2 - 56",
       "firefox_mob": "<64",
       "ie": ">=10",
@@ -329,7 +329,7 @@
     }
   },
   "polyfilled": {
-    "android": "*",
+    "android": "<4.4",
     "chrome": "4 - 65",
     "edge": "<16",
     "firefox": "2 - 56",

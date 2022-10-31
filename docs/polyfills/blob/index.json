@@ -9,8 +9,8 @@
     ],
     "browsers": {
       "chrome": "<20",
-      "edge": "*",
-      "edge_mob": "*",
+      "edge": "<79",
+      "edge_mob": "<79",
       "firefox": "<13",
       "firefox_mob": "<14",
       "ie": "*",
@@ -126,14 +126,20 @@
         "ie": {
           "version_added": "10"
         },
-        "nodejs": {
-          "alternative_name": "buffer.Blob",
-          "notes": [
-            "Experimental implementation.",
-            "Must be imported using <code>require('buffer').Blob</code> or <code>import { Blob } from 'buffer'</code>."
-          ],
-          "version_added": "15.7.0"
-        },
+        "nodejs": [
+          {
+            "version_added": "18.0.0"
+          },
+          {
+            "alternative_name": "buffer.Blob",
+            "notes": [
+              "Experimental implementation.",
+              "Must be imported using <code>require('buffer').Blob</code> or <code>import { Blob } from 'buffer'</code>."
+            ],
+            "version_added": "15.7.0",
+            "version_removed": "18.0.0"
+          }
+        ],
         "oculus": {
           "version_added": "5.0"
         },
@@ -569,7 +575,7 @@
   },
   "polyfilled": {
     "chrome": "<20",
-    "edge": "*",
+    "edge": "<79",
     "firefox": "<13",
     "ie": "*",
     "opera": "<12",

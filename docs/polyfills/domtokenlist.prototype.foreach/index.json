@@ -10,7 +10,7 @@
       "Element.prototype.classList"
     ],
     "browsers": {
-      "android": "*",
+      "android": "<4.4",
       "chrome": "<42",
       "edge": "<16",
       "edge_mob": "<16",
@@ -89,7 +89,7 @@
     }
   },
   "polyfilled": {
-    "android": "*",
+    "android": "<4.4",
     "chrome": "<42",
     "edge": "<16",
     "firefox": "<50",

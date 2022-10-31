@@ -6,7 +6,7 @@
     "name": "HTMLSelectElement.prototype.selectedOptions",
     "deps": [],
     "browsers": {
-      "android": "*",
+      "android": "<4.4",
       "bb": "*",
       "chrome": "<19",
       "firefox": "<26",
@@ -83,7 +83,7 @@
     }
   },
   "polyfilled": {
-    "android": "*",
+    "android": "<4.4",
     "chrome": "<19",
     "firefox": "<26",
     "ie": ">=9",

@@ -10,11 +10,11 @@
       "Event"
     ],
     "browsers": {
-      "android": "*",
+      "android": "<4.4",
       "bb": "*",
       "chrome": "<47",
-      "edge": "*",
-      "edge_mob": "*",
+      "edge": "<79",
+      "edge_mob": "<79",
       "firefox": "<55",
       "firefox_mob": "<55",
       "ie": "*",
@@ -27,7 +27,7 @@
       "samsung_mob": "<5.0"
     },
     "engines": {
-      "Blink": ">= 28",
+      "Blink": "28 - 46",
       "EdgeHTML": ">= 12",
       "Gecko": "1.7 - 54",
       "Trident": ">= 4.0",
@@ -92,9 +92,9 @@
     }
   },
   "polyfilled": {
-    "android": "*",
+    "android": "<4.4",
     "chrome": "<47",
-    "edge": "*",
+    "edge": "<79",
     "firefox": "<55",
     "ie": "*",
     "opera": "<34",

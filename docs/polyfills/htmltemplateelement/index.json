@@ -17,21 +17,27 @@
       "Window"
     ],
     "browsers": {
-      "chrome": "<35",
-      "edge": "<15",
-      "edge_mob": "<15",
+      "chrome": "<26",
+      "edge": "<13",
+      "edge_mob": "<13",
       "firefox": "<22",
-      "safari": "<9",
+      "firefox_mob": "<22",
+      "opera": "<15",
+      "op_mob": "<14",
+      "op_mini": "*",
+      "safari": "<8.0",
+      "ios_saf": "<8.0",
+      "android": "<4.4",
+      "samsung_mob": "<1.5",
       "ie": "*",
-      "opera": "<22"
+      "ie_mob": "*"
     },
     "engines": {
-      "Blink": "28 - 34",
-      "EdgeHTML": "12 - 14",
+      "EdgeHTML": "12",
       "Gecko": "1.7 - 21",
-      "WebKit": "85 - 538.35",
-      "Trident": ">= 4.0",
-      "Presto": ">= 1"
+      "Presto": ">= 1",
+      "WebKit": "85 - 537.71",
+      "Trident": ">= 4.0"
     },
     "size": 20896,
     "isAlias": false,
@@ -144,12 +150,14 @@
     }
   },
   "polyfilled": {
-    "chrome": "<35",
-    "edge": "<15",
+    "android": "<4.4",
+    "chrome": "<26",
+    "edge": "<13",
     "firefox": "<22",
     "ie": "*",
-    "opera": "<22",
-    "safari": "<9"
+    "opera": "<15",
+    "safari": "<8.0",
+    "ios_saf": "<8.0"
   },
   "native": {
     "android": {

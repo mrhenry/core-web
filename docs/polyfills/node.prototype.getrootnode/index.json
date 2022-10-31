@@ -9,8 +9,8 @@
       "android": "<6",
       "bb": "*",
       "chrome": "<54",
-      "edge": "*",
-      "edge_mob": "*",
+      "edge": "<79",
+      "edge_mob": "<79",
       "firefox": "<53",
       "firefox_mob": "<53",
       "ie": "*",
@@ -23,7 +23,7 @@
       "samsung_mob": "<6.0"
     },
     "engines": {
-      "Blink": ">= 28",
+      "Blink": "28 - 53",
       "EdgeHTML": ">= 12",
       "Gecko": "1.7 - 52",
       "Trident": ">= 4.0",
@@ -90,7 +90,7 @@
   "polyfilled": {
     "android": "<6",
     "chrome": "<54",
-    "edge": "*",
+    "edge": "<79",
     "firefox": "<53",
     "ie": "*",
     "opera": "<41",
