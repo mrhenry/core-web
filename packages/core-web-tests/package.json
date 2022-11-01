@@ -13,7 +13,7 @@
     "@babel/preset-env": "^7.16.11",
     "@mrhenry/babel-plugin-core-web": "^1.0.2",
     "@mrhenry/core-web": "^1.0.2",
-    "babel-loader": "^8.2.3",
+    "babel-loader": "^9.0.1",
     "browserstack-runner": "^0.9.4",
     "core-js": "^3.21.0",
     "eslint": "^8.11.0",
