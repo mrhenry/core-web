@@ -1,4 +1,4 @@
-declare type Feature = {
+type Feature = {
     name: string;
     browsers: Record<string, string>;
     engines: Record<string, string>;

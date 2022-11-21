@@ -1,12 +1,16 @@
 const postcss = require('postcss');
 const postcssPresetEnv = require('postcss-preset-env');
 const postcssImport = require('postcss-import');
-const cssnano = require('cssnano');
 const targets = require('./targets');
 const fs = require('fs');
 const path = require('path');
 const postcssSplitByMedia = require('postcss-split-by-media');
 const { createHash } = require('crypto');
+
+// Minify
+const postcssDiscardComments = require('postcss-discard-comments');
+const postcssDiscardEmpty = require('postcss-discard-empty');
+const postcssNormalizeWhitespace = require('postcss-normalize-whitespace');
 
 const cwd = process.cwd();
 
@@ -78,7 +82,9 @@ fs.readFile('./lib/css/index.css', async (err, css) => {
 			const info = manifest[mediaQuery];
 
 			const splitResult = await postcss([
-				cssnano()
+				postcssDiscardComments,
+				postcssDiscardEmpty,
+				postcssNormalizeWhitespace,
 			]).process(fs.readFileSync(`./dist/css/${info.base}`), {
 				map: {
 					inline: false,
