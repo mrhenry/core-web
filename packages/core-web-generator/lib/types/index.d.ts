@@ -1,4 +1,4 @@
-declare type Feature = {
+type Feature = {
     name: string;
     browsers: Record<string, string>;
     engines: Record<string, string>;
@@ -7,7 +7,7 @@ declare type Feature = {
     size: number;
     providedByCoreWeb: boolean;
 };
-declare type FeatureAlias = {
+type FeatureAlias = {
     name: string;
     entries: Array<string>;
 };

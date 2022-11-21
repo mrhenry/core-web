@@ -19,9 +19,8 @@
 }
 
 .compat-table-header a {
-	text-decoration: none;
 	color: currentColor;
-	/* TODO : more css */
+	text-decoration: none;
 }
 
 .compat-table-notes {
