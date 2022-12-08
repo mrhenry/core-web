@@ -35,7 +35,7 @@
     "cssnano": "^5.1.4",
     "polyfill-library": "^4.0.0",
     "postcss": "^8.4.16",
-    "postcss-import": "^15.0.0",
+    "postcss-import": "^15.1.0",
     "postcss-preset-env": "^8.0.0-alpha.1",
     "postcss-discard-comments": "^5.1.2",
     "postcss-discard-empty": "^5.1.1",
