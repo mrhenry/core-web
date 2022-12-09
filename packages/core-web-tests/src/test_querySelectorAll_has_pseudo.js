@@ -55,8 +55,11 @@ if ("Proxy" in self) {
 			assert.ok(document.body.querySelector(":has(*)"));
 		});
 
-		QUnit.test("accepts broken selector lists", function (assert) {
-			assert.ok(document.body.querySelector(":has(*, :does-not-exist)"));
+		// TODO : re-enable after browsers ship unforgiving `:has()`
+		QUnit.skip("does not accept broken selector lists", function (assert) {
+			assert.throws(() => {
+				document.body.querySelector(":has(*, :does-not-exist)");
+			});
 		});
 
 		// Edge does not support this test. Manually enable this when needed.
@@ -875,12 +878,18 @@ if ("Proxy" in self) {
 			]);
 		});
 
-		QUnit.test(":has nested as forgiven list", function (assert) {
-			assert.ok(!document.querySelector(":has(.does-not-exist, :has(#qunit-fixture))"), "nested :has is ignored in forgiving selector lists");
+		// TODO : re-enable after browsers ship unforgiving `:has()`
+		QUnit.skip(":has nested as unforgiven list", function (assert) {
+			assert.throws(() => {
+				document.querySelector(":has(.does-not-exist, :has(#qunit-fixture))");
+			}, "nested :has throws in unforgiving selector lists");
 		});
 
-		QUnit.skip(":has nested as forgiven list with a fully invalid list", function (assert) {
-			assert.ok(!document.querySelector(":has(:has(#qunit-fixture))"), "nested :has is ignored in forgiving selector lists");
+		// TODO : re-enable after browsers ship unforgiving `:has()`
+		QUnit.skip(":has nested as unforgiven list with a fully invalid list", function (assert) {
+			assert.throws(() => {
+				document.querySelector(":has(:has(#qunit-fixture))");
+			}, "nested :has throws in unforgiving selector lists");
 		});
 	});
 }
