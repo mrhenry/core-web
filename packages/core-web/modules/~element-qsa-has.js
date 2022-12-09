@@ -4,11 +4,6 @@
 		// test for has support
 		global.document.querySelector(':has(*, :does-not-exist, > *)');
 
-		// see : https://github.com/w3c/csswg-drafts/issues/7676
-		// Fully invalid lists are not forgiving because of jQuery :has()
-		// We do not match the shipped behavior of Chrome and Safari because it conflicts with the specification.
-		global.document.querySelector(':has(:has(any), div)');
-
 		if (
 			!global.document.querySelector(':has(:scope *)') &&
 			CSS.supports('selector(:has(div))')
@@ -407,10 +402,10 @@
 				var innerPart = innerParts[i];
 
 				// Nested has is not supported.
-				// If a recursive/nested call returns "false" we replace with ":not(*)"
+				// If a recursive/nested call returns "false" we throw
 				var innerPartReplaced = replaceAllWithTempAttr(innerPart, true, function () { });
 				if (!innerPartReplaced) {
-					newInnerParts.push(':not(*)');
+					throw new Error("Nested :has() is not supported")
 				} else {
 					newInnerParts.push(innerPart);
 				}
@@ -498,57 +493,53 @@
 							absoluteSelectorPart = ':scope ' + selectorPart;
 						}
 
-						try {
-							walkNode(rootNode, function (node) {
-								if (!(node.querySelector(absoluteSelectorPart))) {
-									return;
-								}
+						walkNode(rootNode, function (node) {
+							if (!(node.querySelector(absoluteSelectorPart))) {
+								return;
+							}
 
-								switch (selectorPart[0]) {
-									case '~':
-									case '+':
-										{
-											var siblings = node.childNodes;
-											for (var i = 0; i < siblings.length; i++) {
-												var sibling = siblings[i];
-												if (!('setAttribute' in sibling)) {
-													continue;
-												}
-
-												var idAttr = 'q-has-id' + (Math.floor(Math.random() * 9000000) + 1000000);
-												sibling.setAttribute(idAttr, '');
-
-												if (node.querySelector(':scope [' + idAttr + ']' + ' ' + selectorPart)) {
-													sibling.setAttribute(attr, '');
-												}
-
-												sibling.removeAttribute(idAttr);
+							switch (selectorPart[0]) {
+								case '~':
+								case '+':
+									{
+										var siblings = node.childNodes;
+										for (var i = 0; i < siblings.length; i++) {
+											var sibling = siblings[i];
+											if (!('setAttribute' in sibling)) {
+												continue;
 											}
-										}
-										break;
 
-									case '>':
-										{
 											var idAttr = 'q-has-id' + (Math.floor(Math.random() * 9000000) + 1000000);
-											node.setAttribute(idAttr, '');
+											sibling.setAttribute(idAttr, '');
 
-											if (node.querySelector(':scope[' + idAttr + ']' + ' ' + selectorPart)) {
-												node.setAttribute(attr, '');
+											if (node.querySelector(':scope [' + idAttr + ']' + ' ' + selectorPart)) {
+												sibling.setAttribute(attr, '');
 											}
 
-											node.removeAttribute(idAttr);
+											sibling.removeAttribute(idAttr);
 										}
-										break;
+									}
+									break;
 
-									default:
-										node.setAttribute(attr, '');
+								case '>':
+									{
+										var idAttr = 'q-has-id' + (Math.floor(Math.random() * 9000000) + 1000000);
+										node.setAttribute(idAttr, '');
 
-										break;
-								}
-							});
-						} catch (_) {
-							// `:has` takes a forgiving selector list.
-						}
+										if (node.querySelector(':scope[' + idAttr + ']' + ' ' + selectorPart)) {
+											node.setAttribute(attr, '');
+										}
+
+										node.removeAttribute(idAttr);
+									}
+									break;
+
+								default:
+									node.setAttribute(attr, '');
+
+									break;
+							}
+						});
 					}
 				});
 
@@ -596,7 +587,25 @@
 					}
 				}
 
-				throw err;
+				var errorMessage = '';
+				try {
+					qsa.apply(this, [':core-web-does-not-exist']);
+				} catch (dummyError) {
+					errorMessage = dummyError.message;
+					if (errorMessage) {
+						errorMessage = errorMessage.replace(':core-web-does-not-exist', selectors);
+					}
+				}
+
+				if (!errorMessage) {
+					errorMessage = "Failed to execute 'querySelector' on 'Document': '" + selectors + "' is not a valid selector.";
+				}
+
+				try {
+					throw new DOMException(errorMessage);
+				} catch (_) {
+					throw new Error(errorMessage);
+				}
 			}
 		};
 	}
