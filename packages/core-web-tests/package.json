@@ -9,7 +9,7 @@
     "browserstack-runner": "browserstack-runner"
   },
   "devDependencies": {
-    "@babel/core": "^7.18.13",
+    "@babel/core": "^7.20.7",
     "@babel/preset-env": "^7.16.11",
     "@mrhenry/babel-plugin-core-web": "^1.0.3",
     "@mrhenry/core-web": "^1.0.3",
