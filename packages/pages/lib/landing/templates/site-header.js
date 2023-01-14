@@ -1,4 +1,5 @@
 const html = require('../../html/html');
+const he = require('he');
 
 module.exports = function siteHeader(menu) {
 	return html`
@@ -15,10 +16,10 @@ module.exports = function siteHeader(menu) {
 					<ul class="navigation__list">
 						${menu.map((item) => {
 							if (item.url.indexOf('://') >= 0) {
-								return html`<li class="navigation__list-item"><a href="${item.url}" class="navigation__link" target="_blank" rel="noopener">${item.title}</a></li>`;
+								return html`<li class="navigation__list-item"><a href="${he.encode(item.url)}" class="navigation__link" target="_blank" rel="noopener">${he.encode(item.title)}</a></li>`;
 							}
 
-							return html`<li class="navigation__list-item"><a href="${item.url}" class="navigation__link">${item.title}</a></li>`;
+							return html`<li class="navigation__list-item"><a href="${he.encode(item.url)}" class="navigation__link">${he.encode(item.title)}</a></li>`;
 						}).join('')}
 					</ul>
 				</nav>

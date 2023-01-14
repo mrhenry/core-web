@@ -114,7 +114,12 @@ async function gen(feature, mapping, aliases) {
             browser = browser.trim();
             version = version.trim();
             if ((browser === 'edge' || browser === 'edge_mob') && version === '*') {
-                version = '<79';
+                if (meta.browsers['chrome'] && semver.satisfies('79.0.0', meta.browsers['chrome'])) {
+                    version = meta.browsers['chrome'];
+                }
+                else {
+                    version = '<79';
+                }
             }
             if (browser === 'android' && version === '*') {
                 version = '<4.4';

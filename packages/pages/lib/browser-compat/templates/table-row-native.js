@@ -1,6 +1,7 @@
 const html = require('../../html/html');
 const { nativeNotesToArray } = require('./notes');
 const { coreWebBrowsers } = require('../browsers');
+const he = require('he');
 
 module.exports = function nativeRowHTML(feature) {
 	let row = '';
@@ -11,13 +12,13 @@ module.exports = function nativeRowHTML(feature) {
 				let out = [];
 				if (versionInfo.version_added) {
 					out.push(
-						html`<span>${versionInfo.version_added}</span>`
+						html`<span>${he.encode(versionInfo.version_added)}</span>`
 					);
 				}
 
 				if (versionInfo.version_removed) {
 					out.push(
-						html`<span style="color:red;">${versionInfo.version_removed}</span>`
+						html`<span style="color:red;">${he.encode(versionInfo.version_removed)}</span>`
 					);
 				}
 
@@ -28,7 +29,7 @@ module.exports = function nativeRowHTML(feature) {
 				return out.join(' - ');
 			}).filter((x) => { return !!x }).join('<br>');
 		} else if (feature.native && feature.native[browser] && feature.native[browser].version_added) {
-			native = feature.native[browser].version_added;
+			native = he.encode(feature.native[browser].version_added);
 
 			if (feature.native[browser].notes || feature.native[browser].alternative_name) {
 				native = html`<span title="${nativeNotesToArray(feature.native[browser]).join('\n')}">${native} ⓘ</span>`;
