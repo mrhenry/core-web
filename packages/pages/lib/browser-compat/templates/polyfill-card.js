@@ -3,6 +3,7 @@ const cssTags = require('../../css/to-html');
 const siteFooter = require('../../landing/templates/site-footer');
 const path = require('path');
 const { dotsWBR, dotsZeroWidthSpace } = require('./dots-wbr');
+const he = require('he');
 
 module.exports = function polyfillCardHTML(assetMap, feature, sitemap) {
 	return html`<!DOCTYPE html>
@@ -213,7 +214,7 @@ function notes(feature) {
 			list = feature.polyfillio.notes.map((note) => {
 				return html`
 				<li>
-					${note}
+					${he.encode(note)}
 				</li>
 				`;
 			});
@@ -221,7 +222,7 @@ function notes(feature) {
 			list.push(
 				html`
 				<li>
-					${feature.polyfillio.notes}
+					${he.encode(feature.polyfillio.notes)}
 				</li>
 				`
 			)
@@ -298,9 +299,9 @@ function browsers(feature) {
 			list.push(
 				html`
 					<li>
-						<div style="display: flex;justify-content: space-between; max-width: 220px;">
+						<div style="display: flex; justify-content: space-between; max-width: 220px;">
 							<div>${prettyBrowser(browser)}:</div>
-							<div>${version}</div>
+							<div>${he.encode(version)}</div>
 						</div>
 					</li>
 				`
