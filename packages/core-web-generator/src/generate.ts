@@ -254,7 +254,7 @@ function ignoredByCoreWeb(f: string): boolean {
 }
 
 function providedByBabel(f: string): boolean {
-	const p = /^(_StringIterator|Function|Date|Math|Object|String|Number|(Weak)?(Map|Set)|Symbol|Array|RegExp|Promise|AggregateError|Reflect|URL|URLSearchParams|setTimeout|setInterval|setImmediate|queueMicrotask|globalThis|JSON)($|\.)/;
+	const p = /^(_StringIterator|Function|Date|Math|Object|String|Number|(Weak)?(Map|Set)|Symbol|Array|RegExp|Promise|AggregateError|Error|_ErrorConstructor|Reflect|URL|URLSearchParams|setTimeout|setInterval|setImmediate|queueMicrotask|globalThis|JSON)($|\.)/;
 	const typedArrays = /^(ArrayBuffer|Int8Array|Uint8Array|Uint8ClampedArray|Int16Array|Uint16Array|Int32Array|Uint32Array|Float32Array|Float64Array|TypedArray)($|\.)/;
 
 	const domIterables = /^(DOMTokenList|NodeList)\.prototype\.(forEach|@@iterator)($|\.)/;
