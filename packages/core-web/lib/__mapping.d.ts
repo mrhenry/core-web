@@ -1111,10 +1111,10 @@ export const mapping: ({
         op_mob: string;
         safari: string;
         ios_saf: string;
+        samsung_mob: string;
         android?: undefined;
         edge?: undefined;
         edge_mob?: undefined;
-        samsung_mob?: undefined;
         op_mini?: undefined;
         bb?: undefined;
     };
@@ -1142,12 +1142,12 @@ export const mapping: ({
         op_mini: string;
         safari: string;
         ios_saf: string;
+        samsung_mob: string;
         edge?: undefined;
         edge_mob?: undefined;
         firefox?: undefined;
         firefox_mob?: undefined;
         ie_mob?: undefined;
-        samsung_mob?: undefined;
     };
     engines: {
         Blink: string;
