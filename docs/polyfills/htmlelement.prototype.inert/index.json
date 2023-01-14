@@ -24,7 +24,7 @@
       "op_mini": "*",
       "safari": "<15.5",
       "ios_saf": "<15.5",
-      "samsung_mob": "*"
+      "samsung_mob": "<19.0"
     },
     "engines": {
       "Blink": "28 - 101",
@@ -158,7 +158,7 @@
       "op_mini": "*",
       "safari": "<15.5",
       "ios_saf": "<15.5",
-      "samsung_mob": "*"
+      "samsung_mob": "<19.0"
     },
     "detectSource": "\"HTMLElement\"in self&&\"inert\"in HTMLElement.prototype\n",
     "baseDir": "HTMLElement/prototype/inert",

@@ -14,7 +14,8 @@
       "opera": "<16",
       "op_mob": "<16",
       "safari": "<7.0",
-      "ios_saf": "<7.0"
+      "ios_saf": "<7.0",
+      "samsung_mob": "<1.6"
     },
     "engines": {
       "Blink": "28",
@@ -140,7 +141,8 @@
       "opera": "<16",
       "op_mob": "<16",
       "safari": "<7.0",
-      "ios_saf": "<7.0"
+      "ios_saf": "<7.0",
+      "samsung_mob": "<1.6"
     },
     "detectSource": "\"location\"in self&&\"origin\"in self.location\n",
     "baseDir": "location/origin",
