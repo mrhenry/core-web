@@ -167,6 +167,61 @@
         }
       }
     },
+    "init_keepalive_parameter": {
+      "__compat": {
+        "description": "<code>init.keepalive</code> parameter",
+        "source_file": "api/_globals/fetch.json",
+        "status": {
+          "deprecated": false,
+          "experimental": false,
+          "standard_track": true
+        },
+        "support": {
+          "chrome": {
+            "version_added": "66"
+          },
+          "chrome_android": {
+            "version_added": "66"
+          },
+          "deno": {
+            "version_added": false
+          },
+          "edge": {
+            "version_added": "15"
+          },
+          "firefox": {
+            "version_added": false
+          },
+          "firefox_android": {
+            "version_added": false
+          },
+          "ie": {
+            "version_added": false
+          },
+          "oculus": {
+            "version_added": "5.0"
+          },
+          "opera": {
+            "version_added": "43"
+          },
+          "opera_android": {
+            "version_added": "43"
+          },
+          "safari": {
+            "version_added": "13"
+          },
+          "safari_ios": {
+            "version_added": "13"
+          },
+          "samsunginternet_android": {
+            "version_added": "9.0"
+          },
+          "webview_android": {
+            "version_added": "66"
+          }
+        }
+      }
+    },
     "init_referrerPolicy_parameter": {
       "__compat": {
         "description": "<code>init.referrerPolicy</code> parameter",
