@@ -192,8 +192,9 @@ func runTest(parentCtx context.Context, client *browserstack.Client, browser bro
 		// "browserstack.debug":       "true",
 		// "browserstack.console":     "verbose",
 		// "browserstack.networkLogs": "true",
-		"build": sessionName,
-		"name":  fmt.Sprintf("%s – %s", "Core Web", browser.ResultKey()),
+		"build":       sessionName,
+		"projectName": "@mrhenry/core-web-tests",
+		"name":        fmt.Sprintf("%s – %s", "Core Web", browser.ResultKey()),
 	})
 
 	browserVersion, _ := reallyTolerantSemver(browser.BrowserVersion)
