@@ -100,7 +100,9 @@ if ("Proxy" in self) {
 			assert.ok(document.body.querySelector(":has([foo=':has()'])"));
 			assert.ok(document.body.querySelector("[foo=':has()']"));
 
-			assert.ok(!document.body.querySelector(":has(foo=':has()')"));
+			assert.throws(() => {
+				document.body.querySelector(":has(foo=':has()')");
+			});
 
 			assert.throws(() => {
 				document.body.querySelector("foo=':has()'");

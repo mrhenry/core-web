@@ -10,6 +10,12 @@
 	<div id="qunit"></div>
 	<div id="qunit-fixture"></div>
 	<script src="qunit-2.9.2.js"></script>
+	<script>
+		window.testLoaded = true;
+		window.QUnit.on('runEnd', function (result) {
+			window.testSuccess = result.status === 'passed';
+		});
+	</script>
 	<script src="dist/non-interactive.bundle-engines.js"></script>
 </body>
 </html>
