@@ -354,7 +354,7 @@ func runSeleniumTest(wd selenium.WebDriver, port int, test Test) Test {
 
 	err = wd.WaitWithTimeoutAndInterval(selenium.Condition(func(wd1 selenium.WebDriver) (bool, error) {
 		return getBoolFromWebDriver(wd1, `return (typeof window.testSuccess !== "undefined");`)
-	}), time.Second*15, time.Second)
+	}), time.Second*30, time.Second)
 	if err != nil {
 		test.end = time.Now()
 		test.err = err
