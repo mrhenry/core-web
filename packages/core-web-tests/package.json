@@ -5,8 +5,7 @@
   "scripts": {
     "build": "webpack",
     "watch": "webpack -w",
-    "lint": "eslint --fix ./src/*.js",
-    "browserstack-runner": "browserstack-runner"
+    "lint": "eslint --fix ./src/*.js"
   },
   "devDependencies": {
     "@babel/core": "^7.18.13",
@@ -14,7 +13,6 @@
     "@mrhenry/babel-plugin-core-web": "^1.0.4",
     "@mrhenry/core-web": "^1.0.4",
     "babel-loader": "^9.0.0",
-    "browserstack-runner": "^0.9.4",
     "core-js": "^3.21.0",
     "eslint": "^8.11.0",
     "webpack": "^5.66.0",

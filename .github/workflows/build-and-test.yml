@@ -53,9 +53,13 @@ jobs:
       - run: cd packages/babel-plugin-core-web && npm run test
         if: steps.cache-core-web-tests.outputs.cache-hit != 'true'
 
-      - run: cd packages/core-web-tests && npm run browserstack-runner
+      - uses: actions/setup-go@v2
+        with:
+          go-version: '^1.18'
+      - run: go install ./scripts/...
+
+      - run: core-web-browserstack
         env:
-          BROWSERSTACK_JSON: ./browserstack/${{ matrix.test_groups }}.json
           BROWSERSTACK_USERNAME:  ${{ secrets.BROWSERSTACK_USERNAME }}
           BROWSERSTACK_ACCESS_KEY:  ${{ secrets.BROWSERSTACK_ACCESS_KEY }}
 
