@@ -320,22 +320,6 @@ func runSeleniumTest(wd selenium.WebDriver, port int, test Test) Test {
 		return test
 	}
 
-	// Test might have already succeeded. First check for "true".
-	ok, err := getBoolFromWebDriver(wd, `return window.testSuccess;`)
-	if err != nil {
-		test.didRun = true
-		test.end = time.Now()
-		test.err = err
-		return test
-	}
-
-	if ok {
-		test.didRun = true
-		test.end = time.Now()
-		test.success = true
-		return test
-	}
-
 	// First check if the page loaded and has our content before waiting for async tests
 	loaded, err := getBoolFromWebDriver(wd, `return window.testLoaded;`)
 	if err != nil {
@@ -354,14 +338,14 @@ func runSeleniumTest(wd selenium.WebDriver, port int, test Test) Test {
 
 	err = wd.WaitWithTimeoutAndInterval(selenium.Condition(func(wd1 selenium.WebDriver) (bool, error) {
 		return getBoolFromWebDriver(wd1, `return (typeof window.testSuccess !== "undefined");`)
-	}), time.Second*30, time.Second)
+	}), time.Second*60, time.Second)
 	if err != nil {
 		test.end = time.Now()
 		test.err = err
 		return test
 	}
 
-	ok, err = getBoolFromWebDriver(wd, `return window.testSuccess;`)
+	ok, err := getBoolFromWebDriver(wd, `return window.testSuccess;`)
 	if err != nil {
 		test.end = time.Now()
 		test.err = err
