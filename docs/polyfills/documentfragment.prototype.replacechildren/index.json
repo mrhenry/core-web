@@ -1,0 +1,166 @@
+{
+  "name": "DocumentFragment.prototype.replaceChildren",
+  "slug": "DocumentFragment.prototype.replaceChildren",
+  "polyfillName": "DocumentFragment.prototype.replaceChildren",
+  "coreWeb": {
+    "name": "DocumentFragment.prototype.replaceChildren",
+    "deps": [
+      "DocumentFragment.prototype.append",
+      "DocumentFragment",
+      "_mutation"
+    ],
+    "browsers": {
+      "android": "<4.4",
+      "bb": "*",
+      "chrome": "<86",
+      "edge": "<86",
+      "edge_mob": "<86",
+      "firefox": "<78",
+      "firefox_mob": "<79",
+      "ie": "*",
+      "ie_mob": "*",
+      "opera": "<72",
+      "op_mob": "<61",
+      "op_mini": "*",
+      "safari": "<14.0",
+      "ios_saf": "<14.0",
+      "samsung_mob": "<14.0"
+    },
+    "engines": {
+      "Blink": "28 - 85",
+      "EdgeHTML": ">= 12",
+      "Gecko": "1.7 - 77",
+      "Trident": ">= 4.0",
+      "Presto": ">= 1",
+      "WebKit": "85 - 609.1.20"
+    },
+    "size": 244,
+    "isAlias": false,
+    "providedByCoreWeb": false
+  },
+  "mdn": {
+    "__compat": {
+      "mdn_url": "https://developer.mozilla.org/docs/Web/API/DocumentFragment/replaceChildren",
+      "source_file": "api/DocumentFragment.json",
+      "spec_url": "https://dom.spec.whatwg.org/#ref-for-dom-parentnode-replacechildren①",
+      "status": {
+        "deprecated": false,
+        "experimental": false,
+        "standard_track": true
+      },
+      "support": {
+        "chrome": {
+          "version_added": "86"
+        },
+        "chrome_android": {
+          "version_added": "86"
+        },
+        "edge": {
+          "version_added": "86"
+        },
+        "firefox": {
+          "version_added": "78"
+        },
+        "firefox_android": {
+          "version_added": "79"
+        },
+        "ie": {
+          "version_added": false
+        },
+        "oculus": {
+          "version_added": "12.0"
+        },
+        "opera": {
+          "version_added": "72"
+        },
+        "opera_android": {
+          "version_added": "61"
+        },
+        "safari": {
+          "version_added": "14"
+        },
+        "safari_ios": {
+          "version_added": "14"
+        },
+        "samsunginternet_android": {
+          "version_added": "14.0"
+        },
+        "webview_android": {
+          "version_added": "86"
+        }
+      }
+    }
+  },
+  "polyfilled": {
+    "android": "<4.4",
+    "chrome": "<86",
+    "edge": "<86",
+    "firefox": "<78",
+    "ie": "*",
+    "opera": "<72",
+    "safari": "<14.0",
+    "ios_saf": "<14.0"
+  },
+  "native": {
+    "android": {
+      "version_added": "86"
+    },
+    "chrome": {
+      "version_added": "86"
+    },
+    "edge": {
+      "version_added": "86"
+    },
+    "firefox": {
+      "version_added": "78"
+    },
+    "ie": {
+      "version_added": false
+    },
+    "opera": {
+      "version_added": "72"
+    },
+    "safari": {
+      "version_added": "14"
+    },
+    "ios_saf": {
+      "version_added": "14"
+    }
+  },
+  "polyfillio": {
+    "aliases": [
+      "default-3.4",
+      "default-3.5",
+      "default-3.6",
+      "default"
+    ],
+    "dependencies": [
+      "DocumentFragment.prototype.append"
+    ],
+    "docs": "https://developer.mozilla.org/en-US/docs/Web/API/DocumentFragment/replaceChildren",
+    "spec": "http://dom.spec.whatwg.org/#dom-parentnode-replacechildren",
+    "browsers": {
+      "android": "*",
+      "bb": "*",
+      "chrome": "<86",
+      "edge": "*",
+      "edge_mob": "*",
+      "firefox": "<78",
+      "firefox_mob": "<79",
+      "ie": "*",
+      "ie_mob": "*",
+      "opera": "<72",
+      "op_mob": "<61",
+      "op_mini": "*",
+      "safari": "<14.0",
+      "ios_saf": "<14.0",
+      "samsung_mob": "<14.0"
+    },
+    "detectSource": "\"DocumentFragment\"in self&&\"replaceChildren\"in DocumentFragment.prototype\n",
+    "baseDir": "DocumentFragment/prototype/replaceChildren",
+    "hasTests": true,
+    "isTestable": true,
+    "isPublic": true,
+    "size": 244
+  }
+}
