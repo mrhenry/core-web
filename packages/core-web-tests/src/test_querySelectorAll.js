@@ -42,7 +42,7 @@ QUnit.module("querySelector", function() {
 			resultA.push(el);
 		});
 
-		assert.equal(resultA.length, 1);
+		assert.equal(resultA.length, 2);
 		if (resultA[0]) {
 			assert.equal(resultA[0].className, "three");
 		}
