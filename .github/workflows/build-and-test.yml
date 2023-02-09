@@ -12,11 +12,6 @@ jobs:
   build-and-test:
     name: 'Build & Test'
     runs-on: ubuntu-latest
-    strategy:
-      max-parallel: 1
-      fail-fast: false
-      matrix:
-        test_groups: [ 1, 2, 3, 4, 5 ]
     steps:
       - name: check out
         uses: actions/checkout@v3
