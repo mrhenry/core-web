@@ -25,7 +25,7 @@ var tests = []string{
 }
 
 func main() {
-	processCtx, processCancel := context.WithTimeout(context.Background(), time.Minute*120)
+	processCtx, processCancel := context.WithTimeout(context.Background(), time.Minute*20)
 	defer processCancel()
 
 	runnerCtx, runnerCancel := context.WithCancel(processCtx)
@@ -84,13 +84,13 @@ func main() {
 
 func run(processCtx context.Context, runnerCtx context.Context, errChan chan error) {
 	doneChan := make(chan bool, 1)
-	ctx, cancel := context.WithTimeout(runnerCtx, time.Minute*30)
+	ctx, cancel := context.WithTimeout(runnerCtx, time.Minute*15)
 	defer cancel()
 
 	go func() {
 		select {
 		case <-runnerCtx.Done():
-			time.Sleep(time.Second * 45)
+			time.Sleep(time.Second * 10)
 
 			select {
 			case doneChan <- true:
@@ -183,7 +183,7 @@ func run(processCtx context.Context, runnerCtx context.Context, errChan chan err
 }
 
 func runTest(parentCtx context.Context, client *browserstack.Client, browser browserstack.Browser, sessionName string) error {
-	ctx, cancel := context.WithTimeout(parentCtx, time.Minute*10)
+	ctx, cancel := context.WithTimeout(parentCtx, time.Minute*15)
 	defer cancel()
 
 	caps := client.SetCaps(selenium.Capabilities{
@@ -243,7 +243,7 @@ func runTest(parentCtx context.Context, client *browserstack.Client, browser bro
 			caps["browserstack.local"] = "true"            // suspected to have no effect
 		}
 	} else if browser.Browser == "chrome" {
-		if browserVersion != nil && browserVersion.Segments()[0] < 36 {
+		if browserVersion != nil && browserVersion.Segments()[0] < 50 {
 			w3cCompatible = false
 		}
 	} else if browser.Browser == "ie" {
