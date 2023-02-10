@@ -34,7 +34,7 @@ jobs:
       - run: cd packages/core-web-generator && npm run test
       - run: cd packages/babel-plugin-core-web && npm run test
 
-      - uses: actions/setup-go@v2
+      - uses: actions/setup-go@v3
         with:
           go-version: '^1.18'
       - run: go install ./scripts/...
