@@ -11,4 +11,4 @@ require (
 
 require github.com/blang/semver v3.5.1+incompatible // indirect
 
-replace github.com/tebeka/selenium v0.9.9 => github.com/romainmenke/selenium v0.9.14
+replace github.com/tebeka/selenium v0.9.9 => github.com/romainmenke/selenium v0.9.15
