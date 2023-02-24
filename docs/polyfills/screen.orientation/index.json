@@ -93,10 +93,10 @@
           "version_added": "26"
         },
         "safari": {
-          "version_added": "preview"
+          "version_added": "16.4"
         },
         "safari_ios": {
-          "version_added": false
+          "version_added": "16.4"
         },
         "samsunginternet_android": {
           "version_added": "4.0"
@@ -152,10 +152,10 @@
       "version_added": "25"
     },
     "safari": {
-      "version_added": "preview"
+      "version_added": "16.4"
     },
     "ios_saf": {
-      "version_added": false
+      "version_added": "16.4"
     }
   },
   "polyfillio": {
