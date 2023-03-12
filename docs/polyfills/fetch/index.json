@@ -112,6 +112,62 @@
         }
       }
     },
+    "authorization_removed_cross_origin": {
+      "__compat": {
+        "description": "<code>Authorization</code> header removed from cross-origin redirects",
+        "source_file": "api/_globals/fetch.json",
+        "spec_url": "https://fetch.spec.whatwg.org/#http-redirect-fetch",
+        "status": {
+          "deprecated": false,
+          "experimental": false,
+          "standard_track": true
+        },
+        "support": {
+          "chrome": {
+            "version_added": false
+          },
+          "chrome_android": {
+            "version_added": false
+          },
+          "deno": {
+            "version_added": false
+          },
+          "edge": {
+            "version_added": false
+          },
+          "firefox": {
+            "version_added": "111"
+          },
+          "firefox_android": {
+            "version_added": "111"
+          },
+          "ie": {
+            "version_added": false
+          },
+          "oculus": {
+            "version_added": false
+          },
+          "opera": {
+            "version_added": false
+          },
+          "opera_android": {
+            "version_added": false
+          },
+          "safari": {
+            "version_added": "16.1"
+          },
+          "safari_ios": {
+            "version_added": "16.1"
+          },
+          "samsunginternet_android": {
+            "version_added": false
+          },
+          "webview_android": {
+            "version_added": false
+          }
+        }
+      }
+    },
     "blob_data_support": {
       "__compat": {
         "description": "Support for blob: and data:",
