@@ -42,7 +42,7 @@
     "postcss-normalize-whitespace": "^5.1.1",
     "postcss-preset-env": "^8.0.1",
     "postcss-split-by-media": "^0.3.0",
-    "webpack": "^5.66.0",
+    "webpack": "^5.76.2",
     "webpack-cli": "^5.0.0"
   },
   "volta": {
