@@ -38,7 +38,9 @@
   },
   "mdn": {
     "__compat": {
+      "mdn_url": "https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array/@@iterator",
       "source_file": "api/NodeList.json",
+      "spec_url": "https://dom.spec.whatwg.org/#interface-nodelist",
       "status": {
         "deprecated": false,
         "experimental": false,
