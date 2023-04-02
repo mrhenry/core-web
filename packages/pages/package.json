@@ -39,7 +39,7 @@
     "postcss-discard-empty": "^6.0.0",
     "postcss-import": "^15.0.0",
     "postcss-normalize-whitespace": "^6.0.0",
-    "postcss-preset-env": "^8.0.1",
+    "postcss-preset-env": "^8.3.0",
     "postcss-split-by-media": "^0.3.0",
     "webpack": "^5.76.2",
     "webpack-cli": "^5.0.0"
