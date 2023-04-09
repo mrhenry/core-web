@@ -27,7 +27,7 @@
     "@types/babel__traverse": "^7.18.0",
     "@types/node": "^18.11.19",
     "@types/semver": "^7.3.9",
-    "typescript": "^5.0.2"
+    "typescript": "^5.0.4"
   },
   "volta": {
     "extends": "../../package.json"
