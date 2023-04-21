@@ -32,7 +32,7 @@
     "__compat": {
       "mdn_url": "https://developer.mozilla.org/docs/Web/API/Location/origin",
       "source_file": "api/Location.json",
-      "spec_url": "https://html.spec.whatwg.org/multipage/history.html#dom-location-origin-dev",
+      "spec_url": "https://html.spec.whatwg.org/multipage/nav-history-apis.html#dom-location-origin-dev",
       "status": {
         "deprecated": false,
         "experimental": false,

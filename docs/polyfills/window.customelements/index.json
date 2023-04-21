@@ -57,7 +57,7 @@
       "WebKit": "85 - 602.1.50",
       "Trident": ">= 4.0"
     },
-    "size": 19019,
+    "size": 19285,
     "isAlias": false,
     "providedByCoreWeb": true
   },
