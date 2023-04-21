@@ -244,7 +244,7 @@ func runTest(parentCtx context.Context, client *browserstack.Client, browser bro
 			caps["browserstack.local"] = "true"            // suspected to have no effect
 		}
 	} else if browser.Browser == "chrome" {
-		if browserVersion != nil && browserVersion.Segments()[0] < 50 {
+		if browserVersion != nil && browserVersion.Segments()[0] < 58 {
 			w3cCompatible = false
 		}
 	} else if browser.Browser == "ie" {
