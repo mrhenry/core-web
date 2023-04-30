@@ -6,7 +6,7 @@
     "build": "babel src -d lib"
   },
   "devDependencies": {
-    "@babel/cli": "^7.18.10",
+    "@babel/cli": "^7.21.5",
     "@babel/core": "^7.18.13",
     "@mrhenry/babel-plugin-core-web": "*",
     "@mrhenry/core-web": "*"
