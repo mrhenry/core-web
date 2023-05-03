@@ -24,8 +24,9 @@
   },
   "dependencies": {
     "@babel/core": "^7.18.13",
-    "@babel/preset-env": "^7.16.11",
-    "@mdn/browser-compat-data": "^5.2.43",
+    "@babel/core": "^7.21.8",
+    "@babel/preset-env": "^7.21.5",
+    "@mdn/browser-compat-data": "^5.2.55",
     "@mrhenry/babel-plugin-core-web": "*",
     "@mrhenry/core-web": "*",
     "babel-loader": "^9.0.0",
@@ -41,8 +42,8 @@
     "postcss-normalize-whitespace": "^6.0.0",
     "postcss-preset-env": "^8.0.1",
     "postcss-split-by-media": "^0.3.0",
-    "webpack": "^5.76.2",
-    "webpack-cli": "^5.0.0"
+    "webpack": "^5.81.0",
+    "webpack-cli": "^5.0.2"
   },
   "volta": {
     "extends": "../../package.json"
