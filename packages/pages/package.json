@@ -1,6 +1,6 @@
 {
   "name": "@mrhenry/pages",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "generator for GitHub pages.",
   "license": "MIT",
   "main": "lib/pages.js",
@@ -23,7 +23,6 @@
     "dev-server": "npx http-server ./dist -p 3080"
   },
   "dependencies": {
-    "@babel/core": "^7.18.13",
     "@babel/core": "^7.21.8",
     "@babel/preset-env": "^7.21.5",
     "@mdn/browser-compat-data": "^5.2.55",

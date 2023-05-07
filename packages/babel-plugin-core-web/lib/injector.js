@@ -49,13 +49,13 @@ class Injector {
 	}
 
 	inject(path, state) {
-		if (this.debug) {
-			logImportedPolyfills([...this.importSet]);
-		}
-
 		// Allow users to block polyfills.
 		for (const ignore of this.ignoreSet.values()) {
 			this.importSet.delete(ignore);
+		}
+
+		if (this.debug) {
+			logImportedPolyfills([...this.importSet], state);
 		}
 
 		// insert in reverse order
@@ -265,7 +265,7 @@ class Injector {
 
 module.exports = Injector;
 
-function logImportedPolyfills(list) {
+function logImportedPolyfills(list, state) {
 	if (!list || !list.length) {
 		return;
 	}
@@ -278,6 +278,10 @@ function logImportedPolyfills(list) {
 			cost += spec.size;
 		}
 	});
+
+	if (state?.file?.opts?.filename) {
+		console.log('@mrhenry/core-web - from: ' + state.file.opts.filename);
+	}
 
 	console.log(`@mrhenry/core-web - importing: ${Math.ceil(cost / 1000)}KB -`, list.sort().join(', '));
 }
