@@ -33,10 +33,10 @@ run-tests-e2e: build-pages
 watch-tests: install
 	(cd packages/core-web-tests && npm run watch)
 
-version-minor: $(packages)
+version-patch: $(packages)
 
 $(packages): install
-	(cd $@ && npm version minor --no-git-tag-version)
+	(cd $@ && npm version patch --no-git-tag-version)
 
 publish: install
 	(cd ./packages/core-web && npm publish)
