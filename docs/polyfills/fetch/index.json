@@ -258,10 +258,10 @@
             "version_added": "5.0"
           },
           "opera": {
-            "version_added": "43"
+            "version_added": "53"
           },
           "opera_android": {
-            "version_added": "43"
+            "version_added": "47"
           },
           "safari": {
             "version_added": "13"
@@ -274,6 +274,61 @@
           },
           "webview_android": {
             "version_added": "66"
+          }
+        }
+      }
+    },
+    "init_priority_parameter": {
+      "__compat": {
+        "description": "<code>init.priority</code> parameter",
+        "source_file": "api/_globals/fetch.json",
+        "status": {
+          "deprecated": false,
+          "experimental": true,
+          "standard_track": true
+        },
+        "support": {
+          "chrome": {
+            "version_added": "101"
+          },
+          "chrome_android": {
+            "version_added": "101"
+          },
+          "deno": {
+            "version_added": false
+          },
+          "edge": {
+            "version_added": "101"
+          },
+          "firefox": {
+            "version_added": false
+          },
+          "firefox_android": {
+            "version_added": false
+          },
+          "ie": {
+            "version_added": false
+          },
+          "oculus": {
+            "version_added": "22.0"
+          },
+          "opera": {
+            "version_added": "87"
+          },
+          "opera_android": {
+            "version_added": "70"
+          },
+          "safari": {
+            "version_added": false
+          },
+          "safari_ios": {
+            "version_added": false
+          },
+          "samsunginternet_android": {
+            "version_added": "19.0"
+          },
+          "webview_android": {
+            "version_added": "101"
           }
         }
       }
