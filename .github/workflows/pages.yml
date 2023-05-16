@@ -36,8 +36,8 @@ jobs:
     - name: create pages content
       run: |
         # Git config
-        git config user.name github-actions
-        git config user.email github-actions@github.com
+        git config user.name github-actions[bot]
+        git config user.email 41898282+github-actions[bot]@users.noreply.github.com
         # Move contents to temp files
         cp -r packages/pages/dist/ $GITHUB_WORKSPACE/pages/
         # Checkout pages branches
