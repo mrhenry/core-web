@@ -200,8 +200,6 @@ func runTest(parentCtx context.Context, client *browserstack.Client, browser bro
 	browserVersion, _ := reallyTolerantSemver(browser.BrowserVersion)
 	osVersion, _ := reallyTolerantSemver(browser.OSVersion)
 
-	w3cCompatible := true
-
 	if browser.Device != "" {
 		caps["deviceName"] = browser.Device
 		// caps["browserstack.appium_version"] = "1.8.0"
@@ -219,39 +217,26 @@ func runTest(parentCtx context.Context, client *browserstack.Client, browser bro
 		caps["browserVersion"] = browser.BrowserVersion
 	}
 
-	if browser.Browser == "opera" && browser.BrowserVersion == "12.16" {
-		w3cCompatible = false
-		caps["browserstack.local"] = "true" // suspected to have no effect
-	}
-
-	if browser.Browser == "opera" && browser.BrowserVersion == "12.15" {
-		w3cCompatible = false
-		caps["browserstack.local"] = "true" // suspected to have no effect
-	}
-
-	if browser.OS == "ios" {
-		if osVersion != nil && osVersion.Segments()[0] < 12 {
-			w3cCompatible = false
-		}
-	} else if browser.Browser == "safari" {
-		if browserVersion != nil && browserVersion.Segments()[0] < 12 {
-			w3cCompatible = false
-		}
-	} else if browser.Browser == "firefox" {
-		if browserVersion != nil && browserVersion.Segments()[0] < 46 {
-			w3cCompatible = false
-			caps["browserstack.firefox.driver"] = "0.15.0" // suspected to have no effect
-			caps["browserstack.local"] = "true"            // suspected to have no effect
+	w3cCompatible := false
+	if browser.Browser == "firefox" {
+		if browserVersion != nil && browserVersion.Segments()[0] > 55 {
+			w3cCompatible = true
 		}
 	} else if browser.Browser == "chrome" {
-		if browserVersion != nil && browserVersion.Segments()[0] < 58 {
-			w3cCompatible = false
+		if browserVersion != nil && browserVersion.Segments()[0] > 80 {
+			w3cCompatible = true
 		}
-	} else if browser.Browser == "ie" {
-		w3cCompatible = false
+	} else if browser.OS == "ios" {
+		if osVersion != nil && osVersion.Segments()[0] > 11 {
+			w3cCompatible = true
+		}
+	} else if browser.Browser == "safari" {
+		if browserVersion != nil && browserVersion.Segments()[0] > 11 {
+			w3cCompatible = true
+		}
 	} else if browser.Browser == "edge" {
-		if browserVersion != nil && browserVersion.Segments()[0] == 15 {
-			w3cCompatible = false
+		if browserVersion != nil && browserVersion.Segments()[0] > 15 {
+			w3cCompatible = true
 		}
 	}
 

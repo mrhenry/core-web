@@ -27,7 +27,7 @@ jobs:
     - name: setup node
       uses: actions/setup-node@v3.6.0
       with:
-        node-version: 18
+        node-version: 20
         cache: 'npm'
 
     # https://github.com/Automattic/node-canvas/wiki/Installation:-Arch-based-distributions
