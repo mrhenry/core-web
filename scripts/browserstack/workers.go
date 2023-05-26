@@ -69,7 +69,7 @@ type WorkerConfig struct {
 }
 
 func (x *Client) NewWorker(parentCtx context.Context, config WorkerConfig) (*Worker, error) {
-	ctx, cancel := context.WithTimeout(parentCtx, time.Second*5)
+	ctx, cancel := context.WithTimeout(parentCtx, time.Second*10)
 	defer cancel()
 
 	params := map[string]interface{}{}
@@ -165,7 +165,7 @@ func (x *Client) NewWorker(parentCtx context.Context, config WorkerConfig) (*Wor
 }
 
 func (x *Client) DeleteWorker(parentCtx context.Context, id int) (bool, error) {
-	ctx, cancel := context.WithTimeout(parentCtx, time.Second*5)
+	ctx, cancel := context.WithTimeout(parentCtx, time.Second*10)
 	defer cancel()
 
 	req, err := http.NewRequestWithContext(ctx, http.MethodDelete, fmt.Sprintf("https://api.browserstack.com/5/worker/%d", id), nil)
@@ -207,7 +207,7 @@ func (x *Client) DeleteWorker(parentCtx context.Context, id int) (bool, error) {
 }
 
 func (x *Client) Workers(parentCtx context.Context) ([]*Worker, error) {
-	ctx, cancel := context.WithTimeout(parentCtx, time.Second*5)
+	ctx, cancel := context.WithTimeout(parentCtx, time.Second*10)
 	defer cancel()
 
 	req, err := http.NewRequestWithContext(ctx, http.MethodGet, "https://api.browserstack.com/5/workers", nil)
