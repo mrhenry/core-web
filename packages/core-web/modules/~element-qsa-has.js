@@ -448,7 +448,12 @@
 
 	function polyfill(qsa) {
 		return function (selectors) {
-			if ((selectors.toLowerCase().indexOf(':has(') === -1) || !pseudoClassHasInnerQuery(selectors)) {
+			if (!selectors) {
+				return qsa.apply(this, arguments);
+			}
+
+			var selectorsString = String(selectors);
+			if (!selectorsString || (selectorsString.toLowerCase().indexOf(':has(') === -1) || !pseudoClassHasInnerQuery(selectorsString)) {
 				return qsa.apply(this, arguments);
 			}
 
@@ -472,10 +477,10 @@
 			_focus.setAttribute(scopeAttr, '');
 
 			try {
-				selectors = replaceScopeWithAttr(selectors, scopeAttr);
+				selectorsString = replaceScopeWithAttr(selectorsString, scopeAttr);
 
 				var attrs = [scopeAttr];
-				var newQuery = replaceAllWithTempAttr(selectors, false, function (inner, attr) {
+				var newQuery = replaceAllWithTempAttr(selectorsString, false, function (inner, attr) {
 					attrs.push(attr);
 
 					var selectorParts = splitSelector(inner);
@@ -593,12 +598,12 @@
 				} catch (dummyError) {
 					errorMessage = dummyError.message;
 					if (errorMessage) {
-						errorMessage = errorMessage.replace(':core-web-does-not-exist', selectors);
+						errorMessage = errorMessage.replace(':core-web-does-not-exist', selectorsString);
 					}
 				}
 
 				if (!errorMessage) {
-					errorMessage = "Failed to execute 'querySelector' on 'Document': '" + selectors + "' is not a valid selector.";
+					errorMessage = "Failed to execute 'querySelector' on 'Document': '" + selectorsString + "' is not a valid selector.";
 				}
 
 				try {

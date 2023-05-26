@@ -7,21 +7,21 @@ if ("Proxy" in self) {
 
 		// Test that |selector| returns the given elements in #main.
 		function testSelectorAllFromMain(assert, selector, expected) {
-			assert.step(`${selector} matches expected elements from #main`);
+			assert.step(`${selector.toString()} matches expected elements from #main`);
 			let actual = Array.from(document.getElementById("main").querySelectorAll(selector));
 			assert.deepEqual(formatElements(actual), formatElements(expected));
 		}
 
 		// Test that |selector| returns the given elements in the given scope element
 		function testSelectorAllFromScope(assert, scope, selector, expected) {
-			assert.step(`${selector} matches expected elements from scope ${scope.id || scope.tagName}`);
+			assert.step(`${selector.toString() } matches expected elements from scope ${scope.id || scope.tagName}`);
 			let actual = Array.from(scope.querySelectorAll(selector));
 			assert.deepEqual(formatElements(actual), formatElements(expected));
 		}
 
 		// Test that |selector| returns the given element in #main.
 		function testSelector(assert, selector, expected) {
-			assert.step(`${selector} matches expected element`);
+			assert.step(`${selector.toString() } matches expected element`);
 			assert.equal(document.getElementById("main").querySelector(selector).id, expected.id);
 		}
 
@@ -145,6 +145,8 @@ if ("Proxy" in self) {
 			testSelectorAllFromMain(assert, ":has(#a)", []);
 			testSelectorAllFromMain(assert, ":has(.ancestor)", [a]);
 			testSelectorAllFromMain(assert, ":HAS(.ancestor)", [a]);
+			testSelectorAllFromMain(assert, [":hAs(.ancestor)"], [a]);
+			testSelectorAllFromMain(assert, { toString: function () { return ":haS(.ancestor)"; } }, [a]);
 			testSelectorAllFromMain(assert, ":has(.target)", [a, b, f, h]);
 			testSelectorAllFromMain(assert, ":has(.descendant)", [a, b, c, f, h, j]);
 			testSelectorAllFromMain(assert, ".parent:has(.target)", [b, f, h]);
@@ -175,6 +177,8 @@ if ("Proxy" in self) {
 				":has(#a) matches expected elements from #main",
 				":has(.ancestor) matches expected elements from #main",
 				":HAS(.ancestor) matches expected elements from #main",
+				":hAs(.ancestor) matches expected elements from #main",
+				":haS(.ancestor) matches expected elements from #main",
 				":has(.target) matches expected elements from #main",
 				":has(.descendant) matches expected elements from #main",
 				".parent:has(.target) matches expected elements from #main",
