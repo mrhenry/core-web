@@ -1,6 +1,6 @@
 {
   "name": "@mrhenry/core-web-tests",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "private": true,
   "scripts": {
     "build": "webpack",
@@ -10,8 +10,8 @@
   "devDependencies": {
     "@babel/core": "^7.21.8",
     "@babel/preset-env": "^7.21.5",
-    "@mrhenry/babel-plugin-core-web": "^1.1.0",
-    "@mrhenry/core-web": "^1.1.1",
+    "@mrhenry/babel-plugin-core-web": "^1.1.2",
+    "@mrhenry/core-web": "^1.1.2",
     "babel-loader": "^9.0.0",
     "core-js": "^3.21.0",
     "eslint": "^8.39.0",

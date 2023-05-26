@@ -141,31 +141,32 @@
 
 		function polyfill(qsa) {
 			return function (selectors) {
-				// whether the selectors contain :scope
-				var hasScope = selectors && scopeTest.test(selectors);
-
-				if (hasScope) {
-					// fallback attribute
-					var attr = 'q' + (Math.floor(Math.random() * 9000000) + 2000000);
-
-					// replace :scope with the fallback attribute
-					arguments[0] = replaceScopeWithAttr(selectors, attr);
-
-					// add the fallback attribute
-					this.setAttribute(attr, '');
-
-					// results of the qsa
-					var elementOrNodeList = qsa.apply(this, arguments);
-
-					// remove the fallback attribute
-					this.removeAttribute(attr);
-
-					// return the results of the qsa
-					return elementOrNodeList;
-				} else {
-					// return the results of the qsa
+				if (!selectors) {
 					return qsa.apply(this, arguments);
 				}
+
+				var selectorsString = String(selectors);
+				if (!selectorsString || !scopeTest.test(selectorsString)) {
+					return qsa.apply(this, arguments);
+				}
+
+				// fallback attribute
+				var attr = 'q' + (Math.floor(Math.random() * 9000000) + 2000000);
+
+				// replace :scope with the fallback attribute
+				arguments[0] = replaceScopeWithAttr(selectorsString, attr);
+
+				// add the fallback attribute
+				this.setAttribute(attr, '');
+
+				// results of the qsa
+				var elementOrNodeList = qsa.apply(this, arguments);
+
+				// remove the fallback attribute
+				this.removeAttribute(attr);
+
+				// return the results of the qsa
+				return elementOrNodeList;
 			};
 		}
 	}
