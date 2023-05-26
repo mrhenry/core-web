@@ -145,6 +145,8 @@ if ("Proxy" in self) {
 			testSelectorAllFromMain(assert, ":has(#a)", []);
 			testSelectorAllFromMain(assert, ":has(.ancestor)", [a]);
 			testSelectorAllFromMain(assert, ":HAS(.ancestor)", [a]);
+			testSelectorAllFromMain(assert, [":has(.ancestor)"], [a]);
+			testSelectorAllFromMain(assert, { toString: function () { return ":has(.ancestor)"; } }, [a]);
 			testSelectorAllFromMain(assert, ":has(.target)", [a, b, f, h]);
 			testSelectorAllFromMain(assert, ":has(.descendant)", [a, b, c, f, h, j]);
 			testSelectorAllFromMain(assert, ".parent:has(.target)", [b, f, h]);
