@@ -14,7 +14,7 @@
     "@mrhenry/core-web": "^1.1.2",
     "babel-loader": "^9.0.0",
     "core-js": "^3.21.0",
-    "eslint": "^8.39.0",
+    "eslint": "^8.42.0",
     "webpack": "^5.82.1",
     "webpack-cli": "^5.1.1"
   },
