@@ -265,10 +265,10 @@
             "version_added": "37"
           },
           "safari": {
-            "version_added": false
+            "version_added": "13.1"
           },
           "safari_ios": {
-            "version_added": false
+            "version_added": "13.4"
           },
           "samsunginternet_android": {
             "version_added": "5.0"
@@ -446,6 +446,112 @@
           },
           "webview_android": {
             "version_added": "84"
+          }
+        }
+      }
+    },
+    "options_rangeEnd_parameter": {
+      "__compat": {
+        "description": "<code>options.rangeEnd</code> parameter",
+        "source_file": "api/Element.json",
+        "spec_url": "https://w3c.github.io/csswg-drafts/web-animations-2/#dom-keyframeanimationoptions-rangeend",
+        "status": {
+          "deprecated": false,
+          "experimental": true,
+          "standard_track": true
+        },
+        "support": {
+          "chrome": {
+            "version_added": "115"
+          },
+          "chrome_android": {
+            "version_added": "115"
+          },
+          "edge": {
+            "version_added": "115"
+          },
+          "firefox": {
+            "version_added": false
+          },
+          "firefox_android": {
+            "version_added": false
+          },
+          "ie": {
+            "version_added": false
+          },
+          "oculus": {
+            "version_added": false
+          },
+          "opera": {
+            "version_added": false
+          },
+          "opera_android": {
+            "version_added": false
+          },
+          "safari": {
+            "version_added": false
+          },
+          "safari_ios": {
+            "version_added": false
+          },
+          "samsunginternet_android": {
+            "version_added": false
+          },
+          "webview_android": {
+            "version_added": "115"
+          }
+        }
+      }
+    },
+    "options_rangeStart_parameter": {
+      "__compat": {
+        "description": "<code>options.rangeStart</code> parameter",
+        "source_file": "api/Element.json",
+        "spec_url": "https://w3c.github.io/csswg-drafts/web-animations-2/#dom-keyframeanimationoptions-rangestart",
+        "status": {
+          "deprecated": false,
+          "experimental": true,
+          "standard_track": true
+        },
+        "support": {
+          "chrome": {
+            "version_added": "115"
+          },
+          "chrome_android": {
+            "version_added": "115"
+          },
+          "edge": {
+            "version_added": "115"
+          },
+          "firefox": {
+            "version_added": false
+          },
+          "firefox_android": {
+            "version_added": false
+          },
+          "ie": {
+            "version_added": false
+          },
+          "oculus": {
+            "version_added": false
+          },
+          "opera": {
+            "version_added": false
+          },
+          "opera_android": {
+            "version_added": false
+          },
+          "safari": {
+            "version_added": false
+          },
+          "safari_ios": {
+            "version_added": false
+          },
+          "samsunginternet_android": {
+            "version_added": false
+          },
+          "webview_android": {
+            "version_added": "115"
           }
         }
       }

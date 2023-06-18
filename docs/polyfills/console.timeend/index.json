@@ -23,7 +23,7 @@
   "mdn": {
     "__compat": {
       "mdn_url": "https://developer.mozilla.org/docs/Web/API/console/timeEnd",
-      "source_file": "api/Console.json",
+      "source_file": "api/_globals/console.json",
       "spec_url": "https://console.spec.whatwg.org/#timeend",
       "status": {
         "deprecated": false,

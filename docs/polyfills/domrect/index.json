@@ -215,7 +215,7 @@
         ]
       }
     },
-    "fromRect": {
+    "fromRect_static": {
       "__compat": {
         "description": "<code>fromRect()</code> static method",
         "source_file": "api/DOMRect.json",

@@ -25,7 +25,7 @@
   "mdn": {
     "__compat": {
       "description": "<code>exception</code> (an alias for <code>error</code>)",
-      "source_file": "api/Console.json",
+      "source_file": "api/_globals/console.json",
       "status": {
         "deprecated": true,
         "experimental": false,
@@ -83,7 +83,7 @@
     "substitution_strings": {
       "__compat": {
         "description": "Substitution strings",
-        "source_file": "api/Console.json",
+        "source_file": "api/_globals/console.json",
         "status": {
           "deprecated": true,
           "experimental": false,

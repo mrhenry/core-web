@@ -20,7 +20,7 @@
   "mdn": {
     "__compat": {
       "mdn_url": "https://developer.mozilla.org/docs/Web/API/console",
-      "source_file": "api/Console.json",
+      "source_file": "api/_globals/console.json",
       "spec_url": "https://console.spec.whatwg.org/#console-namespace",
       "status": {
         "deprecated": false,
@@ -79,7 +79,7 @@
     "assert": {
       "__compat": {
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/console/assert",
-        "source_file": "api/Console.json",
+        "source_file": "api/_globals/console.json",
         "spec_url": "https://console.spec.whatwg.org/#assert",
         "status": {
           "deprecated": false,
@@ -145,7 +145,7 @@
     "clear": {
       "__compat": {
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/console/clear",
-        "source_file": "api/Console.json",
+        "source_file": "api/_globals/console.json",
         "spec_url": "https://console.spec.whatwg.org/#clear",
         "status": {
           "deprecated": false,
@@ -204,7 +204,7 @@
     "count": {
       "__compat": {
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/console/count",
-        "source_file": "api/Console.json",
+        "source_file": "api/_globals/console.json",
         "spec_url": "https://console.spec.whatwg.org/#count",
         "status": {
           "deprecated": false,
@@ -263,7 +263,7 @@
     "countReset": {
       "__compat": {
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/console/countReset",
-        "source_file": "api/Console.json",
+        "source_file": "api/_globals/console.json",
         "spec_url": "https://console.spec.whatwg.org/#countreset",
         "status": {
           "deprecated": false,
@@ -322,7 +322,7 @@
     "debug": {
       "__compat": {
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/console/debug",
-        "source_file": "api/Console.json",
+        "source_file": "api/_globals/console.json",
         "spec_url": "https://console.spec.whatwg.org/#debug",
         "status": {
           "deprecated": false,
@@ -381,7 +381,7 @@
       "substitution_strings": {
         "__compat": {
           "description": "Substitution strings",
-          "source_file": "api/Console.json",
+          "source_file": "api/_globals/console.json",
           "status": {
             "deprecated": false,
             "experimental": false,
@@ -457,7 +457,7 @@
     "dir": {
       "__compat": {
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/console/dir",
-        "source_file": "api/Console.json",
+        "source_file": "api/_globals/console.json",
         "spec_url": "https://console.spec.whatwg.org/#dir",
         "status": {
           "deprecated": false,
@@ -516,7 +516,7 @@
     "dirxml": {
       "__compat": {
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/console/dirxml",
-        "source_file": "api/Console.json",
+        "source_file": "api/_globals/console.json",
         "spec_url": "https://console.spec.whatwg.org/#dirxml",
         "status": {
           "deprecated": false,
@@ -582,7 +582,7 @@
     "error": {
       "__compat": {
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/console/error",
-        "source_file": "api/Console.json",
+        "source_file": "api/_globals/console.json",
         "spec_url": "https://console.spec.whatwg.org/#error",
         "status": {
           "deprecated": false,
@@ -640,7 +640,7 @@
       "substitution_strings": {
         "__compat": {
           "description": "Substitution strings",
-          "source_file": "api/Console.json",
+          "source_file": "api/_globals/console.json",
           "status": {
             "deprecated": false,
             "experimental": false,
@@ -711,7 +711,7 @@
     "exception": {
       "__compat": {
         "description": "<code>exception</code> (an alias for <code>error</code>)",
-        "source_file": "api/Console.json",
+        "source_file": "api/_globals/console.json",
         "status": {
           "deprecated": true,
           "experimental": false,
@@ -769,7 +769,7 @@
       "substitution_strings": {
         "__compat": {
           "description": "Substitution strings",
-          "source_file": "api/Console.json",
+          "source_file": "api/_globals/console.json",
           "status": {
             "deprecated": true,
             "experimental": false,
@@ -829,7 +829,7 @@
     "group": {
       "__compat": {
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/console/group",
-        "source_file": "api/Console.json",
+        "source_file": "api/_globals/console.json",
         "spec_url": "https://console.spec.whatwg.org/#group",
         "status": {
           "deprecated": false,
@@ -888,7 +888,7 @@
     "groupCollapsed": {
       "__compat": {
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/console/groupCollapsed",
-        "source_file": "api/Console.json",
+        "source_file": "api/_globals/console.json",
         "spec_url": "https://console.spec.whatwg.org/#groupcollapsed",
         "status": {
           "deprecated": false,
@@ -948,7 +948,7 @@
     "groupEnd": {
       "__compat": {
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/console/groupEnd",
-        "source_file": "api/Console.json",
+        "source_file": "api/_globals/console.json",
         "spec_url": "https://console.spec.whatwg.org/#groupend",
         "status": {
           "deprecated": false,
@@ -1007,7 +1007,7 @@
     "info": {
       "__compat": {
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/console/info",
-        "source_file": "api/Console.json",
+        "source_file": "api/_globals/console.json",
         "spec_url": "https://console.spec.whatwg.org/#info",
         "status": {
           "deprecated": false,
@@ -1066,7 +1066,7 @@
       "substitution_strings": {
         "__compat": {
           "description": "Substitution strings",
-          "source_file": "api/Console.json",
+          "source_file": "api/_globals/console.json",
           "status": {
             "deprecated": false,
             "experimental": false,
@@ -1137,7 +1137,7 @@
     "log": {
       "__compat": {
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/console/log",
-        "source_file": "api/Console.json",
+        "source_file": "api/_globals/console.json",
         "spec_url": "https://console.spec.whatwg.org/#log",
         "status": {
           "deprecated": false,
@@ -1195,7 +1195,7 @@
       "substitution_strings": {
         "__compat": {
           "description": "Substitution strings",
-          "source_file": "api/Console.json",
+          "source_file": "api/_globals/console.json",
           "status": {
             "deprecated": false,
             "experimental": false,
@@ -1271,7 +1271,7 @@
     "profile": {
       "__compat": {
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/console/profile",
-        "source_file": "api/Console.json",
+        "source_file": "api/_globals/console.json",
         "status": {
           "deprecated": false,
           "experimental": false,
@@ -1337,7 +1337,7 @@
     "profileEnd": {
       "__compat": {
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/console/profileEnd",
-        "source_file": "api/Console.json",
+        "source_file": "api/_globals/console.json",
         "status": {
           "deprecated": false,
           "experimental": false,
@@ -1401,7 +1401,7 @@
     "table": {
       "__compat": {
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/console/table",
-        "source_file": "api/Console.json",
+        "source_file": "api/_globals/console.json",
         "spec_url": "https://console.spec.whatwg.org/#table",
         "status": {
           "deprecated": false,
@@ -1460,7 +1460,7 @@
     "time": {
       "__compat": {
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/console/time",
-        "source_file": "api/Console.json",
+        "source_file": "api/_globals/console.json",
         "spec_url": "https://console.spec.whatwg.org/#time",
         "status": {
           "deprecated": false,
@@ -1519,7 +1519,7 @@
     "timeEnd": {
       "__compat": {
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/console/timeEnd",
-        "source_file": "api/Console.json",
+        "source_file": "api/_globals/console.json",
         "spec_url": "https://console.spec.whatwg.org/#timeend",
         "status": {
           "deprecated": false,
@@ -1578,7 +1578,7 @@
     "timeLog": {
       "__compat": {
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/console/timeLog",
-        "source_file": "api/Console.json",
+        "source_file": "api/_globals/console.json",
         "spec_url": "https://console.spec.whatwg.org/#timelog",
         "status": {
           "deprecated": false,
@@ -1637,7 +1637,7 @@
     "timeStamp": {
       "__compat": {
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/console/timeStamp",
-        "source_file": "api/Console.json",
+        "source_file": "api/_globals/console.json",
         "status": {
           "deprecated": false,
           "experimental": false,
@@ -1701,7 +1701,7 @@
     "trace": {
       "__compat": {
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/console/trace",
-        "source_file": "api/Console.json",
+        "source_file": "api/_globals/console.json",
         "spec_url": "https://console.spec.whatwg.org/#trace",
         "status": {
           "deprecated": false,
@@ -1760,7 +1760,7 @@
     "warn": {
       "__compat": {
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/console/warn",
-        "source_file": "api/Console.json",
+        "source_file": "api/_globals/console.json",
         "spec_url": "https://console.spec.whatwg.org/#warn",
         "status": {
           "deprecated": false,
@@ -1819,7 +1819,7 @@
       "substitution_strings": {
         "__compat": {
           "description": "Substitution strings",
-          "source_file": "api/Console.json",
+          "source_file": "api/_globals/console.json",
           "status": {
             "deprecated": false,
             "experimental": false,
@@ -1890,7 +1890,7 @@
     "worker_support": {
       "__compat": {
         "description": "Available in workers",
-        "source_file": "api/Console.json",
+        "source_file": "api/_globals/console.json",
         "status": {
           "deprecated": false,
           "experimental": false,

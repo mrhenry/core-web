@@ -31,7 +31,7 @@
       "Gecko": "1.7 - 54",
       "Trident": ">= 4.0",
       "Presto": ">= 1",
-      "WebKit": ">= 85"
+      "WebKit": "85 - 615.2.9"
     },
     "size": 6733,
     "isAlias": false,

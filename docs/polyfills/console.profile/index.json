@@ -22,7 +22,7 @@
   "mdn": {
     "__compat": {
       "mdn_url": "https://developer.mozilla.org/docs/Web/API/console/profile",
-      "source_file": "api/Console.json",
+      "source_file": "api/_globals/console.json",
       "status": {
         "deprecated": false,
         "experimental": false,
