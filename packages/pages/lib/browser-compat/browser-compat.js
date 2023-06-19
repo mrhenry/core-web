@@ -134,7 +134,7 @@ function handleFeature(compat, name, feature) {
 	} else if (name.includes('.prototype.')) {
 		mapPrototypeFeatureAPI(compat, name, feature.name, feature) || mapPrototypeFeatureBuiltin(compat, name, feature.name, feature);
 	} else if (name.includes('.') && !(name.startsWith('Window.') || name.startsWith('window.')) && !(name.startsWith('Self.') || name.startsWith('self.'))) {
-		mapPropertyFeatureAPI(compat, name, feature.name, feature) || mapPropertyFeatureBuiltin(compat, name, feature.name, feature) ||
+		mapStaticPropertyFeatureAPI(compat, name, feature.name, feature) || mapPropertyFeatureAPI(compat, name, feature.name, feature) || mapPropertyFeatureBuiltin(compat, name, feature.name, feature) ||
 			mapPropertyFeatureAPI(compat, toTitleCase(name), feature.name, feature) || mapPropertyFeatureBuiltin(compat, toTitleCase(name), feature.name, feature);
 	} else if (bcd.api[name]) {
 		mapMainFeatureAPI(compat, name, feature.name, feature);
@@ -253,6 +253,51 @@ function mapPrototypeFeatureAPI(compat, featureName, polyfillName, feature) {
 	for (const browser of coreWebBrowsers) {
 		const mdnBrowser = browsersCoreWebToMDN(browser);
 
+		if (
+			mdnBrowser &&
+			bcd.api[mainFeature][subFeature].__compat &&
+			bcd.api[mainFeature][subFeature].__compat.support &&
+			bcd.api[mainFeature][subFeature].__compat.support[mdnBrowser]
+		) {
+			polyfilled[browser] = (feature.browsers || {})[browser];
+			native[browser] = bcd.api[mainFeature][subFeature].__compat.support[mdnBrowser];
+		}
+	}
+
+	compat[featureName] = compat[featureName] || {
+		key: featureName,
+		data: [],
+	};
+
+	compat[featureName].data.push({
+		name: featureName,
+		slug: featureName,
+		polyfillName: polyfillName,
+		coreWeb: feature,
+		mdn: bcd.api[mainFeature][subFeature],
+		polyfilled: polyfilled,
+		native: native,
+	});
+
+	return true;
+}
+
+function mapStaticPropertyFeatureAPI(compat, featureName, polyfillName, feature) {
+	const mainFeature = featureName.split('.')[0];
+	const subFeature = featureName.split('.')[1] + '_static';
+
+	if (!bcd.api[mainFeature]) {
+		return;
+	}
+
+	if (!bcd.api[mainFeature][subFeature]) {
+		return;
+	}
+
+	let polyfilled = {};
+	let native = {};
+	for (const browser of coreWebBrowsers) {
+		const mdnBrowser = browsersCoreWebToMDN(browser);
 		if (
 			mdnBrowser &&
 			bcd.api[mainFeature][subFeature].__compat &&
