@@ -17,7 +17,7 @@ if (!("IntersectionObserver"in window&&"IntersectionObserverEntry"in window&&"in
 var supportedNatively = 'IntersectionObserver' in window &&
 'IntersectionObserverEntry' in window &&
 'intersectionRatio' in window.IntersectionObserverEntry.prototype;
-	
+
 if (supportedNatively) {
 	return;
 }
@@ -65,6 +65,7 @@ function IntersectionObserverEntry(entry) {
 	}
 }
 
+IntersectionObserverEntry.prototype.intersectionRatio = 0;
 
 /**
  * Creates the global IntersectionObserver constructor.
