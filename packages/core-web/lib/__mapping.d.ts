@@ -573,6 +573,37 @@ export const mapping: ({
     providedByCoreWeb: boolean;
 } | {
     name: string;
+    deps: string[];
+    browsers: {
+        android: string;
+        chrome: string;
+        edge: string;
+        edge_mob: string;
+        firefox: string;
+        firefox_mob: string;
+        ie: string;
+        ie_mob: string;
+        opera: string;
+        op_mob: string;
+        op_mini: string;
+        safari: string;
+        ios_saf: string;
+        samsung_mob: string;
+        bb?: undefined;
+    };
+    engines: {
+        Blink: string;
+        EdgeHTML: string;
+        Gecko: string;
+        Trident: string;
+        Presto: string;
+        WebKit: string;
+    };
+    size: number;
+    isAlias: boolean;
+    providedByCoreWeb: boolean;
+} | {
+    name: string;
     deps: never[];
     browsers: {
         android: string;
@@ -668,25 +699,25 @@ export const mapping: ({
     name: string;
     deps: string[];
     browsers: {
+        chrome: string;
         edge: string;
         edge_mob: string;
+        opera: string;
+        op_mob: string;
+        samsung_mob: string;
         android?: undefined;
-        chrome?: undefined;
         firefox?: undefined;
         firefox_mob?: undefined;
         ie?: undefined;
         ie_mob?: undefined;
-        opera?: undefined;
-        op_mob?: undefined;
         safari?: undefined;
         ios_saf?: undefined;
-        samsung_mob?: undefined;
         op_mini?: undefined;
         bb?: undefined;
     };
     engines: {
+        Blink: string;
         EdgeHTML: string;
-        Blink?: undefined;
         Gecko?: undefined;
         Trident?: undefined;
         Presto?: undefined;
@@ -1249,37 +1280,6 @@ export const mapping: ({
         WebKit: string;
         Trident: string;
         Blink?: undefined;
-    };
-    size: number;
-    isAlias: boolean;
-    providedByCoreWeb: boolean;
-} | {
-    name: string;
-    deps: string[];
-    browsers: {
-        chrome: string;
-        edge: string;
-        edge_mob: string;
-        firefox: string;
-        firefox_mob: string;
-        opera: string;
-        op_mob: string;
-        op_mini: string;
-        safari: string;
-        ios_saf: string;
-        android: string;
-        samsung_mob: string;
-        ie: string;
-        ie_mob: string;
-        bb?: undefined;
-    };
-    engines: {
-        Blink: string;
-        EdgeHTML: string;
-        Gecko: string;
-        Presto: string;
-        WebKit: string;
-        Trident: string;
     };
     size: number;
     isAlias: boolean;
