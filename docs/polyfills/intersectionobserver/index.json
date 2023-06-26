@@ -33,7 +33,7 @@
       "Presto": ">= 1",
       "WebKit": "85 - 615.2.9"
     },
-    "size": 6733,
+    "size": 6765,
     "isAlias": false,
     "providedByCoreWeb": false
   },
@@ -638,9 +638,9 @@
     },
     "detectSource": "\"IntersectionObserver\"in window&&\"IntersectionObserverEntry\"in window&&\"intersectionRatio\"in window.IntersectionObserverEntry.prototype\n",
     "baseDir": "IntersectionObserver",
-    "hasTests": false,
+    "hasTests": true,
     "isTestable": true,
     "isPublic": true,
-    "size": 6733
+    "size": 6765
   }
 }

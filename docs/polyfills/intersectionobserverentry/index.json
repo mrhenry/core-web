@@ -10,10 +10,15 @@
       "performance.now"
     ],
     "browsers": {
+      "chrome": "51 - 57",
       "edge": "15",
-      "edge_mob": "15"
+      "edge_mob": "15",
+      "opera": "38 - 44",
+      "op_mob": "41 - 42",
+      "samsung_mob": "5.0 - 6.4"
     },
     "engines": {
+      "Blink": "51 - 57",
       "EdgeHTML": "15"
     },
     "size": 126,
@@ -498,7 +503,9 @@
     }
   },
   "polyfilled": {
-    "edge": "15"
+    "chrome": "51 - 57",
+    "edge": "15",
+    "opera": "38 - 44"
   },
   "native": {
     "android": {
@@ -536,8 +543,12 @@
     "notes": [],
     "repo": "https://github.com/w3c/IntersectionObserver",
     "browsers": {
+      "chrome": "51 - 57",
       "edge": "15",
-      "edge_mob": "15"
+      "edge_mob": "15",
+      "opera": "38 - 44",
+      "op_mob": "41 - 42",
+      "samsung_mob": "5.0 - 6.4"
     },
     "detectSource": "\"IntersectionObserverEntry\"in window&&\"isIntersecting\"in window.IntersectionObserverEntry.prototype\n",
     "baseDir": "IntersectionObserverEntry",
