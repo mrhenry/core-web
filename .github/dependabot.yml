@@ -13,6 +13,10 @@ updates:
   - fd
   versioning-strategy: increase
   rebase-strategy: disabled
+  groups:
+    all-dependencies:
+      patterns:
+        - "*"
 - package-ecosystem: "github-actions"
   directory: "/"
   schedule:
@@ -25,3 +29,7 @@ updates:
   reviewers:
   - romainmenke
   - fd
+  groups:
+    all-dependencies:
+      patterns:
+        - "*"
