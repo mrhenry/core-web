@@ -23,8 +23,8 @@
     "dev-server": "npx http-server ./dist -p 3080"
   },
   "dependencies": {
-    "@babel/core": "^7.21.8",
-    "@babel/preset-env": "^7.21.5",
+    "@babel/core": "^7.22.6",
+    "@babel/preset-env": "^7.22.6",
     "@mdn/browser-compat-data": "^5.2.57",
     "@mrhenry/babel-plugin-core-web": "*",
     "@mrhenry/core-web": "*",
@@ -39,7 +39,7 @@
     "postcss-discard-empty": "^6.0.0",
     "postcss-import": "^15.0.0",
     "postcss-normalize-whitespace": "^6.0.0",
-    "postcss-preset-env": "^8.0.1",
+    "postcss-preset-env": "^9.0.0",
     "postcss-split-by-media": "^0.3.0",
     "webpack": "^5.82.1",
     "webpack-cli": "^5.1.1"
