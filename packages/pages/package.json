@@ -23,9 +23,9 @@
     "dev-server": "npx http-server ./dist -p 3080"
   },
   "dependencies": {
-    "@babel/core": "^7.22.8",
-    "@babel/preset-env": "^7.22.7",
-    "@mdn/browser-compat-data": "^5.3.1",
+    "@babel/core": "^7.22.9",
+    "@babel/preset-env": "^7.22.9",
+    "@mdn/browser-compat-data": "^5.3.2",
     "@mrhenry/babel-plugin-core-web": "*",
     "@mrhenry/core-web": "*",
     "babel-loader": "^9.1.3",
