@@ -376,9 +376,11 @@
             "version_added": "79"
           },
           "firefox": {
+            "notes": "Before Firefox 95, this property was incorrectly set to <code>false</code> on <code>&lt;select&gt;</code> and <code>&lt;input type='checkbox'&gt;</code> elements.",
             "version_added": "52"
           },
           "firefox_android": {
+            "notes": "Before Firefox 95, this property was incorrectly set to <code>false</code> on <code>&lt;select&gt;</code> and <code>&lt;input type='checkbox'&gt;</code> elements.",
             "version_added": "52"
           },
           "ie": {
