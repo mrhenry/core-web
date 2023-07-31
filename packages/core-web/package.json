@@ -31,11 +31,11 @@
     "tsc": "tsc"
   },
   "dependencies": {
-    "browserslist": "^4.21.5",
+    "browserslist": "^4.21.10",
     "semver": "^7.5.4"
   },
   "devDependencies": {
-    "@types/node": "^20.4.4",
+    "@types/node": "^20.4.5",
     "@types/semver": "^7.5.0",
     "typescript": "^5.0.2"
   },
