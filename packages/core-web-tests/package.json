@@ -8,8 +8,8 @@
     "lint": "eslint --fix ./src/*.js"
   },
   "devDependencies": {
-    "@babel/core": "^7.22.8",
-    "@babel/preset-env": "^7.22.7",
+    "@babel/core": "^7.22.10",
+    "@babel/preset-env": "^7.22.10",
     "@mrhenry/babel-plugin-core-web": "^1.2.0",
     "@mrhenry/core-web": "^1.2.0",
     "babel-loader": "^9.1.3",
