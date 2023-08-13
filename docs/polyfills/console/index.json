@@ -377,81 +377,6 @@
             "version_added": "≤37"
           }
         }
-      },
-      "substitution_strings": {
-        "__compat": {
-          "description": "Substitution strings",
-          "source_file": "api/_globals/console.json",
-          "status": {
-            "deprecated": false,
-            "experimental": false,
-            "standard_track": true
-          },
-          "support": {
-            "chrome": {
-              "notes": "In version 28, if a negative value is passed to <code>%d</code>, it will be rounded down to the closest negative integer. For example, -0.1 becomes -1.",
-              "version_added": "2"
-            },
-            "chrome_android": {
-              "notes": "In version 28, if a negative value is passed to <code>%d</code>, it will be rounded down to the closest negative integer. For example, -0.1 becomes -1.",
-              "version_added": "18"
-            },
-            "deno": {
-              "notes": [
-                "Before Deno 1.4, <code>%c</code> is not supported.",
-                "<code>%c</code> only supports CSS properties <code>color</code>, <code>background-color</code>, <code>font-weight</code>, <code>font-style</code>, <code>text-decoration-color</code>, and <code>text-decoration-line</code>."
-              ],
-              "version_added": "1.0"
-            },
-            "edge": {
-              "notes": [
-                "Before Edge 79, <code>%c</code> is not supported.",
-                "Before Edge 79, <code>%d</code> outputs a 0 if the specified value isn't a number."
-              ],
-              "version_added": "12"
-            },
-            "firefox": {
-              "version_added": "9"
-            },
-            "firefox_android": {
-              "version_added": "9"
-            },
-            "ie": {
-              "notes": [
-                "<code>%c</code> is not supported.",
-                "<code>%d</code> outputs a 0 if the specified value isn't a number."
-              ],
-              "version_added": "10"
-            },
-            "nodejs": {
-              "version_added": "8.10.0"
-            },
-            "oculus": {
-              "notes": "In version 28, if a negative value is passed to <code>%d</code>, it will be rounded down to the closest negative integer. For example, -0.1 becomes -1.",
-              "version_added": "5.0"
-            },
-            "opera": {
-              "version_added": "15"
-            },
-            "opera_android": {
-              "version_added": "14"
-            },
-            "safari": {
-              "version_added": "4"
-            },
-            "safari_ios": {
-              "version_added": "3.2"
-            },
-            "samsunginternet_android": {
-              "notes": "In Samsung Internet 1.5, if a negative value is passed to <code>%d</code>, it will be rounded down to the closest negative integer. For example, -0.1 becomes -1.",
-              "version_added": "1.0"
-            },
-            "webview_android": {
-              "notes": "In version 28, if a negative value is passed to <code>%d</code>, it will be rounded down to the closest negative integer. For example, -0.1 becomes -1.",
-              "version_added": "≤37"
-            }
-          }
-        }
       }
     },
     "dir": {
@@ -636,76 +561,6 @@
             "version_added": "4.4"
           }
         }
-      },
-      "substitution_strings": {
-        "__compat": {
-          "description": "Substitution strings",
-          "source_file": "api/_globals/console.json",
-          "status": {
-            "deprecated": false,
-            "experimental": false,
-            "standard_track": true
-          },
-          "support": {
-            "chrome": {
-              "version_added": "1"
-            },
-            "chrome_android": {
-              "version_added": "18"
-            },
-            "deno": {
-              "notes": [
-                "Before Deno 1.4, <code>%c</code> is not supported.",
-                "<code>%c</code> only supports CSS properties <code>color</code>, <code>background-color</code>, <code>font-weight</code>, <code>font-style</code>, <code>text-decoration-color</code>, and <code>text-decoration-line</code>."
-              ],
-              "version_added": "1.0"
-            },
-            "edge": {
-              "notes": [
-                "Before Edge 79, <code>%c</code> is not supported.",
-                "Before Edge 79, <code>%d</code> outputs a 0 if the specified value isn't a number."
-              ],
-              "version_added": "12"
-            },
-            "firefox": {
-              "version_added": "9"
-            },
-            "firefox_android": {
-              "version_added": "9"
-            },
-            "ie": {
-              "notes": [
-                "<code>%c</code> is not supported.",
-                "<code>%d</code> outputs a 0 if the specified value isn't a number."
-              ],
-              "version_added": "10"
-            },
-            "nodejs": {
-              "version_added": "0.10.0"
-            },
-            "oculus": {
-              "version_added": "5.0"
-            },
-            "opera": {
-              "version_added": "15"
-            },
-            "opera_android": {
-              "version_added": "14"
-            },
-            "safari": {
-              "version_added": "3"
-            },
-            "safari_ios": {
-              "version_added": "1"
-            },
-            "samsunginternet_android": {
-              "version_added": "1.0"
-            },
-            "webview_android": {
-              "version_added": "4.4"
-            }
-          }
-        }
       }
     },
     "exception": {
@@ -763,65 +618,6 @@
           },
           "webview_android": {
             "version_added": false
-          }
-        }
-      },
-      "substitution_strings": {
-        "__compat": {
-          "description": "Substitution strings",
-          "source_file": "api/_globals/console.json",
-          "status": {
-            "deprecated": true,
-            "experimental": false,
-            "standard_track": false
-          },
-          "support": {
-            "chrome": {
-              "version_added": false
-            },
-            "chrome_android": {
-              "version_added": false
-            },
-            "deno": {
-              "version_added": false
-            },
-            "edge": {
-              "version_added": "≤18",
-              "version_removed": "79"
-            },
-            "firefox": {
-              "version_added": "28"
-            },
-            "firefox_android": {
-              "version_added": "28"
-            },
-            "ie": {
-              "version_added": false
-            },
-            "nodejs": {
-              "version_added": false
-            },
-            "oculus": {
-              "version_added": false
-            },
-            "opera": {
-              "version_added": false
-            },
-            "opera_android": {
-              "version_added": false
-            },
-            "safari": {
-              "version_added": false
-            },
-            "safari_ios": {
-              "version_added": false
-            },
-            "samsunginternet_android": {
-              "version_added": false
-            },
-            "webview_android": {
-              "version_added": false
-            }
           }
         }
       }
@@ -1062,76 +858,6 @@
             "version_added": "4.4"
           }
         }
-      },
-      "substitution_strings": {
-        "__compat": {
-          "description": "Substitution strings",
-          "source_file": "api/_globals/console.json",
-          "status": {
-            "deprecated": false,
-            "experimental": false,
-            "standard_track": true
-          },
-          "support": {
-            "chrome": {
-              "version_added": "1"
-            },
-            "chrome_android": {
-              "version_added": "18"
-            },
-            "deno": {
-              "notes": [
-                "Before Deno 1.4, <code>%c</code> is not supported.",
-                "<code>%c</code> only supports CSS properties <code>color</code>, <code>background-color</code>, <code>font-weight</code>, <code>font-style</code>, <code>text-decoration-color</code>, and <code>text-decoration-line</code>."
-              ],
-              "version_added": "1.0"
-            },
-            "edge": {
-              "notes": [
-                "Before Edge 79, <code>%c</code> is not supported.",
-                "Before Edge 79, <code>%d</code> outputs a 0 if the specified value isn't a number."
-              ],
-              "version_added": "12"
-            },
-            "firefox": {
-              "version_added": "9"
-            },
-            "firefox_android": {
-              "version_added": "9"
-            },
-            "ie": {
-              "notes": [
-                "<code>%c</code> is not supported.",
-                "<code>%d</code> outputs a 0 if the specified value isn't a number."
-              ],
-              "version_added": "10"
-            },
-            "nodejs": {
-              "version_added": "0.10.0"
-            },
-            "oculus": {
-              "version_added": "5.0"
-            },
-            "opera": {
-              "version_added": "15"
-            },
-            "opera_android": {
-              "version_added": "14"
-            },
-            "safari": {
-              "version_added": "3"
-            },
-            "safari_ios": {
-              "version_added": "1"
-            },
-            "samsunginternet_android": {
-              "version_added": "1.0"
-            },
-            "webview_android": {
-              "version_added": "4.4"
-            }
-          }
-        }
       }
     },
     "log": {
@@ -1189,81 +915,6 @@
           },
           "webview_android": {
             "version_added": "4.4"
-          }
-        }
-      },
-      "substitution_strings": {
-        "__compat": {
-          "description": "Substitution strings",
-          "source_file": "api/_globals/console.json",
-          "status": {
-            "deprecated": false,
-            "experimental": false,
-            "standard_track": true
-          },
-          "support": {
-            "chrome": {
-              "notes": "In version 28, if a negative value is passed to %d, it will be rounded down to the closest negative integer, so -0.1 becomes -1.",
-              "version_added": "1"
-            },
-            "chrome_android": {
-              "notes": "In version 28, if a negative value is passed to %d, it will be rounded down to the closest negative integer, so -0.1 becomes -1.",
-              "version_added": "18"
-            },
-            "deno": {
-              "notes": [
-                "Before Deno 1.4, <code>%c</code> is not supported.",
-                "<code>%c</code> only supports CSS properties <code>color</code>, <code>background-color</code>, <code>font-weight</code>, <code>font-style</code>, <code>text-decoration-color</code>, and <code>text-decoration-line</code>."
-              ],
-              "version_added": "1.0"
-            },
-            "edge": {
-              "notes": [
-                "Before Edge 79, <code>%c</code> is not supported.",
-                "Before Edge 79, <code>%d</code> outputs a 0 if the specified value isn't a number."
-              ],
-              "version_added": "12"
-            },
-            "firefox": {
-              "version_added": "9"
-            },
-            "firefox_android": {
-              "version_added": "9"
-            },
-            "ie": {
-              "notes": [
-                "<code>%c</code> is not supported.",
-                "<code>%d</code> outputs a 0 if the specified value isn't a number."
-              ],
-              "version_added": "10"
-            },
-            "nodejs": {
-              "version_added": "0.10.0"
-            },
-            "oculus": {
-              "notes": "In version 28, if a negative value is passed to %d, it will be rounded down to the closest negative integer, so -0.1 becomes -1.",
-              "version_added": "5.0"
-            },
-            "opera": {
-              "version_added": "15"
-            },
-            "opera_android": {
-              "version_added": "14"
-            },
-            "safari": {
-              "version_added": "3"
-            },
-            "safari_ios": {
-              "version_added": "1"
-            },
-            "samsunginternet_android": {
-              "notes": "In Samsung Internet 1.5, if a negative value is passed to %d, it will be rounded down to the closest negative integer, so -0.1 becomes -1.",
-              "version_added": "1.0"
-            },
-            "webview_android": {
-              "notes": "In version 28, if a negative value is passed to %d, it will be rounded down to the closest negative integer, so -0.1 becomes -1.",
-              "version_added": "≤37"
-            }
           }
         }
       }
@@ -1393,6 +1044,81 @@
             "version_added": "1.0"
           },
           "webview_android": {
+            "version_added": "≤37"
+          }
+        }
+      }
+    },
+    "substitution_strings": {
+      "__compat": {
+        "description": "Substitution strings",
+        "source_file": "api/_globals/console.json",
+        "status": {
+          "deprecated": false,
+          "experimental": false,
+          "standard_track": true
+        },
+        "support": {
+          "chrome": {
+            "notes": "In version 28, if a negative value is passed to %d, it will be rounded down to the closest negative integer, so -0.1 becomes -1.",
+            "version_added": "1"
+          },
+          "chrome_android": {
+            "notes": "In version 28, if a negative value is passed to %d, it will be rounded down to the closest negative integer, so -0.1 becomes -1.",
+            "version_added": "18"
+          },
+          "deno": {
+            "notes": [
+              "Before Deno 1.4, <code>%c</code> is not supported.",
+              "<code>%c</code> only supports CSS properties <code>color</code>, <code>background-color</code>, <code>font-weight</code>, <code>font-style</code>, <code>text-decoration-color</code>, and <code>text-decoration-line</code>."
+            ],
+            "version_added": "1.0"
+          },
+          "edge": {
+            "notes": [
+              "Before Edge 79, <code>%c</code> is not supported.",
+              "Before Edge 79, <code>%d</code> outputs a 0 if the specified value isn't a number."
+            ],
+            "version_added": "12"
+          },
+          "firefox": {
+            "version_added": "9"
+          },
+          "firefox_android": {
+            "version_added": "9"
+          },
+          "ie": {
+            "notes": [
+              "<code>%c</code> is not supported.",
+              "<code>%d</code> outputs a 0 if the specified value isn't a number."
+            ],
+            "version_added": "10"
+          },
+          "nodejs": {
+            "version_added": "0.10.0"
+          },
+          "oculus": {
+            "notes": "In version 28, if a negative value is passed to %d, it will be rounded down to the closest negative integer, so -0.1 becomes -1.",
+            "version_added": "5.0"
+          },
+          "opera": {
+            "version_added": "15"
+          },
+          "opera_android": {
+            "version_added": "14"
+          },
+          "safari": {
+            "version_added": "3"
+          },
+          "safari_ios": {
+            "version_added": "1"
+          },
+          "samsunginternet_android": {
+            "notes": "In Samsung Internet 1.5, if a negative value is passed to %d, it will be rounded down to the closest negative integer, so -0.1 becomes -1.",
+            "version_added": "1.0"
+          },
+          "webview_android": {
+            "notes": "In version 28, if a negative value is passed to %d, it will be rounded down to the closest negative integer, so -0.1 becomes -1.",
             "version_added": "≤37"
           }
         }
@@ -1813,76 +1539,6 @@
           },
           "webview_android": {
             "version_added": "4.4"
-          }
-        }
-      },
-      "substitution_strings": {
-        "__compat": {
-          "description": "Substitution strings",
-          "source_file": "api/_globals/console.json",
-          "status": {
-            "deprecated": false,
-            "experimental": false,
-            "standard_track": true
-          },
-          "support": {
-            "chrome": {
-              "version_added": "1"
-            },
-            "chrome_android": {
-              "version_added": "18"
-            },
-            "deno": {
-              "notes": [
-                "Before Deno 1.4, <code>%c</code> is not supported.",
-                "<code>%c</code> only supports CSS properties <code>color</code>, <code>background-color</code>, <code>font-weight</code>, <code>font-style</code>, <code>text-decoration-color</code>, and <code>text-decoration-line</code>."
-              ],
-              "version_added": "1.0"
-            },
-            "edge": {
-              "notes": [
-                "Before Edge 79, <code>%c</code> is not supported.",
-                "Before Edge 79, <code>%d</code> outputs a 0 if the specified value isn't a number."
-              ],
-              "version_added": "12"
-            },
-            "firefox": {
-              "version_added": "9"
-            },
-            "firefox_android": {
-              "version_added": "9"
-            },
-            "ie": {
-              "notes": [
-                "<code>%c</code> is not supported.",
-                "<code>%d</code> outputs a 0 if the specified value isn't a number."
-              ],
-              "version_added": "10"
-            },
-            "nodejs": {
-              "version_added": "0.10.0"
-            },
-            "oculus": {
-              "version_added": "5.0"
-            },
-            "opera": {
-              "version_added": "15"
-            },
-            "opera_android": {
-              "version_added": "14"
-            },
-            "safari": {
-              "version_added": "3"
-            },
-            "safari_ios": {
-              "version_added": "1"
-            },
-            "samsunginternet_android": {
-              "version_added": "1.0"
-            },
-            "webview_android": {
-              "version_added": "4.4"
-            }
           }
         }
       }
