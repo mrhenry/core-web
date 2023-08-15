@@ -34,7 +34,7 @@
     "core-js": "^3.32.0",
     "he": "^1.2.0",
     "polyfill-library": "^4.0.0",
-    "postcss": "^8.4.27",
+    "postcss": "^8.4.28",
     "postcss-discard-comments": "^6.0.0",
     "postcss-discard-empty": "^6.0.0",
     "postcss-import": "^15.0.0",
