@@ -35,9 +35,9 @@
     "semver": "^7.5.4"
   },
   "devDependencies": {
-    "@types/node": "^20.4.9",
-    "@types/semver": "^7.5.0",
-    "typescript": "^5.0.2"
+    "@types/node": "^20.6.0",
+    "@types/semver": "^7.5.2",
+    "typescript": "^5.2.2"
   },
   "bugs": {
     "url": "https://github.com/mrhenry/core-web/issues"
