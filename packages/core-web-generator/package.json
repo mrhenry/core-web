@@ -15,7 +15,7 @@
     "@babel/parser": "^7.21.8",
     "@babel/traverse": "^7.18.13",
     "@babel/types": "^7.21.5",
-    "@mdn/browser-compat-data": "^5.3.8",
+    "@mdn/browser-compat-data": "^5.3.17",
     "@webcomponents/custom-elements": "^1.5.0",
     "@webcomponents/shadycss": "^1.11.0",
     "@webcomponents/shadydom": "^1.9.0",
@@ -24,10 +24,10 @@
     "semver": "^7.5.4"
   },
   "devDependencies": {
-    "@types/babel__traverse": "^7.18.5",
-    "@types/node": "^20.4.9",
-    "@types/semver": "^7.5.0",
-    "typescript": "^5.0.2"
+    "@types/babel__traverse": "^7.20.2",
+    "@types/node": "^20.6.2",
+    "@types/semver": "^7.5.2",
+    "typescript": "^5.2.2"
   },
   "volta": {
     "extends": "../../package.json"
