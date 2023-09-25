@@ -1,16 +1,12 @@
-const postcss = require('postcss');
-const postcssPresetEnv = require('postcss-preset-env');
-const postcssImport = require('postcss-import');
-const targets = require('./targets');
 const fs = require('fs');
 const path = require('path');
+const postcss = require('postcss');
+const postcssBundler = require('@csstools/postcss-bundler');
+const postcssMinify = require('@csstools/postcss-minify');
+const postcssPresetEnv = require('postcss-preset-env');
 const postcssSplitByMedia = require('postcss-split-by-media');
+const targets = require('./targets');
 const { createHash } = require('crypto');
-
-// Minify
-const postcssDiscardComments = require('postcss-discard-comments');
-const postcssDiscardEmpty = require('postcss-discard-empty');
-const postcssNormalizeWhitespace = require('postcss-normalize-whitespace');
 
 const cwd = process.cwd();
 
@@ -21,10 +17,7 @@ fs.readFile('./lib/css/index.css', async (err, css) => {
 	}
 
 	const contentHash = await postcss([
-			postcssImport({
-				root: './lib/css',
-				nameLayer: hashLayerName,
-			}),
+			postcssBundler()
 		]).process(css, {
 			map: false,
 			from: './lib/css/index.css',
@@ -43,10 +36,7 @@ fs.readFile('./lib/css/index.css', async (err, css) => {
 		let manifest = undefined;
 
 		const mainResult = await postcss([
-			postcssImport({
-				root: './lib/css',
-				nameLayer: hashLayerName,
-			}),
+			postcssBundler(),
 			postcssPresetEnv({
 				stage: 1,
 				minimumVendorImplementations: 0,
@@ -82,9 +72,7 @@ fs.readFile('./lib/css/index.css', async (err, css) => {
 			const info = manifest[mediaQuery];
 
 			const splitResult = await postcss([
-				postcssDiscardComments,
-				postcssDiscardEmpty,
-				postcssNormalizeWhitespace,
+				postcssMinify()
 			]).process(fs.readFileSync(`./dist/css/${info.base}`), {
 				map: {
 					inline: false,
@@ -101,17 +89,3 @@ fs.readFile('./lib/css/index.css', async (err, css) => {
 
 	}
 });
-
-function hashLayerName(index, rootFilename) {
-	if (!rootFilename) {
-		return `import-anon-layer-${index}`;
-	}
-
-	// A stable, deterministic and unique layer name:
-	// - layer index
-	// - relative rootFilename to current working directory
-	return `import-anon-layer-${createHash('sha256')
-		.update(`${index}-${rootFilename.split(cwd)[1]}`)
-		.digest('hex')
-		.slice(0, 12)}`;
-}
