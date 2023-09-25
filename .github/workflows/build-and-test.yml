@@ -54,7 +54,7 @@ jobs:
         fetch-depth: 1
 
     - name: validate
-      uses: cloudflare/wrangler-action@2.0.0
+      uses: cloudflare/wrangler-action@v3.1.1
       with:
         apiToken: ${{ secrets.CF_API_TOKEN }}
         wranglerVersion: '1.13.0'
