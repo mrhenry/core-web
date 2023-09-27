@@ -31,12 +31,12 @@
     "tsc": "tsc"
   },
   "dependencies": {
-    "browserslist": "^4.21.11",
+    "browserslist": "^4.22.0",
     "semver": "^7.5.4"
   },
   "devDependencies": {
-    "@types/node": "^20.6.5",
-    "@types/semver": "^7.5.2",
+    "@types/node": "^20.7.1",
+    "@types/semver": "^7.5.3",
     "typescript": "^5.2.2"
   },
   "bugs": {

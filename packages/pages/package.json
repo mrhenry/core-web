@@ -24,10 +24,10 @@
   },
   "dependencies": {
     "@csstools/postcss-minify": "1.0.1",
-    "@babel/core": "^7.22.20",
+    "@babel/core": "^7.23.0",
     "@babel/preset-env": "^7.22.20",
     "@csstools/postcss-bundler": "^1.0.4",
-    "@mdn/browser-compat-data": "^5.3.18",
+    "@mdn/browser-compat-data": "^5.3.19",
     "@mrhenry/babel-plugin-core-web": "*",
     "@mrhenry/core-web": "*",
     "babel-loader": "^9.1.3",
