@@ -26,7 +26,7 @@
     "@csstools/postcss-minify": "1.0.1",
     "@babel/core": "^7.22.20",
     "@babel/preset-env": "^7.22.20",
-    "@csstools/postcss-bundler": "^1.0.4",
+    "@csstools/postcss-bundler": "^1.0.5",
     "@mdn/browser-compat-data": "^5.3.18",
     "@mrhenry/babel-plugin-core-web": "*",
     "@mrhenry/core-web": "*",
