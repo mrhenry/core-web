@@ -36,7 +36,7 @@
     "core-js": "^3.32.2",
     "he": "^1.2.0",
     "polyfill-library": "^4.0.0",
-    "postcss": "^8.4.30",
+    "postcss": "^8.4.31",
     "postcss-preset-env": "^9.1.4",
     "postcss-split-by-media": "^0.3.0",
     "webpack": "^5.88.2",
