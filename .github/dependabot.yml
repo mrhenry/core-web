@@ -3,11 +3,11 @@ updates:
 - package-ecosystem: "npm"
   directory: "/"
   schedule:
-    interval: daily
+    interval: weekly
+    day: "tuesday"
     time: "01:00"
-    timezone: "Europe/Brussels"
+    timezone: Europe/Brussels
   open-pull-requests-limit: 10
-  target-branch: "dependencies"
   reviewers:
   - romainmenke
   - fd
@@ -20,15 +20,33 @@ updates:
 - package-ecosystem: "github-actions"
   directory: "/"
   schedule:
-    interval: daily
+    interval: weekly
+    day: "tuesday"
     time: "01:00"
     timezone: Europe/Brussels
   open-pull-requests-limit: 10
-  target-branch: "dependencies"
   rebase-strategy: disabled
   reviewers:
   - romainmenke
   - fd
+  groups:
+    all-dependencies:
+      patterns:
+        - "*"
+  ignore:
+  - dependency-name: "cloudflare/wrangler-action"
+    update-types: ["version-update:semver-major"]
+- package-ecosystem: "gomod"
+  directory: "/"
+  open-pull-requests-limit: 10
+  labels:
+    - "go"
+    - "dependencies"
+  schedule:
+    interval: weekly
+    day: "tuesday"
+    time: "01:00"
+    timezone: Europe/Brussels
   groups:
     all-dependencies:
       patterns:

@@ -154,7 +154,26 @@ func run(processCtx context.Context, runnerCtx context.Context, errChan chan err
 
 			err = runTest(ctx, client, b, sessionName)
 			if err != nil {
-				errChan <- err
+				time.Sleep(time.Second * 2)
+				log.Printf("Retrying '%s' (1)", b.ResultKey())
+				err1 := runTest(ctx, client, b, sessionName)
+				if err1 != nil {
+					log.Printf("After retries '%s' failed 2 out of 2 times", b.ResultKey())
+					errChan <- err
+					return
+				}
+
+				time.Sleep(time.Second * 2)
+				log.Printf("Retrying '%s' (2)", b.ResultKey())
+				err2 := runTest(ctx, client, b, sessionName)
+				if err2 != nil {
+					log.Printf("After retries '%s' failed 2 out of 3 times", b.ResultKey())
+					errChan <- err
+					return
+				}
+
+				log.Printf("After retries '%s' failed 1 out of 3 times", b.ResultKey())
+				return
 			}
 		}(browser)
 	}
@@ -194,7 +213,7 @@ func runTest(parentCtx context.Context, client *browserstack.Client, browser bro
 		// "browserstack.networkLogs": "true",
 		"build":       sessionName,
 		"projectName": "@mrhenry/core-web-tests",
-		"name":        fmt.Sprintf("%s – %s", "Core Web", browser.ResultKey()),
+		"name":        fmt.Sprintf("%s - %s", "Core Web", browser.ResultKey()),
 	})
 
 	browserVersion, _ := reallyTolerantSemver(browser.BrowserVersion)

@@ -8,15 +8,15 @@
     "lint": "eslint --fix ./src/*.js"
   },
   "devDependencies": {
-    "@babel/core": "^7.22.20",
-    "@babel/preset-env": "^7.22.20",
-    "@mrhenry/babel-plugin-core-web": "^1.2.0",
-    "@mrhenry/core-web": "^1.2.0",
-    "babel-loader": "^9.1.3",
-    "core-js": "^3.32.2",
-    "eslint": "^8.50.0",
-    "webpack": "^5.88.2",
-    "webpack-cli": "^5.1.1"
+    "@babel/core": "*",
+    "@babel/preset-env": "*",
+    "@mrhenry/babel-plugin-core-web": "*",
+    "@mrhenry/core-web": "*",
+    "babel-loader": "*",
+    "core-js": "*",
+    "eslint": "*",
+    "webpack": "*",
+    "webpack-cli": "*"
   },
   "volta": {
     "extends": "../../package.json"

@@ -8,10 +8,9 @@
     "watch": "wrangler dev",
     "install-wrangler": "npm install -g @cloudflare/wrangler"
   },
-  "dependencies": {
-    "semver": "^7.5.4"
+  "devDependencies": {
+    "semver": "*"
   },
-  "devDependencies": {},
   "volta": {
     "extends": "../../package.json"
   }

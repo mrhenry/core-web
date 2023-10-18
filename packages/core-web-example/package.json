@@ -1,17 +1,17 @@
 {
-  "name": "@mrhenry/core-web-example",
-  "version": "1.2.0",
-  "private": true,
-  "scripts": {
-    "build": "babel src -d lib"
-  },
-  "devDependencies": {
-    "@babel/cli": "^7.22.15",
-    "@babel/core": "^7.22.20",
-    "@mrhenry/babel-plugin-core-web": "*",
-    "@mrhenry/core-web": "*"
-  },
-  "volta": {
-    "extends": "../../package.json"
-  }
+	"name": "@mrhenry/core-web-example",
+	"version": "1.2.0",
+	"private": true,
+	"scripts": {
+		"build": "babel src -d lib"
+	},
+	"devDependencies": {
+		"@babel/cli": "*",
+		"@babel/core": "*",
+		"@mrhenry/babel-plugin-core-web": "*",
+		"@mrhenry/core-web": "*"
+	},
+	"volta": {
+		"extends": "../../package.json"
+	}
 }
