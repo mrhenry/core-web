@@ -154,31 +154,26 @@ func run(processCtx context.Context, runnerCtx context.Context, errChan chan err
 
 			err = runTest(ctx, client, b, sessionName)
 			if err != nil {
-				{
-					time.Sleep(time.Second * 2)
-					log.Printf("Retrying '%s' (1)", b.ResultKey())
-					err1 := runTest(ctx, client, b, sessionName)
-					time.Sleep(time.Second * 2)
-					log.Printf("Retrying '%s' (2)", b.ResultKey())
-					err2 := runTest(ctx, client, b, sessionName)
-
-					errCount := 1
-					if err1 != nil {
-						errCount++
-					}
-					if err2 != nil {
-						errCount++
-					}
-
-					log.Printf("After retries '%s' failed %d out of 3 times", b.ResultKey(), errCount)
-
-					// 2 out of 3 is good enough
-					if err1 == nil && err2 == nil {
-						return
-					}
+				time.Sleep(time.Second * 2)
+				log.Printf("Retrying '%s' (1)", b.ResultKey())
+				err1 := runTest(ctx, client, b, sessionName)
+				if err1 != nil {
+					log.Printf("After retries '%s' failed 2 out of 2 times", b.ResultKey())
+					errChan <- err
+					return
 				}
 
-				errChan <- err
+				time.Sleep(time.Second * 2)
+				log.Printf("Retrying '%s' (2)", b.ResultKey())
+				err2 := runTest(ctx, client, b, sessionName)
+				if err2 != nil {
+					log.Printf("After retries '%s' failed 2 out of 3 times", b.ResultKey())
+					errChan <- err
+					return
+				}
+
+				log.Printf("After retries '%s' failed 1 out of 3 times", b.ResultKey())
+				return
 			}
 		}(browser)
 	}
