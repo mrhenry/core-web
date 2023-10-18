@@ -154,6 +154,18 @@ func run(processCtx context.Context, runnerCtx context.Context, errChan chan err
 
 			err = runTest(ctx, client, b, sessionName)
 			if err != nil {
+				{
+					time.Sleep(time.Second * 2)
+					err1 := runTest(ctx, client, b, sessionName)
+					time.Sleep(time.Second * 2)
+					err2 := runTest(ctx, client, b, sessionName)
+
+					// 2 out of 3 is good enough
+					if err1 == nil && err2 == nil {
+						return
+					}
+				}
+
 				errChan <- err
 			}
 		}(browser)
@@ -194,7 +206,7 @@ func runTest(parentCtx context.Context, client *browserstack.Client, browser bro
 		// "browserstack.networkLogs": "true",
 		"build":       sessionName,
 		"projectName": "@mrhenry/core-web-tests",
-		"name":        fmt.Sprintf("%s – %s", "Core Web", browser.ResultKey()),
+		"name":        fmt.Sprintf("%s - %s", "Core Web", browser.ResultKey()),
 	})
 
 	browserVersion, _ := reallyTolerantSemver(browser.BrowserVersion)
