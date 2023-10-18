@@ -313,54 +313,15 @@
           "standard_track": true
         },
         "support": {
-          "chrome": [
-            {
-              "version_added": "84"
-            },
-            {
-              "flags": [
-                {
-                  "name": "#enable-experimental-web-platform-features",
-                  "type": "preference"
-                }
-              ],
-              "notes": "A valid animation object is returned but the targeted pseudoelement is not visually animated.",
-              "partial_implementation": true,
-              "version_added": "81"
-            }
-          ],
-          "chrome_android": [
-            {
-              "version_added": "84"
-            },
-            {
-              "flags": [
-                {
-                  "name": "#enable-experimental-web-platform-features",
-                  "type": "preference"
-                }
-              ],
-              "notes": "A valid animation object is returned but the targeted pseudoelement is not visually animated.",
-              "partial_implementation": true,
-              "version_added": "81"
-            }
-          ],
-          "edge": [
-            {
-              "version_added": "84"
-            },
-            {
-              "flags": [
-                {
-                  "name": "#enable-experimental-web-platform-features",
-                  "type": "preference"
-                }
-              ],
-              "notes": "A valid animation object is returned but the targeted pseudoelement is not visually animated.",
-              "partial_implementation": true,
-              "version_added": "81"
-            }
-          ],
+          "chrome": {
+            "version_added": "84"
+          },
+          "chrome_android": {
+            "version_added": "84"
+          },
+          "edge": {
+            "version_added": "84"
+          },
           "firefox": {
             "version_added": "75"
           },
@@ -370,38 +331,12 @@
           "ie": {
             "version_added": false
           },
-          "oculus": [
-            {
-              "version_added": "11.0"
-            },
-            {
-              "flags": [
-                {
-                  "name": "#enable-experimental-web-platform-features",
-                  "type": "preference"
-                }
-              ],
-              "notes": "A valid animation object is returned but the targeted pseudoelement is not visually animated.",
-              "partial_implementation": true,
-              "version_added": "9.0"
-            }
-          ],
-          "opera": [
-            {
-              "version_added": "70"
-            },
-            {
-              "flags": [
-                {
-                  "name": "#enable-experimental-web-platform-features",
-                  "type": "preference"
-                }
-              ],
-              "notes": "A valid animation object is returned but the targeted pseudoelement is not visually animated.",
-              "partial_implementation": true,
-              "version_added": "68"
-            }
-          ],
+          "oculus": {
+            "version_added": "11.0"
+          },
+          "opera": {
+            "version_added": "70"
+          },
           "opera_android": {
             "version_added": "60"
           },
@@ -453,7 +388,7 @@
             "version_added": false
           },
           "opera": {
-            "version_added": false
+            "version_added": "101"
           },
           "opera_android": {
             "version_added": false
@@ -506,7 +441,7 @@
             "version_added": false
           },
           "opera": {
-            "version_added": false
+            "version_added": "101"
           },
           "opera_android": {
             "version_added": false
