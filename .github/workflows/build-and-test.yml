@@ -1,8 +1,10 @@
 name: 'Build'
 on:
   push:
-    branches-ignore:
-    - 'pages'
+    branches:
+    - 'main'
+  pull_request:
+  workflow_dispatch:
 
 concurrency: 
   group: browserstack-test
