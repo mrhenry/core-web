@@ -3,7 +3,7 @@ module github.com/mrhenry/web-tests
 go 1.20
 
 require (
-	github.com/google/uuid v1.3.1
+	github.com/google/uuid v1.4.0
 	github.com/hashicorp/go-version v1.6.0
 	github.com/tebeka/selenium v0.9.9
 	golang.org/x/sync v0.4.0
