@@ -76,9 +76,10 @@
         }
       }
     },
-    "assert": {
+    "assert_static": {
       "__compat": {
-        "mdn_url": "https://developer.mozilla.org/docs/Web/API/console/assert",
+        "description": "<code>assert()</code> static method",
+        "mdn_url": "https://developer.mozilla.org/docs/Web/API/console/assert_static",
         "source_file": "api/_globals/console.json",
         "spec_url": "https://console.spec.whatwg.org/#assert",
         "status": {
@@ -142,9 +143,10 @@
         }
       }
     },
-    "clear": {
+    "clear_static": {
       "__compat": {
-        "mdn_url": "https://developer.mozilla.org/docs/Web/API/console/clear",
+        "description": "<code>clear()</code> static method",
+        "mdn_url": "https://developer.mozilla.org/docs/Web/API/console/clear_static",
         "source_file": "api/_globals/console.json",
         "spec_url": "https://console.spec.whatwg.org/#clear",
         "status": {
@@ -201,68 +203,10 @@
         }
       }
     },
-    "count": {
+    "countReset_static": {
       "__compat": {
-        "mdn_url": "https://developer.mozilla.org/docs/Web/API/console/count",
-        "source_file": "api/_globals/console.json",
-        "spec_url": "https://console.spec.whatwg.org/#count",
-        "status": {
-          "deprecated": false,
-          "experimental": false,
-          "standard_track": true
-        },
-        "support": {
-          "chrome": {
-            "version_added": "2"
-          },
-          "chrome_android": {
-            "version_added": "18"
-          },
-          "deno": {
-            "version_added": "1.0"
-          },
-          "edge": {
-            "version_added": "12"
-          },
-          "firefox": {
-            "version_added": "30"
-          },
-          "firefox_android": {
-            "version_added": "30"
-          },
-          "ie": {
-            "version_added": "11"
-          },
-          "nodejs": {
-            "version_added": "8.3.0"
-          },
-          "oculus": {
-            "version_added": "5.0"
-          },
-          "opera": {
-            "version_added": "11"
-          },
-          "opera_android": {
-            "version_added": "11"
-          },
-          "safari": {
-            "version_added": "4"
-          },
-          "safari_ios": {
-            "version_added": "3.2"
-          },
-          "samsunginternet_android": {
-            "version_added": "1.0"
-          },
-          "webview_android": {
-            "version_added": "≤37"
-          }
-        }
-      }
-    },
-    "countReset": {
-      "__compat": {
-        "mdn_url": "https://developer.mozilla.org/docs/Web/API/console/countReset",
+        "description": "<code>countReset()</code> static method",
+        "mdn_url": "https://developer.mozilla.org/docs/Web/API/console/countReset_static",
         "source_file": "api/_globals/console.json",
         "spec_url": "https://console.spec.whatwg.org/#countreset",
         "status": {
@@ -319,9 +263,70 @@
         }
       }
     },
-    "debug": {
+    "count_static": {
       "__compat": {
-        "mdn_url": "https://developer.mozilla.org/docs/Web/API/console/debug",
+        "description": "<code>count()</code> static method",
+        "mdn_url": "https://developer.mozilla.org/docs/Web/API/console/count_static",
+        "source_file": "api/_globals/console.json",
+        "spec_url": "https://console.spec.whatwg.org/#count",
+        "status": {
+          "deprecated": false,
+          "experimental": false,
+          "standard_track": true
+        },
+        "support": {
+          "chrome": {
+            "version_added": "2"
+          },
+          "chrome_android": {
+            "version_added": "18"
+          },
+          "deno": {
+            "version_added": "1.0"
+          },
+          "edge": {
+            "version_added": "12"
+          },
+          "firefox": {
+            "version_added": "30"
+          },
+          "firefox_android": {
+            "version_added": "30"
+          },
+          "ie": {
+            "version_added": "11"
+          },
+          "nodejs": {
+            "version_added": "8.3.0"
+          },
+          "oculus": {
+            "version_added": "5.0"
+          },
+          "opera": {
+            "version_added": "11"
+          },
+          "opera_android": {
+            "version_added": "11"
+          },
+          "safari": {
+            "version_added": "4"
+          },
+          "safari_ios": {
+            "version_added": "3.2"
+          },
+          "samsunginternet_android": {
+            "version_added": "1.0"
+          },
+          "webview_android": {
+            "version_added": "≤37"
+          }
+        }
+      }
+    },
+    "debug_static": {
+      "__compat": {
+        "description": "<code>debug()</code> static method",
+        "mdn_url": "https://developer.mozilla.org/docs/Web/API/console/debug_static",
         "source_file": "api/_globals/console.json",
         "spec_url": "https://console.spec.whatwg.org/#debug",
         "status": {
@@ -379,9 +384,10 @@
         }
       }
     },
-    "dir": {
+    "dir_static": {
       "__compat": {
-        "mdn_url": "https://developer.mozilla.org/docs/Web/API/console/dir",
+        "description": "<code>dir()</code> static method",
+        "mdn_url": "https://developer.mozilla.org/docs/Web/API/console/dir_static",
         "source_file": "api/_globals/console.json",
         "spec_url": "https://console.spec.whatwg.org/#dir",
         "status": {
@@ -438,9 +444,10 @@
         }
       }
     },
-    "dirxml": {
+    "dirxml_static": {
       "__compat": {
-        "mdn_url": "https://developer.mozilla.org/docs/Web/API/console/dirxml",
+        "description": "<code>dirxml()</code> static method",
+        "mdn_url": "https://developer.mozilla.org/docs/Web/API/console/dirxml_static",
         "source_file": "api/_globals/console.json",
         "spec_url": "https://console.spec.whatwg.org/#dirxml",
         "status": {
@@ -504,9 +511,10 @@
         }
       }
     },
-    "error": {
+    "error_static": {
       "__compat": {
-        "mdn_url": "https://developer.mozilla.org/docs/Web/API/console/error",
+        "description": "<code>error()</code> static method",
+        "mdn_url": "https://developer.mozilla.org/docs/Web/API/console/error_static",
         "source_file": "api/_globals/console.json",
         "spec_url": "https://console.spec.whatwg.org/#error",
         "status": {
@@ -563,9 +571,9 @@
         }
       }
     },
-    "exception": {
+    "exception_static": {
       "__compat": {
-        "description": "<code>exception</code> (an alias for <code>error</code>)",
+        "description": "<code>exception()</code> static method (an alias for <code>error()</code>)",
         "source_file": "api/_globals/console.json",
         "status": {
           "deprecated": true,
@@ -622,68 +630,10 @@
         }
       }
     },
-    "group": {
+    "groupCollapsed_static": {
       "__compat": {
-        "mdn_url": "https://developer.mozilla.org/docs/Web/API/console/group",
-        "source_file": "api/_globals/console.json",
-        "spec_url": "https://console.spec.whatwg.org/#group",
-        "status": {
-          "deprecated": false,
-          "experimental": false,
-          "standard_track": true
-        },
-        "support": {
-          "chrome": {
-            "version_added": "2"
-          },
-          "chrome_android": {
-            "version_added": "18"
-          },
-          "deno": {
-            "version_added": "1.0"
-          },
-          "edge": {
-            "version_added": "12"
-          },
-          "firefox": {
-            "version_added": "9"
-          },
-          "firefox_android": {
-            "version_added": "9"
-          },
-          "ie": {
-            "version_added": "11"
-          },
-          "nodejs": {
-            "version_added": "8.5.0"
-          },
-          "oculus": {
-            "version_added": "5.0"
-          },
-          "opera": {
-            "version_added": "11"
-          },
-          "opera_android": {
-            "version_added": "11"
-          },
-          "safari": {
-            "version_added": "4"
-          },
-          "safari_ios": {
-            "version_added": "3.2"
-          },
-          "samsunginternet_android": {
-            "version_added": "1.0"
-          },
-          "webview_android": {
-            "version_added": "37"
-          }
-        }
-      }
-    },
-    "groupCollapsed": {
-      "__compat": {
-        "mdn_url": "https://developer.mozilla.org/docs/Web/API/console/groupCollapsed",
+        "description": "<code>groupCollapsed()</code> static method",
+        "mdn_url": "https://developer.mozilla.org/docs/Web/API/console/groupCollapsed_static",
         "source_file": "api/_globals/console.json",
         "spec_url": "https://console.spec.whatwg.org/#groupcollapsed",
         "status": {
@@ -741,9 +691,10 @@
         }
       }
     },
-    "groupEnd": {
+    "groupEnd_static": {
       "__compat": {
-        "mdn_url": "https://developer.mozilla.org/docs/Web/API/console/groupEnd",
+        "description": "<code>groupEnd()</code> static method",
+        "mdn_url": "https://developer.mozilla.org/docs/Web/API/console/groupEnd_static",
         "source_file": "api/_globals/console.json",
         "spec_url": "https://console.spec.whatwg.org/#groupend",
         "status": {
@@ -800,9 +751,70 @@
         }
       }
     },
-    "info": {
+    "group_static": {
       "__compat": {
-        "mdn_url": "https://developer.mozilla.org/docs/Web/API/console/info",
+        "description": "<code>group()</code> static method",
+        "mdn_url": "https://developer.mozilla.org/docs/Web/API/console/group_static",
+        "source_file": "api/_globals/console.json",
+        "spec_url": "https://console.spec.whatwg.org/#group",
+        "status": {
+          "deprecated": false,
+          "experimental": false,
+          "standard_track": true
+        },
+        "support": {
+          "chrome": {
+            "version_added": "2"
+          },
+          "chrome_android": {
+            "version_added": "18"
+          },
+          "deno": {
+            "version_added": "1.0"
+          },
+          "edge": {
+            "version_added": "12"
+          },
+          "firefox": {
+            "version_added": "9"
+          },
+          "firefox_android": {
+            "version_added": "9"
+          },
+          "ie": {
+            "version_added": "11"
+          },
+          "nodejs": {
+            "version_added": "8.5.0"
+          },
+          "oculus": {
+            "version_added": "5.0"
+          },
+          "opera": {
+            "version_added": "11"
+          },
+          "opera_android": {
+            "version_added": "11"
+          },
+          "safari": {
+            "version_added": "4"
+          },
+          "safari_ios": {
+            "version_added": "3.2"
+          },
+          "samsunginternet_android": {
+            "version_added": "1.0"
+          },
+          "webview_android": {
+            "version_added": "37"
+          }
+        }
+      }
+    },
+    "info_static": {
+      "__compat": {
+        "description": "<code>info()</code> static method",
+        "mdn_url": "https://developer.mozilla.org/docs/Web/API/console/info_static",
         "source_file": "api/_globals/console.json",
         "spec_url": "https://console.spec.whatwg.org/#info",
         "status": {
@@ -860,9 +872,10 @@
         }
       }
     },
-    "log": {
+    "log_static": {
       "__compat": {
-        "mdn_url": "https://developer.mozilla.org/docs/Web/API/console/log",
+        "description": "<code>log()</code> static method",
+        "mdn_url": "https://developer.mozilla.org/docs/Web/API/console/log_static",
         "source_file": "api/_globals/console.json",
         "spec_url": "https://console.spec.whatwg.org/#log",
         "status": {
@@ -919,9 +932,10 @@
         }
       }
     },
-    "profile": {
+    "profileEnd_static": {
       "__compat": {
-        "mdn_url": "https://developer.mozilla.org/docs/Web/API/console/profile",
+        "description": "<code>profileEnd()</code> static method",
+        "mdn_url": "https://developer.mozilla.org/docs/Web/API/console/profileEnd_static",
         "source_file": "api/_globals/console.json",
         "status": {
           "deprecated": false,
@@ -942,12 +956,10 @@
             "version_added": "12"
           },
           "firefox": {
-            "version_added": "16",
-            "version_removed": "102"
+            "version_added": "16"
           },
           "firefox_android": {
-            "version_added": "16",
-            "version_removed": "102"
+            "version_added": "16"
           },
           "ie": {
             "version_added": "9"
@@ -985,9 +997,10 @@
         }
       }
     },
-    "profileEnd": {
+    "profile_static": {
       "__compat": {
-        "mdn_url": "https://developer.mozilla.org/docs/Web/API/console/profileEnd",
+        "description": "<code>profile()</code> static method",
+        "mdn_url": "https://developer.mozilla.org/docs/Web/API/console/profile_static",
         "source_file": "api/_globals/console.json",
         "status": {
           "deprecated": false,
@@ -1008,10 +1021,12 @@
             "version_added": "12"
           },
           "firefox": {
-            "version_added": "16"
+            "version_added": "16",
+            "version_removed": "102"
           },
           "firefox_android": {
-            "version_added": "16"
+            "version_added": "16",
+            "version_removed": "102"
           },
           "ie": {
             "version_added": "9"
@@ -1124,9 +1139,10 @@
         }
       }
     },
-    "table": {
+    "table_static": {
       "__compat": {
-        "mdn_url": "https://developer.mozilla.org/docs/Web/API/console/table",
+        "description": "<code>table()</code> static method",
+        "mdn_url": "https://developer.mozilla.org/docs/Web/API/console/table_static",
         "source_file": "api/_globals/console.json",
         "spec_url": "https://console.spec.whatwg.org/#table",
         "status": {
@@ -1183,68 +1199,10 @@
         }
       }
     },
-    "time": {
+    "timeEnd_static": {
       "__compat": {
-        "mdn_url": "https://developer.mozilla.org/docs/Web/API/console/time",
-        "source_file": "api/_globals/console.json",
-        "spec_url": "https://console.spec.whatwg.org/#time",
-        "status": {
-          "deprecated": false,
-          "experimental": false,
-          "standard_track": true
-        },
-        "support": {
-          "chrome": {
-            "version_added": "2"
-          },
-          "chrome_android": {
-            "version_added": "18"
-          },
-          "deno": {
-            "version_added": "1.0"
-          },
-          "edge": {
-            "version_added": "12"
-          },
-          "firefox": {
-            "version_added": "10"
-          },
-          "firefox_android": {
-            "version_added": "10"
-          },
-          "ie": {
-            "version_added": "11"
-          },
-          "nodejs": {
-            "version_added": "0.10.0"
-          },
-          "oculus": {
-            "version_added": "5.0"
-          },
-          "opera": {
-            "version_added": "11"
-          },
-          "opera_android": {
-            "version_added": "11"
-          },
-          "safari": {
-            "version_added": "4"
-          },
-          "safari_ios": {
-            "version_added": "3.2"
-          },
-          "samsunginternet_android": {
-            "version_added": "1.0"
-          },
-          "webview_android": {
-            "version_added": "≤37"
-          }
-        }
-      }
-    },
-    "timeEnd": {
-      "__compat": {
-        "mdn_url": "https://developer.mozilla.org/docs/Web/API/console/timeEnd",
+        "description": "<code>timeEnd()</code> static method",
+        "mdn_url": "https://developer.mozilla.org/docs/Web/API/console/timeEnd_static",
         "source_file": "api/_globals/console.json",
         "spec_url": "https://console.spec.whatwg.org/#timeend",
         "status": {
@@ -1301,9 +1259,10 @@
         }
       }
     },
-    "timeLog": {
+    "timeLog_static": {
       "__compat": {
-        "mdn_url": "https://developer.mozilla.org/docs/Web/API/console/timeLog",
+        "description": "<code>timeLog()</code> static method",
+        "mdn_url": "https://developer.mozilla.org/docs/Web/API/console/timeLog_static",
         "source_file": "api/_globals/console.json",
         "spec_url": "https://console.spec.whatwg.org/#timelog",
         "status": {
@@ -1360,9 +1319,10 @@
         }
       }
     },
-    "timeStamp": {
+    "timeStamp_static": {
       "__compat": {
-        "mdn_url": "https://developer.mozilla.org/docs/Web/API/console/timeStamp",
+        "description": "<code>timeStamp()</code> static method",
+        "mdn_url": "https://developer.mozilla.org/docs/Web/API/console/timeStamp_static",
         "source_file": "api/_globals/console.json",
         "status": {
           "deprecated": false,
@@ -1424,9 +1384,70 @@
         }
       }
     },
-    "trace": {
+    "time_static": {
       "__compat": {
-        "mdn_url": "https://developer.mozilla.org/docs/Web/API/console/trace",
+        "description": "<code>time()</code> static method",
+        "mdn_url": "https://developer.mozilla.org/docs/Web/API/console/time_static",
+        "source_file": "api/_globals/console.json",
+        "spec_url": "https://console.spec.whatwg.org/#time",
+        "status": {
+          "deprecated": false,
+          "experimental": false,
+          "standard_track": true
+        },
+        "support": {
+          "chrome": {
+            "version_added": "2"
+          },
+          "chrome_android": {
+            "version_added": "18"
+          },
+          "deno": {
+            "version_added": "1.0"
+          },
+          "edge": {
+            "version_added": "12"
+          },
+          "firefox": {
+            "version_added": "10"
+          },
+          "firefox_android": {
+            "version_added": "10"
+          },
+          "ie": {
+            "version_added": "11"
+          },
+          "nodejs": {
+            "version_added": "0.10.0"
+          },
+          "oculus": {
+            "version_added": "5.0"
+          },
+          "opera": {
+            "version_added": "11"
+          },
+          "opera_android": {
+            "version_added": "11"
+          },
+          "safari": {
+            "version_added": "4"
+          },
+          "safari_ios": {
+            "version_added": "3.2"
+          },
+          "samsunginternet_android": {
+            "version_added": "1.0"
+          },
+          "webview_android": {
+            "version_added": "≤37"
+          }
+        }
+      }
+    },
+    "trace_static": {
+      "__compat": {
+        "description": "<code>trace()</code> static method",
+        "mdn_url": "https://developer.mozilla.org/docs/Web/API/console/trace_static",
         "source_file": "api/_globals/console.json",
         "spec_url": "https://console.spec.whatwg.org/#trace",
         "status": {
@@ -1483,9 +1504,10 @@
         }
       }
     },
-    "warn": {
+    "warn_static": {
       "__compat": {
-        "mdn_url": "https://developer.mozilla.org/docs/Web/API/console/warn",
+        "description": "<code>warn()</code> static method",
+        "mdn_url": "https://developer.mozilla.org/docs/Web/API/console/warn_static",
         "source_file": "api/_globals/console.json",
         "spec_url": "https://console.spec.whatwg.org/#warn",
         "status": {

@@ -51,7 +51,7 @@
             "version_added": "18"
           },
           "deno": {
-            "version_added": false
+            "version_added": "1.38"
           },
           "edge": {
             "version_added": "79"
@@ -105,7 +105,7 @@
               "version_added": "26"
             },
             "deno": {
-              "version_added": false
+              "version_added": "1.38"
             },
             "edge": {
               "version_added": "79"
@@ -161,7 +161,7 @@
           "version_added": "18"
         },
         "deno": {
-          "version_added": false
+          "version_added": "1.38"
         },
         "edge": {
           "version_added": "79"
@@ -216,7 +216,7 @@
             "version_added": "18"
           },
           "deno": {
-            "version_added": false
+            "version_added": "1.38"
           },
           "edge": {
             "version_added": "79"
@@ -276,7 +276,7 @@
             "version_added": "18"
           },
           "deno": {
-            "version_added": false
+            "version_added": "1.38"
           },
           "edge": {
             "version_added": "79"
@@ -336,7 +336,7 @@
             "version_added": "18"
           },
           "deno": {
-            "version_added": false
+            "version_added": "1.38"
           },
           "edge": {
             "version_added": "79"
@@ -396,7 +396,7 @@
             "version_added": "18"
           },
           "deno": {
-            "version_added": false
+            "version_added": "1.38"
           },
           "edge": {
             "version_added": "79"
@@ -452,7 +452,7 @@
             "version_added": "18"
           },
           "deno": {
-            "version_added": false
+            "version_added": "1.38"
           },
           "edge": {
             "version_added": "79"
@@ -508,7 +508,7 @@
             "version_added": "18"
           },
           "deno": {
-            "version_added": false
+            "version_added": "1.38"
           },
           "edge": {
             "version_added": "79"
@@ -564,7 +564,7 @@
             "version_added": "26"
           },
           "deno": {
-            "version_added": false
+            "version_added": "1.38"
           },
           "edge": {
             "version_added": "79"
@@ -619,7 +619,7 @@
             "version_added": "18"
           },
           "deno": {
-            "version_added": false
+            "version_added": "1.38"
           },
           "edge": {
             "version_added": "79"

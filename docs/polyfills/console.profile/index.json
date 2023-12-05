@@ -21,7 +21,8 @@
   },
   "mdn": {
     "__compat": {
-      "mdn_url": "https://developer.mozilla.org/docs/Web/API/console/profile",
+      "description": "<code>profile()</code> static method",
+      "mdn_url": "https://developer.mozilla.org/docs/Web/API/console/profile_static",
       "source_file": "api/_globals/console.json",
       "status": {
         "deprecated": false,

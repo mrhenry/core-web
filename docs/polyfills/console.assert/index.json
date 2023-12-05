@@ -21,7 +21,8 @@
   },
   "mdn": {
     "__compat": {
-      "mdn_url": "https://developer.mozilla.org/docs/Web/API/console/assert",
+      "description": "<code>assert()</code> static method",
+      "mdn_url": "https://developer.mozilla.org/docs/Web/API/console/assert_static",
       "source_file": "api/_globals/console.json",
       "spec_url": "https://console.spec.whatwg.org/#assert",
       "status": {

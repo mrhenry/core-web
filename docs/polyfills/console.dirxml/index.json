@@ -21,7 +21,8 @@
   },
   "mdn": {
     "__compat": {
-      "mdn_url": "https://developer.mozilla.org/docs/Web/API/console/dirxml",
+      "description": "<code>dirxml()</code> static method",
+      "mdn_url": "https://developer.mozilla.org/docs/Web/API/console/dirxml_static",
       "source_file": "api/_globals/console.json",
       "spec_url": "https://console.spec.whatwg.org/#dirxml",
       "status": {

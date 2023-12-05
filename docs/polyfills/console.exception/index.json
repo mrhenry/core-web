@@ -24,7 +24,7 @@
   },
   "mdn": {
     "__compat": {
-      "description": "<code>exception</code> (an alias for <code>error</code>)",
+      "description": "<code>exception()</code> static method (an alias for <code>error()</code>)",
       "source_file": "api/_globals/console.json",
       "status": {
         "deprecated": true,

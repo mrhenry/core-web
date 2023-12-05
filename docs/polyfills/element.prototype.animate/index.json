@@ -391,7 +391,7 @@
             "version_added": "101"
           },
           "opera_android": {
-            "version_added": false
+            "version_added": "77"
           },
           "safari": {
             "version_added": false
@@ -400,7 +400,7 @@
             "version_added": false
           },
           "samsunginternet_android": {
-            "version_added": false
+            "version_added": "23.0"
           },
           "webview_android": {
             "version_added": "115"
@@ -444,7 +444,7 @@
             "version_added": "101"
           },
           "opera_android": {
-            "version_added": false
+            "version_added": "77"
           },
           "safari": {
             "version_added": false
@@ -453,7 +453,7 @@
             "version_added": false
           },
           "samsunginternet_android": {
-            "version_added": false
+            "version_added": "23.0"
           },
           "webview_android": {
             "version_added": "115"

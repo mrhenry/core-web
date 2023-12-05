@@ -23,7 +23,8 @@
   },
   "mdn": {
     "__compat": {
-      "mdn_url": "https://developer.mozilla.org/docs/Web/API/console/info",
+      "description": "<code>info()</code> static method",
+      "mdn_url": "https://developer.mozilla.org/docs/Web/API/console/info_static",
       "source_file": "api/_globals/console.json",
       "spec_url": "https://console.spec.whatwg.org/#info",
       "status": {

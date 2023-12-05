@@ -24,7 +24,8 @@
   },
   "mdn": {
     "__compat": {
-      "mdn_url": "https://developer.mozilla.org/docs/Web/API/console/timeStamp",
+      "description": "<code>timeStamp()</code> static method",
+      "mdn_url": "https://developer.mozilla.org/docs/Web/API/console/timeStamp_static",
       "source_file": "api/_globals/console.json",
       "status": {
         "deprecated": false,

@@ -22,7 +22,8 @@
   },
   "mdn": {
     "__compat": {
-      "mdn_url": "https://developer.mozilla.org/docs/Web/API/console/timeEnd",
+      "description": "<code>timeEnd()</code> static method",
+      "mdn_url": "https://developer.mozilla.org/docs/Web/API/console/timeEnd_static",
       "source_file": "api/_globals/console.json",
       "spec_url": "https://console.spec.whatwg.org/#timeend",
       "status": {
