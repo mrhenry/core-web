@@ -78,7 +78,7 @@ class Injector {
 		}
 
 		const COMMENT_PREFIX = 'core-web-ignore';
-		const cleanComment = comment.value.trim();
+		const cleanComment = comment.value.replace(/^\!/, '').trim();
 		if (!cleanComment.startsWith(COMMENT_PREFIX)) {
 			return;
 		}
