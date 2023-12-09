@@ -278,10 +278,19 @@ function logUsedTargets(targets: { browsers?: Record<string, string>, engines?: 
 }
 
 function parseRange(range: string) {
-	if (range === 'op_mini all') {
+	const lowerCaseTrimmedRange = range.trim().toLowerCase();
+	if (lowerCaseTrimmedRange === 'op_mini all') {
 		return {
 			browser: 'op_mini',
 			versions: ['*'],
+			operators: [],
+		};
+	}
+
+	if (lowerCaseTrimmedRange.endsWith('tp') || lowerCaseTrimmedRange.endsWith('beta')) {
+		return {
+			browser: '-',
+			versions: [],
 			operators: [],
 		};
 	}

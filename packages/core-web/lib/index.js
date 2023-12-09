@@ -225,10 +225,18 @@ function logUsedTargets(targets) {
     console.log(JSON.stringify(all, null, 2) + '\n');
 }
 function parseRange(range) {
-    if (range === 'op_mini all') {
+    const lowerCaseTrimmedRange = range.trim().toLowerCase();
+    if (lowerCaseTrimmedRange === 'op_mini all') {
         return {
             browser: 'op_mini',
             versions: ['*'],
+            operators: [],
+        };
+    }
+    if (lowerCaseTrimmedRange.endsWith('tp') || lowerCaseTrimmedRange.endsWith('beta')) {
+        return {
+            browser: '-',
+            versions: [],
             operators: [],
         };
     }
