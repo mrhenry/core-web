@@ -1,5 +1,6 @@
 // core-web-ignore @mrhenry/core-web/modules/console.warn
 /* core-web-ignore @mrhenry/core-web/modules/console.error */
+/*! core-web-ignore @mrhenry/core-web/modules/console.table */
 
 // Manually add a polyfill
 import "@mrhenry/core-web/modules/Element.prototype.after";
@@ -10,6 +11,8 @@ var query = 'p:last-child';
 document.querySelectorAll(`:scope ${query}`);
 
 console.warn('A warning!'); /* no polyfill because it is marked as ignored above */
+console.error('An error'); /* no polyfill because it is marked as ignored above */
+console.table(['A table']); /* no polyfill because it is marked as ignored above */
 
 // ["@mrhenry/core-web", {
 // 	browsers: {
