@@ -33,31 +33,6 @@ module.exports = function(api) {
 
 	return {
 		plugins: [
-			["@mrhenry/core-web", {
-				browsers: {
-					chrome: "31",
-					firefox: "26",
-					edge: "12",
-					opera: "26",
-					safari: "8",
-					ie: "11",
-				}
-			}]
-		]
-	};
-};
-```
-
-```js
-module.exports = function(api) {
-	/*
-		Optionally cache the babel config
-		https://babeljs.io/docs/en/config-files#apicache
-	*/
-	api.cache(true);
-
-	return {
-		plugins: [
 			// Use browserslist default :
 			["@mrhenry/core-web"]
 		]
@@ -87,6 +62,33 @@ module.exports = function(api) {
 };
 ```
 
+### manually describe which browsers
+
+```js
+module.exports = function(api) {
+	/*
+		Optionally cache the babel config
+		https://babeljs.io/docs/en/config-files#apicache
+	*/
+	api.cache(true);
+
+	return {
+		plugins: [
+			["@mrhenry/core-web", {
+				browsers: {
+					chrome: "31",
+					firefox: "26",
+					edge: "12",
+					opera: "26",
+					safari: "8",
+					ie: "11",
+				}
+			}]
+		]
+	};
+};
+```
+
 ## webpack config
 
 ```js
@@ -102,14 +104,10 @@ const babelPresetEnv = require( '@babel/preset-env' );
 			[
 				'@mrhenry/core-web',
 				{
-					browsers: {
-						chrome: "63",
-						firefox: "57",
-						edge: "18",
-						opera: "57",
-						safari: "12",
-						ie: "11",
-					},
+					browserslist: [
+						"last 2 versions",
+						">0.5%"
+					]
 				},
 			],
 		],
@@ -131,6 +129,24 @@ const babelPresetEnv = require( '@babel/preset-env' );
 		],
 	},
 }
+```
+
+## ignore comments
+
+```js
+// core-web-ignore @mrhenry/core-web/modules/console.warn
+/* core-web-ignore @mrhenry/core-web/modules/console.error */
+/*! core-web-ignore @mrhenry/core-web/modules/console.table */
+
+console.warn('A warning!'); /* no polyfill because it is marked as ignored above */
+console.error('An error'); /* no polyfill because it is marked as ignored above */
+console.table(['A table']); /* no polyfill because it is marked as ignored above */
+```
+
+## manually add a polyfill
+
+```js
+import "@mrhenry/core-web/modules/Element.prototype.after";
 ```
 
 ## Example with script tags (`module` vs `nomodules`)
