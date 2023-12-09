@@ -114,7 +114,10 @@
         "webview_android": {
           "version_added": "4.4"
         }
-      }
+      },
+      "tags": [
+        "web-features:scrollintoview"
+      ]
     },
     "options_parameter": {
       "__compat": {
@@ -181,7 +184,10 @@
             "notes": "The <code>block</code> and <code>inline</code> options support the values <code>start</code>, <code>center</code>, <code>end</code>, <code>nearest</code>.",
             "version_added": "61"
           }
-        }
+        },
+        "tags": [
+          "web-features:scrollintoview"
+        ]
       }
     }
   },

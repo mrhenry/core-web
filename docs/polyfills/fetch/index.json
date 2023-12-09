@@ -415,7 +415,10 @@
           "webview_android": {
             "version_added": "101"
           }
-        }
+        },
+        "tags": [
+          "web-features:fetch-priority"
+        ]
       }
     },
     "init_referrerPolicy_parameter": {

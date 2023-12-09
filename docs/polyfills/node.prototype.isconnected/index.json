@@ -86,7 +86,10 @@
         "webview_android": {
           "version_added": "51"
         }
-      }
+      },
+      "tags": [
+        "web-features:shadow-dom"
+      ]
     }
   },
   "polyfilled": {

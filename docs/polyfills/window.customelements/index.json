@@ -111,7 +111,10 @@
         "webview_android": {
           "version_added": "54"
         }
-      }
+      },
+      "tags": [
+        "web-features:custom-elements"
+      ]
     }
   },
   "polyfilled": {
