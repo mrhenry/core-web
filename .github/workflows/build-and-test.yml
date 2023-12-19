@@ -19,7 +19,7 @@ jobs:
           fetch-depth: 1
 
       - name: setup node
-        uses: actions/setup-node@v4.0.0
+        uses: actions/setup-node@v4.0.1
         with:
           node-version: 20
           cache: 'npm'
@@ -34,7 +34,7 @@ jobs:
       - run: cd packages/core-web-generator && npm run test
       - run: cd packages/babel-plugin-core-web && npm run test
 
-      - uses: actions/setup-go@v4
+      - uses: actions/setup-go@v5
         with:
           go-version: 'stable'
       - run: go install ./scripts/...
