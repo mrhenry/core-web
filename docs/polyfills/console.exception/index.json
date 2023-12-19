@@ -43,6 +43,7 @@
         },
         "edge": {
           "version_added": "13",
+          "version_last": "18",
           "version_removed": "79"
         },
         "firefox": {
@@ -95,6 +96,7 @@
     },
     "edge": {
       "version_added": "13",
+      "version_last": "18",
       "version_removed": "79"
     },
     "firefox": {

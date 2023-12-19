@@ -44,11 +44,11 @@
       },
       "support": {
         "chrome": {
-          "notes": "Starting in Chrome 59, this method cannot send a <code>Blob</code> whose type is not CORS safelisted. This is a temporary change until a mitigation can be found for the security issues that this creates. For more information see <a href='https://crbug.com/720283'>Chrome bug 720283</a>.",
+          "notes": "Starting in Chrome 59, this method cannot send a <code>Blob</code> whose type is not CORS safelisted. This is a temporary change until a mitigation can be found for the security issues that this creates. For more information, see <a href='https://crbug.com/720283'>bug 720283</a>.",
           "version_added": "39"
         },
         "chrome_android": {
-          "notes": "Starting in Chrome 59, this method cannot send a <code>Blob</code> whose type is not CORS safelisted. This is a temporary change until a mitigation can be found for the security issues that this creates. For more information see <a href='https://crbug.com/720283'>Chrome bug 720283</a>.",
+          "notes": "Starting in Chrome 59, this method cannot send a <code>Blob</code> whose type is not CORS safelisted. This is a temporary change until a mitigation can be found for the security issues that this creates. For more information, see <a href='https://crbug.com/720283'>bug 720283</a>.",
           "version_added": "42"
         },
         "edge": {
@@ -64,16 +64,16 @@
           "version_added": false
         },
         "oculus": {
-          "notes": "Starting in Chrome 59, this method cannot send a <code>Blob</code> whose type is not CORS safelisted. This is a temporary change until a mitigation can be found for the security issues that this creates. For more information see <a href='https://crbug.com/720283'>Chrome bug 720283</a>.",
+          "notes": "Starting in Chrome 59, this method cannot send a <code>Blob</code> whose type is not CORS safelisted. This is a temporary change until a mitigation can be found for the security issues that this creates. For more information, see <a href='https://crbug.com/720283'>bug 720283</a>.",
           "version_added": "5.0"
         },
         "opera": {
-          "notes": "Starting in Opera 46, this method cannot send a <code>Blob</code> whose type is not CORS safelisted. This is a temporary change until a mitigation can be found for the security issues that this creates. For more information see <a href='https://crbug.com/720283'>Chrome bug 720283</a>.",
+          "notes": "Starting in Opera 46, this method cannot send a <code>Blob</code> whose type is not CORS safelisted. This is a temporary change until a mitigation can be found for the security issues that this creates. For more information, see <a href='https://crbug.com/720283'>bug 720283</a>.",
           "version_added": "26"
         },
         "opera_android": {
-          "notes": "Starting in Opera 46, this method cannot send a <code>Blob</code> whose type is not CORS safelisted. This is a temporary change until a mitigation can be found for the security issues that this creates. For more information see <a href='https://crbug.com/720283'>Chrome bug 720283</a>.",
-          "version_added": "26"
+          "notes": "Starting in Opera 43, this method cannot send a <code>Blob</code> whose type is not CORS safelisted. This is a temporary change until a mitigation can be found for the security issues that this creates. For more information, see <a href='https://crbug.com/720283'>bug 720283</a>.",
+          "version_added": "29"
         },
         "safari": {
           "version_added": "11.1"
@@ -82,11 +82,11 @@
           "version_added": "11.3"
         },
         "samsunginternet_android": {
-          "notes": "Starting in Samsung Internet 7.0, this method cannot send a <code>Blob</code> whose type is not CORS safelisted. This is a temporary change until a mitigation can be found for the security issues that this creates. For more information see <a href='https://crbug.com/720283'>Chrome bug 720283</a>.",
+          "notes": "Starting in Samsung Internet 7.0, this method cannot send a <code>Blob</code> whose type is not CORS safelisted. This is a temporary change until a mitigation can be found for the security issues that this creates. For more information, see <a href='https://crbug.com/720283'>bug 720283</a>.",
           "version_added": "4.0"
         },
         "webview_android": {
-          "notes": "Starting in Chrome 59, this method cannot send a <code>Blob</code> whose type is not CORS safelisted. This is a temporary change until a mitigation can be found for the security issues that this creates. For more information see <a href='https://crbug.com/720283'>Chrome bug 720283</a>.",
+          "notes": "Starting in Chrome 59, this method cannot send a <code>Blob</code> whose type is not CORS safelisted. This is a temporary change until a mitigation can be found for the security issues that this creates. For more information, see <a href='https://crbug.com/720283'>bug 720283</a>.",
           "version_added": "40"
         }
       }
@@ -104,11 +104,11 @@
   },
   "native": {
     "android": {
-      "notes": "Starting in Chrome 59, this method cannot send a <code>Blob</code> whose type is not CORS safelisted. This is a temporary change until a mitigation can be found for the security issues that this creates. For more information see <a href='https://crbug.com/720283'>Chrome bug 720283</a>.",
+      "notes": "Starting in Chrome 59, this method cannot send a <code>Blob</code> whose type is not CORS safelisted. This is a temporary change until a mitigation can be found for the security issues that this creates. For more information, see <a href='https://crbug.com/720283'>bug 720283</a>.",
       "version_added": "40"
     },
     "chrome": {
-      "notes": "Starting in Chrome 59, this method cannot send a <code>Blob</code> whose type is not CORS safelisted. This is a temporary change until a mitigation can be found for the security issues that this creates. For more information see <a href='https://crbug.com/720283'>Chrome bug 720283</a>.",
+      "notes": "Starting in Chrome 59, this method cannot send a <code>Blob</code> whose type is not CORS safelisted. This is a temporary change until a mitigation can be found for the security issues that this creates. For more information, see <a href='https://crbug.com/720283'>bug 720283</a>.",
       "version_added": "39"
     },
     "edge": {
@@ -121,7 +121,7 @@
       "version_added": false
     },
     "opera": {
-      "notes": "Starting in Opera 46, this method cannot send a <code>Blob</code> whose type is not CORS safelisted. This is a temporary change until a mitigation can be found for the security issues that this creates. For more information see <a href='https://crbug.com/720283'>Chrome bug 720283</a>.",
+      "notes": "Starting in Opera 46, this method cannot send a <code>Blob</code> whose type is not CORS safelisted. This is a temporary change until a mitigation can be found for the security issues that this creates. For more information, see <a href='https://crbug.com/720283'>bug 720283</a>.",
       "version_added": "26"
     },
     "safari": {

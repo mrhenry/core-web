@@ -47,6 +47,7 @@
           {
             "prefix": "webkit",
             "version_added": "21",
+            "version_last": "23",
             "version_removed": "24"
           }
         ],
@@ -125,6 +126,7 @@
       {
         "prefix": "webkit",
         "version_added": "21",
+        "version_last": "23",
         "version_removed": "24"
       }
     ],

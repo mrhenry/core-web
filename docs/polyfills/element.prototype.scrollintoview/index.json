@@ -59,6 +59,7 @@
             "notes": "The only parameter supported is <code>alignToTop</code>.",
             "partial_implementation": true,
             "version_added": "17",
+            "version_last": "18",
             "version_removed": "79"
           },
           {
@@ -68,6 +69,7 @@
             ],
             "partial_implementation": true,
             "version_added": "12",
+            "version_last": "16",
             "version_removed": "17"
           }
         ],
@@ -216,6 +218,7 @@
         "notes": "The only parameter supported is <code>alignToTop</code>.",
         "partial_implementation": true,
         "version_added": "17",
+        "version_last": "18",
         "version_removed": "79"
       },
       {
@@ -225,6 +228,7 @@
         ],
         "partial_implementation": true,
         "version_added": "12",
+        "version_last": "16",
         "version_removed": "17"
       }
     ],

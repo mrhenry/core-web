@@ -44,6 +44,7 @@
           },
           "edge": {
             "version_added": "15",
+            "version_last": "18",
             "version_removed": "79"
           },
           "firefox": {

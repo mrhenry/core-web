@@ -74,6 +74,7 @@
               "notes": "Available as a part of the <code>util</code> module.",
               "partial_implementation": true,
               "version_added": "8.3.0",
+              "version_last": "10.9.0",
               "version_removed": "11.0.0"
             }
           ],
@@ -140,6 +141,7 @@
             "notes": "Available as a part of the <code>util</code> module.",
             "partial_implementation": true,
             "version_added": "8.3.0",
+            "version_last": "10.9.0",
             "version_removed": "11.0.0"
           }
         ],

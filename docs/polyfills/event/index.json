@@ -66,6 +66,7 @@
               "notes": "Only available from the <code>events</code> module",
               "partial_implementation": true,
               "version_added": "14.5.0",
+              "version_last": "14.8.0",
               "version_removed": "15.0.0"
             }
           ],
@@ -243,6 +244,7 @@
               "notes": "Only supported for <a href='https://developer.mozilla.org/docs/Web/API/UIEvent'><code>UIEvent</code></a>, not all <code>Event</code> objects.",
               "partial_implementation": true,
               "version_added": "1",
+              "version_last": "52",
               "version_removed": "53"
             }
           ],
@@ -254,6 +256,7 @@
               "notes": "Only supported for <a href='https://developer.mozilla.org/docs/Web/API/UIEvent'><code>UIEvent</code></a>, not all <code>Event</code> objects.",
               "partial_implementation": true,
               "version_added": "4",
+              "version_last": "52",
               "version_removed": "53"
             }
           ],
@@ -435,6 +438,7 @@
             {
               "alternative_name": "deepPath",
               "version_added": "50",
+              "version_last": "52",
               "version_removed": "53"
             }
           ],
@@ -445,6 +449,7 @@
             {
               "alternative_name": "deepPath",
               "version_added": "50",
+              "version_last": "52",
               "version_removed": "53"
             }
           ],
@@ -477,6 +482,7 @@
             {
               "alternative_name": "deepPath",
               "version_added": "37",
+              "version_last": "39",
               "version_removed": "40"
             }
           ],
@@ -487,6 +493,7 @@
             {
               "alternative_name": "deepPath",
               "version_added": "37",
+              "version_last": "37",
               "version_removed": "41"
             }
           ],
@@ -503,6 +510,7 @@
             {
               "alternative_name": "deepPath",
               "version_added": "5.0",
+              "version_last": "5.4",
               "version_removed": "6.0"
             }
           ],
@@ -513,6 +521,7 @@
             {
               "alternative_name": "deepPath",
               "version_added": "50",
+              "version_last": "52",
               "version_removed": "53"
             }
           ]
@@ -559,6 +568,7 @@
               "notes": "On Internet Explorer 6 through 8, the event model is different. Event listeners are attached with the non-standard <a href='https://developer.mozilla.org/docs/Web/API/EventTarget/attachEvent'><code>EventTarget.attachEvent</code></a> method. In this model, there is no equivalent to <code>event.currentTarget</code> and <code>this</code> is the global object. One solution to emulate the <code>event.currentTarget</code> feature is to wrap your handler in a function calling the handler using <code>Function.prototype.call</code> with the element as a first argument. This way, <code>this</code> will be the expected value.",
               "partial_implementation": true,
               "version_added": "6",
+              "version_last": "8",
               "version_removed": "9"
             }
           ],
@@ -796,6 +806,7 @@
               "notes": "Before Firefox 17, a call to this method after the dispatching of the event raised an exception instead of doing nothing.",
               "partial_implementation": true,
               "version_added": "1",
+              "version_last": "16",
               "version_removed": "17"
             }
           ],
@@ -807,6 +818,7 @@
               "notes": "Before Firefox 17, a call to this method after the dispatching of the event raised an exception instead of doing nothing.",
               "partial_implementation": true,
               "version_added": "4",
+              "version_last": "16",
               "version_removed": "17"
             }
           ],
@@ -1054,6 +1066,7 @@
             },
             {
               "version_added": "63",
+              "version_last": "63",
               "version_removed": "64"
             }
           ],
@@ -1063,6 +1076,7 @@
             },
             {
               "version_added": "63",
+              "version_last": "63",
               "version_removed": "64"
             }
           ],

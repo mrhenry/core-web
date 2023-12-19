@@ -137,6 +137,7 @@
               "Must be imported using <code>require('buffer').Blob</code> or <code>import { Blob } from 'buffer'</code>."
             ],
             "version_added": "15.7.0",
+            "version_last": "17.5.0",
             "version_removed": "18.0.0"
           }
         ],
@@ -301,6 +302,7 @@
             {
               "prefix": "webkit",
               "version_added": "5",
+              "version_last": "24",
               "version_removed": "25"
             }
           ],
@@ -311,6 +313,7 @@
             {
               "prefix": "webkit",
               "version_added": "18",
+              "version_last": "18",
               "version_removed": "25"
             }
           ],
@@ -328,6 +331,7 @@
             {
               "prefix": "moz",
               "version_added": "5",
+              "version_last": "12",
               "version_removed": "13"
             }
           ],
@@ -339,6 +343,7 @@
             {
               "prefix": "moz",
               "version_added": "5",
+              "version_last": "10",
               "version_removed": "14"
             }
           ],
@@ -364,6 +369,7 @@
             {
               "prefix": "webkit",
               "version_added": "6",
+              "version_last": "6",
               "version_removed": "7"
             }
           ],
@@ -374,6 +380,7 @@
             {
               "prefix": "webkit",
               "version_added": "6",
+              "version_last": "6",
               "version_removed": "7"
             }
           ],
@@ -384,6 +391,7 @@
             {
               "prefix": "webkit",
               "version_added": "1.0",
+              "version_last": "1.0",
               "version_removed": "1.5"
             }
           ],

@@ -74,6 +74,7 @@
           {
             "alternative_name": "msMatchesSelector",
             "version_added": "12",
+            "version_last": "18",
             "version_removed": "79"
           }
         ],
@@ -132,6 +133,7 @@
           {
             "alternative_name": "oMatchesSelector",
             "version_added": "11.5",
+            "version_last": "12.1",
             "version_removed": "15"
           }
         ],
@@ -146,6 +148,7 @@
           {
             "alternative_name": "oMatchesSelector",
             "version_added": "11.5",
+            "version_last": "12.1",
             "version_removed": "14"
           }
         ],
@@ -228,6 +231,7 @@
       {
         "alternative_name": "msMatchesSelector",
         "version_added": "12",
+        "version_last": "18",
         "version_removed": "79"
       }
     ],
@@ -263,6 +267,7 @@
       {
         "alternative_name": "oMatchesSelector",
         "version_added": "11.5",
+        "version_last": "12.1",
         "version_removed": "15"
       }
     ],

@@ -58,6 +58,7 @@
           {
             "prefix": "ms",
             "version_added": "12",
+            "version_last": "18",
             "version_removed": "79"
           }
         ],
@@ -222,6 +223,7 @@
       {
         "prefix": "ms",
         "version_added": "12",
+        "version_last": "18",
         "version_removed": "79"
       }
     ],
