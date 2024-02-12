@@ -88,9 +88,9 @@
           }
         }
       },
-      "cors_support": {
+      "options_withCredentials_parameter": {
         "__compat": {
-          "description": "CORS support (<code>withCredentials</code>)",
+          "description": "<code>options.withCredentials</code> parameter",
           "source_file": "api/EventSource.json",
           "status": {
             "deprecated": false,
