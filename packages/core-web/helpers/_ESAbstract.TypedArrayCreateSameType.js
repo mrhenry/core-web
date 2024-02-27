@@ -27,7 +27,7 @@ function TypedArrayCreateSameType(exemplar, argumentList) { // eslint-disable-li
 		Float64Array: self.Float64Array
 	}[exemplar && exemplar.constructor && exemplar.constructor.name];
 
-	// Polyfill.io - the `ArrayBuffer` polyfill does not expose a proper `constructor.name`
+	// the `ArrayBuffer` polyfill does not expose a proper `constructor.name`
 	if (!constructor) {
 		var proto = Object.getPrototypeOf(Object(exemplar));
 		constructor = {

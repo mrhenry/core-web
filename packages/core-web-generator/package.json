@@ -17,7 +17,7 @@
 		"@webcomponents/shadycss": "^1.11.0",
 		"@webcomponents/shadydom": "^1.9.0",
 		"@webcomponents/template": "^1.5.0",
-		"polyfill-library": "^4.0.0"
+		"@mrhenry/polyfill-library": "^4.8.1"
 	},
 	"devDependencies": {
 		"@babel/parser": "*",

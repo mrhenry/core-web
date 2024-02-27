@@ -1,6 +1,6 @@
 (function(undefined) {
-if (!((function(n){if(!("Event"in n))return!1
-try{return new Event("click"),!0}catch(n){return!1}})(self)
+if (!((function(){if(!("Event"in self))return!1
+try{return new Event("click"),!0}catch(n){return!1}})()
 )) {
 // Event
 (function () {

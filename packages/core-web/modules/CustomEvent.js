@@ -1,5 +1,5 @@
 (function(undefined) {
-if (!("CustomEvent"in self&&("function"==typeof self.CustomEvent||self.CustomEvent.toString().indexOf("CustomEventConstructor")>-1)
+if (!("CustomEvent"in self&&("function"==typeof self.CustomEvent||-1<self.CustomEvent.toString().indexOf("CustomEventConstructor"))
 )) {
 // CustomEvent
 self.CustomEvent = function CustomEvent(type, eventInitDict) {

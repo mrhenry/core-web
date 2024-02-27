@@ -14,12 +14,12 @@ function IteratorClose(iteratorRecord, completion) { // eslint-disable-line no-u
 		throw new Error(Object.prototype.toString.call(iteratorRecord['[[Iterator]]']) + 'is not an Object.');
 	}
 	// 2. Assert: completion is a Completion Record.
-	// Polyfill.io - Ignoring this step as there is no way to check if something is a Completion Record in userland JavaScript.
+	// Ignoring this step as there is no way to check if something is a Completion Record in userland JavaScript.
 
 	// 3. Let iterator be iteratorRecord.[[Iterator]].
 	var iterator = iteratorRecord['[[Iterator]]'];
 	// 4. Let return be ? GetMethod(iterator, "return").
-	// Polyfill.io - We name it  returnMethod because return is a keyword and can not be used as an identifier (E.G. variable name, function name etc).
+	// We name it  returnMethod because return is a keyword and can not be used as an identifier (E.G. variable name, function name etc).
 	var returnMethod = GetMethod(iterator, "return");
 	// 5. If return is undefined, return Completion(completion).
 	if (returnMethod === undefined) {

@@ -1,9 +1,7 @@
 (function(undefined) {
 if (!((function(){if("document"in self&&"documentElement"in self.document&&"style"in self.document.documentElement&&"scrollBehavior"in document.documentElement.style)return!0
-if(Element.prototype.scrollTo&&Element.prototype.scrollTo.toString().indexOf("[native code]")>-1)return!1
-try{var e=!1,t={top:1,left:0}
-Object.defineProperty(t,"behavior",{get:function(){return e=!0,"smooth"},enumerable:!0})
-var o=document.createElement("DIV"),n=document.createElement("DIV")
+if(Element.prototype.scrollTo&&-1<Element.prototype.scrollTo.toString().indexOf("[native code]"))return!1
+try{var e=!1,t={top:1,left:0},o=(Object.defineProperty(t,"behavior",{get:function(){return e=!0,"smooth"},enumerable:!0}),document.createElement("DIV")),n=document.createElement("DIV")
 return o.setAttribute("style","height: 1px; overflow: scroll;"),n.setAttribute("style","height: 2px; overflow: scroll;"),o.appendChild(n),o.scrollTo(t),e}catch(e){return!1}})()
 )) {
 // smoothscroll

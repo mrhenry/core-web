@@ -1,5 +1,5 @@
 const html = require('../../html/html');
-const polyfillLibrary = require("polyfill-library");
+const polyfillLibrary = require("@mrhenry/polyfill-library");
 const { coreWebBrowsers } = require('../browsers');
 
 const polyfillNotes = {};
@@ -93,7 +93,7 @@ function polyfillTableNotes(feature) {
 		return '';
 	}
 
-	return html`<h3>polyfill-library notes : </h3>${notes}`;
+	return html`<h3>@mrhenry/polyfill-library notes : </h3>${notes}`;
 }
 
 module.exports = {

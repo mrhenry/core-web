@@ -32,7 +32,7 @@ function ArraySpeciesCreate(originalArray, length) { // eslint-disable-line no-u
 	// 5. Let C be ? Get(originalArray, "constructor").
 	var C = Get(originalArray, 'constructor');
 
-	// Polyfill.io - We skip this section as not sure how to make a cross-realm normal Array, a same-realm Array.
+	// We skip this section as not sure how to make a cross-realm normal Array, a same-realm Array.
 	// 6. If IsConstructor(C) is true, then
 	// if (IsConstructor(C)) {
 		// a. Let thisRealm be the current Realm Record.

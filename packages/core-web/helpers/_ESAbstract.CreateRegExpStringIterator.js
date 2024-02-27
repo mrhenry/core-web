@@ -1,4 +1,6 @@
 import AdvanceStringIndex from "@mrhenry/core-web/helpers/_ESAbstract.AdvanceStringIndex";
+import CodePointAt from "@mrhenry/core-web/helpers/_ESAbstract.CodePointAt";
+import UTF16SurrogatePairToCodePoint from "@mrhenry/core-web/helpers/_ESAbstract.UTF16SurrogatePairToCodePoint";
 import CreateIterResultObject from "@mrhenry/core-web/helpers/_ESAbstract.CreateIterResultObject";
 import Type from "@mrhenry/core-web/helpers/_ESAbstract.Type";
 import CreateDataProperty from "@mrhenry/core-web/helpers/_ESAbstract.CreateDataProperty";

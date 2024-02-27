@@ -41,7 +41,7 @@ module.exports = {
 		{
 			title: 'Avoid conflicting polyfills',
 			content: html`
-<p><a href="https://github.com/zloirock/core-js" target="_blank" rel="noopener"><strong>core-js</strong></a> and <a href="https://polyfill.io/v3/" target="_blank" rel="noopener"><strong>Polyfill.io</strong></a> have overlapping polyfills.
+<p><a href="https://github.com/zloirock/core-js" target="_blank" rel="noopener"><strong>core-js</strong></a> and <a href="https://github.com/mrhenry/polyfill-library" target="_blank" rel="noopener"><strong>@mrhenry/polyfill-library</strong></a> have overlapping polyfills.
 We make sure you only get a single polyfill for each feature.</p>
 `.trim()
 		}

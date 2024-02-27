@@ -68,7 +68,7 @@ if (!("requestIdleCallback"in self
 		port = messageChannel.port2;
 		messageChannel.port1.onmessage = processIdleCallbacks;
 	} else {
-		// TODO add `MessageChannel` polyfill to polyfill.io.
+		// TODO add `MessageChannel` polyfill.
 		// Otherwise fallback to document messaging. It is less efficient as
 		// all message event listeners within a project will be called each
 		// frame whilst idle callbacks remain.

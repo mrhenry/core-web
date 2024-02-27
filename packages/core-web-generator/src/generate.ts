@@ -1,6 +1,6 @@
 import * as fs from 'fs';
-import * as polyfillLibrary from "polyfill-library";
-import * as sources from "polyfill-library/lib/sources.js";
+import * as polyfillLibrary from "@mrhenry/polyfill-library";
+import * as sources from "@mrhenry/polyfill-library/lib/sources.js";
 import * as path from "path";
 
 const coreWebDir = path.resolve(__dirname, "../../core-web");

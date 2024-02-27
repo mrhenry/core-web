@@ -35,7 +35,7 @@
     "canvas": "*",
     "core-js": "*",
     "he": "*",
-    "polyfill-library": "*",
+    "@mrhenry/polyfill-library": "*",
     "postcss": "*",
     "postcss-preset-env": "*",
     "postcss-split-by-media": "*",

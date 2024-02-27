@@ -14,7 +14,7 @@ function OrdinaryCreateFromConstructor(constructor, intrinsicDefaultProto) { // 
 	var proto = GetPrototypeFromConstructor(constructor, intrinsicDefaultProto);
 
 	// 3. Return ObjectCreate(proto, internalSlotsList).
-	// Polyfill.io - We do not pass internalSlotsList to Object.create because Object.create does not use the default ordinary object definitions specified in 9.1.
+	// We do not pass internalSlotsList to Object.create because Object.create does not use the default ordinary object definitions specified in 9.1.
 	var obj = Object.create(proto);
 	for (var name in internalSlotsList) {
 		if (Object.prototype.hasOwnProperty.call(internalSlotsList, name)) {

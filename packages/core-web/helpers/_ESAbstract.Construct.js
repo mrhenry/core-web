@@ -29,11 +29,11 @@ function Construct(F /* [ , argumentsList [ , newTarget ]] */) { // eslint-disab
 	}
 
 	// 5. Return ? F.[[Construct]](argumentsList, newTarget).
-	// Polyfill.io - If newTarget is the same as F, it is equivalent to new F(...argumentsList).
+	// If newTarget is the same as F, it is equivalent to new F(...argumentsList).
 	if (newTarget === F) {
 		return new (Function.prototype.bind.apply(F, [null].concat(argumentsList)))();
 	} else {
-		// Polyfill.io - This is mimicking section 9.2.2 step 5.a.
+		// This is mimicking section 9.2.2 step 5.a.
 		var obj = OrdinaryCreateFromConstructor(newTarget, Object.prototype);
 		return Call(F, obj, argumentsList);
 	}

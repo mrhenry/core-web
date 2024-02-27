@@ -15,7 +15,7 @@ function SameValue(x, y) { // eslint-disable-line no-unused-vars
 		if (isNaN(x) && isNaN(y)) {
 			return true;
 		}
-		// Polyfill.io - 0 === -0 is true, but they are not the same value.
+		// 0 === -0 is true, but they are not the same value.
 		// b. If x is +0 and y is -0, return false.
 		// c. If x is -0 and y is +0, return false.
 		if (x === 0 && y === 0 && 1/x !== 1/y) {
