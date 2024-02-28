@@ -1,7 +1,6 @@
 (function(undefined) {
-if (!((function(){if(!document.documentElement.dataset)return!1
-var t=document.createElement("div")
-return t.setAttribute("data-a-b","c"),t.dataset&&"c"==t.dataset.aB})()
+if (!((function(){var t
+return!!document.documentElement.dataset&&((t=document.createElement("div")).setAttribute("data-a-b","c"),t.dataset)&&"c"==t.dataset.aB})()
 )) {
 // Element.prototype.dataset
 Object.defineProperty(Element.prototype, 'dataset', {

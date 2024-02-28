@@ -47,7 +47,7 @@ var AddEntriesFromIterable = (function() {
 				IteratorClose(iteratorRecord, error);
 				throw error;
 			}
-			// Polyfill.io fallback for non-array-like strings which exist in some ES3 user-agents
+			// fallback for non-array-like strings which exist in some ES3 user-agents
 			nextItem =
 				(Type(nextItem) === "string" || nextItem instanceof String) &&
 				toString.call(nextItem) == "[object String]"

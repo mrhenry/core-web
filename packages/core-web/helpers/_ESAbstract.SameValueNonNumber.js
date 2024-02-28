@@ -14,7 +14,7 @@ function SameValueNonNumber(x, y) { // eslint-disable-line no-unused-vars
 		// a. If x and y are both the same Symbol value, return true; otherwise, return false.
 	// 8. If x and y are the same Object value, return true. Otherwise, return false.
 
-	// Polyfill.io - We can skip all above steps because the === operator does it all for us.
+	// We can skip all above steps because the === operator does it all for us.
 	return x === y;
 }
 export default SameValueNonNumber;

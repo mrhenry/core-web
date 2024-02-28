@@ -1,4 +1,5 @@
 import IsInteger from "@mrhenry/core-web/helpers/_ESAbstract.IsInteger";
+import Type from "@mrhenry/core-web/helpers/_ESAbstract.Type";
 
 // _ESAbstract.IsValidIntegerIndex
 /* globals IsInteger */

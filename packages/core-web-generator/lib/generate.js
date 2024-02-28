@@ -1,8 +1,8 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 const fs = require("fs");
-const polyfillLibrary = require("polyfill-library");
-const sources = require("polyfill-library/lib/sources.js");
+const polyfillLibrary = require("@mrhenry/polyfill-library");
+const sources = require("@mrhenry/polyfill-library/lib/sources.js");
 const path = require("path");
 const coreWebDir = path.resolve(__dirname, "../../core-web");
 const modulesDir = path.resolve(__dirname, "../../core-web/modules");

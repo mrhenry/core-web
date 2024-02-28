@@ -8,7 +8,7 @@ const tableHTML = require('./templates/table');
 const pageHTML = require('./templates/page');
 const polyfillCardHTML = require('./templates/polyfill-card');
 const { browsersCoreWebToMDN, coreWebBrowsers } = require('./browsers');
-const polyfillLibrary = require('polyfill-library');
+const polyfillLibrary = require('@mrhenry/polyfill-library');
 const { polyfillCardOGImage, allPolyfillsCardOGImage } = require('./templates/polyfill-card-og-image');
 const allPolyfillsHTML = require('./templates/polyfills');
 

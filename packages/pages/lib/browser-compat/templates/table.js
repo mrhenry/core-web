@@ -17,7 +17,7 @@ module.exports = function tableHTML(feature) {
 				<tr>${headRowHTML(compat)}</tr>
 			</thead>
 			<tbody>
-				<tr><td><span title="${compat.polyfillName}">${ compat.coreWeb.providedByCoreWeb ? 'core-web' : 'polyfill-library' }</span></td>${polyfillRowHTML(compat)}</tr>
+				<tr><td><span title="${compat.polyfillName}">${compat.coreWeb.providedByCoreWeb ? 'core-web' : '@mrhenry/polyfill-library' }</span></td>${polyfillRowHTML(compat)}</tr>
 				<tr><td><span title="${compat.name}">native</span></td>${nativeRowHTML(compat)}</tr>
 			</tbody>
 		</table>
@@ -32,7 +32,7 @@ module.exports = function tableHTML(feature) {
 				<tr><th></th>${engines.map((engine) => { return html`<th>${engine}</th>` }).join('')}</tr>
 			</thead>
 			<tbody>
-				<tr><td>${ compat.coreWeb.providedByCoreWeb ? 'core-web' : 'polyfill-library' }</td>${engines.map((engine) => { return html`<td>${(!!compat.coreWeb.engines[engine]) ? compat.coreWeb.engines[engine] : '-'}</td>` }).join('')}</tr>
+				<tr><td>${ compat.coreWeb.providedByCoreWeb ? 'core-web' : '@mrhenry/polyfill-library' }</td>${engines.map((engine) => { return html`<td>${(!!compat.coreWeb.engines[engine]) ? compat.coreWeb.engines[engine] : '-'}</td>` }).join('')}</tr>
 				<tr><td>native</td>${engines.map((engine) => { return html`<td>${(!!engineMappingNative[engine]) ? engineMappingNative[engine] : '-'}</td>` }).join('')}</tr>
 			</tbody>
 		</table>

@@ -10,7 +10,7 @@ function IsArray(argument) { // eslint-disable-line no-unused-vars
 		// c. Return ? IsArray(target).
 	// 4. Return false.
 
-	// Polyfill.io - We can skip all the above steps and check the string returned from Object.prototype.toString().
+	// We can skip all the above steps and check the string returned from Object.prototype.toString().
 	return Object.prototype.toString.call(argument) === '[object Array]';
 }
 export default IsArray;
