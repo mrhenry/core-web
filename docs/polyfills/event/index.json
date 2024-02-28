@@ -20,7 +20,7 @@
       "Presto": "2.2 - 2.9",
       "WebKit": "530.17 - 537.71"
     },
-    "size": 2951,
+    "size": 2928,
     "isAlias": false,
     "providedByCoreWeb": false
   },
@@ -1534,11 +1534,11 @@
       "safari": "4.0 - 7.0",
       "ios_saf": "3.2 - 7.0"
     },
-    "detectSource": "(function(n){if(!(\"Event\"in n))return!1\ntry{return new Event(\"click\"),!0}catch(n){return!1}})(self)\n",
+    "detectSource": "(function(){if(!(\"Event\"in self))return!1\ntry{return new Event(\"click\"),!0}catch(n){return!1}})()\n",
     "baseDir": "Event",
     "hasTests": true,
     "isTestable": true,
     "isPublic": true,
-    "size": 2951
+    "size": 2928
   }
 }

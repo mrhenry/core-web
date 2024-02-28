@@ -379,7 +379,7 @@
       "safari": "4.0 - 7.0",
       "ios_saf": "3.2 - 7.0"
     },
-    "detectSource": "\"CustomEvent\"in self&&(\"function\"==typeof self.CustomEvent||self.CustomEvent.toString().indexOf(\"CustomEventConstructor\")>-1)\n",
+    "detectSource": "\"CustomEvent\"in self&&(\"function\"==typeof self.CustomEvent||-1<self.CustomEvent.toString().indexOf(\"CustomEventConstructor\"))\n",
     "baseDir": "CustomEvent",
     "hasTests": true,
     "isTestable": true,

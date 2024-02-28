@@ -20,7 +20,7 @@
       "Trident": ">= 4.0",
       "WebKit": "85 - 534.48"
     },
-    "size": 1221,
+    "size": 1150,
     "isAlias": false,
     "providedByCoreWeb": false
   },
@@ -1244,6 +1244,6 @@
     "hasTests": false,
     "isTestable": true,
     "isPublic": true,
-    "size": 1221
+    "size": 1150
   }
 }

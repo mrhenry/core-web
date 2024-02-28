@@ -29,7 +29,7 @@
       "Presto": ">= 1",
       "WebKit": "85 - 606.1.36"
     },
-    "size": 9583,
+    "size": 9338,
     "isAlias": false,
     "providedByCoreWeb": false
   },
@@ -580,7 +580,6 @@
     ],
     "license": "MIT",
     "spec": "https://fetch.spec.whatwg.org/",
-    "repo": "https://github.com/github/fetch",
     "notes": [
       "Makes use of FormData, FileReader and Blob if they exist. Readable streams not supported. CORS (Cross Origin Resource Sharing) requests do not work in IE 9 or lower."
     ],
@@ -601,15 +600,11 @@
       "ios_saf": "<12.2",
       "samsung_mob": "<9.0"
     },
-    "install": {
-      "module": "whatwg-fetch",
-      "postinstall": "update.task.js"
-    },
     "detectSource": "\"fetch\"in self&&\"Request\"in self&&function(){try{return\"signal\"in new Request(\"\")}catch(e){return!1}}()\n",
     "baseDir": "fetch",
     "hasTests": true,
     "isTestable": true,
     "isPublic": true,
-    "size": 9583
+    "size": 9338
   }
 }

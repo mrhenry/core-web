@@ -25,7 +25,7 @@
       "Presto": ">= 2.9",
       "WebKit": "85 - 533.17"
     },
-    "size": 1144,
+    "size": 1132,
     "isAlias": false,
     "providedByCoreWeb": false
   },
@@ -143,6 +143,6 @@
     "hasTests": true,
     "isTestable": true,
     "isPublic": true,
-    "size": 1144
+    "size": 1132
   }
 }
