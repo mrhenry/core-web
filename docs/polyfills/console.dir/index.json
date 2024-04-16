@@ -77,6 +77,180 @@
           "version_added": "≤37"
         }
       }
+    },
+    "options_colors_parameter": {
+      "__compat": {
+        "description": "<code>options.colors</code> parameter",
+        "source_file": "api/_globals/console.json",
+        "status": {
+          "deprecated": false,
+          "experimental": true,
+          "standard_track": false
+        },
+        "support": {
+          "chrome": {
+            "version_added": false
+          },
+          "chrome_android": {
+            "version_added": false
+          },
+          "deno": {
+            "version_added": false
+          },
+          "edge": {
+            "version_added": false
+          },
+          "firefox": {
+            "version_added": false
+          },
+          "firefox_android": {
+            "version_added": false
+          },
+          "ie": {
+            "version_added": false
+          },
+          "nodejs": {
+            "version_added": "0.12.0"
+          },
+          "oculus": {
+            "version_added": false
+          },
+          "opera": {
+            "version_added": false
+          },
+          "opera_android": {
+            "version_added": false
+          },
+          "safari": {
+            "version_added": false
+          },
+          "safari_ios": {
+            "version_added": false
+          },
+          "samsunginternet_android": {
+            "version_added": false
+          },
+          "webview_android": {
+            "version_added": false
+          }
+        }
+      }
+    },
+    "options_depth_parameter": {
+      "__compat": {
+        "description": "<code>options.depth</code> parameter",
+        "source_file": "api/_globals/console.json",
+        "status": {
+          "deprecated": false,
+          "experimental": true,
+          "standard_track": false
+        },
+        "support": {
+          "chrome": {
+            "version_added": false
+          },
+          "chrome_android": {
+            "version_added": false
+          },
+          "deno": {
+            "version_added": "1.0"
+          },
+          "edge": {
+            "version_added": false
+          },
+          "firefox": {
+            "version_added": false
+          },
+          "firefox_android": {
+            "version_added": false
+          },
+          "ie": {
+            "version_added": false
+          },
+          "nodejs": {
+            "version_added": "0.12.0"
+          },
+          "oculus": {
+            "version_added": false
+          },
+          "opera": {
+            "version_added": false
+          },
+          "opera_android": {
+            "version_added": false
+          },
+          "safari": {
+            "version_added": false
+          },
+          "safari_ios": {
+            "version_added": false
+          },
+          "samsunginternet_android": {
+            "version_added": false
+          },
+          "webview_android": {
+            "version_added": false
+          }
+        }
+      }
+    },
+    "options_showHidden_parameter": {
+      "__compat": {
+        "description": "<code>options.showHidden</code> parameter",
+        "source_file": "api/_globals/console.json",
+        "status": {
+          "deprecated": false,
+          "experimental": true,
+          "standard_track": false
+        },
+        "support": {
+          "chrome": {
+            "version_added": false
+          },
+          "chrome_android": {
+            "version_added": false
+          },
+          "deno": {
+            "version_added": "1.8"
+          },
+          "edge": {
+            "version_added": false
+          },
+          "firefox": {
+            "version_added": false
+          },
+          "firefox_android": {
+            "version_added": false
+          },
+          "ie": {
+            "version_added": false
+          },
+          "nodejs": {
+            "version_added": "0.12.0"
+          },
+          "oculus": {
+            "version_added": false
+          },
+          "opera": {
+            "version_added": false
+          },
+          "opera_android": {
+            "version_added": false
+          },
+          "safari": {
+            "version_added": false
+          },
+          "safari_ios": {
+            "version_added": false
+          },
+          "samsunginternet_android": {
+            "version_added": false
+          },
+          "webview_android": {
+            "version_added": false
+          }
+        }
+      }
     }
   },
   "polyfilled": {

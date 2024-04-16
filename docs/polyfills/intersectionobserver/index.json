@@ -90,7 +90,10 @@
           "webview_android": {
             "version_added": "51"
           }
-        }
+        },
+        "tags": [
+          "web-features:intersection-observer"
+        ]
       },
       "options_root_parameter_Document": {
         "__compat": {
@@ -194,7 +197,10 @@
         "webview_android": {
           "version_added": "51"
         }
-      }
+      },
+      "tags": [
+        "web-features:intersection-observer"
+      ]
     },
     "disconnect": {
       "__compat": {
@@ -247,7 +253,10 @@
           "webview_android": {
             "version_added": "51"
           }
-        }
+        },
+        "tags": [
+          "web-features:intersection-observer"
+        ]
       }
     },
     "observe": {
@@ -300,7 +309,10 @@
           "webview_android": {
             "version_added": "51"
           }
-        }
+        },
+        "tags": [
+          "web-features:intersection-observer"
+        ]
       }
     },
     "root": {
@@ -353,7 +365,10 @@
           "webview_android": {
             "version_added": "51"
           }
-        }
+        },
+        "tags": [
+          "web-features:intersection-observer"
+        ]
       }
     },
     "rootMargin": {
@@ -408,7 +423,10 @@
           "webview_android": {
             "version_added": "51"
           }
-        }
+        },
+        "tags": [
+          "web-features:intersection-observer"
+        ]
       }
     },
     "scrollMargin": {
@@ -513,7 +531,10 @@
           "webview_android": {
             "version_added": "51"
           }
-        }
+        },
+        "tags": [
+          "web-features:intersection-observer"
+        ]
       }
     },
     "thresholds": {
@@ -566,7 +587,10 @@
           "webview_android": {
             "version_added": "52"
           }
-        }
+        },
+        "tags": [
+          "web-features:intersection-observer"
+        ]
       }
     },
     "unobserve": {
@@ -620,7 +644,10 @@
           "webview_android": {
             "version_added": "51"
           }
-        }
+        },
+        "tags": [
+          "web-features:intersection-observer"
+        ]
       }
     }
   },

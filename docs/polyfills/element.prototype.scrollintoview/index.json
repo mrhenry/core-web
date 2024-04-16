@@ -118,7 +118,7 @@
         }
       },
       "tags": [
-        "web-features:scrollintoview"
+        "web-features:scroll-into-view"
       ]
     },
     "options_parameter": {
@@ -188,7 +188,7 @@
           }
         },
         "tags": [
-          "web-features:scrollintoview"
+          "web-features:scroll-into-view"
         ]
       }
     }

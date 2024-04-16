@@ -129,7 +129,10 @@
         "webview_android": {
           "version_added": "51"
         }
-      }
+      },
+      "tags": [
+        "web-features:intersection-observer"
+      ]
     },
     "boundingClientRect": {
       "__compat": {
@@ -181,7 +184,10 @@
           "webview_android": {
             "version_added": "51"
           }
-        }
+        },
+        "tags": [
+          "web-features:intersection-observer"
+        ]
       }
     },
     "intersectionRatio": {
@@ -234,7 +240,10 @@
           "webview_android": {
             "version_added": "51"
           }
-        }
+        },
+        "tags": [
+          "web-features:intersection-observer"
+        ]
       }
     },
     "intersectionRect": {
@@ -287,7 +296,10 @@
           "webview_android": {
             "version_added": "51"
           }
-        }
+        },
+        "tags": [
+          "web-features:intersection-observer"
+        ]
       }
     },
     "isIntersecting": {
@@ -340,7 +352,10 @@
           "webview_android": {
             "version_added": "58"
           }
-        }
+        },
+        "tags": [
+          "web-features:intersection-observer"
+        ]
       }
     },
     "rootBounds": {
@@ -393,7 +408,10 @@
           "webview_android": {
             "version_added": "51"
           }
-        }
+        },
+        "tags": [
+          "web-features:intersection-observer"
+        ]
       }
     },
     "target": {
@@ -446,7 +464,10 @@
           "webview_android": {
             "version_added": "51"
           }
-        }
+        },
+        "tags": [
+          "web-features:intersection-observer"
+        ]
       }
     },
     "time": {
@@ -499,7 +520,10 @@
           "webview_android": {
             "version_added": "51"
           }
-        }
+        },
+        "tags": [
+          "web-features:intersection-observer"
+        ]
       }
     }
   },
