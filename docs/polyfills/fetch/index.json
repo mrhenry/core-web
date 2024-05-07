@@ -248,7 +248,7 @@
             "version_added": false
           },
           "samsunginternet_android": {
-            "version_added": false
+            "version_added": "24.0"
           },
           "webview_android": {
             "version_added": "117"
