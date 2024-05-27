@@ -25,7 +25,6 @@ if (!("isConnected"in document
 	if ('HTMLElement' in self && 'isConnected' in HTMLElement.prototype) {
 		try {
 			delete HTMLElement.prototype.isConnected;
-			// eslint-disable-next-line no-empty
 		} catch (e) {}
 	}
 

@@ -143,6 +143,12 @@ async function generateMappings(featureMapping) {
             matchCandidates.push("$_instance.addEventListener('focusout', $1)");
             matchCandidates.push("$_instance.addEventListener('focusout', $1, $2)");
         }
+        else if (feature.name === "Event.scrollend") {
+            matchCandidates.push("addEventListener('scrollend', $1)");
+            matchCandidates.push("addEventListener('scrollend', $1, $2)");
+            matchCandidates.push("$_instance.addEventListener('scrollend', $1)");
+            matchCandidates.push("$_instance.addEventListener('scrollend', $1, $2)");
+        }
         else if (feature.name === "Navigator.prototype.geolocation") {
             // Is an alias for `navigator.geolocation` which is a better matcher candidate.
         }

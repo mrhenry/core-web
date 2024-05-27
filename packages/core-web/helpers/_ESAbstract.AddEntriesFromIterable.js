@@ -12,9 +12,10 @@ import ToBoolean from "@mrhenry/core-web/helpers/_ESAbstract.ToBoolean";
 import Get from "@mrhenry/core-web/helpers/_ESAbstract.Get";
 import IteratorValue from "@mrhenry/core-web/helpers/_ESAbstract.IteratorValue";
 import IteratorClose from "@mrhenry/core-web/helpers/_ESAbstract.IteratorClose";
+import ThrowCompletion from "@mrhenry/core-web/helpers/_ESAbstract.ThrowCompletion";
 
 // _ESAbstract.AddEntriesFromIterable
-/* global IsCallable, GetIterator, IteratorStep, IteratorValue, IteratorClose, Get, Call, Type */
+/* global IsCallable, GetIterator, IteratorStep, IteratorValue, IteratorClose, Get, Call, ThrowCompletion, Type */
 // eslint-disable-next-line no-unused-vars
 var AddEntriesFromIterable = (function() {
 	var toString = {}.toString;
@@ -29,7 +30,7 @@ var AddEntriesFromIterable = (function() {
 		// 3. Let iteratorRecord be ? GetIterator(iterable).
 		var iteratorRecord = GetIterator(iterable);
 		// 4. Repeat,
-		// eslint-disable-next-line no-constant-condition
+		 
 		while (true) {
 			// a. Let next be ? IteratorStep(iteratorRecord).
 			var next = IteratorStep(iteratorRecord);
@@ -42,10 +43,9 @@ var AddEntriesFromIterable = (function() {
 			// d. If Type(nextItem) is not Object, then
 			if (Type(nextItem) !== "object") {
 				// i. Let error be ThrowCompletion(a newly created TypeError object).
-				var error = new TypeError("nextItem is not an object");
+				var error = ThrowCompletion(new TypeError("nextItem is not an object"));
 				// ii. Return ? IteratorClose(iteratorRecord, error).
-				IteratorClose(iteratorRecord, error);
-				throw error;
+				return IteratorClose(iteratorRecord, error);
 			}
 			// fallback for non-array-like strings which exist in some ES3 user-agents
 			nextItem =
@@ -57,27 +57,24 @@ var AddEntriesFromIterable = (function() {
 			try {
 				// e. Let k be Get(nextItem, "0").
 				k = Get(nextItem, "0");
-				// eslint-disable-next-line no-catch-shadow
-			} catch (k) {
+			} catch (e1) {
 				// f. If k is an abrupt completion, return ? IteratorClose(iteratorRecord, k).
-				return IteratorClose(iteratorRecord, k);
+				return IteratorClose(iteratorRecord, ThrowCompletion(e1));
 			}
 			var v;
 			try {
 				// g. Let v be Get(nextItem, "1").
 				v = Get(nextItem, "1");
-				// eslint-disable-next-line no-catch-shadow
-			} catch (v) {
+			} catch (e2) {
 				// h. If v is an abrupt completion, return ? IteratorClose(iteratorRecord, v).
-				return IteratorClose(iteratorRecord, v);
+				return IteratorClose(iteratorRecord, ThrowCompletion(e2));
 			}
 			try {
 				// i. Let status be Call(adder, target, « k.[[Value]], v.[[Value]] »).
 				Call(adder, target, [k, v]);
-				// eslint-disable-next-line no-catch-shadow
-			} catch (status) {
+			} catch (e3) {
 				// j. If status is an abrupt completion, return ? IteratorClose(iteratorRecord, status).
-				return IteratorClose(iteratorRecord, status);
+				return IteratorClose(iteratorRecord, ThrowCompletion(e3));
 			}
 		}
 	};
