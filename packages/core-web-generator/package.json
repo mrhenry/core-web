@@ -13,7 +13,7 @@
 	},
 	"dependencies": {
 		"@mdn/browser-compat-data": "^5.5.29",
-		"@mrhenry/polyfill-library": "^5.0.0",
+		"@mrhenry/polyfill-library": "^5.1.0",
 		"@webcomponents/custom-elements": "^1.5.0",
 		"@webcomponents/shadycss": "^1.11.0",
 		"@webcomponents/shadydom": "^1.9.0",
