@@ -1,8 +1,5 @@
 {
   "name": "@mrhenry/core-web-root",
-  "engines": {
-    "node": ">=16"
-  },
   "private": true,
   "workspaces": [
     "packages/*"
@@ -10,9 +7,7 @@
   "prettier": {
     "useTabs": true
   },
-  "version": "1.2.2",
   "volta": {
-    "node": "20.2.0",
-    "npm": "9.6.7"
+    "node": "22.2.0"
   }
 }
