@@ -129,39 +129,108 @@ function handleFeature(compat, name, feature) {
 		return;
 	}
 
+	if (name === 'Element.prototype.inert') {
+		// skip, deprecated
+		return true;
+	}
+
+	if (name === 'Event.scrollend') {
+		if (mapPropertyFeatureAPI(compat, `Element.scrollend_event`, feature.name, feature)) {
+			return true;
+		}
+	}
+
+	if (name === 'Event.focusin') {
+		if (mapPropertyFeatureAPI(compat, `Element.focusin_event`, feature.name, feature)) {
+			return true;
+		}
+	}
+
+	if (name === 'Event.hashchange') {
+		if (mapPropertyFeatureAPI(compat, `Window.hashchange_event`, feature.name, feature)) {
+			return true;
+		}
+	}
+
+	if (name === 'MediaQueryList.prototype.addEventListener') {
+		if (mapPropertyFeatureAPI(compat, `MediaQueryList.EventTarget_inheritance`, feature.name, feature)) {
+			return true;
+		}
+	} else if (name === 'MediaQueryList.prototype.removeEventListener') {
+		// skip, already handled
+		return true;
+	}
+
 	if (name === '~custom-elements') {
-		mapPropertyFeatureAPI(compat, 'Window.customElements', feature.name, feature);
-	} else if (name.includes('.prototype.')) {
-		mapPrototypeFeatureAPI(compat, name, feature.name, feature) || mapPrototypeFeatureBuiltin(compat, name, feature.name, feature);
-	} else if (name.includes('.') && !(name.startsWith('Window.') || name.startsWith('window.')) && !(name.startsWith('Self.') || name.startsWith('self.'))) {
-		mapStaticPropertyFeatureAPI(compat, name, feature.name, feature) || mapPropertyFeatureAPI(compat, name, feature.name, feature) || mapPropertyFeatureBuiltin(compat, name, feature.name, feature) ||
-			mapPropertyFeatureAPI(compat, toTitleCase(name), feature.name, feature) || mapPropertyFeatureBuiltin(compat, toTitleCase(name), feature.name, feature);
-	} else if (bcd.api[name]) {
-		mapMainFeatureAPI(compat, name, feature.name, feature);
-	} else if (bcd.javascript.builtins[name]) {
-		mapMainFeatureBuiltin(compat, name, feature.name, feature);
-	} else if (bcd.api.Window[name]) {
-		mapWindowFeatureAPI(compat, name, feature.name, feature)
-	} else if (bcd.api.WorkerGlobalScope[name]) {
-		mapWorkerGlobalScopeFeatureAPI(compat, name, feature.name, feature)
-	} else {
-		if (name.startsWith('Window.') || name.startsWith('window.')) {
-			handleFeature(compat, name.substr(7), feature);
-			return;
+		if (mapPropertyFeatureAPI(compat, 'Window.customElements', feature.name, feature)) {
+			return true;
 		}
-
-		if (name === '~element-qsa-has') {
-			mapQuerySelectorFeature(compat, `querySelector with :has pseudo class`, feature.name, feature);
-			return;
+	}
+	
+	if (name.includes('.prototype.')) {
+		if (
+			mapPrototypeFeatureAPI(compat, name, feature.name, feature) ||
+			mapPrototypeFeatureBuiltin(compat, name, feature.name, feature)
+		) {
+			return true;
 		}
-
-		if (name === '~element-qsa-scope') {
-			mapQuerySelectorFeature(compat, `querySelector with :scope pseudo class`, feature.name, feature);
-			return;
+	}
+	
+	if (name.includes('.') && !(name.startsWith('Window.') || name.startsWith('window.')) && !(name.startsWith('Self.') || name.startsWith('self.'))) {
+		if (
+			mapStaticPropertyFeatureAPI(compat, name, feature.name, feature) ||
+			mapPropertyFeatureAPI(compat, name, feature.name, feature) ||
+			mapPropertyFeatureBuiltin(compat, name, feature.name, feature) ||
+			mapPropertyFeatureAPI(compat, toTitleCase(name), feature.name, feature) ||
+			mapPropertyFeatureBuiltin(compat, toTitleCase(name), feature.name, feature)
+		) {
+			return true;
 		}
+	}
+	
+	if (bcd.api[name]) {
+		if (mapMainFeatureAPI(compat, name, feature.name, feature)) {
+			return true;
+		}
+	}
+	
+	if (bcd.javascript.builtins[name]) {
+		if (mapMainFeatureBuiltin(compat, name, feature.name, feature)) {
+			return true;
+		}
+	}
+	
+	if (bcd.api.Window[name]) {
+		if (mapWindowFeatureAPI(compat, name, feature.name, feature)) {
+			return true;
+		}
+	}
+	
+	if (bcd.api.WorkerGlobalScope[name]) {
+		if (mapWorkerGlobalScopeFeatureAPI(compat, name, feature.name, feature)) {
+			return true;
+		}
+	}
 
-		console.log('skipped', feature.name);
-	}	
+	if (name.startsWith('Window.') || name.startsWith('window.')) {
+		if (handleFeature(compat, name.substr(7), feature)) {
+			return true;
+		}
+	}
+
+	if (name === '~element-qsa-has') {
+		if (mapQuerySelectorFeature(compat, `querySelector with :has pseudo class`, feature.name, feature)) {
+			return true;
+		}
+	}
+
+	if (name === '~element-qsa-scope') {
+		if (mapQuerySelectorFeature(compat, `querySelector with :scope pseudo class`, feature.name, feature)) {
+			return true;
+		}
+	}
+
+	console.log('skipped', feature.name);
 }
 
 function mapWindowFeatureAPI(compat, featureName, polyfillName, feature) {
