@@ -1,0 +1,170 @@
+{
+  "name": "Window.hashchange_event",
+  "slug": "Window.hashchange_event",
+  "polyfillName": "Event.hashchange",
+  "coreWeb": {
+    "name": "Event.hashchange",
+    "deps": [
+      "Event"
+    ],
+    "browsers": {
+      "chrome": "<55",
+      "firefox": "<51",
+      "firefox_mob": "<51",
+      "ie": "6 - 7",
+      "opera": "<42",
+      "op_mob": "<42",
+      "safari": "<5.0",
+      "ios_saf": "<10.0",
+      "samsung_mob": "<5.0"
+    },
+    "engines": {
+      "Blink": "28 - 54",
+      "Gecko": "1.7 - 50",
+      "Presto": ">= 1",
+      "WebKit": "85 - 601.5.17"
+    },
+    "size": 186,
+    "isAlias": false,
+    "providedByCoreWeb": false
+  },
+  "mdn": {
+    "__compat": {
+      "description": "<code>hashchange</code> event",
+      "mdn_url": "https://developer.mozilla.org/docs/Web/API/Window/hashchange_event",
+      "source_file": "api/Window.json",
+      "spec_url": [
+        "https://html.spec.whatwg.org/multipage/indices.html#event-hashchange",
+        "https://html.spec.whatwg.org/multipage/webappapis.html#handler-window-onhashchange"
+      ],
+      "status": {
+        "deprecated": false,
+        "experimental": false,
+        "standard_track": true
+      },
+      "support": {
+        "chrome": [
+          {
+            "version_added": "8"
+          },
+          {
+            "notes": "A regular <code>Event</code> object is fired, rather than a <code>HashChangeEvent</code> object.",
+            "version_added": "4",
+            "version_last": "7",
+            "version_removed": "8"
+          }
+        ],
+        "chrome_android": {
+          "version_added": "18"
+        },
+        "edge": {
+          "version_added": "12"
+        },
+        "firefox": {
+          "version_added": "3.6"
+        },
+        "firefox_android": {
+          "version_added": "4"
+        },
+        "ie": {
+          "version_added": "8"
+        },
+        "oculus": {
+          "version_added": "5.0"
+        },
+        "opera": {
+          "version_added": "10.6"
+        },
+        "opera_android": {
+          "version_added": "11"
+        },
+        "safari": {
+          "version_added": "5"
+        },
+        "safari_ios": {
+          "version_added": "5"
+        },
+        "samsunginternet_android": {
+          "version_added": "1.0"
+        },
+        "webview_android": {
+          "version_added": "≤37"
+        }
+      }
+    }
+  },
+  "polyfilled": {
+    "chrome": "<55",
+    "firefox": "<51",
+    "ie": "6 - 7",
+    "opera": "<42",
+    "safari": "<5.0",
+    "ios_saf": "<10.0"
+  },
+  "native": {
+    "android": {
+      "version_added": "≤37"
+    },
+    "chrome": [
+      {
+        "version_added": "8"
+      },
+      {
+        "notes": "A regular <code>Event</code> object is fired, rather than a <code>HashChangeEvent</code> object.",
+        "version_added": "4",
+        "version_last": "7",
+        "version_removed": "8"
+      }
+    ],
+    "edge": {
+      "version_added": "12"
+    },
+    "firefox": {
+      "version_added": "3.6"
+    },
+    "ie": {
+      "version_added": "8"
+    },
+    "opera": {
+      "version_added": "10.6"
+    },
+    "safari": {
+      "version_added": "5"
+    },
+    "ios_saf": {
+      "version_added": "5"
+    }
+  },
+  "polyfillio": {
+    "aliases": [
+      "caniuse:hashchange",
+      "modernizr:hashchange",
+      "default-3.3",
+      "default-3.4",
+      "default-3.5",
+      "default-3.6",
+      "default"
+    ],
+    "dependencies": [
+      "Event"
+    ],
+    "docs": "https://developer.mozilla.org/en-US/docs/Web/Events/hashchange",
+    "browsers": {
+      "chrome": "<55",
+      "firefox": "<51",
+      "firefox_mob": "<51",
+      "ie": "6 - 7",
+      "opera": "<42",
+      "op_mob": "<42",
+      "safari": "<5.0",
+      "ios_saf": "<10.0",
+      "samsung_mob": "<5.0"
+    },
+    "detectSource": "\"onhashchange\"in self&&(null==self.onhashchange||\"function\"==typeof self.onhashchange)\n",
+    "baseDir": "Event/hashchange",
+    "hasTests": true,
+    "isTestable": true,
+    "isPublic": true,
+    "size": 186
+  }
+}
