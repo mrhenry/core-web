@@ -4,28 +4,28 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-	<title>Screen.​orientation | core-web</title>
-	<meta name="description" content="Polyfill for Screen.orientation">
+	<title>window.​scrollTo | core-web</title>
+	<meta name="description" content="Polyfill for window.scrollTo">
 	<meta name="author" content="Mr. Henry">
 	<meta name="publisher" content="Mr. Henry">
 	<meta name="copyright" content="Mr. Henry">
 	<meta name="robots" content="index,follow">
 	<meta name="distribution" content="Global">
 	<meta property="og:type" content="website">
-	<meta property="og:title" content="Screen.​orientation | core-web">
-	<meta property="og:url" content="https://core-web.mrhenry.studio/polyfills/screen.orientation/">
+	<meta property="og:title" content="window.​scrollTo | core-web">
+	<meta property="og:url" content="https://core-web.mrhenry.studio/polyfills/element.prototype.scrollintoview/">
 	<meta property="og:image:width" content="1200">
 	<meta property="og:image:height" content="628">
-	<meta property="og:image" content="https://core-web.mrhenry.studio/polyfills/screen.orientation/og-image.jpg">
-	<meta property="og:image:alt" content="core-web : Screen.orientation">
+	<meta property="og:image" content="https://core-web.mrhenry.studio/polyfills/element.prototype.scrollintoview/og-image.jpg">
+	<meta property="og:image:alt" content="core-web : window.scrollTo">
 	<meta property="og:site_name" content="core-web">
-	<meta property="og:description" content="Polyfill for Screen.orientation">
+	<meta property="og:description" content="Polyfill for window.scrollTo">
 	<meta name="twitter:card" content="summary_large_image">
 	<meta name="twitter:site" content="@wearemrhenry">
-	<meta name="twitter:title" content="Screen.​orientation | core-web">
-	<meta name="twitter:description" content="Polyfill for Screen.orientation">
-	<meta name="twitter:image" content="https://core-web.mrhenry.studio/polyfills/screen.orientation/og-image.jpg">
-	<meta name="twitter:image:alt" content="core-web : Screen.orientation">
+	<meta name="twitter:title" content="window.​scrollTo | core-web">
+	<meta name="twitter:description" content="Polyfill for window.scrollTo">
+	<meta name="twitter:image" content="https://core-web.mrhenry.studio/polyfills/element.prototype.scrollintoview/og-image.jpg">
+	<meta name="twitter:image:alt" content="core-web : window.scrollTo">
 
 	<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🕸</text></svg>">
 	<meta name="ua-targets" content="2020 2018 2016 2014 2013 2011">
@@ -138,10 +138,10 @@
 		<div class="section">
 			<div class="wrapper">
 				<h1>
-					Screen.<wbr>orientation <span style="font-family: monospace; font-size: 0.8em;">polyfill</span>
+					window.<wbr>scrollTo <span style="font-family: monospace; font-size: 0.8em;">polyfill</span>
 				</h1>
 
-				<pre><code style="word-break: break-all;">import "@mrhenry/core-web/modules/screen.orientation";</code></pre>
+				<pre><code style="word-break: break-all;">import "@mrhenry/core-web/modules/smoothscroll";</code></pre>
 			</div>
 		</div>
 
@@ -157,21 +157,14 @@
 					<li>
 						<div style="display: flex; justify-content: space-between; max-width: 220px;">
 							<div>Android Webview:</div>
-							<div>&#x3C;5</div>
-						</div>
-					</li>
-				
-					<li>
-						<div style="display: flex; justify-content: space-between; max-width: 220px;">
-							<div>Blackberry:</div>
-							<div>*</div>
+							<div>&#x3C;4.4</div>
 						</div>
 					</li>
 				
 					<li>
 						<div style="display: flex; justify-content: space-between; max-width: 220px;">
 							<div>Chrome:</div>
-							<div>&#x3C;49</div>
+							<div>&#x3C;61</div>
 						</div>
 					</li>
 				
@@ -192,14 +185,14 @@
 					<li>
 						<div style="display: flex; justify-content: space-between; max-width: 220px;">
 							<div>Firefox:</div>
-							<div>&#x3C;43</div>
+							<div>4 - 36</div>
 						</div>
 					</li>
 				
 					<li>
 						<div style="display: flex; justify-content: space-between; max-width: 220px;">
 							<div>Firefox Android:</div>
-							<div>&#x3C;43</div>
+							<div>&#x3C;37</div>
 						</div>
 					</li>
 				
@@ -213,42 +206,42 @@
 					<li>
 						<div style="display: flex; justify-content: space-between; max-width: 220px;">
 							<div>IE Mobile:</div>
-							<div>*</div>
+							<div>&#x3E;=9</div>
 						</div>
 					</li>
 				
 					<li>
 						<div style="display: flex; justify-content: space-between; max-width: 220px;">
 							<div>Opera:</div>
-							<div>&#x3C;25</div>
+							<div>&#x3C;48</div>
 						</div>
 					</li>
 				
 					<li>
 						<div style="display: flex; justify-content: space-between; max-width: 220px;">
 							<div>Opera Android:</div>
-							<div>&#x3C;36</div>
+							<div>&#x3C;45</div>
 						</div>
 					</li>
 				
 					<li>
 						<div style="display: flex; justify-content: space-between; max-width: 220px;">
 							<div>Safari:</div>
-							<div>&#x3C;16.4</div>
+							<div>&#x3C;15.4</div>
 						</div>
 					</li>
 				
 					<li>
 						<div style="display: flex; justify-content: space-between; max-width: 220px;">
 							<div>iOS Safari:</div>
-							<div>&#x3C;16.4</div>
+							<div>&#x3C;15.4</div>
 						</div>
 					</li>
 				
 					<li>
 						<div style="display: flex; justify-content: space-between; max-width: 220px;">
 							<div>Samsung Mobile:</div>
-							<div>&#x3C;5.0</div>
+							<div>&#x3C;8.0</div>
 						</div>
 					</li>
 				
@@ -266,15 +259,19 @@
 			<ul class="polyfill-info__list">
 				
 				<li>
-					<a href="https://developer.mozilla.org/en-US/docs/Web/API/Screen/orientation" target="_blank" rel="noopener">documentation</a>
+					<a href="https://developer.mozilla.org/en/docs/Web/CSS/scroll-behavior" target="_blank" rel="noopener">documentation</a>
 				</li>
 			
 				<li>
-					<a href="http://www.w3.org/TR/screen-orientation/" target="_blank" rel="noopener">specification</a>
+					<a href="https://drafts.csswg.org/cssom-view/#smooth-scrolling" target="_blank" rel="noopener">specification</a>
 				</li>
 			
 				<li>
-					<a href="https://github.com/mrhenry/polyfill-library/tree/main/polyfills/screen/orientation" target="_blank" rel="noopener">@mrhenry/polyfill-library</a>
+					<a href="https://github.com/magic-akari/seamless-scroll-polyfill" target="_blank" rel="noopener">source code</a>
+				</li>
+			
+				<li>
+					<a href="https://github.com/mrhenry/polyfill-library/tree/main/polyfills/smoothscroll" target="_blank" rel="noopener">@mrhenry/polyfill-library</a>
 				</li>
 			
 			</ul>
@@ -283,6 +280,22 @@
 	
 		
 		
+	<div class="section">
+		<div class="wrapper">
+			<h2>
+				dependencies
+			</h2>
+
+			<ul class="polyfill-info__list">
+				
+		<li>
+			<a href="/polyfills/window.requestanimationframe/">window.<wbr>requestAnimationFrame</a>
+		</li>
+	
+			</ul>
+		</div>
+	</div>
+	
 	</main>
 
 	

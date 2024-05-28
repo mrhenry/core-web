@@ -285,12 +285,15 @@
     "aliases": [
       "scroll",
       "scrollBy",
+      "scrollTo",
       "scrollIntoView",
       "Element.prototype.scroll",
       "Element.prototype.scrollBy",
+      "Element.prototype.scrollTo",
       "Element.prototype.scrollIntoView",
       "window.scroll",
-      "window.scrollBy"
+      "window.scrollBy",
+      "window.scrollTo"
     ],
     "dependencies": [
       "requestAnimationFrame"
