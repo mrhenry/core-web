@@ -7,7 +7,7 @@ var GetSubstitution = (function() { // eslint-disable-line no-unused-vars
 	function isDigit(string) {
 		return /^[0-9]$/.test(string);
 	}
-	return function GetSubstitution ( matched, str, position, captures, namedCaptures, replacement ) { // eslint-disable-line no-unused-vars
+	return function GetSubstitution ( matched, str, position, captures, namedCaptures, replacement ) {
 		// 1. Assert: Type(matched) is String.
 		// 2. Let matchLength be the number of code units in matched.
 		var matchLength = matched.length;

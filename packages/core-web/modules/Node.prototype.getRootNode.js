@@ -50,7 +50,6 @@ if (!(document.getRootNode
 	if ('HTMLElement' in self && 'getRootNode' in HTMLElement.prototype) {
 		try {
 			delete HTMLElement.prototype.getRootNode;
-			// eslint-disable-next-line no-empty
 		} catch (e) {}
 	}
 

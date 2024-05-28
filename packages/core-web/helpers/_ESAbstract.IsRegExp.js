@@ -22,8 +22,7 @@ function IsRegExp(argument) { // eslint-disable-line no-unused-vars
 		argument.lastIndex = 0;
 		RegExp.prototype.exec.call(argument);
 		return true;
-	// eslint-disable-next-line no-empty
-	} catch (e) {} finally {
+	} catch (_) {} finally {
 		argument.lastIndex = lastIndex;
 	}
 	// 5. Return false.

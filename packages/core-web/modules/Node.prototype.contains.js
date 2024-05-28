@@ -23,7 +23,6 @@ if (!(document.contains
 	if ('HTMLElement' in self && 'contains' in HTMLElement.prototype) {
 		try {
 			delete HTMLElement.prototype.contains;
-		// eslint-disable-next-line no-empty
 		} catch (e) {}
 	}
 

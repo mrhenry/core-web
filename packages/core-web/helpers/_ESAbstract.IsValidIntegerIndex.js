@@ -9,7 +9,6 @@ function IsValidIntegerIndex(O, index) { // eslint-disable-line no-unused-vars
 	// 2. If IsIntegralNumber(index) is false, return false.
 	if (IsInteger(index) === false) return false;
 	// 3. If index is -0𝔽, return false.
-	// eslint-disable-next-line no-compare-neg-zero
 	if (1 / index === -Infinity) return false;
 	// 4. If ℝ(index) < 0 or ℝ(index) ≥ O.[[ArrayLength]], return false.
 	if (index < 0 || index >= O.length) return false;

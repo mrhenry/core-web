@@ -28,9 +28,6 @@ if (!("function"==typeof HTMLFormElement.prototype.requestSubmit
  *  @link https://github.com/javan/form-request-submit-polyfill
  */
 
-/* globals */
-// eslint-disable-next-line no-unused-vars
-
 (function (prototype) {
 	// Place all polyfill code within this function.
 	if (typeof prototype.requestSubmit === "function") return;

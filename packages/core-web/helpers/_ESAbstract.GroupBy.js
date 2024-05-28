@@ -16,13 +16,14 @@ import ToBoolean from "@mrhenry/core-web/helpers/_ESAbstract.ToBoolean";
 import Get from "@mrhenry/core-web/helpers/_ESAbstract.Get";
 import IteratorValue from "@mrhenry/core-web/helpers/_ESAbstract.IteratorValue";
 import RequireObjectCoercible from "@mrhenry/core-web/helpers/_ESAbstract.RequireObjectCoercible";
+import ThrowCompletion from "@mrhenry/core-web/helpers/_ESAbstract.ThrowCompletion";
 import ToPropertyKey from "@mrhenry/core-web/helpers/_ESAbstract.ToPropertyKey";
 import ToPrimitive from "@mrhenry/core-web/helpers/_ESAbstract.ToPrimitive";
 import OrdinaryToPrimitive from "@mrhenry/core-web/helpers/_ESAbstract.OrdinaryToPrimitive";
 import ToString from "@mrhenry/core-web/helpers/_ESAbstract.ToString";
 
 // _ESAbstract.GroupBy
-/* global AddValueToKeyedGroup, Call, GetIterator, IsCallable, IteratorClose, IteratorStep, IteratorValue, RequireObjectCoercible, ToPropertyKey */
+/* global AddValueToKeyedGroup, Call, GetIterator, IsCallable, IteratorClose, IteratorStep, IteratorValue, RequireObjectCoercible, ThrowCompletion, ToPropertyKey */
 
 // 7.3.36 GroupBy ( items, callbackfn, keyCoercion )
 // eslint-disable-next-line no-unused-vars
@@ -40,12 +41,11 @@ function GroupBy(items, callbackfn, keyCoercion) {
 	// 5. Let k be 0.
 	var k = 0;
 	// 6. Repeat,
-	// eslint-disable-next-line no-constant-condition
 	while (true) {
 		// a. If k ≥ 253 - 1, then
 		if (k >= Number.MAX_SAFE_INTEGER) {
 			// i. Let error be ThrowCompletion(a newly created TypeError object).
-			var error = new TypeError("k greater than or equal to MAX_SAFE_INTEGER");
+			var error = ThrowCompletion(new TypeError("k greater than or equal to MAX_SAFE_INTEGER"));
 			// ii. Return ? IteratorClose(iteratorRecord, error).
 			return IteratorClose(iteratorRecord, error);
 		}
@@ -64,7 +64,7 @@ function GroupBy(items, callbackfn, keyCoercion) {
 			key = Call(callbackfn, undefined, [value, k]);
 		} catch (err) {
 			// f. IfAbruptCloseIterator(key, iteratorRecord).
-			return IteratorClose(iteratorRecord, err);
+			return IteratorClose(iteratorRecord, ThrowCompletion(err));
 		}
 		// g. If keyCoercion is property, then
 		if (keyCoercion === "property") {
@@ -73,7 +73,7 @@ function GroupBy(items, callbackfn, keyCoercion) {
 				key = ToPropertyKey(key);
 			} catch (err) {
 				// ii. IfAbruptCloseIterator(key, iteratorRecord).
-				return IteratorClose(iteratorRecord, err);
+				return IteratorClose(iteratorRecord, ThrowCompletion(err));
 			}
 		}
 		// h. Else,
