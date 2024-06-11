@@ -19,7 +19,7 @@
     "__compat": {
       "mdn_url": "https://developer.mozilla.org/docs/Web/API/HTMLDocument",
       "source_file": "api/HTMLDocument.json",
-      "spec_url": "https://html.spec.whatwg.org/multipage/window-object.html#htmldocument",
+      "spec_url": "https://html.spec.whatwg.org/multipage/nav-history-apis.html#htmldocument",
       "status": {
         "deprecated": false,
         "experimental": false,

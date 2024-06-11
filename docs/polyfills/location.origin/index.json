@@ -46,6 +46,12 @@
           "version_added": "18"
         },
         "deno": {
+          "flags": [
+            {
+              "name": "--location [url]",
+              "type": "runtime_flag"
+            }
+          ],
           "version_added": "1.7"
         },
         "edge": {
