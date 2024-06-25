@@ -161,7 +161,10 @@
             "version_added": "≤37"
           }
         ]
-      }
+      },
+      "tags": [
+        "web-features:request-animation-frame"
+      ]
     }
   },
   "polyfilled": {

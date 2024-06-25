@@ -224,6 +224,59 @@
         }
       }
     },
+    "bytes": {
+      "__compat": {
+        "mdn_url": "https://developer.mozilla.org/docs/Web/API/Blob/bytes",
+        "source_file": "api/Blob.json",
+        "spec_url": "https://w3c.github.io/FileAPI/#dom-blob-bytes",
+        "status": {
+          "deprecated": false,
+          "experimental": true,
+          "standard_track": true
+        },
+        "support": {
+          "chrome": {
+            "version_added": false
+          },
+          "chrome_android": {
+            "version_added": false
+          },
+          "edge": {
+            "version_added": false
+          },
+          "firefox": {
+            "version_added": "128"
+          },
+          "firefox_android": {
+            "version_added": "128"
+          },
+          "ie": {
+            "version_added": false
+          },
+          "oculus": {
+            "version_added": false
+          },
+          "opera": {
+            "version_added": false
+          },
+          "opera_android": {
+            "version_added": false
+          },
+          "safari": {
+            "version_added": false
+          },
+          "safari_ios": {
+            "version_added": false
+          },
+          "samsunginternet_android": {
+            "version_added": false
+          },
+          "webview_android": {
+            "version_added": false
+          }
+        }
+      }
+    },
     "size": {
       "__compat": {
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/Blob/size",

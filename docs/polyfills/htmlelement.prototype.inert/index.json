@@ -88,7 +88,10 @@
         "webview_android": {
           "version_added": "102"
         }
-      }
+      },
+      "tags": [
+        "web-features:inert"
+      ]
     }
   },
   "polyfilled": {

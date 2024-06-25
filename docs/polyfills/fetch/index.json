@@ -531,7 +531,10 @@
           "webview_android": {
             "version_added": "66"
           }
-        }
+        },
+        "tags": [
+          "web-features:abortable-fetch"
+        ]
       }
     }
   },
