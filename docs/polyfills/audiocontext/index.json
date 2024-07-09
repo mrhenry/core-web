@@ -706,12 +706,15 @@
         },
         "support": {
           "chrome": {
+            "impl_url": "https://crbug.com/40500817",
             "version_added": false
           },
           "chrome_android": {
+            "impl_url": "https://crbug.com/40500817",
             "version_added": false
           },
           "edge": {
+            "impl_url": "https://crbug.com/40500817",
             "version_added": false
           },
           "firefox": {
@@ -726,12 +729,15 @@
             "version_added": false
           },
           "oculus": {
+            "impl_url": "https://crbug.com/40500817",
             "version_added": false
           },
           "opera": {
+            "impl_url": "https://crbug.com/40500817",
             "version_added": false
           },
           "opera_android": {
+            "impl_url": "https://crbug.com/40500817",
             "version_added": false
           },
           "safari": {
@@ -741,9 +747,11 @@
             "version_added": false
           },
           "samsunginternet_android": {
+            "impl_url": "https://crbug.com/40500817",
             "version_added": false
           },
           "webview_android": {
+            "impl_url": "https://crbug.com/40500817",
             "version_added": false
           }
         }

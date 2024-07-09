@@ -22,7 +22,7 @@
   "mdn": {
     "__compat": {
       "description": "<code>groupCollapsed()</code> static method",
-      "mdn_url": "https://developer.mozilla.org/docs/Web/API/console/groupCollapsed_static",
+      "mdn_url": "https://developer.mozilla.org/docs/Web/API/console/groupcollapsed_static",
       "source_file": "api/_globals/console.json",
       "spec_url": "https://console.spec.whatwg.org/#groupcollapsed",
       "status": {

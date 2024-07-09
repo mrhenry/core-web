@@ -17,7 +17,7 @@
   },
   "mdn": {
     "__compat": {
-      "mdn_url": "https://developer.mozilla.org/docs/Web/API/atob",
+      "mdn_url": "https://developer.mozilla.org/docs/Web/API/Window/atob",
       "source_file": "api/_globals/atob.json",
       "spec_url": "https://html.spec.whatwg.org/multipage/webappapis.html#dom-atob-dev",
       "status": {
