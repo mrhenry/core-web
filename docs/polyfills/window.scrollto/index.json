@@ -124,11 +124,11 @@
             "version_added": "45"
           },
           "safari": {
-            "notes": "Safari does not have support for the <code>smooth</code> scroll behavior.",
+            "notes": "Before version 15.4, Safari did not have support for the <code>smooth</code> scroll behavior.",
             "version_added": "14"
           },
           "safari_ios": {
-            "notes": "Safari does not have support for the <code>smooth</code> scroll behavior.",
+            "notes": "Before version 15.4, Safari did not have support for the <code>smooth</code> scroll behavior.",
             "version_added": "14"
           },
           "samsunginternet_android": {

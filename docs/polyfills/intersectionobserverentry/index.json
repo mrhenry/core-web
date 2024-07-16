@@ -358,6 +358,58 @@
         ]
       }
     },
+    "isVisible": {
+      "__compat": {
+        "source_file": "api/IntersectionObserverEntry.json",
+        "spec_url": "https://w3c.github.io/IntersectionObserver/#dom-intersectionobserverentry-isvisible",
+        "status": {
+          "deprecated": false,
+          "experimental": true,
+          "standard_track": true
+        },
+        "support": {
+          "chrome": {
+            "version_added": "74"
+          },
+          "chrome_android": {
+            "version_added": "74"
+          },
+          "edge": {
+            "version_added": "79"
+          },
+          "firefox": {
+            "version_added": false
+          },
+          "firefox_android": {
+            "version_added": false
+          },
+          "ie": {
+            "version_added": false
+          },
+          "oculus": {
+            "version_added": "6.0"
+          },
+          "opera": {
+            "version_added": "62"
+          },
+          "opera_android": {
+            "version_added": "53"
+          },
+          "safari": {
+            "version_added": false
+          },
+          "safari_ios": {
+            "version_added": false
+          },
+          "samsunginternet_android": {
+            "version_added": "11.0"
+          },
+          "webview_android": {
+            "version_added": "74"
+          }
+        }
+      }
+    },
     "rootBounds": {
       "__compat": {
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/IntersectionObserverEntry/rootBounds",
