@@ -27,6 +27,7 @@
   "mdn": {
     "@@iterator": {
       "__compat": {
+        "description": "[Symbol.iterator]",
         "source_file": "api/DOMTokenList.json",
         "status": {
           "deprecated": false,

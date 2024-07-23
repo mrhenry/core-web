@@ -104,6 +104,7 @@
           ],
           "safari": [
             {
+              "notes": "New audio contexts are suspended until the <code>resume()</code> method is called via user action, such as the <code>click</code> event.",
               "version_added": "14.1"
             },
             {
@@ -113,6 +114,7 @@
           ],
           "safari_ios": [
             {
+              "notes": "New audio contexts are suspended until the <code>resume()</code> method is called via user action, such as the <code>click</code> event.",
               "version_added": "14.5"
             },
             {
