@@ -35,7 +35,7 @@
   },
   "mdn": {
     "__compat": {
-      "mdn_url": "https://developer.mozilla.org/docs/Web/API/fetch",
+      "mdn_url": "https://developer.mozilla.org/docs/Web/API/Window/fetch",
       "source_file": "api/_globals/fetch.json",
       "spec_url": "https://fetch.spec.whatwg.org/#fetch-method",
       "status": {
