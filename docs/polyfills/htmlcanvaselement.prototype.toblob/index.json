@@ -93,7 +93,10 @@
         "webview_android": {
           "version_added": "50"
         }
-      }
+      },
+      "tags": [
+        "web-features:canvas"
+      ]
     },
     "quality_parameter": {
       "__compat": {

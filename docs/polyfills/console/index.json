@@ -206,7 +206,7 @@
     "countReset_static": {
       "__compat": {
         "description": "<code>countReset()</code> static method",
-        "mdn_url": "https://developer.mozilla.org/docs/Web/API/console/countreset_static",
+        "mdn_url": "https://developer.mozilla.org/docs/Web/API/console/countReset_static",
         "source_file": "api/_globals/console.json",
         "spec_url": "https://console.spec.whatwg.org/#countreset",
         "status": {
@@ -808,7 +808,7 @@
     "groupCollapsed_static": {
       "__compat": {
         "description": "<code>groupCollapsed()</code> static method",
-        "mdn_url": "https://developer.mozilla.org/docs/Web/API/console/groupcollapsed_static",
+        "mdn_url": "https://developer.mozilla.org/docs/Web/API/console/groupCollapsed_static",
         "source_file": "api/_globals/console.json",
         "spec_url": "https://console.spec.whatwg.org/#groupcollapsed",
         "status": {
@@ -869,7 +869,7 @@
     "groupEnd_static": {
       "__compat": {
         "description": "<code>groupEnd()</code> static method",
-        "mdn_url": "https://developer.mozilla.org/docs/Web/API/console/groupend_static",
+        "mdn_url": "https://developer.mozilla.org/docs/Web/API/console/groupEnd_static",
         "source_file": "api/_globals/console.json",
         "spec_url": "https://console.spec.whatwg.org/#groupend",
         "status": {
@@ -1110,7 +1110,7 @@
     "profileEnd_static": {
       "__compat": {
         "description": "<code>profileEnd()</code> static method",
-        "mdn_url": "https://developer.mozilla.org/docs/Web/API/console/profileend_static",
+        "mdn_url": "https://developer.mozilla.org/docs/Web/API/console/profileEnd_static",
         "source_file": "api/_globals/console.json",
         "status": {
           "deprecated": false,
@@ -1379,7 +1379,7 @@
     "timeEnd_static": {
       "__compat": {
         "description": "<code>timeEnd()</code> static method",
-        "mdn_url": "https://developer.mozilla.org/docs/Web/API/console/timeend_static",
+        "mdn_url": "https://developer.mozilla.org/docs/Web/API/console/timeEnd_static",
         "source_file": "api/_globals/console.json",
         "spec_url": "https://console.spec.whatwg.org/#timeend",
         "status": {
@@ -1439,7 +1439,7 @@
     "timeLog_static": {
       "__compat": {
         "description": "<code>timeLog()</code> static method",
-        "mdn_url": "https://developer.mozilla.org/docs/Web/API/console/timelog_static",
+        "mdn_url": "https://developer.mozilla.org/docs/Web/API/console/timeLog_static",
         "source_file": "api/_globals/console.json",
         "spec_url": "https://console.spec.whatwg.org/#timelog",
         "status": {
@@ -1499,7 +1499,7 @@
     "timeStamp_static": {
       "__compat": {
         "description": "<code>timeStamp()</code> static method",
-        "mdn_url": "https://developer.mozilla.org/docs/Web/API/console/timestamp_static",
+        "mdn_url": "https://developer.mozilla.org/docs/Web/API/console/timeStamp_static",
         "source_file": "api/_globals/console.json",
         "status": {
           "deprecated": false,

@@ -90,7 +90,10 @@
         "webview_android": {
           "version_added": "42"
         }
-      }
+      },
+      "tags": [
+        "web-features:fetch"
+      ]
     },
     "authorization_removed_cross_origin": {
       "__compat": {

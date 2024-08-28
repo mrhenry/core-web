@@ -152,7 +152,10 @@
               "version_removed": "57"
             }
           ]
-        }
+        },
+        "tags": [
+          "web-features:web-audio"
+        ]
       },
       "options_latencyHint_parameter": {
         "__compat": {
@@ -427,7 +430,10 @@
             "version_removed": "57"
           }
         ]
-      }
+      },
+      "tags": [
+        "web-features:web-audio"
+      ]
     },
     "baseLatency": {
       "__compat": {
@@ -479,7 +485,10 @@
           "webview_android": {
             "version_added": "58"
           }
-        }
+        },
+        "tags": [
+          "web-features:web-audio"
+        ]
       }
     },
     "close": {
@@ -532,7 +541,10 @@
           "webview_android": {
             "version_added": "42"
           }
-        }
+        },
+        "tags": [
+          "web-features:web-audio"
+        ]
       }
     },
     "createMediaElementSource": {
@@ -587,7 +599,10 @@
           "webview_android": {
             "version_added": "≤37"
           }
-        }
+        },
+        "tags": [
+          "web-features:web-audio"
+        ]
       }
     },
     "createMediaStreamDestination": {
@@ -640,7 +655,10 @@
           "webview_android": {
             "version_added": "≤37"
           }
-        }
+        },
+        "tags": [
+          "web-features:web-audio"
+        ]
       }
     },
     "createMediaStreamSource": {
@@ -693,7 +711,10 @@
           "webview_android": {
             "version_added": "≤37"
           }
-        }
+        },
+        "tags": [
+          "web-features:web-audio"
+        ]
       }
     },
     "createMediaStreamTrackSource": {
@@ -756,7 +777,10 @@
             "impl_url": "https://crbug.com/40500817",
             "version_added": false
           }
-        }
+        },
+        "tags": [
+          "web-features:web-audio"
+        ]
       }
     },
     "error_event": {
@@ -862,7 +886,10 @@
           "webview_android": {
             "version_added": "57"
           }
-        }
+        },
+        "tags": [
+          "web-features:web-audio"
+        ]
       }
     },
     "outputLatency": {
@@ -915,7 +942,10 @@
           "webview_android": {
             "version_added": "102"
           }
-        }
+        },
+        "tags": [
+          "web-features:web-audio"
+        ]
       }
     },
     "resume": {
@@ -968,7 +998,10 @@
           "webview_android": {
             "version_added": "41"
           }
-        }
+        },
+        "tags": [
+          "web-features:web-audio"
+        ]
       }
     },
     "setSinkId": {
@@ -1181,7 +1214,10 @@
           "webview_android": {
             "version_added": "41"
           }
-        }
+        },
+        "tags": [
+          "web-features:web-audio"
+        ]
       }
     }
   },

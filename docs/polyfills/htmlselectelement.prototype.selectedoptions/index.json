@@ -79,7 +79,10 @@
         "webview_android": {
           "version_added": "4.4"
         }
-      }
+      },
+      "tags": [
+        "web-features:select"
+      ]
     }
   },
   "polyfilled": {
