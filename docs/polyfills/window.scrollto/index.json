@@ -83,6 +83,9 @@
         },
         "webview_android": {
           "version_added": "4.4"
+        },
+        "webview_ios": {
+          "version_added": "1"
         }
       }
     },
@@ -136,6 +139,10 @@
           },
           "webview_android": {
             "version_added": "61"
+          },
+          "webview_ios": {
+            "notes": "Before version 15.4, Safari did not have support for the <code>smooth</code> scroll behavior.",
+            "version_added": "14"
           }
         }
       }
@@ -188,6 +195,9 @@
           },
           "webview_android": {
             "version_added": "41"
+          },
+          "webview_ios": {
+            "version_added": "10.3"
           }
         }
       }
@@ -240,6 +250,9 @@
           },
           "webview_android": {
             "version_added": "41"
+          },
+          "webview_ios": {
+            "version_added": "10.3"
           }
         }
       }

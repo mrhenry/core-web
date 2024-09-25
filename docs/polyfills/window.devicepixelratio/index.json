@@ -74,6 +74,11 @@
         },
         "webview_android": {
           "version_added": "4.4"
+        },
+        "webview_ios": {
+          "notes": "In Safari, the <code>devicePixelRatio</code> does not change when the page is zoomed. See <a href='https://webkit.org/b/124862'>bug 124862</a>.",
+          "partial_implementation": true,
+          "version_added": "2"
         }
       }
     }

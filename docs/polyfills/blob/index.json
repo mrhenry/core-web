@@ -91,6 +91,9 @@
           },
           "webview_android": {
             "version_added": "4.4"
+          },
+          "webview_ios": {
+            "version_added": "6"
           }
         }
       }
@@ -161,6 +164,9 @@
         },
         "webview_android": {
           "version_added": "4.4"
+        },
+        "webview_ios": {
+          "version_added": "6"
         }
       }
     },
@@ -220,6 +226,9 @@
           },
           "webview_android": {
             "version_added": "76"
+          },
+          "webview_ios": {
+            "version_added": "14.5"
           }
         }
       }
@@ -276,6 +285,9 @@
           },
           "webview_android": {
             "version_added": false
+          },
+          "webview_ios": {
+            "version_added": "18"
           }
         }
       }
@@ -335,6 +347,9 @@
           },
           "webview_android": {
             "version_added": "4.4"
+          },
+          "webview_ios": {
+            "version_added": "6"
           }
         }
       }
@@ -453,7 +468,18 @@
           ],
           "webview_android": {
             "version_added": "4.4"
-          }
+          },
+          "webview_ios": [
+            {
+              "version_added": "7"
+            },
+            {
+              "prefix": "webkit",
+              "version_added": "6",
+              "version_last": "6",
+              "version_removed": "7"
+            }
+          ]
         }
       }
     },
@@ -513,6 +539,9 @@
           },
           "webview_android": {
             "version_added": "76"
+          },
+          "webview_ios": {
+            "version_added": "14.5"
           }
         }
       }
@@ -573,6 +602,9 @@
           },
           "webview_android": {
             "version_added": "76"
+          },
+          "webview_ios": {
+            "version_added": "14.5"
           }
         }
       }
@@ -632,6 +664,9 @@
           },
           "webview_android": {
             "version_added": "4.4"
+          },
+          "webview_ios": {
+            "version_added": "6"
           }
         }
       }

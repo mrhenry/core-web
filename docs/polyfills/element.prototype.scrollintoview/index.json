@@ -115,6 +115,13 @@
         },
         "webview_android": {
           "version_added": "4.4"
+        },
+        "webview_ios": {
+          "notes": [
+            "No support for <code>center</code> option.",
+            "Before iOS 15.4, there was no support for the <code>smooth</code> behavior."
+          ],
+          "version_added": "1"
         }
       },
       "tags": [
@@ -185,6 +192,9 @@
           "webview_android": {
             "notes": "The <code>block</code> and <code>inline</code> options support the values <code>start</code>, <code>center</code>, <code>end</code>, <code>nearest</code>.",
             "version_added": "61"
+          },
+          "webview_ios": {
+            "version_added": "14"
           }
         },
         "tags": [

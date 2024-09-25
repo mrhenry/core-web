@@ -83,6 +83,9 @@
         },
         "webview_android": {
           "version_added": "54"
+        },
+        "webview_ios": {
+          "version_added": "10.3"
         }
       },
       "tags": [

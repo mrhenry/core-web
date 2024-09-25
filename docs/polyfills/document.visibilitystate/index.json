@@ -146,7 +146,10 @@
             "prefix": "webkit",
             "version_added": "≤37"
           }
-        ]
+        ],
+        "webview_ios": {
+          "version_added": "7"
+        }
       }
     }
   },

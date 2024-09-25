@@ -93,6 +93,10 @@
         },
         "webview_android": {
           "version_added": "114"
+        },
+        "webview_ios": {
+          "impl_url": "https://webkit.org/b/201556",
+          "version_added": false
         }
       },
       "tags": [

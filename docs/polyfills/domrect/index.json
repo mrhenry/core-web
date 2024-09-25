@@ -82,6 +82,9 @@
           },
           "webview_android": {
             "version_added": "61"
+          },
+          "webview_ios": {
+            "version_added": "10.3"
           }
         }
       }
@@ -223,6 +226,17 @@
             "version_last": "60",
             "version_removed": "61"
           }
+        ],
+        "webview_ios": [
+          {
+            "version_added": "10.3"
+          },
+          {
+            "alternative_name": "ClientRect",
+            "version_added": "3.2",
+            "version_last": "10.3",
+            "version_removed": "11"
+          }
         ]
       }
     },
@@ -276,6 +290,9 @@
           },
           "webview_android": {
             "version_added": "61"
+          },
+          "webview_ios": {
+            "version_added": "10.3"
           }
         }
       }
@@ -328,6 +345,9 @@
           },
           "webview_android": {
             "version_added": "2"
+          },
+          "webview_ios": {
+            "version_added": "3.2"
           }
         }
       }
@@ -380,6 +400,9 @@
           },
           "webview_android": {
             "version_added": "2"
+          },
+          "webview_ios": {
+            "version_added": "3.2"
           }
         }
       }
@@ -432,6 +455,9 @@
           },
           "webview_android": {
             "version_added": "61"
+          },
+          "webview_ios": {
+            "version_added": "10.3"
           }
         }
       }
@@ -484,6 +510,9 @@
           },
           "webview_android": {
             "version_added": "61"
+          },
+          "webview_ios": {
+            "version_added": "10.3"
           }
         }
       }
@@ -536,6 +565,9 @@
           },
           "webview_android": {
             "version_added": "61"
+          },
+          "webview_ios": {
+            "version_added": "10.3"
           }
         }
       }

@@ -90,6 +90,9 @@
           },
           "webview_android": {
             "version_added": "4.4"
+          },
+          "webview_ios": {
+            "version_added": "6"
           }
         }
       }
@@ -148,6 +151,9 @@
         },
         "webview_android": {
           "version_added": "≤37"
+        },
+        "webview_ios": {
+          "version_added": "1"
         }
       }
     },
@@ -207,6 +213,9 @@
           },
           "webview_android": {
             "version_added": "≤37"
+          },
+          "webview_ios": {
+            "version_added": "1"
           }
         }
       }
@@ -292,6 +301,9 @@
           "webview_android": {
             "notes": "Starting with Chrome 58 and Opera 45, setting this property to false does nothing, as per <a href='https://github.com/whatwg/dom/issues/211'>spec discussion</a>.",
             "version_added": "≤37"
+          },
+          "webview_ios": {
+            "version_added": "1"
           }
         }
       }
@@ -351,6 +363,9 @@
           },
           "webview_android": {
             "version_added": "≤37"
+          },
+          "webview_ios": {
+            "version_added": "1"
           }
         }
       }
@@ -413,6 +428,9 @@
           },
           "webview_android": {
             "version_added": "53"
+          },
+          "webview_ios": {
+            "version_added": "10"
           }
         },
         "tags": [
@@ -524,7 +542,10 @@
               "version_last": "52",
               "version_removed": "53"
             }
-          ]
+          ],
+          "webview_ios": {
+            "version_added": "10"
+          }
         },
         "tags": [
           "web-features:shadow-dom"
@@ -595,6 +616,9 @@
           },
           "webview_android": {
             "version_added": "4.4"
+          },
+          "webview_ios": {
+            "version_added": "1"
           }
         }
       }
@@ -654,6 +678,9 @@
           },
           "webview_android": {
             "version_added": "3"
+          },
+          "webview_ios": {
+            "version_added": "5"
           }
         }
       }
@@ -713,6 +740,9 @@
           },
           "webview_android": {
             "version_added": "4.4"
+          },
+          "webview_ios": {
+            "version_added": "1"
           }
         }
       }
@@ -770,6 +800,9 @@
             "version_added": false
           },
           "webview_android": {
+            "version_added": false
+          },
+          "webview_ios": {
             "version_added": false
           }
         }
@@ -848,6 +881,9 @@
           },
           "webview_android": {
             "version_added": "≤37"
+          },
+          "webview_ios": {
+            "version_added": "1"
           }
         }
       }
@@ -916,6 +952,9 @@
           "webview_android": {
             "notes": "Starting with version 53, untrusted events do not invoke the default action.",
             "version_added": "46"
+          },
+          "webview_ios": {
+            "version_added": "10"
           }
         }
       }
@@ -973,6 +1012,9 @@
             "version_added": false
           },
           "webview_android": {
+            "version_added": false
+          },
+          "webview_ios": {
             "version_added": false
           }
         }
@@ -1033,6 +1075,9 @@
           },
           "webview_android": {
             "version_added": "4.4"
+          },
+          "webview_ios": {
+            "version_added": "1"
           }
         }
       }
@@ -1106,6 +1151,9 @@
           },
           "webview_android": {
             "version_added": "≤37"
+          },
+          "webview_ios": {
+            "version_added": "1"
           }
         }
       }
@@ -1165,6 +1213,9 @@
           },
           "webview_android": {
             "version_added": "≤37"
+          },
+          "webview_ios": {
+            "version_added": "1"
           }
         }
       }
@@ -1224,6 +1275,9 @@
           },
           "webview_android": {
             "version_added": "≤37"
+          },
+          "webview_ios": {
+            "version_added": "5"
           }
         }
       }
@@ -1284,6 +1338,9 @@
           },
           "webview_android": {
             "version_added": "4.4"
+          },
+          "webview_ios": {
+            "version_added": "1"
           }
         }
       }
@@ -1343,6 +1400,9 @@
           },
           "webview_android": {
             "version_added": "4.4"
+          },
+          "webview_ios": {
+            "version_added": "1"
           }
         }
       }
@@ -1413,6 +1473,9 @@
           "webview_android": {
             "notes": "Starting with version 49, this property returns <a href='https://developer.mozilla.org/docs/Web/API/DOMHighResTimeStamp'><code>DOMHighResTimeStamp</code></a> instead of <a href='https://developer.mozilla.org/docs/Web/API/DOMTimeStamp'><code>DOMTimeStamp</code></a>.",
             "version_added": "1"
+          },
+          "webview_ios": {
+            "version_added": "1"
           }
         }
       }
@@ -1472,6 +1535,9 @@
           },
           "webview_android": {
             "version_added": "4.4"
+          },
+          "webview_ios": {
+            "version_added": "1"
           }
         }
       }

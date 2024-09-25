@@ -88,6 +88,9 @@
         "webview_android": {
           "notes": "Starting in Chrome 59, this method cannot send a <code>Blob</code> whose type is not CORS safelisted. This is a temporary change until a mitigation can be found for the security issues that this creates. For more information, see <a href='https://crbug.com/720283'>bug 720283</a>.",
           "version_added": "40"
+        },
+        "webview_ios": {
+          "version_added": "11.3"
         }
       }
     }

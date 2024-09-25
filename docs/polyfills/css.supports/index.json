@@ -176,6 +176,18 @@
             "version_last": "60",
             "version_removed": "61"
           }
+        ],
+        "webview_ios": [
+          {
+            "version_added": "11"
+          },
+          {
+            "notes": "The parentheses-less one-argument version is not supported.",
+            "partial_implementation": true,
+            "version_added": "9",
+            "version_last": "10.3",
+            "version_removed": "11"
+          }
         ]
       }
     }

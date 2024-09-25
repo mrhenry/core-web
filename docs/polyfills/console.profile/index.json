@@ -84,6 +84,9 @@
         },
         "webview_android": {
           "version_added": "≤37"
+        },
+        "webview_ios": {
+          "version_added": "3.2"
         }
       }
     }

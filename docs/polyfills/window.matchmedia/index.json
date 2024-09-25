@@ -78,6 +78,9 @@
         },
         "webview_android": {
           "version_added": "3"
+        },
+        "webview_ios": {
+          "version_added": "5"
         }
       }
     }

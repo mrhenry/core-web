@@ -73,6 +73,9 @@
         },
         "webview_android": {
           "version_added": "≤37"
+        },
+        "webview_ios": {
+          "version_added": "1"
         }
       }
     },
@@ -139,6 +142,9 @@
           },
           "webview_android": {
             "version_added": "≤37"
+          },
+          "webview_ios": {
+            "version_added": "3.2"
           }
         }
       }
@@ -199,6 +205,9 @@
           },
           "webview_android": {
             "version_added": "4.4"
+          },
+          "webview_ios": {
+            "version_added": "7"
           }
         }
       }
@@ -259,6 +268,9 @@
           },
           "webview_android": {
             "version_added": "68"
+          },
+          "webview_ios": {
+            "version_added": "13"
           }
         }
       }
@@ -319,6 +331,9 @@
           },
           "webview_android": {
             "version_added": "≤37"
+          },
+          "webview_ios": {
+            "version_added": "3.2"
           }
         }
       }
@@ -380,6 +395,9 @@
           },
           "webview_android": {
             "version_added": "≤37"
+          },
+          "webview_ios": {
+            "version_added": "3.2"
           }
         }
       }
@@ -440,6 +458,9 @@
           },
           "webview_android": {
             "version_added": "≤37"
+          },
+          "webview_ios": {
+            "version_added": "3.2"
           }
         }
       },
@@ -496,6 +517,9 @@
               "version_added": false
             },
             "webview_android": {
+              "version_added": false
+            },
+            "webview_ios": {
               "version_added": false
             }
           }
@@ -555,6 +579,9 @@
             },
             "webview_android": {
               "version_added": false
+            },
+            "webview_ios": {
+              "version_added": false
             }
           }
         }
@@ -612,6 +639,9 @@
               "version_added": false
             },
             "webview_android": {
+              "version_added": false
+            },
+            "webview_ios": {
               "version_added": false
             }
           }
@@ -681,6 +711,9 @@
           },
           "webview_android": {
             "version_added": "≤37"
+          },
+          "webview_ios": {
+            "version_added": "3.2"
           }
         }
       }
@@ -741,6 +774,9 @@
           },
           "webview_android": {
             "version_added": "4.4"
+          },
+          "webview_ios": {
+            "version_added": "1"
           }
         }
       }
@@ -800,6 +836,9 @@
             "version_added": false
           },
           "webview_android": {
+            "version_added": false
+          },
+          "webview_ios": {
             "version_added": false
           }
         }
@@ -862,6 +901,9 @@
           },
           "webview_android": {
             "version_added": "3"
+          },
+          "webview_ios": {
+            "version_added": "5"
           }
         }
       }
@@ -922,6 +964,9 @@
           },
           "webview_android": {
             "version_added": "37"
+          },
+          "webview_ios": {
+            "version_added": "3.2"
           }
         }
       }
@@ -982,6 +1027,9 @@
           },
           "webview_android": {
             "version_added": "37"
+          },
+          "webview_ios": {
+            "version_added": "3.2"
           }
         }
       }
@@ -1043,6 +1091,9 @@
           },
           "webview_android": {
             "version_added": "4.4"
+          },
+          "webview_ios": {
+            "version_added": "1"
           }
         }
       }
@@ -1103,6 +1154,9 @@
           },
           "webview_android": {
             "version_added": "4.4"
+          },
+          "webview_ios": {
+            "version_added": "1"
           }
         }
       }
@@ -1168,6 +1222,9 @@
           },
           "webview_android": {
             "version_added": "≤37"
+          },
+          "webview_ios": {
+            "version_added": "3.2"
           }
         }
       }
@@ -1237,6 +1294,9 @@
           },
           "webview_android": {
             "version_added": "≤37"
+          },
+          "webview_ios": {
+            "version_added": "3.2"
           }
         }
       }
@@ -1312,6 +1372,9 @@
           "webview_android": {
             "notes": "In version 28, if a negative value is passed to %d, it will be rounded down to the closest negative integer, so -0.1 becomes -1.",
             "version_added": "≤37"
+          },
+          "webview_ios": {
+            "version_added": "1"
           }
         }
       }
@@ -1372,6 +1435,9 @@
           },
           "webview_android": {
             "version_added": "4.4"
+          },
+          "webview_ios": {
+            "version_added": "7"
           }
         }
       }
@@ -1432,6 +1498,9 @@
           },
           "webview_android": {
             "version_added": "≤37"
+          },
+          "webview_ios": {
+            "version_added": "3.2"
           }
         }
       }
@@ -1492,6 +1561,9 @@
           },
           "webview_android": {
             "version_added": "71"
+          },
+          "webview_ios": {
+            "version_added": "13"
           }
         }
       }
@@ -1557,6 +1629,9 @@
           },
           "webview_android": {
             "version_added": "≤37"
+          },
+          "webview_ios": {
+            "version_added": "6"
           }
         }
       }
@@ -1617,6 +1692,9 @@
           },
           "webview_android": {
             "version_added": "≤37"
+          },
+          "webview_ios": {
+            "version_added": "3.2"
           }
         }
       }
@@ -1677,6 +1755,9 @@
           },
           "webview_android": {
             "version_added": "≤37"
+          },
+          "webview_ios": {
+            "version_added": "3.2"
           }
         }
       }
@@ -1738,6 +1819,9 @@
           },
           "webview_android": {
             "version_added": "4.4"
+          },
+          "webview_ios": {
+            "version_added": "1"
           }
         }
       }
@@ -1796,6 +1880,9 @@
           },
           "webview_android": {
             "version_added": "4.4.3"
+          },
+          "webview_ios": {
+            "version_added": "7"
           }
         }
       }
