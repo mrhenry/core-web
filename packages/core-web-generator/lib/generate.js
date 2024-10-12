@@ -50,15 +50,15 @@ async function genAll() {
     await (0, generate_element_qsa_has_1.generateElementQsaSHas)(mapping);
     await (0, generate_crypto_randomuuid_1.generateCryptoRandomUUID)(mapping);
     // aliases
-    const inversedAliases = {};
+    const inverseAliases = {};
     aliases.forEach((alias) => {
         alias.entries.forEach((entry) => {
-            inversedAliases[entry] = inversedAliases[entry] || [];
-            inversedAliases[entry].push(alias.name);
+            inverseAliases[entry] = inverseAliases[entry] || [];
+            inverseAliases[entry].push(alias.name);
         });
     });
-    for (let entryPoint in inversedAliases) {
-        const features = inversedAliases[entryPoint];
+    for (let entryPoint in inverseAliases) {
+        const features = inverseAliases[entryPoint];
         if (skipAlias(entryPoint)) {
             continue;
         }
@@ -104,6 +104,9 @@ async function patchedMeta(feature, meta) {
 }
 async function gen(feature, mapping, aliases) {
     let meta = await polyfillLibrary.describePolyfill(feature);
+    if (!meta) {
+        throw new Error(`Unexpected missing meta data for feature: ${feature}`);
+    }
     meta = await patchedMeta(feature, meta);
     let output = '';
     const helperName = normalizeHelperName(feature);
@@ -165,8 +168,9 @@ async function gen(feature, mapping, aliases) {
             output += `var define;\nvar module;\n`;
         }
     }
-    const polyfillSource = await streamToString(sources.streamPolyfillSource(feature, "raw"));
-    output += polyfillSource;
+    for await (const chunk of sources.streamPolyfillSource(feature, "raw")) {
+        output += chunk;
+    }
     if (!helperName) {
         if (meta.detectSource) {
             output += `}`;
@@ -181,7 +185,7 @@ async function gen(feature, mapping, aliases) {
 async function allDependencies(feature) {
     const dependencies = new Set();
     const meta = await polyfillLibrary.describePolyfill(feature);
-    for (const dep of meta.dependencies || []) {
+    for (const dep of meta?.dependencies || []) {
         if (!("string" === typeof dep)) {
             continue;
         }

@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.generateElementQsaSHas = void 0;
+exports.generateElementQsaSHas = generateElementQsaSHas;
 const fs = require("fs");
 const path = require("path");
 const browsers_to_engines_1 = require("../browsers-to-engines/browsers-to-engines");
@@ -30,6 +30,5 @@ async function generateElementQsaSHas(mapping) {
         providedByCoreWeb: true,
     });
 }
-exports.generateElementQsaSHas = generateElementQsaSHas;
 ;
 //# sourceMappingURL=generate-element-qsa-has.js.map

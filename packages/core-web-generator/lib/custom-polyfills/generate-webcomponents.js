@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.generateWebComponents = void 0;
+exports.generateWebComponents = generateWebComponents;
 const fs = require("fs");
 const path = require("path");
 const browsers_to_engines_1 = require("../browsers-to-engines/browsers-to-engines");
@@ -11,7 +11,6 @@ async function generateWebComponents(mapping) {
     await generateShadyCSS(mapping);
     await generateCustomElements(mapping);
 }
-exports.generateWebComponents = generateWebComponents;
 ;
 async function generateTemplate(mapping) {
     const src = fs.readFileSync(require.resolve("@webcomponents/template"), "utf-8").toString().replace(/\/\/# sourceMappingURL.*?\n/, '');

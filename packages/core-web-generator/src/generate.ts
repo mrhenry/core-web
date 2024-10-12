@@ -62,16 +62,16 @@ async function genAll() {
 	await generateCryptoRandomUUID(mapping);
 
 	// aliases
-	const inversedAliases: Record<string, Array<string>> = {};
+	const inverseAliases: Record<string, Array<string>> = {};
 	aliases.forEach((alias) => {
 		alias.entries.forEach((entry) => {
-			inversedAliases[entry] = inversedAliases[entry] || [];
-			inversedAliases[entry].push(alias.name);
+			inverseAliases[entry] = inverseAliases[entry] || [];
+			inverseAliases[entry].push(alias.name);
 		});
 	});
 
-	for (let entryPoint in inversedAliases) {
-		const features = inversedAliases[entryPoint];
+	for (let entryPoint in inverseAliases) {
+		const features = inverseAliases[entryPoint];
 		if (skipAlias(entryPoint)) {
 			continue;
 		}
@@ -128,7 +128,7 @@ async function genAll() {
 }
 
 // Override meta data from polyfill-library
-async function patchedMeta(feature: string, meta: Record<string, unknown>) : Promise<unknown> {
+async function patchedMeta(feature: string, meta: sources.PolyfillMeta): Promise<sources.PolyfillMeta> {
 	switch (feature) {
 		default:
 			return meta;
@@ -137,6 +137,10 @@ async function patchedMeta(feature: string, meta: Record<string, unknown>) : Pro
 
 async function gen(feature: string, mapping: Array<Feature>, aliases: Array<FeatureAlias>) {
 	let meta = await polyfillLibrary.describePolyfill(feature);
+	if (!meta) {
+		throw new Error(`Unexpected missing meta data for feature: ${feature}`)
+	}
+
 	meta = await patchedMeta(feature, meta);
 
 	let output = '';
@@ -211,8 +215,9 @@ async function gen(feature: string, mapping: Array<Feature>, aliases: Array<Feat
 		}
 	}
 
-	const polyfillSource = await streamToString(sources.streamPolyfillSource(feature, "raw"));
-	output += polyfillSource;
+	for await (const chunk of sources.streamPolyfillSource(feature, "raw")) {
+		output += chunk;
+	}
 
 	if (!helperName) {
 		if (meta.detectSource) {
@@ -233,7 +238,7 @@ async function allDependencies(feature: string): Promise<Set<string>> {
 	const dependencies: Set<string> = new Set();
 	const meta = await polyfillLibrary.describePolyfill(feature);
 
-	for (const dep of meta.dependencies || []) {
+	for (const dep of meta?.dependencies || []) {
 		if (!("string" === typeof dep)) {
 			continue;
 		}

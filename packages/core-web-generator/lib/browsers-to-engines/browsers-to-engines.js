@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.browsersToEngines = void 0;
+exports.browsersToEngines = browsersToEngines;
 const semver = require("semver");
 const bcd = require('@mdn/browser-compat-data');
 function browsersToEngines(browsers) {
@@ -121,7 +121,6 @@ function browsersToEngines(browsers) {
     }
     return out;
 }
-exports.browsersToEngines = browsersToEngines;
 // Not all configs are accurate.
 // Better to use the biggest (by usage) browser per engine as a "trusted" source.
 function browserIsAuthoritiveForEngine(browser, engine) {

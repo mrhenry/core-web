@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.generateMappings = void 0;
+exports.generateMappings = generateMappings;
 const fs = require("fs");
 const path = require("path");
 const parser = require("@babel/parser");
@@ -308,7 +308,6 @@ async function generateMappings(featureMapping) {
     fs.writeFileSync(path.join(coreWebBabelPluginDir, 'lib', 'matchers', "__new_expression_matcher.js"), generateNewExpressionMatcher());
     fs.writeFileSync(path.join(coreWebBabelPluginDir, 'lib', 'matchers', "__new_expression_matcher_map.json"), JSON.stringify(newExpressionMatchers, matcherAST_JSONReplacer));
 }
-exports.generateMappings = generateMappings;
 function stringLiteralsFromArguments(args) {
     if (!args) {
         return [];

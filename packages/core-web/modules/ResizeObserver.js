@@ -2,11 +2,7 @@
 if (!("ResizeObserver"in self
 )) {
 // ResizeObserver
-(function (global, factory) {
-    typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports) :
-    typeof define === 'function' && define.amd ? define(['exports'], factory) :
-    (global = typeof globalThis !== 'undefined' ? globalThis : global || self, factory(global.ResizeObserver = {}));
-})(this, (function (exports) { 'use strict';
+(function (global) {
 
     var resizeObservers = [];
 
@@ -113,7 +109,7 @@ if (!("ResizeObserver"in self
 
     var cache = new WeakMap();
     var scrollRegexp = /auto|scroll/;
-    var verticalRegexp = /^tb|vertical/;
+    var verticalRegexp = /^tb|^vertical/;
     var IE = (/msie|trident/i).test(global.navigator && global.navigator.userAgent);
     var parseDimension = function (pixel) { return parseFloat(pixel || '0'); };
     var size = function (inlineSize, blockSize, switchSizes) {
@@ -507,11 +503,8 @@ if (!("ResizeObserver"in self
         return ResizeObserver;
     }());
 
-    exports.ResizeObserver = ResizeObserver;
-    exports.ResizeObserverEntry = ResizeObserverEntry;
-    exports.ResizeObserverSize = ResizeObserverSize;
+    global.ResizeObserver = ResizeObserver;
+    global.ResizeObserverEntry = ResizeObserverEntry;
 
-    Object.defineProperty(exports, '__esModule', { value: true });
-
-}));
-;self.ResizeObserverEntry = ResizeObserver.ResizeObserverEntry;self.ResizeObserver=ResizeObserver.ResizeObserver;}}).call('object' === typeof window && window || 'object' === typeof self && self || 'object' === typeof global && global || {});
+}(self));
+}}).call('object' === typeof window && window || 'object' === typeof self && self || 'object' === typeof global && global || {});

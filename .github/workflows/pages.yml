@@ -29,8 +29,8 @@ jobs:
         sudo apt-get update
         sudo apt-get install build-essential libcairo2-dev libpango1.0-dev libjpeg-dev libgif-dev librsvg2-dev
 
-    - run: make generate
-    - run: make build-pages
+    - run: npm ci
+    - run: npm run build
 
     - run: |
         git fetch --depth=1 origin pages || true
