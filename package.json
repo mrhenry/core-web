@@ -1,14 +1,19 @@
 {
-  "name": "@mrhenry/core-web-root",
-  "version": "0.0.0",
-  "private": true,
-  "workspaces": [
-    "packages/*"
-  ],
-  "prettier": {
-    "useTabs": true
-  },
-  "volta": {
-    "node": "22.2.0"
-  }
+	"name": "@mrhenry/core-web-root",
+	"version": "0.0.0",
+	"private": true,
+	"workspaces": [
+		"packages/*"
+	],
+	"scripts": {
+		"build": "npm run build --workspaces --if-present",
+		"test": "npm run test --workspaces --if-present",
+		"watch": "npm run watch --workspaces --if-present"
+	},
+	"prettier": {
+		"useTabs": true
+	},
+	"volta": {
+		"node": "22.2.0"
+	}
 }

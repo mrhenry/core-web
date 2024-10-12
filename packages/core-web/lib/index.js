@@ -1,6 +1,9 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.required = exports.has = exports.get = exports.names = void 0;
+exports.names = names;
+exports.get = get;
+exports.has = has;
+exports.required = required;
 const __mapping_js_1 = require("./__mapping.js");
 const __browsers_js_1 = require("./__browsers.js");
 const __engines_js_1 = require("./__engines.js");
@@ -24,15 +27,12 @@ for (let engine of knownEngines) {
 function names() {
     return Array.from(map.keys());
 }
-exports.names = names;
 function get(name) {
     return map.get(name);
 }
-exports.get = get;
 function has(name) {
     return map.has(name);
 }
-exports.has = has;
 ;
 function required(targets, opts = {}) {
     if (opts && opts.debug) {
@@ -100,7 +100,6 @@ function required(targets, opts = {}) {
     }
     return Array.from(new Set(all));
 }
-exports.required = required;
 ;
 const semverCache = new Map();
 const semverRangeCache = new Map();

@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.generateCryptoRandomUUID = void 0;
+exports.generateCryptoRandomUUID = generateCryptoRandomUUID;
 const fs = require("fs");
 const path = require("path");
 const browsers_to_engines_1 = require("../browsers-to-engines/browsers-to-engines");
@@ -28,6 +28,5 @@ async function generateCryptoRandomUUID(mapping) {
         providedByCoreWeb: true,
     });
 }
-exports.generateCryptoRandomUUID = generateCryptoRandomUUID;
 ;
 //# sourceMappingURL=generate-crypto-randomuuid.js.map
