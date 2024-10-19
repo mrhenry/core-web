@@ -1,5 +1,5 @@
 (function(undefined) {
-if (!("TextEncoder"in self&&"TextDecoder"in self
+if (!("TextEncoder"in self&&"TextDecoder"in self&&"Uint8Array"in self&&(new TextEncoder).encode("")instanceof self.Uint8Array&&"\ufefftest=\ufeff"===new TextDecoder("utf-8",{ignoreBOM:!0}).decode((new TextEncoder).encode("\ufefftest=\ufeff"))
 )) {
 // TextEncoder
 /** @define {boolean} */
@@ -431,28 +431,7 @@ var ENCODEINTO_BUILD = false;
 		TextEncoderPrototype["encodeInto"] = polyfill_encodeInto;
 	}
 
-	if (!GlobalTextEncoder) {
-		window["TextDecoder"] = TextDecoder;
-		window["TextEncoder"] = TextEncoder;
-	} else if (ENCODEINTO_BUILD && !(globalTextEncoderPrototype = GlobalTextEncoder["prototype"])["encodeInto"]) {
-		globalTextEncoderInstance = new GlobalTextEncoder;
-		globalTextEncoderPrototype["encodeInto"] = function(string, u8arr) {
-			// Unfortunately, there's no way I can think of to quickly extract the number of bits written and the number of bytes read and such
-			var strLen = string.length|0, u8Len = u8arr.length|0;
-			if (strLen < (u8Len >> 1)) { // in most circumstances, this means its safe. there are still edge-cases which are possible
-				// in many circumstances, we can use the faster native TextEncoder
-				var res8 = globalTextEncoderInstance["encode"](string);
-				var res8Len = res8.length|0;
-				if (res8Len < u8Len) { // if we dont have to worry about read/written
-					u8arr.set( res8 ); // every browser that supports TextEncoder also supports typedarray.prototype.set
-					return {
-						"read": strLen,
-						"written": res8.length|0
-					};
-				}
-			}
-			return polyfill_encodeInto(string, u8arr);
-		};
-	}
+	window["TextDecoder"] = TextDecoder;
+	window["TextEncoder"] = TextEncoder;
 })(typeof global == "" + void 0 ? typeof self == "" + void 0 ? this : self : global);
 }}).call('object' === typeof window && window || 'object' === typeof self && self || 'object' === typeof global && global || {});

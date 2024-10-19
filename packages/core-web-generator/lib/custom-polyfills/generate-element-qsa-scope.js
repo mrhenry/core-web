@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.generateElementQsaScope = void 0;
+exports.generateElementQsaScope = generateElementQsaScope;
 const fs = require("fs");
 const path = require("path");
 const browsers_to_engines_1 = require("../browsers-to-engines/browsers-to-engines");
@@ -31,6 +31,5 @@ async function generateElementQsaScope(mapping) {
         providedByCoreWeb: true,
     });
 }
-exports.generateElementQsaScope = generateElementQsaScope;
 ;
 //# sourceMappingURL=generate-element-qsa-scope.js.map

@@ -134,6 +134,18 @@ function handleFeature(compat, name, feature) {
 		return true;
 	}
 
+	if (name === 'Element.prototype.placeholder') {
+		if (mapPrototypeFeatureAPI(compat, `HTMLInputElement.prototype.placeholder`, feature.name, feature)) {
+			return true;
+		}
+	}
+
+	if (name === 'Element.prototype.dataset') {
+		if (mapPrototypeFeatureAPI(compat, `HTMLElement.prototype.dataset`, feature.name, feature)) {
+			return true;
+		}
+	}
+
 	if (name === 'Event.scrollend') {
 		if (mapPropertyFeatureAPI(compat, `Element.scrollend_event`, feature.name, feature)) {
 			return true;
