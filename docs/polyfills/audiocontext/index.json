@@ -6,7 +6,7 @@
     "name": "AudioContext",
     "deps": [],
     "engines": {},
-    "size": 885,
+    "size": 872,
     "isAlias": false,
     "providedByCoreWeb": false
   },
@@ -1378,6 +1378,6 @@
     "hasTests": false,
     "isTestable": true,
     "isPublic": true,
-    "size": 885
+    "size": 872
   }
 }

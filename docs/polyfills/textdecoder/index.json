@@ -7,28 +7,28 @@
     "deps": [],
     "browsers": {
       "android": "<4.4",
-      "chrome": "<38",
+      "chrome": "<45",
       "edge": "<79",
       "edge_mob": "<79",
-      "firefox": "<19",
-      "firefox_mob": "<19",
+      "firefox": "<54",
+      "firefox_mob": "<54",
       "ie": "*",
       "ie_mob": "*",
       "opera": "<25",
       "op_mob": "<25",
-      "safari": "<10.1",
-      "ios_saf": "<10.3",
+      "safari": "<12.0",
+      "ios_saf": "<12.0",
       "samsung_mob": "<3.0"
     },
     "engines": {
-      "Blink": "28 - 37",
+      "Blink": "28 - 44",
       "EdgeHTML": ">= 12",
-      "Gecko": "1.7 - 18",
+      "Gecko": "1.7 - 53",
       "Trident": ">= 4.0",
       "Presto": ">= 1",
-      "WebKit": "85 - 602.1.50"
+      "WebKit": "85 - 605.1.33"
     },
-    "size": 3311,
+    "size": 3071,
     "isAlias": false,
     "providedByCoreWeb": false
   },
@@ -552,13 +552,13 @@
   },
   "polyfilled": {
     "android": "<4.4",
-    "chrome": "<38",
+    "chrome": "<45",
     "edge": "<79",
-    "firefox": "<19",
+    "firefox": "<54",
     "ie": "*",
     "opera": "<25",
-    "safari": "<10.1",
-    "ios_saf": "<10.3"
+    "safari": "<12.0",
+    "ios_saf": "<12.0"
   },
   "native": {
     "android": {
@@ -606,24 +606,24 @@
     "repo": "https://github.com/anonyco/FastestSmallestTextEncoderDecoder",
     "browsers": {
       "android": "*",
-      "chrome": "<38",
+      "chrome": "<45",
       "edge": "*",
       "edge_mob": "*",
-      "firefox": "<19",
-      "firefox_mob": "<19",
+      "firefox": "<54",
+      "firefox_mob": "<54",
       "ie": "*",
       "ie_mob": "*",
       "opera": "<25",
       "op_mob": "<25",
-      "safari": "<10.1",
-      "ios_saf": "<10.3",
+      "safari": "<12.0",
+      "ios_saf": "<12.0",
       "samsung_mob": "<3.0"
     },
-    "detectSource": "\"TextEncoder\"in self&&\"TextDecoder\"in self\n",
+    "detectSource": "\"TextEncoder\"in self&&\"TextDecoder\"in self&&\"Uint8Array\"in self&&(new TextEncoder).encode(\"\")instanceof self.Uint8Array&&\"\\ufefftest=\\ufeff\"===new TextDecoder(\"utf-8\",{ignoreBOM:!0}).decode((new TextEncoder).encode(\"\\ufefftest=\\ufeff\"))\n",
     "baseDir": "TextEncoder",
     "hasTests": true,
     "isTestable": true,
     "isPublic": true,
-    "size": 3311
+    "size": 3071
   }
 }

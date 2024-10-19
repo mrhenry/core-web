@@ -11,7 +11,7 @@
     "engines": {
       "Trident": "4.0 - 5.0"
     },
-    "size": 1242,
+    "size": 1216,
     "isAlias": false,
     "providedByCoreWeb": false
   },
@@ -194,6 +194,6 @@
     "hasTests": true,
     "isTestable": true,
     "isPublic": true,
-    "size": 1242
+    "size": 1216
   }
 }
