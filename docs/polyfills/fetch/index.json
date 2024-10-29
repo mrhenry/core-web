@@ -349,13 +349,16 @@
             "version_added": "15"
           },
           "firefox": {
-            "version_added": false
+            "version_added": "preview"
           },
           "firefox_android": {
             "version_added": false
           },
           "ie": {
             "version_added": false
+          },
+          "nodejs": {
+            "version_added": "18.0.0"
           },
           "oculus": {
             "version_added": "5.0"
