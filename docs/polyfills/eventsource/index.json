@@ -654,12 +654,30 @@
           "edge": {
             "version_added": "79"
           },
-          "firefox": {
-            "version_added": "53"
-          },
-          "firefox_android": {
-            "version_added": "53"
-          },
+          "firefox": [
+            {
+              "version_added": "133"
+            },
+            {
+              "notes": "Not supported in service workers.",
+              "partial_implementation": true,
+              "version_added": "53",
+              "version_last": "132",
+              "version_removed": "133"
+            }
+          ],
+          "firefox_android": [
+            {
+              "version_added": "133"
+            },
+            {
+              "notes": "Not supported in service workers.",
+              "partial_implementation": true,
+              "version_added": "53",
+              "version_last": "132",
+              "version_removed": "133"
+            }
+          ],
           "ie": {
             "version_added": false
           },
