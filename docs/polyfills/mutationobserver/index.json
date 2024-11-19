@@ -308,7 +308,7 @@
             "version_added": "18"
           },
           "chrome_android": {
-            "notes": "Before Chrome 33, <code>attributes: true</code> is required when using <code>attributeFilter</code> or <code>attributeOldValue</code>. If <code>attributes: true</code> is not present, then Chrome throws a syntax error.",
+            "notes": "Before Chrome Android 33, <code>attributes: true</code> is required when using <code>attributeFilter</code> or <code>attributeOldValue</code>. If <code>attributes: true</code> is not present, then Chrome Android throws a syntax error.",
             "version_added": "18"
           },
           "edge": {
@@ -320,7 +320,7 @@
             "version_added": "14"
           },
           "firefox_android": {
-            "notes": "Before Firefox 36, <code>attributes: true</code> is required when using <code>attributeFilter</code> or <code>attributeOldValue</code>. If <code>attributes: true</code> is not present, then Firefox throws a syntax error.",
+            "notes": "Before Firefox for Android 36, <code>attributes: true</code> is required when using <code>attributeFilter</code> or <code>attributeOldValue</code>. If <code>attributes: true</code> is not present, then Firefox for Android throws a syntax error.",
             "version_added": "14"
           },
           "ie": {
@@ -328,7 +328,7 @@
             "version_added": "11"
           },
           "oculus": {
-            "notes": "Before Chrome 33, <code>attributes: true</code> is required when using <code>attributeFilter</code> or <code>attributeOldValue</code>. If <code>attributes: true</code> is not present, then Chrome throws a syntax error.",
+            "notes": "Before Quest Browser 5.0, <code>attributes: true</code> is required when using <code>attributeFilter</code> or <code>attributeOldValue</code>. If <code>attributes: true</code> is not present, then Quest Browser throws a syntax error.",
             "version_added": "5.0"
           },
           "opera": {
@@ -336,7 +336,7 @@
             "version_added": "15"
           },
           "opera_android": {
-            "notes": "Before Opera 20, <code>attributes: true</code> is required when using <code>attributeFilter</code> or <code>attributeOldValue</code>. If <code>attributes: true</code> is not present, then Opera throws a syntax error.",
+            "notes": "Before Opera Android 20, <code>attributes: true</code> is required when using <code>attributeFilter</code> or <code>attributeOldValue</code>. If <code>attributes: true</code> is not present, then Opera Android throws a syntax error.",
             "version_added": "14"
           },
           "safari": {

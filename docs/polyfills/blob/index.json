@@ -61,7 +61,7 @@
             "version_added": "13"
           },
           "firefox_android": {
-            "notes": "Before Firefox 16, the second parameter, when set to <code>null</code> or <code>undefined</code>, leads to an error instead of being handled as an empty dictionary.",
+            "notes": "Before Firefox for Android 16, the second parameter, when set to <code>null</code> or <code>undefined</code>, leads to an error instead of being handled as an empty dictionary.",
             "version_added": "14"
           },
           "ie": {
@@ -408,7 +408,7 @@
           ],
           "firefox_android": [
             {
-              "notes": "Before Firefox 12, there was a bug that affected the behavior of <code>Blob.slice()</code>; it did not work for <code>start</code> and <code>end</code> positions outside the range of signed 64-bit values; it has now been fixed to support unsigned 64-bit values.",
+              "notes": "Before Firefox for Android 14, there was a bug that affected the behavior of <code>Blob.slice()</code>; it did not work for <code>start</code> and <code>end</code> positions outside the range of signed 64-bit values; it has now been fixed to support unsigned 64-bit values.",
               "version_added": "14"
             },
             {

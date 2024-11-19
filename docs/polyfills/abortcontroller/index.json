@@ -312,6 +312,78 @@
         "tags": [
           "web-features:aborting"
         ]
+      },
+      "reason_parameter": {
+        "__compat": {
+          "description": "<code>reason</code> parameter",
+          "source_file": "api/AbortController.json",
+          "spec_url": "https://dom.spec.whatwg.org/#abortsignal-abort-reason",
+          "status": {
+            "deprecated": false,
+            "experimental": false,
+            "standard_track": true
+          },
+          "support": {
+            "chrome": {
+              "version_added": "98"
+            },
+            "chrome_android": {
+              "version_added": "98"
+            },
+            "deno": {
+              "version_added": "1.16"
+            },
+            "edge": {
+              "version_added": "98"
+            },
+            "firefox": {
+              "version_added": "97"
+            },
+            "firefox_android": {
+              "version_added": "97"
+            },
+            "ie": {
+              "version_added": false
+            },
+            "nodejs": [
+              {
+                "version_added": "17.2.0"
+              },
+              {
+                "version_added": "16.14.0",
+                "version_last": "16.17.0",
+                "version_removed": "17.0.0"
+              }
+            ],
+            "oculus": {
+              "version_added": "20.0"
+            },
+            "opera": {
+              "version_added": "84"
+            },
+            "opera_android": {
+              "version_added": "68"
+            },
+            "safari": {
+              "version_added": "15.4"
+            },
+            "safari_ios": {
+              "version_added": "15.4"
+            },
+            "samsunginternet_android": {
+              "version_added": "18.0"
+            },
+            "webview_android": {
+              "version_added": "98"
+            },
+            "webview_ios": {
+              "version_added": "15.4"
+            }
+          },
+          "tags": [
+            "web-features:aborting"
+          ]
+        }
       }
     },
     "signal": {

@@ -80,18 +80,9 @@
           "ie": {
             "version_added": false
           },
-          "nodejs": [
-            {
-              "version_added": "11.0.0"
-            },
-            {
-              "notes": "Available as a part of the <code>util</code> module.",
-              "partial_implementation": true,
-              "version_added": "8.3.0",
-              "version_last": "10.9.0",
-              "version_removed": "11.0.0"
-            }
-          ],
+          "nodejs": {
+            "version_added": "8.3.0"
+          },
           "oculus": {
             "version_added": "5.0"
           },
@@ -171,9 +162,7 @@
           {
             "notes": "Available as a part of the <code>util</code> module.",
             "partial_implementation": true,
-            "version_added": "8.3.0",
-            "version_last": "10.9.0",
-            "version_removed": "11.0.0"
+            "version_added": "8.3.0"
           }
         ],
         "oculus": {
@@ -249,18 +238,9 @@
           "ie": {
             "version_added": false
           },
-          "nodejs": [
-            {
-              "version_added": "11.0.0"
-            },
-            {
-              "notes": "Available as a part of the <code>util</code> module.",
-              "partial_implementation": true,
-              "version_added": "8.3.0",
-              "version_last": "10.9.0",
-              "version_removed": "11.0.0"
-            }
-          ],
+          "nodejs": {
+            "version_added": "8.3.0"
+          },
           "oculus": {
             "version_added": "5.0"
           },

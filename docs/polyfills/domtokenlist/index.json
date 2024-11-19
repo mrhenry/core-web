@@ -1150,7 +1150,7 @@
             "version_added": "50"
           },
           "chrome_android": {
-            "notes": "Before Chrome 50, this property was part of the deprecated child <code>DOMSettableTokenList</code> interface.",
+            "notes": "Before Chrome Android 50, this property was part of the deprecated child <code>DOMSettableTokenList</code> interface.",
             "version_added": "50"
           },
           "edge": {
@@ -1166,7 +1166,7 @@
             "version_added": false
           },
           "oculus": {
-            "notes": "Before Chrome 50, this property was part of the deprecated child <code>DOMSettableTokenList</code> interface.",
+            "notes": "Before Quest Browser 5.0, this property was part of the deprecated child <code>DOMSettableTokenList</code> interface.",
             "version_added": "5.0"
           },
           "opera": {
@@ -1174,7 +1174,7 @@
             "version_added": "37"
           },
           "opera_android": {
-            "notes": "Before Opera 37, this property was part of the deprecated child <code>DOMSettableTokenList</code> interface.",
+            "notes": "Before Opera Android 37, this property was part of the deprecated child <code>DOMSettableTokenList</code> interface.",
             "version_added": "37"
           },
           "safari": {
@@ -1188,7 +1188,7 @@
             "version_added": "5.0"
           },
           "webview_android": {
-            "notes": "Before Chrome 50, this property was part of the deprecated child <code>DOMSettableTokenList</code> interface.",
+            "notes": "Before WebView Android 50, this property was part of the deprecated child <code>DOMSettableTokenList</code> interface.",
             "version_added": "50"
           },
           "webview_ios": {

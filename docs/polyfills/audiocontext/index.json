@@ -41,8 +41,8 @@
           "chrome_android": [
             {
               "notes": [
-                "Before Chrome 66, each tab is limited to 6 audio contexts in Chrome; attempting to create more will throw a <code>DOMException</code>. For details see <a href='https://developer.mozilla.org/docs/Web/API/AudioContext/AudioContext#Per-tab_audio_context_limitation_in_Chrome'>Per-tab audio context limitation in Chrome</a>.",
-                "If <code>latencyHint</code> isn't valid, Chrome throws a <code>TypeError</code> exception. See <a href='https://developer.mozilla.org/docs/Web/API/AudioContext/AudioContext#Non-standard_exceptions_in_Chrome'>Non-standard exceptions in Chrome</a> for details."
+                "Before Chrome Android 66, each tab is limited to 6 audio contexts in Chrome Android; attempting to create more will throw a <code>DOMException</code>. For details see <a href='https://developer.mozilla.org/docs/Web/API/AudioContext/AudioContext#Per-tab_audio_context_limitation_in_Chrome Android'>Per-tab audio context limitation in Chrome Android</a>.",
+                "If <code>latencyHint</code> isn't valid, Chrome Android throws a <code>TypeError</code> exception. See <a href='https://developer.mozilla.org/docs/Web/API/AudioContext/AudioContext#Non-standard_exceptions_in_Chrome Android'>Non-standard exceptions in Chrome Android</a> for details."
               ],
               "version_added": "35"
             },
@@ -67,8 +67,8 @@
           },
           "oculus": {
             "notes": [
-              "Before Chrome 66, each tab is limited to 6 audio contexts in Chrome; attempting to create more will throw a <code>DOMException</code>. For details see <a href='https://developer.mozilla.org/docs/Web/API/AudioContext/AudioContext#Per-tab_audio_context_limitation_in_Chrome'>Per-tab audio context limitation in Chrome</a>.",
-              "If <code>latencyHint</code> isn't valid, Chrome throws a <code>TypeError</code> exception. See <a href='https://developer.mozilla.org/docs/Web/API/AudioContext/AudioContext#Non-standard_exceptions_in_Chrome'>Non-standard exceptions in Chrome</a> for details."
+              "Before Quest Browser 5.0, each tab is limited to 6 audio contexts in Quest Browser; attempting to create more will throw a <code>DOMException</code>. For details see <a href='https://developer.mozilla.org/docs/Web/API/AudioContext/AudioContext#Per-tab_audio_context_limitation_in_Quest Browser'>Per-tab audio context limitation in Quest Browser</a>.",
+              "If <code>latencyHint</code> isn't valid, Quest Browser throws a <code>TypeError</code> exception. See <a href='https://developer.mozilla.org/docs/Web/API/AudioContext/AudioContext#Non-standard_exceptions_in_Quest Browser'>Non-standard exceptions in Quest Browser</a> for details."
             ],
             "version_added": "5.0"
           },
@@ -790,7 +790,7 @@
             "version_added": "68"
           },
           "firefox_android": {
-            "notes": "Firefox 68 implements the updated standard's definition of the \"first\" audio track; now the first track is the one whose ID comes first lexicographically.",
+            "notes": "Firefox for Android 68 implements the updated standard's definition of the \"first\" audio track; now the first track is the one whose ID comes first lexicographically.",
             "version_added": "68"
           },
           "ie": {

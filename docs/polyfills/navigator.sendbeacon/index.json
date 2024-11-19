@@ -72,7 +72,7 @@
           "version_added": "26"
         },
         "opera_android": {
-          "notes": "Starting in Opera 43, this method cannot send a <code>Blob</code> whose type is not CORS safelisted. This is a temporary change until a mitigation can be found for the security issues that this creates. For more information, see <a href='https://crbug.com/40087600'>bug 40087600</a>.",
+          "notes": "Starting in Chrome 59, this method cannot send a <code>Blob</code> whose type is not CORS safelisted. This is a temporary change until a mitigation can be found for the security issues that this creates. For more information, see <a href='https://crbug.com/40087600'>bug 40087600</a>.",
           "version_added": "29"
         },
         "safari": {
@@ -82,7 +82,7 @@
           "version_added": "11.3"
         },
         "samsunginternet_android": {
-          "notes": "Starting in Samsung Internet 7.0, this method cannot send a <code>Blob</code> whose type is not CORS safelisted. This is a temporary change until a mitigation can be found for the security issues that this creates. For more information, see <a href='https://crbug.com/40087600'>bug 40087600</a>.",
+          "notes": "Starting in Chrome 59, this method cannot send a <code>Blob</code> whose type is not CORS safelisted. This is a temporary change until a mitigation can be found for the security issues that this creates. For more information, see <a href='https://crbug.com/40087600'>bug 40087600</a>.",
           "version_added": "4.0"
         },
         "webview_android": {

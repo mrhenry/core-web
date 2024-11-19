@@ -160,7 +160,7 @@
           "firefox_android": {
             "notes": [
               "No support for <code>inline</code> option.",
-              "Before Firefox 58, <code>nearest</code> and <code>center</code> values for the <code>block</code> option was unsupported. See <a href='https://bugzil.la/1389274'>bug 1389274</a>."
+              "Before Firefox for Android 58, <code>nearest</code> and <code>center</code> values for the <code>block</code> option was unsupported. See <a href='https://bugzil.la/1389274'>bug 1389274</a>."
             ],
             "version_added": "36"
           },

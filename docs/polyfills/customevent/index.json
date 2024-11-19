@@ -66,16 +66,9 @@
           "ie": {
             "version_added": false
           },
-          "nodejs": [
-            {
-              "version_added": "18.7.0"
-            },
-            {
-              "version_added": "16.17.0",
-              "version_last": "16.17.0",
-              "version_removed": "17.0.0"
-            }
-          ],
+          "nodejs": {
+            "version_added": "19.0.0"
+          },
           "oculus": {
             "version_added": "5.0"
           },
@@ -134,16 +127,9 @@
         "ie": {
           "version_added": "9"
         },
-        "nodejs": [
-          {
-            "version_added": "18.7.0"
-          },
-          {
-            "version_added": "16.17.0",
-            "version_last": "16.17.0",
-            "version_removed": "17.0.0"
-          }
-        ],
+        "nodejs": {
+          "version_added": "19.0.0"
+        },
         "oculus": {
           "version_added": "5.0"
         },
@@ -202,16 +188,9 @@
           "ie": {
             "version_added": "9"
           },
-          "nodejs": [
-            {
-              "version_added": "18.7.0"
-            },
-            {
-              "version_added": "16.17.0",
-              "version_last": "16.17.0",
-              "version_removed": "17.0.0"
-            }
-          ],
+          "nodejs": {
+            "version_added": "19.0.0"
+          },
           "oculus": {
             "version_added": "5.0"
           },
@@ -271,6 +250,9 @@
           "ie": {
             "version_added": "9"
           },
+          "nodejs": {
+            "version_added": false
+          },
           "oculus": {
             "version_added": "5.0"
           },
@@ -328,6 +310,9 @@
           },
           "ie": {
             "version_added": false
+          },
+          "nodejs": {
+            "version_added": "19.0.0"
           },
           "oculus": {
             "version_added": "5.0"

@@ -62,7 +62,7 @@
           "version_added": "21"
         },
         "firefox_android": {
-          "notes": "Before Firefox 49, results for URL using the blob scheme incorrectly returned null.",
+          "notes": "Before Firefox for Android 49, results for URL using the blob scheme incorrectly returned null.",
           "version_added": "21"
         },
         "ie": {
