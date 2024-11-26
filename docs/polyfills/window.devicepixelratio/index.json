@@ -60,12 +60,12 @@
           "version_added": "11.1"
         },
         "safari": {
-          "notes": "In Safari, the <code>devicePixelRatio</code> does not change when the page is zoomed. See <a href='https://webkit.org/b/124862'>bug 124862</a>.",
+          "notes": "In Safari, the <code>devicePixelRatio</code> does not change when the page is zoomed. See <a href=\"https://webkit.org/b/124862\">bug 124862</a>.",
           "partial_implementation": true,
           "version_added": "3"
         },
         "safari_ios": {
-          "notes": "In Safari on iOS, the <code>devicePixelRatio</code> does not change when the page is zoomed. See <a href='https://webkit.org/b/124862'>bug 124862</a>.",
+          "notes": "In Safari on iOS, the <code>devicePixelRatio</code> does not change when the page is zoomed. See <a href=\"https://webkit.org/b/124862\">bug 124862</a>.",
           "partial_implementation": true,
           "version_added": "2"
         },
@@ -76,7 +76,7 @@
           "version_added": "4.4"
         },
         "webview_ios": {
-          "notes": "In WebView on iOS, the <code>devicePixelRatio</code> does not change when the page is zoomed. See <a href='https://webkit.org/b/124862'>bug 124862</a>.",
+          "notes": "In WebView on iOS, the <code>devicePixelRatio</code> does not change when the page is zoomed. See <a href=\"https://webkit.org/b/124862\">bug 124862</a>.",
           "partial_implementation": true,
           "version_added": "2"
         }
@@ -109,12 +109,12 @@
       "version_added": "11.1"
     },
     "safari": {
-      "notes": "In Safari, the <code>devicePixelRatio</code> does not change when the page is zoomed. See <a href='https://webkit.org/b/124862'>bug 124862</a>.",
+      "notes": "In Safari, the <code>devicePixelRatio</code> does not change when the page is zoomed. See <a href=\"https://webkit.org/b/124862\">bug 124862</a>.",
       "partial_implementation": true,
       "version_added": "3"
     },
     "ios_saf": {
-      "notes": "In Safari on iOS, the <code>devicePixelRatio</code> does not change when the page is zoomed. See <a href='https://webkit.org/b/124862'>bug 124862</a>.",
+      "notes": "In Safari on iOS, the <code>devicePixelRatio</code> does not change when the page is zoomed. See <a href=\"https://webkit.org/b/124862\">bug 124862</a>.",
       "partial_implementation": true,
       "version_added": "2"
     }

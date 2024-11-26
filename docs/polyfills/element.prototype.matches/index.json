@@ -90,7 +90,7 @@
             "alternative_name": "mozMatchesSelector",
             "notes": [
               "Before Firefox 4, invalid selector strings caused false to be returned instead of throwing an exception.",
-              "See <a href='https://bugzil.la/1119718'>bug 1119718</a> for removal."
+              "See <a href=\"https://bugzil.la/1119718\">bug 1119718</a> for removal."
             ],
             "version_added": "3.6"
           }
@@ -105,7 +105,7 @@
           },
           {
             "alternative_name": "mozMatchesSelector",
-            "notes": "See <a href='https://bugzil.la/1119718'>bug 1119718</a> for removal.",
+            "notes": "See <a href=\"https://bugzil.la/1119718\">bug 1119718</a> for removal.",
             "version_added": "4"
           }
         ],
@@ -256,7 +256,7 @@
         "alternative_name": "mozMatchesSelector",
         "notes": [
           "Before Firefox 4, invalid selector strings caused false to be returned instead of throwing an exception.",
-          "See <a href='https://bugzil.la/1119718'>bug 1119718</a> for removal."
+          "See <a href=\"https://bugzil.la/1119718\">bug 1119718</a> for removal."
         ],
         "version_added": "3.6"
       }

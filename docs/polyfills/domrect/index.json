@@ -299,6 +299,7 @@
     },
     "height": {
       "__compat": {
+        "mdn_url": "https://developer.mozilla.org/docs/Web/API/DOMRect/height",
         "source_file": "api/DOMRect.json",
         "spec_url": "https://drafts.fxtf.org/geometry/#dom-domrect-height",
         "status": {
@@ -354,6 +355,7 @@
     },
     "width": {
       "__compat": {
+        "mdn_url": "https://developer.mozilla.org/docs/Web/API/DOMRect/width",
         "source_file": "api/DOMRect.json",
         "spec_url": "https://drafts.fxtf.org/geometry/#dom-domrect-width",
         "status": {
@@ -464,6 +466,7 @@
     },
     "x": {
       "__compat": {
+        "mdn_url": "https://developer.mozilla.org/docs/Web/API/DOMRect/x",
         "source_file": "api/DOMRect.json",
         "spec_url": "https://drafts.fxtf.org/geometry/#dom-domrect-x",
         "status": {
@@ -519,6 +522,7 @@
     },
     "y": {
       "__compat": {
+        "mdn_url": "https://developer.mozilla.org/docs/Web/API/DOMRect/y",
         "source_file": "api/DOMRect.json",
         "spec_url": "https://drafts.fxtf.org/geometry/#dom-domrect-y",
         "status": {

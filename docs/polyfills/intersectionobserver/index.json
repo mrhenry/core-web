@@ -60,7 +60,7 @@
             "version_added": "15"
           },
           "firefox": {
-            "notes": "Before version 96, the constructor throws a <code>DOMException</code> if the <code>options.rootMargin</code> option is passed an empty string (see <a href='https://bugzil.la/1738791'>bug 1738791</a>).",
+            "notes": "Before version 96, the constructor throws a <code>DOMException</code> if the <code>options.rootMargin</code> option is passed an empty string (see <a href=\"https://bugzil.la/1738791\">bug 1738791</a>).",
             "version_added": "55"
           },
           "firefox_android": {
@@ -284,7 +284,7 @@
             "version_added": "51"
           },
           "edge": {
-            "notes": "Available since <a href='https://developer.microsoft.com/microsoft-edge/platform/status/intersectionobserver/'>Windows Insider Preview Build 14986</a>.",
+            "notes": "Available since <a href=\"https://developer.microsoft.com/microsoft-edge/platform/status/intersectionobserver/\">Windows Insider Preview Build 14986</a>.",
             "version_added": "15"
           },
           "firefox": {
@@ -578,7 +578,7 @@
             "version_added": "51"
           },
           "edge": {
-            "notes": "Available since <a href='https://developer.microsoft.com/microsoft-edge/platform/status/intersectionobserver/'>Windows Insider Preview Build 14986</a>.",
+            "notes": "Available since <a href=\"https://developer.microsoft.com/microsoft-edge/platform/status/intersectionobserver/\">Windows Insider Preview Build 14986</a>.",
             "version_added": "15"
           },
           "firefox": {
@@ -752,7 +752,7 @@
             "version_added": "51"
           },
           "edge": {
-            "notes": "Available since <a href='https://developer.microsoft.com/microsoft-edge/platform/status/intersectionobserver/'>Windows Insider Preview Build 14986</a>.",
+            "notes": "Available since <a href=\"https://developer.microsoft.com/microsoft-edge/platform/status/intersectionobserver/\">Windows Insider Preview Build 14986</a>.",
             "version_added": "15"
           },
           "firefox": {

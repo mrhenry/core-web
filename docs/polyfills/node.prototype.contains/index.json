@@ -51,7 +51,7 @@
           "version_added": "9"
         },
         "ie": {
-          "notes": "Only supported for <a href='https://developer.mozilla.org/docs/Web/API/HTMLElement'><code>HTMLElement</code></a>, not all <code>Node</code> objects.",
+          "notes": "Only supported for <a href=\"https://developer.mozilla.org/docs/Web/API/HTMLElement\"><code>HTMLElement</code></a>, not all <code>Node</code> objects.",
           "partial_implementation": true,
           "version_added": "9"
         },
@@ -102,7 +102,7 @@
       "version_added": "9"
     },
     "ie": {
-      "notes": "Only supported for <a href='https://developer.mozilla.org/docs/Web/API/HTMLElement'><code>HTMLElement</code></a>, not all <code>Node</code> objects.",
+      "notes": "Only supported for <a href=\"https://developer.mozilla.org/docs/Web/API/HTMLElement\"><code>HTMLElement</code></a>, not all <code>Node</code> objects.",
       "partial_implementation": true,
       "version_added": "9"
     },

@@ -64,7 +64,7 @@
           },
           {
             "notes": [
-              "Only supported for <a href='https://developer.mozilla.org/docs/Web/API/HTMLElement'><code>HTMLElement</code></a>, not all <code>Element</code> objects, such as <a href='https://developer.mozilla.org/docs/Web/API/SVGElement'><code>SVGElement</code></a>.",
+              "Only supported for <a href=\"https://developer.mozilla.org/docs/Web/API/HTMLElement\"><code>HTMLElement</code></a>, not all <code>Element</code> objects, such as <a href=\"https://developer.mozilla.org/docs/Web/API/SVGElement\"><code>SVGElement</code></a>.",
               "No support for <code>smooth</code> behavior."
             ],
             "partial_implementation": true,
@@ -81,7 +81,7 @@
         },
         "ie": {
           "notes": [
-            "Only supported for <a href='https://developer.mozilla.org/docs/Web/API/HTMLElement'><code>HTMLElement</code></a>, not all <code>Element</code> objects, such as <a href='https://developer.mozilla.org/docs/Web/API/SVGElement'><code>SVGElement</code></a>.",
+            "Only supported for <a href=\"https://developer.mozilla.org/docs/Web/API/HTMLElement\"><code>HTMLElement</code></a>, not all <code>Element</code> objects, such as <a href=\"https://developer.mozilla.org/docs/Web/API/SVGElement\"><code>SVGElement</code></a>.",
             "No support for <code>smooth</code> behavior or <code>center</code> options."
           ],
           "partial_implementation": true,
@@ -153,14 +153,14 @@
           "firefox": {
             "notes": [
               "No support for <code>inline</code> option.",
-              "Before Firefox 58, <code>nearest</code> and <code>center</code> values for the <code>block</code> option was unsupported. See <a href='https://bugzil.la/1389274'>bug 1389274</a>."
+              "Before Firefox 58, <code>nearest</code> and <code>center</code> values for the <code>block</code> option was unsupported. See <a href=\"https://bugzil.la/1389274\">bug 1389274</a>."
             ],
             "version_added": "36"
           },
           "firefox_android": {
             "notes": [
               "No support for <code>inline</code> option.",
-              "Before Firefox for Android 58, <code>nearest</code> and <code>center</code> values for the <code>block</code> option was unsupported. See <a href='https://bugzil.la/1389274'>bug 1389274</a>."
+              "Before Firefox for Android 58, <code>nearest</code> and <code>center</code> values for the <code>block</code> option was unsupported. See <a href=\"https://bugzil.la/1389274\">bug 1389274</a>."
             ],
             "version_added": "36"
           },
@@ -233,7 +233,7 @@
       },
       {
         "notes": [
-          "Only supported for <a href='https://developer.mozilla.org/docs/Web/API/HTMLElement'><code>HTMLElement</code></a>, not all <code>Element</code> objects, such as <a href='https://developer.mozilla.org/docs/Web/API/SVGElement'><code>SVGElement</code></a>.",
+          "Only supported for <a href=\"https://developer.mozilla.org/docs/Web/API/HTMLElement\"><code>HTMLElement</code></a>, not all <code>Element</code> objects, such as <a href=\"https://developer.mozilla.org/docs/Web/API/SVGElement\"><code>SVGElement</code></a>.",
           "No support for <code>smooth</code> behavior."
         ],
         "partial_implementation": true,
@@ -247,7 +247,7 @@
     },
     "ie": {
       "notes": [
-        "Only supported for <a href='https://developer.mozilla.org/docs/Web/API/HTMLElement'><code>HTMLElement</code></a>, not all <code>Element</code> objects, such as <a href='https://developer.mozilla.org/docs/Web/API/SVGElement'><code>SVGElement</code></a>.",
+        "Only supported for <a href=\"https://developer.mozilla.org/docs/Web/API/HTMLElement\"><code>HTMLElement</code></a>, not all <code>Element</code> objects, such as <a href=\"https://developer.mozilla.org/docs/Web/API/SVGElement\"><code>SVGElement</code></a>.",
         "No support for <code>smooth</code> behavior or <code>center</code> options."
       ],
       "partial_implementation": true,
