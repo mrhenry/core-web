@@ -151,7 +151,10 @@
             "partial_implementation": true,
             "version_added": "13.4"
           }
-        }
+        },
+        "tags": [
+          "web-features:web-animations"
+        ]
       }
     },
     "options_composite_parameter": {
@@ -207,7 +210,10 @@
           "webview_ios": {
             "version_added": "16"
           }
-        }
+        },
+        "tags": [
+          "web-features:web-animations"
+        ]
       }
     },
     "options_id_parameter": {
@@ -263,7 +269,10 @@
           "webview_ios": {
             "version_added": "13.4"
           }
-        }
+        },
+        "tags": [
+          "web-features:web-animations"
+        ]
       }
     },
     "options_iterationComposite_parameter": {
@@ -319,7 +328,10 @@
           "webview_ios": {
             "version_added": false
           }
-        }
+        },
+        "tags": [
+          "web-features:web-animations"
+        ]
       }
     },
     "options_pseudoElement_parameter": {
@@ -375,7 +387,10 @@
           "webview_ios": {
             "version_added": "14"
           }
-        }
+        },
+        "tags": [
+          "web-features:web-animations"
+        ]
       }
     },
     "options_rangeEnd_parameter": {
@@ -431,7 +446,10 @@
           "webview_ios": {
             "version_added": false
           }
-        }
+        },
+        "tags": [
+          "web-features:web-animations"
+        ]
       }
     },
     "options_rangeStart_parameter": {
@@ -487,7 +505,10 @@
           "webview_ios": {
             "version_added": false
           }
-        }
+        },
+        "tags": [
+          "web-features:web-animations"
+        ]
       }
     },
     "options_timeline_parameter": {
@@ -543,7 +564,10 @@
           "webview_ios": {
             "version_added": "16"
           }
-        }
+        },
+        "tags": [
+          "web-features:web-animations"
+        ]
       }
     }
   },

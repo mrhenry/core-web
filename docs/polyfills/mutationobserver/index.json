@@ -131,7 +131,10 @@
               "version_added": "6"
             }
           ]
-        }
+        },
+        "tags": [
+          "web-features:mutationobserver"
+        ]
       }
     },
     "__compat": {
@@ -234,7 +237,10 @@
             "version_added": "6"
           }
         ]
-      }
+      },
+      "tags": [
+        "web-features:mutationobserver"
+      ]
     },
     "disconnect": {
       "__compat": {
@@ -289,7 +295,10 @@
           "webview_ios": {
             "version_added": "6"
           }
-        }
+        },
+        "tags": [
+          "web-features:mutationobserver"
+        ]
       }
     },
     "observe": {
@@ -359,7 +368,10 @@
             "notes": "Before Safari iOS 10.3, <code>attributes: true</code> is required when using <code>attributeFilter</code> or <code>attributeOldValue</code>. If <code>attributes: true</code> is not present, then Safari throws a syntax error.",
             "version_added": "6"
           }
-        }
+        },
+        "tags": [
+          "web-features:mutationobserver"
+        ]
       }
     },
     "takeRecords": {
@@ -415,7 +427,10 @@
           "webview_ios": {
             "version_added": "6"
           }
-        }
+        },
+        "tags": [
+          "web-features:mutationobserver"
+        ]
       }
     }
   },

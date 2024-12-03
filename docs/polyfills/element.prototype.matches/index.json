@@ -197,7 +197,10 @@
             "version_added": "4.2"
           }
         ]
-      }
+      },
+      "tags": [
+        "web-features:dom"
+      ]
     }
   },
   "polyfilled": {

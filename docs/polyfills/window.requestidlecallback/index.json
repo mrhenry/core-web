@@ -94,7 +94,10 @@
           "impl_url": "https://webkit.org/b/164193",
           "version_added": false
         }
-      }
+      },
+      "tags": [
+        "web-features:requestidlecallback"
+      ]
     }
   },
   "polyfilled": {

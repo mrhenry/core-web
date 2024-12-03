@@ -89,7 +89,10 @@
         "webview_ios": {
           "version_added": "10"
         }
-      }
+      },
+      "tags": [
+        "web-features:dom"
+      ]
     }
   },
   "polyfilled": {

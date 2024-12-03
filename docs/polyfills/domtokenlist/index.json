@@ -77,7 +77,10 @@
           "webview_ios": {
             "version_added": "10.3"
           }
-        }
+        },
+        "tags": [
+          "web-features:dom"
+        ]
       }
     },
     "__compat": {
@@ -132,7 +135,10 @@
         "webview_ios": {
           "version_added": "5"
         }
-      }
+      },
+      "tags": [
+        "web-features:dom"
+      ]
     },
     "add": {
       "__compat": {
@@ -187,7 +193,10 @@
           "webview_ios": {
             "version_added": "5"
           }
-        }
+        },
+        "tags": [
+          "web-features:dom"
+        ]
       },
       "multiple_parameters": {
         "__compat": {
@@ -241,7 +250,10 @@
             "webview_ios": {
               "version_added": "7"
             }
-          }
+          },
+          "tags": [
+            "web-features:dom"
+          ]
         }
       }
     },
@@ -298,7 +310,10 @@
           "webview_ios": {
             "version_added": "5"
           }
-        }
+        },
+        "tags": [
+          "web-features:dom"
+        ]
       }
     },
     "entries": {
@@ -353,7 +368,10 @@
           "webview_ios": {
             "version_added": "10.3"
           }
-        }
+        },
+        "tags": [
+          "web-features:dom"
+        ]
       }
     },
     "forEach": {
@@ -408,7 +426,10 @@
           "webview_ios": {
             "version_added": "10.3"
           }
-        }
+        },
+        "tags": [
+          "web-features:dom"
+        ]
       }
     },
     "item": {
@@ -464,7 +485,10 @@
           "webview_ios": {
             "version_added": "5"
           }
-        }
+        },
+        "tags": [
+          "web-features:dom"
+        ]
       }
     },
     "keys": {
@@ -519,7 +543,10 @@
           "webview_ios": {
             "version_added": "10.3"
           }
-        }
+        },
+        "tags": [
+          "web-features:dom"
+        ]
       }
     },
     "length": {
@@ -575,7 +602,10 @@
           "webview_ios": {
             "version_added": "5"
           }
-        }
+        },
+        "tags": [
+          "web-features:dom"
+        ]
       }
     },
     "remove": {
@@ -631,7 +661,10 @@
           "webview_ios": {
             "version_added": "5"
           }
-        }
+        },
+        "tags": [
+          "web-features:dom"
+        ]
       },
       "multiple_parameters": {
         "__compat": {
@@ -685,7 +718,10 @@
             "webview_ios": {
               "version_added": "7"
             }
-          }
+          },
+          "tags": [
+            "web-features:dom"
+          ]
         }
       }
     },
@@ -742,7 +778,10 @@
           "webview_ios": {
             "version_added": "10"
           }
-        }
+        },
+        "tags": [
+          "web-features:dom"
+        ]
       }
     },
     "replace": {
@@ -798,7 +837,10 @@
           "webview_ios": {
             "version_added": "10.3"
           }
-        }
+        },
+        "tags": [
+          "web-features:dom"
+        ]
       },
       "boolean_value": {
         "__compat": {
@@ -852,7 +894,10 @@
             "webview_ios": {
               "version_added": "12"
             }
-          }
+          },
+          "tags": [
+            "web-features:dom"
+          ]
         }
       }
     },
@@ -909,7 +954,10 @@
           "webview_ios": {
             "version_added": "10.3"
           }
-        }
+        },
+        "tags": [
+          "web-features:dom"
+        ]
       }
     },
     "toString": {
@@ -964,7 +1012,10 @@
           "webview_ios": {
             "version_added": "5"
           }
-        }
+        },
+        "tags": [
+          "web-features:dom"
+        ]
       }
     },
     "toggle": {
@@ -1020,7 +1071,10 @@
           "webview_ios": {
             "version_added": "5"
           }
-        }
+        },
+        "tags": [
+          "web-features:dom"
+        ]
       },
       "force_parameter": {
         "__compat": {
@@ -1074,7 +1128,10 @@
             "webview_ios": {
               "version_added": "7"
             }
-          }
+          },
+          "tags": [
+            "web-features:dom"
+          ]
         }
       }
     },
@@ -1131,7 +1188,10 @@
           "webview_ios": {
             "version_added": "10"
           }
-        }
+        },
+        "tags": [
+          "web-features:dom"
+        ]
       }
     },
     "value": {
@@ -1194,7 +1254,10 @@
           "webview_ios": {
             "version_added": "10"
           }
-        }
+        },
+        "tags": [
+          "web-features:dom"
+        ]
       }
     },
     "values": {
@@ -1249,7 +1312,10 @@
           "webview_ios": {
             "version_added": "10.3"
           }
-        }
+        },
+        "tags": [
+          "web-features:dom"
+        ]
       }
     }
   },

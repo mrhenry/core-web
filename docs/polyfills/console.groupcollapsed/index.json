@@ -80,7 +80,10 @@
         "webview_ios": {
           "version_added": "5"
         }
-      }
+      },
+      "tags": [
+        "web-features:console"
+      ]
     }
   },
   "polyfilled": {

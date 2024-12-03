@@ -150,7 +150,10 @@
             "webview_ios": {
               "version_added": "14"
             }
-          }
+          },
+          "tags": [
+            "web-features:intersection-observer"
+          ]
         }
       }
     },
@@ -263,7 +266,10 @@
           "webview_ios": {
             "version_added": false
           }
-        }
+        },
+        "tags": [
+          "web-features:intersection-observer"
+        ]
       }
     },
     "disconnect": {
@@ -557,7 +563,10 @@
           "webview_ios": {
             "version_added": false
           }
-        }
+        },
+        "tags": [
+          "web-features:intersection-observer"
+        ]
       }
     },
     "takeRecords": {
@@ -731,7 +740,10 @@
           "webview_ios": {
             "version_added": false
           }
-        }
+        },
+        "tags": [
+          "web-features:intersection-observer"
+        ]
       }
     },
     "unobserve": {

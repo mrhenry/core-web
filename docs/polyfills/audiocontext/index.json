@@ -220,7 +220,10 @@
             "webview_ios": {
               "version_added": "14.5"
             }
-          }
+          },
+          "tags": [
+            "web-features:web-audio"
+          ]
         }
       },
       "options_sampleRate_parameter": {
@@ -276,7 +279,10 @@
             "webview_ios": {
               "version_added": "14.5"
             }
-          }
+          },
+          "tags": [
+            "web-features:web-audio"
+          ]
         }
       },
       "options_sinkId_parameter": {
@@ -332,7 +338,10 @@
             "webview_ios": {
               "version_added": false
             }
-          }
+          },
+          "tags": [
+            "web-features:web-audio"
+          ]
         }
       }
     },
@@ -884,7 +893,10 @@
           "webview_ios": {
             "version_added": false
           }
-        }
+        },
+        "tags": [
+          "web-features:web-audio"
+        ]
       }
     },
     "getOutputTimestamp": {
@@ -1117,7 +1129,10 @@
           "webview_ios": {
             "version_added": false
           }
-        }
+        },
+        "tags": [
+          "web-features:web-audio"
+        ]
       }
     },
     "sinkId": {
@@ -1173,7 +1188,10 @@
           "webview_ios": {
             "version_added": false
           }
-        }
+        },
+        "tags": [
+          "web-features:web-audio"
+        ]
       }
     },
     "sinkchange_event": {
@@ -1230,7 +1248,10 @@
           "webview_ios": {
             "version_added": false
           }
-        }
+        },
+        "tags": [
+          "web-features:web-audio"
+        ]
       }
     },
     "suspend": {

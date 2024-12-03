@@ -148,7 +148,10 @@
             "version_removed": "7"
           }
         ]
-      }
+      },
+      "tags": [
+        "web-features:dom"
+      ]
     }
   },
   "polyfilled": {

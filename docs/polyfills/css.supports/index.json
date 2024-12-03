@@ -189,7 +189,10 @@
             "version_removed": "11"
           }
         ]
-      }
+      },
+      "tags": [
+        "web-features:css-supports"
+      ]
     }
   },
   "polyfilled": {

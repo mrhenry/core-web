@@ -98,7 +98,10 @@
         "webview_ios": {
           "version_added": "4"
         }
-      }
+      },
+      "tags": [
+        "web-features:input-date-time"
+      ]
     }
   },
   "polyfilled": {

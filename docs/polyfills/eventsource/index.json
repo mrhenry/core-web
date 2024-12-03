@@ -89,7 +89,10 @@
           "webview_ios": {
             "version_added": "5"
           }
-        }
+        },
+        "tags": [
+          "web-features:server-sent-events"
+        ]
       },
       "options_withCredentials_parameter": {
         "__compat": {
@@ -205,7 +208,10 @@
         "webview_ios": {
           "version_added": "5"
         }
-      }
+      },
+      "tags": [
+        "web-features:server-sent-events"
+      ]
     },
     "close": {
       "__compat": {
@@ -263,7 +269,10 @@
           "webview_ios": {
             "version_added": "5"
           }
-        }
+        },
+        "tags": [
+          "web-features:server-sent-events"
+        ]
       }
     },
     "error_event": {
@@ -326,7 +335,10 @@
           "webview_ios": {
             "version_added": "5"
           }
-        }
+        },
+        "tags": [
+          "web-features:server-sent-events"
+        ]
       }
     },
     "message_event": {
@@ -389,7 +401,10 @@
           "webview_ios": {
             "version_added": "5"
           }
-        }
+        },
+        "tags": [
+          "web-features:server-sent-events"
+        ]
       }
     },
     "open_event": {
@@ -452,7 +467,10 @@
           "webview_ios": {
             "version_added": "5"
           }
-        }
+        },
+        "tags": [
+          "web-features:server-sent-events"
+        ]
       }
     },
     "readyState": {
@@ -511,7 +529,10 @@
           "webview_ios": {
             "version_added": "5"
           }
-        }
+        },
+        "tags": [
+          "web-features:server-sent-events"
+        ]
       }
     },
     "url": {
@@ -570,7 +591,10 @@
           "webview_ios": {
             "version_added": "6"
           }
-        }
+        },
+        "tags": [
+          "web-features:server-sent-events"
+        ]
       }
     },
     "withCredentials": {
@@ -629,7 +653,10 @@
           "webview_ios": {
             "version_added": "7"
           }
-        }
+        },
+        "tags": [
+          "web-features:server-sent-events"
+        ]
       }
     },
     "worker_support": {
