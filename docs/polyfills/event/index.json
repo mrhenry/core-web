@@ -58,18 +58,9 @@
           "ie": {
             "version_added": false
           },
-          "nodejs": [
-            {
-              "version_added": "15.0.0"
-            },
-            {
-              "notes": "Only available from the <code>events</code> module",
-              "partial_implementation": true,
-              "version_added": "14.5.0",
-              "version_last": "14.17.0",
-              "version_removed": "15.0.0"
-            }
-          ],
+          "nodejs": {
+            "version_added": "14.5.0"
+          },
           "oculus": {
             "version_added": "5.0"
           },
@@ -131,9 +122,18 @@
         "ie": {
           "version_added": "6"
         },
-        "nodejs": {
-          "version_added": "14.5.0"
-        },
+        "nodejs": [
+          {
+            "version_added": "15.0.0"
+          },
+          {
+            "notes": "Only available as an internal instance.",
+            "partial_implementation": true,
+            "version_added": "14.5.0",
+            "version_last": "14.17.0",
+            "version_removed": "15.0.0"
+          }
+        ],
         "oculus": {
           "version_added": "5.0"
         },
@@ -499,7 +499,10 @@
             "version_added": false
           },
           "nodejs": {
-            "notes": "Returns an array with either the event itself or no contents.",
+            "notes": [
+              "Returns an array with either the event itself or empty.",
+              "This is not used in Node.js and is provided purely for completeness."
+            ],
             "version_added": "14.5.0"
           },
           "oculus": {
@@ -945,7 +948,6 @@
             "version_added": "9"
           },
           "nodejs": {
-            "notes": "This is not used in Node.js and is provided purely for completeness.",
             "version_added": "14.5.0"
           },
           "oculus": {

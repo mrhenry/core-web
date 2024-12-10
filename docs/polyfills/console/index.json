@@ -1925,7 +1925,7 @@
             "version_added": "10"
           },
           "nodejs": {
-            "version_added": "10.5.0"
+            "version_added": "11.7.0"
           },
           "oculus": {
             "version_added": "5.0"

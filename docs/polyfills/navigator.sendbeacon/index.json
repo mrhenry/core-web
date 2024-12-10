@@ -63,6 +63,9 @@
         "ie": {
           "version_added": false
         },
+        "nodejs": {
+          "version_added": false
+        },
         "oculus": {
           "notes": "Starting in Chrome 59, this method cannot send a <code>Blob</code> whose type is not CORS safelisted. This is a temporary change until a mitigation can be found for the security issues that this creates. For more information, see <a href=\"https://crbug.com/40087600\">bug 40087600</a>.",
           "version_added": "5.0"
