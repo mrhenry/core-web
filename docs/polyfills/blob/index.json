@@ -68,9 +68,17 @@
             "notes": "IE10 throws <code>InvalidStateError</code> with a <code>TypedArray</code> argument. Consider using <code>MSBuilder</code> as an alternative.",
             "version_added": "10"
           },
-          "nodejs": {
-            "version_added": "15.7.0"
-          },
+          "nodejs": [
+            {
+              "notes": "Before v16.7.0, the <code>endings</code> option was not supported.",
+              "version_added": "15.7.0"
+            },
+            {
+              "version_added": "14.18.0",
+              "version_last": "14.18.0",
+              "version_removed": "15.0.0"
+            }
+          ],
           "oculus": {
             "version_added": "5.0"
           },
@@ -134,14 +142,16 @@
             "version_added": "18.0.0"
           },
           {
-            "alternative_name": "buffer.Blob",
-            "notes": [
-              "Experimental implementation.",
-              "Must be imported using <code>require('buffer').Blob</code> or <code>import { Blob } from 'buffer'</code>."
-            ],
-            "version_added": "15.7.0",
-            "version_last": "17.5.0",
-            "version_removed": "18.0.0"
+            "notes": "Available as a part of the <code>buffer</code> module.",
+            "partial_implementation": true,
+            "version_added": "15.7.0"
+          },
+          {
+            "notes": "Available as a part of the <code>buffer</code> module.",
+            "partial_implementation": true,
+            "version_added": "14.18.0",
+            "version_last": "14.18.0",
+            "version_removed": "15.0.0"
           }
         ],
         "oculus": {
@@ -203,9 +213,16 @@
           "ie": {
             "version_added": false
           },
-          "nodejs": {
-            "version_added": "15.7.0"
-          },
+          "nodejs": [
+            {
+              "version_added": "15.7.0"
+            },
+            {
+              "version_added": "14.18.0",
+              "version_last": "14.18.0",
+              "version_removed": "15.0.0"
+            }
+          ],
           "oculus": {
             "version_added": "7.0"
           },
@@ -265,6 +282,16 @@
           "ie": {
             "version_added": false
           },
+          "nodejs": [
+            {
+              "version_added": "22.3.0"
+            },
+            {
+              "version_added": "20.16.0",
+              "version_last": "20.17.0",
+              "version_removed": "21.0.0"
+            }
+          ],
           "oculus": {
             "version_added": false
           },
@@ -324,9 +351,16 @@
           "ie": {
             "version_added": "10"
           },
-          "nodejs": {
-            "version_added": "15.7.0"
-          },
+          "nodejs": [
+            {
+              "version_added": "15.7.0"
+            },
+            {
+              "version_added": "14.18.0",
+              "version_last": "14.18.0",
+              "version_removed": "15.0.0"
+            }
+          ],
           "oculus": {
             "version_added": "5.0"
           },
@@ -421,9 +455,16 @@
           "ie": {
             "version_added": "10"
           },
-          "nodejs": {
-            "version_added": "15.7.0"
-          },
+          "nodejs": [
+            {
+              "version_added": "15.7.0"
+            },
+            {
+              "version_added": "14.18.0",
+              "version_last": "14.18.0",
+              "version_removed": "15.0.0"
+            }
+          ],
           "oculus": {
             "version_added": "5.0"
           },
@@ -517,7 +558,7 @@
             "version_added": false
           },
           "nodejs": {
-            "version_added": "15.7.0"
+            "version_added": "16.7.0"
           },
           "oculus": {
             "version_added": "7.0"
@@ -579,9 +620,16 @@
           "ie": {
             "version_added": false
           },
-          "nodejs": {
-            "version_added": "15.7.0"
-          },
+          "nodejs": [
+            {
+              "version_added": "15.7.0"
+            },
+            {
+              "version_added": "14.18.0",
+              "version_last": "14.18.0",
+              "version_removed": "15.0.0"
+            }
+          ],
           "oculus": {
             "version_added": "7.0"
           },
@@ -641,9 +689,16 @@
           "ie": {
             "version_added": "10"
           },
-          "nodejs": {
-            "version_added": "15.7.0"
-          },
+          "nodejs": [
+            {
+              "version_added": "15.7.0"
+            },
+            {
+              "version_added": "14.18.0",
+              "version_last": "14.18.0",
+              "version_removed": "15.0.0"
+            }
+          ],
           "oculus": {
             "version_added": "5.0"
           },

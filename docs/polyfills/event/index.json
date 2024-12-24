@@ -130,7 +130,7 @@
             "notes": "Only available as an internal instance.",
             "partial_implementation": true,
             "version_added": "14.5.0",
-            "version_last": "14.17.0",
+            "version_last": "14.18.0",
             "version_removed": "15.0.0"
           }
         ],
