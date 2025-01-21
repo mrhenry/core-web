@@ -504,6 +504,60 @@
         ]
       }
     },
+    "moveBefore": {
+      "__compat": {
+        "source_file": "api/DocumentFragment.json",
+        "status": {
+          "deprecated": false,
+          "experimental": true,
+          "standard_track": true
+        },
+        "support": {
+          "chrome": {
+            "version_added": "133"
+          },
+          "chrome_android": {
+            "version_added": "133"
+          },
+          "edge": {
+            "version_added": "133"
+          },
+          "firefox": {
+            "version_added": false
+          },
+          "firefox_android": {
+            "version_added": false
+          },
+          "ie": {
+            "version_added": false
+          },
+          "oculus": {
+            "version_added": false
+          },
+          "opera": {
+            "version_added": false
+          },
+          "opera_android": {
+            "version_added": false
+          },
+          "safari": {
+            "version_added": false
+          },
+          "safari_ios": {
+            "version_added": false
+          },
+          "samsunginternet_android": {
+            "version_added": false
+          },
+          "webview_android": {
+            "version_added": "133"
+          },
+          "webview_ios": {
+            "version_added": false
+          }
+        }
+      }
+    },
     "prepend": {
       "__compat": {
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/DocumentFragment/prepend",
