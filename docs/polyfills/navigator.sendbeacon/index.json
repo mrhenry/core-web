@@ -95,7 +95,10 @@
         "webview_ios": {
           "version_added": "11.3"
         }
-      }
+      },
+      "tags": [
+        "web-features:beacons"
+      ]
     }
   },
   "polyfilled": {

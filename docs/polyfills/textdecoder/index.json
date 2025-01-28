@@ -107,7 +107,10 @@
           "webview_ios": {
             "version_added": "10.3"
           }
-        }
+        },
+        "tags": [
+          "web-features:text-encoding"
+        ]
       }
     },
     "__compat": {
@@ -189,7 +192,10 @@
         "webview_ios": {
           "version_added": "10.3"
         }
-      }
+      },
+      "tags": [
+        "web-features:text-encoding"
+      ]
     },
     "decode": {
       "__compat": {
@@ -265,7 +271,10 @@
           "webview_ios": {
             "version_added": "10.3"
           }
-        }
+        },
+        "tags": [
+          "web-features:text-encoding"
+        ]
       }
     },
     "encoding": {
@@ -341,7 +350,10 @@
           "webview_ios": {
             "version_added": "10.3"
           }
-        }
+        },
+        "tags": [
+          "web-features:text-encoding"
+        ]
       }
     },
     "fatal": {
@@ -403,7 +415,10 @@
           "webview_ios": {
             "version_added": "10.3"
           }
-        }
+        },
+        "tags": [
+          "web-features:text-encoding"
+        ]
       }
     },
     "ignoreBOM": {
@@ -465,7 +480,10 @@
           "webview_ios": {
             "version_added": "10.3"
           }
-        }
+        },
+        "tags": [
+          "web-features:text-encoding"
+        ]
       }
     },
     "worker_support": {
@@ -526,7 +544,10 @@
           "webview_ios": {
             "version_added": "10.3"
           }
-        }
+        },
+        "tags": [
+          "web-features:text-encoding"
+        ]
       }
     }
   },

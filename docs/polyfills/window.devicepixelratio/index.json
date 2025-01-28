@@ -80,7 +80,10 @@
           "partial_implementation": true,
           "version_added": "2"
         }
-      }
+      },
+      "tags": [
+        "web-features:devicepixelratio"
+      ]
     }
   },
   "polyfilled": {

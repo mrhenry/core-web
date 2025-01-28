@@ -91,7 +91,10 @@
           "webview_ios": {
             "version_added": "13.4"
           }
-        }
+        },
+        "tags": [
+          "web-features:resize-observer"
+        ]
       }
     },
     "__compat": {
@@ -146,7 +149,10 @@
         "webview_ios": {
           "version_added": "13.4"
         }
-      }
+      },
+      "tags": [
+        "web-features:resize-observer"
+      ]
     },
     "disconnect": {
       "__compat": {
@@ -201,7 +207,10 @@
           "webview_ios": {
             "version_added": "13.4"
           }
-        }
+        },
+        "tags": [
+          "web-features:resize-observer"
+        ]
       }
     },
     "observe": {
@@ -257,7 +266,10 @@
           "webview_ios": {
             "version_added": "13.4"
           }
-        }
+        },
+        "tags": [
+          "web-features:resize-observer"
+        ]
       },
       "options_box_parameter": {
         "__compat": {
@@ -313,7 +325,10 @@
             "webview_ios": {
               "version_added": "15.4"
             }
-          }
+          },
+          "tags": [
+            "web-features:resize-observer"
+          ]
         }
       }
     },
@@ -370,7 +385,10 @@
           "webview_ios": {
             "version_added": "13.4"
           }
-        }
+        },
+        "tags": [
+          "web-features:resize-observer"
+        ]
       }
     }
   },

@@ -86,7 +86,10 @@
         "webview_ios": {
           "version_added": "4.2"
         }
-      }
+      },
+      "tags": [
+        "web-features:focus-events"
+      ]
     }
   },
   "polyfilled": {
