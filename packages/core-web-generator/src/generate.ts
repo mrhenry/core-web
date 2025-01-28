@@ -314,18 +314,3 @@ const aliasPrefixesToSkip = [
 	'HTMLCanvasElement.protoype.toBlob', // see : https://github.com/Financial-Times/polyfill-library/issues/836,
 	'PageVisibility',
 ];
-
-
-async function streamToString(stream: fs.ReadStream) {
-	return new Promise<string>((resolve) => {
-		let out = '';
-
-		stream.on('data', (chunk: Buffer) => {
-			out += chunk.toString("utf-8");
-		});
-
-		stream.on('end', () => {
-			resolve(out);
-		});
-	});
-}
