@@ -411,6 +411,80 @@
         }
       }
     },
+    "init_duplex_parameter": {
+      "__compat": {
+        "description": "<code>init.duplex</code> parameter",
+        "source_file": "api/_globals/fetch.json",
+        "spec_url": "https://fetch.spec.whatwg.org/#dom-requestinit-duplex",
+        "status": {
+          "deprecated": false,
+          "experimental": true,
+          "standard_track": true
+        },
+        "support": {
+          "chrome": {
+            "version_added": "105"
+          },
+          "chrome_android": {
+            "version_added": false
+          },
+          "deno": {
+            "version_added": false
+          },
+          "edge": {
+            "version_added": "105"
+          },
+          "firefox": {
+            "impl_url": "https://bugzil.la/1792434",
+            "version_added": false
+          },
+          "firefox_android": {
+            "impl_url": "https://bugzil.la/1792434",
+            "version_added": false
+          },
+          "ie": {
+            "version_added": false
+          },
+          "nodejs": [
+            {
+              "version_added": "19.1.0"
+            },
+            {
+              "version_added": "18.13.0",
+              "version_last": "18.20.0",
+              "version_removed": "19.0.0"
+            }
+          ],
+          "oculus": {
+            "version_added": false
+          },
+          "opera": {
+            "version_added": "91"
+          },
+          "opera_android": {
+            "version_added": false
+          },
+          "safari": {
+            "impl_url": "https://webkit.org/b/245671",
+            "version_added": false
+          },
+          "safari_ios": {
+            "impl_url": "https://webkit.org/b/245671",
+            "version_added": false
+          },
+          "samsunginternet_android": {
+            "version_added": false
+          },
+          "webview_android": {
+            "version_added": false
+          },
+          "webview_ios": {
+            "impl_url": "https://webkit.org/b/245671",
+            "version_added": false
+          }
+        }
+      }
+    },
     "init_keepalive_parameter": {
       "__compat": {
         "description": "<code>init.keepalive</code> parameter",
