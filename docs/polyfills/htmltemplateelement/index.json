@@ -213,7 +213,10 @@
           "webview_ios": {
             "version_added": "18"
           }
-        }
+        },
+        "tags": [
+          "web-features:declarative-shadow-dom"
+        ]
       }
     },
     "shadowRootDelegatesFocus": {
@@ -269,7 +272,10 @@
           "webview_ios": {
             "version_added": "18"
           }
-        }
+        },
+        "tags": [
+          "web-features:declarative-shadow-dom"
+        ]
       }
     },
     "shadowRootMode": {
@@ -384,7 +390,10 @@
           "webview_ios": {
             "version_added": "18"
           }
-        }
+        },
+        "tags": [
+          "web-features:declarative-shadow-dom"
+        ]
       }
     }
   },
