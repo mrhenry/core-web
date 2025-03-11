@@ -137,7 +137,10 @@
           "webview_ios": {
             "version_added": "10"
           }
-        }
+        },
+        "tags": [
+          "web-features:base64encodedecode"
+        ]
       }
     }
   },
