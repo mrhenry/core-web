@@ -28,7 +28,7 @@ jobs:
         languages: ${{ matrix.language }}
 
     - name: setup node
-      uses: actions/setup-node@v4.2.0
+      uses: actions/setup-node@v4.3.0
       with:
         node-version: 20
         cache: 'npm'
