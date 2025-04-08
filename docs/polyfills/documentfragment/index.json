@@ -507,6 +507,7 @@
     "moveBefore": {
       "__compat": {
         "source_file": "api/DocumentFragment.json",
+        "spec_url": "https://dom.spec.whatwg.org/#dom-parentnode-movebefore",
         "status": {
           "deprecated": false,
           "experimental": true,
