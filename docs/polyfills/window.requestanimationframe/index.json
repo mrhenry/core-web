@@ -59,6 +59,9 @@
             "version_added": "18"
           }
         ],
+        "deno": {
+          "version_added": false
+        },
         "edge": {
           "notes": "Before version 17, Edge does not reliably fire <code>requestAnimationFrame</code> before the paint cycle.",
           "version_added": "12"
