@@ -140,14 +140,14 @@
           "webview_android": [
             {
               "notes": [
-                "Before WebView 66, each tab is limited to 6 audio contexts in WebView; attempting to create more will throw a <code>DOMException</code>. For details see <a href=\"https://developer.mozilla.org/docs/Web/API/AudioContext/AudioContext#Per-tab_audio_context_limitation_in_Chrome\">Per-tab audio context limitation in Chrome</a>.",
-                "If <code>latencyHint</code> isn't valid, WebView throws a <code>TypeError</code> exception. See <a href=\"https://developer.mozilla.org/docs/Web/API/AudioContext/AudioContext#Non-standard_exceptions_in_Chrome\">Non-standard exceptions in Chrome</a> for details."
+                "Before WebView Android 66, each tab is limited to 6 audio contexts in WebView Android; attempting to create more will throw a <code>DOMException</code>. For details see <a href=\"https://developer.mozilla.org/docs/Web/API/AudioContext/AudioContext#Per-tab_audio_context_limitation_in_Chrome\">Per-tab audio context limitation in WebView Android</a>.",
+                "If <code>latencyHint</code> isn't valid, WebView Android throws a <code>TypeError</code> exception. See <a href=\"https://developer.mozilla.org/docs/Web/API/AudioContext/AudioContext#Non-standard_exceptions_in_Chrome\">Non-standard exceptions in WebView Android</a> for details."
               ],
               "version_added": "37"
             },
             {
               "prefix": "webkit",
-              "version_added": "≤37",
+              "version_added": "4.4",
               "version_last": "56",
               "version_removed": "57"
             }
@@ -642,7 +642,7 @@
             "version_added": "1.0"
           },
           "webview_android": {
-            "version_added": "≤37"
+            "version_added": "4.4"
           },
           "webview_ios": {
             "version_added": "6"
@@ -701,7 +701,7 @@
             "version_added": "1.5"
           },
           "webview_android": {
-            "version_added": "≤37"
+            "version_added": "4.4"
           },
           "webview_ios": {
             "version_added": "11"
@@ -760,7 +760,7 @@
             "version_added": "1.5"
           },
           "webview_android": {
-            "version_added": "≤37"
+            "version_added": "4.4"
           },
           "webview_ios": {
             "version_added": "11"

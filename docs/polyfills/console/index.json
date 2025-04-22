@@ -72,7 +72,7 @@
           "version_added": "1.0"
         },
         "webview_android": {
-          "version_added": "≤37"
+          "version_added": "3"
         },
         "webview_ios": {
           "version_added": "1"
@@ -144,7 +144,7 @@
             "version_added": "1.0"
           },
           "webview_android": {
-            "version_added": "≤37"
+            "version_added": "4.4"
           },
           "webview_ios": {
             "version_added": "3.2"
@@ -342,7 +342,7 @@
             "version_added": "1.0"
           },
           "webview_android": {
-            "version_added": "≤37"
+            "version_added": "4.4"
           },
           "webview_ios": {
             "version_added": "3.2"
@@ -409,7 +409,7 @@
             "version_added": "1.0"
           },
           "webview_android": {
-            "version_added": "≤37"
+            "version_added": "4.4"
           },
           "webview_ios": {
             "version_added": "3.2"
@@ -475,7 +475,7 @@
             "version_added": "1.0"
           },
           "webview_android": {
-            "version_added": "≤37"
+            "version_added": "4.4"
           },
           "webview_ios": {
             "version_added": "3.2"
@@ -731,7 +731,7 @@
             "version_added": "1.0"
           },
           "webview_android": {
-            "version_added": "≤37"
+            "version_added": "4.4"
           },
           "webview_ios": {
             "version_added": "3.2"
@@ -1267,7 +1267,7 @@
             "version_added": "1.0"
           },
           "webview_android": {
-            "version_added": "≤37"
+            "version_added": "4.4"
           },
           "webview_ios": {
             "version_added": "3.2"
@@ -1339,7 +1339,7 @@
             "version_added": "1.0"
           },
           "webview_android": {
-            "version_added": "≤37"
+            "version_added": "4.4"
           },
           "webview_ios": {
             "version_added": "3.2"
@@ -1416,8 +1416,8 @@
             "version_added": "1.0"
           },
           "webview_android": {
-            "notes": "In version 28, if a negative value is passed to %d, it will be rounded down to the closest negative integer, so -0.1 becomes -1.",
-            "version_added": "≤37"
+            "notes": "In version 4.4, if a negative value is passed to %d, it will be rounded down to the closest negative integer, so -0.1 becomes -1.",
+            "version_added": "4.4"
           },
           "webview_ios": {
             "version_added": "1"
@@ -1549,7 +1549,7 @@
             "version_added": "1.0"
           },
           "webview_android": {
-            "version_added": "≤37"
+            "version_added": "4.4"
           },
           "webview_ios": {
             "version_added": "3.2"
@@ -1686,7 +1686,7 @@
             "version_added": "1.0"
           },
           "webview_android": {
-            "version_added": "≤37"
+            "version_added": "4.4"
           },
           "webview_ios": {
             "version_added": "6"
@@ -1749,7 +1749,7 @@
             "version_added": "1.0"
           },
           "webview_android": {
-            "version_added": "≤37"
+            "version_added": "4.4"
           },
           "webview_ios": {
             "version_added": "3.2"
@@ -1815,7 +1815,7 @@
             "version_added": "1.0"
           },
           "webview_android": {
-            "version_added": "≤37"
+            "version_added": "4.4"
           },
           "webview_ios": {
             "version_added": "3.2"
@@ -1964,7 +1964,7 @@
   },
   "native": {
     "android": {
-      "version_added": "≤37"
+      "version_added": "3"
     },
     "chrome": {
       "version_added": "1"

@@ -81,7 +81,9 @@
           "version_added": "1.0"
         },
         "webview_android": {
-          "version_added": "≤37"
+          "notes": "The <code>onfocusin</code> event handler property is not supported. To listen to this event, use <code>element.addEventListener('focusin', function() {});</code>.",
+          "partial_implementation": true,
+          "version_added": "4.4"
         },
         "webview_ios": {
           "version_added": "4.2"
@@ -97,7 +99,9 @@
   },
   "native": {
     "android": {
-      "version_added": "≤37"
+      "notes": "The <code>onfocusin</code> event handler property is not supported. To listen to this event, use <code>element.addEventListener('focusin', function() {});</code>.",
+      "partial_implementation": true,
+      "version_added": "4.4"
     },
     "chrome": {
       "notes": "The <code>onfocusin</code> event handler property is not supported. To listen to this event, use <code>element.addEventListener('focusin', function() {});</code>.",

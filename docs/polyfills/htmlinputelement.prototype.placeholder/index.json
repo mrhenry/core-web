@@ -63,7 +63,7 @@
           "version_added": "1.0"
         },
         "webview_android": {
-          "version_added": "≤37"
+          "version_added": "4.4"
         },
         "webview_ios": {
           "version_added": "3.2"
@@ -79,7 +79,7 @@
   },
   "native": {
     "android": {
-      "version_added": "≤37"
+      "version_added": "4.4"
     },
     "chrome": {
       "version_added": "3"

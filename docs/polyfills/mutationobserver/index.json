@@ -119,7 +119,7 @@
             },
             {
               "prefix": "WebKit",
-              "version_added": "≤37"
+              "version_added": "4.4"
             }
           ],
           "webview_ios": [
@@ -225,7 +225,7 @@
           },
           {
             "prefix": "WebKit",
-            "version_added": "≤37"
+            "version_added": "4.4"
           }
         ],
         "webview_ios": [
@@ -450,7 +450,7 @@
       },
       {
         "prefix": "WebKit",
-        "version_added": "≤37"
+        "version_added": "4.4"
       }
     ],
     "chrome": [

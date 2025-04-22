@@ -153,7 +153,7 @@
           "version_added": "1.0"
         },
         "webview_android": {
-          "version_added": "≤37"
+          "version_added": "1"
         },
         "webview_ios": {
           "version_added": "1"
@@ -218,7 +218,7 @@
             "version_added": "1.0"
           },
           "webview_android": {
-            "version_added": "≤37"
+            "version_added": "4.4"
           },
           "webview_ios": {
             "version_added": "1"
@@ -308,8 +308,8 @@
             "version_added": "1.0"
           },
           "webview_android": {
-            "notes": "Starting with Chrome 58 and Opera 45, setting this property to false does nothing, as per <a href=\"https://github.com/whatwg/dom/issues/211\">spec discussion</a>.",
-            "version_added": "≤37"
+            "notes": "Starting with WebView Android 58 and Opera 45, setting this property to false does nothing, as per <a href=\"https://github.com/whatwg/dom/issues/211\">spec discussion</a>.",
+            "version_added": "4.4"
           },
           "webview_ios": {
             "version_added": "1"
@@ -371,7 +371,7 @@
             "version_added": "1.0"
           },
           "webview_android": {
-            "version_added": "≤37"
+            "version_added": "4.4"
           },
           "webview_ios": {
             "version_added": "1"
@@ -904,7 +904,7 @@
             "version_added": "1.0"
           },
           "webview_android": {
-            "version_added": "≤37"
+            "version_added": "4.4"
           },
           "webview_ios": {
             "version_added": "1"
@@ -1179,7 +1179,7 @@
             "version_added": "1.0"
           },
           "webview_android": {
-            "version_added": "≤37"
+            "version_added": "4.4"
           },
           "webview_ios": {
             "version_added": "1"
@@ -1241,7 +1241,7 @@
             "version_added": "1.0"
           },
           "webview_android": {
-            "version_added": "≤37"
+            "version_added": "4.4"
           },
           "webview_ios": {
             "version_added": "1"
@@ -1303,7 +1303,7 @@
             "version_added": "1.0"
           },
           "webview_android": {
-            "version_added": "≤37"
+            "version_added": "4.4"
           },
           "webview_ios": {
             "version_added": "5"
@@ -1596,7 +1596,7 @@
   },
   "native": {
     "android": {
-      "version_added": "≤37"
+      "version_added": "1"
     },
     "chrome": {
       "version_added": "1"
