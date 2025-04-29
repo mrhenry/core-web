@@ -506,6 +506,7 @@
     },
     "moveBefore": {
       "__compat": {
+        "mdn_url": "https://developer.mozilla.org/docs/Web/API/DocumentFragment/moveBefore",
         "source_file": "api/DocumentFragment.json",
         "spec_url": "https://dom.spec.whatwg.org/#dom-parentnode-movebefore",
         "status": {
