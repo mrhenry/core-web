@@ -147,7 +147,9 @@
           {
             "notes": "Available as a part of the <code>buffer</code> module.",
             "partial_implementation": true,
-            "version_added": "15.7.0"
+            "version_added": "15.7.0",
+            "version_last": "17.5.0",
+            "version_removed": "18.0.0"
           },
           {
             "notes": "Available as a part of the <code>buffer</code> module.",

@@ -59,7 +59,9 @@
           {
             "notes": "Throws error when assertion fails.",
             "partial_implementation": true,
-            "version_added": "0.10.0"
+            "version_added": "0.10.0",
+            "version_last": "9.3.0",
+            "version_removed": "10.0.0"
           }
         ],
         "oculus": {

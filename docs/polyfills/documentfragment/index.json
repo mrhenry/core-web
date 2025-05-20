@@ -655,7 +655,9 @@
             {
               "notes": "<code>querySelectorAll()</code> is supported, but only for CSS 2.1 selectors.",
               "partial_implementation": true,
-              "version_added": "8"
+              "version_added": "8",
+              "version_last": "8",
+              "version_removed": "9"
             }
           ],
           "oculus": {
@@ -721,7 +723,9 @@
             {
               "notes": "<code>querySelectorAll()</code> is supported, but only for CSS 2.1 selectors.",
               "partial_implementation": true,
-              "version_added": "8"
+              "version_added": "8",
+              "version_last": "8",
+              "version_removed": "9"
             }
           ],
           "oculus": {

@@ -64,7 +64,9 @@
             {
               "notes": "Implemented a slightly different version of the spec.",
               "partial_implementation": true,
-              "version_added": "18"
+              "version_added": "18",
+              "version_last": "18",
+              "version_removed": "19"
             }
           ],
           "firefox_android": [
@@ -74,7 +76,9 @@
             {
               "notes": "Implemented a slightly different version of the spec.",
               "partial_implementation": true,
-              "version_added": "18"
+              "version_added": "18",
+              "version_last": "18",
+              "version_removed": "19"
             }
           ],
           "ie": {
@@ -142,7 +146,9 @@
           {
             "notes": "Implemented a slightly different version of the spec.",
             "partial_implementation": true,
-            "version_added": "18"
+            "version_added": "18",
+            "version_last": "18",
+            "version_removed": "19"
           }
         ],
         "firefox_android": [
@@ -152,7 +158,9 @@
           {
             "notes": "Implemented a slightly different version of the spec.",
             "partial_implementation": true,
-            "version_added": "18"
+            "version_added": "18",
+            "version_last": "18",
+            "version_removed": "19"
           }
         ],
         "ie": {
@@ -165,7 +173,9 @@
           {
             "notes": "Available as a part of the <code>util</code> module.",
             "partial_implementation": true,
-            "version_added": "8.3.0"
+            "version_added": "8.3.0",
+            "version_last": "10.9.0",
+            "version_removed": "11.0.0"
           }
         ],
         "oculus": {
@@ -228,7 +238,9 @@
             {
               "notes": "Implemented a slightly different version of the spec.",
               "partial_implementation": true,
-              "version_added": "18"
+              "version_added": "18",
+              "version_last": "18",
+              "version_removed": "19"
             }
           ],
           "firefox_android": [
@@ -238,7 +250,9 @@
             {
               "notes": "Implemented a slightly different version of the spec.",
               "partial_implementation": true,
-              "version_added": "18"
+              "version_added": "18",
+              "version_last": "18",
+              "version_removed": "19"
             }
           ],
           "ie": {
@@ -307,7 +321,9 @@
             {
               "notes": "Implemented a slightly different version of the spec.",
               "partial_implementation": true,
-              "version_added": "18"
+              "version_added": "18",
+              "version_last": "18",
+              "version_removed": "19"
             }
           ],
           "firefox_android": [
@@ -317,7 +333,9 @@
             {
               "notes": "Implemented a slightly different version of the spec.",
               "partial_implementation": true,
-              "version_added": "18"
+              "version_added": "18",
+              "version_last": "18",
+              "version_removed": "19"
             }
           ],
           "ie": {
@@ -578,7 +596,9 @@
       {
         "notes": "Implemented a slightly different version of the spec.",
         "partial_implementation": true,
-        "version_added": "18"
+        "version_added": "18",
+        "version_last": "18",
+        "version_removed": "19"
       }
     ],
     "ie": {

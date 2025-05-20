@@ -88,7 +88,9 @@
             {
               "notes": "Even though <code>window.AbortController</code> is defined, it doesn't really abort <code>fetch</code> requests. See <a href=\"https://webkit.org/b/174980\">bug 174980</a>.",
               "partial_implementation": true,
-              "version_added": "11.1"
+              "version_added": "11.1",
+              "version_last": "12",
+              "version_removed": "12.1"
             }
           ],
           "safari_ios": [
@@ -98,7 +100,9 @@
             {
               "notes": "Even though <code>window.AbortController</code> is defined, it doesn't really abort <code>fetch</code> requests. See <a href=\"https://webkit.org/b/174980\">bug 174980</a>.",
               "partial_implementation": true,
-              "version_added": "11.3"
+              "version_added": "11.3",
+              "version_last": "12",
+              "version_removed": "12.2"
             }
           ],
           "samsunginternet_android": {
@@ -114,7 +118,9 @@
             {
               "notes": "Even though <code>window.AbortController</code> is defined, it doesn't really abort <code>fetch</code> requests. See <a href=\"https://webkit.org/b/174980\">bug 174980</a>.",
               "partial_implementation": true,
-              "version_added": "11.3"
+              "version_added": "11.3",
+              "version_last": "12",
+              "version_removed": "12.2"
             }
           ]
         },
@@ -173,7 +179,9 @@
           {
             "notes": "Even though <code>window.AbortController</code> is defined, it doesn't really abort <code>fetch</code> requests. See <a href=\"https://webkit.org/b/174980\">bug 174980</a>.",
             "partial_implementation": true,
-            "version_added": "11.1"
+            "version_added": "11.1",
+            "version_last": "12",
+            "version_removed": "12.1"
           }
         ],
         "safari_ios": [
@@ -183,7 +191,9 @@
           {
             "notes": "Even though <code>window.AbortController</code> is defined, it doesn't really abort <code>fetch</code> requests. See <a href=\"https://webkit.org/b/174980\">bug 174980</a>.",
             "partial_implementation": true,
-            "version_added": "11.3"
+            "version_added": "11.3",
+            "version_last": "12",
+            "version_removed": "12.2"
           }
         ],
         "samsunginternet_android": {
@@ -199,7 +209,9 @@
           {
             "notes": "Even though <code>window.AbortController</code> is defined, it doesn't really abort <code>fetch</code> requests. See <a href=\"https://webkit.org/b/174980\">bug 174980</a>.",
             "partial_implementation": true,
-            "version_added": "11.3"
+            "version_added": "11.3",
+            "version_last": "12",
+            "version_removed": "12.2"
           }
         ]
       },
@@ -279,7 +291,9 @@
             {
               "notes": "Even though <code>window.AbortController</code> is defined, it doesn't really abort <code>fetch</code> requests. See <a href=\"https://webkit.org/b/174980\">bug 174980</a>.",
               "partial_implementation": true,
-              "version_added": "11.1"
+              "version_added": "11.1",
+              "version_last": "12",
+              "version_removed": "12.1"
             }
           ],
           "safari_ios": [
@@ -289,7 +303,9 @@
             {
               "notes": "Even though <code>window.AbortController</code> is defined, it doesn't really abort <code>fetch</code> requests. See <a href=\"https://webkit.org/b/174980\">bug 174980</a>.",
               "partial_implementation": true,
-              "version_added": "11.3"
+              "version_added": "11.3",
+              "version_last": "12",
+              "version_removed": "12.2"
             }
           ],
           "samsunginternet_android": {
@@ -305,7 +321,9 @@
             {
               "notes": "Even though <code>window.AbortController</code> is defined, it doesn't really abort <code>fetch</code> requests. See <a href=\"https://webkit.org/b/174980\">bug 174980</a>.",
               "partial_implementation": true,
-              "version_added": "11.3"
+              "version_added": "11.3",
+              "version_last": "12",
+              "version_removed": "12.2"
             }
           ]
         },
@@ -437,7 +455,9 @@
             {
               "notes": "Even though <code>window.AbortController</code> is defined, it doesn't really abort <code>fetch</code> requests. See <a href=\"https://webkit.org/b/174980\">bug 174980</a>.",
               "partial_implementation": true,
-              "version_added": "11.1"
+              "version_added": "11.1",
+              "version_last": "12",
+              "version_removed": "12.1"
             }
           ],
           "safari_ios": [
@@ -447,7 +467,9 @@
             {
               "notes": "Even though <code>window.AbortController</code> is defined, it doesn't really abort <code>fetch</code> requests. See <a href=\"https://webkit.org/b/174980\">bug 174980</a>.",
               "partial_implementation": true,
-              "version_added": "11.3"
+              "version_added": "11.3",
+              "version_last": "12",
+              "version_removed": "12.2"
             }
           ],
           "samsunginternet_android": {
@@ -463,7 +485,9 @@
             {
               "notes": "Even though <code>window.AbortController</code> is defined, it doesn't really abort <code>fetch</code> requests. See <a href=\"https://webkit.org/b/174980\">bug 174980</a>.",
               "partial_implementation": true,
-              "version_added": "11.3"
+              "version_added": "11.3",
+              "version_last": "12",
+              "version_removed": "12.2"
             }
           ]
         },
@@ -509,7 +533,9 @@
       {
         "notes": "Even though <code>window.AbortController</code> is defined, it doesn't really abort <code>fetch</code> requests. See <a href=\"https://webkit.org/b/174980\">bug 174980</a>.",
         "partial_implementation": true,
-        "version_added": "11.1"
+        "version_added": "11.1",
+        "version_last": "12",
+        "version_removed": "12.1"
       }
     ],
     "ios_saf": [
@@ -519,7 +545,9 @@
       {
         "notes": "Even though <code>window.AbortController</code> is defined, it doesn't really abort <code>fetch</code> requests. See <a href=\"https://webkit.org/b/174980\">bug 174980</a>.",
         "partial_implementation": true,
-        "version_added": "11.3"
+        "version_added": "11.3",
+        "version_last": "12",
+        "version_removed": "12.2"
       }
     ]
   },

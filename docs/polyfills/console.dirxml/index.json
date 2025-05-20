@@ -59,7 +59,9 @@
           {
             "notes": "Does not use Logger to log data.",
             "partial_implementation": true,
-            "version_added": "8.0.0"
+            "version_added": "8.0.0",
+            "version_last": "8.10.0",
+            "version_removed": "9.3.0"
           }
         ],
         "oculus": {
