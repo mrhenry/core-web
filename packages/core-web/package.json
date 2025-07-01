@@ -31,7 +31,7 @@
 		"tsc": "tsc"
 	},
 	"dependencies": {
-		"browserslist": "^4.25.0",
+		"browserslist": "^4.25.1",
 		"semver": "^7.7.2"
 	},
 	"devDependencies": {
