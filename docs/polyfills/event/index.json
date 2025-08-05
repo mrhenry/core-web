@@ -233,7 +233,7 @@
       "__compat": {
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/Event/cancelBubble",
         "source_file": "api/Event.json",
-        "spec_url": "https://dom.spec.whatwg.org/#ref-for-dom-event-cancelbubble①",
+        "spec_url": "https://dom.spec.whatwg.org/#dom-event-cancelbubble",
         "status": {
           "deprecated": true,
           "experimental": false,
@@ -836,7 +836,7 @@
       "__compat": {
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/Event/initEvent",
         "source_file": "api/Event.json",
-        "spec_url": "https://dom.spec.whatwg.org/#ref-for-dom-event-initevent①",
+        "spec_url": "https://dom.spec.whatwg.org/#dom-event-initevent",
         "status": {
           "deprecated": true,
           "experimental": false,
