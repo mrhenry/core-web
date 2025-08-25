@@ -128,6 +128,64 @@
         "web-features:scroll-into-view"
       ]
     },
+    "options_container_parameter": {
+      "__compat": {
+        "description": "<code>options.container</code> parameter",
+        "source_file": "api/Element.json",
+        "status": {
+          "deprecated": false,
+          "experimental": false,
+          "standard_track": true
+        },
+        "support": {
+          "chrome": {
+            "version_added": "140"
+          },
+          "chrome_android": {
+            "version_added": "140"
+          },
+          "edge": {
+            "version_added": "140"
+          },
+          "firefox": {
+            "version_added": false
+          },
+          "firefox_android": {
+            "version_added": false
+          },
+          "ie": {
+            "version_added": false
+          },
+          "oculus": {
+            "version_added": false
+          },
+          "opera": {
+            "version_added": false
+          },
+          "opera_android": {
+            "version_added": false
+          },
+          "safari": {
+            "version_added": false
+          },
+          "safari_ios": {
+            "version_added": false
+          },
+          "samsunginternet_android": {
+            "version_added": false
+          },
+          "webview_android": {
+            "version_added": "140"
+          },
+          "webview_ios": {
+            "version_added": false
+          }
+        },
+        "tags": [
+          "web-features:scroll-into-view"
+        ]
+      }
+    },
     "options_parameter": {
       "__compat": {
         "description": "<code>options</code> parameter",
