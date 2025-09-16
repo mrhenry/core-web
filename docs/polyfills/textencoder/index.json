@@ -45,6 +45,9 @@
           "standard_track": true
         },
         "support": {
+          "bun": {
+            "version_added": "1.0.0"
+          },
           "chrome": {
             "version_added": "38"
           },
@@ -109,6 +112,9 @@
         "standard_track": true
       },
       "support": {
+        "bun": {
+          "version_added": "1.0.0"
+        },
         "chrome": {
           "version_added": "38"
         },
@@ -182,6 +188,9 @@
           "standard_track": true
         },
         "support": {
+          "bun": {
+            "version_added": "1.0.0"
+          },
           "chrome": {
             "version_added": "38"
           },
@@ -247,6 +256,9 @@
           "standard_track": true
         },
         "support": {
+          "bun": {
+            "version_added": "1.0.0"
+          },
           "chrome": {
             "version_added": "74"
           },
@@ -312,6 +324,9 @@
           "standard_track": true
         },
         "support": {
+          "bun": {
+            "version_added": "1.0.0"
+          },
           "chrome": {
             "version_added": "38"
           },

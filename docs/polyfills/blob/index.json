@@ -44,6 +44,9 @@
           "standard_track": true
         },
         "support": {
+          "bun": {
+            "version_added": "1.0.0"
+          },
           "chrome": {
             "version_added": "20"
           },
@@ -119,6 +122,9 @@
         "standard_track": true
       },
       "support": {
+        "bun": {
+          "version_added": "1.0.0"
+        },
         "chrome": {
           "version_added": "5"
         },
@@ -200,6 +206,9 @@
           "standard_track": true
         },
         "support": {
+          "bun": {
+            "version_added": "1.0.0"
+          },
           "chrome": {
             "version_added": "76"
           },
@@ -272,6 +281,9 @@
           "standard_track": true
         },
         "support": {
+          "bun": {
+            "version_added": "1.1.9"
+          },
           "chrome": {
             "version_added": false
           },
@@ -344,6 +356,9 @@
           "standard_track": true
         },
         "support": {
+          "bun": {
+            "version_added": "1.0.0"
+          },
           "chrome": {
             "version_added": "5"
           },
@@ -417,6 +432,9 @@
           "standard_track": true
         },
         "support": {
+          "bun": {
+            "version_added": "1.0.0"
+          },
           "chrome": [
             {
               "version_added": "21"
@@ -556,6 +574,9 @@
           "standard_track": true
         },
         "support": {
+          "bun": {
+            "version_added": "1.0.0"
+          },
           "chrome": {
             "version_added": "76"
           },
@@ -622,6 +643,9 @@
           "standard_track": true
         },
         "support": {
+          "bun": {
+            "version_added": "1.0.0"
+          },
           "chrome": {
             "version_added": "76"
           },
@@ -694,6 +718,9 @@
           "standard_track": true
         },
         "support": {
+          "bun": {
+            "version_added": "1.0.0"
+          },
           "chrome": {
             "version_added": "5"
           },
