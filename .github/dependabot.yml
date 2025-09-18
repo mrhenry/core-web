@@ -7,10 +7,9 @@ updates:
     day: "tuesday"
     time: "01:00"
     timezone: Europe/Brussels
+  cooldown:
+    default-days: 7
   open-pull-requests-limit: 10
-  reviewers:
-  - romainmenke
-  - fd
   versioning-strategy: increase
   rebase-strategy: disabled
   groups:
@@ -24,11 +23,10 @@ updates:
     day: "tuesday"
     time: "01:00"
     timezone: Europe/Brussels
+  cooldown:
+    default-days: 7
   open-pull-requests-limit: 10
   rebase-strategy: disabled
-  reviewers:
-  - romainmenke
-  - fd
   groups:
     all-dependencies:
       patterns:
@@ -47,6 +45,8 @@ updates:
     day: "tuesday"
     time: "01:00"
     timezone: Europe/Brussels
+  cooldown:
+    default-days: 7
   groups:
     all-dependencies:
       patterns:
