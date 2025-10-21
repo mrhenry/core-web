@@ -45,16 +45,32 @@
         "edge": {
           "version_added": "12"
         },
-        "firefox": {
-          "version_added": "16",
-          "version_last": "101",
-          "version_removed": "102"
-        },
-        "firefox_android": {
-          "version_added": "16",
-          "version_last": "101",
-          "version_removed": "102"
-        },
+        "firefox": [
+          {
+            "impl_url": "https://bugzil.la/1730896",
+            "notes": "The method can be called, but the marker does not show up in the performance profile.",
+            "partial_implementation": true,
+            "version_added": "98"
+          },
+          {
+            "version_added": "16",
+            "version_last": "96",
+            "version_removed": "97"
+          }
+        ],
+        "firefox_android": [
+          {
+            "impl_url": "https://bugzil.la/1730896",
+            "notes": "The method can be called, but the marker does not show up in the performance profile.",
+            "partial_implementation": true,
+            "version_added": "98"
+          },
+          {
+            "version_added": "16",
+            "version_last": "96",
+            "version_removed": "97"
+          }
+        ],
         "ie": {
           "version_added": "9"
         },
@@ -108,11 +124,19 @@
     "edge": {
       "version_added": "12"
     },
-    "firefox": {
-      "version_added": "16",
-      "version_last": "101",
-      "version_removed": "102"
-    },
+    "firefox": [
+      {
+        "impl_url": "https://bugzil.la/1730896",
+        "notes": "The method can be called, but the marker does not show up in the performance profile.",
+        "partial_implementation": true,
+        "version_added": "98"
+      },
+      {
+        "version_added": "16",
+        "version_last": "96",
+        "version_removed": "97"
+      }
+    ],
     "ie": {
       "version_added": "9"
     },
