@@ -543,9 +543,11 @@
             "version_added": "88"
           },
           "safari": {
+            "impl_url": "https://webkit.org/b/281223",
             "version_added": false
           },
           "safari_ios": {
+            "impl_url": "https://webkit.org/b/281223",
             "version_added": false
           },
           "samsunginternet_android": {
@@ -555,6 +557,7 @@
             "version_added": "133"
           },
           "webview_ios": {
+            "impl_url": "https://webkit.org/b/281223",
             "version_added": false
           }
         },
