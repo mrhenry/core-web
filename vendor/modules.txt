@@ -4,7 +4,7 @@ github.com/blang/semver
 # github.com/google/uuid v1.6.0
 ## explicit
 github.com/google/uuid
-# github.com/hashicorp/go-version v1.7.0
+# github.com/hashicorp/go-version v1.8.0
 ## explicit
 github.com/hashicorp/go-version
 # github.com/tebeka/selenium v0.9.9 => github.com/romainmenke/selenium v0.9.15
