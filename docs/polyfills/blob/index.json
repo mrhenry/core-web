@@ -285,16 +285,16 @@
             "version_added": "1.1.9"
           },
           "chrome": {
-            "version_added": false
+            "version_added": "144"
           },
           "chrome_android": {
-            "version_added": false
+            "version_added": "144"
           },
           "deno": {
             "version_added": "1.45"
           },
           "edge": {
-            "version_added": false
+            "version_added": "144"
           },
           "firefox": {
             "version_added": "128"
@@ -334,7 +334,7 @@
             "version_added": false
           },
           "webview_android": {
-            "version_added": false
+            "version_added": "144"
           },
           "webview_ios": {
             "version_added": "18"
