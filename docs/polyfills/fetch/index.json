@@ -294,8 +294,8 @@
         "source_file": "api/_globals/fetch.json",
         "spec_url": "https://wicg.github.io/attribution-reporting-api/#dom-requestinit-attributionreporting",
         "status": {
-          "deprecated": false,
-          "experimental": true,
+          "deprecated": true,
+          "experimental": false,
           "standard_track": true
         },
         "support": {
@@ -358,8 +358,8 @@
         "description": "<code>init.browsingTopics</code> parameter",
         "source_file": "api/_globals/fetch.json",
         "status": {
-          "deprecated": false,
-          "experimental": true,
+          "deprecated": true,
+          "experimental": false,
           "standard_track": false
         },
         "support": {
