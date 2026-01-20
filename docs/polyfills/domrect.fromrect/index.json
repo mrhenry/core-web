@@ -38,7 +38,7 @@
       "description": "<code>fromRect()</code> static method",
       "mdn_url": "https://developer.mozilla.org/docs/Web/API/DOMRect/fromRect_static",
       "source_file": "api/DOMRect.json",
-      "spec_url": "https://drafts.fxtf.org/geometry/#dom-domrect-fromrect",
+      "spec_url": "https://drafts.csswg.org/geometry/#dom-domrect-fromrect",
       "status": {
         "deprecated": false,
         "experimental": false,
