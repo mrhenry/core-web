@@ -5,10 +5,10 @@
   "coreWeb": {
     "name": "DOMTokenList.prototype.@@iterator",
     "deps": [
-      "_ArrayIterator",
-      "_Iterator",
-      "DOMTokenList",
       "_DOMTokenList",
+      "DOMTokenList",
+      "_Iterator",
+      "_ArrayIterator",
       "Element.prototype.classList"
     ],
     "browsers": {

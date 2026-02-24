@@ -5,8 +5,8 @@
   "coreWeb": {
     "name": "document.visibilityState",
     "deps": [
-      "CustomEvent",
-      "Event"
+      "Event",
+      "CustomEvent"
     ],
     "browsers": {
       "android": "<4.4.3",

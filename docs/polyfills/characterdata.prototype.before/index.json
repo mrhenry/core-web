@@ -5,8 +5,8 @@
   "coreWeb": {
     "name": "CharacterData.prototype.before",
     "deps": [
-      "Element.prototype.before",
-      "_mutation"
+      "_mutation",
+      "Element.prototype.before"
     ],
     "browsers": {
       "android": "<4.4",

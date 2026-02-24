@@ -5,8 +5,8 @@
   "coreWeb": {
     "name": "CharacterData.prototype.replaceWith",
     "deps": [
-      "Element.prototype.replaceWith",
-      "_mutation"
+      "_mutation",
+      "Element.prototype.replaceWith"
     ],
     "browsers": {
       "android": "<4.4",

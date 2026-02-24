@@ -320,7 +320,7 @@
             }
           },
           "tags": [
-            "web-features:scroll-into-view"
+            "web-features:scroll-into-view-container"
           ]
         }
       },

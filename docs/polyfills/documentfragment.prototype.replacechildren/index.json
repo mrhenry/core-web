@@ -5,9 +5,9 @@
   "coreWeb": {
     "name": "DocumentFragment.prototype.replaceChildren",
     "deps": [
-      "DocumentFragment.prototype.append",
       "DocumentFragment",
-      "_mutation"
+      "_mutation",
+      "DocumentFragment.prototype.append"
     ],
     "browsers": {
       "android": "<4.4",

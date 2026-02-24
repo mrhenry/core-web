@@ -5,8 +5,8 @@
   "coreWeb": {
     "name": "MediaQueryList.prototype.addEventListener",
     "deps": [
-      "matchMedia",
-      "Event"
+      "Event",
+      "matchMedia"
     ],
     "browsers": {
       "android": "<4.4",

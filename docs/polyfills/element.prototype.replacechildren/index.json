@@ -5,8 +5,8 @@
   "coreWeb": {
     "name": "Element.prototype.replaceChildren",
     "deps": [
-      "Element.prototype.append",
-      "_mutation"
+      "_mutation",
+      "Element.prototype.append"
     ],
     "browsers": {
       "android": "<4.4",

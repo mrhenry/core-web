@@ -5,8 +5,8 @@
   "coreWeb": {
     "name": "DOMTokenList.prototype.forEach",
     "deps": [
-      "DOMTokenList",
       "_DOMTokenList",
+      "DOMTokenList",
       "Element.prototype.classList"
     ],
     "browsers": {

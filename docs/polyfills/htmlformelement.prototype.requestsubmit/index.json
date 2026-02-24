@@ -5,8 +5,8 @@
   "coreWeb": {
     "name": "HTMLFormElement.prototype.requestSubmit",
     "deps": [
-      "Node.prototype.isConnected",
-      "Node.prototype.getRootNode"
+      "Node.prototype.getRootNode",
+      "Node.prototype.isConnected"
     ],
     "browsers": {
       "android": "<4.4",

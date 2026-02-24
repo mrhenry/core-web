@@ -5,8 +5,8 @@
   "coreWeb": {
     "name": "Element.prototype.classList",
     "deps": [
-      "DOMTokenList",
-      "_DOMTokenList"
+      "_DOMTokenList",
+      "DOMTokenList"
     ],
     "browsers": {
       "ie": ">=8",

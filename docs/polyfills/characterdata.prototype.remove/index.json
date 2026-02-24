@@ -5,8 +5,8 @@
   "coreWeb": {
     "name": "CharacterData.prototype.remove",
     "deps": [
-      "Element.prototype.remove",
-      "_mutation"
+      "_mutation",
+      "Element.prototype.remove"
     ],
     "browsers": {
       "android": "<4.4",

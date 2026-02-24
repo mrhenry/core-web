@@ -5,9 +5,9 @@
   "coreWeb": {
     "name": "IntersectionObserverEntry",
     "deps": [
-      "IntersectionObserver",
       "Event",
-      "performance.now"
+      "performance.now",
+      "IntersectionObserver"
     ],
     "browsers": {
       "chrome": "51 - 57",
@@ -30,6 +30,7 @@
       "__compat": {
         "description": "<code>IntersectionObserverEntry()</code> constructor",
         "source_file": "api/IntersectionObserverEntry.json",
+        "spec_url": "https://w3c.github.io/IntersectionObserver/#dom-intersectionobserverentry-intersectionobserverentry",
         "status": {
           "deprecated": false,
           "experimental": true,

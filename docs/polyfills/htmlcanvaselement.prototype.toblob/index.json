@@ -5,8 +5,8 @@
   "coreWeb": {
     "name": "HTMLCanvasElement.prototype.toBlob",
     "deps": [
-      "_ESAbstract.CreateMethodProperty",
       "atob",
+      "_ESAbstract.CreateMethodProperty",
       "Blob"
     ],
     "browsers": {

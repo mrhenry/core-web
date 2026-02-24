@@ -5,9 +5,9 @@
   "coreWeb": {
     "name": "DOMTokenList.prototype.replace",
     "deps": [
-      "Element.prototype.classList",
+      "_DOMTokenList",
       "DOMTokenList",
-      "_DOMTokenList"
+      "Element.prototype.classList"
     ],
     "browsers": {
       "android": "<4.4",

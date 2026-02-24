@@ -5,8 +5,8 @@
   "coreWeb": {
     "name": "NodeList.prototype.@@iterator",
     "deps": [
-      "_ArrayIterator",
-      "_Iterator"
+      "_Iterator",
+      "_ArrayIterator"
     ],
     "browsers": {
       "android": "<4.4",
