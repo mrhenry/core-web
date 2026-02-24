@@ -183,4 +183,4 @@ var _Iterator = (function () { // eslint-disable-line no-unused-vars
 
 	return _Iterator;
 }());
-export default Iterator;
+export default _Iterator;

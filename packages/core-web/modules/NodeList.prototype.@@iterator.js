@@ -1,4 +1,4 @@
-import Iterator from "@mrhenry/core-web/helpers/_Iterator";
+import _Iterator from "@mrhenry/core-web/helpers/_Iterator";
 import ArrayIterator from "@mrhenry/core-web/helpers/_ArrayIterator";
 (function(undefined) {
 if (!("Symbol"in self&&"iterator"in self.Symbol&&function(){var e=document.createDocumentFragment()

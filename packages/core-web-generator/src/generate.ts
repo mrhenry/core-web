@@ -291,7 +291,7 @@ function providedByCoreWeb(f: string): boolean {
 }
 
 function normalizeHelperName(name: string): string | boolean {
-	if (name === "_mutation" || name === "_DOMTokenList") {
+	if (name === "_mutation" || name === "_DOMTokenList" || name === "_Iterator") {
 		return name;
 	}
 	if (name.startsWith("_ESAbstract.")) {

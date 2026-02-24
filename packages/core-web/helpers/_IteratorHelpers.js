@@ -6716,7 +6716,7 @@ module.exports = function whichTypedArray(value) {
 }).call(this)}).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
 },{"available-typed-arrays":1,"call-bind":10,"call-bound":11,"for-each":140,"get-proto":151,"gopd":157,"has-tostringtag/shams":163}],215:[function(require,module,exports){
 
-self._IteratorHelpersUtils = {
+self._IteratorHelpers = {
   iteratorPrototype: {
 	  drop: require("es-iterator-helpers/Iterator.prototype.drop"),
 	  every: require("es-iterator-helpers/Iterator.prototype.every"),
@@ -6738,6 +6738,6 @@ self._IteratorHelpersUtils = {
 },{"es-iterator-helpers/Iterator.from":74,"es-iterator-helpers/Iterator.prototype.drop":78,"es-iterator-helpers/Iterator.prototype.every":82,"es-iterator-helpers/Iterator.prototype.filter":86,"es-iterator-helpers/Iterator.prototype.find":90,"es-iterator-helpers/Iterator.prototype.flatMap":94,"es-iterator-helpers/Iterator.prototype.forEach":98,"es-iterator-helpers/Iterator.prototype.map":102,"es-iterator-helpers/Iterator.prototype.reduce":106,"es-iterator-helpers/Iterator.prototype.some":110,"es-iterator-helpers/Iterator.prototype.take":114,"es-iterator-helpers/Iterator.prototype.toArray":118}]},{},[215]);
 
 
-var IteratorHelpersUtils = self._IteratorHelpersUtils;
-delete self._IteratorHelpersUtils;
+var IteratorHelpers = self._IteratorHelpers;
+delete self._IteratorHelpers;
 export default IteratorHelpers;

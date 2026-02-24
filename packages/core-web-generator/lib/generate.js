@@ -224,7 +224,7 @@ function providedByCoreWeb(f) {
     return p.test(f);
 }
 function normalizeHelperName(name) {
-    if (name === "_mutation" || name === "_DOMTokenList") {
+    if (name === "_mutation" || name === "_DOMTokenList" || name === "_Iterator") {
         return name;
     }
     if (name.startsWith("_ESAbstract.")) {
