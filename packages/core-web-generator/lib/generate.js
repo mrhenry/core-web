@@ -183,7 +183,7 @@ async function gen(feature, mapping, aliases) {
     return output;
 }
 async function allDependencies(feature) {
-    const dependencies = new Set();
+    let dependencies = [];
     const meta = await polyfillLibrary.describePolyfill(feature);
     for (const dep of meta?.dependencies || []) {
         if (!("string" === typeof dep)) {
@@ -192,19 +192,26 @@ async function allDependencies(feature) {
         if (providedByBabel(dep) || ignoredByCoreWeb(dep)) {
             continue;
         }
-        dependencies.add(dep);
+        dependencies.push(dep);
         const nestedDependencies = await allDependencies(dep);
-        nestedDependencies.forEach(dep2 => {
-            dependencies.add(dep2);
-        });
+        dependencies = [...nestedDependencies, ...dependencies];
     }
-    return dependencies;
+    const uniqueDependencies = [];
+    const dependenciesSet = new Set();
+    dependencies.forEach((dep) => {
+        if (dependenciesSet.has(dep)) {
+            return;
+        }
+        uniqueDependencies.push(dep);
+        dependenciesSet.add(dep);
+    });
+    return uniqueDependencies;
 }
 function ignoredByCoreWeb(f) {
     return f.startsWith('Intl.');
 }
 function providedByBabel(f) {
-    const p = /^(_StringIterator|Function|Date|Math|Object|String|Number|(Weak)?(Map|Set)|Symbol|Array|RegExp|Promise|AggregateError|Error|_ErrorConstructor|Reflect|URL|URLSearchParams|setTimeout|setInterval|setImmediate|queueMicrotask|globalThis|structuredClone|JSON)($|\.)/;
+    const p = /^(_StringIterator|Function|Date|Math|Object|String|Number|(Weak)?(Map|Set)|Symbol|Array|RegExp|Promise|AggregateError|Error|_ErrorConstructor|Reflect|URL|URLSearchParams|setTimeout|setInterval|setImmediate|queueMicrotask|globalThis|structuredClone|JSON|Iterator)($|\.)/;
     const typedArrays = /^(ArrayBuffer|Int8Array|Uint8Array|Uint8ClampedArray|Int16Array|Uint16Array|Int32Array|Uint32Array|Float32Array|Float64Array|TypedArray)($|\.)/;
     const domIterables = /^(DOMTokenList|NodeList)\.prototype\.(forEach|@@iterator)($|\.)/;
     if (domIterables.test(f)) {
@@ -217,7 +224,7 @@ function providedByCoreWeb(f) {
     return p.test(f);
 }
 function normalizeHelperName(name) {
-    if (name === "_mutation" || name === "_DOMTokenList") {
+    if (name === "_mutation" || name === "_DOMTokenList" || name === "_Iterator") {
         return name;
     }
     if (name.startsWith("_ESAbstract.")) {
@@ -248,15 +255,4 @@ const aliasPrefixesToSkip = [
     'HTMLCanvasElement.protoype.toBlob', // see : https://github.com/Financial-Times/polyfill-library/issues/836,
     'PageVisibility',
 ];
-async function streamToString(stream) {
-    return new Promise((resolve) => {
-        let out = '';
-        stream.on('data', (chunk) => {
-            out += chunk.toString("utf-8");
-        });
-        stream.on('end', () => {
-            resolve(out);
-        });
-    });
-}
 //# sourceMappingURL=generate.js.map

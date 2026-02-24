@@ -234,8 +234,9 @@ async function gen(feature: string, mapping: Array<Feature>, aliases: Array<Feat
 	return output;
 }
 
-async function allDependencies(feature: string): Promise<Set<string>> {
-	const dependencies: Set<string> = new Set();
+async function allDependencies(feature: string): Promise<Array<string>> {
+	let dependencies: Array<string> = [];
+
 	const meta = await polyfillLibrary.describePolyfill(feature);
 
 	for (const dep of meta?.dependencies || []) {
@@ -247,15 +248,25 @@ async function allDependencies(feature: string): Promise<Set<string>> {
 			continue;
 		}
 
-		dependencies.add(dep);
+		dependencies.push(dep);
 
 		const nestedDependencies = await allDependencies(dep);
-		nestedDependencies.forEach(dep2 => {
-			dependencies.add(dep2);
-		});
+		dependencies = [...nestedDependencies, ...dependencies];
 	}
 
-	return dependencies;
+	const uniqueDependencies: Array<string> = [];
+	const dependenciesSet: Set<string> = new Set();
+
+	dependencies.forEach((dep) => {
+		if (dependenciesSet.has(dep)) {
+			return;
+		}
+
+		uniqueDependencies.push(dep);
+		dependenciesSet.add(dep);
+	});
+
+	return uniqueDependencies;
 }
 
 function ignoredByCoreWeb(f: string): boolean {
@@ -263,7 +274,7 @@ function ignoredByCoreWeb(f: string): boolean {
 }
 
 function providedByBabel(f: string): boolean {
-	const p = /^(_StringIterator|Function|Date|Math|Object|String|Number|(Weak)?(Map|Set)|Symbol|Array|RegExp|Promise|AggregateError|Error|_ErrorConstructor|Reflect|URL|URLSearchParams|setTimeout|setInterval|setImmediate|queueMicrotask|globalThis|structuredClone|JSON)($|\.)/;
+	const p = /^(_StringIterator|Function|Date|Math|Object|String|Number|(Weak)?(Map|Set)|Symbol|Array|RegExp|Promise|AggregateError|Error|_ErrorConstructor|Reflect|URL|URLSearchParams|setTimeout|setInterval|setImmediate|queueMicrotask|globalThis|structuredClone|JSON|Iterator)($|\.)/;
 	const typedArrays = /^(ArrayBuffer|Int8Array|Uint8Array|Uint8ClampedArray|Int16Array|Uint16Array|Int32Array|Uint32Array|Float32Array|Float64Array|TypedArray)($|\.)/;
 
 	const domIterables = /^(DOMTokenList|NodeList)\.prototype\.(forEach|@@iterator)($|\.)/;
@@ -280,7 +291,7 @@ function providedByCoreWeb(f: string): boolean {
 }
 
 function normalizeHelperName(name: string): string | boolean {
-	if (name === "_mutation" || name === "_DOMTokenList") {
+	if (name === "_mutation" || name === "_DOMTokenList" || name === "_Iterator") {
 		return name;
 	}
 	if (name.startsWith("_ESAbstract.")) {

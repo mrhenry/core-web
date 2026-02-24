@@ -1,7 +1,7 @@
+import ToNumber from "@mrhenry/core-web/helpers/_ESAbstract.ToNumber";
 import Get from "@mrhenry/core-web/helpers/_ESAbstract.Get";
 import IsCallable from "@mrhenry/core-web/helpers/_ESAbstract.IsCallable";
 import ToIntegerOrInfinity from "@mrhenry/core-web/helpers/_ESAbstract.ToIntegerOrInfinity";
-import ToNumber from "@mrhenry/core-web/helpers/_ESAbstract.ToNumber";
 import Type from "@mrhenry/core-web/helpers/_ESAbstract.Type";
 
 // _ESAbstract.GetSetRecord

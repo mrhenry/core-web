@@ -1,5 +1,5 @@
-import CodePointAt from "@mrhenry/core-web/helpers/_ESAbstract.CodePointAt";
 import UTF16SurrogatePairToCodePoint from "@mrhenry/core-web/helpers/_ESAbstract.UTF16SurrogatePairToCodePoint";
+import CodePointAt from "@mrhenry/core-web/helpers/_ESAbstract.CodePointAt";
 
 // _ESAbstract.AdvanceStringIndex
 /* global CodePointAt */

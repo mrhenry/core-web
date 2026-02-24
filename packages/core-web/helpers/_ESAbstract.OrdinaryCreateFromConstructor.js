@@ -1,6 +1,6 @@
-import GetPrototypeFromConstructor from "@mrhenry/core-web/helpers/_ESAbstract.GetPrototypeFromConstructor";
 import Get from "@mrhenry/core-web/helpers/_ESAbstract.Get";
 import Type from "@mrhenry/core-web/helpers/_ESAbstract.Type";
+import GetPrototypeFromConstructor from "@mrhenry/core-web/helpers/_ESAbstract.GetPrototypeFromConstructor";
 
 // _ESAbstract.OrdinaryCreateFromConstructor
 /* global GetPrototypeFromConstructor */

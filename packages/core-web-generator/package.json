@@ -12,8 +12,8 @@
 		"test": "__tests__"
 	},
 	"dependencies": {
-		"@mdn/browser-compat-data": "^7.3.0",
-		"@mrhenry/polyfill-library": "^5.2.0",
+		"@mdn/browser-compat-data": "^7.3.1",
+		"@mrhenry/polyfill-library": "^5.3.0",
 		"@webcomponents/custom-elements": "^1.5.0",
 		"@webcomponents/shadycss": "^1.11.0",
 		"@webcomponents/shadydom": "^1.9.0",

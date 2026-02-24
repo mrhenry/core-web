@@ -1,7 +1,7 @@
-import Iterator from "@mrhenry/core-web/helpers/_Iterator";
+import _Iterator from "@mrhenry/core-web/helpers/_Iterator";
 
 // _ArrayIterator
-/* global Iterator, Symbol */
+/* global _Iterator, Symbol */
 // A modification of https://github.com/medikoo/es6-iterator
 // Copyright (C) 2013-2015 Mariusz Nowak (www.medikoo.com)
 
@@ -9,7 +9,7 @@ var ArrayIterator = (function() { // eslint-disable-line no-unused-vars
 
 	var ArrayIterator = function(arr, kind) {
 		if (!(this instanceof ArrayIterator)) return new ArrayIterator(arr, kind);
-		Iterator.call(this, arr);
+		_Iterator.call(this, arr);
 		if (!kind) kind = 'value';
 		else if (String.prototype.includes.call(kind, 'key+value')) kind = 'key+value';
 		else if (String.prototype.includes.call(kind, 'key')) kind = 'key';
@@ -21,9 +21,9 @@ var ArrayIterator = (function() { // eslint-disable-line no-unused-vars
 			writable: false
 		});
 	};
-	if (Object.setPrototypeOf) Object.setPrototypeOf(ArrayIterator, Iterator.prototype);
+	if (Object.setPrototypeOf) Object.setPrototypeOf(ArrayIterator, _Iterator.prototype);
 
-	ArrayIterator.prototype = Object.create(Iterator.prototype, {
+	ArrayIterator.prototype = Object.create(_Iterator.prototype, {
 		constructor: {
 			value: ArrayIterator,
 			configurable: true,
