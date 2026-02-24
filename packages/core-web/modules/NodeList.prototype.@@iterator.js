@@ -1,5 +1,5 @@
-import ArrayIterator from "@mrhenry/core-web/helpers/_ArrayIterator";
 import Iterator from "@mrhenry/core-web/helpers/_Iterator";
+import ArrayIterator from "@mrhenry/core-web/helpers/_ArrayIterator";
 (function(undefined) {
 if (!("Symbol"in self&&"iterator"in self.Symbol&&function(){var e=document.createDocumentFragment()
 return e.appendChild(document.createElement("div")),!!e.childNodes[self.Symbol.iterator]}()

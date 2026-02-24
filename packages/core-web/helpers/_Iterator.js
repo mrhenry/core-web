@@ -1,10 +1,10 @@
 
 // _Iterator
-/* global Symbol */
+/* global Iterator, Symbol */
 // A modification of https://github.com/medikoo/es6-iterator
 // Copyright (C) 2013-2015 Mariusz Nowak (www.medikoo.com)
 
-var Iterator = (function () { // eslint-disable-line no-unused-vars
+var _Iterator = (function () { // eslint-disable-line no-unused-vars
 	var clear = function () {
 		this.length = 0;
 		return this;
@@ -14,9 +14,9 @@ var Iterator = (function () { // eslint-disable-line no-unused-vars
 		return fn;
 	};
 
-	var Iterator = function (list, context) {
-		if (!(this instanceof Iterator)) {
-			return new Iterator(list, context);
+	var _Iterator = function (list, context) {
+		if (!(this instanceof _Iterator)) {
+			return new _Iterator(list, context);
 		}
 		Object.defineProperties(this, {
 			__list__: {
@@ -39,9 +39,11 @@ var Iterator = (function () { // eslint-disable-line no-unused-vars
 		context.on('_clear', this._onClear.bind(this));
 	};
 
-	Object.defineProperties(Iterator.prototype, Object.assign({
+	_Iterator.prototype = Object.create(Iterator.prototype);
+
+	Object.defineProperties(_Iterator.prototype, Object.assign({
 		constructor: {
-			value: Iterator,
+			value: _Iterator,
 			configurable: true,
 			enumerable: false,
 			writable: true
@@ -164,7 +166,7 @@ var Iterator = (function () { // eslint-disable-line no-unused-vars
 		}
 	}));
 
-	Object.defineProperty(Iterator.prototype, Symbol.iterator, {
+	Object.defineProperty(_Iterator.prototype, Symbol.iterator, {
 		value: function () {
 			return this;
 		},
@@ -172,13 +174,13 @@ var Iterator = (function () { // eslint-disable-line no-unused-vars
 		enumerable: false,
 		writable: true
 	});
-	Object.defineProperty(Iterator.prototype, Symbol.toStringTag, {
+	Object.defineProperty(_Iterator.prototype, Symbol.toStringTag, {
 		value: 'Iterator',
 		configurable: false,
 		enumerable: false,
 		writable: true
 	});
 
-	return Iterator;
+	return _Iterator;
 }());
 export default Iterator;

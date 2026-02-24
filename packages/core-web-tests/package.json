@@ -4,8 +4,7 @@
   "private": true,
   "scripts": {
     "build": "webpack",
-    "watch": "webpack -w",
-    "lint": "eslint --fix ./src/*.js"
+    "watch": "webpack -w"
   },
   "devDependencies": {
     "@babel/core": "*",
@@ -14,7 +13,6 @@
     "@mrhenry/core-web": "*",
     "babel-loader": "*",
     "core-js": "*",
-    "eslint": "*",
     "webpack": "*",
     "webpack-cli": "*"
   },
