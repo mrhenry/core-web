@@ -534,7 +534,7 @@
             "version_added": false
           },
           "oculus": {
-            "version_added": false
+            "version_added": "38.1"
           },
           "opera": {
             "version_added": "118"

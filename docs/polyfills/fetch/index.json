@@ -262,7 +262,7 @@
             "version_added": "18.0.0"
           },
           "oculus": {
-            "version_added": false
+            "version_added": "31.2"
           },
           "opera": {
             "version_added": "91"
@@ -324,7 +324,7 @@
             "version_added": false
           },
           "oculus": {
-            "version_added": false
+            "version_added": "34"
           },
           "opera": {
             "version_added": "111"
@@ -388,7 +388,7 @@
             "version_added": false
           },
           "oculus": {
-            "version_added": false
+            "version_added": "34"
           },
           "opera": {
             "version_added": "112"
@@ -652,7 +652,7 @@
             "version_added": false
           },
           "oculus": {
-            "version_added": false
+            "version_added": "31.2"
           },
           "opera": {
             "version_added": "103"

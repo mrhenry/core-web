@@ -295,7 +295,7 @@
               "version_added": false
             },
             "oculus": {
-              "version_added": false
+              "version_added": "41.0"
             },
             "opera": {
               "version_added": "124"

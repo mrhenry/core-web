@@ -72,7 +72,7 @@
           "version_added": false
         },
         "oculus": {
-          "version_added": false
+          "version_added": "31.2"
         },
         "opera": {
           "version_added": "100"

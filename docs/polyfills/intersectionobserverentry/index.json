@@ -29,6 +29,7 @@
     "IntersectionObserverEntry": {
       "__compat": {
         "description": "<code>IntersectionObserverEntry()</code> constructor",
+        "mdn_url": "https://developer.mozilla.org/docs/Web/API/IntersectionObserverEntry/IntersectionObserverEntry",
         "source_file": "api/IntersectionObserverEntry.json",
         "spec_url": "https://w3c.github.io/IntersectionObserver/#dom-intersectionobserverentry-intersectionobserverentry",
         "status": {
