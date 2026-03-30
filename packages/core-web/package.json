@@ -37,7 +37,7 @@
 	"devDependencies": {
 		"@types/node": "*",
 		"@types/semver": "*",
-		"typescript": "*"
+		"typescript": "^6.0.2"
 	},
 	"bugs": {
 		"url": "https://github.com/mrhenry/core-web/issues"
