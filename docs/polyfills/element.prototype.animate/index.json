@@ -282,7 +282,7 @@
         "spec_url": "https://drafts.csswg.org/web-animations-2/#dom-keyframeeffectoptions-iterationcomposite",
         "status": {
           "deprecated": false,
-          "experimental": true,
+          "experimental": false,
           "standard_track": true
         },
         "support": {
@@ -314,10 +314,10 @@
             "version_added": false
           },
           "safari": {
-            "version_added": false
+            "version_added": "16.4"
           },
           "safari_ios": {
-            "version_added": false
+            "version_added": "16.4"
           },
           "samsunginternet_android": {
             "version_added": false
@@ -326,7 +326,7 @@
             "version_added": false
           },
           "webview_ios": {
-            "version_added": false
+            "version_added": "16.4"
           }
         },
         "tags": [
