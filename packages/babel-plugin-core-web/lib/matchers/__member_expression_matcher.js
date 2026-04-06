@@ -1,4 +1,4 @@
-module.exports = function memberExpressionMatcher(memberExpression, matcherMap) {
+export function memberExpressionMatcher(memberExpression, matcherMap) {
 	if (!memberExpression.property || !memberExpression.property.name) {
 		return null;
 	}

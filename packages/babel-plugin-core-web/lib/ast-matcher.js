@@ -1,9 +1,5 @@
-const types = require("@babel/types/lib/definitions");
-const equal = require("fast-deep-equal");
-
-module.exports = {
-	matchNode: matchNode,
-};
+import types from '@babel/types/lib/definitions/index.js';
+import equal from 'fast-deep-equal';
 
 function nullish(v) {
 	return v === null || v === undefined;
@@ -13,7 +9,7 @@ function arrayish(v) {
 	return typeof v === "array" || v instanceof Array;
 }
 
-function matchNode(matcher, ast, state) {
+export function matchNode(matcher, ast, state) {
 	if (nullish(matcher) && nullish(ast)) {
 		return true;
 	}

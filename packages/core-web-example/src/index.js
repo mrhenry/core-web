@@ -3,7 +3,7 @@
 /*! core-web-ignore @mrhenry/core-web/modules/console.table */
 
 // Manually add a polyfill
-import "@mrhenry/core-web/modules/Element.prototype.after";
+import "@mrhenry/core-web/modules/Element.prototype.after.js";
 
 customElements.define('mr-x', class extends HTMLElement { });
 

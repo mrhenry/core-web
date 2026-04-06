@@ -1,4 +1,4 @@
-module.exports = function callExpressionMatcher(callExpression, matcherMap) {
+export function callExpressionMatcher(callExpression, matcherMap) {
 	if (callExpression.callee.type === 'MemberExpression') {
 		const property = callExpression.callee.property;
 		if (!property || !property.name) {

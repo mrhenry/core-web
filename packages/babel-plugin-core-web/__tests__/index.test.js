@@ -1,1 +1,1 @@
-require('./injector');
+import './injector.js';
