@@ -1,7 +1,7 @@
-import Type from "@mrhenry/core-web/helpers/_ESAbstract.Type";
-import ToInteger from "@mrhenry/core-web/helpers/_ESAbstract.ToInteger";
-import Get from "@mrhenry/core-web/helpers/_ESAbstract.Get";
-import ToLength from "@mrhenry/core-web/helpers/_ESAbstract.ToLength";
+import Type from "@mrhenry/core-web/helpers/_ESAbstract.Type.js";
+import ToInteger from "@mrhenry/core-web/helpers/_ESAbstract.ToInteger.js";
+import Get from "@mrhenry/core-web/helpers/_ESAbstract.Get.js";
+import ToLength from "@mrhenry/core-web/helpers/_ESAbstract.ToLength.js";
 
 // _ESAbstract.LengthOfArrayLike
 /* global Get, ToLength */

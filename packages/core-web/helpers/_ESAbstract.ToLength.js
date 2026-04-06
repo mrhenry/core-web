@@ -1,5 +1,5 @@
-import Type from "@mrhenry/core-web/helpers/_ESAbstract.Type";
-import ToInteger from "@mrhenry/core-web/helpers/_ESAbstract.ToInteger";
+import Type from "@mrhenry/core-web/helpers/_ESAbstract.Type.js";
+import ToInteger from "@mrhenry/core-web/helpers/_ESAbstract.ToInteger.js";
 
 // _ESAbstract.ToLength
 /* global ToInteger */

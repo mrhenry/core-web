@@ -63,7 +63,7 @@ class Injector {
 
 		while (all.length) {
 			const importName = all.pop();
-			addSideEffect(path, `@mrhenry/core-web/modules/${importName}`);
+			addSideEffect(path, `@mrhenry/core-web/modules/${importName}.js`);
 		}
 
 		// remove unused imports

@@ -1,6 +1,6 @@
-import SameValueNonNumber from "@mrhenry/core-web/helpers/_ESAbstract.SameValueNonNumber";
-import Type from "@mrhenry/core-web/helpers/_ESAbstract.Type";
-import SameValue from "@mrhenry/core-web/helpers/_ESAbstract.SameValue";
+import SameValueNonNumber from "@mrhenry/core-web/helpers/_ESAbstract.SameValueNonNumber.js";
+import Type from "@mrhenry/core-web/helpers/_ESAbstract.Type.js";
+import SameValue from "@mrhenry/core-web/helpers/_ESAbstract.SameValue.js";
 
 // _ESAbstract.AddValueToKeyedGroup
 /* global SameValue */

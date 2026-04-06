@@ -5,15 +5,18 @@
 		"lib": [
 			"ES2020",
 		],
-		"module": "commonjs",
-		"moduleResolution": "node",
+		"module": "nodenext",
+		"moduleResolution": "nodenext",
 		"outDir": "./lib/",
 		"rootDir": "./src/",
 		"sourceMap": true,
 		"strict": true,
 		"target": "ES2020",
 		"allowJs": true,
-		"declaration": true
+		"declaration": true,
+		"types": [
+			"node"
+		]
 	},
 	"exclude": [
 		"node_modules"

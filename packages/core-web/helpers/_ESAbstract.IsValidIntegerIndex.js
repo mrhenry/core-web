@@ -1,5 +1,5 @@
-import Type from "@mrhenry/core-web/helpers/_ESAbstract.Type";
-import IsInteger from "@mrhenry/core-web/helpers/_ESAbstract.IsInteger";
+import Type from "@mrhenry/core-web/helpers/_ESAbstract.Type.js";
+import IsInteger from "@mrhenry/core-web/helpers/_ESAbstract.IsInteger.js";
 
 // _ESAbstract.IsValidIntegerIndex
 /* globals IsInteger */

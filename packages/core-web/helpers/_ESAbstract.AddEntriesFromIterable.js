@@ -1,19 +1,19 @@
-import ToObject from "@mrhenry/core-web/helpers/_ESAbstract.ToObject";
-import GetV from "@mrhenry/core-web/helpers/_ESAbstract.GetV";
-import IsCallable from "@mrhenry/core-web/helpers/_ESAbstract.IsCallable";
-import Call from "@mrhenry/core-web/helpers/_ESAbstract.Call";
-import GetMethod from "@mrhenry/core-web/helpers/_ESAbstract.GetMethod";
-import Type from "@mrhenry/core-web/helpers/_ESAbstract.Type";
-import Get from "@mrhenry/core-web/helpers/_ESAbstract.Get";
-import ToBoolean from "@mrhenry/core-web/helpers/_ESAbstract.ToBoolean";
-import IteratorNext from "@mrhenry/core-web/helpers/_ESAbstract.IteratorNext";
-import IteratorComplete from "@mrhenry/core-web/helpers/_ESAbstract.IteratorComplete";
-import IteratorStep from "@mrhenry/core-web/helpers/_ESAbstract.IteratorStep";
-import IteratorValue from "@mrhenry/core-web/helpers/_ESAbstract.IteratorValue";
-import GetIterator from "@mrhenry/core-web/helpers/_ESAbstract.GetIterator";
-import IteratorStepValue from "@mrhenry/core-web/helpers/_ESAbstract.IteratorStepValue";
-import IteratorClose from "@mrhenry/core-web/helpers/_ESAbstract.IteratorClose";
-import ThrowCompletion from "@mrhenry/core-web/helpers/_ESAbstract.ThrowCompletion";
+import ToObject from "@mrhenry/core-web/helpers/_ESAbstract.ToObject.js";
+import GetV from "@mrhenry/core-web/helpers/_ESAbstract.GetV.js";
+import IsCallable from "@mrhenry/core-web/helpers/_ESAbstract.IsCallable.js";
+import Call from "@mrhenry/core-web/helpers/_ESAbstract.Call.js";
+import GetMethod from "@mrhenry/core-web/helpers/_ESAbstract.GetMethod.js";
+import Type from "@mrhenry/core-web/helpers/_ESAbstract.Type.js";
+import Get from "@mrhenry/core-web/helpers/_ESAbstract.Get.js";
+import ToBoolean from "@mrhenry/core-web/helpers/_ESAbstract.ToBoolean.js";
+import IteratorNext from "@mrhenry/core-web/helpers/_ESAbstract.IteratorNext.js";
+import IteratorComplete from "@mrhenry/core-web/helpers/_ESAbstract.IteratorComplete.js";
+import IteratorStep from "@mrhenry/core-web/helpers/_ESAbstract.IteratorStep.js";
+import IteratorValue from "@mrhenry/core-web/helpers/_ESAbstract.IteratorValue.js";
+import GetIterator from "@mrhenry/core-web/helpers/_ESAbstract.GetIterator.js";
+import IteratorStepValue from "@mrhenry/core-web/helpers/_ESAbstract.IteratorStepValue.js";
+import IteratorClose from "@mrhenry/core-web/helpers/_ESAbstract.IteratorClose.js";
+import ThrowCompletion from "@mrhenry/core-web/helpers/_ESAbstract.ThrowCompletion.js";
 
 // _ESAbstract.AddEntriesFromIterable
 /* global IsCallable, GetIterator, IteratorStepValue, IteratorClose, Get, Call, ThrowCompletion, Type */

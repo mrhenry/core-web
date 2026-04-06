@@ -1,19 +1,19 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-const fs = require("fs");
-const polyfillLibrary = require("@mrhenry/polyfill-library");
-const sources = require("@mrhenry/polyfill-library/lib/sources.js");
-const path = require("path");
+import fs from 'node:fs';
+import * as polyfillLibrary from "@mrhenry/polyfill-library";
+import * as sources from "@mrhenry/polyfill-library/lib/sources.js";
+import path from "node:path";
+import { fileURLToPath } from 'node:url';
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const coreWebDir = path.resolve(__dirname, "../../core-web");
 const modulesDir = path.resolve(__dirname, "../../core-web/modules");
 const helpersDir = path.resolve(__dirname, "../../core-web/helpers");
-const generate_webcomponents_1 = require("./custom-polyfills/generate-webcomponents");
-const browsers_to_engines_1 = require("./browsers-to-engines/browsers-to-engines");
-const generate_mappings_1 = require("./generate-mappings");
-const generate_element_qsa_scope_1 = require("./custom-polyfills/generate-element-qsa-scope");
-const generate_crypto_randomuuid_1 = require("./custom-polyfills/generate-crypto-randomuuid");
-const semver = require("semver");
-const generate_element_qsa_has_1 = require("./custom-polyfills/generate-element-qsa-has");
+import { generateWebComponents } from "./custom-polyfills/generate-webcomponents.js";
+import { browsersToEngines } from "./browsers-to-engines/browsers-to-engines.js";
+import { generateMappings } from './generate-mappings.js';
+import { generateElementQsaScope } from './custom-polyfills/generate-element-qsa-scope.js';
+import { generateCryptoRandomUUID } from './custom-polyfills/generate-crypto-randomuuid.js';
+import * as semver from 'semver';
+import { generateElementQsaSHas } from './custom-polyfills/generate-element-qsa-has.js';
 genAll();
 async function genAll() {
     fs.rmSync(modulesDir, {
@@ -45,10 +45,10 @@ async function genAll() {
         });
     }
     // custom polyfills
-    await (0, generate_webcomponents_1.generateWebComponents)(mapping);
-    await (0, generate_element_qsa_scope_1.generateElementQsaScope)(mapping);
-    await (0, generate_element_qsa_has_1.generateElementQsaSHas)(mapping);
-    await (0, generate_crypto_randomuuid_1.generateCryptoRandomUUID)(mapping);
+    await generateWebComponents(mapping);
+    await generateElementQsaScope(mapping);
+    await generateElementQsaSHas(mapping);
+    await generateCryptoRandomUUID(mapping);
     // aliases
     const inverseAliases = {};
     aliases.forEach((alias) => {
@@ -93,7 +93,7 @@ async function genAll() {
     });
     knownEngines.sort();
     fs.writeFileSync(path.join(coreWebDir, "__engines.js"), `export const engines = ${JSON.stringify(knownEngines)}`);
-    await (0, generate_mappings_1.generateMappings)(mapping);
+    await generateMappings(mapping);
 }
 // Override meta data from polyfill-library
 async function patchedMeta(feature, meta) {
@@ -138,7 +138,7 @@ async function gen(feature, mapping, aliases) {
             name: feature,
             deps: Array.from(dependencies).filter(n => !(providedByBabel(n) || ignoredByCoreWeb(n))),
             browsers: meta.browsers,
-            engines: (0, browsers_to_engines_1.browsersToEngines)(meta.browsers),
+            engines: browsersToEngines(meta.browsers),
             size: meta.size,
             isAlias: false,
             providedByCoreWeb: false,
@@ -153,7 +153,7 @@ async function gen(feature, mapping, aliases) {
     dependencies.forEach(dep => {
         const name = normalizeHelperName(dep);
         if (name && !(providedByBabel(dep) || ignoredByCoreWeb(dep))) {
-            output += `import ${name} from "@mrhenry/core-web/helpers/${dep}";\n`;
+            output += `import ${name} from "@mrhenry/core-web/helpers/${dep}.js";\n`;
         }
     });
     if (!helperName) {

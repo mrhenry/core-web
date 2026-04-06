@@ -1,6 +1,5 @@
-'use strict';
-const assert = require('assert');
-const { browsersToEngines } = require('../lib/browsers-to-engines/browsers-to-engines');
+import assert from 'node:assert';
+import { browsersToEngines } from '../lib/browsers-to-engines/browsers-to-engines.js';
 
 function testBrowsersToEngines(message, browsers, engines) {
 	console.log(`browsersToEngines: ${message}`);

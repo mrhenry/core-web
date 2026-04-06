@@ -1,4 +1,4 @@
-import StringPad from "@mrhenry/core-web/helpers/_ESAbstract.StringPad";
+import StringPad from "@mrhenry/core-web/helpers/_ESAbstract.StringPad.js";
 
 // _ESAbstract.UnicodeEscape
 /* global StringPad */

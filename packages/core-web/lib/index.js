@@ -1,17 +1,11 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.names = names;
-exports.get = get;
-exports.has = has;
-exports.required = required;
-const __mapping_js_1 = require("./__mapping.js");
-const __browsers_js_1 = require("./__browsers.js");
-const __engines_js_1 = require("./__engines.js");
-const browserslist = require("browserslist");
-const semver = require("semver");
-const mapping = __mapping_js_1.mapping;
-const knownBrowsers = __browsers_js_1.browsers;
-const knownEngines = __engines_js_1.engines;
+import { mapping as mappingJS } from "./__mapping.js";
+import { browsers as knownBrowsersJS } from "./__browsers.js";
+import { engines as knownEnginesJS } from "./__engines.js";
+import browserslist from "browserslist";
+import * as semver from "semver";
+const mapping = mappingJS;
+const knownBrowsers = knownBrowsersJS;
+const knownEngines = knownEnginesJS;
 const map = new Map();
 for (let spec of mapping) {
     map.set(spec.name, spec);
@@ -24,17 +18,17 @@ const engines = new Set();
 for (let engine of knownEngines) {
     engines.add(engine);
 }
-function names() {
+export function names() {
     return Array.from(map.keys());
 }
-function get(name) {
+export function get(name) {
     return map.get(name);
 }
-function has(name) {
+export function has(name) {
     return map.has(name);
 }
 ;
-function required(targets, opts = {}) {
+export function required(targets, opts = {}) {
     if (opts && opts.debug) {
         logUsedTargets(targets);
     }

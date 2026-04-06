@@ -1,17 +1,17 @@
-import Get from "@mrhenry/core-web/helpers/_ESAbstract.Get";
-import Type from "@mrhenry/core-web/helpers/_ESAbstract.Type";
-import ToBoolean from "@mrhenry/core-web/helpers/_ESAbstract.ToBoolean";
-import Call from "@mrhenry/core-web/helpers/_ESAbstract.Call";
-import IteratorNext from "@mrhenry/core-web/helpers/_ESAbstract.IteratorNext";
-import IteratorComplete from "@mrhenry/core-web/helpers/_ESAbstract.IteratorComplete";
-import IteratorStep from "@mrhenry/core-web/helpers/_ESAbstract.IteratorStep";
-import IteratorValue from "@mrhenry/core-web/helpers/_ESAbstract.IteratorValue";
-import ToObject from "@mrhenry/core-web/helpers/_ESAbstract.ToObject";
-import GetV from "@mrhenry/core-web/helpers/_ESAbstract.GetV";
-import IsCallable from "@mrhenry/core-web/helpers/_ESAbstract.IsCallable";
-import GetMethod from "@mrhenry/core-web/helpers/_ESAbstract.GetMethod";
-import GetIterator from "@mrhenry/core-web/helpers/_ESAbstract.GetIterator";
-import IteratorStepValue from "@mrhenry/core-web/helpers/_ESAbstract.IteratorStepValue";
+import Get from "@mrhenry/core-web/helpers/_ESAbstract.Get.js";
+import Type from "@mrhenry/core-web/helpers/_ESAbstract.Type.js";
+import ToBoolean from "@mrhenry/core-web/helpers/_ESAbstract.ToBoolean.js";
+import Call from "@mrhenry/core-web/helpers/_ESAbstract.Call.js";
+import IteratorNext from "@mrhenry/core-web/helpers/_ESAbstract.IteratorNext.js";
+import IteratorComplete from "@mrhenry/core-web/helpers/_ESAbstract.IteratorComplete.js";
+import IteratorStep from "@mrhenry/core-web/helpers/_ESAbstract.IteratorStep.js";
+import IteratorValue from "@mrhenry/core-web/helpers/_ESAbstract.IteratorValue.js";
+import ToObject from "@mrhenry/core-web/helpers/_ESAbstract.ToObject.js";
+import GetV from "@mrhenry/core-web/helpers/_ESAbstract.GetV.js";
+import IsCallable from "@mrhenry/core-web/helpers/_ESAbstract.IsCallable.js";
+import GetMethod from "@mrhenry/core-web/helpers/_ESAbstract.GetMethod.js";
+import GetIterator from "@mrhenry/core-web/helpers/_ESAbstract.GetIterator.js";
+import IteratorStepValue from "@mrhenry/core-web/helpers/_ESAbstract.IteratorStepValue.js";
 
 // _ESAbstract.IterableToList
 /* global GetIterator, IteratorStepValue */

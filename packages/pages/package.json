@@ -22,23 +22,23 @@
     "dev-server": "npx http-server ./dist -p 3080"
   },
   "devDependencies": {
-    "@csstools/postcss-minify": "*",
     "@babel/core": "*",
     "@babel/preset-env": "*",
     "@csstools/postcss-bundler": "*",
-    "@mdn/browser-compat-data": "*",
+    "@csstools/postcss-minify": "*",
+    "@mdn/browser-compat-data": "^7.3.8",
     "@mrhenry/babel-plugin-core-web": "*",
     "@mrhenry/core-web": "*",
+    "@mrhenry/polyfill-library": "*",
     "babel-loader": "*",
-    "canvas": "*",
+    "canvas": "^3.2.2",
     "core-js": "*",
     "he": "*",
-    "@mrhenry/polyfill-library": "*",
     "postcss": "*",
     "postcss-preset-env": "*",
     "postcss-split-by-media": "*",
     "webpack": "*",
-    "webpack-cli": "*"
+    "webpack-cli": "^7.0.2"
   },
   "volta": {
     "extends": "../../package.json"

@@ -1,4 +1,4 @@
-type Feature = {
+export type Feature = {
 	// Feature name.
 	name: string
 
@@ -17,7 +17,7 @@ type Feature = {
 	providedByCoreWeb: boolean
 }
 
-type FeatureAlias = {
+export type FeatureAlias = {
 	// Feature name.
 	name: string
 	// Aliases for the feature.

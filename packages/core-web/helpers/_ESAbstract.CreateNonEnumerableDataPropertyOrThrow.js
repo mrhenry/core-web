@@ -1,4 +1,4 @@
-import DefinePropertyOrThrow from "@mrhenry/core-web/helpers/_ESAbstract.DefinePropertyOrThrow";
+import DefinePropertyOrThrow from "@mrhenry/core-web/helpers/_ESAbstract.DefinePropertyOrThrow.js";
 
 // _ESAbstract.CreateNonEnumerableDataPropertyOrThrow
 /* global DefinePropertyOrThrow */

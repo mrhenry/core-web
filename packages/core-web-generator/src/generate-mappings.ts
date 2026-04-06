@@ -1,8 +1,12 @@
-import * as fs from 'fs';
-import * as path from "path";
+import fs from 'node:fs';
+import path from "node:path";
 import * as parser from '@babel/parser';
 import traverse from '@babel/traverse';
 import { StringLiteral, Expression, SpreadElement, JSXNamespacedName, ArgumentPlaceholder } from '@babel/types';
+import { Feature } from './types/index.js';
+import { fileURLToPath } from 'node:url';
+
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 const coreWebBabelPluginDir = path.resolve(__dirname, "../../babel-plugin-core-web");
 
@@ -579,7 +583,7 @@ function generateNewExpressionMatcher(): string {
 }
 
 function setNodeIsVariable(matcher: Expression) {
-	traverse(matcher, {
+	traverse.default(matcher, {
 		noScope: true,
 		Identifier(path: any) {
 			if (path.node.name.startsWith("$")) {

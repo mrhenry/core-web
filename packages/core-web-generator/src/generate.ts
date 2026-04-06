@@ -1,19 +1,23 @@
-import * as fs from 'fs';
+import fs from 'node:fs';
 import * as polyfillLibrary from "@mrhenry/polyfill-library";
 import * as sources from "@mrhenry/polyfill-library/lib/sources.js";
-import * as path from "path";
+import path from "node:path";
+import { fileURLToPath } from 'node:url';
+
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 const coreWebDir = path.resolve(__dirname, "../../core-web");
 const modulesDir = path.resolve(__dirname, "../../core-web/modules");
 const helpersDir = path.resolve(__dirname, "../../core-web/helpers");
 
-import { generateWebComponents } from "./custom-polyfills/generate-webcomponents";
-import { browsersToEngines } from "./browsers-to-engines/browsers-to-engines";
-import { generateMappings } from './generate-mappings';
-import { generateElementQsaScope } from './custom-polyfills/generate-element-qsa-scope';
-import { generateCryptoRandomUUID } from './custom-polyfills/generate-crypto-randomuuid';
+import { generateWebComponents } from "./custom-polyfills/generate-webcomponents.js";
+import { browsersToEngines } from "./browsers-to-engines/browsers-to-engines.js";
+import { generateMappings } from './generate-mappings.js';
+import { generateElementQsaScope } from './custom-polyfills/generate-element-qsa-scope.js';
+import { generateCryptoRandomUUID } from './custom-polyfills/generate-crypto-randomuuid.js';
 import * as semver from 'semver';
-import { generateElementQsaSHas } from './custom-polyfills/generate-element-qsa-has';
+import { generateElementQsaSHas } from './custom-polyfills/generate-element-qsa-has.js';
+import { Feature, FeatureAlias } from './types/index.js';
 
 genAll();
 
@@ -196,7 +200,7 @@ async function gen(feature: string, mapping: Array<Feature>, aliases: Array<Feat
 	dependencies.forEach(dep => {
 		const name = normalizeHelperName(dep);
 		if (name && !(providedByBabel(dep) || ignoredByCoreWeb(dep))) {
-			output += `import ${name} from "@mrhenry/core-web/helpers/${dep}";\n`;
+			output += `import ${name} from "@mrhenry/core-web/helpers/${dep}.js";\n`;
 		}
 	});
 

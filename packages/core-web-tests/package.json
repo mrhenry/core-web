@@ -14,7 +14,7 @@
     "babel-loader": "*",
     "core-js": "*",
     "webpack": "*",
-    "webpack-cli": "*"
+    "webpack-cli": "^7.0.2"
   },
   "volta": {
     "extends": "../../package.json"

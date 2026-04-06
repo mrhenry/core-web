@@ -1,4 +1,4 @@
-import ToObject from "@mrhenry/core-web/helpers/_ESAbstract.ToObject";
+import ToObject from "@mrhenry/core-web/helpers/_ESAbstract.ToObject.js";
 
 // _ESAbstract.GetV
 /* global ToObject */

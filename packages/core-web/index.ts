@@ -1,8 +1,9 @@
 import { mapping as mappingJS } from "./__mapping.js";
 import { browsers as knownBrowsersJS } from "./__browsers.js";
 import { engines as knownEnginesJS } from "./__engines.js";
-import * as browserslist from "browserslist";
+import browserslist from "browserslist";
 import * as semver from "semver";
+import { Feature } from "./types/index.js";
 
 const mapping = mappingJS as Array<Feature>;
 const knownBrowsers = knownBrowsersJS as Array<string>;

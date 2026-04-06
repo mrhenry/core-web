@@ -1,9 +1,9 @@
-import ToObject from "@mrhenry/core-web/helpers/_ESAbstract.ToObject";
-import GetV from "@mrhenry/core-web/helpers/_ESAbstract.GetV";
-import IsCallable from "@mrhenry/core-web/helpers/_ESAbstract.IsCallable";
-import Call from "@mrhenry/core-web/helpers/_ESAbstract.Call";
-import GetMethod from "@mrhenry/core-web/helpers/_ESAbstract.GetMethod";
-import Type from "@mrhenry/core-web/helpers/_ESAbstract.Type";
+import ToObject from "@mrhenry/core-web/helpers/_ESAbstract.ToObject.js";
+import GetV from "@mrhenry/core-web/helpers/_ESAbstract.GetV.js";
+import IsCallable from "@mrhenry/core-web/helpers/_ESAbstract.IsCallable.js";
+import Call from "@mrhenry/core-web/helpers/_ESAbstract.Call.js";
+import GetMethod from "@mrhenry/core-web/helpers/_ESAbstract.GetMethod.js";
+import Type from "@mrhenry/core-web/helpers/_ESAbstract.Type.js";
 
 // _ESAbstract.IteratorClose
 /* global GetMethod, Type, Call */

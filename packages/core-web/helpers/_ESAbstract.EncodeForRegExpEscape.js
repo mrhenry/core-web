@@ -1,9 +1,9 @@
-import StringPad from "@mrhenry/core-web/helpers/_ESAbstract.StringPad";
-import UTF16SurrogatePairToCodePoint from "@mrhenry/core-web/helpers/_ESAbstract.UTF16SurrogatePairToCodePoint";
-import CodePointAt from "@mrhenry/core-web/helpers/_ESAbstract.CodePointAt";
-import StringToCodePoints from "@mrhenry/core-web/helpers/_ESAbstract.StringToCodePoints";
-import UTF16EncodeCodePoint from "@mrhenry/core-web/helpers/_ESAbstract.UTF16EncodeCodePoint";
-import UnicodeEscape from "@mrhenry/core-web/helpers/_ESAbstract.UnicodeEscape";
+import StringPad from "@mrhenry/core-web/helpers/_ESAbstract.StringPad.js";
+import UTF16SurrogatePairToCodePoint from "@mrhenry/core-web/helpers/_ESAbstract.UTF16SurrogatePairToCodePoint.js";
+import CodePointAt from "@mrhenry/core-web/helpers/_ESAbstract.CodePointAt.js";
+import StringToCodePoints from "@mrhenry/core-web/helpers/_ESAbstract.StringToCodePoints.js";
+import UTF16EncodeCodePoint from "@mrhenry/core-web/helpers/_ESAbstract.UTF16EncodeCodePoint.js";
+import UnicodeEscape from "@mrhenry/core-web/helpers/_ESAbstract.UnicodeEscape.js";
 
 // _ESAbstract.EncodeForRegExpEscape
 /* global StringPad, StringToCodePoints, UTF16EncodeCodePoint, UnicodeEscape */

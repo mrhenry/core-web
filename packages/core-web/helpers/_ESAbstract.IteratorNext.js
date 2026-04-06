@@ -1,5 +1,5 @@
-import Type from "@mrhenry/core-web/helpers/_ESAbstract.Type";
-import Call from "@mrhenry/core-web/helpers/_ESAbstract.Call";
+import Type from "@mrhenry/core-web/helpers/_ESAbstract.Type.js";
+import Call from "@mrhenry/core-web/helpers/_ESAbstract.Call.js";
 
 // _ESAbstract.IteratorNext
 /* global Call, Type */

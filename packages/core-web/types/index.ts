@@ -1,4 +1,4 @@
-type Feature = {
+export type Feature = {
 	// Feature name.
 	name: string
 

@@ -1,6 +1,6 @@
-import _DOMTokenList from "@mrhenry/core-web/helpers/_DOMTokenList";
-import _Iterator from "@mrhenry/core-web/helpers/_Iterator";
-import ArrayIterator from "@mrhenry/core-web/helpers/_ArrayIterator";
+import _DOMTokenList from "@mrhenry/core-web/helpers/_DOMTokenList.js";
+import _Iterator from "@mrhenry/core-web/helpers/_Iterator.js";
+import ArrayIterator from "@mrhenry/core-web/helpers/_ArrayIterator.js";
 (function(undefined) {
 if (!("Symbol"in self&&"iterator"in self.Symbol&&function(){try{var t=document.createElement("div")
 return!(!t.classList||!t.classList[self.Symbol.iterator])}catch(t){return!1}}()

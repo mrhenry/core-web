@@ -1,4 +1,4 @@
-import CreateMethodProperty from "@mrhenry/core-web/helpers/_ESAbstract.CreateMethodProperty";
+import CreateMethodProperty from "@mrhenry/core-web/helpers/_ESAbstract.CreateMethodProperty.js";
 (function(undefined) {
 if (!("toBlob"in HTMLCanvasElement.prototype
 )) {
