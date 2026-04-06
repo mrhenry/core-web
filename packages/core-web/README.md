@@ -14,5 +14,5 @@ yarn add --dev @mrhenry/core-web
 ```
 
 ```js
-import "@mrhenry/core-web/modules/Element.prototype.after";
+import "@mrhenry/core-web/modules/Element.prototype.after.js";
 ```

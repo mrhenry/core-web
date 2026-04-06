@@ -74,7 +74,7 @@ module.exports = function polyfillCardHTML(assetMap, feature, sitemap) {
 					${dotsWBR(cleanName(feature.name))} <span style="font-family: monospace; font-size: 0.8em;">polyfill</span>
 				</h1>
 
-				<pre><code style="word-break: break-all;">import "@mrhenry/core-web/modules/${feature.polyfillName}";</code></pre>
+				<pre><code style="word-break: break-all;">import "@mrhenry/core-web/modules/${feature.polyfillName}.js";</code></pre>
 			</div>
 		</div>
 
