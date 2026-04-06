@@ -1,7 +1,7 @@
-const Injector = require("./injector");
-const { required } = require("@mrhenry/core-web");
+import { Injector } from './injector.js';
+import { required } from '@mrhenry/core-web';
 
-module.exports = function (_, opts) {
+const plugin = function (_, opts) {
 	const featureSet = required({
 		browsers: Object(opts).browsers || {},
 		engines: Object(opts).engines || {},
@@ -59,3 +59,6 @@ module.exports = function (_, opts) {
 		},
 	};
 };
+
+export default plugin;
+export { plugin as 'module.exports' };

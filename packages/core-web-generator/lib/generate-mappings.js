@@ -332,7 +332,7 @@ function stringLiteralsFromArguments(args) {
     });
 }
 function generateIdentifierMatcher() {
-    return `module.exports = function identifierMatcher(identifier, matcherMap) {
+    return `export function identifierMatcher(identifier, matcherMap) {
 	if (!identifier.name) {
 		return null;
 	}
@@ -341,7 +341,7 @@ function generateIdentifierMatcher() {
 }`;
 }
 function generateMemberExpressionMatcher() {
-    return `module.exports = function memberExpressionMatcher(memberExpression, matcherMap) {
+    return `export function memberExpressionMatcher(memberExpression, matcherMap) {
 	if (!memberExpression.property || !memberExpression.property.name) {
 		return null;
 	}
@@ -383,7 +383,7 @@ function generateStringLiteralsFromArguments() {
 }`;
 }
 function generateCallExpressionMatcherWithStringLiterals() {
-    return `module.exports = function callExpressionMatcherWithStringLiterals(callExpression, matcherMap) {
+    return `export function callExpressionMatcherWithStringLiterals(callExpression, matcherMap) {
 	if (!callExpression.arguments) {
 		return null;
 	}
@@ -398,7 +398,7 @@ function generateCallExpressionMatcherWithStringLiterals() {
 ${generateStringLiteralsFromArguments()}`;
 }
 function generateCallExpressionMatcher() {
-    return `module.exports = function callExpressionMatcher(callExpression, matcherMap) {
+    return `export function callExpressionMatcher(callExpression, matcherMap) {
 	if (callExpression.callee.type === 'MemberExpression') {
 		const property = callExpression.callee.property;
 		if (!property || !property.name) {
@@ -420,7 +420,7 @@ function generateCallExpressionMatcher() {
 }`;
 }
 function generateNewExpressionMatcherWithStringLiterals() {
-    return `module.exports = function newExpressionMatcher(newExpression, matcherMap) {
+    return `export function newExpressionMatcherWithStringLiterals(newExpression, matcherMap) {
 	if (!newExpression.arguments) {
 		return null;
 	}
@@ -435,7 +435,7 @@ function generateNewExpressionMatcherWithStringLiterals() {
 ${generateStringLiteralsFromArguments()}`;
 }
 function generateNewExpressionMatcher() {
-    return `module.exports = function newExpressionMatcher(newExpression, matcherMap) {
+    return `export function newExpressionMatcher(newExpression, matcherMap) {
 	if (newExpression.callee.type === 'MemberExpression') {
 		const property = newExpression.callee.property;
 		if (!property || !property.name) {

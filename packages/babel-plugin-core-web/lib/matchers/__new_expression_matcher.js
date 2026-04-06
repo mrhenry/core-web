@@ -1,4 +1,4 @@
-module.exports = function newExpressionMatcher(newExpression, matcherMap) {
+export function newExpressionMatcher(newExpression, matcherMap) {
 	if (newExpression.callee.type === 'MemberExpression') {
 		const property = newExpression.callee.property;
 		if (!property || !property.name) {

@@ -1,23 +1,24 @@
-const { addSideEffect } = require("@babel/helper-module-imports");
-const { get, has } = require("@mrhenry/core-web");
-const { matchNode } = require("./ast-matcher");
+import { addSideEffect } from "@babel/helper-module-imports";
+import { get, has } from "@mrhenry/core-web";
+import { matchNode } from "./ast-matcher.js";
 
-const identifierMatcher = require("./matchers/__identifier_matcher");
-const identifierMatcherMap = require("./matchers/__identifier_matcher_map.json");
-const memberExpressionMatcher = require("./matchers/__member_expression_matcher");
-const memberExpressionMatcherMap = require("./matchers/__member_expression_matcher_map.json");
-const callExpressionMatcher = require("./matchers/__call_expression_matcher");
-const callExpressionMatcherMap = require("./matchers/__call_expression_matcher_map.json");
-const callExpressionMatcherStringLiterals = require("./matchers/__call_expression_matcher_string_literals");
-const callExpressionMatcherStringLiteralsMap = require("./matchers/__call_expression_matcher_string_literals_map.json");
-const newExpressionMatcher = require("./matchers/__new_expression_matcher");
-const newExpressionMatcherMap = require("./matchers/__new_expression_matcher_map.json");
-const newExpressionMatcherStringLiterals = require("./matchers/__new_expression_matcher_string_literals");
-const newExpressionMatcherStringLiteralsMap = require("./matchers/__new_expression_matcher_string_literals_map.json");
-const elementQsaScopeMatchers = require("./matchers/element_qsa_scope_matchers.json");
-const elementQsaHasMatchers = require("./matchers/element_qsa_has_matchers.json");
+import { identifierMatcher } from "./matchers/__identifier_matcher.js";
+import { memberExpressionMatcher } from "./matchers/__member_expression_matcher.js";
+import { callExpressionMatcher } from "./matchers/__call_expression_matcher.js";
+import { callExpressionMatcherWithStringLiterals } from "./matchers/__call_expression_matcher_string_literals.js";
+import { newExpressionMatcher } from "./matchers/__new_expression_matcher.js";
+import { newExpressionMatcherWithStringLiterals } from "./matchers/__new_expression_matcher_string_literals.js";
 
-class Injector {
+import identifierMatcherMap from "./matchers/__identifier_matcher_map.json" with { type: "json" }
+import memberExpressionMatcherMap from "./matchers/__member_expression_matcher_map.json" with { type: "json" }
+import callExpressionMatcherMap from "./matchers/__call_expression_matcher_map.json" with { type: "json" }
+import callExpressionMatcherStringLiteralsMap from "./matchers/__call_expression_matcher_string_literals_map.json" with { type: "json" }
+import newExpressionMatcherMap from "./matchers/__new_expression_matcher_map.json" with { type: "json" }
+import newExpressionMatcherStringLiteralsMap from "./matchers/__new_expression_matcher_string_literals_map.json" with { type: "json" }
+import elementQsaScopeMatchers from "./matchers/element_qsa_scope_matchers.json" with { type: "json" }
+import elementQsaHasMatchers from "./matchers/element_qsa_has_matchers.json" with { type: "json" }
+
+export class Injector {
 	constructor(features, opts = {}) {
 		this.debug = opts.debug || false;
 		this.features = features.filter(n => has(n));
@@ -117,7 +118,7 @@ class Injector {
 	}
 
 	handleCallExpressionStringLiterals(path, state) {
-		const matchers = callExpressionMatcherStringLiterals(path.node, callExpressionMatcherStringLiteralsMap);
+		const matchers = callExpressionMatcherWithStringLiterals(path.node, callExpressionMatcherStringLiteralsMap);
 		this._handleGeneric(path, state, matchers);
 	}
 
@@ -225,7 +226,7 @@ class Injector {
 	}
 
 	handleNewExpressionStringLiterals(path, state) {
-		const matchers = newExpressionMatcherStringLiterals(path.node, newExpressionMatcherStringLiteralsMap);
+		const matchers = newExpressionMatcherWithStringLiterals(path.node, newExpressionMatcherStringLiteralsMap);
 		this._handleGeneric(path, state, matchers);
 	}
 
@@ -262,8 +263,6 @@ class Injector {
 		this.removeSet = new Set();
 	}
 }
-
-module.exports = Injector;
 
 function logImportedPolyfills(list, state) {
 	if (!list || !list.length) {

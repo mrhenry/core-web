@@ -1,4 +1,4 @@
-module.exports = function identifierMatcher(identifier, matcherMap) {
+export function identifierMatcher(identifier, matcherMap) {
 	if (!identifier.name) {
 		return null;
 	}

@@ -1,4 +1,4 @@
-module.exports = function callExpressionMatcherWithStringLiterals(callExpression, matcherMap) {
+export function callExpressionMatcherWithStringLiterals(callExpression, matcherMap) {
 	if (!callExpression.arguments) {
 		return null;
 	}

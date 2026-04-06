@@ -1,4 +1,4 @@
-module.exports = function newExpressionMatcher(newExpression, matcherMap) {
+export function newExpressionMatcherWithStringLiterals(newExpression, matcherMap) {
 	if (!newExpression.arguments) {
 		return null;
 	}
