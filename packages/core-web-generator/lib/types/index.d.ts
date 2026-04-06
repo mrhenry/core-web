@@ -1,4 +1,4 @@
-type Feature = {
+export type Feature = {
     name: string;
     browsers: Record<string, string>;
     engines: Record<string, string>;
@@ -7,7 +7,7 @@ type Feature = {
     size: number;
     providedByCoreWeb: boolean;
 };
-type FeatureAlias = {
+export type FeatureAlias = {
     name: string;
     entries: Array<string>;
 };

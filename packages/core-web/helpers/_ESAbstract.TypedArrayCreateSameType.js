@@ -1,14 +1,14 @@
-import Get from "@mrhenry/core-web/helpers/_ESAbstract.Get";
-import Type from "@mrhenry/core-web/helpers/_ESAbstract.Type";
-import GetPrototypeFromConstructor from "@mrhenry/core-web/helpers/_ESAbstract.GetPrototypeFromConstructor";
-import ToObject from "@mrhenry/core-web/helpers/_ESAbstract.ToObject";
-import GetV from "@mrhenry/core-web/helpers/_ESAbstract.GetV";
-import IsCallable from "@mrhenry/core-web/helpers/_ESAbstract.IsCallable";
-import GetMethod from "@mrhenry/core-web/helpers/_ESAbstract.GetMethod";
-import IsConstructor from "@mrhenry/core-web/helpers/_ESAbstract.IsConstructor";
-import OrdinaryCreateFromConstructor from "@mrhenry/core-web/helpers/_ESAbstract.OrdinaryCreateFromConstructor";
-import Construct from "@mrhenry/core-web/helpers/_ESAbstract.Construct";
-import TypedArrayCreate from "@mrhenry/core-web/helpers/_ESAbstract.TypedArrayCreate";
+import Get from "@mrhenry/core-web/helpers/_ESAbstract.Get.js";
+import Type from "@mrhenry/core-web/helpers/_ESAbstract.Type.js";
+import GetPrototypeFromConstructor from "@mrhenry/core-web/helpers/_ESAbstract.GetPrototypeFromConstructor.js";
+import ToObject from "@mrhenry/core-web/helpers/_ESAbstract.ToObject.js";
+import GetV from "@mrhenry/core-web/helpers/_ESAbstract.GetV.js";
+import IsCallable from "@mrhenry/core-web/helpers/_ESAbstract.IsCallable.js";
+import GetMethod from "@mrhenry/core-web/helpers/_ESAbstract.GetMethod.js";
+import IsConstructor from "@mrhenry/core-web/helpers/_ESAbstract.IsConstructor.js";
+import OrdinaryCreateFromConstructor from "@mrhenry/core-web/helpers/_ESAbstract.OrdinaryCreateFromConstructor.js";
+import Construct from "@mrhenry/core-web/helpers/_ESAbstract.Construct.js";
+import TypedArrayCreate from "@mrhenry/core-web/helpers/_ESAbstract.TypedArrayCreate.js";
 
 // _ESAbstract.TypedArrayCreateSameType
 /* global TypedArrayCreate */

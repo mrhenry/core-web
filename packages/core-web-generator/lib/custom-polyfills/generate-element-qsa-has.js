@@ -1,11 +1,10 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.generateElementQsaSHas = generateElementQsaSHas;
-const fs = require("fs");
-const path = require("path");
-const browsers_to_engines_1 = require("../browsers-to-engines/browsers-to-engines");
+import fs from 'node:fs';
+import path from "node:path";
+import { browsersToEngines } from "../browsers-to-engines/browsers-to-engines.js";
+import { fileURLToPath } from 'node:url';
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const modulesDir = path.resolve(__dirname, "../../../core-web/modules");
-async function generateElementQsaSHas(mapping) {
+export async function generateElementQsaSHas(mapping) {
     const src = fs.readFileSync(path.join(__dirname, '../../polyfills/~element-qsa-has.js'), "utf-8");
     fs.writeFileSync(path.join(modulesDir, "~element-qsa-has.js"), src);
     const browsers = {
@@ -24,7 +23,7 @@ async function generateElementQsaSHas(mapping) {
             "Element",
         ],
         browsers: browsers,
-        engines: (0, browsers_to_engines_1.browsersToEngines)(browsers),
+        engines: browsersToEngines(browsers),
         size: src.length,
         isAlias: false,
         providedByCoreWeb: true,

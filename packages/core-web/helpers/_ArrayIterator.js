@@ -1,4 +1,4 @@
-import _Iterator from "@mrhenry/core-web/helpers/_Iterator";
+import _Iterator from "@mrhenry/core-web/helpers/_Iterator.js";
 
 // _ArrayIterator
 /* global _Iterator, Symbol */

@@ -1,9 +1,6 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.browsersToEngines = browsersToEngines;
-const semver = require("semver");
-const bcd = require('@mdn/browser-compat-data');
-function browsersToEngines(browsers) {
+import * as semver from "semver";
+import bcd from '@mdn/browser-compat-data' with { type: "json" };
+export function browsersToEngines(browsers) {
     const engineFeatureMapping = {};
     const lastVersionForEngine = {};
     const versionRangeIsOpenEnded = {};

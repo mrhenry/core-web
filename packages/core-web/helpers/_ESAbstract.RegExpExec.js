@@ -1,7 +1,7 @@
-import Call from "@mrhenry/core-web/helpers/_ESAbstract.Call";
-import Get from "@mrhenry/core-web/helpers/_ESAbstract.Get";
-import IsCallable from "@mrhenry/core-web/helpers/_ESAbstract.IsCallable";
-import Type from "@mrhenry/core-web/helpers/_ESAbstract.Type";
+import Call from "@mrhenry/core-web/helpers/_ESAbstract.Call.js";
+import Get from "@mrhenry/core-web/helpers/_ESAbstract.Get.js";
+import IsCallable from "@mrhenry/core-web/helpers/_ESAbstract.IsCallable.js";
+import Type from "@mrhenry/core-web/helpers/_ESAbstract.Type.js";
 
 // _ESAbstract.RegExpExec
 /* global Call, Get, IsCallable, Type */

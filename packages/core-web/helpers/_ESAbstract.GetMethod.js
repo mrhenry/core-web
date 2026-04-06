@@ -1,6 +1,6 @@
-import ToObject from "@mrhenry/core-web/helpers/_ESAbstract.ToObject";
-import GetV from "@mrhenry/core-web/helpers/_ESAbstract.GetV";
-import IsCallable from "@mrhenry/core-web/helpers/_ESAbstract.IsCallable";
+import ToObject from "@mrhenry/core-web/helpers/_ESAbstract.ToObject.js";
+import GetV from "@mrhenry/core-web/helpers/_ESAbstract.GetV.js";
+import IsCallable from "@mrhenry/core-web/helpers/_ESAbstract.IsCallable.js";
 
 // _ESAbstract.GetMethod
 /* global GetV, IsCallable */

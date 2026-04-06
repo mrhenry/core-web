@@ -1,5 +1,5 @@
 import * as semver from "semver";
-const bcd = require('@mdn/browser-compat-data');
+import bcd, { BrowserName } from '@mdn/browser-compat-data' with { type: "json" };
 
 export function browsersToEngines(browsers: Record<string, string>) {
 	const engineFeatureMapping: Record<string, { engine: string, versions: Array<string> }> = {};
@@ -23,7 +23,7 @@ export function browsersToEngines(browsers: Record<string, string>) {
 
 	// Find all version ranges by browser + engine.
 	for (const browserName in browsers) {
-		const bcdBrowserName = browserNameMapping[browserName];
+		const bcdBrowserName = browserNameMapping[browserName] as BrowserName;
 		let browserVersionRange = browsers[browserName];
 
 		if (bcdBrowserName && bcd.browsers[bcdBrowserName]) {

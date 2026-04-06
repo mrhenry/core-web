@@ -1,4 +1,4 @@
-import UTF16SurrogatePairToCodePoint from "@mrhenry/core-web/helpers/_ESAbstract.UTF16SurrogatePairToCodePoint";
+import UTF16SurrogatePairToCodePoint from "@mrhenry/core-web/helpers/_ESAbstract.UTF16SurrogatePairToCodePoint.js";
 
 // _ESAbstract.CodePointAt
 /* global UTF16SurrogatePairToCodePoint */

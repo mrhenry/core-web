@@ -1,4 +1,4 @@
-import _DOMTokenList from "@mrhenry/core-web/helpers/_DOMTokenList";
+import _DOMTokenList from "@mrhenry/core-web/helpers/_DOMTokenList.js";
 (function(undefined) {
 if (!("DOMTokenList"in self&&"forEach"in self.DOMTokenList.prototype
 )) {

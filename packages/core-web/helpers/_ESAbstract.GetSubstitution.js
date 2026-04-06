@@ -1,4 +1,4 @@
-import Type from "@mrhenry/core-web/helpers/_ESAbstract.Type";
+import Type from "@mrhenry/core-web/helpers/_ESAbstract.Type.js";
 
 // _ESAbstract.GetSubstitution
 /* global Type */

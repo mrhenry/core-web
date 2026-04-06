@@ -1,6 +1,12 @@
-import * as fs from 'fs';
-import * as path from "path";
-import { browsersToEngines } from "../browsers-to-engines/browsers-to-engines";
+import fs from 'node:fs';
+import path from "node:path";
+import { browsersToEngines } from "../browsers-to-engines/browsers-to-engines.js";
+import { Feature } from '../types/index.js';
+import { fileURLToPath } from 'node:url';
+import module from 'node:module';
+
+const require = module.createRequire(import.meta.url)
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 const modulesDir = path.resolve(__dirname, "../../../core-web/modules");
 

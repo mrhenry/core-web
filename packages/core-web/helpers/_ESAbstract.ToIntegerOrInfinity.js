@@ -1,4 +1,4 @@
-import ToNumber from "@mrhenry/core-web/helpers/_ESAbstract.ToNumber";
+import ToNumber from "@mrhenry/core-web/helpers/_ESAbstract.ToNumber.js";
 
 // _ESAbstract.ToIntegerOrInfinity
 /* global ToNumber */

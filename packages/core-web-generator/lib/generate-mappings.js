@@ -1,10 +1,9 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.generateMappings = generateMappings;
-const fs = require("fs");
-const path = require("path");
-const parser = require("@babel/parser");
-const traverse_1 = require("@babel/traverse");
+import fs from 'node:fs';
+import path from "node:path";
+import * as parser from '@babel/parser';
+import traverse from '@babel/traverse';
+import { fileURLToPath } from 'node:url';
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const coreWebBabelPluginDir = path.resolve(__dirname, "../../babel-plugin-core-web");
 function customMatcherSources() {
     return {
@@ -121,7 +120,7 @@ function customMatcherSources() {
         ]
     };
 }
-async function generateMappings(featureMapping) {
+export async function generateMappings(featureMapping) {
     const identifierMatchers = {};
     const memberExpressionMatchers = {};
     const callExpressionMatchersWithStringLiterals = {};
@@ -458,7 +457,7 @@ function generateNewExpressionMatcher() {
 }`;
 }
 function setNodeIsVariable(matcher) {
-    (0, traverse_1.default)(matcher, {
+    traverse.default(matcher, {
         noScope: true,
         Identifier(path) {
             if (path.node.name.startsWith("$")) {

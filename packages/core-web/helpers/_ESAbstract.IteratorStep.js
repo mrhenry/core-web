@@ -1,9 +1,9 @@
-import Type from "@mrhenry/core-web/helpers/_ESAbstract.Type";
-import ToBoolean from "@mrhenry/core-web/helpers/_ESAbstract.ToBoolean";
-import Get from "@mrhenry/core-web/helpers/_ESAbstract.Get";
-import Call from "@mrhenry/core-web/helpers/_ESAbstract.Call";
-import IteratorNext from "@mrhenry/core-web/helpers/_ESAbstract.IteratorNext";
-import IteratorComplete from "@mrhenry/core-web/helpers/_ESAbstract.IteratorComplete";
+import Type from "@mrhenry/core-web/helpers/_ESAbstract.Type.js";
+import ToBoolean from "@mrhenry/core-web/helpers/_ESAbstract.ToBoolean.js";
+import Get from "@mrhenry/core-web/helpers/_ESAbstract.Get.js";
+import Call from "@mrhenry/core-web/helpers/_ESAbstract.Call.js";
+import IteratorNext from "@mrhenry/core-web/helpers/_ESAbstract.IteratorNext.js";
+import IteratorComplete from "@mrhenry/core-web/helpers/_ESAbstract.IteratorComplete.js";
 
 // _ESAbstract.IteratorStep
 /* global IteratorNext, IteratorComplete */

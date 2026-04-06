@@ -1,5 +1,5 @@
-import Get from "@mrhenry/core-web/helpers/_ESAbstract.Get";
-import Type from "@mrhenry/core-web/helpers/_ESAbstract.Type";
+import Get from "@mrhenry/core-web/helpers/_ESAbstract.Get.js";
+import Type from "@mrhenry/core-web/helpers/_ESAbstract.Type.js";
 
 // _ESAbstract.GetPrototypeFromConstructor
 /* global Get, Type */

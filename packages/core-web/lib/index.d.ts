@@ -1,3 +1,4 @@
+import { Feature } from "./types/index.js";
 export declare function names(): string[];
 export declare function get(name: string): Feature | undefined;
 export declare function has(name: string): boolean;

@@ -1,11 +1,12 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.generateWebComponents = generateWebComponents;
-const fs = require("fs");
-const path = require("path");
-const browsers_to_engines_1 = require("../browsers-to-engines/browsers-to-engines");
+import fs from 'node:fs';
+import path from "node:path";
+import { browsersToEngines } from "../browsers-to-engines/browsers-to-engines.js";
+import { fileURLToPath } from 'node:url';
+import module from 'node:module';
+const require = module.createRequire(import.meta.url);
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const modulesDir = path.resolve(__dirname, "../../../core-web/modules");
-async function generateWebComponents(mapping) {
+export async function generateWebComponents(mapping) {
     await generateTemplate(mapping);
     await generateShadyDOM(mapping);
     await generateShadyCSS(mapping);
@@ -46,7 +47,7 @@ async function generateTemplate(mapping) {
             "Window"
         ],
         browsers: browsers,
-        engines: (0, browsers_to_engines_1.browsersToEngines)(browsers),
+        engines: browsersToEngines(browsers),
         size: src.length,
         isAlias: false,
         providedByCoreWeb: true,
@@ -95,7 +96,7 @@ async function generateShadyDOM(mapping) {
             "Window"
         ],
         browsers: browsers,
-        engines: (0, browsers_to_engines_1.browsersToEngines)(browsers),
+        engines: browsersToEngines(browsers),
         size: src.length,
         isAlias: false,
         providedByCoreWeb: true,
@@ -146,7 +147,7 @@ async function generateShadyCSS(mapping) {
             "Window"
         ],
         browsers: scopingShimBrowsers,
-        engines: (0, browsers_to_engines_1.browsersToEngines)(scopingShimBrowsers),
+        engines: browsersToEngines(scopingShimBrowsers),
         size: scopingShim.length,
         isAlias: false,
         providedByCoreWeb: true,
@@ -192,7 +193,7 @@ async function generateShadyCSS(mapping) {
             "Window"
         ],
         browsers: customStyleInterfaceBrowsers,
-        engines: (0, browsers_to_engines_1.browsersToEngines)(customStyleInterfaceBrowsers),
+        engines: browsersToEngines(customStyleInterfaceBrowsers),
         size: customStyleInterface.length,
         isAlias: false,
         providedByCoreWeb: true,
@@ -254,7 +255,7 @@ async function generateCustomElements(mapping) {
             "Window"
         ],
         browsers: browsers,
-        engines: (0, browsers_to_engines_1.browsersToEngines)(browsers),
+        engines: browsersToEngines(browsers),
         size: src.length,
         isAlias: false,
         providedByCoreWeb: true,

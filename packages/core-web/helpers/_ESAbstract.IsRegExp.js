@@ -1,6 +1,6 @@
-import Type from "@mrhenry/core-web/helpers/_ESAbstract.Type";
-import ToBoolean from "@mrhenry/core-web/helpers/_ESAbstract.ToBoolean";
-import Get from "@mrhenry/core-web/helpers/_ESAbstract.Get";
+import Type from "@mrhenry/core-web/helpers/_ESAbstract.Type.js";
+import ToBoolean from "@mrhenry/core-web/helpers/_ESAbstract.ToBoolean.js";
+import Get from "@mrhenry/core-web/helpers/_ESAbstract.Get.js";
 
 // _ESAbstract.IsRegExp
 /* global Type, Get, ToBoolean */

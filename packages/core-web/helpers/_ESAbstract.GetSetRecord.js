@@ -1,8 +1,8 @@
-import ToNumber from "@mrhenry/core-web/helpers/_ESAbstract.ToNumber";
-import Get from "@mrhenry/core-web/helpers/_ESAbstract.Get";
-import IsCallable from "@mrhenry/core-web/helpers/_ESAbstract.IsCallable";
-import ToIntegerOrInfinity from "@mrhenry/core-web/helpers/_ESAbstract.ToIntegerOrInfinity";
-import Type from "@mrhenry/core-web/helpers/_ESAbstract.Type";
+import ToNumber from "@mrhenry/core-web/helpers/_ESAbstract.ToNumber.js";
+import Get from "@mrhenry/core-web/helpers/_ESAbstract.Get.js";
+import IsCallable from "@mrhenry/core-web/helpers/_ESAbstract.IsCallable.js";
+import ToIntegerOrInfinity from "@mrhenry/core-web/helpers/_ESAbstract.ToIntegerOrInfinity.js";
+import Type from "@mrhenry/core-web/helpers/_ESAbstract.Type.js";
 
 // _ESAbstract.GetSetRecord
 /* global Get, IsCallable, ToIntegerOrInfinity, ToNumber, Type */
