@@ -1,8 +1,7 @@
-'use strict';
-const assert = require('assert');
-const parser = require('@babel/parser');
-const Injector = require("../lib/injector");
-const { required } = require("@mrhenry/core-web");
+import assert from 'node:assert';
+import parser from '@babel/parser';
+import { Injector } from '../lib/injector.js';
+import { required } from '@mrhenry/core-web'; 
 
 const featureSetChrome17 = required({
 	browsers: {
