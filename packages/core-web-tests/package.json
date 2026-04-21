@@ -13,7 +13,7 @@
     "@mrhenry/core-web": "*",
     "babel-loader": "*",
     "core-js": "*",
-    "webpack": "*",
+    "webpack": "^5.106.1",
     "webpack-cli": "^7.0.2"
   },
   "volta": {
