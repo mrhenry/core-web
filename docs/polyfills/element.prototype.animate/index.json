@@ -330,7 +330,7 @@
           }
         },
         "tags": [
-          "web-features:web-animations"
+          "web-features:web-animations-iterationcomposite"
         ]
       }
     },

@@ -208,7 +208,10 @@
           "webview_ios": {
             "version_added": "11"
           }
-        }
+        },
+        "tags": [
+          "web-features:canvas"
+        ]
       }
     },
     "type_parameter_png": {

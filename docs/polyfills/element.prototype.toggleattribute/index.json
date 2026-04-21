@@ -91,6 +91,62 @@
       "tags": [
         "web-features:dom"
       ]
+    },
+    "html_name_validity": {
+      "__compat": {
+        "description": "Emoji and more Unicode in element and attribute names and namespace prefix (valid names match HTML parser)",
+        "source_file": "api/Element.json",
+        "spec_url": "https://dom.spec.whatwg.org/#namespaces",
+        "status": {
+          "deprecated": false,
+          "experimental": false,
+          "standard_track": true
+        },
+        "support": {
+          "chrome": {
+            "version_added": "143"
+          },
+          "chrome_android": {
+            "version_added": "143"
+          },
+          "edge": {
+            "version_added": "143"
+          },
+          "firefox": {
+            "version_added": "149"
+          },
+          "firefox_android": {
+            "version_added": "149"
+          },
+          "ie": {
+            "version_added": false
+          },
+          "oculus": {
+            "version_added": false
+          },
+          "opera": {
+            "version_added": "127"
+          },
+          "opera_android": {
+            "version_added": "94"
+          },
+          "safari": {
+            "version_added": false
+          },
+          "safari_ios": {
+            "version_added": false
+          },
+          "samsunginternet_android": {
+            "version_added": false
+          },
+          "webview_android": {
+            "version_added": "143"
+          },
+          "webview_ios": {
+            "version_added": false
+          }
+        }
+      }
     }
   },
   "polyfilled": {
