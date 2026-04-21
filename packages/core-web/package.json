@@ -2,7 +2,7 @@
 	"name": "@mrhenry/core-web",
 	"version": "2.0.0",
 	"description": "browser feature polyfills as a babel plugin",
-	"type":"module",
+	"type": "module",
 	"main": "lib/index.js",
 	"author": "Simon Menke <simon.menke@gmail.com>",
 	"license": "MIT",
@@ -36,7 +36,7 @@
 		"semver": "^7.7.4"
 	},
 	"devDependencies": {
-		"@types/node": "*",
+		"@types/node": "^25.6.0",
 		"@types/semver": "*",
 		"typescript": "^6.0.2"
 	},
