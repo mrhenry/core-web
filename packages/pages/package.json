@@ -26,7 +26,7 @@
     "@babel/preset-env": "*",
     "@csstools/postcss-bundler": "*",
     "@csstools/postcss-minify": "*",
-    "@mdn/browser-compat-data": "^7.3.11",
+    "@mdn/browser-compat-data": "^7.3.12",
     "@mrhenry/babel-plugin-core-web": "*",
     "@mrhenry/core-web": "*",
     "@mrhenry/polyfill-library": "*",
@@ -34,10 +34,10 @@
     "canvas": "^3.2.2",
     "core-js": "*",
     "he": "*",
-    "postcss": "^8.5.9",
+    "postcss": "^8.5.10",
     "postcss-preset-env": "^11.2.1",
     "postcss-split-by-media": "*",
-    "webpack": "^5.106.1",
+    "webpack": "^5.106.2",
     "webpack-cli": "^7.0.2"
   },
   "volta": {
