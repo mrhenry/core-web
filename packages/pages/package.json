@@ -34,7 +34,7 @@
     "canvas": "^3.2.2",
     "core-js": "*",
     "he": "*",
-    "postcss": "^8.5.9",
+    "postcss": "^8.5.10",
     "postcss-preset-env": "^11.2.1",
     "postcss-split-by-media": "*",
     "webpack": "^5.106.1",
