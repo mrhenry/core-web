@@ -656,7 +656,7 @@
               "version_added": "9"
             },
             {
-              "notes": "<code>querySelectorAll()</code> is supported, but only for CSS 2.1 selectors.",
+              "notes": "<code>querySelector()</code> is supported, but only for CSS 2.1 selectors.",
               "partial_implementation": true,
               "version_added": "8",
               "version_last": "8",
