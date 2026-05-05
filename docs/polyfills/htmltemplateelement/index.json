@@ -513,7 +513,10 @@
           "webview_ios": {
             "version_added": false
           }
-        }
+        },
+        "tags": [
+          "web-features:referencetarget"
+        ]
       }
     },
     "shadowRootSerializable": {
@@ -598,17 +601,10 @@
             "version_added": false
           },
           "firefox": {
-            "flags": [
-              {
-                "name": "dom.shadowdom.shadowRootSlotAssignment.enabled",
-                "type": "preference",
-                "value_to_set": "true"
-              }
-            ],
-            "version_added": "preview"
+            "version_added": "151"
           },
           "firefox_android": {
-            "version_added": false
+            "version_added": "151"
           },
           "ie": {
             "version_added": false
