@@ -13,7 +13,7 @@
 		"test": "__tests__"
 	},
 	"dependencies": {
-		"@mdn/browser-compat-data": "^7.3.12",
+		"@mdn/browser-compat-data": "^7.3.13",
 		"@mrhenry/polyfill-library": "^5.3.1",
 		"@webcomponents/custom-elements": "^1.5.0",
 		"@webcomponents/shadycss": "^1.11.0",
