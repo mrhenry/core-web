@@ -1441,6 +1441,7 @@
       "__compat": {
         "description": "Substitution strings",
         "source_file": "api/_globals/console.json",
+        "spec_url": "https://console.spec.whatwg.org/#formatting-specifiers",
         "status": {
           "deprecated": false,
           "experimental": false,
@@ -2481,6 +2482,7 @@
       "__compat": {
         "description": "Available in workers",
         "source_file": "api/_globals/console.json",
+        "spec_url": "https://console.spec.whatwg.org/#console-namespace",
         "status": {
           "deprecated": false,
           "experimental": false,

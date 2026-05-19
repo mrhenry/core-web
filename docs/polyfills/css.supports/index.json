@@ -90,6 +90,7 @@
       "__compat": {
         "description": "Parentheses for single-argument version are optional.",
         "source_file": "api/CSS.json",
+        "spec_url": "https://drafts.csswg.org/css-conditional-3/#dom-css-supports",
         "status": {
           "deprecated": false,
           "experimental": false,

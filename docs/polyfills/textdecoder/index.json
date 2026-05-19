@@ -526,6 +526,7 @@
       "__compat": {
         "description": "Available in workers",
         "source_file": "api/TextDecoder.json",
+        "spec_url": "https://encoding.spec.whatwg.org/#interface-textdecoder",
         "status": {
           "deprecated": false,
           "experimental": false,

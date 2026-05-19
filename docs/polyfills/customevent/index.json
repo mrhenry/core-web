@@ -305,6 +305,7 @@
       "__compat": {
         "description": "Available in workers",
         "source_file": "api/CustomEvent.json",
+        "spec_url": "https://dom.spec.whatwg.org/#interface-customevent",
         "status": {
           "deprecated": false,
           "experimental": false,

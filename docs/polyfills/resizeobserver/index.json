@@ -275,6 +275,7 @@
         "__compat": {
           "description": "<code>options.box</code> parameter",
           "source_file": "api/ResizeObserver.json",
+          "spec_url": "https://drafts.csswg.org/resize-observer/#dom-resizeobserveroptions-box",
           "status": {
             "deprecated": false,
             "experimental": false,

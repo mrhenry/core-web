@@ -29,6 +29,7 @@
       "__compat": {
         "description": "[Symbol.iterator]",
         "source_file": "api/DOMTokenList.json",
+        "spec_url": "https://dom.spec.whatwg.org/#interface-domtokenlist",
         "status": {
           "deprecated": false,
           "experimental": false,
@@ -202,6 +203,7 @@
         "__compat": {
           "description": "Multiple parameters for <code>add()</code>",
           "source_file": "api/DOMTokenList.json",
+          "spec_url": "https://dom.spec.whatwg.org/#dom-domtokenlist-add",
           "status": {
             "deprecated": false,
             "experimental": false,
@@ -320,6 +322,7 @@
       "__compat": {
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/DOMTokenList/entries",
         "source_file": "api/DOMTokenList.json",
+        "spec_url": "https://dom.spec.whatwg.org/#interface-domtokenlist",
         "status": {
           "deprecated": false,
           "experimental": false,
@@ -378,6 +381,7 @@
       "__compat": {
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/DOMTokenList/forEach",
         "source_file": "api/DOMTokenList.json",
+        "spec_url": "https://dom.spec.whatwg.org/#interface-domtokenlist",
         "status": {
           "deprecated": false,
           "experimental": false,
@@ -495,6 +499,7 @@
       "__compat": {
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/DOMTokenList/keys",
         "source_file": "api/DOMTokenList.json",
+        "spec_url": "https://dom.spec.whatwg.org/#interface-domtokenlist",
         "status": {
           "deprecated": false,
           "experimental": false,
@@ -670,6 +675,7 @@
         "__compat": {
           "description": "Multiple parameters for <code>remove()</code>",
           "source_file": "api/DOMTokenList.json",
+          "spec_url": "https://dom.spec.whatwg.org/#dom-domtokenlist-remove",
           "status": {
             "deprecated": false,
             "experimental": false,
@@ -730,6 +736,7 @@
         "description": "Removes duplicates",
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/DOMTokenList#trimming_of_whitespace_and_removal_of_duplicates",
         "source_file": "api/DOMTokenList.json",
+        "spec_url": "https://dom.spec.whatwg.org/#interface-domtokenlist:~:text=duplicates%20omitted",
         "status": {
           "deprecated": false,
           "experimental": false,
@@ -844,8 +851,9 @@
       },
       "boolean_value": {
         "__compat": {
-          "description": "<code>return()</code>'s value is a boolean, not void as it used to be.",
+          "description": "Boolean return value (not void anymore)",
           "source_file": "api/DOMTokenList.json",
+          "spec_url": "https://dom.spec.whatwg.org/#ref-for-dom-domtokenlist-replace①",
           "status": {
             "deprecated": false,
             "experimental": false,
@@ -1081,6 +1089,7 @@
         "__compat": {
           "description": "<code>force</code> parameter",
           "source_file": "api/DOMTokenList.json",
+          "spec_url": "https://dom.spec.whatwg.org/#ref-for-dom-domtokenlist-toggle①",
           "status": {
             "deprecated": false,
             "experimental": false,
@@ -1141,6 +1150,7 @@
         "description": "Trims whitespace",
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/DOMTokenList#trimming_of_whitespace_and_removal_of_duplicates",
         "source_file": "api/DOMTokenList.json",
+        "spec_url": "https://dom.spec.whatwg.org/#DOMTokenList-stringification-behavior",
         "status": {
           "deprecated": false,
           "experimental": false,
@@ -1265,6 +1275,7 @@
       "__compat": {
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/DOMTokenList/values",
         "source_file": "api/DOMTokenList.json",
+        "spec_url": "https://dom.spec.whatwg.org/#interface-domtokenlist",
         "status": {
           "deprecated": false,
           "experimental": false,

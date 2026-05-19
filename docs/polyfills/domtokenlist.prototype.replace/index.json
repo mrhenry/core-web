@@ -98,8 +98,9 @@
     },
     "boolean_value": {
       "__compat": {
-        "description": "<code>return()</code>'s value is a boolean, not void as it used to be.",
+        "description": "Boolean return value (not void anymore)",
         "source_file": "api/DOMTokenList.json",
+        "spec_url": "https://dom.spec.whatwg.org/#ref-for-dom-domtokenlist-replace①",
         "status": {
           "deprecated": false,
           "experimental": false,

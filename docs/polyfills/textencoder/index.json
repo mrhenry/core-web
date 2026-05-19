@@ -385,6 +385,7 @@
       "__compat": {
         "description": "Available in workers",
         "source_file": "api/TextEncoder.json",
+        "spec_url": "https://encoding.spec.whatwg.org/#interface-textencoder",
         "status": {
           "deprecated": false,
           "experimental": false,

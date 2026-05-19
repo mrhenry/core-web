@@ -98,6 +98,7 @@
         "__compat": {
           "description": "<code>options.withCredentials</code> parameter",
           "source_file": "api/EventSource.json",
+          "spec_url": "https://html.spec.whatwg.org/multipage/server-sent-events.html#dom-eventsourceinit-withcredentials",
           "status": {
             "deprecated": false,
             "experimental": false,
@@ -666,6 +667,7 @@
       "__compat": {
         "description": "Available in workers",
         "source_file": "api/EventSource.json",
+        "spec_url": "https://html.spec.whatwg.org/multipage/server-sent-events.html#the-eventsource-interface",
         "status": {
           "deprecated": false,
           "experimental": false,

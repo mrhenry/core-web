@@ -190,7 +190,7 @@
         "__compat": {
           "description": "<code>block</code> option",
           "source_file": "api/Element.json",
-          "spec_url": "https://drafts.csswg.org/cssom-view/#dom-scrollintoviewoptions-block",
+          "spec_url": "https://drafts.csswg.org/cssom-view/#dom-element-scrollintoview-arg-arg",
           "status": {
             "deprecated": false,
             "experimental": false,

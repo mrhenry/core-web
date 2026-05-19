@@ -99,6 +99,7 @@
       "__compat": {
         "description": "<code>options.behavior</code> parameter",
         "source_file": "api/Window.json",
+        "spec_url": "https://drafts.csswg.org/cssom-view/#dom-scrolloptions-behavior",
         "status": {
           "deprecated": false,
           "experimental": false,
@@ -163,6 +164,7 @@
       "__compat": {
         "description": "<code>options.left</code> parameter",
         "source_file": "api/Window.json",
+        "spec_url": "https://drafts.csswg.org/cssom-view/#dom-scrolltooptions-left",
         "status": {
           "deprecated": false,
           "experimental": false,
@@ -224,6 +226,7 @@
       "__compat": {
         "description": "<code>options.top</code> parameter",
         "source_file": "api/Window.json",
+        "spec_url": "https://drafts.csswg.org/cssom-view/#dom-scrolltooptions-top",
         "status": {
           "deprecated": false,
           "experimental": false,

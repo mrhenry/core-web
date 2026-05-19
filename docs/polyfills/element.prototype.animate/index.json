@@ -97,6 +97,7 @@
         "description": "Implicit to/from keyframes are supported",
         "mdn_url": "https://developer.mozilla.org/docs/Web/API/Element/animate#implicit_tofrom_keyframes",
         "source_file": "api/Element.json",
+        "spec_url": "https://drafts.csswg.org/web-animations-1/#dom-animatable-animate",
         "status": {
           "deprecated": false,
           "experimental": false,

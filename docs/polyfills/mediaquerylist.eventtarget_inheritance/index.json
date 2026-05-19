@@ -38,6 +38,7 @@
     "__compat": {
       "description": "<code>MediaQueryList</code> inherits <code>EventTarget</code>",
       "source_file": "api/MediaQueryList.json",
+      "spec_url": "https://drafts.csswg.org/cssom-view/#mediaquerylist",
       "status": {
         "deprecated": false,
         "experimental": false,

@@ -42,6 +42,7 @@
     "__compat": {
       "description": "[Symbol.iterator]",
       "source_file": "api/DOMTokenList.json",
+      "spec_url": "https://dom.spec.whatwg.org/#interface-domtokenlist",
       "status": {
         "deprecated": false,
         "experimental": false,

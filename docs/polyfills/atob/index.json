@@ -86,6 +86,7 @@
       "__compat": {
         "description": "Available in workers",
         "source_file": "api/_globals/atob.json",
+        "spec_url": "https://html.spec.whatwg.org/multipage/webappapis.html#dom-atob-dev",
         "status": {
           "deprecated": false,
           "experimental": false,

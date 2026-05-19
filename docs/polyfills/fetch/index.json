@@ -167,6 +167,7 @@
       "__compat": {
         "description": "Support for blob: and data:",
         "source_file": "api/_globals/fetch.json",
+        "spec_url": "https://fetch.spec.whatwg.org/#url",
         "status": {
           "deprecated": false,
           "experimental": false,
@@ -303,11 +304,10 @@
         "__compat": {
           "description": "<code>attributionReporting</code> property",
           "source_file": "api/_globals/fetch.json",
-          "spec_url": "https://wicg.github.io/attribution-reporting-api/#dom-requestinit-attributionreporting",
           "status": {
             "deprecated": true,
             "experimental": false,
-            "standard_track": true
+            "standard_track": false
           },
           "support": {
             "chrome": {
@@ -638,6 +638,7 @@
         "__compat": {
           "description": "<code>keepalive</code> property",
           "source_file": "api/_globals/fetch.json",
+          "spec_url": "https://fetch.spec.whatwg.org/#dom-requestinit-keepalive",
           "status": {
             "deprecated": false,
             "experimental": false,
@@ -702,6 +703,7 @@
         "__compat": {
           "description": "<code>priority</code> property",
           "source_file": "api/_globals/fetch.json",
+          "spec_url": "https://fetch.spec.whatwg.org/#dom-requestinit-priority",
           "status": {
             "deprecated": false,
             "experimental": false,
@@ -825,6 +827,7 @@
         "__compat": {
           "description": "<code>referrerPolicy</code> property",
           "source_file": "api/_globals/fetch.json",
+          "spec_url": "https://fetch.spec.whatwg.org/#dom-requestinit-referrerpolicy",
           "status": {
             "deprecated": false,
             "experimental": false,
@@ -886,6 +889,7 @@
         "__compat": {
           "description": "<code>signal</code> property",
           "source_file": "api/_globals/fetch.json",
+          "spec_url": "https://fetch.spec.whatwg.org/#dom-requestinit-signal",
           "status": {
             "deprecated": false,
             "experimental": false,
