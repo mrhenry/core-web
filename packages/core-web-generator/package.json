@@ -13,7 +13,7 @@
 		"test": "__tests__"
 	},
 	"dependencies": {
-		"@mdn/browser-compat-data": "^7.3.15",
+		"@mdn/browser-compat-data": "^8.0.0",
 		"@mrhenry/polyfill-library": "^5.3.1",
 		"@webcomponents/custom-elements": "^1.5.0",
 		"@webcomponents/shadycss": "^1.11.0",
@@ -25,9 +25,9 @@
 		"@babel/traverse": "*",
 		"@babel/types": "*",
 		"@types/babel__traverse": "*",
-		"@types/node": "^25.7.0",
+		"@types/node": "^25.9.1",
 		"@types/semver": "*",
-		"semver": "^7.8.0",
+		"semver": "^7.8.1",
 		"typescript": "^6.0.3"
 	},
 	"volta": {
