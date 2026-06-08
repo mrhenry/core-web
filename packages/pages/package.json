@@ -22,11 +22,11 @@
     "dev-server": "npx http-server ./dist -p 3080"
   },
   "devDependencies": {
-    "@babel/core": "*",
-    "@babel/preset-env": "^7.29.5",
+    "@babel/core": "^7.29.7",
+    "@babel/preset-env": "^7.29.7",
     "@csstools/postcss-bundler": "*",
     "@csstools/postcss-minify": "*",
-    "@mdn/browser-compat-data": "^7.3.15",
+    "@mdn/browser-compat-data": "^8.0.1",
     "@mrhenry/babel-plugin-core-web": "*",
     "@mrhenry/core-web": "*",
     "@mrhenry/polyfill-library": "*",
@@ -34,11 +34,11 @@
     "canvas": "^3.2.2",
     "core-js": "*",
     "he": "*",
-    "postcss": "^8.5.14",
-    "postcss-preset-env": "^11.2.1",
+    "postcss": "^8.5.15",
+    "postcss-preset-env": "^11.3.0",
     "postcss-split-by-media": "*",
-    "webpack": "^5.106.2",
-    "webpack-cli": "^7.0.2"
+    "webpack": "^5.107.2",
+    "webpack-cli": "^7.0.3"
   },
   "volta": {
     "extends": "../../package.json"
