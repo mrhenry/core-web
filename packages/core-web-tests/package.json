@@ -7,7 +7,7 @@
     "watch": "webpack -w"
   },
   "devDependencies": {
-    "@babel/core": "*",
+    "@babel/core": "^7.29.6",
     "@babel/preset-env": "^7.29.5",
     "@mrhenry/babel-plugin-core-web": "*",
     "@mrhenry/core-web": "*",

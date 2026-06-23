@@ -22,7 +22,7 @@
     "dev-server": "npx http-server ./dist -p 3080"
   },
   "devDependencies": {
-    "@babel/core": "*",
+    "@babel/core": "^7.29.6",
     "@babel/preset-env": "^7.29.5",
     "@csstools/postcss-bundler": "*",
     "@csstools/postcss-minify": "*",
