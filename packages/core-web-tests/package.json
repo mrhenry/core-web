@@ -7,14 +7,14 @@
     "watch": "webpack -w"
   },
   "devDependencies": {
-    "@babel/core": "*",
-    "@babel/preset-env": "^7.29.5",
+    "@babel/core": "^8.0.1",
+    "@babel/preset-env": "^8.0.2",
     "@mrhenry/babel-plugin-core-web": "*",
     "@mrhenry/core-web": "*",
     "babel-loader": "*",
     "core-js": "*",
-    "webpack": "^5.106.2",
-    "webpack-cli": "^7.0.2"
+    "webpack": "^5.108.4",
+    "webpack-cli": "^7.2.1"
   },
   "volta": {
     "extends": "../../package.json"
