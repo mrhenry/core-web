@@ -42,7 +42,7 @@
     "__compat": {
       "mdn_url": "https://developer.mozilla.org/docs/Web/API/HTMLElement/inert",
       "source_file": "api/HTMLElement.json",
-      "spec_url": "https://html.spec.whatwg.org/multipage/interaction.html#dom-inert",
+      "spec_url": "https://html.spec.whatwg.org/multipage/dom.html#dom-inert",
       "status": {
         "deprecated": false,
         "experimental": false,
@@ -100,7 +100,7 @@
       "__compat": {
         "description": "Element is ignored for the purposes of find-in-page.",
         "source_file": "api/HTMLElement.json",
-        "spec_url": "https://html.spec.whatwg.org/multipage/interaction.html#dom-inert",
+        "spec_url": "https://html.spec.whatwg.org/multipage/dom.html#dom-inert",
         "status": {
           "deprecated": false,
           "experimental": false,

@@ -283,6 +283,62 @@
           "web-features:scroll-elements"
         ]
       }
+    },
+    "returns_promise": {
+      "__compat": {
+        "description": "Returns a <code>Promise</code>",
+        "source_file": "api/Window.json",
+        "spec_url": "https://drafts.csswg.org/cssom-view/#dom-window-scrollto",
+        "status": {
+          "deprecated": false,
+          "experimental": true,
+          "standard_track": true
+        },
+        "support": {
+          "chrome": {
+            "version_added": "150"
+          },
+          "chrome_android": {
+            "version_added": "150"
+          },
+          "edge": {
+            "version_added": "150"
+          },
+          "firefox": {
+            "version_added": false
+          },
+          "firefox_android": {
+            "version_added": false
+          },
+          "ie": {
+            "version_added": false
+          },
+          "oculus": {
+            "version_added": false
+          },
+          "opera": {
+            "version_added": "134"
+          },
+          "opera_android": {
+            "version_added": false
+          },
+          "safari": {
+            "version_added": false
+          },
+          "safari_ios": {
+            "version_added": false
+          },
+          "samsunginternet_android": {
+            "version_added": false
+          },
+          "webview_android": {
+            "version_added": "150"
+          },
+          "webview_ios": {
+            "version_added": false
+          }
+        }
+      }
     }
   },
   "polyfilled": {
