@@ -1,1 +1,1 @@
-export const browsers: string[];
+export declare const browsers: string[];
