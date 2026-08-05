@@ -32,20 +32,26 @@ module.exports = [
 								loader: 'babel-loader',
 								options: {
 									comments: false,
-									presets: [
+									targets: {
+										browsers: target.presetEnvBrowsers
+									},
+									plugins: [
 										[
-											'@babel/preset-env',
+											'polyfill-corejs3',
 											{
-												corejs: '3.999999.999999',
-												targets: {
-													browsers: target.presetEnvBrowsers
-												},
-												useBuiltIns: 'usage',
+												method: 'usage-global',
+												version: '3.999999.999999',
 												exclude: [
 													"web.dom-collections.iterator",
 													"web.dom-collections.for-each"
 												]
 											}
+										]
+									],
+									presets: [
+										[
+											"@babel/preset-env",
+											{}
 										]
 									]
 								}
@@ -58,6 +64,9 @@ module.exports = [
 								loader: 'babel-loader',
 								options: {
 									comments: false,
+									targets: {
+										browsers: target.presetEnvBrowsers
+									},
 									plugins: [
 										[
 											'@mrhenry/core-web',
@@ -66,22 +75,23 @@ module.exports = [
 												engines: target.coreWebEngines,
 												debug: entryPoint.debug
 											}
-										]
-									],
-									presets: [
+										],
 										[
-											'@babel/preset-env',
+											'polyfill-corejs3',
 											{
-												corejs: '3.999999.999999',
-												targets: {
-													browsers: target.presetEnvBrowsers
-												},
-												useBuiltIns: 'usage',
+												method: 'usage-global',
+												version: '3.999999.999999',
 												exclude: [
 													"web.dom-collections.iterator",
 													"web.dom-collections.for-each"
 												]
 											}
+										]
+									],
+									presets: [
+										[
+											'@babel/preset-env',
+											{}
 										]
 									]
 								}
