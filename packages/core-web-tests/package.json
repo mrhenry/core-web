@@ -8,10 +8,11 @@
   },
   "devDependencies": {
     "@babel/core": "*",
-    "@babel/preset-env": "^7.29.5",
+    "@babel/preset-env": "^8.0.0",
     "@mrhenry/babel-plugin-core-web": "*",
     "@mrhenry/core-web": "*",
     "babel-loader": "*",
+    "babel-plugin-polyfill-corejs3": "^1.0.0",
     "core-js": "*",
     "webpack": "^5.106.2",
     "webpack-cli": "^7.0.2"

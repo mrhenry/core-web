@@ -42,20 +42,3 @@ jobs:
         env:
           BROWSERSTACK_USERNAME:  ${{ secrets.BROWSERSTACK_USERNAME }}
           BROWSERSTACK_ACCESS_KEY:  ${{ secrets.BROWSERSTACK_ACCESS_KEY }}
-
-  validate-pages-worker:
-    name: Validate Pages Worker
-    runs-on: ubuntu-latest
-    steps:
-    - name: check out
-      uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
-      with:
-        fetch-depth: 1
-
-    - name: validate
-      uses: cloudflare/wrangler-action@4c10c1822abba527d820b29e6333e7f5dac2cabd # v2.0.0
-      with:
-        apiToken: ${{ secrets.CF_API_TOKEN }}
-        wranglerVersion: '1.13.0'
-        workingDirectory: 'packages/pages-worker'
-        command: build

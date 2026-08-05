@@ -1,5 +1,5 @@
 import assert from 'node:assert';
-import parser from '@babel/parser';
+import * as parser from '@babel/parser';
 import { Injector } from '../lib/injector.js';
 import { required } from '@mrhenry/core-web'; 
 

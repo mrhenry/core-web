@@ -69,20 +69,26 @@ function configBuilder(opts) {
 						loader: "babel-loader",
 						options: {
 							comments: false,
-							presets: [
+							targets: {
+								browsers: opts.coreJsBrowsers
+							},
+							plugins: [
 								[
-									"@babel/preset-env",
+									'polyfill-corejs3',
 									{
-										corejs: "3.999999.999999",
-										targets: {
-											browsers: opts.coreJsBrowsers
-										},
-										useBuiltIns: "usage",
+										method: 'usage-global',
+										version: '3.999999.999999',
 										exclude: [
 											"web.dom-collections.iterator",
 											"web.dom-collections.for-each"
 										]
 									}
+								]
+							],
+							presets: [
+								[
+									"@babel/preset-env",
+									{}
 								]
 							]
 						}
@@ -95,6 +101,9 @@ function configBuilder(opts) {
 						loader: "babel-loader",
 						options: {
 							comments: false,
+							targets: {
+								browsers: opts.coreJsBrowsers
+							},
 							plugins: [
 								[
 									"@mrhenry/core-web",
@@ -103,22 +112,23 @@ function configBuilder(opts) {
 										engines: opts.coreWebEngines,
 										debug: false,
 									}
-								]
-							],
-							presets: [
+								],
 								[
-									"@babel/preset-env",
+									'polyfill-corejs3',
 									{
-										corejs: "3.999999.999999",
-										targets: {
-											browsers: opts.coreJsBrowsers
-										},
-										useBuiltIns: "usage",
+										method: 'usage-global',
+										version: '3.999999.999999',
 										exclude: [
 											"web.dom-collections.iterator",
 											"web.dom-collections.for-each"
 										]
 									}
+								]
+							],
+							presets: [
+								[
+									"@babel/preset-env",
+									{}
 								]
 							]
 						}

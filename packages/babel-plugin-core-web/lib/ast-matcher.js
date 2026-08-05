@@ -1,4 +1,4 @@
-import types from '@babel/types/lib/definitions/index.js';
+import * as types from '@babel/types';
 import equal from 'fast-deep-equal';
 
 function nullish(v) {
