@@ -1,7 +1,7 @@
 import fs from 'node:fs';
 import path from "node:path";
 import * as parser from '@babel/parser';
-import traverse from '@babel/traverse';
+import * as traverse from '@babel/traverse';
 import { fileURLToPath } from 'node:url';
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const coreWebBabelPluginDir = path.resolve(__dirname, "../../babel-plugin-core-web");

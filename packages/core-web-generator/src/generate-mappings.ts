@@ -1,7 +1,7 @@
 import fs from 'node:fs';
 import path from "node:path";
 import * as parser from '@babel/parser';
-import traverse from '@babel/traverse';
+import * as traverse from '@babel/traverse';
 import { StringLiteral, Expression, SpreadElement, JSXNamespacedName, ArgumentPlaceholder } from '@babel/types';
 import { Feature } from './types/index.js';
 import { fileURLToPath } from 'node:url';
