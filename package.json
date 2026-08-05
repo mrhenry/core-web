@@ -15,5 +15,8 @@
 	},
 	"volta": {
 		"node": "26.6.0"
+	},
+	"allowScripts": {
+		"canvas@3.2.3": true
 	}
 }
