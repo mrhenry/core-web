@@ -141,7 +141,7 @@ func (x *Client) ReducedBrowsers(ctx context.Context) ([]Browser, error) {
 		switch key {
 		case "ie/11.0":
 			fallthrough
-		case "safari/8.0":
+		case "safari/9.1":
 			fallthrough
 		case "safari/12.1":
 			fallthrough
