@@ -26,7 +26,7 @@
     "@babel/preset-env": "^8.0.0",
     "@csstools/postcss-bundler": "*",
     "@csstools/postcss-minify": "*",
-    "@mdn/browser-compat-data": "^8.0.0",
+    "@mdn/browser-compat-data": "^8.0.9",
     "@mrhenry/babel-plugin-core-web": "*",
     "@mrhenry/core-web": "*",
     "@mrhenry/polyfill-library": "*",
