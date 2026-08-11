@@ -285,7 +285,7 @@
             "version_added": "10.3"
           },
           "samsunginternet_android": {
-            "notes": "From Samsung Internet 5.0, default values for the properties changed. <code>mode</code> defaults to <code>same-origin</code> (from <code>no-cors</code>). <code>credentials</code> defaults to <code>include</code> (from <code>same-origin</code>). <code>redirect</code> defaults to <code>follow</code> (from <code>manual</code>).",
+            "notes": "From Samsung Browser 5.0, default values for the properties changed. <code>mode</code> defaults to <code>same-origin</code> (from <code>no-cors</code>). <code>credentials</code> defaults to <code>include</code> (from <code>same-origin</code>). <code>redirect</code> defaults to <code>follow</code> (from <code>manual</code>).",
             "version_added": "4.0"
           },
           "webview_android": {

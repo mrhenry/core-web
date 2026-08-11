@@ -1255,7 +1255,7 @@
             "version_added": "10"
           },
           "samsunginternet_android": {
-            "notes": "Before Samsung Internet 5.0, this property was part of the deprecated child <code>DOMSettableTokenList</code> interface.",
+            "notes": "Before Samsung Browser 5.0, this property was part of the deprecated child <code>DOMSettableTokenList</code> interface.",
             "version_added": "5.0"
           },
           "webview_android": {

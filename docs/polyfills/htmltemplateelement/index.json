@@ -590,14 +590,13 @@
         },
         "support": {
           "chrome": {
-            "impl_url": "https://crbug.com/493315747",
-            "version_added": "preview"
+            "version_added": "152"
           },
           "chrome_android": {
-            "version_added": false
+            "version_added": "152"
           },
           "edge": {
-            "version_added": false
+            "version_added": "152"
           },
           "firefox": {
             "version_added": "151"
@@ -627,7 +626,7 @@
             "version_added": false
           },
           "webview_android": {
-            "version_added": false
+            "version_added": "152"
           },
           "webview_ios": {
             "version_added": "27"

@@ -93,7 +93,7 @@
           "version_added": "11.3"
         },
         "samsunginternet_android": {
-          "notes": "Before Samsung Internet 9.0, this method returned <code>null</code> when the element was a child of a host node. See <a href=\"https://crbug.com/40537452\">bug 40537452</a>.",
+          "notes": "Before Samsung Browser 9.0, this method returned <code>null</code> when the element was a child of a host node. See <a href=\"https://crbug.com/40537452\">bug 40537452</a>.",
           "version_added": "4.0"
         },
         "webview_android": {

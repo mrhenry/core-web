@@ -357,7 +357,7 @@
             "version_added": "6"
           },
           "samsunginternet_android": {
-            "notes": "Before Samsung Internet 2.0, <code>attributes: true</code> is required when using <code>attributeFilter</code> or <code>attributeOldValue</code>. If <code>attributes: true</code> is not present, then Samsung Internet throws a syntax error.",
+            "notes": "Before Samsung Browser 2.0, <code>attributes: true</code> is required when using <code>attributeFilter</code> or <code>attributeOldValue</code>. If <code>attributes: true</code> is not present, then Samsung Browser throws a syntax error.",
             "version_added": "1.0"
           },
           "webview_android": {
