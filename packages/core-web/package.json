@@ -32,11 +32,11 @@
 		"tsc": "tsc"
 	},
 	"dependencies": {
-		"browserslist": "^4.28.1",
+		"browserslist": "^4.28.8",
 		"semver": "^7.8.0"
 	},
 	"devDependencies": {
-		"@types/node": "^26.0.0",
+		"@types/node": "^26.2.0",
 		"@types/semver": "*",
 		"typescript": "^7.0.0"
 	},
