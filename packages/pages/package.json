@@ -26,7 +26,7 @@
     "@babel/preset-env": "^8.0.0",
     "@csstools/postcss-bundler": "*",
     "@csstools/postcss-minify": "*",
-    "@mdn/browser-compat-data": "^8.0.12",
+    "@mdn/browser-compat-data": "^8.0.13",
     "@mrhenry/babel-plugin-core-web": "*",
     "@mrhenry/core-web": "*",
     "@mrhenry/polyfill-library": "*",
@@ -36,10 +36,10 @@
     "core-js": "^3.50.0",
     "he": "*",
     "postcss": "^8.5.26",
-    "postcss-preset-env": "^11.4.0",
+    "postcss-preset-env": "^11.5.1",
     "postcss-split-by-media": "*",
-    "webpack": "^5.106.2",
-    "webpack-cli": "^7.0.2"
+    "webpack": "^5.110.2",
+    "webpack-cli": "^7.2.3"
   },
   "volta": {
     "extends": "../../package.json"

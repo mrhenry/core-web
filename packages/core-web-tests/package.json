@@ -14,8 +14,8 @@
     "babel-loader": "*",
     "babel-plugin-polyfill-corejs3": "^1.0.0",
     "core-js": "^3.50.0",
-    "webpack": "^5.106.2",
-    "webpack-cli": "^7.0.2"
+    "webpack": "^5.110.2",
+    "webpack-cli": "^7.2.3"
   },
   "volta": {
     "extends": "../../package.json"
