@@ -745,7 +745,7 @@
             "version_added": "135"
           },
           "opera_android": {
-            "version_added": false
+            "version_added": "101"
           },
           "safari": {
             "version_added": false
