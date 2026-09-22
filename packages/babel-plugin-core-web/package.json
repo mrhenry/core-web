@@ -33,7 +33,7 @@
 	},
 	"dependencies": {
 		"@babel/helper-module-imports": "^8.0.0",
-		"@babel/types": "^8.0.0",
+		"@babel/types": "^8.0.5",
 		"@mrhenry/core-web": "^2.0.0",
 		"fast-deep-equal": "^3.1.3"
 	},
