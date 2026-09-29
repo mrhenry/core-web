@@ -31,36 +31,24 @@
       },
       "support": {
         "chrome": {
-          "notes": "The <code>onfocusin</code> event handler property is not supported. To listen to this event, use <code>element.addEventListener('focusin', function() {});</code>.",
-          "partial_implementation": true,
           "version_added": "1"
         },
         "chrome_android": {
-          "notes": "The <code>onfocusin</code> event handler property is not supported. To listen to this event, use <code>element.addEventListener('focusin', function() {});</code>.",
-          "partial_implementation": true,
           "version_added": "18"
         },
         "edge": {
-          "notes": "The <code>onfocusin</code> event handler property is not supported. To listen to this event, use <code>element.addEventListener('focusin', function() {});</code>.",
-          "partial_implementation": true,
           "version_added": "12"
         },
         "firefox": {
-          "notes": "The <code>onfocusin</code> event handler property is not supported. To listen to this event, use <code>element.addEventListener('focusin', function() {});</code>.",
-          "partial_implementation": true,
           "version_added": "52"
         },
         "firefox_android": {
-          "notes": "The <code>onfocusin</code> event handler property is not supported. To listen to this event, use <code>element.addEventListener('focusin', function() {});</code>.",
-          "partial_implementation": true,
           "version_added": "52"
         },
         "ie": {
           "version_added": "9"
         },
         "oculus": {
-          "notes": "The <code>onfocusin</code> event handler property is not supported. To listen to this event, use <code>element.addEventListener('focusin', function() {});</code>.",
-          "partial_implementation": true,
           "version_added": "5.0"
         },
         "opera": {
@@ -76,13 +64,9 @@
           "version_added": "4.2"
         },
         "samsunginternet_android": {
-          "notes": "The <code>onfocusin</code> event handler property is not supported. To listen to this event, use <code>element.addEventListener('focusin', function() {});</code>.",
-          "partial_implementation": true,
           "version_added": "1.0"
         },
         "webview_android": {
-          "notes": "The <code>onfocusin</code> event handler property is not supported. To listen to this event, use <code>element.addEventListener('focusin', function() {});</code>.",
-          "partial_implementation": true,
           "version_added": "4.4"
         },
         "webview_ios": {
@@ -99,23 +83,15 @@
   },
   "native": {
     "android": {
-      "notes": "The <code>onfocusin</code> event handler property is not supported. To listen to this event, use <code>element.addEventListener('focusin', function() {});</code>.",
-      "partial_implementation": true,
       "version_added": "4.4"
     },
     "chrome": {
-      "notes": "The <code>onfocusin</code> event handler property is not supported. To listen to this event, use <code>element.addEventListener('focusin', function() {});</code>.",
-      "partial_implementation": true,
       "version_added": "1"
     },
     "edge": {
-      "notes": "The <code>onfocusin</code> event handler property is not supported. To listen to this event, use <code>element.addEventListener('focusin', function() {});</code>.",
-      "partial_implementation": true,
       "version_added": "12"
     },
     "firefox": {
-      "notes": "The <code>onfocusin</code> event handler property is not supported. To listen to this event, use <code>element.addEventListener('focusin', function() {});</code>.",
-      "partial_implementation": true,
       "version_added": "52"
     },
     "ie": {
