@@ -14,7 +14,7 @@
 		"useTabs": true
 	},
 	"volta": {
-		"node": "26.6.0"
+		"node": "26.12.1"
 	},
 	"allowScripts": {
 		"canvas@3.2.3": true
