@@ -232,6 +232,75 @@
         ]
       }
     },
+    "context_static": {
+      "__compat": {
+        "description": "<code>context()</code> static method",
+        "mdn_url": "https://developer.mozilla.org/docs/Web/API/console/context_static",
+        "source_file": "api/_globals/console.json",
+        "status": {
+          "deprecated": false,
+          "experimental": false,
+          "standard_track": false
+        },
+        "support": {
+          "chrome": {
+            "version_added": "61"
+          },
+          "chrome_android": {
+            "version_added": "61"
+          },
+          "deno": {
+            "version_added": false
+          },
+          "edge": {
+            "version_added": "79"
+          },
+          "firefox": {
+            "impl_url": "https://bugzil.la/1948870",
+            "version_added": false
+          },
+          "firefox_android": {
+            "impl_url": "https://bugzil.la/1948870",
+            "version_added": false
+          },
+          "ie": {
+            "version_added": false
+          },
+          "nodejs": {
+            "notes": "Messages logged through the returned object are only sent to an attached inspector, and are not printed to <code>stdout</code> or <code>stderr</code>. See <a href=\"https://github.com/nodejs/node/issues/56634\">bug 56634</a>.",
+            "partial_implementation": true,
+            "version_added": "8.7.0"
+          },
+          "oculus": {
+            "version_added": "5.0"
+          },
+          "opera": {
+            "version_added": "48"
+          },
+          "opera_android": {
+            "version_added": "45"
+          },
+          "safari": {
+            "impl_url": "https://webkit.org/b/293768",
+            "version_added": false
+          },
+          "safari_ios": {
+            "impl_url": "https://webkit.org/b/293768",
+            "version_added": false
+          },
+          "samsunginternet_android": {
+            "version_added": "8.0"
+          },
+          "webview_android": {
+            "version_added": "61"
+          },
+          "webview_ios": {
+            "impl_url": "https://webkit.org/b/293768",
+            "version_added": false
+          }
+        }
+      }
+    },
     "countReset_static": {
       "__compat": {
         "description": "<code>countReset()</code> static method",
