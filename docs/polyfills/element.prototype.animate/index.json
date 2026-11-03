@@ -415,10 +415,10 @@
             "version_added": "115"
           },
           "firefox": {
-            "version_added": "preview"
+            "version_added": "159"
           },
           "firefox_android": {
-            "version_added": false
+            "version_added": "159"
           },
           "ie": {
             "version_added": false
@@ -474,10 +474,10 @@
             "version_added": "115"
           },
           "firefox": {
-            "version_added": "preview"
+            "version_added": "159"
           },
           "firefox_android": {
-            "version_added": false
+            "version_added": "159"
           },
           "ie": {
             "version_added": false
@@ -533,10 +533,10 @@
             "version_added": "85"
           },
           "firefox": {
-            "version_added": "preview"
+            "version_added": "159"
           },
           "firefox_android": {
-            "version_added": false
+            "version_added": "159"
           },
           "ie": {
             "version_added": false
