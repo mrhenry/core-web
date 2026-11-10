@@ -226,6 +226,65 @@
           ]
         }
       },
+      "options_renderSizeHint_parameter": {
+        "__compat": {
+          "description": "<code>options.renderSizeHint</code> parameter",
+          "source_file": "api/AudioContext.json",
+          "spec_url": "https://webaudio.github.io/web-audio-api/#dom-audiocontextoptions-rendersizehint",
+          "status": {
+            "deprecated": false,
+            "experimental": true,
+            "standard_track": true
+          },
+          "support": {
+            "chrome": {
+              "version_added": "153"
+            },
+            "chrome_android": {
+              "version_added": "153"
+            },
+            "edge": {
+              "version_added": "153"
+            },
+            "firefox": {
+              "version_added": false
+            },
+            "firefox_android": {
+              "version_added": false
+            },
+            "ie": {
+              "version_added": false
+            },
+            "oculus": {
+              "version_added": false
+            },
+            "opera": {
+              "version_added": "137"
+            },
+            "opera_android": {
+              "version_added": "103"
+            },
+            "safari": {
+              "version_added": false
+            },
+            "safari_ios": {
+              "version_added": false
+            },
+            "samsunginternet_android": {
+              "version_added": false
+            },
+            "webview_android": {
+              "version_added": "153"
+            },
+            "webview_ios": {
+              "version_added": false
+            }
+          },
+          "tags": [
+            "web-features:web-audio"
+          ]
+        }
+      },
       "options_sampleRate_parameter": {
         "__compat": {
           "description": "<code>options.sampleRate</code> parameter",
